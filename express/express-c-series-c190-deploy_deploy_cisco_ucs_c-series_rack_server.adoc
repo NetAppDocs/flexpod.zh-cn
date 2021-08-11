@@ -1,0 +1,400 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-c190-deploy_deploy_cisco_ucs_c-series_rack_server.html 
+keywords: deploy, cisco, ucs, c, series, rack, server, cimc, boot, disable, iscsi, vnics 
+summary: 本节详细介绍了用于配置 Cisco UCS C 系列独立机架服务器以在 FlexPod 快速配置中使用的操作步骤。 
+---
+= 部署 Cisco UCS C 系列机架式服务器
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+本节详细介绍了用于配置 Cisco UCS C 系列独立机架服务器以在 FlexPod 快速配置中使用的操作步骤。
+
+
+
+== 对 CIMC 执行初始 Cisco UCS C 系列独立服务器设置
+
+完成以下步骤以初始设置 Cisco UCS C 系列独立服务器的 CIMC 接口。
+
+下表列出了为每个 Cisco UCS C 系列独立服务器配置 CIMC 所需的信息。
+
+|===
+| 详细信息 | 详细信息值 
+
+
+| CIMC IP 地址 | \<<CMC_IP>> 
+
+
+| CIMC 子网掩码 | \<<CIMC 网络掩码 
+
+
+| CIMC 默认网关 | \<<CIMC 网关 >> 
+|===
+
+NOTE: 此验证中使用的 CIMC 版本为 CIMC 4.0.4 （ 4 ）。
+
+
+
+=== 所有服务器
+
+. 将 Cisco 键盘，视频和鼠标（ KVM ）转换器（随服务器提供）连接到服务器正面的 KVM 端口。将 VGA 显示器和 USB 键盘插入相应的 KVM 转换器端口。
++
+打开服务器电源，在系统提示您输入 CIMC 配置时按 F8 。
+
++
+image:express-c-series-c190-deploy_image5.png["错误：缺少图形映像"]
+
+. 在 CIMC 配置实用程序中，设置以下选项：
++
+.. 网络接口卡（ Network Interface Card ， NIC ）模式：
++
+专用 ` X`
+
+.. IP （基本）：
++
+IPv4 ： ` X`
+
++
+已启用 DHCP ： ` [ ]`
+
++
+CIMC IP ： ` <<CIMC IP >>`
+
++
+前缀 / 子网： ` \<<CIMC _netmask>>`
+
++
+网关： ` <<CIMC 网关 >>`
+
+.. VLAN （高级）：保持清除状态以禁用 VLAN 标记。
++
+NIC 冗余
+
++
+无： ` X`
+
++
+image:express-c-series-c190-deploy_image6.png["错误：缺少图形映像"]
+
+
+
+. 按 F1 可查看其他设置：
++
+.. 通用属性：
++
+主机名： ` \<<ESXi_host_name>>`
+
++
+动态 DNS ： ` [ ]`
+
++
+出厂默认设置：保持清除状态。
+
+.. 默认用户（基本）：
++
+默认密码： ` \<<admin_password>>`
+
++
+重新输入密码： ` \<<admin_password>>`
+
++
+端口属性：使用默认值。
+
++
+端口配置文件：保持清除状态。
+
+
+
+. 按 F10 保存 CIMC 接口配置。
+. 保存配置后，按 Esc 退出。
+
+
+
+
+== 配置 Cisco UCS C 系列服务器 iSCSI 启动
+
+在此 FlexPod 快速配置中， VIC1457 用于 iSCSI 启动。
+
+下表列出了配置 iSCSI 启动所需的信息。
+
+
+NOTE: 斜体表示每个 ESXi 主机唯一的变量。
+
+|===
+| 详细信息 | 详细信息值 
+
+
+| ESXi 主机启动程序 A 名称 | \<<var_UCS_initiator_name_A>> 
+
+
+| ESXi 主机 iSCSI-A IP | \<<var_esxi_host_iscsiA_IP>> 
+
+
+| ESXi 主机 iSCSI-A 网络掩码 | \<<var_esxi_host_iscsiA_mask>> 
+
+
+| ESXi 主机 iSCSI 是默认网关 | \<<var_esxi_host_iscsiA_gateway>> 
+
+
+| ESXi 主机启动程序 B 名称 | \<<var_UCS_initiator_name_B>> 
+
+
+| ESXi 主机 iSCSI-B IP | \<<var_esxi_host_iscsiB_ip>> 
+
+
+| ESXi 主机 iSCSI-B 网络掩码 | \<<var_esxi_host_iscsiB_mask>> 
+
+
+| ESXi 主机 iSCSI-B 网关 | \<<var_esxi_host_iscsiB_gateway>> 
+
+
+| IP 地址 iscsi_lif01a | \<<var_iscsi_lif01a>> 
+
+
+| IP 地址 iscsi_lif02a | \<<var_iscsi_lif02a>> 
+
+
+| IP 地址 iscsi_lif01b | \<<var_iscsi_lif01b>> 
+
+
+| IP 地址 iscsi_lif02b | \<<var_iscsi_lif02b>> 
+
+
+| infra_sVM IQN | \<<var_svm_IQN>> 
+|===
+
+
+=== 启动顺序配置
+
+要设置启动顺序配置，请完成以下步骤：
+
+. 在 CIMC 界面浏览器窗口中，单击 Compute 选项卡并选择 BIOS 。
+. 单击 Configure Boot Order ，然后单击 OK 。
++
+image:express-c-series-c190-deploy_image7.png["错误：缺少图形映像"]
+
+. 单击 "Add Boot Device" 下的设备并转到 "Advanced （高级） " 选项卡，配置以下设备：
++
+.. 添加虚拟介质：
++
+名称： KVM-CD-DVD
+
++
+子类型： KVM 映射的 DVD
+
++
+状态：已启用
+
++
+顺序： 1
+
+.. 添加 iSCSI 启动：
++
+名称： iscsi-A
+
++
+状态：已启用
+
++
+顺序： 2
+
++
+插槽： MLOM
+
++
+端口： 1
+
+.. 单击 Add iSCSI Boot ：
++
+名称： iSCSI-B
+
++
+状态：已启用
+
++
+顺序： 3
+
++
+插槽： MLOM
+
++
+端口： 3
+
+
+
+. 单击添加设备。
+. 单击保存更改，然后单击关闭。
++
+image:express-c-series-c190-deploy_image8.png["错误：缺少图形映像"]
+
+. 重新启动服务器以使用新的启动顺序启动。
+
+
+
+
+=== 禁用 RAID 控制器（如果存在）
+
+如果 C 系列服务器包含 RAID 控制器，请完成以下步骤。从 SAN 启动配置不需要 RAID 控制器。您也可以从服务器中物理删除 RAID 控制器。
+
+. 在 Compute 选项卡下，单击 CIMC 左侧导航窗格中的 BIOS 。
+. 选择 Configure BIOS 。
+. 向下滚动到 PCIe 插槽： HBA 选项 ROM 。
+. 如果尚未禁用此值，请将其设置为 disabled 。
++
+image:express-c-series-c190-deploy_image9.png["错误：缺少图形映像"]
+
+
+
+
+
+== 为 iSCSI 启动配置 Cisco VIC1457
+
+以下配置步骤适用于用于 iSCSI 启动的 Cisco VIC 1457 。
+
+
+NOTE: 必须先关闭端口 0 ， 1 ， 2 和 3 之间的默认端口通道，然后才能配置四个单独的端口。如果端口通道未关闭，则 VIC 1457 仅显示两个端口。完成以下步骤以在 CIMC 上启用端口通道：
+
+. 在网络连接选项卡下，单击适配器卡 MLOM 。
+. 在常规选项卡下，取消选中端口通道。
+. 保存更改并重新启动 CIMC 。
++
+image:express-c-series-c190-deploy_image10.png["错误：缺少图形映像"]
+
+
+
+
+
+=== 创建 iSCSI vNIC
+
+要创建 iSCSI vNIC ，请完成以下步骤：
+
+. 在网络连接选项卡下，单击适配器卡 MLOM 。
+. 单击添加 vNIC 以创建 vNIC 。
+. 在 Add vNIC 部分中，输入以下设置：
++
+** 名称： eth1
+** CDN 名称： iscsi-vNIC-A
+** MTU ： 9000
+** 默认 VLAN ： ` \<<var_iscsi_vlan_A>>`
+** VLAN 模式：中继
+** Enable PXE boot ： check
+
+
+. 单击添加 vNIC ，然后单击确定。
+. 重复此过程以添加第二个 vNIC ：
++
+** 将 vNIC 命名为 eth3 。
+** CDN 名称： iscsi-vNIC-B
+** 输入 ` \<<var_iscsi_vlan_b>>` 作为 VLAN 。
+** 将上行链路端口设置为 3 。
++
+image:express-c-series-c190-deploy_image11.png["错误：缺少图形映像"]
+
+
+
+. 选择左侧的 vNIC eth1 。
++
+image:express-c-series-c190-deploy_image12.png["错误：缺少图形映像"]
+
+. 在 "iSCSI 启动属性 " 下，输入启动程序详细信息：
++
+** 名称： ` \<<var_UCSA_initiator_name_A>>`
+** IP 地址： ` <<var_esxi_HostA_iscsiA_IP>>`
+** 子网掩码： ` <<var_esxi_HostA_iscsiA_mask>>`
+** 网关： ` <<var_esxi_HostA_iscsiA_gateway>>`
++
+image:express-c-series-c190-deploy_image13.png["错误：缺少图形映像"]
+
+
+
+. 输入主目标详细信息：
++
+** 名称： infra-svm 的 IQN 编号
+** IP address ： iSCSI_lif01a 的 IP 地址
+** 启动 LUN ： 0
+
+
+. 输入二级目标详细信息：
++
+** 名称： infra-svm 的 IQN 编号
+** IP address ： iSCSI_lif02a 的 IP 地址
+** 启动 LUN ： 0
++
+
+NOTE: 您可以运行 `vserver iscsi show` 命令来获取存储 IQN 编号。
+
++
+
+NOTE: 请务必记录每个 vNIC 的 IQN 名称。您需要在后续步骤中使用它们。此外，启动程序的 IQN 名称对于每个服务器和 iSCSI vNIC 都必须是唯一的。
+
+
+
+. 单击 Save Changes 。
+. 选择 vNIC eth3 ，然后单击主机以太网接口部分顶部的 iSCSI 启动按钮。
+. 重复此过程以配置 eth3 。
+. 输入启动程序详细信息：
++
+** 名称： ` \<<var_UCSA_initiator_name_b>>`
+** IP 地址： ` <<var_esxi_HostB_iscsib_ip>>`
+** 子网掩码： ` <<var_esxi_HostB_iscsib_mask>>`
+** 网关： ` <<var_esxi_HostB_iscsib_gateway>>`
++
+image:express-c-series-c190-deploy_image14.png["错误：缺少图形映像"]
+
+
+
+. 输入主目标详细信息：
++
+** 名称： infra-svm 的 IQN 编号
+** IP address ： iSCSI_lif01b 的 IP 地址
+** 启动 LUN ： 0
+
+
+. 输入二级目标详细信息：
++
+** 名称： infra-svm 的 IQN 编号
+** IP address ： iSCSI_lif02b 的 IP 地址
+** 启动 LUN ： 0
++
+
+NOTE: 您可以使用 `vserver iscsi show` 命令获取存储 IQN 编号。
+
++
+
+NOTE: 请务必记录每个 vNIC 的 IQN 名称。您需要在后续步骤中使用它们。
+
+
+
+. 单击 Save Changes 。
+. 重复此过程为 Cisco UCS 服务器 B 配置 iSCSI 启动
+
+
+
+
+=== 为 ESXi 配置 vNIC
+
+要为 ESXi 配置 vNIC ，请完成以下步骤：
+
+. 在 CIMC 界面浏览器窗口中，单击清单，然后单击右窗格上的 Cisco VIC 适配器。
+. 在 Networking > Adapter Card MLOM 下，选择 vNIC 选项卡，然后选择下方的 vNIC 。
+. 选择 eth0 并单击属性。
+. 将 MTU 设置为 9000 。单击 Save Changes 。
+. 将 VLAN 设置为原生 VLAN 2 。
++
+image:express-c-series-c190-deploy_image15.png["错误：缺少图形映像"]
+
+. 对 eth1 重复步骤 3 和 4 ，验证 eth1 的上行链路端口是否设置为 1 。
++
+image:express-c-series-c190-deploy_image16.png["错误：缺少图形映像"]
+
++
+
+NOTE: 必须对添加到环境中的每个初始 Cisco UCS 服务器节点和每个额外的 Cisco UCS 服务器节点重复此操作步骤。
+
+
+
+link:express-c-series-c190-design_netapp_aff_storage_deployment_procedure_@part_2@.html["接下来： NetApp AFF 存储部署操作步骤（第 2 部分）"]

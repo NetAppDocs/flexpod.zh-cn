@@ -1,0 +1,180 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-c190-design_design_choices.html 
+keywords: AFF C190, CIFS, NFS, iSCSI, FCP, SnapMirror, SnapVault, SnapRestore, SnapManager, SnapCenter, FabricPool 
+summary: 本节中列出的技术是在架构设计阶段选择的。每个技术在 FlexPod Express 基础架构解决方案中都有一个特定用途。 
+---
+= 设计选择
+
+
+本节中列出的技术是在架构设计阶段选择的。每个技术在 FlexPod Express 基础架构解决方案中都有一个特定用途。
+
+
+
+== 采用 ONTAP 9.6 的 NetApp AFF C190 系列
+
+此解决方案利用了两种最新的 NetApp 产品： NetApp AFF C190 系统和 ONTAP 9.6 软件。
+
+
+
+=== AFF C190 系统
+
+目标群体是希望以经济实惠的价格利用全闪存技术打造现代化 IT 基础架构的客户。AFF C190 系统附带了新的 ONTAP 9.6 和闪存捆绑包许可，这意味着具有以下功能：
+
+* CIFS ， NFS ， iSCSI 和 FCP
+* NetApp SnapMirror 数据复制软件， NetApp SnapVault 备份软件， NetApp SnapRestore 数据恢复软件， NetApp SnapManager 存储管理软件产品套件和 NetApp SnapCenter 软件
+* FlexVol 技术
+* 重复数据删除，数据压缩和数据缩减
+* 精简配置
+* 存储 QoS
+* NetApp RAID DP 技术
+* NetApp Snapshot 技术
+* FabricPool
+
+
+下图显示了主机连接的两个选项。
+
+下图显示了可插入 SFP+ 模块的 UTA 2 端口。
+
+image:express-c-series-c190-design_image4.png["错误：缺少图形映像"]
+
+下图显示了通过传统 RJ-45 以太网缆线连接的 10GBASE-T 端口。
+
+image:express-c-series-c190-design_image5.png["错误：缺少图形映像"]
+
+
+NOTE: 对于 10GBASE-T 端口选项，您必须使用基于 10GBASE-T 的上行链路交换机。
+
+AFF C190 系统仅提供 960 GB SSD 。您可以从四个扩展阶段中进行选择：
+
+* 8 个 960 GB
+* 12 个 960 GB
+* 18 个 960 GB
+* 24 个 960 GB
+
+
+有关 AFF C190 硬件系统的完整信息，请参见 https://www.netapp.com/us/products/entry-level-aff.aspx["NetApp AFF C190 全闪存阵列页面"^]。
+
+
+
+=== ONTAP 9.6 软件
+
+NetApp AFF C190 系统使用全新的 ONTAP 9.6 数据管理软件。ONTAP 9.6 是行业领先的企业级数据管理软件。它将更高级别的精简性和灵活性与强大的数据管理功能，存储效率和领先的云集成相结合。
+
+ONTAP 9.6 具有多种非常适合 FlexPod Express 解决方案的功能。最重要的是 NetApp 对存储效率的承诺，存储效率是小型部署最重要的功能之一。ONTAP 9.6 提供了 NetApp 存储效率的标志功能，例如重复数据删除，数据压缩，数据缩减和精简配置。NetApp WAFL 系统始终会写入 4 KB 块；因此，如果这些块未使用分配的 4 KB 空间，则数据缩减会将多个块合并为一个 4 KB 块。下图说明了此过程。
+
+image:express-c-series-c190-design_image6.png["错误：缺少图形映像"]
+
+ONTAP 9.6 现在支持为 NVMe 卷提供可选的 512 字节块大小。此功能可与本机使用 512 字节块的 VMware 虚拟机文件系统（ VMFS ）配合使用。您可以保留默认的 4 k 大小，也可以选择设置 512 字节的块大小。
+
+ONTAP 9.6 中的其他增强功能包括：
+
+* * NetApp 聚合加密（ NAE ）。 * NAE 在聚合级别分配密钥，从而对聚合中的所有卷进行加密。此功能允许在聚合级别对卷进行加密和重复数据删除。
+* * NetApp ONTAP FlexGroup 卷增强功能 * 。在 ONTAP 9.6 中，您可以轻松重命名 FlexGroup 卷。无需创建要将数据迁移到的新卷。也可以使用 ONTAP 系统管理器或命令行界面减小卷大小。
+* * FabricPool 增强功能。 * ONTAP 9.6 增加了对对象存储作为云层的额外支持。此列表还添加了对 Google Cloud 和 Alibaba Cloud Object Storage Service （ OSS ）的支持。FabricPool 支持多个对象存储，包括 AWS S3 ， Azure Blob ， IBM Cloud 对象存储和 NetApp StorageGRID 基于对象的存储软件。
+* * SnapMirror 增强功能 * 。在 ONTAP 9.6 中，新的卷复制关系在离开源阵列之前会默认加密，并在 SnapMirror 目标上解密。
+
+
+
+
+== Cisco Nexus 3000 系列
+
+Cisco Nexus 31108PC-V 是一款基于 10 Gbps SFP+ 的机架顶部（ ToR ）交换机，具有 48 个 SFP+ 端口和 6 个 QSFP28 端口。每个 SFP+ 端口可以以 100 Mbps ， 10 Gbps 的速率运行，每个 QSFP28 端口可以在原生 100 Gbps 或 40 Gbps 模式或 4 个 10 Gbps 模式下运行，从而提供灵活的迁移选项。此交换机是真正的无 PHY 交换机，针对低延迟和低功耗进行了优化。
+
+Cisco Nexus 31108PC-V 规范包括以下组件：
+
+* 对于 31108PC-V ，交换机容量和转发速率高达 2.2 Tbps
+* 48 个 SFP 端口支持 1 和 10 千兆以太网（ 10GbE ）； 6 个 QSFP28 端口支持每个 4 个 10GbE 或 40GbE 或 100GbE
+
+
+下图显示了 Cisco Nexus 31108PC-V 交换机。
+
+image:express-c-series-c190-design_image7.png["错误：缺少图形映像"]
+
+有关 Cisco Nexus 31108PC-V 交换机的详细信息，请参见 https://www.cisco.com/c/en/us/products/collateral/switches/nexus-3000-series-switches/data_sheet_c78-729483.html["Cisco Nexus 3172PQ ， 3172TQ ， 3172TQ-32T ， 3172PQ-XL 和 3172TQ-XL 交换机产品规格"^]。
+
+
+
+== Cisco UCS C 系列
+
+之所以选择 Cisco UCS C 系列机架式服务器来支持 FlexPod Express ，是因为它具有多种配置选项，可以根据 FlexPod Express 部署中的特定要求进行定制。
+
+Cisco UCS C 系列机架式服务器采用行业标准外形规格提供统一计算，以降低 TCO 并提高灵活性。
+
+Cisco UCS C 系列机架式服务器具有以下优势：
+
+* 与外形规格无关的 Cisco UCS 入门点
+* 简化并快速部署应用程序
+* 将统一计算创新技术和优势扩展到机架式服务器
+* 通过熟悉的机架包装提供独特优势，增加客户的选择
+
+
+image:express-c-series-c190-design_image8.png["错误：缺少图形映像"]
+
+如上图所示， Cisco UCS C220 M5 机架式服务器是业内用途最广泛的通用企业基础架构和应用程序服务器之一。它是一款高密度双插槽机架式服务器，可为包括虚拟化，协作和裸机应用程序在内的各种工作负载提供行业领先的性能和效率。Cisco UCS C 系列机架式服务器可以作为独立服务器部署，也可以作为 Cisco UCS 的一部分部署，以利用 Cisco 基于标准的统一计算创新技术，帮助客户降低 TCO 并提高业务灵活性。
+
+有关 C220 M5 服务器的详细信息，请参见 https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/datasheet-c78-739281.html["Cisco UCS C220 M5 机架式服务器数据表"^]。
+
+
+
+=== 适用于 C220 M5 机架式服务器的 Cisco UCS VIC 1457 连接
+
+下图所示的 Cisco UCS VIC 1457 适配器是一个四端口小型可插拔（ SFP28 ）模块化主板 LAN （ mLOM ）卡，专为 M5 代 Cisco UCS C 系列服务器而设计。此卡支持 10/25Gbps 以太网或 FCoE 。该卡可以向主机提供符合 PCIe 标准的接口，这些接口可以动态配置为 NIC 或 HBA 。
+
+image:express-c-series-c190-design_image9.png["错误：缺少图形映像"]
+
+有关 Cisco UCS VIC 1457 适配器的完整信息，请参见 https://www.cisco.com/c/en/us/products/collateral/interfaces-modules/unified-computing-system-adapters/datasheet-c78-741130.html["Cisco UCS 虚拟接口卡 1400 系列产品规格"^]。
+
+
+
+== VMware vSphere 6.7U2
+
+VMware vSphere 6.7U2 是适用于 FlexPod Express 的虚拟机管理程序选项之一。通过 VMware vSphere ，企业可以减少电耗和散热占用空间，同时确认已购买的计算容量已充分利用。此外， VMware vSphere 还支持在 vSphere 主机集群（维护模式下为 VMware Distributed Resource Scheduler 或 VMware DRS-MM ）之间实现硬件故障保护（ VMware 高可用性或 VMware HA ）和计算资源负载平衡。
+
+由于 VMware vSphere 6.7U2 仅重新启动内核，因此客户可以快速启动，从而加载 vSphere ESXi ，而无需重新启动硬件。vSphere 6.7U2 vSphere 客户端（基于 HTML5 的客户端）具有一些新的增强功能，例如具有代码捕获和 API Explore 的开发人员中心。通过代码捕获，您可以在 vSphere 客户端中记录您的操作，以提供简单，可用的代码输出。vSphere 6.7U2 还包含维护模式下的 DRS （ DRS-MM ）等新功能。
+
+VMware vSphere 6.7U2 提供以下功能：
+
+* VMware 正在弃用外部 VMware Platform Services Controller （ PSC ）部署模式。
+
+
+
+NOTE: 从下一个主要 vSphere 版本开始，外部 PSC 将不是可用选项。
+
+* 为备份和还原 vCenter Server 设备提供了新的协议支持。将 NFS 和 SMB 作为受支持的协议选项进行介绍，总共可支持多达 7 个协议（ HTTP ， HTTPS ， FTP ， FTPS ， SCP ， NFS 和 SMB ）。
+* 使用内容库时的新增功能。现在，如果为 vCenter Server 配置了增强型链接模式，则可以在内容库之间同步原生 VM 模板。
+* 更新到 https://blogs.vmware.com/vsphere/2019/04/vcenter-server-6-7-update-2-whats-new.html["客户端插件页面"^]。
+* VMware vSphere Update Manager 还为 vSphere 客户端添加了增强功能。您可以在一个屏幕上执行附加检查合规性和修复操作。
+
+
+有关 VMware vSphere 6.7 U2 的详细信息，请参见 https://blogs.vmware.com/vsphere/2019/04/vcenter-server-6-7-update-2-whats-new.html["VMware vSphere 博客页面"^]。
+
+有关 VMware vCenter Server 6.7 U2 更新的详细信息，请参见 https://docs.vmware.com/en/VMware-vSphere/6.7/rn/vsphere-vcenter-server-67u2-release-notes.html["发行说明"^]。
+
+
+NOTE: 虽然此解决方案已通过 vSphere 6.7U2 的验证，但它支持通过其他组件认证的任何 vSphere 版本 https://mysupport.netapp.com/matrix/["NetApp 互操作性表工具（ IMT ）"^]。NetApp 建议您部署下一个版本的 vSphere 以修复其问题并增强其功能。
+
+
+
+== 启动架构
+
+FlexPod 快速启动架构支持的选项包括：
+
+* iSCSI SAN LUN
+* Cisco FlexFlash SD 卡
+* 本地磁盘
+
+
+FlexPod 数据中心可从 iSCSI LUN 启动；因此，也可通过对 FlexPod Express 使用 iSCSI 启动来增强解决方案的易管理性。
+
+
+
+=== ESXi 主机虚拟网络接口卡布局
+
+Cisco UCS VIC 1457 具有四个物理端口。此解决方案验证包括使用 ESXi 主机的中的这四个物理端口。如果 NIC 数量较小或较大，则可能具有不同的 vmnic 编号。
+
+在 iSCSI 启动实施中， iSCSI 启动需要单独的虚拟网络接口卡（ Virtual Network Interface Card ， vNIC ）来进行 iSCSI 启动。这些 VNIC 使用相应网络结构的 iSCSI VLAN 作为原生 VLAN ，并连接到 iSCSI 启动 VSwitch ，如下图所示。
+
+image:express-c-series-c190-design_image10.png["错误：缺少图形映像"]
+
+link:express-c-series-c190-design_conclusion.html["接下来：总结。"]

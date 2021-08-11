@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: ontap-connector-for-intersight/ci-qsg_monitor_netapp_storage_from_cisco_intersight.html 
+keywords: netapp, storage, cisco intersight, monitor, orchestrate, orchestration, storage inventory, storage widgets 
+summary: 声明目标后，如果您拥有优势层许可证，则 NetApp 存储小工具，存储清单和虚拟化选项卡将变为可用。如果您拥有 Premier 层许可证，则可以使用业务流程选项卡。 
+---
+= 从 Cisco Intersight 监控 NetApp 存储
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+声明目标后，如果您拥有优势层许可证，则 NetApp 存储小工具，存储清单和虚拟化选项卡将变为可用。如果您拥有 Premier 层许可证，则可以使用业务流程选项卡。
+
+
+
+== 存储清单概述
+
+以下屏幕截图显示了 * 操作 > 存储 * 屏幕。
+
+image:ci-qsg_image9.png["屏幕截图显示操作和管理存储屏幕"]
+
+以下屏幕截图显示了存储集群概述。
+
+image:ci-qsg_image10.png["屏幕截图显示了存储集群概述"]
+
+
+
+== 存储小工具
+
+要查看存储小工具，请导航到 * 监控 > 信息板 > 查看 NetApp 存储小工具 * 。
+
+* 以下屏幕截图显示了 "Storage Version Summary" 小工具。
+
+
+image:ci-qsg_image11.jpg["屏幕截图显示了 \"Storage Version Summary\" 小工具"]
+
+* 此屏幕截图显示了按容量利用率排列的前 5 个存储阵列小工具。
+
+
+image:ci-qsg_image12.png["屏幕截图显示了按容量利用率排列的前 5 个存储阵列小工具"]
+
+* 此屏幕截图显示了按容量利用率排列的前 5 个存储卷小工具。
+
+
+image:ci-qsg_image13.png["屏幕截图显示了按容量利用率排列的前 5 个存储卷小工具"]

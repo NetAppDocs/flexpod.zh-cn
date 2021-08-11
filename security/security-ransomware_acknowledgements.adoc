@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: security/security-ransomware_acknowledgements.html 
+keywords: acknowledgements, author, contributors, flexpod, ransomware 
+summary: 作者谨感谢以下人员为本指南的制定做出的贡献。 
+---
+= 致谢
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+作者谨感谢以下人员为编写本文档提供的支持：
+
+* NetApp 公司的 JORGE Gomez Navarrete
+* NetApp 公司 Ganesh Kamath
+

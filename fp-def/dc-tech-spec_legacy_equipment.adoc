@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: fp-def/dc-tech-spec_legacy_equipment.html 
+keywords: legacy, equipment, cisco, end, life, eol, flexpod, datacenter, technical, specifications 
+summary: FlexPod 是一款灵活的解决方案，可让您使用当前由 Cisco 和 NetApp 销售的现有设备和新设备。有时， Cisco 和 NetApp 的某些型号设备会被指定为寿命终结（ EOL ）。 
+---
+= 旧设备
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+FlexPod 是一款灵活的解决方案，可让您使用当前由 Cisco 和 NetApp 销售的现有设备和新设备。有时， Cisco 和 NetApp 的某些型号设备会被指定为寿命终结（ EOL ）。
+
+即使这些设备型号已不再可用，但如果您在可用性终止（ EOA ）日期之前购买了其中一种型号，则可以在 FlexPod 配置中使用该设备。有关 FlexPod 中支持的不再销售的原有设备型号的完整列表，请参见 https://mysupport.netapp.com/info/eoa/index.html["NetApp 服务和支持产品计划的可用性终止索引"^]。
+
+有关原有 Cisco 设备的详细信息，请参见的 Cisco EOL 和 EOA 通知 http://www.cisco.com/c/en/us/products/servers-unified-computing/ucs-c-series-rack-servers/eos-eol-notice-listing.html["Cisco UCS C 系列机架式服务器"^]，，和。
+
+原有 FC 网络结构支持包括以下内容：
+
+* 2 GB 网络结构
+* 4 GB 网络结构
+
+
+原有软件包括以下内容：
+
+* 在 7- 模式， 7.3.5 及更高版本下运行的 NetApp Data ONTAP
+* ONTAP 8.1.x 至 9.0.x
+* Cisco UCS Manager 1.3 及更高版本
+* Cisco UCS Manager 2.1 至 2.2.7
+

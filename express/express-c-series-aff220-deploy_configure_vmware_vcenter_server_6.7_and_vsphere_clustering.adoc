@@ -1,0 +1,81 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-aff220-deploy_configure_vmware_vcenter_server_6.7_and_vsphere_clustering.html 
+keywords: configure, vmware, vcenter, server, clustering, coredump, esxi, hosts 
+summary: 您可以通过完成以下步骤来配置 VMware vCenter Server 6.7 和 vSphere 集群。 
+---
+= 配置 VMware vCenter Server 6.7 和 vSphere 集群
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+要配置 VMware vCenter Server 6.7 和 vSphere 集群，请完成以下步骤：
+
+. 导航到 \https://\<<FQDN 或 vCenter 的 IP >/vsphere-client/ 。
+. 单击 Launch vSphere Client 。
+. 使用用户名 mailto ： administrator@vspehre.local[ administrator@vsphere.local^ ] 和您在 VCSA 设置过程中输入的 SSO 密码登录。
+. 右键单击 vCenter 名称并选择新建数据中心。
+. 输入数据中心的名称，然后单击确定。
+
+
+
+
+== 创建 vSphere 集群
+
+要创建 vSphere 集群，请完成以下步骤：
+
+. 右键单击新创建的数据中心，然后选择 New Cluster 。
+. 输入集群的名称。
+. 选中复选框以启用灾难恢复和 vSphere HA 。
+. 单击确定。
++
+image:express-c-series-aff220-deploy_image49.png["错误：缺少图形映像"]
+
+
+
+
+
+== 将 ESXi 主机添加到集群
+
+. 右键单击集群并选择添加主机。
++
+image:express-c-series-aff220-deploy_image50.png["错误：缺少图形映像"]
+
+. 要将 ESXi 主机添加到集群，请完成以下步骤：
++
+.. 输入主机的 IP 或 FQDN 。单击下一步。
+.. 输入 root 用户名和密码。单击下一步。
+.. 单击是将主机的证书替换为由 VMware 证书服务器签名的证书。
+.. 单击主机摘要页面上的下一步。
+.. 单击绿色 + 图标向 vSphere 主机添加许可证。
++
+
+NOTE: 如果需要，可以稍后完成此步骤。
+
+.. 单击下一步以使锁定模式保持禁用状态。
+.. 单击 VM 位置页面上的下一步。
+.. 查看即将完成页面。使用 " 返回 " 按钮进行任何更改或选择 " 完成 " 。
+
+
+. 对 Cisco UCS 主机 B 重复步骤 1 和 2对于添加到 FlexPod 快速配置中的任何其他主机，必须完成此过程。
+
+
+
+
+== 在 ESXi 主机上配置核心转储
+
+. 使用 SSH 连接到管理 IP ESXi 主机，输入 root 作为用户名，然后输入 root 密码。
+. 运行以下命令：
++
+....
+esxcli system coredump network set -i ip_address_of_core_dump_collector -v vmk0 -o 6500
+esxcli system coredump network set --enable=true
+esxcli system coredump network check
+....
+. 输入最后一个命令后，将显示消息 `Verified the configured netdump server is running` 。
+
+
+对于添加到 FlexPod Express 中的任何其他主机，必须完成此过程。

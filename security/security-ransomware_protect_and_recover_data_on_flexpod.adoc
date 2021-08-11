@@ -1,0 +1,191 @@
+---
+sidebar: sidebar 
+permalink: security/security-ransomware_protect_and_recover_data_on_flexpod.html 
+keywords: testbed, ransomeware, attack, vm, snapshot, copy, wannacry, detection, remediation, cifs 
+summary: 本节介绍在发生攻击时如何恢复最终用户的数据，以及如何使用 FlexPod 系统防止攻击。 
+---
+= 保护和恢复 FlexPod 上的数据
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+本节介绍在发生攻击时如何恢复最终用户的数据，以及如何使用 FlexPod 系统防止攻击。
+
+
+
+== 测试台概述
+
+为了展示 FlexPod 的检测，修复和预防，我们根据编写本文档时提供的最新平台 CVD 中指定的准则构建了一个测试台： https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_vmware_netappaffa.html["采用 VMware vSphere 6.7 U1 ， Cisco UCS 第四代和 NetApp AFF A 系列 CVD 的 FlexPod 数据中心"^]。
+
+在 VMware vSphere 基础架构中部署了一个 Windows 2016 VM ，该 VM 通过 NetApp ONTAP 软件提供 CIFS 共享。然后，在 CIFS 共享上配置了 NetApp FPolicy ，以防止执行具有特定扩展类型的文件。此外，还部署了 NetApp SnapCenter 软件来管理基础架构中 VM 的 Snapshot 副本，以提供应用程序一致的 Snapshot 副本。
+
+
+
+== 发生攻击前的虚拟机状态及其文件
+
+本节显示了在对虚拟机进行攻击之前文件的状态以及映射到该虚拟机的 CIFS 共享。
+
+VM 的 Documents 文件夹包含一组 PDF 文件，这些文件尚未被 WannaCry 恶意软件加密。
+
+image:security-ransomware_image3.png["错误：缺少图形映像"]
+
+以下屏幕截图显示了映射到虚拟机的 CIFS 共享。
+
+image:security-ransomware_image4.png["错误：缺少图形映像"]
+
+以下屏幕截图显示了 CIFS 共享 `fpolicy_share` 上尚未被 WannaCry 恶意软件加密的文件。
+
+image:security-ransomware_image5.png["错误：缺少图形映像"]
+
+
+
+== 攻击前的重复数据删除和 Snapshot 信息
+
+在检测阶段，系统会指示并参考 Snapshot 副本在攻击之前的存储效率详细信息和大小。
+
+通过对托管 VM 的卷执行重复数据删除，存储节省了 19% 。
+
+image:security-ransomware_image6.png["错误：缺少图形映像"]
+
+通过对 CIFS 共享 `fpolicy_share` 执行重复数据删除，存储节省了 45% 。
+
+image:security-ransomware_image7.png["错误：缺少图形映像"]
+
+对于托管 VM 的卷，观察到 Snapshot 副本大小为 456 KB 。
+
+image:security-ransomware_image8.png["错误：缺少图形映像"]
+
+对于 CIFS 共享 `fpolicy_share` ，观察到的 Snapshot 副本大小为 160 KB 。
+
+image:security-ransomware_image9.png["错误：缺少图形映像"]
+
+
+
+== VM 和 CIFS 共享上的 WannaCry 感染
+
+在本节中，我们将介绍 WannaCry 恶意软件是如何引入 FlexPod 环境的，以及随后观察到的系统更改。
+
+以下步骤说明了 WannaCry 恶意软件二进制文件是如何引入 VM 的：
+
+. 已提取受保护的恶意软件。
++
+image:security-ransomware_image10.png["错误：缺少图形映像"]
+
+. 已执行二进制文件。
++
+image:security-ransomware_image11.png["错误：缺少图形映像"]
+
+
+
+
+
+=== 案例 1 ： WannaCry 对 VM 和映射的 CIFS 共享中的文件系统进行加密
+
+本地文件系统和映射的 CIFS 共享已被 WannaCry 恶意软件加密。
+
+恶意软件开始对具有 WNCRY 扩展名的文件进行加密。
+
+image:security-ransomware_image12.png["错误：缺少图形映像"]
+
+恶意软件会对本地 VM 和映射共享中的所有文件进行加密。
+
+image:security-ransomware_image13.png["错误：缺少图形映像"]
+
+
+
+==== 检测
+
+从恶意软件开始对文件进行加密的那一刻起，它就触发了 Snapshot 副本大小的指数级增长以及存储效率百分比的指数级下降。
+
+我们检测到，在攻击期间，托管 CIFS 共享的卷的 Snapshot 大小大幅增加到 820.98MB 。
+
+image:security-ransomware_image14.png["错误：缺少图形映像"]
+
+我们检测到托管 VM 的卷的 Snapshot 副本大小增加到了 404.3MB 。
+
+image:security-ransomware_image15.png["错误：缺少图形映像"]
+
+托管 CIFS 共享的卷的存储效率降低到 34% 。
+
+image:security-ransomware_image16.png["错误：缺少图形映像"]
+
+
+
+==== 修复
+
+在受到攻击之前使用全新 Snapshot 副本创建功能还原虚拟机和映射的 CIFS 共享。
+
+* 还原 VM*
+
+要还原虚拟机，请完成以下步骤：
+
+. 使用您使用 SnapCenter 创建的 Snapshot 副本还原虚拟机。
++
+image:security-ransomware_image17.png["错误：缺少图形映像"]
+
+. 选择所需的 VMware 一致 Snapshot 副本进行还原。
++
+image:security-ransomware_image18.png["错误：缺少图形映像"]
+
+. 此时将还原并重新启动整个 VM 。
++
+image:security-ransomware_image19.png["错误：缺少图形映像"]
+
+. 单击完成以启动还原过程。
++
+image:security-ransomware_image20.png["错误：缺少图形映像"]
+
+. 虚拟机及其文件将会还原。
++
+image:security-ransomware_image21.png["错误：缺少图形映像"]
+
+
+
+* 还原 CIFS 共享 *
+
+要还原 CIFS 共享，请完成以下步骤：
+
+. 使用攻击前创建的卷的 Snapshot 副本还原共享。
++
+image:security-ransomware_image22.png["错误：缺少图形映像"]
+
+. 单击确定以启动还原操作。
++
+image:security-ransomware_image23.png["错误：缺少图形映像"]
+
+. 还原后查看 CIFS 共享。
++
+image:security-ransomware_image24.png["错误：缺少图形映像"]
+
+
+
+
+
+=== 案例 2 ： WannaCry 对虚拟机中的文件系统进行加密，并尝试对通过 FPolicy 保护的映射 CIFS 共享进行加密
+
+
+
+==== 预防
+
+* 配置 FPolicy*
+
+要在 CIFS 共享上配置 FPolicy ，请在 ONTAP 集群上运行以下命令：
+
+....
+vserver fpolicy policy event create -vserver infra_svm -event-name Ransomware_event -protocol cifs -file-operations create,rename,write,open
+vserver fpolicy policy create -vserver infra_svm -policy-name Ransomware_policy -events Ransomware_event -engine native
+vserver fpolicy policy scope create -vserver infra_svm -policy-name Ransomware_policy -shares-to-include fpolicy_share -file-extensions-to-include WNCRY,Locky,ad4c
+vserver fpolicy enable -vserver infra_svm -policy-name Ransomware_policy -sequence-number 1
+....
+使用此策略时，不允许使用扩展名为 WNCRY ， Locky 和 ad4c 的文件执行文件操作 create ， rename ， write 或 open 。
+
+查看文件在攻击前的状态—它们未加密且位于一个干净的系统中。
+
+image:security-ransomware_image25.png["错误：缺少图形映像"]
+
+虚拟机上的文件已加密。WannaCry 恶意软件会尝试对 CIFS 共享中的文件进行加密，但 FPolicy 会防止其影响这些文件。
+
+image:security-ransomware_image26.png["错误：缺少图形映像"]

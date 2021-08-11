@@ -1,0 +1,56 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_volume_configuration.html 
+keywords: volume, provisioning, snapshot, copy, volume, default, aggregate, reallocate, schedule 
+summary: 专用于 MEDITECH 主机的 Meditech 卷可以采用厚配置或精简配置，并可使用 Snapshot 副本进行访问。您还可以使用卷级别重新分配来优化磁盘上的数据布局，以提高写入延迟和顺序读取访问。 
+---
+= 卷配置
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== 卷配置
+
+专用于 MEDITECH 主机的 Meditech 卷可以采用厚配置或精简配置。
+
+
+
+== 默认卷级 Snapshot 副本
+
+Snapshot 副本是在备份工作流中创建的。每个 Snapshot 副本可用于在不同时间访问存储在 MEDITECH LUN 中的数据。经 MEDITECH 批准的备份解决方案会基于这些 Snapshot 副本创建精简配置的 FlexClone 卷，以提供 MEDITECH LUN 的时间点副本。MEDITECH 环境与经过批准的备份软件解决方案集成在一起。因此， NetApp 建议您在构成 MEDITECH 生产数据库 LUN 的每个 NetApp FlexVol 卷上禁用默认 Snapshot 副本计划。
+
+* 重要信息： * FlexClone 卷共享父数据卷空间，因此卷必须有足够的空间来容纳 MEDITECH 数据 LUN 和备份服务器创建的 FlexClone 卷。FlexClone 卷占用的空间不像数据卷那样多。但是，如果在短时间内对 MEDITECH LUN 进行了大量删除，则克隆卷可能会增加。
+
+
+
+== 每个聚合的卷数
+
+对于使用 Flash Pool 或 NetApp Flash Cache 缓存的 NetApp FAS 系统， NetApp 建议为每个聚合配置三个或更多卷，这些卷专用于存储 MEDITECH 程序，词典和数据文件。
+
+对于 AFF 系统， NetApp 建议为每个聚合指定四个或更多卷，用于存储 MEDITECH 程序，词典和数据文件。
+
+
+
+== 卷级别重新分配计划
+
+随着时间的推移，存储的数据布局变得不太理想，尤其是当它被诸如 MEDITECH expanse ， 6.x 和 C/S 5.x 平台等写入密集型工作负载使用时。随着时间的推移，这种情况可能会增加顺序读取延迟，从而导致完成备份的时间更长。数据布局或碎片化不良也会影响写入延迟。您可以使用卷级别重新分配来优化磁盘上的数据布局，以改善写入延迟和顺序读取访问。经过改进的存储布局有助于在分配的 8 小时时间内完成备份。
+
+|===
+| 最佳实践 
+
+
+ a| 
+NetApp 建议您至少实施每周卷重新分配计划，以便在分配的维护停机时间或生产站点的非高峰时段运行重新分配操作。
+
+
+NOTE: NetApp 强烈建议您在每个控制器上一次对一个卷运行重新分配任务。
+
+|===
+有关为生产数据库存储确定适当的卷重新分配计划的详细信息，请参见中的第 3.12 节 https://fieldportal.netapp.com/content/192896["NetApp TR-3929 ：《重新分配最佳实践指南》"^]。该节还将指导您如何为繁忙站点创建每周重新分配计划。
+
+link:ehr-meditech-deploy_lun_configuration.html["下一步： LUN 配置。"]

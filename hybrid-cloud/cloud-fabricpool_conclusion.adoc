@@ -1,0 +1,15 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_conclusion.html 
+keywords: cloud, fabricpool, flexpod, conclusion 
+summary: 云之旅因组织，业务单位甚至组织内的业务单位而异。 
+---
+= 结论
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+云之旅因组织，业务单位甚至组织内的业务单位而异。有些选择采用速度较快，而另一些则采用较为保守的方法。无论企业规模大小如何，采用云的速度如何， FabricPool 都能融入云战略，进一步展示了 FlexPod 基础架构的效率和可扩展性优势。

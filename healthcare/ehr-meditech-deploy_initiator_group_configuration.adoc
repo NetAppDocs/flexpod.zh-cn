@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_initiator_group_configuration.html 
+keywords: initiator, group, configuration, fc, data, network, protocol, igroups 
+summary: 使用 FC 作为数据网络协议时，请在每个存储控制器上创建两个启动程序组（ igroup ）。第一个 igroup 包含托管 MEDITECH 主机 VM 的 VMware ESXi 服务器上 FC 主机接口卡的 WWPN （对于 MEDITECH 为 igroup ）。 
+---
+= 启动程序组配置
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+使用 FC 作为数据网络协议时，请在每个存储控制器上创建两个启动程序组（ igroup ）。第一个 igroup 包含托管 MEDITECH 主机 VM 的 VMware ESXi 服务器上 FC 主机接口卡的 WWPN （对于 MEDITECH 为 igroup ）。
+
+您必须根据环境设置设置 MEDITECH igroup 操作系统类型。例如：
+
+* 对于 Windows Server 环境中裸机服务器硬件上安装的应用程序，请使用 igroup 操作系统类型 `Windows` 。
+* 对于使用 VMware vSphere 虚拟机管理程序进行虚拟化的应用程序，请使用 igroup 操作系统类型 `VMware` 。
+
+
+
+NOTE: igroup 的操作系统类型可能与 LUN 的操作系统类型不同。例如，对于虚拟化的 MEDITECH 主机，您应将 igroup 操作系统类型设置为 `vmware` 。对于虚拟化 MEDITECH 主机使用的 LUN ，应将操作系统类型设置为 `Windows 2008 或更高版本` 。请使用此设置，因为 MEDITECH 主机操作系统是 Windows Server 2008 R2 64 位企业版。
+
+要确定正确的操作系统类型值，请参见中的 "LUN igroup Create" 和 "LUN Create" 两节 https://library.netapp.com/ecm/ecm_download_file/ECMP1366832["《集群模式 Data ONTAP 8.2 命令：手册页参考》"^]。
+
+link:ehr-meditech-deploy_lun_mappings.html["下一步： LUN 映射。"]

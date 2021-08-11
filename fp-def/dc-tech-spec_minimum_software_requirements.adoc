@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: fp-def/dc-tech-spec_minimum_software_requirements.html 
+keywords: software, requirements, minimum, flexpod, datacenter, techincal, specifications, cisco, ucs, manager 
+summary: 以下信息介绍了 FlexPod 配置的最低软件要求。 
+---
+= 最低软件要求
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+FlexPod 配置具有以下最低软件要求：
+
+* NetApp ONTAP ：
++
+** ONTAP 软件版本需要 ONTAP 9.1 或更高版本
+
+
+* Cisco UCS Manager 版本：
++
+** Cisco UCS 6200 系列互联阵列— 2.2 （ 8a ）
+** Cisco UCS 6300 系列互联阵列— 3.1 （ 1e ）
+** Cisco UCS 6400 系列互联阵列— 4.0 （ 1 ）
+
+
+* 对于 Cisco Nexus 5000 系列交换机， Cisco NX-OS 软件版本 5.0 （ 3 ） N1 （ 1c ）或更高版本，包括 NX-OS 5.1.x
+* 对于 Cisco Nexus 7000 系列交换机：
++
+** 4 插槽机箱需要使用 Cisco NX-OS 软件版本 6.1 （ 2 ）或更高版本
+** 9 插槽机箱需要 Cisco NX-OS 软件版本 5.2 或更高版本
+** 10 插槽机箱需要 Cisco NX-OS 软件版本 4.0 或更高版本
+** 18 插槽机箱需要 Cisco NX-OS 软件版本 4.1 或更高版本
+
+
+* 对于 Cisco Nexus 9000 系列交换机， Cisco NX-OS 软件版本 6.1 （ 2 ）或更高版本
+
+
+
+NOTE: FlexPod 配置中使用的软件必须在 NetApp 中列出并受支持 http://mysupport.netapp.com/matrix["IMT"^]。某些功能可能需要比列出的软件版本更新的软件版本。

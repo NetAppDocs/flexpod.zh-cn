@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec_other_requirements.html 
+keywords: requirements, flexpod, express, software, hardware, cisco, imt, hcl 
+summary: 下面列出了 FlexPod Express 的其他要求。 
+---
+= 其他要求
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+FlexPod Express 的其他要求包括：
+
+* 所有设备都需要有效的支持合同，包括：
++
+** Cisco 设备的 SMARTnet 支持
+** 对 NetApp 设备的 SupportEdge Premium 支持
+
+
+* 必须在中列出并支持所有软件组件 http://support.netapp.com/matrix/["NetApp IMT"^]。
+* 必须列出所有 NetApp 硬件组件并在上受支持 https://hwu.netapp.com/Home/Index["NetApp Hardware Universe"^]。
+* 必须列出所有 Cisco 硬件组件并在上受支持 https://ucshcltool.cloudapps.cisco.com/public/["Cisco HCL"^]。
+

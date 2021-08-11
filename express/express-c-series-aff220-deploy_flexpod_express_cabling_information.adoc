@@ -1,0 +1,116 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-aff220-deploy_flexpod_express_cabling_information.html 
+keywords: cabling, information, validation, cisco, nexus, switches 
+summary: 本节详细介绍了 Cisco Nexus 交换机 3172P A 和 B 以及 NetApp AFF A220 存储控制器 A 和 B 的验证布线和布线信息参考 
+---
+= FlexPod 快速布线信息
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+下图显示了参考验证布线。
+
+image:express-c-series-aff220-deploy_image5.png["错误：缺少图形映像"]
+
+下表显示了 Cisco Nexus 交换机 3172P A 的布线信息
+
+|===
+| 本地设备 | 本地端口 | 远程设备 | 远程端口 
+
+
+| Cisco Nexus 交换机 3172P A | Eth1/1 | NetApp AFF A220 存储控制器 A | e0c 
+
+
+|  | eth1/2 | NetApp AFF A220 存储控制器 B | e0c 
+
+
+|  | Eth1/3 | Cisco UCS C220 C 系列独立服务器 A | 采用 CVR-QSFP-SFP10G 适配器的 MLOM1 
+
+
+|  | Eth1/4 | Cisco UCS C220 C 系列独立服务器 B | 采用 CVR-QSFP-SFP10G 适配器的 MLOM1 
+
+
+|  | eth1/25 | Cisco Nexus 交换机 3172P B | eth1/25 
+
+
+|  | eth1/26. | Cisco Nexus 交换机 3172P B | eth1/26. 
+
+
+|  | eth1/33 | NetApp AFF A220 存储控制器 A | e0M 
+
+
+|  | eth1/34 | Cisco UCS C220 C 系列独立服务器 A | CIMC 
+|===
+下表显示了 Cisco Nexus 交换机 3172P B 的布线信息
+
+|===
+| 本地设备 | 本地端口 | 远程设备 | 远程端口 
+
+
+| Cisco Nexus 交换机 3172P B | Eth1/1 | NetApp AFF A220 存储控制器 A | e0d 
+
+
+|  | eth1/2 | NetApp AFF A220 存储控制器 B | e0d 
+
+
+|  | Eth1/3 | Cisco UCS C220 C 系列独立服务器 A | 采用 CVR-QSFP-SFP10G 适配器的 MLOM2 
+
+
+|  | Eth1/4 | Cisco UCS C220 C 系列独立服务器 B | 采用 CVR-QSFP-SFP10G 适配器的 MLOM2 
+
+
+|  | eth1/25 | Cisco Nexus 交换机 3172P A | eth1/25 
+
+
+|  | eth1/26. | Cisco Nexus 交换机 3172P A | eth1/26. 
+
+
+|  | eth1/33 | NetApp AFF A220 存储控制器 B | e0M 
+
+
+|  | eth1/34 | Cisco UCS C220 C 系列独立服务器 B | CIMC 
+|===
+下表显示了 NetApp AFF A220 存储控制器 A 的布线信息
+
+|===
+| 本地设备 | 本地端口 | 远程设备 | 远程端口 
+
+
+| NetApp AFF A220 存储控制器 A | e0a | NetApp AFF A220 存储控制器 B | e0a 
+
+
+|  | e0b | NetApp AFF A220 存储控制器 B | e0b 
+
+
+|  | e0c | Cisco Nexus 交换机 3172P A | Eth1/1 
+
+
+|  | e0d | Cisco Nexus 交换机 3172P B | Eth1/1 
+
+
+|  | e0M | Cisco Nexus 交换机 3172P A | eth1/33 
+|===
+下表显示了 NetApp AFF A220 存储控制器 B 的布线信息
+
+|===
+| 本地设备 | 本地端口 | 远程设备 | 远程端口 
+
+
+| NetApp AFF A220 存储控制器 B | e0a | NetApp AFF A220 存储控制器 A | e0a 
+
+
+|  | e0b | NetApp AFF A220 存储控制器 A | e0b 
+
+
+|  | e0c | Cisco Nexus 交换机 3172P A | eth1/2 
+
+
+|  | e0d | Cisco Nexus 交换机 3172P B | eth1/2 
+
+
+|  | e0M | Cisco Nexus 交换机 3172P B | eth1/33 
+|===

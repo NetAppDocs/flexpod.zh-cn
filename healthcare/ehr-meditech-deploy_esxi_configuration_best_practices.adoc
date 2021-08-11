@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_esxi_configuration_best_practices.html 
+keywords: esxi, configuration, practices, vsc, vmware, vaai, host, multipathing 
+summary: 对于 ESXi 主机端配置，请像运行任何企业数据库工作负载一样配置 VMware 主机。 
+---
+= ESXi 配置最佳实践
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+对于 ESXi 主机端配置，按照运行任何企业数据库工作负载的方式配置 VMware 主机：
+
+* 适用于 VMware vSphere 的 VSC 会检查并设置最适合 NetApp 存储系统的 ESXi 主机多路径设置和 HBA 超时设置。VSC 设置的值基于 NetApp 的严格内部测试。
+* 要获得最佳存储性能，请考虑使用支持 VMware vStorage API - 阵列集成（ VAAI ）的存储硬件。适用于 VAAI 的 NetApp 插件是一个软件库，它集成了 ESXi 主机上安装的 VMware 虚拟磁盘库。通过 VMware VAAI 软件包，可以将某些任务从物理主机卸载到存储阵列。
++
+您可以在阵列级别执行精简配置和硬件加速等任务，以减少 ESXi 主机上的工作负载。副本卸载功能和空间预留功能可提高 VSC 操作的性能。您可以从 NetApp 支持站点下载此插件安装包并获取此插件的安装说明。
+
++
+VSC 可设置 ESXi 主机超时，多路径设置和 HBA 超时设置以及其他值，以实现最佳性能并成功对 NetApp 存储控制器进行故障转移。请按照以下步骤操作：
+
++
+.. 从 VMware vSphere Web Client 主页页面中，选择 vCenter > 主机。
+.. 右键单击某个主机，然后选择操作 > NetApp VSC > 设置建议值。
+.. 在 NetApp 建议设置对话框中，选择最适合您的系统的值。
++
+默认情况下会设置标准建议值。
+
++
+image:ehr-meditech-deploy_image7.png["错误：缺少图形映像"]
+
+.. 单击确定。
+
+
+
+
+link:ehr-meditech-deploy_netapp_configuration.html["下一步： NetApp 配置。"]

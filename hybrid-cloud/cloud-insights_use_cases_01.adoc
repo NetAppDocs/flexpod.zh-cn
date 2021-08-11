@@ -1,0 +1,159 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-insights_use_cases_01.html 
+keywords: use, cases, active, iq, integration, dashboards, troubleshooting, storage, optimization, custom, real, time 
+summary: 通过设置并配置 Cloud Insights 来监控您的 FlexPod Datacenter 解决方案，我们可以在信息板上探索一些可执行的任务，以评估和监控您的环境。在本节中，我们重点介绍了 Cloud Insights 的五个主要用例。 
+---
+= 用例
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+通过设置并配置 Cloud Insights 来监控您的 FlexPod Datacenter 解决方案，我们可以在信息板上探索一些可执行的任务，以评估和监控您的环境。在本节中，我们重点介绍了 Cloud Insights 的五个主要用例：
+
+* Active IQ 集成
+* 探索实时信息板
+* 创建自定义信息板
+* 高级故障排除
+* 存储优化
+
+
+
+
+== Active IQ 集成
+
+Cloud Insights 已完全集成到 Active IQ 存储监控平台中。作为 FlexPod Datacenter 解决方案的一部分部署的 ONTAP 系统会自动配置为通过每个系统内置的 AutoSupport 功能将信息发送回 NetApp 。这些报告会按计划生成，或者在系统中检测到故障时动态生成。通过 AutoSupport 传输的数据会进行聚合，并显示在 Cloud Insights 的 Active IQ 菜单下易于访问的信息板中。
+
+
+
+=== 通过 Cloud Insights 信息板访问 Active IQ 信息
+
+要通过 Cloud Insights 信息板访问 Active IQ 信息，请完成以下步骤：
+
+. 单击左侧管理菜单下的 Data Collector 选项。
++
+image:cloud-insights_image13.png["错误：缺少图形映像"]
+
+. 筛选环境中的特定 Data Collector 。在此示例中，我们按术语 FlexPod 进行筛选。
++
+image:cloud-insights_image23.png["错误：缺少图形映像"]
+
+. 单击 Data Collector 以获取该收集器所监控的环境和设备的摘要。
++
+image:cloud-insights_image24.png["错误：缺少图形映像"]
+
++
+在底部附近的设备列表下，单击要监控的 ONTAP 存储系统的名称。此时将显示一个信息板，其中包含有关系统的信息，包括以下详细信息：
+
++
+** 型号
+** 系列
+** ONTAP 版本
+** 原始容量
+** 平均 IOPS
+** 平均延迟
+** 平均吞吐量
++
+image:cloud-insights_image25.png["错误：缺少图形映像"]
+
++
+此外，在此页面上的性能策略部分下，您可以找到指向 NetApp Active IQ 的链接。
+
++
+image:cloud-insights_image26.png["错误：缺少图形映像"]
+
+
+
+. 要打开一个新的浏览器选项卡并转到风险缓解页面，其中显示了哪些节点受到影响，风险有多严重以及需要采取哪些适当措施来更正已确定的问题，请单击 Active IQ 链接。
++
+image:cloud-insights_image27.png["错误：缺少图形映像"]
+
+
+
+
+
+=== 浏览实时信息板
+
+Cloud Insights 可以显示从 FlexPod Datacenter 解决方案中部署的 ONTAP 存储系统轮询的信息的实时信息板。Cloud Insights 采集单元定期收集数据，并使用收集的信息填充默认存储系统信息板。
+
+
+
+==== 通过 Cloud Insights 信息板访问实时图形
+
+在存储系统信息板中，您可以看到 Data Collector 上次更新信息的时间。下图显示了这方面的一个示例。
+
+image:cloud-insights_image28.png["错误：缺少图形映像"]
+
+默认情况下，存储系统信息板会在 "Expert View" 部分中显示多个交互式图形，这些图形显示所轮询的存储系统或每个节点的系统范围指标，包括：延迟， IOPS 和吞吐量。下图显示了这些默认图形的示例。
+
+image:cloud-insights_image29.png["错误：缺少图形映像"]
+
+默认情况下，图形显示过去三小时的信息，但您可以将其设置为多个不同的值或存储系统信息板右上角下拉列表中的自定义值。如下图所示。
+
+image:cloud-insights_image30.png["错误：缺少图形映像"]
+
+
+
+=== 创建自定义信息板
+
+除了使用显示系统范围信息的默认信息板之外，您还可以使用 Cloud Insights 创建完全自定义的信息板，以便集中精力关注 FlexPod Datacenter 解决方案中特定存储卷的资源使用情况。 因此，在融合基础架构中部署的应用程序需要依靠这些卷才能有效运行。这样做可以帮助您更好地了解特定应用程序及其在数据中心环境中使用的资源。
+
+
+
+==== 创建自定义信息板以评估存储资源
+
+要创建自定义信息板以评估存储资源，请完成以下步骤：
+
+. 要创建自定义信息板，请将鼠标悬停在 Cloud Insights 主菜单上的 Dashboards 上，然后单击下拉列表中的 + New Dashboard 。
++
+image:cloud-insights_image31.png["错误：缺少图形映像"]
+
++
+此时将打开 "New Dashboard" 窗口。
+
+. 为信息板命名，然后选择用于显示数据的小工具类型。您可以从多种图形类型中选择，甚至可以从注释或表类型中选择以显示收集的数据。
++
+image:cloud-insights_image32.png["错误：缺少图形映像"]
+
+. 从添加变量菜单中选择自定义变量。
++
+这样，所提供的数据就可以集中显示更具体或更专业的因素。
+
++
+image:cloud-insights_image33.png["错误：缺少图形映像"]
+
+. 要创建自定义信息板，请选择要使用的小工具类型，例如饼图以按卷显示存储利用率：
++
+.. 从添加小工具下拉列表中选择饼图小工具。
+.. 使用描述性标识符为小工具命名，例如 `Capacity used` 。
+.. 选择要显示的对象。例如，您可以按关键字卷搜索并选择 `volume.performance.capacity.used` 。
+.. 要按存储系统进行筛选，请使用筛选器并在 FlexPod Datacenter 解决方案中键入存储系统的名称。
+.. 自定义要显示的信息。默认情况下，此选项将显示 ONTAP 数据卷并列出排名前 10 位的卷。
+.. 要保存自定义信息板，请单击 Save 。
++
+image:cloud-insights_image34.png["错误：缺少图形映像"]
+
++
+保存自定义小工具后，浏览器将返回到 " 新建信息板 " 页面，在此页面中显示新创建的小工具，并允许执行交互操作，例如修改数据轮询期。
+
++
+image:cloud-insights_image35.png["错误：缺少图形映像"]
+
+
+
+
+
+
+
+=== 高级故障排除
+
+Cloud Insights 支持将高级故障排除方法应用于 FlexPod 数据中心融合基础架构中的任何存储环境。使用上述每个功能的组件： Active IQ 集成，具有实时统计信息的默认信息板以及自定义信息板，可以尽早检测到可能出现的问题并快速解决。使用 Active IQ 中的风险列表，客户可以找到报告的可能导致问题描述的配置错误，或者发现已报告的错误以及可对其进行补救的代码修补版本。通过观察 Cloud Insights 主页上的实时信息板，可以帮助您发现系统性能模式，这种模式可能是问题呈上升趋势的早期指标，并有助于迅速解决问题。最后，客户可以创建自定义信息板，从而可以专注于其基础架构中最重要的资产，并直接监控这些资产，以确保满足其业务连续性目标。
+
+
+
+=== 存储优化
+
+除了故障排除之外，还可以使用 Cloud Insights 收集的数据来优化部署在 FlexPod 数据中心融合基础架构解决方案中的 ONTAP 存储系统。如果某个卷的延迟较高，可能是因为多个具有高性能需求的 VM 共享同一个数据存储库，则此信息将显示在 Cloud Insights 信息板上。利用这些信息，存储管理员可以选择将一个或多个 VM 迁移到其他卷，在聚合层之间或 ONTAP 存储系统中的节点之间迁移存储卷，从而实现性能优化的环境。从 Active IQ 与 Cloud Insights 集成中收集的信息可以突出显示导致性能低于预期的配置问题，并提供建议的更正操作，如果实施，可以修复任何问题，并确保存储系统经过优化。

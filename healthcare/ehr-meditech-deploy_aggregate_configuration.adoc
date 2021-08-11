@@ -1,0 +1,52 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_aggregate_configuration.html 
+keywords: aggregate, configuration, raid, groups, dp, storage, expansion, snapshot, copy, 
+summary: NetApp 建议将 NetApp RAID DP 技术作为 NetApp FAS 或 AFF 系统中所有聚合的 RAID 类型，包括常规 NetApp Flash Pool 聚合。Meditech 文档可能会指定使用 RAID 10 ，但 MEDITECH 已批准使用 RAID DP 。 
+---
+= 聚合配置
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== NetApp RAID DP
+
+NetApp 建议将 NetApp RAID DP 技术作为 NetApp FAS 或 AFF 系统中所有聚合的 RAID 类型，包括常规 NetApp Flash Pool 聚合。Meditech 文档可能会指定使用 RAID 10 ，但 MEDITECH 已批准使用 RAID DP 。
+
+
+
+== RAID 组大小和 RAID 组数量
+
+默认 RAID 组大小为 16 。此大小对于特定站点的 MEDITECH 主机的聚合可能是最佳的，也可能不是最佳的。有关 NetApp 建议在 RAID 组中使用的磁盘数量，请参见 https://fieldportal.netapp.com/content/190829["NetApp TR-3838 ：《存储子系统配置指南》"^]。
+
+RAID 组大小对于存储扩展非常重要，因为 NetApp 建议您将磁盘添加到一个聚合中，该聚合包含一个或多个与 RAID 组大小相等的磁盘组。RAID 组的数量取决于数据磁盘的数量和 RAID 组的大小。要确定所需的数据磁盘数量，请使用 NetApp System Performance Modeler （ SPM ）规模估算工具。确定数据磁盘数量后，请调整 RAID 组大小，以将奇偶校验磁盘数量降至每个磁盘类型的 RAID 组大小建议范围内。
+
+有关如何在 MEDITECH 环境中使用 SPM 规模估算工具的详细信息，请参见 https://fieldportal.netapp.com/content/198446["NetApp TR-4190 ：《适用于 MEDITECH 环境的 NetApp 规模估算准则》"^]。
+
+
+
+== 存储扩展注意事项
+
+扩展包含更多磁盘的聚合时，请添加组中与聚合 RAID 组大小相等的磁盘。遵循此方法有助于在整个聚合中提供性能一致性。
+
+例如，要向 RAID 组大小为 20 的聚合添加存储， NetApp 建议添加的磁盘数为一个或多个 20 磁盘组。因此，您应添加 20 ， 40 ， 60 等磁盘。
+
+扩展聚合后，您可以通过在受影响的卷或聚合上运行重新分配任务来将现有数据条带分布到新磁盘上来提高性能。此操作非常有用，尤其是在现有聚合接近全满时。
+
+
+NOTE: 您应计划在非生产时间重新分配计划，因为这是一项 CPU 和磁盘密集型任务。
+
+有关在聚合扩展后使用重新分配的详细信息，请参见 https://fieldportal.netapp.com/content/192896["NetApp TR-3929 ：《重新分配最佳实践指南》"^]。
+
+
+
+== 聚合级 Snapshot 副本
+
+将聚合级别的 NetApp Snapshot 副本预留设置为零并禁用默认聚合 Snapshot 计划。如果可能，请删除任何已存在的聚合级别 Snapshot 副本。
+
+link:ehr-meditech-deploy_storage_virtual_machine_configuration.html["下一步： Storage Virtual Machine 配置。"]

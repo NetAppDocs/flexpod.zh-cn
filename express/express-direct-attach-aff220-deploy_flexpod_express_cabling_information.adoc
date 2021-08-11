@@ -1,0 +1,142 @@
+---
+sidebar: sidebar 
+permalink: express/express-direct-attach-aff220-deploy_flexpod_express_cabling_information.html 
+keywords: cabling, express, information, cisco, nexus, switch, aff, storage, controller, ucs, fabric 
+summary: 下表介绍了参考验证布线。 
+---
+= FlexPod 快速布线信息
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+下表介绍了参考验证布线。
+
+下表列出了 Cisco Nexus 交换机 31108PCV A 的布线信息
+
+|===
+| 本地设备 | 本地端口 | 远程设备 | 远程端口 
+
+
+.6+| Cisco Nexus 交换机 31108PCV A | Eth1/1 | NetApp AFF A220 存储控制器 A | e0M 
+
+
+| eth1/2 | Cisco UCS-Mini FI-A | mgmt0 
+
+
+| Eth1/3 | Cisco UCS-Mini FI-A | Eth1/1 
+
+
+| ETH 1/4 | Cisco UCS-迷你 FI-B | Eth1/1 
+
+
+| ETH 1/13 | Cisco NX 31108PCV B | ETH 1/13 
+
+
+| ETH 1/14 | Cisco NX 31108PCV B | ETH 1/14 
+|===
+下表列出了 Cisco Nexus 交换机 31108PCV B 的布线信息
+
+|===
+| 本地设备 | 本地端口 | 远程设备 | 远程端口 
+
+
+.6+| Cisco Nexus 交换机 31108PCV B | Eth1/1 | NetApp AFF A220 存储控制器 B | e0M 
+
+
+| eth1/2 | Cisco UCS-迷你 FI-B | mgmt0 
+
+
+| Eth1/3 | Cisco UCS-Mini FI-A | eth1/2 
+
+
+| ETH 1/4 | Cisco UCS-迷你 FI-B | eth1/2 
+
+
+| ETH 1/13 | Cisco NX 31108PCV A | ETH 1/13 
+
+
+| ETH 1/14 | Cisco NX 31108PCV A | ETH 1/14 
+|===
+下表列出了 NetApp AFF A220 存储控制器 A 的布线信息
+
+|===
+| 本地设备 | 本地端口 | 远程设备 | 远程端口 
+
+
+.5+| NetApp AFF A220 存储控制器 A | e0a | NetApp AFF A220 存储控制器 B | e0a 
+
+
+| e0b | NetApp AFF A220 存储控制器 B | e0b 
+
+
+| e0e | Cisco UCS-Mini FI-A | Eth1/3 
+
+
+| e0f | Cisco UCS-迷你 FI-B | Eth1/3 
+
+
+| e0M | Cisco NX 31108PCV A | Eth1/1 
+|===
+下表列出了 NetApp AFF A220 存储控制器 B 的布线信息
+
+|===
+| 本地设备 | 本地端口 | 远程设备 | 远程端口 
+
+
+.5+| NetApp AFF A220 存储控制器 B | e0a | NetApp AFF A220 存储控制器 B | e0a 
+
+
+| e0b | NetApp AFF A220 存储控制器 B | e0b 
+
+
+| e0e | Cisco UCS-Mini FI-A | Eth1/4 
+
+
+| e0f | Cisco UCS-迷你 FI-B | Eth1/4 
+
+
+| e0M | Cisco NX 31108PCV B | Eth1/1 
+|===
+下表列出了 Cisco UCS 互联阵列 A 的布线信息
+
+|===
+| 本地设备 | 本地端口 | 远程设备 | 远程端口 
+
+
+.5+| Cisco UCS 互联阵列 A | Eth1/1 | Cisco NX 31108PCV A | Eth1/3 
+
+
+| eth1/2 | Cisco NX 31108PCV B | Eth1/3 
+
+
+| Eth1/3 | NetApp AFF A220 存储控制器 A | e0e 
+
+
+| Eth1/4 | NetApp AFF A220 存储控制器 B | e0e 
+
+
+| mgmt0 | Cisco NX 31108PCV A | eth1/2 
+|===
+下表列出了 Cisco UCS 互联阵列 B 的布线信息
+
+|===
+| 本地设备 | 本地端口 | 远程设备 | 远程端口 
+
+
+.5+| Cisco UCS 互联阵列 B | Eth1/1 | Cisco NX 31108PCV A | Eth1/4 
+
+
+| eth1/2 | Cisco NX 31108PCV B | Eth1/4 
+
+
+| Eth1/3 | NetApp AFF A220 存储控制器 A | e0f 
+
+
+| Eth1/4 | NetApp AFF A220 存储控制器 B | e0f 
+
+
+| mgmt0 | Cisco NX 31108PCV B | eth1/2 
+|===

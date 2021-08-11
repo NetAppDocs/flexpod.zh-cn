@@ -1,0 +1,82 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_netapp_configuration.html 
+keywords: configuration, storage, meditech, software, environments, controllers, hardware, takeover, licenses 
+summary: 为 MEDITECH 软件环境部署的 NetApp 存储将采用高可用性对配置使用存储控制器。必须通过 FC 协议将存储从两个控制器提供给 MEDITECH 数据库服务器。此配置可提供两个控制器的存储，以便在正常操作期间均匀平衡应用程序负载。 
+---
+= NetApp 配置
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+为 MEDITECH 软件环境部署的 NetApp 存储使用高可用性对配置中的存储控制器。必须通过 FC 协议将存储从两个控制器提供给 MEDITECH 数据库服务器。此配置可提供两个控制器的存储，以便在正常操作期间均匀平衡应用程序负载。
+
+
+
+== ONTAP 配置
+
+本节介绍使用相关 ONTAP 命令的部署和配置过程示例。重点是展示如何配置存储以实施 NetApp 建议的存储布局，该布局使用高可用性控制器对。ONTAP 的主要优势之一是能够在不影响现有高可用性对的情况下进行横向扩展。
+
+
+
+=== ONTAP 许可证
+
+设置存储控制器后，应用许可证以启用 NetApp 建议的 ONTAP 功能。MEDITECH 工作负载的许可证包括 FC ， CIFS 和 NetApp Snapshot ， SnapRestore ， FlexClone ， 和 SnapMirror 技术。
+
+要配置许可证，请打开 NetApp ONTAP 系统管理器，转至配置许可证，然后添加相应的许可证。
+
+或者，也可以使用命令行界面运行以下命令来添加许可证：
+
+....
+license add -license-code <code>
+....
+
+
+=== AutoSupport 配置
+
+NetApp AutoSupport 工具可通过 HTTPS 向 NetApp 发送摘要支持信息。要配置 AutoSupport ，请运行以下 ONTAP 命令：
+
+....
+autosupport modify -node * -state enable
+autosupport modify -node * -mail-hosts <mailhost.customer.com>
+autosupport modify -node prod1-01 -from prod1-01@customer.com
+autosupport modify -node prod1-02 -from prod1-02@customer.com
+autosupport modify -node * -to storageadmins@customer.com
+autosupport modify -node * -support enable
+autosupport modify -node * -transport https
+autosupport modify -node * -hostnamesubj true
+....
+
+
+=== 硬件辅助接管配置
+
+在每个节点上，启用硬件辅助接管，以便在发生控制器故障的情况下尽可能地缩短启动接管所需的时间。要配置硬件辅助接管，请完成以下步骤：
+
+. 将以下 ONTAP 命令运行到 xxx 。
++
+将配对地址选项设置为 `prod1-01` 的管理端口的 IP 地址。
+
++
+....
+MEDITECH::> storage failover modify -node prod1-01 -hwassist-partner-ip <prod1-02-mgmt-ip>
+....
+. 将以下 ONTAP 命令运行到 xxx ：
++
+将配对地址选项设置为 `cluster1-02` 的管理端口的 IP 地址。
+
++
+....
+MEDITECH::> storage failover modify -node prod1-02 -hwassist-partner-ip <prod1-01-mgmt-ip>
+....
+. 运行以下 ONTAP 命令，在 `prod1-01` 和 `prod1-02` HA 控制器对上启用硬件辅助接管。
++
+....
+MEDITECH::> storage failover modify -node prod1-01 -hwassist true
+MEDITECH::> storage failover modify -node prod1-02 -hwassist true
+....
+
+
+link:ehr-meditech-deploy_aggregate_configuration.html["下一步：聚合配置。"]

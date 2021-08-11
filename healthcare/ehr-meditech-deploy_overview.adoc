@@ -1,0 +1,314 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_overview.html 
+keywords: datacenter, meditech, deployment, solution, benefits, infrastructure, architecture, cisco, storage, volume, lun 
+summary: 通过在 FlexPod 架构基础上运行 MEDITECH 环境，您的医疗保健组织有望提高员工工作效率，并减少资本和运营支出。 
+---
+= TR-4753 ：《适用于 MEDITECH 的 FlexPod 数据中心部署指南》
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+NetApp 公司的 Brandon Agee ， John Duignan ， Mike Brennan 和 Cisco 公司的 Jon Ebmeier
+
+与以下合作伙伴：image:cisco logo.png["错误：缺少图形映像"]
+
+
+
+== 解决方案的整体优势
+
+通过在 FlexPod 架构基础上运行 MEDITECH 环境，您的医疗保健组织有望提高员工工作效率，并减少资本和运营支出。适用于 MEDITECH 的 FlexPod 数据中心提供了医疗保健行业特有的多项优势，包括：
+
+* * 简化操作并降低成本。 * 通过使用更高效且可扩展的共享资源来取代原有平台，从而消除原有平台的成本和复杂性，从而为临床医生提供支持，无论这些平台位于何处。此解决方案可提高资源利用率，从而提高投资回报率（ ROI ）。
+* * 加快基础架构部署速度。 * 无论是现有数据中心还是远程位置，借助经过测试的集成 FlexPod 数据中心设计，您可以在更短的时间内完成新基础架构的启动和运行，而无需费力。
+* * 认证存储。 * 采用 MEDITECH 的 NetApp ONTAP 数据管理软件可为您提供经过测试和认证的存储供应商所具有的卓越可靠性。Meditech 不会对其他基础架构组件进行认证。
+* * 横向扩展架构。 * 无需重新配置正在运行的应用程序，即可将 SAN 和 NAS 从 TB 扩展到数十 PB 。
+* * 无中断运行。 * 在不中断业务的情况下执行存储维护，硬件生命周期操作和 FlexPod 升级。
+* * 安全多租户。 * 支持日益增长的虚拟化服务器和存储共享基础架构需求，支持对设施特定信息进行安全多租户，尤其是在您的系统托管多个数据库和软件实例时。
+* * 池化资源优化。 * 有助于减少物理服务器和存储控制器数量，负载平衡工作负载需求并提高利用率，同时提高性能。
+* * 服务质量（ QoS ）。 * FlexPod 可在整个堆栈上提供 QoS 。行业领先的 QoS 网络，计算和存储策略可在共享环境中实现不同的服务级别。这些策略可以为工作负载提供最佳性能，并有助于隔离和控制失控的应用程序。
+* * 存储效率。 * 使用降低存储成本 http://www.netapp.com/us/media/netapp-aff-efficiency-guarantee.pdf["NetApp 7 ： 1 存储效率担保"^]。
+* * 灵活性。 * 借助 FlexPod 系统提供的行业领先的工作流自动化，流程编排和管理工具，您的 IT 团队可以更快速地响应业务请求。这些业务请求包括从 MEDITECH 备份和配置更多测试和培训环境到为人口健康管理计划复制分析数据库等。
+* * 提高了工作效率。 * 快速部署和扩展此解决方案，以获得最佳临床医生最终用户体验。
+* * NetApp Data Fabric 。 * NetApp Data Fabric 架构可以跨站点，跨物理边界和跨应用程序将数据集于一体。NetApp Data Fabric 专为以数据为中心的世界中的数据驱动型企业而构建。数据是在多个位置创建和使用的，通常您需要利用并与其他位置，应用程序和基础架构共享数据。您需要一种一致且集成的数据管理方式。Data Fabric 提供了一种数据管理方式，可以控制数据并简化日益增加的 IT 复杂性。
+
+
+
+
+== FlexPod
+
+
+
+=== 适用于 MEDITECH EHR 的新基础架构方法
+
+像您这样的医疗保健提供商组织仍然面临着最大程度地从行业领先的 MEDITECH 电子健康记录（ Electronic Health records ， EHR ）的大量投资中获益的压力。对于任务关键型应用程序，客户在为 MEDITECH 解决方案设计数据中心时，通常会为其数据中心架构确定以下目标：
+
+* MEDITECH 应用程序的高可用性
+* 高性能
+* 在数据中心轻松实施 MEDITECH
+* 灵活性和可扩展性，支持通过新的 MEDITECH 版本或应用程序实现增长
+* 成本效益
+* 与 MEDITECH 指南和目标平台保持一致
+* 易管理性，稳定性和易支持性
+* 强大的数据保护，备份，恢复和业务连续性
+
+
+随着 MEDITECH 用户不断发展，成为负责的医疗保健组织，并根据捆绑式强化报销模式进行调整，在以更高效，更灵活的 IT 交付模式交付所需的 MEDITECH 基础架构时，面临的挑战就会越来越大。
+
+
+
+=== 经过预先验证的融合基础架构的价值
+
+由于提供可预测的低延迟系统性能和高可用性的总体要求， MEDITECH 对其客户的硬件要求具有规范性。
+
+FlexPod 是一款经过预先验证，经过严格测试的融合基础架构，由 Cisco 和 NetApp 的战略合作伙伴合作打造。它经过专门设计和设计，可提供可预测的低延迟系统性能和高可用性。这种方法可确保 MEDITECH 合规，并最终为 MEDITECH 系统的用户提供最佳响应时间。
+
+Cisco 和 NetApp 推出的 FlexPod 解决方案采用高性能，模块化，预先验证，融合，虚拟化， 高效，可扩展且经济高效的平台。它提供：
+
+* * 模块化架构。 * FlexPod 可通过针对每个特定工作负载专门配置的 FlexPod 平台来满足 MEDITECH 模块化架构的各种需求。所有组件均通过集群服务器，存储管理网络结构和一个统一的管理工具集进行连接。
+* * 融合堆栈各级均采用行业领先的技术。 * Cisco ， NetApp ， VMware 和 Microsoft Windows 在服务器，网络，存储和操作系统的各个类别中均被行业分析师评为第一或第二。
+* * 利用标准化，灵活的 IT 保护投资。 * FlexPod 参考架构可预测新产品版本和更新，并持续进行严格的互操作性测试，以适应未来技术的推出。
+* * 在广泛的环境中进行成熟的部署。 * FlexPod 已通过广泛的虚拟机管理程序，操作系统，应用程序和基础架构软件的预先测试和联合验证，安装在多个 MEDITECH 客户组织中。
+
+
+
+
+=== 经验证的 FlexPod 架构和合作支持
+
+FlexPod 是一款经验证的数据中心解决方案，可提供灵活的共享基础架构，可轻松扩展以满足不断增长的工作负载需求，而不会对性能产生负面影响。通过利用 FlexPod 架构，此解决方案可提供 FlexPod 的全部优势，包括：
+
+* * 性能可满足 MEDITECH 工作负载要求。 * 根据您的 MEDITECH 硬件配置提案要求，可以部署不同的 ONTAP 平台来满足您所需的 I/O 和延迟要求。
+* * 可扩展性可轻松适应临床数据增长。 * 可按需动态扩展虚拟机（ VM ），服务器和存储容量，而不受传统限制。
+* * 提高了效率。 * 借助融合虚拟化基础架构缩短管理时间并降低 TCO ，这种基础架构更易于管理，更高效地存储数据，同时利用 MEDITECH 软件提高性能。
+* * 降低风险。 * 利用基于定义的架构构建的预先验证的平台，最大程度地减少业务中断，消除部署猜测并适应持续的工作负载优化。
+* * FlexPod 合作支持。 * NetApp 和 Cisco 建立了合作支持，这是一种强大，可扩展且灵活的支持模式，可满足 FlexPod 融合基础架构的独特支持要求。此模式结合了 NetApp 和 Cisco 的经验，资源和技术支持专业知识，可简化识别和解决 FlexPod 支持问题描述的流程，而无论问题位于何处。借助 FlexPod 合作支持模式，您的 FlexPod 系统可以高效运行并受益于最新技术，您还可以与经验丰富的团队合作，帮助您解决集成问题。
++
+对于在 FlexPod 融合基础架构上运行业务关键型应用程序（例如 MEDITECH ）的医疗保健组织来说， FlexPod 合作支持尤其重要。下图显示了 FlexPod 合作支持模式。
+
+
+
+image:ehr-meditech-deploy_image2.png["错误：缺少图形映像"]
+
+除了这些优势之外，采用 MEDITECH 解决方案的 FlexPod 数据中心堆栈的每个组件还为 MEDITECH EHR 工作流提供了特定优势。
+
+
+
+=== Cisco Unified Computing System
+
+Cisco Unified Computing System （ Cisco UCS ）是一个自我集成的自我感知系统，由一个管理域组成，该管理域与统一 I/O 基础架构互连。为了使基础架构能够提供最可用的关键患者信息，适用于 MEDITECH 环境的 Cisco UCS 已与 MEDITECH 基础架构建议和最佳实践保持一致。
+
+基于 Cisco UCS 架构的 MEDITECH 的基础是 Cisco UCS 技术，它具有集成的系统管理， Intel Xeon 处理器和服务器虚拟化功能。这些集成技术可解决数据中心挑战，并帮助您实现 MEDITECH 数据中心设计的目标。Cisco UCS 将 LAN ， SAN 和系统管理统一为一个简化的链路，用于机架式服务器，刀片式服务器和 VM 。Cisco UCS 是一种端到端 I/O 架构，它整合了 Cisco Unified Fabric 和 Cisco Fabric Extender Technology （ FEX 技术），可将 Cisco UCS 中的每个组件连接到一个网络结构和一个网络层。
+
+该系统可以部署为一个或多个逻辑单元，这些逻辑单元可整合并扩展到多个刀片式服务器机箱，机架服务器，机架和数据中心。该系统实施了一个彻底简化的架构，消除了在传统刀片式服务器机箱和机架服务器中填充多个冗余设备的情况。在传统系统中，以太网和 FC 适配器以及机箱管理模块等冗余设备会造成多层复杂性。Cisco UCS 由一对冗余的 Cisco UCS 互联阵列（ Fabric Interconnects ， CLI ）组成，可为所有 I/O 流量提供单点管理和单点控制。
+
+Cisco UCS 使用服务配置文件来帮助确保 Cisco UCS 基础架构中的虚拟服务器配置正确。服务配置文件由网络，存储和计算策略组成，这些策略由每个领域的主题专家创建一次。服务配置文件包括有关服务器标识的关键服务器信息，例如 LAN 和 SAN 寻址， I/O 配置，固件版本，启动顺序，网络虚拟 LAN （ VLAN ），物理端口和 QoS 策略。可以在几分钟内动态创建服务配置文件并将其与系统中的任何物理服务器相关联，而无需花费数小时或数天的时间。将服务配置文件与物理服务器关联起来只需执行一项简单的操作，即可在环境中的服务器之间迁移身份，而无需更改任何物理配置。它有助于为已停用的服务器快速配置更换件。
+
+使用服务配置文件有助于确保服务器在整个企业中的配置一致。如果使用多个 Cisco UCS 管理域，则 Cisco UCS Central 可以使用全局服务配置文件在各个域之间同步配置和策略信息。如果需要在一个域中执行维护，则可以将虚拟基础架构迁移到另一个域。这种方法有助于确保即使单个域脱机，应用程序也能继续以高可用性运行。
+
+为了证明它符合服务器配置要求， Cisco UCS 已在多年的时间里与 MEDITECH 进行了广泛的测试。Cisco UCS 是一个受支持的服务器平台，如 MEDITECH 产品资源系统支持站点所示。
+
+
+
+=== Cisco 网络
+
+Cisco Nexus 交换机和 Cisco MDS 多层控制器可提供企业级连接和 SAN 整合。Cisco 多协议存储网络通过提供以下灵活性和选项降低业务风险： FC ，光纤连接（ Fibre Connection ， Ficon ），以太网 FC （ FCoE ）， IP 上 SCSI （ iSCSI ）和 IP 上 FC （ FCIP ）。
+
+Cisco Nexus 交换机可在一个平台中提供最全面的数据中心网络功能集之一。它们可以为数据中心和园区核心提供高性能和高密度。此外，它们还为数据中心聚合，行尾和数据中心互连部署提供了一整套功能，可在一个具有高度弹性的模块化平台中实现。
+
+Cisco UCS 可将计算资源与 Cisco Nexus 交换机和统一 I/O 网络结构相集成，从而识别和处理不同类型的网络流量。此流量包括存储 I/O ，流式桌面流量，管理以及对临床和业务应用程序的访问。您可以获得：
+
+* * 基础架构可扩展性。 * 虚拟化，高效的电耗和散热，自动化的云扩展，高密度和高性能都支持高效的数据中心增长。
+* * 操作连续性。 * 该设计集成了硬件， NX-OS 软件功能和管理功能，可支持零停机环境。
+* * 网络和计算机 QoS 。 * Cisco 在网络，存储和计算网络结构中提供策略驱动型服务级别（ CoS ）和 QoS ，以实现任务关键型应用程序的最佳性能。
+* * 传输灵活性。 * 利用经济高效的解决方案逐步采用新的网络技术。
+
+
+Cisco UCS 与 Cisco Nexus 交换机和 Cisco MDS 多层控制器相结合，可为 MEDITECH 提供最佳的计算，网络和 SAN 连接解决方案。
+
+
+
+=== NetApp ONTAP
+
+运行 ONTAP 软件的 NetApp 存储可降低整体存储成本，同时提供 MEDITECH 工作负载所需的低延迟读写响应时间和 IOPS 。ONTAP 支持全闪存和混合存储配置，可创建满足 MEDITECH 要求的最佳存储平台。NetApp 闪存加速系统已获得 MEDITECH 的验证和认证，可为作为 MEDITECH 客户的您提供性能和响应能力，这是对延迟敏感的 MEDITECH 运营的关键。通过在一个集群中创建多个故障域， NetApp 系统还可以将生产与非生产隔离开来。此外， NetApp 系统还可以为采用 ONTAP QoS 的工作负载提供最低性能保障，从而减少性能问题。
+
+ONTAP 软件的横向扩展架构可以灵活地适应各种 I/O 工作负载。为了提供临床应用程序所需的必要吞吐量和低延迟，同时提供模块化横向扩展架构，全闪存配置通常用于 ONTAP 架构。NetApp AFF 节点可以在同一个横向扩展集群中与混合（ HDD 和闪存）存储节点组合使用，这些存储节点适用于存储高吞吐量的大型数据集。除了经过 MEDITECH 批准的备份解决方案之外，您还可以将 MEDITECH 环境从昂贵的固态驱动器（ SSD ）存储克隆，复制和备份到其他节点上更经济的 HDD 存储。此方法符合或超出了 MEDITECH 对基于 SAN 的克隆和生产池备份的指导原则。
+
+许多 ONTAP 功能在 MEDITECH 环境中特别有用：简化管理，提高可用性和自动化以及减少所需的总存储量。借助这些功能，您可以：
+
+* * 卓越的性能。 * NetApp AFF 解决方案共享统一存储架构， ONTAP 软件，管理界面，丰富的数据服务以及其他 NetApp FAS 产品系列所具有的高级功能集。全闪存介质与 ONTAP 的这种创新组合，通过行业领先的 ONTAP 软件质量，为全闪存存储提供稳定一致的低延迟和高 IOPS 。
+* * 存储效率。 * 利用重复数据删除， NetApp FlexClone 数据复制技术，实时压缩，实时数据缩减，精简复制，精简配置， 和聚合重复数据删除。
++
+NetApp 重复数据删除可在 NetApp FlexVol 卷或数据成分卷中提供块级重复数据删除。从本质上说，重复数据删除会删除重复的块，从而仅在 FlexVol 卷或数据成分卷中存储唯一的块。
+
++
+重复数据删除的粒度较高，并且在 FlexVol 卷或数据成分卷的活动文件系统上运行。它是应用程序透明的；因此，您可以使用它对使用 NetApp 系统的任何应用程序生成的数据进行重复数据删除。您可以将卷重复数据删除作为实时进程运行（从 ONTAP 8.3.2 开始）。您也可以将其作为后台进程运行，您可以将其配置为自动运行，计划运行或通过命令行界面， NetApp ONTAP System Manager 或 NetApp Active IQ Unified Manager 手动运行。
+
++
+下图显示了 NetApp 重复数据删除在最高级别的工作原理。
+
+
+
+image:ehr-meditech-deploy_image3.png["错误：缺少图形映像"]
+
+* * 节省空间的克隆。 * 借助 FlexClone 功能，您几乎可以即时创建克隆，以支持备份和测试环境刷新。只有在进行更改后，这些克隆才会占用更多存储。
+* * NetApp Snapshot 和 SnapMirror 技术。 * ONTAP 可以为 MEDITECH 主机使用的逻辑单元号（ LUN ）创建节省空间的 Snapshot 副本。对于双站点部署，您可以实施 SnapMirror 软件，以实现更多数据复制和故障恢复能力。
+* * 集成数据保护。 * 完整的数据保护和灾难恢复功能可帮助您保护关键数据资产并提供灾难恢复。
+* * 无中断运行。 * 您可以执行升级和维护，而无需使数据脱机。
+* * QoS 和自适应 QoS （ AQoS ）。 * 存储 QoS 可用于限制潜在的抢占资源的工作负载。更重要的是， QoS 可以保证像 MEDITECH 生产这样的关键工作负载的最低性能。通过限制争用， NetApp QoS 可以减少与性能相关的问题。AQO 可与预定义的策略组结合使用，您可以将这些策略组直接应用于卷。这些策略组可以自动扩展吞吐量上限或下限到卷大小，从而在卷大小发生变化时保持 IOPS 与 TB 和 GB 的比率。
+* * NetApp Data Fabric 。 * NetApp Data Fabric 简化并集成了云和内部环境中的数据管理，加快了数字化转型的步伐。它提供一致且集成的数据管理服务和应用程序，以提高数据可见性和洞察力，实现数据访问和控制以及数据保护和安全性。NetApp 与 Amazon Web Services （ AWS ）， Azure ， Google Cloud Platform 和 IBM Cloud Cloud Cloud Cloud Cloud Cloud 相集成，为您提供广泛的选择。
+
+
+下图显示了适用于 MEDITECH 工作负载的 FlexPod 架构。
+
+image:ehr-meditech-deploy_image4.png["错误：缺少图形映像"]
+
+
+
+== MEDITECH 概述
+
+Medical Information Technology ， Inc. （通常称为 MEDITECH ）是一家总部位于马萨诸塞州的软件公司，负责为医疗保健组织提供信息系统。Meditech 提供了一个 EHR 系统，用于存储和组织最新的患者数据，并为临床工作人员提供数据。患者数据包括但不限于人口统计信息，病历，药物，实验室测试结果； 放射学图像；以及年龄，高度和重量等个人信息。
+
+本文档不会介绍 MEDITECH 软件支持的广泛功能。附录 A 提供了有关这些广泛的 MEDITECH 功能集的详细信息。Meditech 应用程序需要多个 VM 来支持这些功能。要部署这些应用程序，请参见 MEDITECH 的建议。
+
+从存储系统角度来看，对于每个部署，所有 MEDITECH 软件系统都需要一个分布式以患者为中心的数据库。Meditech 拥有自己的专有数据库，该数据库使用 Windows 操作系统。
+
+bridgehead 和 Commvault 是两个备份软件应用程序，均已通过 NetApp 和 MEDITECH 的认证。本文档不会介绍这些备份应用程序的部署。
+
+本文档的主要重点是，使 FlexPod 堆栈（服务器和存储）能够满足 MEDITECH 数据库的性能驱动型要求以及 EHR 环境中的备份要求。
+
+
+
+=== 专为特定的 MEDITECH 工作负载而设计
+
+Meditech 不会转售服务器，网络或存储硬件，虚拟机管理程序或操作系统； 但是，它对基础架构堆栈的每个组件都有特定的要求。因此， Cisco 和 NetApp 携手测试并支持 FlexPod 数据中心的成功配置，部署和支持，以满足像您这样的客户对 MEDITECH 生产环境的要求。
+
+
+
+=== Meditech 类别
+
+Meditech 会将部署规模与 1 到 6 之间的类别编号关联起来。类别 1 表示最小的 MEDITECH 部署，类别 6 表示最大的 MEDITECH 部署。
+
+有关每个类别中 MEDITECH 主机的 I/O 特征和性能要求的信息，请参见 NetApp https://fieldportal.netapp.com/content/198446["TR-4190 ：《适用于 MEDITECH 环境的 NetApp 规模估算准则》"^]。
+
+
+
+=== Meditech 平台
+
+MEDITECH expanse 平台是该公司 EHR 软件的最新版本。早期的 MEDITECH 平台是客户端 / 服务器 5.x 和魔力平台。本节介绍与 MEDITECH 主机及其存储要求相关的 MEDITECH 平台（适用于 expanse ， 6.x ， C/S 5.x 和 Magic ）。
+
+对于上述所有 MEDITECH 平台，多个服务器运行 MEDITECH 软件并执行各种任务。上图显示了一个典型的 MEDITECH 系统，其中包括用作应用程序数据库服务器的 MEDITECH 主机和其他 MEDITECH 服务器。其他 MEDITECH 服务器的示例包括数据存储库应用程序，扫描和归档应用程序以及后台作业客户端。有关其他 MEDITECH 服务器的完整列表，请参见《硬件配置建议》（对于新部署）和《硬件评估任务》（对于现有部署）文档。您可以通过 MEDITECH 系统集成商或您的 MEDITECH 技术客户经理（ Technical Account Manager ， TAM ）从 MEDITECH 获取这些文档。
+
+
+
+=== MEDITECH 主机
+
+MEDITECH 主机是数据库服务器。此主机也称为 MEDITECH 文件服务器（对于 expanse ， 6.x 或 C/S 5.x 平台）或魔力机器（对于魔力平台）。本文档使用术语 MEDITECH 主机来指代 MEDITECH 文件服务器或魔力机器。
+
+Meditech 主机可以是在 Microsoft Windows Server 操作系统上运行的物理服务器或 VM 。在现场最常见的情况是， MEDITECH 主机部署为在 VMware ESXi 服务器上运行的 Windows VM 。截至本文撰写时， VMware 是 MEDITECH 唯一支持的虚拟机管理程序。MEDITECH 主机将其程序，词典和数据文件存储在 Windows 系统上的 Microsoft Windows 驱动器（例如驱动器 E ）上。
+
+在虚拟环境中， Windows E 驱动器驻留在通过物理兼容模式下的原始设备映射（ Raw Device Mapping ， RDM ）连接到 VM 的 LUN 上。在这种情况下， MEDITECH 不支持将虚拟机磁盘（ VMDK ）文件用作 Windows E 驱动器。
+
+
+
+=== Meditech 主机工作负载 I/O 特征
+
+每个 MEDITECH 主机和整个系统的 I/O 特征取决于您部署的 MEDITECH 平台。所有 MEDITECH 平台（ expanse ， 6.x ， C/S 5.x 和 Magic ）都会生成 100% 随机的工作负载。
+
+MEDITECH expanse 平台产生的工作负载要求最高，因为它的每台主机写入操作和整体 IOPS 百分比最高，其次是 6.x ， C/S 5.x 和魔力平台。
+
+有关 MEDITECH 工作负载说明的更多详细信息，请参见 https://www.netapp.com/us/media/tr-4190.pdf["TR-4190 ：《适用于 MEDITECH 环境的 NetApp 规模估算准则》"^]。
+
+
+
+=== 存储网络
+
+Meditech 要求对 NetApp FAS 或 AFF 系统与所有类别的 MEDITECH 主机之间的数据流量使用 FC 协议。
+
+
+
+=== MEDITECH 主机的存储表示
+
+每个 MEDITECH 主机都使用两个 Windows 驱动器：
+
+* * 驱动器 C.* 此驱动器用于存储 Windows Server 操作系统和 MEDITECH 主机应用程序文件。
+* * 驱动器 e* MEDITECH 主机将其程序，词典和数据文件存储在 Windows Server 操作系统的驱动器 E 上。驱动器 E 是使用 FC 协议从 NetApp FAS 或 AFF 系统映射的 LUN 。Meditech 要求使用 FC 协议，以满足 MEDITECH 主机的 IOPS 以及读写延迟要求。
+
+
+
+
+=== 卷和 LUN 命名约定
+
+Meditech 要求对所有 LUN 使用特定的命名约定。
+
+在进行任何存储部署之前，请验证 MEDITECH 硬件配置建议，以确认 LUN 的命名约定。MEDITECH 备份过程依靠卷和 LUN 命名约定来正确标识要备份的特定 LUN 。
+
+
+
+== 全面的管理工具和自动化功能
+
+
+
+=== 采用 Cisco UCS Manager 的 Cisco UCS
+
+Cisco 侧重于提供卓越数据中心基础架构的三个关键要素：简化，安全性和可扩展性。Cisco UCS Manager 软件与平台模块化相结合，可提供一个简化，安全且可扩展的桌面虚拟化平台：
+
+* * 简化。 * Cisco UCS 提供了一种全新的行业标准计算方法，并为所有工作负载提供了数据中心基础架构的核心。Cisco UCS 具有许多功能和优势，包括减少所需服务器数量以及减少每台服务器使用的缆线数量。另一项重要功能是能够通过 Cisco UCS 服务配置文件快速部署或重新配置服务器。由于需要管理的服务器和缆线更少，并且服务器和应用程序工作负载配置更简化，因此操作也得到了简化。使用 Cisco UCS Manager 服务配置文件，可以在几分钟内配置多个刀片式服务器和机架式服务器。Cisco UCS 服务配置文件消除了服务器集成操作手册并消除了配置偏差。这种方法可以加快最终用户的工作效率，提高业务灵活性，并允许将 IT 资源分配给其他任务。
++
+Cisco UCS Manager 可自动执行许多常见且容易出错的数据中心操作，例如配置和配置服务器，网络和存储访问基础架构。此外，具有较大内存占用空间的 Cisco UCS B 系列刀片式服务器和 C 系列机架式服务器还可以提高应用程序用户密度，从而有助于降低服务器基础架构要求。
+
++
+通过简化，可以更快，更成功地部署 MEDITECH 基础架构。
+
+* * 安全。 * 虽然虚拟机本身比物理前代产品更安全，但它们带来了新的安全挑战。使用虚拟桌面等通用基础架构的任务关键型 Web 和应用程序服务器现在面临的安全威胁风险更高。现在， VM 间流量已经成为 IT 经理必须考虑的一个重要安全问题，尤其是在 VM 使用 VMware vMotion 在服务器基础架构间移动的动态环境中。
++
+因此，虚拟化显著增加了对 VM 级别策略和安全性的感知需求，尤其是考虑到 VM 在扩展计算基础架构中的移动性具有动态性和流动性。新虚拟桌面的快速普及进一步增强了虚拟化感知型网络和安全基础架构的重要性。适用于桌面虚拟化的 Cisco 数据中心基础架构（ Cisco UCS ， Cisco MDS 和 Cisco Nexus 系列解决方案）可提供强大的数据中心，网络和桌面安全性，并提供从桌面到虚拟机管理程序的全面安全性。通过对虚拟桌面进行分段，虚拟机感知型策略和管理以及 LAN 和 WAN 基础架构中的网络安全性，增强了安全性。
+
+* * 可扩展。 * 虚拟化解决方案的增长是不可避免的，因此解决方案必须能够随着这种增长进行扩展和可预测的扩展。Cisco 虚拟化解决方案支持高 VM 密度（每台服务器具有 VM ），更多服务器可通过近乎线性的性能进行扩展。Cisco 数据中心基础架构提供了一个灵活的平台来实现增长并提高业务灵活性。Cisco UCS Manager 服务配置文件允许按需配置主机，并使部署数百台主机与部署数十台主机一样简单。
++
+Cisco UCS 服务器可提供近乎线性的性能和可扩展性。Cisco UCS 实施了获得专利的 Cisco 扩展内存技术，可通过更少的插槽提供较大的内存占用空间（通过双插槽和四插槽服务器可扩展到 1 TB 的内存）。通过使用统一网络结构技术作为组件， Cisco UCS 服务器聚合带宽可扩展到每台服务器高达 80 Gbps ，而北向 Cisco UCS 互联阵列可按线路速率输出 2Tbps 。此功能有助于防止桌面虚拟化 I/O 和内存瓶颈。Cisco UCS 采用基于统一网络结构的高性能，低延迟网络架构，可支持大量虚拟桌面流量，包括高分辨率视频和通信流量。此外，作为 FlexPod 虚拟化解决方案的一部分， ONTAP 还有助于在启动和登录风暴期间保持数据可用性和最佳性能。
+
++
+Cisco UCS ， Cisco MDS 和 Cisco Nexus 数据中心基础架构设计为增长提供了一个出色的平台。您可以透明地扩展服务器，网络和存储资源，以支持桌面虚拟化，数据中心应用程序和云计算。
+
+
+
+
+
+=== VMware vCenter Server
+
+VMware vCenter Server 为管理 MEDITECH 环境提供了一个集中式平台，使您的医疗保健组织可以放心地自动化和交付虚拟基础架构：
+
+* * 部署简单。 * 使用虚拟设备快速轻松地部署 vCenter Server 。
+* * 集中控制和可见性。 * 从一个位置管理整个 VMware vSphere 基础架构。
+* * 主动式优化。 * 分配和优化资源以实现最高效率。
+* * 管理。 * 使用功能强大的插件和工具简化管理并扩展控制。
+
+
+
+
+=== 适用于 VMware vSphere 的 Virtual Storage Console
+
+NetApp 的 Virtual Storage Console （ VSC ）， vSphere API for Storage Awareness （ VASA ） Provider 和 VMware Storage Replication Adapter （ SRA ） for VMware vSphere 构成了一个虚拟设备。此产品套件将 SRA 和 VASA Provider 作为 vCenter Server 的插件，可为使用 NetApp 存储系统的 VMware 环境中的 VM 提供端到端生命周期管理。
+
+VSC ， VASA Provider 和 SRA 虚拟设备可与 VMware vSphere Web Client 平稳集成，并支持您使用 SSO 服务。在具有多个 VMware vCenter Server 实例的环境中，要管理的每个 vCenter Server 实例都必须有自己注册的 VSC 实例。通过 VSC 信息板页面，您可以快速检查数据存储库和 VM 的整体状态。
+
+通过部署 VSC ， VASA Provider 和 SRA 虚拟设备，您可以执行以下任务：
+
+* * 使用 VSC 部署和管理存储以及配置 ESXi 主机。 * 您可以使用 VSC 为 VMware 环境中的存储控制器添加凭据，删除凭据，分配凭据以及设置权限。此外，您还可以管理连接到 NetApp 存储系统的 ESXi 服务器。只需单击几下鼠标，即可为所有主机设置主机超时， NAS 和多路径的建议最佳实践值。您还可以查看存储详细信息并收集诊断信息。
+* * 使用 VASA Provider 创建存储功能配置文件并设置警报。 * 启用 VASA Provider 扩展后，适用于 ONTAP 的 VASA Provider 将注册到 VSC 中。您可以创建和使用存储功能配置文件和虚拟数据存储库。您还可以设置警报，以便在卷和聚合的阈值接近全满时向您发出警报。您可以监控 VMDK 以及在虚拟数据存储库上创建的 VM 的性能。
+* * 使用 SRA 进行灾难恢复。 * 您可以使用 SRA 在环境中配置受保护站点和恢复站点，以便在发生故障时进行灾难恢复。
+
+
+
+
+=== NetApp OnCommand Insight 和 ONTAP
+
+NetApp OnCommand Insight 将基础架构管理集成到了 MEDITECH 服务交付链中。这种方法可以使医疗保健组织更好地控制，自动化和分析存储，网络和计算基础架构。它可以优化您当前的基础架构，以获得最大收益，同时简化确定购买内容和购买时间的过程。它还可以降低与复杂技术迁移相关的风险。由于不需要代理，因此安装简单，无中断。系统会持续发现已安装的存储和 SAN 设备，并收集详细信息以全面了解整个存储环境。您可以快速识别滥用，错位，未充分利用或孤立的资产，并回收这些资产以推动未来的扩展。OnCommand Insight 可帮助您：
+
+* * 优化现有资源。 * 利用已建立的最佳实践来识别滥用，未充分利用或孤立的资产，以避免出现问题并满足服务级别要求。
+* * 做出更明智的决策。 * 实时数据有助于更快地解决容量问题，从而准确规划未来的购买，避免超支并推迟资本支出。
+* * 加速 IT 计划。 * 更好地了解您的虚拟环境，帮助您管理风险，最大限度地减少停机时间并加快云部署速度。
+

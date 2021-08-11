@@ -1,0 +1,22 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-epic-sizing_acknowledgements.html 
+keywords: acknowledgements, authors, contributors 
+summary: 以下人员为本指南的编写做出了贡献。 
+---
+= 致谢
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+以下人员为本指南的编写做出了贡献。
+
+* NetApp 技术营销工程师 Ganesh Kamath
+* NetApp 技术营销工程师 Atul Bhalodia
+* NetApp 产品经理 Ketan Mota
+* Cisco Systems ， Inc. 的 Jon Ebmeier
+* Cisco Systems ， Inc. 的 Mike Brennan
+

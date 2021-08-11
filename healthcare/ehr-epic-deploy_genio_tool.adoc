@@ -1,0 +1,21 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-epic-deploy_genio_tool.html 
+keywords: genio, tool, storage, performance, epic, intersystems, cache, command, line, application 
+summary: Genio 是 Epic 使用的存储性能测试工具。它模拟由 Epic 生产环境中使用的 InterSystems Cach é 数据库生成的工作负载，包括写入周期模式。它可作为命令行应用程序在部署了 Cache 的各种主机操作系统上使用。请始终使用 Epic 提供的最新 Genio 工具副本进行测试。 
+---
+= Genio 工具
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Genio 是 Epic 使用的存储性能测试工具。它模拟由 Epic 生产环境中使用的 InterSystems Cach é 数据库生成的工作负载，包括写入周期模式。它可作为命令行应用程序在部署了 Cache 的各种主机操作系统上使用。请始终使用 Epic 提供的最新 Genio 工具副本进行测试。
+
+性能测试运行涉及使用一组 I/O 参数在生产 Epic 数据库主机上执行 Genio 应用程序。这些参数用于模拟客户 Epic 环境的 I/O 模式，包括写入周期。
+
+EPIC 将控制器推过硬件配置指南中详细介绍的 100% 全满负载，以确定控制器上的余量。Epic 还会运行全负载测试并模拟备份操作。
+
+Epic 服务器支持代表使用它从主机角度验证存储性能。NetApp 还使用 Genio 在实验室中验证了 NetApp 存储系统的性能。

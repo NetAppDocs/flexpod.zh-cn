@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-aff220-design_solution_overview.html 
+keywords: NetApp ONTAP 9.4, NetApp AFF A220, VMware vSphere 6.7, Target audience, 
+summary: FlexPod Express 专为运行混合虚拟化工作负载而设计。它面向远程办公室和分支机构以及中小型企业。它也是希望专用解决方案的大型企业的最佳选择。这款全新的解决方案 for FlexPod Express 新增了 NetApp ONTAP 9.4 ， NetApp AFF A220 和 VMware vSphere 6.7 等新技术。 
+---
+= 解决方案概述
+
+
+FlexPod Express 专为运行混合虚拟化工作负载而设计。它面向远程办公室和分支机构以及中小型企业。它也是希望专用解决方案的大型企业的最佳选择。这款全新的解决方案 for FlexPod Express 新增了 NetApp ONTAP 9.4 ， NetApp AFF A220 和 VMware vSphere 6.7 等新技术。
+
+下图显示了 FlexPod Express 解决方案中包含的硬件组件。
+
+image:express-c-series-aff220-design_image3.png["错误：缺少图形映像"]
+
+
+
+== 目标受众
+
+本文档面向希望利用专为提高 IT 效率和实现 IT 创新而构建的基础架构的用户。本文档的受众包括但不限于销售工程师，现场顾问，专业服务人员， IT 经理， 合作伙伴工程师和客户。
+
+
+
+== 解决方案技术
+
+此解决方案利用了 NetApp ， Cisco 和 VMware 的最新技术。此解决方案采用全新的 NetApp AFF A220 系统，该系统运行 ONTAP 9.4 软件，双 Cisco Nexus 3172P 交换机以及运行 VMware vSphere 6.7 的 Cisco UCS C220 M5 机架式服务器。此经过验证的解决方案采用万兆以太网（ 10GbE ）技术。下图概述了相关信息。此外，还提供了有关如何通过一次添加两个虚拟机管理程序节点进行扩展的指导，以便 FlexPod 快速架构能够适应组织不断变化的业务需求。
+
+image:express-c-series-aff220-design_image4.png["错误：缺少图形映像"]
+
+
+NOTE: 40GbE 未经过验证，但它是受支持的基础架构。
+
+link:express-c-series-aff220-design_technology_requirements.html["接下来：技术要求。"]

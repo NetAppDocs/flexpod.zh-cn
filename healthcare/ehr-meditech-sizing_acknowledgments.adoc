@@ -1,0 +1,22 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-sizing_acknowledgments.html 
+keywords: acknowledgements, contributions, writers 
+summary: 以下人员为本指南的编写和创建做出了贡献。 
+---
+= 致谢
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+以下人员为本指南的编写和创建做出了贡献。
+
+* NetApp 技术营销工程师布兰登 · 阿吉
+* NetApp 医疗保健部门解决方案架构师 John Duignan
+* NetApp 产品经理 Ketan Mota
+* Cisco Systems ， Inc 技术解决方案架构师 Jon Ebmeier
+* Cisco Systems ， Inc 产品经理 Mike Brennan
+

@@ -1,0 +1,98 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_meditech_modules_and_components.html 
+keywords: meditech, modules, components, application, function, type 
+summary: MEDITECH 应用程序涵盖多个模块和组件。 
+---
+= Meditech 模块和组件
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+MEDITECH 应用程序涵盖多个模块和组件。下表列出了这些模块所涵盖的功能。有关追加信息设置和部署这些模块的信息，请参见 MEDITECH 文档。
+
+|===
+| 功能 | Type 
+
+
+| 连接  a| 
+* Web 服务器
+* 实时应用程序服务器（ Wi — Web 集成）
+* 测试应用程序服务器（ Wi ）
+* SAML 身份验证服务器（ Wi ）
+* SAML 代理服务器（ Wi ）
+* 数据库服务器
+
+
+
+
+| 基础架构  a| 
+* 文件服务器
+* 后台作业客户端
+* 连接服务器
+* 事务服务器
+
+
+
+
+| 扫描和归档  a| 
+* 映像服务器
+
+
+
+
+| 数据存储库  a| 
+* SQL 服务器
+
+
+
+
+| 业务和临床分析  a| 
+* 实时智能服务器（ BCA ）
+* 测试智能服务器（ BCA ）
+* 数据库服务器（ BCA ）
+
+
+
+
+| 家庭护理  a| 
+* 远程站点解决方案
+* 连接
+* 基础架构
+* 打印
+* 现场设备
+* 扫描
+* 托管站点要求
+* 防火墙配置
+
+
+
+
+| 支持  a| 
+* 后台作业客户端（ CAL —客户端访问许可证）
+
+
+
+
+| 用户设备  a| 
+* 平板电脑
+* 固定设备
+
+
+
+
+| 打印  a| 
+* 实时网络打印服务器（必需；可能已存在）
+* 测试网络打印服务器（必需；可能已存在）
+
+
+
+
+| 第三方要求  a| 
+* 首款 Databank （ FDB ）医疗知识框架 v4.3
+
+
+|===

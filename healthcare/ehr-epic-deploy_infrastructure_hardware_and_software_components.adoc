@@ -1,0 +1,68 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-epic-deploy_infrastructure_hardware_and_software_components.html 
+keywords: infrastructure, hardware, software, components, firmware, imt 
+summary: 请始终使用互操作性表工具（ IMT ）验证是否支持所有版本的软件和固件。 
+---
+= 基础架构硬件和软件组件
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+请始终使用 http://mysupport.netapp.com/matrix/["互操作性表工具（ IMT ）"^] 验证是否支持所有版本的软件和固件。下表列出了测试中使用的基础架构硬件和软件组件。
+
+|===
+| 层 | 产品系列 | 版本或版本 | 详细信息 
+
+
+| 计算 | Cisco UCS 5108 |  | 一个机箱 
+
+
+|  | Cisco UCS 刀片式服务器 | 4 个 B200 M5 | 每个模块具有 18 个 CPU 核和 768 GB RAM BIOS 2.2 （ 8 ）） 
+
+
+|  | Cisco UCS VIC | 4 个 UCS 1340 | VMware ESXi fNIC FC 驱动程序： 1.6.0.34 VMware ESXi eNIC 以太网驱动程序： 1.0.6.0 
+
+
+|  | 2 个 Cisco UCS FI | 采用 Cisco UCSM 3.2 的 6332-16UP （ 2f ） |  
+
+
+| 网络 | Cisco 以太网交换机 | 7.0 （ 3 ） i7 （ 2 ） | 2 个 Cisco Nexus 9372PX-E 
+
+
+| 存储网络 | iSCSI ：使用 N9k 的 IP 解决方案 |  | FI 和 UCS 机箱 
+
+
+|  | FC ： Cisco MDS 9148S | 8.2 （ 2 ） | 两台 Cisco 9148S 交换机 
+
+
+| 存储 | 2 个 NetApp AFF A700s | ONTAP 9.3 GA | 1 个双节点集群 
+
+
+|  | 2 个 DS224C 磁盘架 |  |  
+
+
+|  | SSD | 48 个 960 GB |  
+
+
+| 软件 | 虚拟机管理程序 | VMware vSphere ESXi 6.5 U1 |  
+
+
+|  | 虚拟机 | RHEL 7.4 |  
+
+
+|  | 虚拟机管理程序管理系统 | VMware vCenter Server 6.5 U1 （ VCSA ） | vCenter Server 设备 
+
+
+|  | NetApp 虚拟存储控制台 | VSC 7.0P1 |  
+
+
+|  | SnapCenter | SnapCenter 4.0 |  
+
+
+|  | Cisco UCS Manager | 3.2 （ 2f ） * |  
+|===
+link:ehr-epic-deploy_base_infrastructure_configuration.html["下一步：基础架构配置。"]

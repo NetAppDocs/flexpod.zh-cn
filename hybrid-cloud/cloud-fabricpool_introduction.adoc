@@ -1,0 +1,21 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_introduction.html 
+keywords: flexpod, fabricpool, inactive, data, tiering, amazon, aws, s3 
+summary: 本技术报告将在 NetApp 和 Cisco 的 FlexPod 融合基础架构的背景下，介绍 NetApp ONTAP 的 FabricPool 数据分层功能。 
+---
+= TR-4801 ：采用 FabricPool 的 FlexPod —将非活动数据分层到 Amazon AWS S3
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+NetApp 公司 Scott kovacs
+
+闪存存储价格持续下降，因此可供以前不考虑使用闪存存储的工作负载和应用程序使用。但是，最高效地利用存储投资对于 IT 经理来说仍然至关重要。IT 部门仍然需要在极少或根本不增加预算的情况下提供性能更高的服务。为了帮助满足这些需求， NetApp FabricPool 允许您利用云的经济效益，将不常用的数据从昂贵的内部闪存存储迁移到公有云中更经济高效的存储层。将不常访问的数据迁移到云中可释放 AFF 或 FAS 系统上的宝贵闪存存储空间，从而将更多业务关键型工作负载容量提供给高性能闪存层。
+
+本技术报告介绍了 NetApp 和 Cisco 在 FlexPod 融合基础架构架构环境下 ONTAP 的 FabricPool 数据分层功能。您应熟悉 FlexPod 数据中心融合基础架构架构和 ONTAP 存储软件，以便从本技术报告中讨论的概念中充分受益。在熟悉 FlexPod 和 ONTAP 的基础上，我们将讨论 FabricPool ，它的工作原理以及如何使用它来更高效地利用内部闪存存储。本报告中的大部分内容在中进行了更详细的介绍 https://www.netapp.com/pdf.html?item=/media/17239-tr4598pdf.pdf["TR-4598 ： FabricPool 最佳实践"^] 和其他 ONTAP 产品文档。此内容针对 FlexPod 基础架构进行了精简，并不能完全涵盖 FabricPool 的所有使用情形。ONTAP 9.6 提供了所有已研究的功能和概念。
+
+中提供了有关 FlexPod 的追加信息 https://www.netapp.com/pdf.html?item=/media/12424-tr4036.pdf["TR-4036 FlexPod 数据中心技术规格"^]。

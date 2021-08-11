@@ -1,0 +1,55 @@
+---
+sidebar: sidebar 
+permalink: ontap-connector-for-intersight/ci-qsg_requirements.html 
+keywords: netapp, ontap, cisco, intersight, hardware, software, licensing, requirements 
+summary: 检查您是否满足 NetApp ONTAP 存储与 Cisco Intersight 集成的硬件，软件和许可要求。 
+---
+= 要求
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+检查您是否满足 NetApp ONTAP 存储与 Cisco Intersight 集成的硬件，软件和许可要求。
+
+
+
+== 硬件和软件要求
+
+这些是实施解决方案所需的最低硬件和软件组件。在任何特定解决方案实施中使用的组件可能会因客户要求而异。
+
+|===
+| 组件 | 需求详细信息 
+
+
+| NetApp ONTAP | ONTAP 9.7P1 及更高版本 
+
+
+| NetApp Active IQ Unified Manager | NetApp Active IQ Unified Manager 9.8P1 及更高版本 
+
+
+| NetApp 存储阵列 | ONTAP 9.7P1 及更高版本支持所有 ONTAP ASA ， AFF 和 FAS 存储阵列 
+
+
+| 虚拟化虚拟机管理程序 | vSphere 6.7 及更高版本 
+|===
+
+NOTE: 请参见 https://www.cisco.com/c/en/us/solutions/collateral/data-center-virtualization/flexpod/cisco-imm-for-flexpod.html["适用于 FlexPod 的 Cisco Intersight 托管模式"^] 以满足 Cisco UCS 计算组件和 UCSM 版本的最低要求。
+
+
+
+== Cisco Intersight 许可要求
+
+Cisco Intersight 以订阅方式获得许可，并可选择多个许可证版本。功能会随着不同许可证类型的增加而增加。您可以购买一年，三年或五年的订阅期限，并为选定的订阅期限选择所需的 Cisco UCS Server 卷层。访问 Cisco Intersight 门户并申请设备时，每个 Cisco 端点都会自动包含一个 Cisco Intersight Base ，无需额外付费。
+
+您可以使用 Cisco 订购工具购买以下任何更高级别的 Intersight 许可证：
+
+* * Cisco Intersight Essentials 。 * Essentials 包括基础层的所有功能以及其他功能，包括 Cisco UCS Central 和 Cisco IMC Supervisor 授权，基于策略的服务配置，固件管理以及与硬件兼容性列表（ Hardware Compatibility List ， HCL ）的兼容性评估。
+* * Cisco Intersight Advantage 。 * Advantage 提供基础层和基础层的所有特性和功能。它包括存储小工具，存储清单，存储容量和存储利用率，以及物理计算，物理存储和虚拟环境（ VMware ESXi ）之间的跨域清单关联。
+* * Cisco Intersight Premier 。 * 除了在优势层提供的功能之外， Cisco Intersight Premier 还在 Cisco UCS 和第三方系统（包括虚拟机（ VM ）（ VMware vCenter ）和物理存储（ NetApp 存储）之间提供私有云基础架构即服务（ IaaS ）业务流程。
+
+
+有关各个许可层所涵盖功能的详细信息，请访问 https://intersight.com/help/getting_started#intersight_licensing["Cisco 许可"]。

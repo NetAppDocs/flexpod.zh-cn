@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-aff220-deploy_where_to_find_additional_information.html 
+keywords:  
+summary: 有关本文档中的信息，请参见 NetApp 网站以及《采用 VMware vSphere 6.7 和 NetApp AFF A220 的 FlexPod 快速设计指南》。 
+---
+= 从何处查找追加信息
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+要了解有关本文档中所述信息的更多信息，请参见以下文档和 / 或网站：
+
+* NetApp 产品文档
++
+http://docs.netapp.com["http://docs.netapp.com"^]
+
+* 《采用 VMware vSphere 6.7 的 FlexPod Express 和 NetApp AFF A220 设计指南》
++
+https://www.netapp.com/us/media/nva-1125-design.pdf["https://www.netapp.com/us/media/nva-1125-design.pdf"^]
+
+

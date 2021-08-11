@@ -1,0 +1,84 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-aff220-deploy_solution_overview.html 
+keywords: flexpod, converged, infrastructure, verified, architecture, solution, technology 
+summary: 此 FlexPod Express 解决方案是 FlexPod 融合基础架构计划的一部分。 
+---
+= 解决方案概述
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+此 FlexPod Express 解决方案是 FlexPod 融合基础架构计划的一部分。
+
+
+
+== FlexPod 融合基础架构计划
+
+FlexPod 参考架构以 Cisco 验证设计（ CVD ）或 NetApp 验证架构（ NVA ）的形式提供。如果给定 CVD 或 NVA 不会产生不受支持的配置，则允许根据客户要求进行差异。
+
+如下图所示， FlexPod 计划包括三个解决方案： FlexPod Express ， FlexPod Datacenter 和 FlexPod Select ：
+
+* * FlexPod Express* 为客户提供了采用 Cisco 和 NetApp 技术的入门级解决方案。
+* * FlexPod Datacenter 。 * 为各种工作负载和应用程序提供最佳的多用途基础。
+* * FlexPod Select* 整合了 FlexPod 数据中心的最佳功能，并根据给定应用程序量身定制基础架构。
+
+
+image:express-c-series-aff220-deploy_image3.png["错误：缺少图形映像"]
+
+
+
+== 经验证的 NetApp 架构计划
+
+经验证的 NetApp 架构计划为客户提供经过验证的 NetApp 解决方案架构。经验证的 NetApp 架构可提供具有以下品质的 NetApp 解决方案架构：
+
+* 经过全面测试
+* 具有规范性
+* 最大限度地降低部署风险
+* 加快上市速度
+
+
+本指南详细介绍了采用 VMware vSphere 的 FlexPod Express 的设计。此外，此设计还使用全新的 AFF A220 系统（运行 NetApp ONTAP 9.4 ）， Cisco Nexus 3172P 和 Cisco UCS C 系列 C220 M5 服务器作为虚拟机管理程序节点。
+
+
+
+== 解决方案技术
+
+此解决方案利用了 NetApp ， Cisco 和 VMware 的最新技术。此解决方案采用运行 ONTAP 9.4 的全新 NetApp AFF A220 ，双 Cisco Nexus 3172P 交换机以及运行 VMware vSphere 6.7 的 Cisco UCS C220 M5 机架式服务器。此经过验证的解决方案采用 10GbE 技术。此外，还提供了有关如何通过一次添加两个虚拟机管理程序节点来扩展计算容量的指导，以使 FlexPod 快速架构能够适应组织不断变化的业务需求。
+
+下图显示了采用 VMware vSphere 10GbE 架构的 FlexPod Express 。
+
+image:express-c-series-aff220-deploy_image4.png["错误：缺少图形映像"]
+
+
+NOTE: 此验证使用 10GbE 连接和一个 40GbE Cisco UCS VIC 1387 。要实现 10GbE 连接，请使用 CVR-QSFP-SFP10G 适配器。
+
+
+
+== 使用情形摘要
+
+FlexPod Express 解决方案可应用于多种使用情形，包括以下情形：
+
+* 远程办公室或分支机构
+* 中小型企业
+* 需要经济高效的专用解决方案的环境
+
+
+FlexPod Express 最适合虚拟化和混合工作负载。
+
+
+NOTE: 虽然此解决方案已通过 vSphere 6.7 的验证，但它支持任何经 NetApp 互操作性表工具认证可与其他组件配合使用的 vSphere 版本。NetApp 建议部署 vSphere 6.7U1 以修复其问题并增强其功能。
+
+以下是 vSphere 6.7 U1 的一些功能：
+
+* 功能全面的基于 Web 的 HTML5 vSphere 客户端
+* 适用于 NVIDIA GRID vGPU VM 的 VMotion 。支持 Intel FPGA
+* vCenter Server Converge Tool 可从外部 PSC 迁移到内部 PC
+* vSAN 增强功能（ HCI 更新）
+* 增强的内容库
+
+
+有关 vSphere 6.7 U1 的详细信息，请参见 https://blogs.vmware.com/vsphere/2018/10/whats-new-in-vcenter-server-6-7-update-1.html["vCenter Server 6.7 Update 1 中的新增功能"^]。

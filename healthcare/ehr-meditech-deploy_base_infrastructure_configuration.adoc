@@ -1,0 +1,63 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_base_infrastructure_configuration.html 
+keywords: base, infrastructure, configuration, network, storage, connections, software, host 
+summary: 要配置基础架构，必须具备以下网络连接，存储连接和软件。 
+---
+= 基础架构配置
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== 网络连接
+
+在配置基础架构之前，必须建立以下网络连接：
+
+* 使用端口通道和虚拟端口通道（ Virtual Port Channel ， vPC ）的链路聚合可在整个环境中使用，从而实现更高带宽和高可用性的设计：
++
+** VPC 用于 Cisco FI 和 Cisco Nexus 交换机之间。
+** 每个服务器都具有虚拟网络接口卡（ Virtual Network Interface Card ， vNIC ），并可通过冗余连接到统一网络结构。在 CLI 之间使用 NIC 故障转移来实现冗余。
+** 每个服务器都具有虚拟主机总线适配器（ vHBA ），并与统一网络结构建立冗余连接。
+
+
+* Cisco UCS FI 会按照建议配置为终端主机模式，以便将 vNIC 动态固定到上行链路交换机。
+
+
+
+
+== 存储连接
+
+在配置基础架构之前，必须建立以下存储连接：
+
+* 存储端口接口组（ ifgroups ， vPC ）
+* 连接到交换机 N9K-A 的 10 Gb 链路
+* 连接到交换机 N9K-B 的 10 Gb 链路
+* 带内管理（主动 - 被动绑定）：
++
+** 1 GB 到管理交换机 N9K-A 的链路
+** 1 GB 到管理交换机 N9K-B 的链路
+
+
+* 通过 Cisco MDS 交换机实现 32 Gb FC 端到端连接；配置了单个启动程序分区
+* FC SAN 启动可完全实现无状态计算；服务器从 AFF 存储集群上托管的启动卷中的 LUN 启动
+* 所有 MEDITECH 工作负载都托管在 FC LUN 上，这些 LUN 分布在存储控制器节点上
+
+
+
+
+== 主机软件
+
+必须安装以下软件：
+
+* ESXi 安装在 Cisco UCS 刀片式服务器上
+* 已安装并配置 VMware vCenter （已在 vCenter 中注册所有主机）
+* 已在 VMware vCenter 中安装并注册 VSC
+* 已配置 NetApp 集群
+
+
+link:ehr-meditech-deploy_cisco_ucs_blade_server_and_switch_configuration.html["接下来： Cisco UCS 刀片式服务器和交换机配置。"]

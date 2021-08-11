@@ -1,0 +1,391 @@
+---
+sidebar: sidebar 
+permalink: fp-def/dc-tech-spec_technical_specifications_and_references.html 
+keywords: cisco, ucs, b, series, vic, switches, nexus, fas, aff, series 
+summary: 技术规格提供了有关 FlexPod 解决方案中硬件组件的详细信息，例如机箱， FEX ，服务器，交换机， 和存储控制器。 
+---
+= 技术规格和参考资料
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+技术规格提供了有关 FlexPod 解决方案中硬件组件的详细信息，例如机箱， FEX ，服务器，交换机， 和存储控制器。
+
+
+
+== Cisco UCS B 系列刀片式服务器机箱
+
+下表所示的 Cisco UCS B 系列刀片式服务器机箱的技术规格包括以下组件：
+
+* 机架单元数
+* 最大刀片式服务器数
+* 统一网络结构功能
+* 每台服务器的中板 I/O 带宽
+* FEX 的 I/O 托架数量
+
+
+|===
+| 组件 | Cisco UCS 5100 系列刀片式服务器机箱 
+
+
+| 机架单元 | 6. 
+
+
+| 最大全宽刀片式服务器 | 4. 
+
+
+| 最大半宽刀片式服务器 | 8. 
+
+
+| 支持统一网络结构 | 是的。 
+
+
+| 中板 I/O | 每个服务器的 I/O 带宽高达 80 Gbps 
+
+
+| FEX 的 I/O 托架 | 两个托架，用于 Cisco UCS 2104XP ， 2204/8XP ， 2408XP 和 2304 FEX 
+|===
+有关详细信息，请参见 http://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-5100-series-blade-server-chassis/data_sheet_c78-526830.html["Cisco UCS 5100 系列刀片式服务器机箱产品规格"^]。
+
+
+
+== Cisco UCS B 系列刀片式服务器
+
+下表所示的 Cisco UCS B 系列刀片式服务器的技术规格包括以下组件：
+
+* 处理器插槽数量
+* 处理器支持
+* 内存容量
+* 大小和速度
+* SAN 启动支持
+* 夹层适配器插槽的数量
+* I/O 最大吞吐量
+* 外形规格
+* 每个机箱的最大服务器数
+
+
+|===
+| 组件 | Cisco UCS 产品规格 
+
+
+| Cisco UCS B200 M5 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/b200m5-specsheet.pdf["Cisco UCS B200 M5 刀片式服务器"] 
+
+
+| Cisco UCS B480 M5 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/datasheet-c78-739280.html["Cisco UCS B480 M5 刀片式服务器"] 
+|===
+
+
+== Cisco UCS C 系列机架式服务器
+
+Cisco UCS C 系列机架式服务器的技术规格包括处理器支持，最大内存容量， PCIe 插槽数量以及外形规格大小。有关兼容 UCS 服务器型号的更多详细信息，请参见 https://ucshcltool.cloudapps.cisco.com/public/["Cisco 硬件兼容性"^] 列表下表分别说明了 C 系列机架式服务器产品规格和 Cisco UCS C 系列机箱选项。
+
+|===
+| 组件 | Cisco UCS 产品规格 
+
+
+| Cisco UCS C220 M5 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/datasheet-c78-739281.html["Cisco UCS C220 M5 机架式服务器"] 
+
+
+| Cisco UCS C240 M5 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/datasheet-c78-739279.html["Cisco UCS C240 M5 机架式服务器"] 
+
+
+| Cisco UCS C480 M5 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/datasheet-c78-739291.html["Cisco UCS C480 M5 机架式服务器"] 
+
+
+| Cisco UCS C480 ML M5 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/datasheet-c78-741211.html["Cisco UCS C480 ML M5 机架式服务器"] 
+
+
+| Cisco UCS C125 M5 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c125m5-rack-server-node.pdf["Cisco UCS C125 M5 机架式服务器节点"] 
+|===
+|===
+| Cisco UCS C 系列机箱 | Cisco UCS 产品规格 
+
+
+| Cisco UCS C4200 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c4200-series-rack-server-chassis/datasheet-c78-740839.html["Cisco UCS C4200 系列机架式服务器机箱"] 
+|===
+
+
+== FlexPod AI ， ML 和 DL 的 GPU 建议
+
+下表中列出的 Cisco UCS C 系列机架式服务器可在 FlexPod 架构中用于托管 AI ， ML 和 DL 工作负载。Cisco UCS C480 ML M5 服务器专为 AI ， ML 和 DL 工作负载而构建，并使用基于 NVIDIA 的 SXM2 的 GPU ，而其他服务器则使用基于 PCIe 的 GPU 。
+
+下表还列出了可用于这些服务器的建议 GPU 。
+
+|===
+| 服务器 | GPU 
+
+
+| Cisco UCS C480 ML M5 | NVIDIA SXM2 V100 32G 
+
+
+| Cisco UCS C480 M5 | NVIDIA V100 （ 16GB/32 GB ） NVIDIA T4 （ 16 GB ） 
+
+
+| Cisco UCS C240 M5 | NVIDIA V100 （ 16GB/32 GB ） NVIDIA T4 （ 16 GB ） 
+
+
+| Cisco UCS C220 M5 | NVIDIA T4 （ 16 GB ） 
+
+
+| Cisco UCS C125 M5 | NVIDIA T4 （ 16 GB ） 
+|===
+
+
+== 适用于 Cisco UCS B 系列刀片式服务器的 Cisco UCS VIC 适配器
+
+适用于 Cisco UCS B 系列刀片式服务器的 Cisco UCS 虚拟接口卡（ Virtual Interface Card ， VIC ）适配器的技术规格包括以下组件：
+
+* 上行链路端口数
+* 每端口性能（ IOPS ）
+* 电源
+* 刀片式服务器端口数
+* 硬件卸载
+* 支持单根输入 / 输出虚拟化（ SR-IOV ）
+
+
+所有当前经验证的 FlexPod 架构都使用 Cisco UCS VIC 。如果 NetApp 上列出了其他适配器，则支持这些适配器 http://mysupport.netapp.com/matrix["IMT"^] 和与您的 FlexPod 部署兼容，但它们可能无法提供相应参考架构中概述的所有功能。下表显示了 Cisco UCS VIC 适配器产品规格。
+
+|===
+| 组件 | Cisco UCS 产品规格 
+
+
+| Cisco UCS 虚拟接口适配器 | https://www.cisco.com/c/en/us/products/interfaces-modules/unified-computing-system-adapters/index.html["Cisco UCS VIC 数据表"] 
+|===
+
+
+== Cisco UCS 互联阵列
+
+Cisco UCS 互联阵列的技术规格包括外形规格大小，端口和扩展插槽总数以及吞吐量容量。下表显示了 Cisco UCS 互联阵列数据表。
+
+|===
+| 组件 | Cisco UCS 产品规格 
+
+
+| Cisco UCS 6248UP .2+| https://www.cisco.com/c/en/us/products/servers-unified-computing/ucs-6200-series-fabric-interconnects/index.html["Cisco UCS 6200 系列互联阵列"] 
+
+
+| Cisco UCS 6296UP 
+
+
+| Cisco UCS 6324 | http://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-6300-series-fabric-interconnects/datasheet-c78-732207.html["Cisco UCS 6324 互联阵列"] 
+
+
+| Cisco UCS 6300 | http://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-6300-series-fabric-interconnects/datasheet-c78-736682.html["Cisco UCS 6300 系列互联阵列"] 
+
+
+| Cisco UCS 6454 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/datasheet-c78-741116.html["Cisco UCS 6400 系列互联阵列"] 
+|===
+
+
+== Cisco Nexus 5000 系列交换机
+
+Cisco Nexus 5000 系列交换机的技术规格，包括外形规格大小，端口总数以及第 3 层模块和子卡支持，均包含在每个型号系列的数据表中。下表列出了这些数据表。
+
+|===
+| 组件 | Cisco Nexus 产品规格 
+
+
+| Cisco Nexus 5548UP | http://www.cisco.com/en/US/products/ps11681/index.html["Cisco Nexus 5548UP 交换机"] 
+
+
+| Cisco Nexus 5596UP （ 2U ） | http://www.cisco.com/en/US/products/ps11577/index.html["Cisco Nexus 5596UP 交换机"] 
+
+
+| Cisco Nexus 56128P | http://www.cisco.com/c/en/us/products/switches/nexus-56128p-switch/index.html["Cisco Nexus 56128P 交换机"] 
+
+
+| Cisco Nexus 5672UP | http://www.cisco.com/c/en/us/products/switches/nexus-5672up-switch/index.html["Cisco Nexus 5672UP 交换机"] 
+|===
+
+
+== Cisco Nexus 7000 系列交换机
+
+Cisco Nexus 7000 系列交换机的技术规格（包括外形规格和最大端口数）包含在每个型号系列的产品规格中。下表列出了这些数据表。
+
+|===
+| 组件 | Cisco Nexus 产品规格 
+
+
+| Cisco Nexus 7004 .4+| http://www.cisco.com/en/US/prod/collateral/switches/ps9441/ps9402/ps9512/Data_Sheet_C78-437762.html["Cisco Nexus 7000 系列交换机"] 
+
+
+| Cisco Nexus 7009 
+
+
+| Cisco Nexus 7010 
+
+
+| Cisco Nexus 7018 
+
+
+| Cisco Nexus 7702 .4+| http://www.cisco.com/en/US/prod/collateral/switches/ps9441/ps9402/data_sheet_c78-728187.html["Cisco Nexus 7700 系列交换机"] 
+
+
+| Cisco Nexus 7706 
+
+
+| Cisco Nexus 7710 
+
+
+| Cisco Nexus 7718 
+|===
+
+
+== Cisco Nexus 9000 系列交换机
+
+Cisco Nexus 9000 系列交换机的技术规格包含在每种型号的产品规格中。规格包括外形规格大小，监控器，光纤模块和线卡插槽的数量以及最大端口数量。下表列出了这些数据表。
+
+|===
+| 组件 | Cisco Nexus 产品规格 
+
+
+| Cisco Nexus 9000 系列 | http://www.cisco.com/c/en/us/products/switches/nexus-9000-series-switches/index.html["Cisco Nexus 9000 系列交换机"] 
+
+
+| Cisco Nexus 9500 系列 | http://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/datasheet-c78-729404.html["Cisco Nexus 9500 系列交换机"] 
+
+
+| Cisco Nexus 9300 系列 | http://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/datasheet-c78-729405.html["Cisco Nexus 9300 系列交换机"] 
+
+
+| Cisco Nexus 9336PQ ACI Spine 交换机 | http://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/datasheet-c78-731792.html["Cisco Nexus 9336PQ ACI Spine 交换机"] 
+
+
+| Cisco Nexus 9200 系列 | https://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/datasheet-c78-735989.html["Cisco Nexus 9200 平台交换机"] 
+|===
+
+
+== Cisco Application Policy Infrastructure 控制器
+
+部署 Cisco ACI 时，除了一节中的各项之外 link:dc-tech-spec_technical_specifications_and_references.html#cisco-nexus-9000-series-switches["Cisco Nexus 9000 系列交换机"]，您必须配置三个 Cisco APIC 。下表列出了 Cisco APIC 产品规格。
+
+|===
+| 组件 | Cisco Application Policy Infrastructure 产品规格 
+
+
+| Cisco 应用程序策略基础架构控制器 | https://www.cisco.com/c/en/us/products/collateral/cloud-systems-management/application-policy-infrastructure-controller-apic/datasheet-c78-739715.html["Cisco APIC 产品规格"] 
+|===
+
+
+== Cisco Nexus 阵列扩展器详细信息
+
+Cisco Nexus FEX 的技术规格包括速度，固定端口和链路的数量以及外形规格。
+
+下表列出了 Cisco Nexus 2000 系列 FEX 产品规格。
+
+|===
+| 组件 | Cisco Nexus 阵列扩展器产品规格 
+
+
+| Cisco Nexus 2000 系列阵列扩展器 | https://www.cisco.com/c/en/us/products/collateral/switches/nexus-2000-series-fabric-extenders/data_sheet_c78-507093.html["Nexus 2000 系列 FEX 产品规格"] 
+|===
+
+
+== SFP 模块
+
+有关 SFP 模块的信息，请查看以下资源：
+
+* 有关 Cisco 10 Gb SFP 的信息，请参见 https://www.cisco.com/c/en/us/products/interfaces-modules/10-gigabit-modules/index.html["Cisco 万兆模块"^]。
+* 有关 Cisco 25 Gb SFP 的信息，请参见 https://www.cisco.com/c/en/us/products/interfaces-modules/25-gigabit-modules/index.html["Cisco 25 千兆模块"^]。
+* 有关 Cisco QSFP 模块的信息，请参见 https://www.cisco.com/c/en/us/products/collateral/interfaces-modules/transceiver-modules/data_sheet_c78-660083.html["Cisco 40GBASE QSFP 模块产品规格"^]。
+* 有关 Cisco 100GB SFP 的信息，请参见 https://www.cisco.com/c/en/us/products/interfaces-modules/100-gigabit-modules/index.html["Cisco 100 千兆模块"^]。
+* 有关 Cisco FC SFP 模块的信息，请参见 https://www.cisco.com/c/en/us/products/collateral/storage-networking/mds-9000-series-multilayer-switches/product_data_sheet09186a00801bc698.html?dtid=osscdc000283["Cisco MDS 9000 系列可插拔收发器产品规格"^]。
+* 有关所有受支持的 Cisco SFP 和收发器模块的信息，请参见 http://www.cisco.com/en/US/docs/interfaces_modules/transceiver_modules/installation/note/78_15160.html["《 Cisco SFP 和 SFP+ 收发器模块安装说明》"^] 和。
+
+
+
+
+== NetApp 存储控制器
+
+NetApp 存储控制器的技术规格包括以下组件：
+
+* 机箱配置
+* 机架单元数
+* 内存量
+* NetApp FlashCache 缓存
+* 聚合大小
+* 卷大小
+* LUN 数量
+* 支持的网络存储
+* NetApp FlexVol 卷的最大数量
+* 支持的最大 SAN 主机数
+* 最大 Snapshot 副本数
+
+
+
+
+=== FAS 系列
+
+支持在 FlexPod 数据中心中使用所有可用型号的 FAS 存储控制器。有关所有 FAS 系列存储控制器的详细规格，请参见 https://hwu.netapp.com/["NetApp Hardware Universe"^] 下表列出的平台数据表中的和。
+
+|===
+| 组件 | FAS 系列控制器产品规格 
+
+
+| FAS9000 系列 | https://www.netapp.com/us/media/ds-3810.pdf["FAS9000 系列产品规格"] 
+
+
+| FAS8700 系列 | https://www.netapp.com/us/media/ds-4020.pdf["FAS8700 系列产品规格"] 
+
+
+| FAS8300 系列 | https://www.netapp.com/us/media/ds-4020.pdf["FAS8300 系列产品规格"] 
+
+
+| FAS2700 系列 | https://www.netapp.com/us/media/ds-3929.pdf["FAS2700 系列产品规格"] 
+|===
+
+
+=== AFF A-Series
+
+支持在 FlexPod 中使用所有当前型号的 NetApp AFF A 系列存储控制器。追加信息可在中找到 https://www.netapp.com/us/media/ds-3582.pdf["AFF 技术规格"^] 数据表和中的。有关特定 AFF 型号的详细信息，请参见下表中列出的平台专用文档。
+
+|===
+| 组件 | AFF A 系列控制器平台文档 
+
+
+| NetApp AFF A800 | http://docs.netapp.com/platstor/topic/com.netapp.nav.a800/home.html["AFF A800 平台文档"] 
+
+
+| NetApp AFF A700 | http://docs.netapp.com/platstor/topic/com.netapp.nav.fas9000/home.html["AFF A700 平台文档"] 
+
+
+| NetApp AFF A700s | http://docs.netapp.com/platstor/topic/com.netapp.nav.a700s/home.html["AFF A700s 平台文档"] 
+
+
+| NetApp AFF A400 | http://docs.netapp.com/platstor/index.jsp?topic=%2Fcom.netapp.nav.a400%2Fhome.html["AFF A400 平台文档"] 
+
+
+| NetApp AFF A300 | http://docs.netapp.com/platstor/topic/com.netapp.nav.a300/home.html["AFF A300 平台文档"] 
+
+
+| NetApp AFF A220 | http://docs.netapp.com/platstor/topic/com.netapp.nav.fas2700/home.html["AFF A220 平台文档"] 
+|===
+
+
+=== NetApp 磁盘架
+
+NetApp 磁盘架的技术规格包括外形规格大小，每个机箱的驱动器数量以及磁盘架 I/O 模块；下表提供了此文档。有关详细信息，请参见 http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["NetApp 磁盘架和存储介质技术规格"^] 和。
+
+|===
+| 组件 | NetApp FAS/AFF 磁盘架文档 
+
+
+| NetApp DS212C 磁盘架 | http://docs.netapp.com/platstor/topic/com.netapp.nav.sas3/home.html["DS212C 磁盘架文档"] 
+
+
+| NetApp DS224C 磁盘架 | http://docs.netapp.com/platstor/topic/com.netapp.nav.sas3/home.html["DS224C 磁盘架文档"] 
+
+
+| NetApp DS460C 磁盘架 | http://docs.netapp.com/platstor/topic/com.netapp.nav.sas3/home.html["DS460C 磁盘架文档"] 
+
+
+| NetApp NS224 NVMe-SSD 磁盘架 | https://docs.netapp.com/platstor/index.jsp?topic=%2Fcom.netapp.doc.hw-ds-nvme-shelfid%2FGUID-2C057CF4-8897-4270-BF57-CA90333FBCF4.html&lang=en["NS224 磁盘架文档"] 
+|===
+
+
+=== NetApp 驱动器
+
+NetApp 驱动器的技术规格包括外形规格大小，磁盘容量，磁盘 RPM ，支持控制器和 ONTAP 版本要求。这些规格可在的驱动器部分中找到 http://hwu.netapp.com/Drives/Index?queryId=1581392["NetApp Hardware Universe"^]。

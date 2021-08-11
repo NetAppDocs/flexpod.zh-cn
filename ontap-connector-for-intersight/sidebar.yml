@@ -1,0 +1,19 @@
+---
+section: ontap-connector-for-intersight
+title: "《 Cisco Intersight 与 NetApp ONTAP 存储快速入门指南》"
+entries:
+- title: 简介
+  url: "/ontap-connector-for-intersight/index.html"
+  type: solutions
+- title: 要求
+  url: "/ontap-connector-for-intersight/ci-qsg_requirements.html"
+- title: 开始之前
+  url: "/ontap-connector-for-intersight/ci-qsg_before_you_begin.html"
+- title: 声明目标
+  url: "/ontap-connector-for-intersight/ci-qsg_claim_targets.html"
+- title: 从 Cisco Intersight 监控 NetApp 存储
+  url: "/ontap-connector-for-intersight/ci-qsg_monitor_netapp_storage_from_cisco_intersight.html"
+- title: 用例
+  url: "/ontap-connector-for-intersight/ci-qsg_use_cases.html"
+- title: 参考资料
+  url: "/ontap-connector-for-intersight/ci-qsg_references.html"

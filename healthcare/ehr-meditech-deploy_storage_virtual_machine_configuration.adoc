@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_storage_virtual_machine_configuration.html 
+keywords: storage, virtual, machine, configuration, svm, meditech, host, luns, language, encoding 
+summary: 本节介绍在 ONTAP 8.3 及更高版本上部署的相关信息。 
+---
+= Storage Virtual Machine 配置
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+本节介绍在 ONTAP 8.3 及更高版本上部署的相关信息。
+
+
+NOTE: Storage Virtual Machine （ SVM ）在 ONTAP API 和 ONTAP 命令行界面中也称为 Vserver 。
+
+
+
+== 用于 MEDITECH 主机 LUN 的 SVM
+
+您应为每个 ONTAP 存储集群创建一个专用 SVM ，以便拥有和管理包含 MEDITECH 主机的 LUN 的聚合。
+
+
+
+== SVM 语言编码设置
+
+NetApp 建议您为所有 SVM 设置语言编码。如果在创建 SVM 时未指定语言编码设置，则使用默认语言编码设置。对于 ONTAP ，默认语言编码设置为 C.UTF-8 。设置语言编码后，您将无法稍后修改带有无限卷的 SVM 的语言。
+
+与 SVM 关联的卷将继承 SVM 语言编码设置，除非您在创建卷时明确指定其他设置。要使某些操作正常运行，您应在站点的所有卷中一致地使用语言编码设置。例如， SnapMirror 要求源和目标 SVM 具有相同的语言编码设置。
+
+link:ehr-meditech-deploy_volume_configuration.html["下一步：卷配置。"]

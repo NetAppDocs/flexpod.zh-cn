@@ -1,0 +1,14 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-epic-sizing_reference_architecture.html 
+keywords:  
+summary:  
+---
+= 参考架构
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+

@@ -1,0 +1,52 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec__optional_features.html 
+keywords: optional, features, iscsi, boot, option, flexpod, express configuration, cisco, mini, aff, fas 
+summary: 本节介绍 FlexPod 快速的可选功能。 
+---
+= 可选功能
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+本节介绍 FlexPod 快速的可选功能。
+
+
+
+== iSCSI 启动选项
+
+FlexPod 快速架构使用 iSCSI 启动。iSCSI 启动选项的最低要求包括：
+
+* 在 NetApp 存储控制器上激活的 iSCSI 许可证 / 功能
+* NetApp 存储控制器 HA 对中每个节点上的一个双端口 10Gbps 以太网适配器
+* Cisco UCS 服务器中支持 iSCSI 启动的适配器
+
+
+
+
+== 配置选项
+
+本节提供了有关 FlexPod 快速架构所需并经过验证的配置的详细信息。
+
+
+
+=== 采用 Cisco UCS C 系列和 AFF C190 系列的 FlexPod Express
+
+下图显示了采用 Cisco UCS C 系列和 AFF C190 系列解决方案的 FlexPod Express 。此解决方案支持两个 10GbE 上行链路。
+
+image:fp-express-tech-spec_image2.png["错误：缺少图形映像"]
+
+有关此配置的详细信息，请参见《适用于 VMware vSphere 6.7 和 NetApp AFF C190 NVA 的 FlexPod 快速部署指南》（正在进行中）。
+
+
+
+=== 采用 Cisco UCS Mini ， AFF A220 和 FAS 27502720 的 FlexPod Express
+
+下图显示了采用 Cisco UCS 管理的配置的 FlexPod Express 。
+
+image:fp-express-tech-spec_image3.png["错误：缺少图形映像"]
+
+有关此配置的详细信息，请参见 https://www.netapp.com/us/media/nva-1131-deploy.pdf["采用 VMware vSphere 6.7U1 的 FlexPod Express 以及采用基于 IP 的直连存储的 NetApp AFF A220"^]。

@@ -1,0 +1,75 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-c190-deploy_solution_overview.html 
+keywords: solution, overview, flexpod, express,c, series, deployment, infrastructure, verified, architecture, converged, case 
+summary: 此 FlexPod Express 解决方案是 FlexPod 融合基础架构计划的一部分。 
+---
+= 解决方案概述
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+此 FlexPod Express 解决方案是 FlexPod 融合基础架构计划的一部分。
+
+
+
+== FlexPod 融合基础架构计划
+
+FlexPod 参考架构以 Cisco 验证设计（ CVD ）或 NetApp 验证架构（ NVA ）的形式提供。如果给定 CVD 或 NVA 不会产生不受支持的配置，则允许根据客户要求进行差异。
+
+FlexPod 计划包括两个解决方案： FlexPod Express 和 FlexPod Datacenter 。
+
+* * FlexPod Express* 为客户提供了采用 Cisco 和 NetApp 技术的入门级解决方案。
+* * FlexPod Datacenter 。 * 为各种工作负载和应用程序提供最佳的多用途基础。
+
+
+image:express-c-series-c190-deploy_image1.png["错误：缺少图形映像"]
+
+
+
+== 经验证的 NetApp 架构计划
+
+经验证的 NetApp 架构计划为客户提供经过验证的 NetApp 解决方案架构。经验证的 NetApp 架构可提供具有以下品质的 NetApp 解决方案架构：
+
+* 经过全面测试
+* 规范性
+* 最大限度地降低部署风险
+* 加快上市速度
+
+
+本指南详细介绍了采用 VMware vSphere 的 FlexPod Express 的设计。此外，此设计还使用全新的 AFF C190 系统（运行 NetApp ONTAP ® 9.6 ）， Cisco Nexus 31108 和 Cisco UCS C 系列 C220 M5 服务器作为虚拟机管理程序节点。
+
+
+
+== 解决方案技术
+
+此解决方案利用了 NetApp ， Cisco 和 VMware 的最新技术。此解决方案采用运行 ONTAP 9.6 的全新 NetApp AFF C190 ，双 Cisco Nexus 31108 交换机和运行 VMware vSphere 6.7U2 的 Cisco UCS C220 M5 机架式服务器。此经过验证的解决方案采用 10GbE 技术。此外，还提供了有关如何通过一次添加两个虚拟机管理程序节点来扩展计算容量的指导，以使 FlexPod 快速架构能够适应组织不断变化的业务需求。
+
+image:express-c-series-c190-deploy_image2.png["错误：缺少图形映像"]
+
+
+NOTE: 要高效使用 VIC 1457 上的四个物理 10GbE 端口，请在每个服务器与顶部机架交换机之间另外创建两条链路。
+
+
+
+== 使用情形摘要
+
+FlexPod Express 解决方案可应用于多种使用情形，包括以下情形：
+
+* 远程办公室或分支机构
+* 中小型企业
+* 需要经济高效的专用解决方案的环境
+
+
+FlexPod Express 最适合虚拟化和混合工作负载。虽然此解决方案已通过 vSphere 6.7U2 的验证，但它支持任何经 NetApp 互操作性表工具认证可与其他组件配合使用的 vSphere 版本。NetApp 建议部署 vSphere 6.7U2 ，因为它具有以下修复和增强功能：
+
+* 为备份和还原 vCenter Server 设备提供了新的协议支持，包括 HTTP ， HTTPS ， FTP ， FTPS ， SCP ， NFS 和 SMB 。
+* 利用内容库时新增功能。现在，如果为 vCenter Server 配置了增强型链接模式，则可以在内容库之间同步原生 VM 模板。
+* 更新了客户端插件页面。
+* 在 vSphere Update Manager （ VUM ）和 vSphere 客户端中增加了增强功能。现在，您可以在一个屏幕上执行连接，检查合规性和修复操作。
+
+
+有关此主题的详细信息，请参见 https://blogs.vmware.com/vsphere/2019/04/vcenter-server-6-7-update-2-whats-new.html["vSphere 6.7U2 页面"^] 和。

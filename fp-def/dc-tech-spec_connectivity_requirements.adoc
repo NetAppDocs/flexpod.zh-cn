@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: fp-def/dc-tech-spec_connectivity_requirements.html 
+keywords: connectivity, requirements, cisco, ucs, fabric, interconnect, uplink, direct, san 
+summary: 下面列出了 FlexPod 配置的连接要求。 
+---
+= 连接要求
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+FlexPod 配置具有以下连接要求：
+
+* 所有组件都需要一个单独的 100 Mbps 以太网 /1 Gb 以太网带外管理网络。
+* NetApp 建议您在整个环境中启用巨型帧支持，但这并不是必需的。
+* 建议仅将 Cisco UCS 互联阵列设备端口用于 iSCSI 和 NAS 连接。
+* 不能在核心 FlexPod 组件之间直列放置任何其他设备。
+
+
+上行链路连接：
+
+* NetApp 存储控制器上的端口必须连接到 Cisco Nexus 5000 ， 7000 或 9000 系列交换机，才能支持虚拟端口通道（ Virtual Port Channel ， vPC ）。
+* 从 Cisco Nexus 5000 ， 7000 或 9000 系列交换机到 NetApp 存储控制器，需要使用 vPC 。
+* 从 Cisco Nexus 5000 ， 7000 或 9000 系列交换机到互联阵列需要使用 vPC 。
+* 一个 vPC 至少需要两个连接。可以根据应用程序负载和性能要求增加 vPC 中的连接数。
+
+
+直接连接：
+
+* 可以对直接连接到互联阵列的 NetApp 存储控制器端口进行分组，以启用端口通道。此配置不支持 VPC 。
+* 建议将 FCoE 端口通道用于端到端 FCoE 设计。
+
+
+SAN 启动：
+
+* FlexPod 解决方案是围绕使用 iSCSI ， FC 或 FCoE 协议的 SAN 启动架构设计的。使用从 SAN 启动技术可以为数据中心基础架构提供最灵活的配置，并可在每个基础架构组件中提供丰富的功能。尽管从 SAN 启动是最高效的配置，但从本地服务器存储启动是一种有效且受支持的配置。
+* 不支持通过 FC-NVMe 进行 SAN 启动。
+

@@ -1,0 +1,22 @@
+---
+section: security
+title: FlexPod 和安全性
+entries:
+- title: FlexPod ，《勒索软件解决方案》
+  url: "/security/security-ransomware_what_is_ransomware.html"
+  type: solutions
+  entries:
+  - title: FlexPod 概述
+    url: "/security/security-ransomware_flexpod_overview.html"
+  - title: 勒索软件保护措施
+    url: "/security/security-ransomware_ransomware_protection_measures.html"
+  - title: 保护和恢复 FlexPod 上的数据
+    url: "/security/security-ransomware_protect_and_recover_data_on_flexpod.html"
+  - title: 继续开展业务运营，无需支付任何费用
+    url: "/security/security-ransomware_continue_business_operations_without_paying_ransom.html"
+  - title: 结论
+    url: "/security/security-ransomware_conclusion.html"
+  - title: 致谢
+    url: "/security/security-ransomware_acknowledgements.html"
+  - title: 追加信息
+    url: "/security/security-ransomware_additional_information.html"

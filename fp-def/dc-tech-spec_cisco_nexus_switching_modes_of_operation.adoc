@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: fp-def/dc-tech-spec_cisco_nexus_switching_modes_of_operation.html 
+keywords: cisco, nexus, switching, modes, operation, datacenter, techincal, specifications 
+summary: 在给定 FlexPod 部署中，可以使用多种 Cisco Nexus 产品作为交换组件。其中大多数选项都使用传统的 Cisco Nexus OS 或 NX-OS 软件。Cisco Nexus 系列交换机在其产品系列中提供了不同的功能。本文档稍后将详细介绍这些功能。 
+---
+= Cisco Nexus 切换操作模式
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+在给定 FlexPod 部署中，可以使用多种 Cisco Nexus 产品作为交换组件。其中大多数选项都使用传统的 Cisco Nexus OS 或 NX-OS 软件。Cisco Nexus 系列交换机在其产品系列中提供了不同的功能。本文档稍后将详细介绍这些功能。
+
+Cisco 在软件定义的网络空间中提供的产品称为应用程序中心基础架构（ Application Centric Infrastructure ， ACI ）。支持 ACI 模式（也称为光纤模式）的 Cisco Nexus 产品系列是 Cisco Nexus 9300 系列。这些交换机也可以部署在 NX-OS 或独立模式下。
+
+Cisco ACI 的目标部署对象是侧重于特定应用程序要求的数据中心部署。应用程序通过一系列配置文件和合同进行实例化，这些配置文件和合同允许从主机或虚拟机（ VM ）一直通过网络连接到存储。
+
+FlexPod 已通过 Cisco Nexus 交换机的两种操作模式的验证。有关 ACI 和 NX-OS 模式的详细信息，请参见以下 Cisco 页面：
+
+* http://www.cisco.com/c/en/us/solutions/data-center-virtualization/application-centric-infrastructure/index.html["Cisco 以应用程序为中心的基础架构"^]
+* http://www.cisco.com/c/en/us/products/ios-nx-os-software/nx-os-software/index.html["Cisco NX-OS 软件"^]
+

@@ -1,0 +1,205 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-sizing_technical_specifications_for_small,_medium_and_large_architectures.html 
+keywords: technical, specifications, small, medium, large, architectures, bill, material 
+summary: 本节将讨论不同大小的存储架构的示例材料清单。 
+---
+= 小型，中型和大型架构的技术规格
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+本节将讨论不同大小的存储架构的示例材料清单。
+
+
+
+== 小型，中型和大型架构的材料清单。
+
+FlexPod 设计是一种灵活的基础架构，包含许多不同的组件和软件版本。使用 ... https://fieldportal.netapp.com/content/443847["TR-4036 ： FlexPod 技术规格"^] 作为汇编有效 FlexPod 配置的指南。下表中的配置是 FlexPod 的最低要求，只是一个示例。可以根据不同环境和使用情形的需要扩展每个产品系列的配置。
+
+对于此规模估算练习， " 小型 " 对应于 3 类 MEDITECH 环境， " 中型 " 对应于 5 类， " 大型 " 对应于 6 类。
+
+|===
+|  | 小型 | 中等 | 大型 
+
+
+| 平台 | 一个 NetApp AFF A220 全闪存存储系统 HA 对 | 一个 NetApp AFF A220 HA 对 | 一个 NetApp AFF A300 全闪存存储系统 HA 对 
+
+
+| 磁盘架 | 9 TB x 3.8 TB | 13 TB x 3.8 TB | 19 TB x 3.8 TB 
+
+
+| Meditech 数据库大小 | 3TB-12 TB | 17 TB | 大于 30 TB 
+
+
+| Meditech IOPS | 少于 22 ， 000 IOPS | 超过 25 ， 000 IOPS | 超过 32 ， 000 个 IOPS 
+
+
+| 总 IOPS | 2000 年 | 27000 | 35000 
+
+
+| 原始 | 34.2 TB | 49.4TB | 68.4TB 
+
+
+| 可用容量 | 18.53 TiB | 27.96 TiB | 33.82 TiB 
+
+
+| 有效容量（ 2 ： 1 存储效率） | 55.6 TiB | 83.89 TiB | 101.47 TiB 
+|===
+
+NOTE: 某些客户环境可能会同时运行多个 MEDITECH 生产工作负载，或者 IOPS 要求可能更高。在这种情况下，请与 NetApp 客户团队合作，根据所需的 IOPS 和容量对存储系统进行规模估算。您应该能够确定适合工作负载的平台。例如，有些客户成功地在一个 NetApp AFF A700 全闪存存储系统 HA 对上运行了多个 MEDITECH 环境。
+
+下表显示了 MEDITECH 配置所需的标准软件。
+
+|===
+| 软件 | 产品系列 | 版本或版本 | 详细信息 
+
+
+| 存储 | ONTAP | ONTAP 9.4 常规可用性（ GA ） |  
+
+
+.3+| 网络 | Cisco UCS 互联阵列 | Cisco UCSM 4.x | 当前建议版本 
+
+
+| Cisco Nexus 以太网交换机 | 7.0 （ 3 ） i7 （ 6 ） | 当前建议版本 
+
+
+| Cisco FC ： Cisco MDS 9132T | 8.3 （ 2 ） | 当前建议版本 
+
+
+| 虚拟机管理程序 | 虚拟机管理程序 | VMware vSphere ESXi 6.7 |  
+
+
+|  | 虚拟机（ VM ） | Windows 2016 |  
+
+
+.4+| 管理 | 虚拟机管理程序管理系统 | VMware vCenter Server 6.7 U1 （ VCSA ） |  
+
+
+| NetApp 虚拟存储控制台（ VSC ） | VSC 7.0P1 |  
+
+
+| NetApp SnapCenter | SnapCenter 4.0 |  
+
+
+| Cisco UCS Manager | 4.x |  
+|===
+下表显示了一个小型（第 3 类）配置示例—基础架构组件。
+
+|===
+| 层 | 产品系列 | 数量和型号 | 详细信息 
+
+
+.5+| 计算 | Cisco UCS 5108 机箱 | 1. | 最多支持八个半宽刀片式服务器或四个全宽刀片式服务器。随着服务器需求的增长，请添加机箱。 
+
+
+| Cisco 机箱 I/O 模块 | 2 x 2208 | 8 GB x 10 GB 上行链路端口 
+
+
+| Cisco UCS 刀片式服务器 | 4 个 B200 M5 | 每个系统具有 2 个 14 核， 2.6 GHz 或更高时钟速度以及 384 GB BIOS 3.2 （ 3# ） 
+
+
+| Cisco UCS 虚拟接口卡 | 4 个 UCS 1440 | VMware ESXi fNIC FC 驱动程序： 1.6.0.47 VMware ESXi eNIC 以太网驱动程序： 1.0.27.0 （请参见互操作性表： https://ucshcltool.cloudapps.cisco.com/public/)[] 
+
+
+| 2 个 Cisco UCS 互联阵列（ FI ） | 2 个 UCS 6454 FI | 第四代互联阵列，支持 10/25/100GB 以太网和 32 Gb FC 
+
+
+| 网络 | Cisco 以太网交换机 | 2 个 Nexus 9336c-x2 | 1 GB ， 10 GB ， 25 GB ， 40 GB ， 100 GB 
+
+
+.2+| 存储网络 | 用于 BLOB 存储的 IP 网络 Nexus 9k |  | FI 和 UCS 机箱 
+
+
+| FC ： Cisco MDS 9132T |  | 两台 Cisco 9132T 交换机 
+
+
+.3+| 存储 | NetApp AFF A300 全闪存存储系统 | 1 个 HA 对 | 适用于所有 MEDITECH 工作负载的双节点集群（文件服务器，映像服务器， SQL Server ， VMware 等） 
+
+
+| DS224C 磁盘架 | 1 个 DS224C 磁盘架 |  
+
+
+| 固态驱动器（ SSD ） | 9 个 3.8 TB |  
+|===
+下表显示了中型（ 5 类）配置示例—基础架构组件
+
+|===
+| 层 | 产品系列 | 数量和型号 | 详细信息 
+
+
+.5+| 计算 | Cisco UCS 5108 机箱 | 1. | 最多支持八个半宽刀片式服务器或四个全宽刀片式服务器。随着服务器需求的增长，请添加机箱。 
+
+
+| Cisco 机箱 I/O 模块 | 2 x 2208 | 8 GB x 10 GB 上行链路端口 
+
+
+| Cisco UCS 刀片式服务器 | 6 个 B200 M5 | 每个系统具有 2 个 16 核， 2.5 GHz/ 或更高时钟速度以及 384 GB 或更多内存 BIOS 3.2 （ 3# ） 
+
+
+| Cisco UCS 虚拟接口卡（ VIC ） | 6 个 UCS 1440 VIC | VMware ESXi fNIC FC 驱动程序： 1.6.0.47 VMware ESXi eNIC 以太网驱动程序： 1.0.27.0 （请参见互操作性表：） 
+
+
+| 2 个 Cisco UCS 互联阵列（ FI ） | 2 个 UCS 6454 FI | 第四代互联阵列，支持 10 GB/25 GB/100 GB 以太网和 32 Gb FC 
+
+
+| 网络 | Cisco 以太网交换机 | 2 个 Nexus 9336c-x2 | 1 GB ， 10 GB ， 25 GB ， 40 GB ， 100 GB 
+
+
+.2+| 存储网络 | 用于 BLOB 存储的 IP 网络 Nexus 9k |  |  
+
+
+| FC ： Cisco MDS 9132T |  | 两台 Cisco 9132T 交换机 
+
+
+.3+| 存储 | NetApp AFF A220 全闪存存储系统 | 2 个 HA 对 | 适用于所有 MEDITECH 工作负载的双节点集群（文件服务器，映像服务器， SQL Server ， VMware 等） 
+
+
+| DS224C 磁盘架 | 1 个 DS224C 磁盘架 |  
+
+
+| SSD | 13 个 3.8 TB |  
+|===
+下表显示了一个大型（第 6 类）配置示例—基础架构组件。
+
+|===
+| 层 | 产品系列 | 数量和型号 | 详细信息 
+
+
+.5+| 计算 | Cisco UCS 5108 机箱 | 1. |  
+
+
+| Cisco 机箱 I/O 模块 | 2 x 2208 | 8 个 10 GB 上行链路端口 
+
+
+| Cisco UCS 刀片式服务器 | 8 个 B200 M5 | 每个模块具有 2 个 24 核， 2.7 GHz 和 768 GB BIOS 3.2 （ 3# ） 
+
+
+| Cisco UCS 虚拟接口卡（ VIC ） | 8 个 UCS 1440 VIC | VMware ESXi fNIC FC 驱动程序： 1.6.0.47 VMware ESXi eNIC 以太网驱动程序： 1.0.27.0 （请查看互操作性表： https://ucshcltool.cloudapps.cisco.com/public/)[] 
+
+
+| 2 个 Cisco UCS 互联阵列（ FI ） | 2 个 UCS 6454 FI | 第四代互联阵列，支持 10 GB/25 GB/100 GB 以太网和 32 Gb FC 
+
+
+| 网络 | Cisco 以太网交换机 | 2 个 Nexus 9336c-x2 | 2 个 Cisco Nexus 9332PQ1 ， 10 GB ， 25 GB ， 40 GB ， 100 GB 
+
+
+.2+| 存储网络 | 用于 BLOB 存储的 IP 网络 N9k |  |  
+
+
+| FC ： Cisco MDS 9132T |  | 两台 Cisco 9132T 交换机 
+
+
+.3+| 存储 | AFF A300 | 1 个 HA 对 | 适用于所有 MEDITECH 工作负载的双节点集群（文件服务器，映像服务器， SQL Server ， VMware 等） 
+
+
+| DS224C 磁盘架 | 1 个 DS224C 磁盘架 |  
+
+
+| SSD | 19 个 3.8 TB |  
+|===
+
+NOTE: 这些配置为规模估算指导提供了一个起点。某些客户环境可能会同时运行多个 MEDITECH 生产工作负载和非 MEDITECH 工作负载，或者它们的 IOP 要求可能更高。您应与 NetApp 客户团队合作，根据所需的 IOPS ，工作负载和容量来估算存储系统的规模，以确定适合为工作负载提供服务的平台。

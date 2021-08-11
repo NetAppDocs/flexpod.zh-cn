@@ -1,0 +1,132 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-insights_architecture.html 
+keywords: architecture, solution, technology, diagram, hardware, requirements, case, details, software, cloud, insights 
+summary: 在本节中，我们将回顾 FlexPod 数据中心融合基础架构的架构，包括由 Cloud Insights 监控的 NetApp AFF A800 系统。 
+---
+= 架构
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+在本节中，我们将回顾 FlexPod 数据中心融合基础架构的架构，包括由 Cloud Insights 监控的 NetApp AFF A800 系统。
+
+
+
+== 解决方案技术
+
+FlexPod Datacenter 解决方案由以下最低组件组成，可提供高度可用，易于扩展，经验证且受支持的融合基础架构环境。
+
+* 两个 NetApp ONTAP 存储节点（一个 HA 对）
+* 两个 Cisco Nexus 数据中心网络交换机
+* 两个 Cisco MDS 光纤交换机（ FC 部署可选）
+* 两个 Cisco UCS 互联阵列
+* 一个带有两个 Cisco UCS B 系列刀片式服务器的 Cisco UCS 刀片式服务器机箱
+
+
+或
+
+* 两个 Cisco UCS C 系列机架式服务器
+
+
+要使 Cloud Insights 收集数据，组织必须将采集单元部署为其 FlexPod 数据中心环境中的虚拟机或物理机，或者部署在可与从中收集数据的组件联系的位置。您可以在运行多个受支持的 Windows 或 Linux 操作系统的系统上安装采集单元软件。下表列出了此软件的解决方案组件。
+
+|===
+| 操作系统 | version 
+
+
+| Microsoft Windows | 10 
+
+
+| Microsoft Windows Server | 2012 ， 2012 R2 ， 2016 ， 2019 
+
+
+| Red Hat Enterprise Linux | 7.2 – 7.6 
+
+
+| CentOS | 7.2 – 7.6 
+
+
+| Oracle Enterprise Linux | 7.5 
+
+
+| Debian | 9 
+
+
+| Ubuntu | 18.04 LTS 
+|===
+
+
+== 架构图
+
+下图显示了解决方案架构。
+
+image:cloud-insights_image2.png["错误：缺少图形映像"]
+
+
+
+== 硬件要求
+
+下表列出了实施解决方案所需的硬件组件。在任何特定解决方案实施中使用的硬件组件可能会因客户要求而异。
+
+|===
+| 硬件 | 数量 
+
+
+| Cisco Nexus 9336C-x2 | 2. 
+
+
+| Cisco UCS 6454 互联阵列 | 2. 
+
+
+| Cisco UCS 5108 刀片式服务器机箱 | 1. 
+
+
+| Cisco UCS 2408 阵列扩展器 | 2. 
+
+
+| Cisco UCS B200 M5 刀片式服务器 | 2. 
+
+
+| NetApp AFF A800 | 2. 
+|===
+
+
+== 软件要求
+
+下表列出了实施解决方案所需的软件组件。在任何特定解决方案实施中使用的软件组件可能会因客户要求而异。
+
+|===
+| 软件 | version 
+
+
+| Cisco Nexus 固件 | 9.3 （ 5 ） 
+
+
+| Cisco UCS 版本 | 4.1 （ 2a ） 
+
+
+| NetApp ONTAP 版本 | 9.7 
+
+
+| NetApp Cloud Insights 版本 | 2020 年 9 月，基本版 
+
+
+| Red Hat Enterprise Linux | 7.6 
+
+
+| VMware vSphere | 6.7U3. 
+|===
+
+
+== 用例详细信息
+
+此解决方案适用场景的使用情形如下：
+
+* 使用提供给 NetApp Active IQ 数字顾问的数据分析环境，以评估存储系统风险并提供存储优化建议。
+* 通过实时检查系统统计信息对部署在 FlexPod Datacenter 解决方案中的 ONTAP 存储系统中的问题进行故障排除。
+* 生成自定义信息板，以便轻松监控在 FlexPod 数据中心融合基础架构中部署的 ONTAP 存储系统的特定关注点。
+

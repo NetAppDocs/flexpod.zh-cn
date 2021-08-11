@@ -1,0 +1,86 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec_legacy_equipment.html 
+keywords: legacy, equipment, legacy, storage, controller, fas, disk, shelf 
+summary: 本节列出了 NetApp 原有磁盘架， FAS 控制器和存储控制器选项。 
+---
+= 旧设备
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+下表列出了 NetApp 原有存储控制器选项。
+
+|===
+| 存储控制器 | FAS 部件号 | 技术规格 
+
+
+| FAS2520 | 根据所选的各个选项 | http://www.netapp.com/us/products/storage-systems/fas2500/fas2500-tech-specs.aspx[] 
+
+
+| FAS2552 | 根据所选的各个选项 | http://www.netapp.com/us/products/storage-systems/fas2500/fas2500-tech-specs.aspx[] 
+
+
+| FAS2554 | 根据所选的各个选项 | http://www.netapp.com/us/products/storage-systems/fas2500/fas2500-tech-specs.aspx[] 
+
+
+| FAS8020 | 根据所选的各个选项 | http://www.netapp.com/us/products/storage-systems/fas8000/fas8000-tech-specs.aspx[] 
+|===
+下表列出了适用于 NetApp FAS 的 NetApp 原有磁盘架选项。
+
+|===
+| 磁盘架 | 部件号 | 技术规格 
+
+
+| DE1600 | E-X5682A-DM-0E-R6-C | link:http://www.netapp.com/us/products/storage-systems/e2800/e2800-tech-specs.aspx["磁盘架技术规格 NetApp Hardware Universe 上支持的驱动器"] 
+
+
+| DE5600 | E-X4041A-12-R6 | link:http://www.netapp.com/us/products/storage-systems/e2800/e2800-tech-specs.aspx["磁盘架技术规格 NetApp Hardware Universe 上支持的驱动器"] 
+
+
+| DE6600 | X-48564-00-R6 | link:http://www.netapp.com/us/products/storage-systems/e2800/e2800-tech-specs.aspx["磁盘架技术规格 NetApp Hardware Universe 上支持的驱动器"] 
+|===
+
+
+== NetApp 原有 FAS 控制器
+
+下表列出了原有的 NetApp FAS 控制器选项。
+
+|===
+| 当前组件 | FAS2554 | FAS2552 | FAS2520 
+
+
+| Configuration | 一个 4U 机箱中有 2 个控制器 | 一个 2U 机箱中有 2 个控制器 | 一个 2U 机箱中有 2 个控制器 
+
+
+| 最大原始容量 | 576 TB | 509 TB | 336 TB 
+
+
+| 内部驱动器 | 24 | 24 | 12 
+
+
+| 最大驱动器数（内部和外部） | 144. | 144. | 84. 
+
+
+| 最大卷大小 3+| 60 TB 
+
+
+| 最大聚合大小 3+| 120 TB 
+
+
+| LUN 的最大数量 3+| 每个控制器 2 ， 048 个 
+
+
+| 支持的存储网络 2+| iSCSI ， FC ， FCoE ， NFS 和 CIFS | iSCSI ， NFS 和 CIFS 
+
+
+| NetApp FlexVol 卷的最大数量 3+| 每个控制器 1 ， 000 个 
+
+
+| NetApp Snapshot 副本的最大数量 3+| 每个控制器 255 ， 000 个 
+|===
+
+NOTE: 有关更多 NetApp FAS 型号，请参见 https://hwu.netapp.com/Controller/Index?platformTypeId=2032["FAS 型号部分"^] 在 Hardware Universe 中。

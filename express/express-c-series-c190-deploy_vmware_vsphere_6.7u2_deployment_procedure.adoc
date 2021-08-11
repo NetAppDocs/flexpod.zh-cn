@@ -1,0 +1,422 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-c190-deploy_vmware_vsphere_6.7u2_deployment_procedure.html 
+keywords: vmware, vsphere, deployment, procedure, configure, install, esxi, cisco ucs, c, series, host, multipathing 
+summary: 本节详细介绍了在 FlexPod 快速配置中安装 VMware ESXi 6.7U2 的过程。下面的部署过程已进行自定义，以包括前面几节所述的环境变量。 
+---
+= VMware vSphere 6.7U2 部署操作步骤
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+本节详细介绍了在 FlexPod 快速配置中安装 VMware ESXi 6.7U2 的过程。下面的部署过程已进行自定义，以包括前面几节所述的环境变量。
+
+在此类环境中安装 VMware ESXi 的方法有多种。此操作步骤使用适用于 Cisco UCS C 系列服务器的 CIMC 界面的虚拟 KVM 控制台和虚拟介质功能，将远程安装介质映射到每个服务器。
+
+
+NOTE: 必须为 Cisco UCS 服务器 A 和 Cisco UCS 服务器 B 完成此操作步骤
+
+
+NOTE: 对于添加到集群中的任何其他节点，必须完成此操作步骤。
+
+
+
+== 登录到 Cisco UCS C 系列独立服务器的 CIMC 界面
+
+以下步骤详细介绍了登录到 Cisco UCS C 系列独立服务器的 CIMC 界面的方法。您必须登录到 CIMC 界面才能运行虚拟 KVM ，管理员可以通过远程介质开始安装操作系统。
+
+
+
+=== 所有主机
+
+. 导航到 Web 浏览器，然后输入 Cisco UCS C 系列的 CIMC 接口的 IP 地址。此步骤将启动 CIMC GUI 应用程序。
+. 使用管理员用户名和凭据登录到 CIMC UI 。
+. 在主菜单中，选择服务器选项卡。
+. 单击 Launch KVM Console 。
++
+image:express-c-series-c190-deploy_image17.png["错误：缺少图形映像"]
+
+. 从虚拟 KVM 控制台中，选择 Virtual Media 选项卡。
+. 选择映射 CD/DVD 。
++
+
+NOTE: 您可能需要先单击激活虚拟设备。如果出现提示，请选择 Accept this session 。
+
+. 浏览到 VMware ESXi 6.7U2 安装程序 ISO 映像文件，然后单击打开。单击映射设备。
+. 选择电源菜单，然后选择系统重新启动（冷启动）。单击是。
+
+
+
+
+== 安装 VMware ESXi
+
+以下步骤介绍了如何在每台主机上安装 VMware ESXi 。
+
+
+
+=== 下载 ESXi 6.7U2 Cisco 自定义映像
+
+. 导航到 https://my.vmware.com/web/vmware/info/slug/datacenter_cloud_infrastructure/vmware_vsphere/6_7["VMware vSphere 下载页面"^] 用于自定义 ISO 。
+. 单击适用于 ESXi 6.7U2 安装 CD 的 Cisco 自定义映像旁边的转至下载。
+. 下载适用于 ESXi 6.7U2 安装 CD （ ISO ）的 Cisco 自定义映像。
+. 系统启动时，计算机会检测是否存在 VMware ESXi 安装介质。
+. 从显示的菜单中选择 VMware ESXi 安装程序。安装程序将加载，可能需要几分钟时间。
+. 安装程序加载完毕后，按 Enter 继续安装。
+. 阅读最终用户许可协议后，接受该协议并按 F11 继续安装。
+. 选择先前设置为 ESXi 安装磁盘的 NetApp LUN ，然后按 Enter 继续安装。
++
+image:express-c-series-c190-deploy_image18.png["错误：缺少图形映像"]
+
+. 选择适当的键盘布局，然后按 Enter 键。
+. 输入并确认根密码，然后按 Enter 键。
+. 安装程序会警告您已删除卷上的现有分区。按 F11 继续安装。安装 ESXi 后，服务器将重新启动。
+
+
+
+
+== 设置 VMware ESXi 主机管理网络
+
+以下步骤介绍了如何为每个 VMware ESXi 主机添加管理网络。
+
+
+
+=== 所有主机
+
+. 服务器完成重新启动后，按 F2 输入选项以自定义系统。
+. 使用 root 作为登录名登录，并使用先前在安装过程中输入的 root 密码登录。
+. 选择配置管理网络选项。
+. 选择网络适配器，然后按 Enter 键。
+. 为 vSwitch0 选择所需的端口。按 Enter 键。
+. 在 CIMC 中选择与 eth0 和 eth1 对应的端口。
++
+image:express-c-series-c190-deploy_image19.png["错误：缺少图形映像"]
+
+. 选择 VLAN （可选）并按 Enter 键。
+. 输入 VLAN ID ` \<<mgmt_vlan_id>>` 。按 Enter 键。
+. 从配置管理网络菜单中，选择 IPv4 配置以配置管理接口的 IP 地址。按 Enter 键。
+. 使用箭头键选中设置静态 IPv4 地址，然后使用空格键选择此选项。
+. 输入用于管理 VMware ESXi 主机 ` 的 IP 地址 \<<ESXi_host_mgmt_ip>>` 。
+. 输入 VMware ESXi 主机的子网掩码 ` \<<ESXi_host_mgmt_netmask>>` 。
+. 输入 VMware ESXi 主机的默认网关 ` \<<ESXi_host_mgmt_gateway>>` 。
+. 按 Enter 接受对 IP 配置所做的更改。
+. 进入 IPv6 配置菜单。
+. 使用空格键取消选择启用 IPv6 （需要重新启动）选项以禁用 IPv6 。按 Enter 键。
+. 进入菜单配置 DNS 设置。
+. 由于 IP 地址是手动分配的，因此还必须手动输入 DNS 信息。
+. 输入主 DNS 服务器的 IP 地址 ` \<<nameserver_ip>>` 。
+. （可选）输入辅 DNS 服务器的 IP 地址。
+. 输入 VMware ESXi 主机名的 FQDN ： ` \<<ESXi_host_FQDN>>` 。
+. 按 Enter 接受对 DNS 配置所做的更改。
+. 按 Esc 退出配置管理网络子菜单。
+. 按 Y 确认更改并重新启动服务器。
+. 选择 Troubleshooting Options ，然后选择 Enable ESXi Shell and SSH 。
++
+
+NOTE: 在根据客户的安全策略进行验证后，可以禁用这些故障排除选项。
+
+. 按两次 Esc 可返回到主控制台屏幕。
+. 从屏幕顶部的 CIMC 宏 > 静态宏 > Alt-F 下拉菜单中单击 Alt-F1 。
+. 使用 ESXi 主机的正确凭据登录。
+. 在提示符处，按顺序输入以下 esxcli 命令列表以启用网络连接。
++
+....
+esxcli network vswitch standard policy failover set -v vSwitch0 -a vmnic2,vmnic4 -l iphash
+....
+
+
+
+
+== 配置 ESXi 主机
+
+使用下表中的信息配置每个 ESXi 主机。
+
+|===
+| 详细信息 | 详细信息值 
+
+
+| ESXi 主机名 | \<<ESXi_host_FQDN>> 
+
+
+| ESXi 主机管理 IP | \<<ESXi_host_mgmt_ip>> 
+
+
+| ESXi 主机管理掩码 | \<<ESXi_host_mgmt_netmask>> 
+
+
+| ESXi 主机管理网关 | \<<ESXi_host_mgmt_gateway>> 
+
+
+| ESXi 主机 NFS IP | \<<ESXi_host_nfs_ip>> 
+
+
+| ESXi 主机 NFS 掩码 | \<<ESXi_host_nfs_netmask>> 
+
+
+| ESXi 主机 NFS 网关 | \<<ESXi_host_nfs_gateway>> 
+
+
+| ESXi 主机 vMotion IP | \<<ESXi_host_vMotion_IP>> 
+
+
+| ESXi 主机 vMotion 掩码 | \<<ESXi_host_vMotion_netmask>> 
+
+
+| ESXi 主机 vMotion 网关 | \<<ESXi_host_vMotion_gateway>> 
+
+
+| ESXi 主机 iSCSI-A IP | \<<ESXi_host_iscsi-A_IP>> 
+
+
+| ESXi 主机 iSCSI-A 掩码 | \<<ESXi_host_iscsi-a_netmask>> 
+
+
+| ESXi 主机 iSCSI-A 网关 | \<<ESXi_host_iscsi-a_gateway>> 
+
+
+| ESXi 主机 iSCSI-B IP | \<<ESXi_host_iscsi-B_ip>> 
+
+
+| ESXi 主机 iSCSI-B 掩码 | \<<ESXi_host_iscsi-B_netmask>> 
+
+
+| ESXi 主机 iSCSI-B 网关 | \<<ESXi_host_scsi-B_gateway>> 
+|===
+
+
+=== 登录到 ESXi 主机
+
+要登录到 ESXi 主机，请完成以下步骤：
+
+. 在 Web 浏览器中打开主机的管理 IP 地址。
+. 使用 root 帐户和您在安装过程中指定的密码登录到 ESXi 主机。
+. 阅读有关 VMware 客户体验改进计划的声明。选择正确的响应后，单击确定。
+
+
+
+
+=== 配置 iSCSI 启动
+
+要配置 iSCSI 启动，请完成以下步骤：
+
+. 选择左侧的 Networking 。
+. 在右侧，选择 Virtual Switches 选项卡。
++
+image:express-c-series-c190-deploy_image20.png["错误：缺少图形映像"]
+
+. 单击 iScsiBootvSwitch 。
+. 选择编辑设置。
+. 将 MTU 更改为 9000 ，然后单击保存。
+. 将 iSCSIBootPG 端口重命名为 iSCSIBootPG-A
++
+
+NOTE: 在此配置中， vmnic3 和 vmnic5 用于 iSCSI 启动。如果 ESXi 主机中有其他 NIC ，则可能具有不同的 vmnic 编号。要确认用于 iSCSI 启动的 NIC ，请将 CIMC 中 iSCSI vNIC 上的 MAC 地址与 ESXi 中的 vmnic 进行匹配。
+
+. 在中间窗格中，选择 VMkernel NIC 选项卡。
+. 选择添加 VMkernel NIC 。
++
+.. 指定 iScsiBootPG-B 的新端口组名称
+.. 为虚拟交换机选择 iScsiBootvSwitch 。
+.. 输入 ` \<<iscsib_vlan_id>>` 作为 VLAN ID 。
+.. 将 MTU 更改为 9000 。
+.. 展开 IPv4 设置。
+.. 选择静态配置。
+.. 为地址输入 ` \<<var_hosta_iscsib_ip>>` 。
+.. 为子网掩码输入 ` \<<var_hosta_iscsib_mask>>` 。
+.. 单击创建。
++
+
+NOTE: 在 iScsiBootPG-A 上将 MTU 设置为 9000
+
+
+
+. 要设置故障转移，请完成以下步骤：
++
+.. 单击 "iSCSIBootPG-A">" 分层和故障转移 ">" 故障转移顺序 ">"vmnic3" 上的编辑设置。vmnic3 应为活动状态， vmnic5 应为未使用状态。
+.. 单击 "iSCSIBootPG-B 上的编辑设置 ">" 绑定和故障转移 ">" 故障转移顺序 ">"vmnic5" 。vmnic5 应为活动状态， vmnic3 应为未使用状态。
++
+image:express-c-series-c190-deploy_image21.png["错误：缺少图形映像"]
+
+
+
+
+
+
+
+=== 配置 iSCSI 多路径
+
+要在 ESXi 主机上设置 iSCSI 多路径，请完成以下步骤：
+
+. 在左侧导航窗格中选择存储。单击适配器。
+. 选择 iSCSI 软件适配器，然后单击配置 iSCSI 。
++
+image:express-c-series-c190-deploy_image22.png["错误：缺少图形映像"]
+
+. 在动态目标下，单击添加动态目标。
++
+image:express-c-series-c190-deploy_image23.png["错误：缺少图形映像"]
+
+. 输入 IP 地址 `iscsi_lif01a` 。
++
+.. 对 IP 地址 `iscsi_lif01b` ， `iscsi_lif02a` 和 `iscsi_lif02b` 重复上述步骤。
+.. 单击保存配置。
++
+image:express-c-series-c190-deploy_image24.png["错误：缺少图形映像"]
+
++
+
+NOTE: 您可以通过在 NetApp 集群上运行 network interface show 命令或查看 System Manager 中的 Network Interfaces 选项卡来查找 iSCSI LIF IP 地址。
+
+
+
+
+
+
+
+=== 配置 ESXi 主机
+
+要配置 ESXi 启动，请完成以下步骤：
+
+. 在左侧导航窗格中，选择网络。
+. 选择 vSwitch0 。
++
+image:express-c-series-c190-deploy_image25.png["错误：缺少图形映像"]
+
+. 选择编辑设置。
+. 将 MTU 更改为 9000 。
+. 展开 NIC 绑定并验证 vmnic2 和 vmnic4 是否均已设置为 active ， NIC 绑定和故障转移是否已设置为基于 IP 哈希的路由。
++
+
+NOTE: 负载平衡的 IP 哈希方法要求使用具有静态（模式开启）端口通道的 SRC/DST-IP EtherChannel 正确配置底层物理交换机。由于交换机可能配置不当，您可能会遇到间歇性连接。如果是，请暂时关闭 Cisco 交换机上两个关联上行链路端口之一，以便在对端口通道设置进行故障排除时恢复与 ESXi 管理 vmkernel 端口的通信。
+
+
+
+
+
+=== 配置端口组和 VMkernel NIC
+
+要配置端口组和 VMkernel NIC ，请完成以下步骤：
+
+. 在左侧导航窗格中，选择网络。
+. 右键单击端口组选项卡。
++
+image:express-c-series-c190-deploy_image26.png["错误：缺少图形映像"]
+
+. 右键单击 VM Network ，然后选择 Edit 。将 VLAN ID 更改为 ` \<<var_vm_traffic _vlan>>` 。
+. 单击添加端口组。
++
+.. 将端口组命名为 MGMT-Network 。
+.. 输入 ` \<<mgmt_vlan>>` 作为 VLAN ID 。
+.. 确保已选择 vSwitch0 。
+.. 单击保存。
+
+
+. 单击 VMkernel NIC 选项卡。
++
+image:express-c-series-c190-deploy_image27.png["错误：缺少图形映像"]
+
+. 选择添加 VMkernel NIC 。
++
+.. 选择 New Port Group 。
+.. 将端口组命名为 nfs-Network 。
+.. 输入 ` \<<NFS_VLAN_id>>` 作为 VLAN ID 。
+.. 将 MTU 更改为 9000 。
+.. 展开 IPv4 设置。
+.. 选择静态配置。
+.. 为地址输入 ` \<<var_hosta_nfs_ip>>` 。
+.. 为子网掩码输入 ` \<<var_hosta_nfs_mask>>` 。
+.. 单击创建。
+
+
+. 重复此过程以创建 vMotion VMkernel 端口。
+. 选择添加 VMkernel NIC 。
++
+.. 选择 New Port Group 。
+.. 将端口组命名为 vMotion 。
+.. 输入 ` \<<vmotion_vlan_id>>` 作为 VLAN ID 。
+.. 将 MTU 更改为 9000 。
+.. 展开 IPv4 设置。
+.. 选择静态配置。
+.. 为地址输入 ` \<<var_hosta_vmotion_ip>>` 。
+.. 输入 ` \<<var_hosta_vmotion_mask>>` 作为子网掩码。
+.. 确保在 IPv4 设置后选中 vMotion 复选框。
++
+image:express-c-series-c190-deploy_image28.png["错误：缺少图形映像"]
+
++
+
+NOTE: 可以通过多种方法配置 ESXi 网络，包括在许可允许的情况下使用 VMware vSphere 分布式交换机。如果需要使用其他网络配置来满足业务需求， FlexPod Express 支持这些配置。
+
+
+
+
+
+
+
+=== 挂载第一个数据存储库
+
+要挂载的第一个数据存储库是 VM 的 `infra_datastore` 数据存储库和 VM 交换文件的 `infra_swap` 数据存储库。
+
+. 单击左侧导航窗格中的存储，然后单击新建数据存储库。
++
+image:express-c-series-c190-deploy_image29.png["错误：缺少图形映像"]
+
+. 选择挂载 NFS 数据存储库。
++
+image:express-c-series-c190-deploy_image30.png["错误：缺少图形映像"]
+
+. 在提供 NFS 挂载详细信息页面中输入以下信息：
++
+** 名称： `infra_datastore`
+** NFS 服务器： ` \<<var_noda_nfs_lif>>`
+** 共享： ` /infra_datastore`
+** 确保已选择 NFS 3 。
+
+
+. 单击完成。您可以在 " 近期任务 " 窗格中看到任务正在完成。
+. 重复此过程以挂载 `infra_swap` 数据存储库：
++
+** 名称： `infra_swap`
+** NFS 服务器： ` \<<var_noda_nfs_lif>>`
+** 共享： ` /infra_swap`
+** 确保已选择 NFS 3 。
+
+
+
+
+
+
+=== 配置 NTP
+
+要为 ESXi 主机配置 NTP ，请完成以下步骤：
+
+. 单击左侧导航窗格中的管理。在右窗格中选择 System ，然后单击 Time & Date 。
+. 选择使用网络时间协议（启用 NTP 客户端）。
+. 选择 Start 和 Stop with Host 作为 NTP 服务启动策略。
+. 输入 ` \<<var_ntf>>` 作为 NTP 服务器。您可以设置多个 NTP 服务器。
+. 单击保存。
++
+image:express-c-series-c190-deploy_image31.png["错误：缺少图形映像"]
+
+
+
+
+
+=== 移动 VM 交换文件位置
+
+以下步骤提供了有关移动 VM 交换文件位置的详细信息。
+
+. 单击左侧导航窗格中的管理。在右窗格中选择 system ，然后单击 Swap 。
++
+image:express-c-series-c190-deploy_image32.png["错误：缺少图形映像"]
+
+. 单击编辑设置。从数据存储库选项中选择 `infra_swap` 。
++
+image:express-c-series-c190-deploy_image33.png["错误：缺少图形映像"]
+
+. 单击保存。
+
+
+link:express-c-series-c190-design_vmware_vcenter_server_6.7u2_installation_procedure.html["接下来： VMware vCenter Server 6.7U2 安装操作步骤"]

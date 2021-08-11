@@ -1,0 +1,179 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec__power_and_cabling_requirements.html 
+keywords: power, cabling, requirements, flexpod, express, cisco, ucs, minimum, cabling 
+summary: 本节介绍 FlexPod 快速设计的电源和最低布线要求。 
+---
+= 电源和布线要求
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+本节介绍 FlexPod 快速设计的电源和最低布线要求。
+
+
+
+== 电源要求
+
+电源要求基于美国并假定使用交流电源。其他国家或地区的电源要求可能有所不同。此外，大多数组件还提供直流（ DC ）电源选项。有关所需最大电源的其他数据以及其他详细的电源信息，请参阅每个硬件组件的详细技术规格。
+
+有关 Cisco UCS 电源的详细数据，请参见 http://www.cisco.com/assets/cdc_content_elements/flash/dataCenter/cisco_ucs_power_calculator/["Cisco UCS 电源计算器"^]。
+
+下表列出了每个设备所需的电源端口。
+
+|===
+| Cisco Nexus 交换机 | 所需的电源线 
+
+
+| Cisco Nexus 3048 | 每个 Cisco Nexus 3000 系列交换机需要 2 根 C13/C14 电源线 
+
+
+| Cisco Nexus 3524 | 每个 Cisco Nexus 3000 系列交换机需要 2 根 C13/C14 电源线 
+
+
+| Cisco Nexus 9396 | 每个 Cisco Nexus 9000 系列交换机需要 2 根 C13/C14 电源线 
+|===
+|===
+| Cisco UCS 机箱 | 所需的电源线 
+
+
+| Cisco UCS 5108 | 每个 Cisco UCS 机箱 2 CA-US515P-C19-US/CAB-US520-C19-US 
+|===
+|===
+| Cisco UCS B 系列服务器 | 所需的电源线 
+
+
+| Cisco UCS B200 M4 | 不适用；刀片式服务器由机箱供电 
+
+
+| Cisco UCS B420 M4 | 不适用；刀片式服务器由机箱供电 
+
+
+| Cisco UCS B200 M5 | 不适用；刀片式服务器由机箱供电 
+
+
+| Cisco UCS B480 M5 | 不适用；刀片式服务器由机箱供电 
+|===
+|===
+| Cisco UCS C 系列服务器 | 所需的电源端口 
+
+
+| Cisco UCS C220 M4 .3+| 每个 Cisco UCS 服务器使用 2 根 C13/C14 电源线 
+
+
+| Cisco UCS C240 M4 
+
+
+| Cisco UCS C460 M4 Cisco UCS C220 M5 Cisco UCS C240 M5 Cisco UCS C480 M5 
+|===
+|===
+| NetApp FAS 控制器 | 所需电源端口（每个 HA 对） 
+
+
+| FAS2554 | 2 个 C13/C14 
+
+
+| FAS2552 | 2 个 C13/C14 
+
+
+| FAS2520 | 2 个 C13/C14 
+
+
+| FAS8020 | 2 个 C13/C14 
+|===
+|===
+| E 系列控制器 | 所需电源端口（每个 HA 对） 
+
+
+| E2824 | 2 个 C14/C20 
+|===
+|===
+| NetApp FAS 磁盘架 | 所需的电源端口 
+
+
+| DS212C | 2 个 C13/C14 
+
+
+| DS224C | 2 个 C13/C14 
+
+
+| DS460C | 2 个 C13/C14 
+
+
+| DS2246 | 2 个 C13/C14 
+
+
+| DS4246 | 4 个 C13/C14 
+|===
+|===
+| E 系列磁盘架 | 所需的电源端口 
+
+
+| DE460C | 2 个 C14/C20 
+
+
+| DE224C | 2 个 C14/C20 
+
+
+| DE212C | 2 个 C14/C20 
+|===
+
+
+== 最低缆线要求
+
+本节介绍 FlexPod 快速设计的最低缆线要求。大多数 FlexPod 实施都需要额外的缆线，但数量因部署规模和范围而异。
+
+下表列出了每个设备所需的最小缆线数量。
+
+|===
+| Cisco Nexus 3000 系列交换机 | 所需的缆线 
+
+
+| Cisco Nexus 31108 .5+| 每个交换机至少需要两根 10GbE 光纤或双轴电缆 
+
+
+| Cisco Nexus 3172PQ 
+
+
+| Cisco Nexus 3048 
+
+
+| Cisco Nexus 3524 
+
+
+| Cisco Nexus 9396 
+
+
+| DS212C |  
+
+
+| DS2246 .4+| SAS 缆线数量取决于磁盘架的特定配置 
+
+
+| DS460C 
+
+
+| DS224C 
+
+
+| DS4246 
+
+
+| E2800  a| 
+* 每个控制器至少需要一根千兆以太网（ 1GbE ）缆线进行管理
+* 每个控制器至少需要两根 10GbE 缆线（对于 iSCSI ），或者两根 FC 缆线符合速度要求
+
+
+
+
+| DE460C | 每个磁盘架 2 根迷你 SAS HD 缆线 
+
+
+| DE224C | 每个磁盘架 2 根迷你 SAS HD 缆线 
+
+
+| DE212C | 每个磁盘架 2 根迷你 SAS HD 缆线 
+|===

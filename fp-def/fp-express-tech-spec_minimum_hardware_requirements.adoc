@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec_minimum_hardware_requirements.html 
+keywords: minimum, hardware, requirements, fas, cimc, configuration, rack, servers, ucs 
+summary: 本节介绍不同版本的 FlexPod Express 的最低硬件要求。 
+---
+= 最低硬件要求
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+本节介绍不同版本的 FlexPod Express 的最低硬件要求。
+
+
+
+== 采用 NetApp FAS 的 FlexPod Express
+
+使用 NetApp FAS 控制器进行底层存储的 FlexPod 快速解决方案的硬件要求包括本节中所述的配置。
+
+
+
+=== 基于 CIMC 的配置（独立机架服务器）
+
+Cisco Integrated Management Controller （ CIMC ）配置包括以下硬件组件：
+
+* 采用冗余配置的两个 10 Gbps 标准以太网交换机（建议使用 Cisco Nexus 0808 ，支持 Cisco Nexus 3000 和 9000 型号）
+* Cisco UCS C 系列独立机架式服务器
+* 采用高可用性（ HA ）对配置的两个 AFF C190 ， AFF A220 ， FAS2600 或 FAS 2700 系列控制器，部署为双节点集群
+
+
+
+
+=== Cisco UCS 管理的配置
+
+Cisco UCS 管理的确认包括以下硬件组件：
+
+* 采用冗余配置的两个 10 Gbps 标准以太网交换机（建议使用 Cisco Nexus 3524 ）
+* 一个 Cisco UCS 5108 交流（ AC ）刀片式服务器机箱
+* 两个 Cisco UCS 6324 互联阵列
+* Cisco UCS B 系列服务器（至少四个 Cisco UCS B200 M5 刀片式服务器）
+* 一个 HA 对配置中的两个 AFF C190 ， AFF A220 ， FAS2750 或 FAS2720 控制器（每个控制器需要两个可用的统一目标适配器 2 个端口）
+
+
+
+
+== 采用 E 系列的 FlexPod Express
+
+采用 E 系列入门级配置的 FlexPod Express 的硬件要求包括：
+
+* 两个 Cisco UCS 6324 互联阵列
+* 一个 Cisco UCS Mini 机箱 5108 AC2 或 DC2 （仅 AC2 和 DC2 机箱支持 Cisco UCS 6324 互联阵列）
+* Cisco UCS B 系列服务器（至少两个 Cisco UCS B200 M4 刀片式服务器）
+* E 系列 E2824 存储系统的一个 HA 对配置，其中至少加载 12 个磁盘驱动器
+* 采用冗余配置的两个 10 Gbps 标准以太网交换机（可以使用数据中心中的现有交换机）
+
+
+构建解决方案的入门级配置需要这些硬件组件；可以根据需要添加更多刀片式服务器和磁盘驱动器。E 系列 E2824 存储系统可以替换为更高的平台，也可以作为全闪存系统运行。

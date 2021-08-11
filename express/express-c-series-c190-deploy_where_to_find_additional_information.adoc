@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-c190-deploy_where_to_find_additional_information.html 
+keywords: additional, information, websites, documents, express, c, series, deployment, c190 
+summary: 要了解有关本文档中所述信息的更多信息，请参见以下文档和 / 或网站。 
+---
+= 从何处查找追加信息
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+要了解有关本文档中所述信息的更多信息，请参见以下文档和 / 或网站：
+
+NetApp 产品文档
+
+http://docs[]。.com
+
+FlexPod 快速指南
+
+NVA-1139-design ：采用 Cisco UCS C 系列和 NetApp AFF C190 系列的 FlexPod Express
+
+https://www.netapp.com/us/media/nva-1139-design.pdf["https://www.netapp.com/us/media/nva-1139-design.pdf"^]

@@ -1,0 +1,130 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-c190-deploy_flexpod_express_cabling_information.html 
+keywords: flexpod, express, cabling, information, storage, controller, switch, cisco, nexus 
+summary: 此参考验证已按照下图和表所示进行布线。 
+---
+= FlexPod 快速布线信息
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+此参考验证已按照下图和表所示进行布线。
+
+此图显示了参考验证布线。
+
+image:express-c-series-c190-deploy_image3.png["错误：缺少图形映像"]
+
+下表列出了 Cisco Nexus 交换机 31108PC-V-A 的布线信息
+
+|===
+| 本地设备 | 本地端口 | 远程设备 | 远程端口 
+
+
+.10+| Cisco Nexus 交换机 31108PC-V A | Eth1/1 | NetApp AFF C190 存储控制器 A | e0c 
+
+
+| eth1/2 | NetApp AFF C190 存储控制器 B | e0c 
+
+
+| Eth1/3 | Cisco UCS C220 C 系列独立服务器 A | MLOM0 
+
+
+| Eth1/4 | Cisco UCS C220 C 系列独立服务器 B | MLOM0 
+
+
+| eth1/5 | Cisco UCS C220 C 系列独立服务器 A | MLOM1 
+
+
+| eth1/6. | Cisco UCS C220 C 系列独立服务器 B | MLOM1 
+
+
+| eth1/25 | Cisco Nexus 交换机 31108PC-V B | eth1/25 
+
+
+| eth1/26. | Cisco Nexus 交换机 31108PC-V B | eth1/26. 
+
+
+| eth1/33 | NetApp AFF C190 存储控制器 A | e0M 
+
+
+| eth1/34 | Cisco UCS C220 C 系列独立服务器 A | CIMC （ FEX135/1/25 ） 
+|===
+此表列出了 Cisco Nexus 交换机 31108PC-V- B 的布线信息
+
+|===
+| 本地设备 | 本地端口 | 远程设备 | 远程端口 
+
+
+.10+| Cisco Nexus 交换机 31108PC-V B | Eth1/1 | NetApp AFF C190 存储控制器 A | e0d 
+
+
+| eth1/2 | NetApp AFF C190 存储控制器 B | e0d 
+
+
+| Eth1/3 | Cisco UCS C220 C 系列独立服务器 A | MLOM2 
+
+
+| Eth1/4 | Cisco UCS C220 C 系列独立服务器 B | MLOM2 
+
+
+| eth1/5 | Cisco UCS C220 C 系列独立服务器 A | MLOM3 
+
+
+| eth1/6. | Cisco UCS C220 C 系列独立服务器 B | MLOM3 
+
+
+| eth1/25 | Cisco Nexus 交换机 31108 A | eth1/25 
+
+
+| eth1/26. | Cisco Nexus 交换机 31108 A | eth1/26. 
+
+
+| eth1/33 | NetApp AFF C190 存储控制器 B | e0M 
+
+
+| eth1/34 | Cisco UCS C220 C 系列独立服务器 B | CIMC （ FEX135/1/26 ） 
+|===
+下表列出了 NetApp AFF C190 存储控制器 A 的布线信息
+
+|===
+| 本地设备 | 本地端口 | 远程设备 | 远程端口 
+
+
+.5+| NetApp AFF C190 存储控制器 A | e0a | NetApp AFF C190 存储控制器 B | e0a 
+
+
+| e0b | NetApp AFF C190 存储控制器 B | e0b 
+
+
+| e0c | Cisco Nexus 交换机 31108PC-V A | Eth1/1 
+
+
+| e0d | Cisco Nexus 交换机 31108PC-V B | Eth1/1 
+
+
+| e0M | Cisco Nexus 交换机 31108PC-V A | eth1/33 
+|===
+下表列出了 NetApp AFF C190 存储控制器 B 的布线信息
+
+|===
+| 本地设备 | 本地端口 | 远程设备 | 远程端口 
+
+
+.5+| NetApp AFF C190 存储控制器 B | e0a | NetApp AFF C190 存储控制器 A | e0a 
+
+
+| e0b | NetApp AFF C190 存储控制器 A | e0b 
+
+
+| e0c | Cisco Nexus 交换机 31108PC-V A | eth1/2 
+
+
+| e0d | Cisco Nexus 交换机 31108PC-V B | eth1/2 
+
+
+| e0M | Cisco Nexus 交换机 31108PC-V B | eth1/33 
+|===

@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_set_volume_tiering_minimum_cooling_days.html 
+keywords: volume, tiering, minimum, cooling, days, set, auto, ontap, cli, snapshot 
+summary: 分层最小冷却天数设置确定使用自动或仅 Snapshot 策略的卷中的非活动数据被视为冷数据并符合分层条件之前必须经过多少天。 
+---
+= 设置卷分层最小冷却天数
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+`tiering-minimum-cooling-days` 设置可确定在使用自动或仅 Snapshot 策略的卷中的非活动数据被视为冷数据并符合分层条件之前必须经过多少天。
+
+
+
+== 自动
+
+自动分层策略的默认 `分层最小冷却天数` 设置为 31 天。
+
+由于读取会使块温度保持较高，因此增加此值可能会减少符合分层条件的数据量，并增加性能层上保留的数据量。
+
+如果要将此值从默认 31 天减少，请注意，数据在标记为冷之前不应再处于活动状态。例如，如果多天工作负载要在第 7 天执行大量写入，则应将卷的 `tiering-minimum-cooling-days` 设置设置为不低于 8 天。
+
+
+NOTE: 对象存储与文件或块存储不是事务存储。如果对卷中作为对象存储的文件进行更改，而这些文件的最小散热天数过长，则可能会创建新对象，碎片化现有对象，并增加存储效率低下的问题。
+
+
+
+== 仅 Snapshot
+
+仅 Snapshot 分层策略的默认 `tiering-minimum-cooling-days` 设置为 2 天。至少 2 天可以为后台进程提供更多时间，以实现最高的存储效率，并防止日常数据保护进程不得不从云层读取数据。
+
+
+
+== ONTAP 命令行界面
+
+要使用 ONTAP 命令行界面更改卷的 `tiering-minimum-cooling-days` 设置，请运行以下命令：
+
+....
+volume modify -vserver <svm_name> -volume <volume_name> -tiering-minimum-cooling-days <2-63>
+....
+需要高级权限级别。
+
+
+NOTE: 在自动和仅 Snapshot 之间更改分层策略（反之亦然）会重置性能层上块的非活动时间。例如，如果将分层策略设置为仅 Snapshot ，则使用自动卷分层策略且性能层上的数据处于非活动状态 20 天的卷将将性能层数据非活动重置为 0 天。

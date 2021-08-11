@@ -1,0 +1,22 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-aff220-deploy_program_summary.html 
+keywords: summary, infrastructure, cisco, ucs, flexpod, datacenter 
+summary: 行业趋势表明，数据中心正在向共享基础架构和云计算转型。此外，企业还寻求为远程办公室和分支机构提供简单有效的解决方案，并利用他们在数据中心中熟悉的技术。 
+---
+= NVA-1123-Deploy ：《采用 VMware vSphere 6.7 的 FlexPod Express 和 NetApp AFF A220 部署指南》
+
+
+NetApp 公司 Savita Kumari
+
+与以下合作伙伴：image:cisco logo.png["错误：缺少图形映像"]
+
+行业趋势表明，数据中心正在向共享基础架构和云计算转型。此外，企业还寻求为远程办公室和分支机构提供简单有效的解决方案，并利用他们在数据中心中熟悉的技术。
+
+FlexPod Express 是一种预先设计的最佳实践数据中心架构，它基于 Cisco 统一计算系统（ Cisco UCS ）， Cisco Nexus 系列交换机和 NetApp 存储技术构建。FlexPod 快速系统中的组件与 FlexPod 数据中心的对应组件一样，可以在较小规模的整个 IT 基础架构环境中实现管理协作。FlexPod 数据中心和 FlexPod Express 是虚拟化以及裸机操作系统和企业工作负载的最佳平台。
+
+FlexPod 数据中心和 FlexPod Express 提供基线配置，并可灵活调整规模和进行优化，以满足多种不同的使用情形和要求。现有的 FlexPod 数据中心客户可以使用他们习惯使用的工具来管理其 FlexPod 快速系统。新的 FlexPod Express 客户可以随着环境的增长轻松适应 FlexPod 数据中心的管理。
+
+FlexPod Express 是远程办公室和分支机构以及中小型企业的最佳基础架构基础。对于希望为专用工作负载提供基础架构的客户来说，它也是最佳解决方案。
+
+FlexPod Express 提供了一个易于管理的基础架构，几乎适合任何工作负载。

@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_acknowledgments.html 
+keywords: acknowledgements, contributors, authors 
+summary: 以下人员为本指南的创建做出了贡献。 
+---
+= 致谢
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+以下人员为本指南的创建做出了贡献。
+
+* NetApp 技术营销工程师布兰登 · 阿吉
+* NetApp 技术营销工程师 Atul Bhalodia
+* NetApp 高级产品经理 Ketan Mota
+* NetApp 医疗保健解决方案架构师 John Duignan
+* Cisco 公司 Jon Ebmeier
+* Cisco 公司 Mike Brennan
+

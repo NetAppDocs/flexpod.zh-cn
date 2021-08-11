@@ -1,0 +1,18 @@
+---
+section: vdi
+title: 虚拟桌面基础架构
+entries:
+- title: 采用 Citrix 虚拟应用程序桌面 1912 LTSR 和 VMware vSphere 7 的 FlexPod 数据中心，最多可容纳 6000
+    个席位
+  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/cisco_ucs_ctx1912esxi7u1_flexpodV2.html
+- title: 采用 NetApp ONTAP 9.6 ， VMware Horizon View 7.10 和 VMware vSphere 6.7 U2 以及
+    Cisco UCS Manager 4.0 的 FlexPod Datacenter ，最多可容纳 7700 个席位
+  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_ontap96_vmware710_67_u2_ucs_40_6700_seats.html
+- title: FlexPod for 3D Graphics 可视化与 VMware 和 NVIDIA （白皮书）
+  url: https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/whitepaper-c11-741654.pdf
+- title: 采用 Citrix XenDesktop/XenApp 7.15 和 VMware vSphere 6.5 Update 1 的 FlexPod
+    Datacenter ，可容纳 6000 个席位
+  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/cisco_ucs_xd715esxi65u1_flexpod.html
+- title: 采用 VMware Horizon View 7.3 的 FlexPod Datacenter 和采用 Cisco UCS Manager 3.2
+    的 VMware vSphere 6.5 Update 1 ，可容纳 5000 个席位
+  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_vmware_horizon_n9k_aff_ucsm32.html

@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: fp-def/dc-tech-spec_where_to_find_additional_information.html 
+keywords: additional, information, technical, specifications 
+summary: 要了解有关本文档所述信息的更多信息，请查看以下文档和网站。 
+---
+= 从何处查找追加信息
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+要了解有关本文档所述信息的更多信息，请查看以下文档和网站：
+
+* NetApp 产品文档
++
+https://docs.netapp.com/["https://docs.netapp.com/"^]
+
+* NetApp 支持沟通
++
+https://mysupport.netapp.com/info/communications/index.html["https://mysupport.netapp.com/info/communications/index.html"^]
+
+* NetApp 互操作性表工具（ IMT ）
++
+https://mysupport.netapp.com/matrix/["https://mysupport.netapp.com/matrix/#welcome"^]
+
+* NetApp Hardware Universe
++
+https://hwu.netapp.com/["https://hwu.netapp.com/"^]
+
+* NetApp 支持
++
+https://mysupport.netapp.com/["https://mysupport.netapp.com/"^]
+
+

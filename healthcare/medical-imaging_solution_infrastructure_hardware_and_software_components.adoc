@@ -1,0 +1,97 @@
+---
+sidebar: sidebar 
+permalink: healthcare/medical-imaging_solution_infrastructure_hardware_and_software_components.html 
+keywords: harware, software, components, solution, infrastructure, medical, imaging, flexpod 
+summary: 下表分别列出了医疗成像系统的 FlexPod 基础架构的硬件和软件组件。 
+---
+= 解决方案基础架构硬件和软件组件
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+下表分别列出了医疗成像系统的 FlexPod 基础架构的硬件和软件组件。
+
+|===
+| 层 | 产品系列 | 数量和型号 | 详细信息 
+
+
+.4+| 计算 | Cisco UCS 5108 机箱 | 1 或 2 | 根据支持年度研究数量所需的刀片式服务器数量 
+
+
+| Cisco UCS 刀片式服务器 | B200 M5 | 刀片式服务器数量，根据每年的研究次数计算，每个研究中有 2 个或 20 个以上的核心， 2.7 GHz 和 128-384 GB RAM 
+
+
+| Cisco UCS 虚拟接口卡（ VIC ） | Cisco UCS 1440 | 请参见 
+
+
+| 2 个 Cisco UCS 互联阵列 | 6454 或更高版本 | – 
+
+
+| 网络 | Cisco Nexus 交换机 | 2 个 Cisco Nexus 3000 系列或 9000 系列 | – 
+
+
+.2+| 存储网络 | 用于通过 SMB/CIFS ， NFS 或 iSCSI 协议进行存储访问的 IP 网络 | 与上述相同的网络交换机 | – 
+
+
+| 通过 FC 进行存储访问 | 2 个 Cisco MDS 9132T | – 
+
+
+.3+| 存储 | NetApp AFF A400 全闪存存储系统 | 1 个或多个 HA 对 | 包含两个或更多节点的集群 
+
+
+| 磁盘架 | 1 个或多个 DS224C 或 NS224 磁盘架 | 已完全填充 24 个驱动器 
+
+
+| SSD | 大于 24 ， 1.2 TB 或更大的容量 | – 
+|===
+|===
+| 软件 | 产品系列 | 版本或版本 | 详细信息 
+
+
+.7+| 企业级医疗成像系统 |  |  |  
+
+
+| MS SQL 或 Oracle 数据库服务器 | 按照医疗成像系统供应商的建议 |  
+
+
+| 没有像 MongoDB Server 这样的 SQL 数据库 | 按照医疗成像系统供应商的建议 |  
+
+
+| 应用程序服务器 | 按照医疗成像系统供应商的建议 |  
+
+
+| 集成服务器（ MS BizTalk ， MuleSoft ， Rhapsody ， Tibco ） | 按照医疗成像系统供应商的建议 |  
+
+
+| 虚拟机 | Linux （ 64 位） |  
+
+
+| 虚拟机 | Windows Server （ 64 位） |  
+
+
+| 存储 | ONTAP | ONTAP 9.7 或更高版本 |  
+
+
+.3+| 网络 | Cisco UCS 互联阵列 | Cisco UCS Manager 4.1 或更高版本 |  
+
+
+| Cisco 以太网交换机 | 9.2 （ 3 ） i7 （ 2 ）或更高版本 |  
+
+
+| Cisco FC ： Cisco MDS 9132T | 8.4 （ 2 ）或更高版本 |  
+
+
+| 虚拟机管理程序 | 虚拟机管理程序 | VMware vSphere ESXi 6.7 U2 或更高版本 |  
+
+
+.3+| 管理 | 虚拟机管理程序管理系统 | VMware vCenter Server 6.7 U1 （ vCSA ）或更高版本 |  
+
+
+| NetApp 虚拟存储控制台（ VSC ） | VSC 9.7 或更高版本 |  
+
+
+| SnapCenter | SnapCenter 4.3 或更高版本 |  
+|===

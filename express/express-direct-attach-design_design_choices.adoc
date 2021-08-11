@@ -1,0 +1,127 @@
+---
+sidebar: sidebar 
+permalink: express/express-direct-attach-design_design_choices.html 
+keywords: FAS2750, FAS2720, AFF A220, Nexus 3000, UCS B-Series, Virtual Interface Card 1440, VIC 1480, UCS 5108, blade server, VAAI 
+summary: 此页面上列出的技术是在设计此设计的架构过程中选择的。每个技术在 FlexPod Express 基础架构解决方案中都有一个特定用途。 
+---
+= 设计选择
+
+
+在设计此设计的架构过程中，我们选择了以下技术。每个技术在 FlexPod Express 基础架构解决方案中都有一个特定用途。
+
+
+
+== 采用 ONTAP 9.5 的 NetApp AFF A220 或 FAS27xx 系列
+
+解决方案使用两种最新的 NetApp 产品： NetApp FAS 2750 或 FAS 2720 以及采用 ONTAP 9.5 的 AFF A220 系统。
+
+
+
+=== FAS2750/FAS2720 系统
+
+NetApp FAS2700 系列旨在满足更多 IT 需求， NetApp FAS2700 混合存储阵列比同类其他系统提供更多价值。运行 NetApp ONTAP 存储软件的 FAS2700 可提供高性能，与云的领先集成，支持范围更广的工作负载以及无缝扩展性能和容量，从而简化了管理增长和复杂性的任务。
+
+有关 FAS2700 硬件系统的详细信息，请参见 https://www.netapp.com/us/products/storage-systems/hybrid-flash-array/fas2700.aspx["FAS2700 混合存储系统产品页面"^]。
+
+
+
+=== AFF A220 系统
+
+全新更新的适用于中小型企业环境的 AFF A220 平台的性能比其前代产品高出 30% ，可继续保持 NetApp 在这一细分市场的领先地位。
+
+NetApp AFF 系统凭借行业最高的性能，卓越的灵活性以及同类最佳的数据管理和云集成，帮助您满足企业级存储需求。AFF 系统与业内首款端到端 NVMe 技术和 NetApp ONTAP 数据管理软件相结合，可加速，管理和保护业务关键型数据。借助 AFF 系统，您可以轻松无风险地过渡到闪存，实现数字化转型。
+
+image:express-direct-attach-design_image4.png["错误：缺少图形映像"]
+
+有关 AFF A220 硬件系统的详细信息，请参见 https://www.netapp.com/us/media/ds-3582.pdf["NetApp AFF 产品规格"^]。
+
+
+
+== ONTAP 9.5
+
+全新的 NetApp ONTAP 9.5 软件具有多项重要增强功能，旨在实现从数据中心到云的数据无缝管理。
+
+通过 ONTAP 9.5 ，混合云可以成为从内部到云再到云的数据网络结构的基础。
+
+ONTAP 9.5 具有多种适用于 FlexPod Express 解决方案的功能。最重要的是 NetApp 对存储效率的承诺，存储效率是小型部署最重要的功能之一。ONTAP 9.5 新增了 NetApp Memory Accelerated Data 和 NVMe 支持，并提供了 NetApp 存储效率的标志功能，例如重复数据删除，数据压缩，数据缩减和精简配置。由于 NetApp WAFL 系统始终写入 4 KB 块，因此，如果这些块未使用分配的 4 KB 空间，则数据缩减功能会将多个块合并到一个 4 KB 块中。
+
+这些只是 FlexPod Express 解决方案的几项主要功能。有关 ONTAP 9.5 的其他特性和功能的详细信息，请参见 https://www.netapp.com/us/media/ds-3231.pdf["ONTAP 9 数据管理软件产品规格"^]。
+
+有关 ONTAP 9.5 的详细信息，请参见 NetApp http://docs.netapp.com/ontap-9/index.jsp["ONTAP 9 文档中心"^]，已更新为包括 ONTAP 9.5 。
+
+
+
+== Cisco Nexus 3000 系列
+
+下图所示的 Cisco Nexus 31108PC-V 是一款功能强大且经济高效的交换机，可提供 1/10/40/100Gbps 的交换。它提供 48 个 1/1-Gbps 端口和 40/100-Gbps 上行链路，可实现灵活性。
+
+由于所有各种 Cisco Nexus 系列型号都运行相同的底层操作系统 NX-OS ，因此 FlexPod Express 和 FlexPod Datacenter 解决方案支持多个 Cisco Nexus 型号。
+
+image:express-direct-attach-design_image5.jpeg["错误：缺少图形映像"]
+
+Cisco Nexus 31108 提供了一个全面的第 2 层功能集，其中包括虚拟 LAN （ VLAN ）， IEEE 802.1Q 中继和链路聚合控制协议（ LACP ）。通过向系统添加许可证，可以使用其他第 3 层功能。
+
+有关 Cisco Nexus 3000 系列的详细信息，请参见 https://www.cisco.com/c/en/us/products/switches/nexus-31108pc-v-switch/index.html["Cisco Nexus 31108PC-V 交换机产品信息"^]。
+
+
+
+== Cisco UCS B 系列
+
+Cisco UCS 5108 刀片式服务器机箱彻底改变了基于刀片式服务器的系统的使用和部署。通过整合 https://www.cisco.com/c/en/us/products/switches/data-center-switches/index.html["统一网络结构"^] 借助 Cisco Unified Computing System 和光纤扩展器技术，机箱可以：
+
+* 包含的物理组件更少
+* 不需要独立管理
+* 与传统刀片式服务器机箱相比，能效更高
+
+
+这种精简性消除了对专用机箱管理和刀片式交换机的需求，减少了布线，并允许在不增加复杂性的情况下扩展到 20 个机箱。Cisco UCS 5108 刀片式服务器机箱是 Cisco Unified Computing System 中为数据中心提供精简性和 IT 响应能力的关键组件。
+
+下图所示的 Cisco UCS B 系列 B200M5 服务器是为 FlexPod Express 选择的，因为它具有许多配置选项，可以根据 FlexPod Express 部署的特定要求进行定制。
+
+image:express-direct-attach-design_image6.png["错误：缺少图形映像"]
+
+企业级 Cisco UCS B200 M5 刀片式服务器采用半宽刀片式外形，扩展了 Cisco UCS 产品组合的功能。Cisco UCS B200 M5 刀片式服务器可充分利用最新的 Intel Xeon 处理器可扩展系列 CPU 的强大功能，其中 RAM 高达 3072 GB （使用 128 GB DIMM ），两个固态驱动器（ SSD ）或 HDD 以及高达 80 Gbps 的吞吐量连接。
+
+有关 Cisco UCS B200 M5 刀片式服务器的详细信息，请参见 https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/b200m5-specsheet.pdf["Cisco UCS B200 M5 刀片式服务器规格表"^]。
+
+
+
+== Cisco UCS 虚拟接口卡 1440/1480
+
+Cisco UCS VIC 1440 是一种双端口 40Gbps 或双 4x10Gbps 以太网 /FcoE 功能模块化主板 LAN （ mLOM ），专为 M5 代 Cisco UCS B 系列刀片式服务器而设计。如果与可选端口扩展器结合使用，则会为两个 40Gbps 以太网端口启用 Cisco UCS VIC 1440 功能。Cisco UCS VIC 1440 支持基于策略的无状态灵活服务器基础架构，可向主机提供符合 PCIe 标准的接口，这些接口可以动态配置为 NIC 或 HBA 。
+
+下图所示的 Cisco UCS VIC 1480 与 VIC 1440 类似，只是它是夹层卡。
+
+image:express-direct-attach-design_image7.jpeg["错误：缺少图形映像"]
+
+有关 Cisco VIC 14408/1480 的详细信息，请参见 https://www.cisco.com/c/en/us/products/collateral/interfaces-modules/unified-computing-system-adapters/datasheet-c78-741130.html["Cisco UCS 虚拟接口卡 1400 系列产品规格"^]。
+
+
+
+== VMware vSphere 6.7U1
+
+VMware vSphere 6.7U1 是一个适用于 FlexPod Express 的虚拟机管理程序选项。通过 VMware vSphere ，企业可以减少电耗和散热占用空间，同时确认已购买的计算容量已充分利用。此外， VMware vSphere 还可以在 vSphere 主机集群（ VMware Distributed Resource Scheduler 或 VMware DRS ）之间实现硬件故障保护（ VMware 高可用性或 VMware HA ）和计算资源负载平衡。
+
+VMware vSphere 6.7U1 采用了最新的 VMware 创新技术。此设计中使用的 VMware vCenter Server Appliance （ VCSA ）增加了许多新特性和功能，例如 VMware vSphere Update Manager 集成。VCSA 还首次提供原生 vCenter 高可用性。要为主机添加集群功能并使用 VMware HA 和 VMware DRS 等功能，需要使用 VMware vCenter Server 。
+
+VMware vSphere 6.7U1 还具有若干增强的核心功能。VMware HA 首次引入了经过编排的重新启动，因此在发生 HA 事件时，虚拟机会按正确顺序重新启动。此外， DRS 算法现已得到增强，并引入了更多配置选项，用于更精细地控制 vSphere 中的计算资源。
+
+vSphere Web Client 是 VMware vSphere 环境的首选管理工具。用户对 vSphere Web Client 进行了多项增强，例如重新组织主屏幕。例如，清单树现在是登录时的默认视图。
+
+有关 VMware vSphere 的详细信息，请参见 http://www.vmware.com/products/vsphere.html["vSphere ：适用于混合云的高效安全平台"^]。
+
+有关 VMware vSphere 6.7U1 新增功能的详细信息，请参见 https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/products/vsphere/vmware-whats-new-in-vsphere-whitepaper.pdf["VMware vSphere 6.7 中的新增功能。"^]
+
+有关支持 VMware HCL 的 ONTAP 9.5 ，请参见 https://www.vmware.com/resources/compatibility/search.php["VMware 兼容性指南"^]。
+
+
+
+=== VMware vSphere 与 NetApp 集成
+
+VMware vSphere 和 NetApp 有两个主要集成点。第一个是 NetApp 虚拟存储控制台（ VSC ）。Virtual Storage Console 是适用于 VMware vCenter 的插件。通过此插件，虚拟化管理员可以通过熟悉的 vCenter 管理界面管理其存储。只需单击几下鼠标，即可将 VMware 数据存储库部署到多个主机。这种紧密结合的集成对于管理时间较长的分支机构和小型组织来说至关重要。
+
+第二个集成是适用于 VMware VAAI 的 NetApp NFS 插件。尽管块协议本机支持 VAAI ，但所有存储阵列都需要 VAAI 插件来为 NFS 提供 VAAI 集成。某些 NFS VAAI 集成包括空间预留和副本卸载。VAAI 插件可以使用 VSC 进行安装。
+
+有关适用于 VMware vSphere 的 NetApp VSC 的详细信息，请参见 http://www.netapp.com/us/products/management-software/vsc/index.aspx["NetApp 虚拟基础架构管理产品页面"^]。
+
+link:express-direct-attach-design_solution_verification.html["接下来：解决方案验证。"]

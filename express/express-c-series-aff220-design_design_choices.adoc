@@ -1,0 +1,138 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-aff220-design_design_choices.html 
+keywords: AFF A220, ontap 9, Nexus 3172P, UCS C-Series, VMware vSphere 
+summary: 此页面上列出的技术是在设计此设计的架构过程中选择的。每个技术在 FlexPod Express 基础架构解决方案中都有一个特定用途。 
+---
+= 设计选择
+
+
+在设计此设计的架构过程中，我们选择了以下技术。每个技术在 FlexPod Express 基础架构解决方案中都有一个特定用途。
+
+
+
+== 采用 ONTAP 9.4 的 NetApp AFF A220 系列
+
+此解决方案利用两种最新的 NetApp 产品： NetApp AFF A220 和 ONTAP 9.4 软件。
+
+
+
+=== AFF A220 系统
+
+有关 AFF A220 硬件系统的详细信息，请参见 https://www.netapp.com/us/products/storage-systems/all-flash-array/aff-a-series.aspx["AFF A 系列主页"^]。
+
+
+
+=== ONTAP 9.4 软件
+
+NetApp AFF A220 系统使用新的 ONTAP 9.4 软件。ONTAP 9.4 是行业领先的企业级数据管理软件。它将更高级别的精简性和灵活性与强大的数据管理功能，存储效率和领先的云集成相结合。
+
+ONTAP 9.4 具有多种非常适合 FlexPod Express 解决方案的功能。最重要的是 NetApp 对存储效率的承诺，存储效率是小型部署最重要的功能之一。ONTAP 9.4 新增了重复数据删除，数据压缩和精简配置等 NetApp 存储效率功能，并增加了数据缩减功能。由于 NetApp WAFL 系统始终写入 4 KB 块，因此，如果这些块未使用分配的 4 KB 空间，则数据缩减功能会将多个块合并到一个 4 KB 块中。下图说明了此过程。
+
+image:express-c-series-aff220-design_image5.png["错误：缺少图形映像"]
+
+此外，还可以在 AFF A220 系统上利用根数据分区功能。通过此分区，可以在系统中的磁盘之间对根聚合和两个数据聚合进行条带化。因此，双节点 AFF A220 集群中的两个控制器均可利用聚合中所有磁盘的性能。请参见下图。
+
+image:express-c-series-aff220-design_image6.png["错误：缺少图形映像"]
+
+这些只是 FlexPod Express 解决方案的几项主要功能。有关 ONTAP 9.4 的其他特性和功能的详细信息，请参见 https://www.netapp.com/us/media/ds-3231.pdf["ONTAP 9 数据管理软件产品规格"^]。另请参见 NetApp，已更新为包括 ONTAP 9.4 。
+
+
+
+== Cisco Nexus 3000 系列
+
+Cisco Nexus 3172P 是一款功能强大且经济高效的交换机，可提供 1/10/40/100Gbps 的交换。Cisco Nexus 3172PQ 交换机属于统一网络结构系列，是一款紧凑型单机架单元（ 1RU ）交换机，适用于机架顶部数据中心部署。（请参见下图。） 它可在 1RU 中提供多达 72 个 1/10GbE 端口，或在 1RU 中提供 48 个 1/10GbE 端口以及 6 个 40GbE 端口。为了最大程度地提高物理层灵活性，它还支持 1/10/40Gbps 。
+
+由于所有各种 Cisco Nexus 系列型号都运行相同的底层操作系统 NX-OS ，因此 FlexPod Express 和 FlexPod Datacenter 解决方案支持多个 Cisco Nexus 型号。
+
+性能规格包括：
+
+* 所有端口上的线速流量吞吐量（第 2 层和第 3 层）
+* 可配置的最大传输单元（ MTU ），最多 9216 字节（巨型帧）
+
+
+image:express-c-series-aff220-design_image7.png["错误：缺少图形映像"]
+
+有关 Cisco Nexus 3172 交换机的详细信息，请参见 https://www.cisco.com/c/en/us/products/collateral/switches/nexus-3000-series-switches/data_sheet_c78-729483.html["Cisco Nexus 3172PQ ， 3172TQ ， 3172TQ-32T ， 3172PQ-XL 和 3172TQ-XL 交换机数据表"^]。
+
+
+
+== Cisco UCS C 系列
+
+之所以选择 Cisco UCS C 系列机架式服务器来支持 FlexPod Express ，是因为它具有多种配置选项，可以根据 FlexPod Express 部署中的特定要求进行定制。
+
+Cisco UCS C 系列机架式服务器采用行业标准外形规格提供统一计算，以降低 TCO 并提高灵活性。
+
+Cisco UCS C 系列机架式服务器具有以下优势：
+
+* 与外形规格无关的 Cisco UCS 入门点
+* 简化并快速部署应用程序
+* 将统一计算创新技术和优势扩展到机架式服务器
+* 通过熟悉的机架包装提供独特优势，增加客户的选择
+
+
+image:express-c-series-aff220-design_image8.png["错误：缺少图形映像"]
+
+Cisco UCS C220 M5 机架式服务器（如上图所示）是业内用途最广泛的通用企业基础架构和应用程序服务器之一。它是一款高密度双插槽机架式服务器，可为包括虚拟化，协作和裸机应用程序在内的各种工作负载提供行业领先的性能和效率。Cisco UCS C 系列机架式服务器可以作为独立服务器部署，也可以作为 Cisco UCS 的一部分部署，以利用 Cisco 基于标准的统一计算创新技术，帮助客户降低 TCO 并提高业务灵活性。
+
+有关 C220 M5 服务器的详细信息，请参见 https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/datasheet-c78-739281.html["Cisco UCS C220 M5 机架式服务器数据表"^]。
+
+
+
+==== C220 M5 机架式服务器的连接选项
+
+C220 M5 机架式服务器的连接选项如下：
+
+* * Cisco UCS VIC 1387*
++
+Cisco UCS VIC 1387 （如下图所示）采用模块化主板上 LAN （ mLOM ）外形规格，可提供双端口增强型 QSF+40GbE 和以太网 FC （ FCoE ）。可以使用 mLOM 插槽安装 Cisco VIC ，而无需使用外设组件互连快速（ Peripheral Component Interconnect Express ， PCIe ）插槽，从而提高 I/O 可扩展性。
+
+
+
+image:express-c-series-aff220-design_image9.png["错误：缺少图形映像"]
+
+有关 Cisco UCS VIC 1387 适配器的详细信息，请参见 https://www.cisco.com/c/en/us/products/interfaces-modules/ucs-virtual-interface-card-1387/index.html["Cisco UCS 虚拟接口卡 1387"^] 数据表。
+
+* * CVR-QSFP-SFP10G 适配器 *
++
+Cisco QSA 模块可将 QSFP 端口转换为 SFP 或 SFP+ 端口。借助此适配器，客户可以灵活地使用任何 SFP+ 或 SFP 模块或缆线连接到网络另一端的低速度端口。这种灵活性可以最大限度地利用高密度 40GbE QSFP 平台，经济高效地过渡到 40GbE 。此适配器支持所有 SFP+ 光纤和缆线连接，并支持多个 1GbE SFP 模块。由于此项目已通过使用 10GbE 连接进行验证，并且所使用的 VIC 1387 为 40GbE ，因此使用 CVR-QSFP-SFP10G 适配器（下图中）进行转换。
+
+
+
+image:express-c-series-aff220-design_image10.png["错误：缺少图形映像"]
+
+
+
+== VMware vSphere 6.7
+
+VMware vSphere 6.7 是一个适用于 FlexPod Express 的虚拟机管理程序选项。通过 VMware vSphere ，企业可以减少电耗和散热占用空间，同时确认已购买的计算容量已充分利用。此外， VMware vSphere 还支持在 vSphere 主机集群（ VMware Distributed Resource Scheduler 或 VMware DRS ）之间进行硬件故障保护（ VMware High Availability 或 VMware HA ）和计算资源负载平衡。
+
+由于 VMware vSphere 6.7 只会重新启动内核，因此客户可以通过它 " 快速启动 " 来加载 vSphere ESXi ，而无需重新启动硬件。此功能仅适用于快速启动白名单上的平台和驱动程序。vSphere 6.7 扩展了 vSphere Client 的功能， vSphere Client 可执行大约 90% 的 vSphere Web Client 功能。
+
+在 vSphere 6.7 中， VMware 扩展了此功能，使客户能够按虚拟机（ VM ）而非主机设置增强型 vMotion 兼容性（ EVC ）。在 vSphere 6.7 中， VMware 还公开了可用于创建即时克隆的 API 。
+
+以下是 vSphere 6.7 U1 的一些功能：
+
+* 功能全面的基于 Web 的 HTML5 vSphere Client
+* 适用于 NVIDIA GRID vGPU VM 的 VMotion 。支持 Intel FPGA 。
+* vCenter Server Converge Tool 可从外部 PSC 迁移到内部 PC 。
+* vSAN 增强功能（ HCI 更新）。
+* 增强的内容库。
+
+
+有关 vSphere 6.7 U1 的详细信息，请参见 https://blogs.vmware.com/vsphere/2018/10/whats-new-in-vcenter-server-6-7-update-1.html["vCenter Server 6.7 Update 1 中的新增功能"^]。虽然此解决方案已通过 vSphere 6.7 的验证，但它支持任何经 NetApp 互操作性表工具认证可与其他组件配合使用的 vSphere 版本。NetApp 建议部署 vSphere 6.7U1 以修复其问题并增强其功能。
+
+
+
+== 启动架构
+
+以下是 FlexPod 快速启动架构支持的选项：
+
+* iSCSI SAN LUN
+* Cisco FlexFlash SD 卡
+* 本地磁盘
+
+
+由于 FlexPod 数据中心是从 iSCSI LUN 启动的，因此通过对 FlexPod Express 使用 iSCSI 启动来增强解决方案的易管理性。
+
+link:express-c-series-aff220-design_solution_verification.html["接下来：解决方案验证。"]

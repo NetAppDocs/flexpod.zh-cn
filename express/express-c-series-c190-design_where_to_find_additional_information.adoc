@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-c190-design_where_to_find_additional_information.html 
+keywords: references 
+summary: 要了解有关本文档中所述信息的更多信息，请参见此页面上列出的文档和网站。 
+---
+= 从何处查找追加信息
+
+
+要了解有关本文档中所述信息的更多信息，请参见以下文档和网站：
+
+* AFF 和 FAS 系统文档中心
++
+https://docs.netapp.com/platstor/index.jsp["https://docs.netapp.com/platstor/index.jsp"^]
+
+* AFF 文档资源页面
++
+https://www.netapp.com/us/documentation/all-flash-fas.aspx["https://www.netapp.com/us/documentation/all-flash-fas.aspx"^]
+
+* 《使用 VMware vSphere 6.7 和 NetApp AFF C190 的 FlexPod 快速部署指南》（正在进行中）
+* NetApp 文档
++
+https://docs.netapp.com["https://docs.netapp.com"^]
+
+

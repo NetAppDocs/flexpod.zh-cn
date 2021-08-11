@@ -1,0 +1,111 @@
+---
+sidebar: sidebar 
+permalink: fp-def/dc-tech-spec_power_and_cabling_requirements.html 
+keywords: power, cabling, requirements, minimum, techincal, datacenter, specifications 
+summary: FlexPod 设计对电源和布线具有最低要求。 
+---
+= 电源和布线要求
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+FlexPod 设计对电源和布线具有最低要求。
+
+
+
+== 电源要求
+
+FlexPod 数据中心的电源要求因 FlexPod 数据中心配置的安装位置而异。
+
+有关所需最大功率的详细数据以及其他详细电源信息，请参阅一节中列出的每个硬件组件的技术规格 link:dc-tech-spec_technical_specifications_and_references.html["技术规格和参考：硬件组件"]。
+
+有关 Cisco UCS 电源的详细数据，请参见 http://www.cisco.com/assets/cdc_content_elements/flash/dataCenter/cisco_ucs_power_calculator/["Cisco UCS 电源计算器"^]。
+
+有关 NetApp 存储控制器电源数据，请参见 http://hwu.netapp.com/Controller/Index?platformTypeId=6780858["NetApp Hardware Universe"^]。在平台下，选择要在配置中使用的存储平台（ FAS/V 系列或 AFF ）。选择 ONTAP 版本和存储控制器，然后单击显示结果按钮。
+
+
+
+== 最低缆线要求
+
+所需的缆线和适配器数量和类型因 FlexPod 数据中心部署而异。电缆类型，收发器类型和数量是在设计过程中根据您的要求确定的。下表列出了所需的最小缆线数量。
+
+|===
+| 硬件 | 型号 | 所需的缆线 
+
+
+| Cisco UCS 机箱 | Cisco UCS 5108 | 每个 Cisco UCS 2104XP ， 2204XP 或 2208XP 模块至少需要两根双轴缆线 
+
+
+.6+| Cisco UCS 互联阵列 | Cisco UCS 6248UP  a| 
+* 两根 Cat5e 缆线用于管理端口
+* 每对互联阵列需要两根 Cat5e 缆线，用于 L1 ， L2 互连
+* 每个互联阵列至少需要四根双轴缆线
+* 每个互联阵列至少需要四根 FC 缆线
+
+
+
+
+| Cisco UCS 6296UP 
+
+
+| Cisco UCS 6332-16UP 
+
+
+| Cisco UCS 6454 
+
+
+| Cisco UCS 6332  a| 
+* 两根 Cat5e 缆线用于管理端口
+* 每对互联阵列需要两根 Cat5e 缆线，用于 L1 ， L2 互连
+* 每个互联阵列至少需要四根双轴缆线
+
+
+
+
+| Cisco UCS 6324  a| 
+* 两个 10/100/1000Mbps 管理端口
+* 每个互联阵列至少需要两根双轴缆线
+
+
+
+
+.2+| Cisco Nexus 5000 和 7000 系列交换机 | Cisco Nexus 5000 系列  a| 
+* 每个交换机至少需要两根 10GbE 光纤或双轴电缆
+* 每个交换机至少有两根 FC 缆线（如果需要 FC/FCoE 连接）
+
+
+
+
+| Cisco Nexus 7000 系列 
+
+
+| Cisco Nexus 9000 系列交换机 | Cisco Nexus 9000 系列 | 每个交换机至少需要两根 10GbE 缆线 
+
+
+.2+| NetApp FAS 控制器 | AFF A-Series  a| 
+* 每个存储控制器一对 SAS 或 SATA 缆线
+* 如果使用的是原有 FC ，则每个控制器至少需要两根 FC 缆线
+* 每个控制器至少需要两根 10GbE 缆线
+* 每个控制器至少需要一根 GbE 缆线用于管理
+* 对于 ONTAP ，每对集群互连交换机需要八根短双轴缆线
+
+
+
+
+| FAS 系列 
+
+
+.4+| NetApp 磁盘架 | DS212C .3+| 每个磁盘架两根 SAS ， SATA 或 FC 缆线 
+
+
+| DS224C 
+
+
+| DS460C 
+
+
+| NS224 | 每个磁盘架两根 100 Gbps 铜缆 
+|===

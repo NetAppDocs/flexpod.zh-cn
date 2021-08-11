@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: express/express-direct-attach-aff220-deploy_additional_information.html 
+keywords: additional, information, websites, documents, express, direct, attach 
+summary: 要了解有关本文档中所述信息的更多信息，请查看以下文档和 / 或网站： 
+---
+= 追加信息
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+要了解有关本文档中所述信息的更多信息，请查看以下文档和 / 或网站：
+
+* NVA-1130-design ：采用 VMware vSphere 6.7U1 的 FlexPod Express 和采用基于 IP 的直连存储 NVA 设计的 NetApp AFF A220
++
+https://www.netapp.com/us/media/nva-1130-design.pdf["https://www.netapp.com/us/media/nva-1130-design.pdf"^]
+
+* AFF 和 FAS 系统文档中心
++
+http://docs.netapp.com/platstor/index.jsp["http://docs.netapp.com/platstor/index.jsp"^]
+
+* ONTAP 9 文档中心
++
+http://docs.netapp.com/ontap-9/index.jsp["http://docs.netapp.com/ontap-9/index.jsp"^]
+
+* NetApp 产品文档
++
+https://docs.netapp.com["https://docs.netapp.com"^]
+
+

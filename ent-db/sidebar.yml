@@ -1,0 +1,56 @@
+---
+section: ent-db
+title: 企业数据库
+entries:
+- title: SAP
+  entries:
+  - title: SAP HANA FC SAN CVD [ 部署 ]
+    url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_sap_ucsm40_fcsan.html
+  - title: "《采用 SQL 的 SAP 非 HANA 白皮书（ WP ）》（设计）"
+    url: https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/sap-appservers-flexpod-with-sql.pdf
+  - title: 采用 Cisco UCS 第三代和 NetApp AFF A 系列的适用于 SAP 解决方案的 FlexPod 数据中心 [ 设计 ]
+    url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_sap_ontap96.html
+  - title: 适用于 SAP 解决方案的 FlexPod 数据中心使用采用 Cisco UCS Manager 4.0 和 NetApp ONTAP 9.7
+      的光纤通道 SAN [ 设计 ]
+    url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_sap_ucsm40_fcsan_design.html
+  - title: 在采用 Cisco 容器平台的 FlexPod 上部署 SAP 数据中心（白皮书）
+    url: https://www.cisco.com/c/en/us/solutions/collateral/data-center-virtualization/unified-computing/sap-datahub-on-flexpod-with-cisco-container-platform.html
+  - title: 采用 Cisco ACI ， Cisco UCS Manager 4.0 和 NetApp AFF A 系列的适用于 SAP 解决方案的 FlexPod
+      Datacenter [ 设计 ]
+    url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_ACI_sap_netappaffa_design.html
+  - title: 采用 Cisco ACI ， Cisco UCS Manager 4.0 和 NetApp AFF A 系列的适用于 SAP 解决方案的 FlexPod
+      Datacenter 部署
+    url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_ACI_sap_netappaffa.html
+  - title: 采用 Cisco UCS Manager 4.0 和采用 ONTAP 9.6 （ CVD ）的 NetApp AFF A 的 FlexPod
+      Datacenter for SAP 解决方案 [ 设计 ]
+    url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_sap_netappaffa_design.html
+  - title: 基于 FlexPod 的 SAP 应用程序服务器与 Oracle 数据库以及 Cisco UCS 和 NetApp AFF （白皮书）
+    url: https://www.cisco.com/c/en/us/solutions/collateral/data-center-virtualization/unified-computing/flexpod-oracle-database-sap-app-servers.html
+  - title: 基于 FlexPod 数据中心的虚拟化 SAP HANA —设计注意事项和最佳实践（白皮书）
+    url: https://www.cisco.com/c/dam/en/us/solutions/collateral/data-center-virtualization/unified-computing/whitepaper-c11-741878.pdf
+  - title: 采用 Cisco UCS Manager 3.2 和 Cisco Application Centric Infrastructure （ ACI
+      ）的适用于 SAP 解决方案的 FlexPod Datacenter [ 设计 ]
+    url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_saphana_aci_UCSM32.html
+  - title: 使用 NetApp AFF A 系列和 Cisco UCS Manager 3.2 ，使用基于 IP 的存储的适用于 SAP 解决方案的 FlexPod
+      数据中心
+    url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_saphana_n9k_aff_ucsm.html
+- title: Oracle
+  entries:
+  - title: 在 Cisco UCS 上使用 Oracle 19c RAC 数据库的 FlexPod 数据中心以及采用基于光纤通道的 NVMe 的 NetApp
+      AFF [ 部署 ]
+    url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_oracle_ucs_m5.html
+  - title: 在 Cisco UCS 和 NetApp AFF A 系列上使用 Oracle RAC 数据库的 FlexPod Datacenter [ 设计
+      ]
+    url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_orc12cr2_affaseries.html
+  - title: 在 Oracle Linux 上使用 Oracle RAC 的 FlexPod Datacenter 部署
+    url: http://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_orcrac_12c_bm.html
+- title: Microsoft SQL Server
+  entries:
+  - title: 适用于 Microsoft SQL Server 2019 和 VMware vSphere 6.7 的 FlexPod Datacenter
+      [ 设计 ]
+    url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/mssql2019_flexpod.html
+  - title: 采用 Microsoft SQL Server 2016 和 VMware vSphere 6.5 的 FlexPod Datacenter
+    url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/mssql2016_flexpod_vmware_cvd.html
+  - title: 在 VMware 和 Hyper-V 上运行的 Linux VM 上使用 FlexPod Datacenter 和 Microsoft SQL
+      Server 2017 的性能 [ 设计 ]
+    url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/mssql2017_flexpod_linux.html

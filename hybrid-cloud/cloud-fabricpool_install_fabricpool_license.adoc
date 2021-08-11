@@ -1,0 +1,47 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_install_fabricpool_license.html 
+keywords: install, fabricpool, license, cloud, capacity, oncommand, system, manager 
+summary: 获取 NetApp 许可证文件后，您可以使用 OnCommand System Manager 进行安装。要安装许可证文件，请完成以下步骤。 
+---
+= 安装 FabricPool 许可证
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+获取 NetApp 许可证文件后，您可以使用 OnCommand System Manager 进行安装。要安装许可证文件，请完成以下步骤：
+
+. 单击配置。
+. 单击集群。
+. 单击许可证。
+. 单击添加。
+. 单击选择文件以浏览并选择文件。
+. 单击添加。
+
+
+image:cloud-fabricpool_image8.png["错误：缺少图形映像"]
+
+
+
+== 许可证容量
+
+您可以使用 ONTAP 命令行界面或 OnCommand 系统管理器查看许可证容量。要查看许可的容量，请在 ONTAP 命令行界面中运行以下命令：
+
+....
+system license show-status
+....
+在 OnCommand 系统管理器中，完成以下步骤：
+
+. 单击配置。
+. 单击许可证。
+. 单击详细信息选项卡。
+
+
+image:cloud-fabricpool_image9.png["错误：缺少图形映像"]
+
+最大容量和当前容量列在 FabricPool 许可证行中。
+
+link:cloud-fabricpool_create_aws_s3_bucket.html["接下来：创建 AWS S3 存储分段。"]

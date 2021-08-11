@@ -1,0 +1,94 @@
+---
+sidebar: sidebar 
+permalink: ontap-connector-for-intersight/ci-qsg_before_you_begin.html 
+keywords: cisco, intersight, intersight assist, netapp, ontap, connector, begin, install, installation, upgrade, active iq unified manager, create, deploy, deployment, download, OVA, appliance 
+summary: 开始之前，请安装或升级 AIQ UM ，创建 Cisco Intersight 帐户并安装 Intersight Assist 。 
+---
+= 开始之前
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+要从 Cisco Intersight 监控和编排 NetApp 存储，您需要在 vCenter 环境中安装 NetApp Active IQ Unified Manager 和 Cisco Intersight Assist 虚拟设备。
+
+
+
+== 安装或升级 NetApp Active IQ Unified Manager
+
+如果尚未安装或升级到 Active IQ Unified Manager 9.8p1 或更高版本，请安装或升级到该版本。有关说明，请转至 link:http://docs.netapp.com/ocum-98/index.jsp["Unified Manager 9.8 文档中心"]。
+
+
+
+== 安装 Cisco Intersight Assist 虚拟设备
+
+确保满足 https://www.cisco.com/c/en/us/td/docs/unified_computing/Intersight/b_Cisco_Intersight_Appliance_Getting_Started_Guide/b_Cisco_Intersight_Appliance_Getting_Started_Guide_chapter_0111.html?referring_site=RE&pos=1&page=https://www.cisco.com/c/en/us/td/docs/unified_computing/Intersight/b_Cisco_Intersight_Appliance_Getting_Started_Guide.html["Cisco Intersight Virtual Appliance 许可，系统和网络要求"^]。
+
+* 步骤 *
+
+. 创建 Cisco Intersight 帐户。请访问 https://intersight.com/["https://intersight.com/"^] 以创建 Intersight 帐户。要创建 Cisco Intersight 帐户，您必须具有有效的 Cisco ID 。
+. 从以下位置下载 Intersight 虚拟设备： https://software.cisco.com/download/home/286319499/type/286323047/release/1.0.9-148["software.cisco.com"^]。有关详细信息，请转到。
+. 部署 OVA 。部署 OVA 需要使用 DNS 和 NTP 。
++
+.. 在部署 OVA 之前，使用 A/PTR 和 CNAME 别名记录配置 DNS 。请参见以下示例。
++
+image:ci-qsg_image1.png["用于 A/PTR 记录的主机名示例"]
+
+.. 根据您对 Intersight Virtual Appliance 的 OVA 部署要求，选择适当的配置大小（小型，小型或中型）。
++
+* 提示： * 对于包含大量存储对象的双节点 ONTAP 集群， NetApp 建议您使用小型（ 16 个 vCPU ， 32 Gi RAM ）选项。
+
++
+image:ci-qsg_image2.png["Deploy OVF 模板步骤 5 配置的屏幕截图"]
+
+.. 在 * 自定义模板 * 页面上，自定义 OVF 模板的部署属性。本地用户使用管理员密码： admin （`WebUI/CLI/ssh` ）。
++
+image:ci-qsg_image3.png["错误：缺少图形映像"]
+
++
+image:ci-qsg_image4.png["错误：缺少图形映像"]
+
+.. 单击 * 下一步 * 。
+
+
+. 部署后 Intersight Assist 设备。
++
+.. 导航到 https://FQDN-of-your-appliance[] 完成设备的安装后设置。
++
+安装过程将自动开始。安装可能需要长达一小时，具体取决于 Intersight.com 的带宽。在虚拟机启动后，安全站点也可能需要几秒钟的时间才能正常运行。
+
+.. 在部署后过程中，选择要安装的内容：
++
+*** * 站点间连接的虚拟设备。 * 此部署需要连接回 Cisco 和站点间服务，以便更新和访问所需服务，从而使 Intersight.com 能够全面运行。
+*** * Intersight Private Virtual Appliance* 。此部署适用于在断开连接（空隙）模式下运行数据中心的环境。
+*** * Intersight Assist 。 * 通过此部署， SaaS 模式可以连接到 Cisco Intersight 。
++
+
+NOTE: 如果选择 Intersight Assist ，请在继续操作之前记下设备 ID 和款项申请代码。
+
++
+image:ci-qsg_image5.png["Intersight 部署选项的屏幕截图"]
+
+
+
+.. 单击 * 继续 * 。
+.. 如果您选择了 * 中间视图协助 * ，请完成以下步骤：
++
+... 导航到您的 SaaS Intersight 帐户，网址为 https://intersight.com["https://intersight.com"^]。
+... 单击 * 目标 * ， * Cisco Intersight Assist * ，然后单击 * 启动 * 。
+... 通过从新部署的 Intersight Assist 虚拟设备复制并粘贴设备 ID 和声明代码，申请 * Cisco Intersight assist* 设备。
++
+image:ci-qsg_image6.png["突出显示 Cisco Intersight Assist 的 Select Target Type 屏幕截图"]
+
+... 返回到 * Cisco Intersight assist* 设备，然后单击 * 继续。 * 您可能需要刷新浏览器。
++
+下载和安装过程将开始。二进制文件将从 Intersight Cloud 传输到您的内部设备。完成时间因您访问 Intersight Cloud 的带宽而异。
+
+
+
+
+
+

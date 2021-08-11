@@ -1,0 +1,21 @@
+---
+sidebar: sidebar 
+permalink: fp-def/dc-tech-spec_flexpod_platforms.html 
+keywords: flexpod, platforms, datacenter, technical, specifications, express, infrastructure 
+summary:  
+---
+= FlexPod 平台
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+FlexPod 平台有两种：
+
+* * FlexPod Datacenter 。 * 此平台是一个可大规模扩展的虚拟数据中心基础架构，适合工作负载企业级应用程序，虚拟化，虚拟桌面基础架构 (VDI) 以及私有云和混合云工作负载公有。
+* * FlexPod Express* 。此平台是一个紧凑型融合基础架构，面向远程办公室和边缘用例。FlexPod Express 具有自己的规格，这些规格在中进行了说明 https://www.netapp.com/us/media/tr-4293.pdf["FlexPod 快速技术规格。"^]
+
+
+本文档提供了 FlexPod 数据中心平台的技术规格。

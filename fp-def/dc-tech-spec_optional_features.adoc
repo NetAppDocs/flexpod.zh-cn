@@ -1,0 +1,167 @@
+---
+sidebar: sidebar 
+permalink: fp-def/dc-tech-spec_optional_features.html 
+keywords: metrocluster, fc, nvme, fc, san, boot, cisco, mds, fcoe, iscsi 
+summary: NetApp 支持多个可选组件，可进一步增强 FlexPod 数据中心架构。以下各小节概述了可选组件。 
+---
+= 可选功能
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+NetApp 支持多个可选组件，可进一步增强 FlexPod 数据中心架构。以下各小节概述了可选组件。
+
+
+
+== MetroCluster
+
+FlexPod 支持两种 NetApp MetroCluster 软件版本，可在双节点或四节点集群配置中实现持续可用性。MetroCluster 可为关键工作负载提供同步复制。它需要使用连接到 Cisco 交换机的双站点配置。对于 MetroCluster FC ，站点之间支持的最大距离约为 186 英里（ 300 公里），对于 MetroCluster IP ，支持的最大距离约为 435 英里（ 700 公里）。下图分别展示了采用 NetApp MetroCluster 架构的 FlexPod 数据中心和采用 NetApp MetroCluster IP 架构的 FlexPod 数据中心。
+
+有关详细信息和指导，请参见以下部署文档：
+
+* * FlexPod MetroCluster FC/* http://www.netapp.com/us/media/nva-0030-deploy.pdf["NVA-0030-Deploy ：采用 NetApp MetroCluster FC 的 FlexPod 数据中心"^]。
+* * FlexPod MetroCluster IP.* https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi67_n9k_aci_metrocluster.html["CVD ：采用 NetApp MetroCluster IP 的 FlexPod 数据中心"^]。
+
+
+image:dc-tech-spec_image1.png["错误：缺少图形映像"]
+
+image:dc-tech-spec_image2.png["错误：缺少图形映像"]
+
+
+
+== 端到端 FC-NVMe
+
+端到端 FC-NVMe 可无缝扩展客户的现有 SAN 基础架构以实现实时应用程序，同时提高 IOPS 和吞吐量并降低延迟。
+
+可以使用现有的 32G FC SAN 传输同时传输 NVMe 和 SCSI 工作负载。
+
+下图显示了采用 Cisco MDS 的适用于 FC 的 FlexPod 数据中心。
+
+有关 FlexPod 配置和性能优势的更多详细信息，请参见 https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/whitepaper-c11-741907.html["推出适用于 FlexPod 的端到端 NVMe 白皮书。"^]
+
+有关 ONTAP 实施的详细信息，请参见 https://www.netapp.com/us/media/tr-4684.pdf["TR-4684 ：《使用 NVMe 实施和配置现代 SAN 》"^]。
+
+image:dc-tech-spec_image3.png["错误：缺少图形映像"]
+
+
+
+== 通过 Cisco MDS 启动 FC SAN
+
+为了通过使用专用 SAN 网络提高可扩展性， FlexPod 通过 Cisco MDS 交换机和 Nexus 交换机支持 FC ，并支持 Cisco Nexus 93108TC-FX 等 FC 。Cisco MDS 中的 FC SAN 启动选项具有以下许可和硬件要求：
+
+* 每个 NetApp 存储控制器至少两个 FC 端口；每个 SAN 网络结构一个端口
+* 每个 NetApp 存储控制器上的 FC 许可证
+* NetApp 支持的 Cisco MDS 交换机和固件版本 http://mysupport.netapp.com/matrix["IMT"^]
+
+
+有关基于 MDS 的设计的详细指导，请参见 CVD https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_vmware_netappaffa.html["《采用 VMware vSphere 6.7U1 的 FlexPod 数据中心光纤通道和 iSCSI 部署指南》"^]。
+
+下图分别显示了采用 MDS 连接的 FlexPod Datacenter for FC 和采用 Cisco Nexus 93180YC-FX 的 FlexPod Datacenter for FC 的示例。
+
+image:dc-tech-spec_image4.jpg["错误：缺少图形映像"]
+
+image:dc-tech-spec_image5.png["错误：缺少图形映像"]
+
+
+
+== 使用 Cisco Nexus 启动 FC SAN
+
+经典 FC SAN 启动选项具有以下许可和硬件要求：
+
+* 在 Cisco Nexus 5000 系列交换机中执行 FC 分区时，需要为 Cisco Nexus 5000 系列交换机（ FC_FEATURES_PKG ）提供存储协议服务包许可证。
+* 在 Cisco Nexus 5000 系列交换机中执行 FC 分区时，需要在互联阵列和 Cisco Nexus 5000 系列交换机之间建立 SAN 链路。为了增加冗余，建议在链路之间使用 SAN 端口通道。
+* Cisco Nexus 5010 ， 5020 和 5548P 交换机需要使用单独的 FC 或通用端口（ UP ）模块来连接到 Cisco UCS 互联阵列和 NetApp 存储控制器。
+* Cisco Nexus 93180YC-FX 需要 FC 功能许可证才能启用 FC 。
+* 每个 NetApp 存储控制器至少需要两个 8/16/32 Gb FC 端口进行连接。
+* NetApp 存储控制器上需要具有 FC 许可证。
++
+
+NOTE: 使用 Cisco Nexus 7000 或 9000 系列交换机时，除非在互联阵列中执行 FC 分区，否则不能使用传统 FC 。在这种情况下，不支持交换机的 SAN 上行链路。
+
+
+
+下图显示了 FC 连接配置。
+
+image:dc-tech-spec_image6.png["错误：缺少图形映像"]
+
+
+
+== FCoE SAN 启动选项
+
+FCoE SAN 启动选项具有以下许可和硬件要求：
+
+* 在交换机中执行 FC 分区时，需要为 Cisco Nexus 5000 或 7000 系列交换机 ` （ FC_FEATURES_PKG` ）提供存储协议服务包许可证。
+* 在交换机中执行 FC 分区时，互联阵列与 Cisco Nexus 5000 或 7000 系列交换机之间需要 FCoE 上行链路。为了增加冗余，还建议在链路之间使用 FCoE 端口通道。
+* 除非存在板载统一目标适配器 2 （ UTA2 ）端口，否则每个 NetApp 存储控制器至少需要一个双端口统一目标适配器（ UTA ）附加卡来实现 FCoE 连接。
+* 此选项需要在 NetApp 存储控制器上获得 FC 许可证。
+* 如果您使用的是 Cisco Nexus 7000 系列交换机，并且在交换机中执行了 FC 分区，则需要一个能够支持 FCoE 的线卡。
++
+
+NOTE: 除非在互联阵列中执行 FC 分区，并且存储通过设备端口连接到互联阵列，否则使用 Cisco Nexus 9000 系列交换机将不会使用 FCoE 。在这种情况下，不支持通过 FCoE 上行链路连接到交换机。
+
+
+
+下图显示了 FCoE 启动场景。
+
+image:dc-tech-spec_image7.png["错误：缺少图形映像"]
+
+
+
+== iSCSI 启动选项
+
+iSCSI 启动选项具有以下许可和硬件要求：
+
+* 需要在 NetApp 存储控制器上安装 iSCSI 许可证。
+* Cisco UCS 服务器中需要一个支持 iSCSI 启动的适配器。
+* NetApp 存储控制器上需要一个双端口 10Gbps 以太网适配器。
+
+
+下图显示了使用 iSCSI 启动的纯以太网配置。
+
+image:dc-tech-spec_image8.png["错误：缺少图形映像"]
+
+
+
+== Cisco UCS 直接连接到 NetApp 存储
+
+NetApp AFF 和 FAS 控制器可以直接连接到 Cisco UCS 互联阵列，而无需任何上游 SAN 交换机。
+
+可以使用四种 Cisco UCS 端口类型直接连接到 NetApp 存储：
+
+* * 存储 FC 端口。 * 将此端口直接连接到 NetApp 存储上的 FC 端口。
+* * 存储 FCoE 端口。 * 将此端口直接连接到 NetApp 存储上的 FCoE 端口。
+* * 设备端口。 * 将此端口直接连接到 NetApp 存储上的 10GbE 端口。
+* * 统一存储端口。 * 将此端口直接连接到 NetApp UTA 。
+
+
+许可和硬件要求如下：
+
+* 需要在 NetApp 存储控制器上获得协议许可证。
+* 服务器上需要 Cisco UCS 适配器（启动程序）。有关支持的 Cisco UCS 适配器列表，请参见 NetApp http://mysupport.netapp.com/matrix["IMT"^]。
+* NetApp 存储控制器上需要一个目标适配器。
+
+
+下图显示了 FC 直连配置。
+
+image:dc-tech-spec_image9.png["错误：缺少图形映像"]
+
+* 注： *
+
+* Cisco UCS 配置为 FC 交换模式。
+* 从目标到互联阵列的 FCoE 端口配置为 FCoE 存储端口。
+* 从目标到互联阵列的 FC 端口配置为 FC 存储端口。
+
+
+下图显示了 iSCSI/Unified IP 直连配置。
+
+image:dc-tech-spec_image10.png["错误：缺少图形映像"]
+
+* 注： *
+
+* Cisco UCS 配置为以太网交换模式。
+* 从目标到互联阵列的 iSCSI 端口会配置为 iSCSI 数据的以太网存储端口。
+* 从目标到互联阵列的以太网端口会配置为 CIFS/NFS 数据的以太网存储端口。
+

@@ -1,0 +1,80 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-aff220-design_technology_requirements.html 
+keywords: express, requirements, technology, AFF A220, UCS C220 M5, Nexus 3172P switch, Virtual Interface Card, VIC 1387, C220 M5 Rack Server, CVR-QSFP-SFP10G adapter 
+summary: FlexPod Express 需要硬件和软件组件的组合，具体取决于所选虚拟机管理程序和网络速度。此外， FlexPod Express 还以两个单元的形式列出了向系统添加虚拟机管理程序节点所需的硬件组件。 
+---
+= 技术要求
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+FlexPod Express 需要硬件和软件组件的组合，具体取决于所选虚拟机管理程序和网络速度。此外， FlexPod Express 还以两个单元的形式列出了向系统添加虚拟机管理程序节点所需的硬件组件。
+
+
+
+== 硬件要求
+
+无论选择何种虚拟机管理程序，所有 FlexPod 快速配置都使用相同的硬件。因此，即使业务需求发生变化，任何虚拟机管理程序都可以在同一个 FlexPod Express 硬件上运行。
+
+下表列出了所有 FlexPod 快速配置以及实施解决方案所需的硬件组件。在任何特定解决方案实施中使用的硬件组件可能会因客户要求而异。
+
+[cols="50,50"]
+|===
+| 硬件 | 数量 
+
+
+| AFF A220 双节点集群 | 1. 
+
+
+| Cisco UCS C220 M5 服务器 | 2. 
+
+
+| Cisco Nexus 3172P 交换机 | 2. 
+
+
+| 适用于 Cisco UCS C220 M5 机架式服务器的 Cisco UCS 虚拟接口卡（ VIC ） 1387 | 2. 
+
+
+| Cisco CVR-QSFP-SFP10G 适配器 | 4. 
+|===
+
+
+== 软件要求
+
+下表列出了实施 FlexPod Express 解决方案架构所需的软件组件。
+
+下表列出了基本 FlexPod 快速实施的软件要求。
+
+[cols="33,33,33"]
+|===
+| 软件 | version | 详细信息 
+
+
+| Cisco 集成管理控制器（ CIMC ） | 3.1.3 | 适用于 C220 M5 机架式服务器 
+
+
+| Cisco NX-OS | nxos.7.0.3.I7.5.bin | 适用于 Cisco Nexus 3172P 交换机 
+
+
+| NetApp ONTAP | 9.4 | 适用于 AFF A220 控制器 
+|===
+下表列出了在 FlexPod Express 上实施所有 VMware vSphere 所需的软件。
+
+[cols="50,50"]
+|===
+| 软件 | version 
+
+
+| VMware vCenter Server 设备 | 6 ， 7. 
+
+
+| VMware vSphere ESXi | 6 ， 7. 
+
+
+| 适用于 ESXi 的 NetApp VAAI 插件 | 1.1.2 
+|===
+link:express-c-series-aff220-design_design_choices.html["接下来：设计选择。"]

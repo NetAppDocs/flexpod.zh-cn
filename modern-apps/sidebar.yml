@@ -1,0 +1,15 @@
+---
+section: modern-apps
+title: 现代应用程序
+entries:
+- title: 采用 Cisco UCS 480 ML 的 FlexPod Datacenter Nvidia T4 vGPU 深度学习 CVD 设计指南 [ 设计
+    ]
+  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_c480m5l_aiml_design.html
+- title: 使用 FlexPod 在 Cisco 容器平台上部署 NetApp Trident CSI 插件【部署】
+  url: https://www.cisco.com/c/dam/en/us/solutions/collateral/data-center-virtualization/unified-computing/trident-on-container-platform-with-flexpod.pdf
+- title: 适用于 OpenShift 容器平台 4 的 FlexPod 数据中心（ Deploy ）
+  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_openshift_platform_4.html
+- title: 采用 Cisco UCS C480 ML 的 FlexPod Datacenter for AI/ML 深度学习设计指南 [ 设计 ]
+  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_c480m5l_aiml_design.html
+- title: 采用 Docker 数据中心的 FlexPod 数据中心用于容器管理 [ 设计 ]
+  url: http://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_docker_deploy_design.html

@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec_overview.html 
+keywords: flexpod, express, technical, specifications, architecture, cisco, ucs 
+summary: FlexPod Express 是一种预先设计的最佳实践架构，它基于 Cisco 统一计算系统（ Cisco UCS ）和 Cisco Nexus 系列交换机构建，存储层使用 NetApp FAS 或 NetApp E 系列存储构建。 
+---
+= TR-4293 ： FlexPod 快速技术规格
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+NetApp 公司 Karthick Radhakrishnan ， Arvind Ramakrishnan ， Lindsey Street ， Savita Kumari
+
+FlexPod Express 是一种预先设计的最佳实践架构，它基于 Cisco 统一计算系统（ Cisco UCS ）和 Cisco Nexus 系列交换机构建，存储层使用 NetApp FAS 或 NetApp E 系列存储构建。FlexPod Express 是一个适合运行各种虚拟化虚拟机管理程序，裸机操作系统（ OS ）和企业工作负载的平台。
+
+FlexPod Express 不仅提供了基线配置，还可以灵活地调整规模并进行优化，以满足多种不同的使用情形和要求。本文档将根据所使用的存储系统，采用 NetApp FAS 的 FlexPod Express 以及采用 E 系列的 FlexPod Express 对 FlexPod Express 配置进行分类。

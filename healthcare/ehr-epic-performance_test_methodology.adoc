@@ -1,0 +1,127 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-epic-performance_test_methodology.html 
+keywords: test, methodology, generationio, tool, genio, storage, harware, software, vms 
+summary: Epic 使用 GenerationIO 工具（ Genio ）来验证存储是否已做好生产准备。此测试侧重于性能，方法是将存储推向极限，并通过提升存储控制器的性能余量，直到需求失败为止。 
+---
+= 测试方法
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== 测试计划
+
+Epic 使用 GenerationIO 工具（ Genio ）来验证存储是否已做好生产准备。此测试侧重于性能，方法是将存储推向极限，并通过提升存储控制器的性能余量，直到需求失败为止。
+
+此处执行的测试侧重于确定性能余量以及使用自适应服务质量（ AQoS ）保护关键 Epic 工作负载。在 AFF A300 测试中，使用两个服务器并加载了 Genio ，以驱动存储控制器上的 I/O 。三台服务器上均加载了 Genio ，用于驱动 AFF A700 存储控制器上的 I/O 。由于服务器性能限制，需要使用三台服务器，而 AFF A700 需要三台服务器。
+
+
+
+== 测试环境
+
+
+
+=== 硬件和软件：
+
+在此项研究中，我们在 Cisco UCS B200-M5 上运行的 VMware ESXi 6.5 上配置了三个 Red Hat Linux 虚拟机（ VM ）。我们使用 Cisco MDS 系列交换机将 ESXi 主机连接到 AFF 存储控制器节点，方法是在服务器端使用 16 Gb FC ，在存储端使用 16 Gb FC 。AFF A700 节点已按照 NetApp 布线最佳实践连接到一个具有 3.8 TB SSD 的 DS2446 磁盘架。
+
+下表列出了我们在 Epic 性能测试配置中使用的硬件和软件组件。
+
+下表列出了 Epic Test 硬件和软件组件。
+
+|===
+| 硬件和软件组件 | 详细信息 
+
+
+| VM 的操作系统 | RHEL 7.4 虚拟机 
+
+
+| 刀片式服务器上的操作系统 | VMware ESXi 6.5 
+
+
+| 物理服务器 | Cisco UCS B200 M5 x 3 
+
+
+| 每个服务器的处理器数 | 两个 20 核 Intel Xeon Gold 6148 2.4 GHz 
+
+
+| 每台服务器的物理内存 | 768 GB 
+
+
+| FC 网络 | 16 Gb FC ，具有多路径功能 
+
+
+| FC HBA | Cisco UCS VIC 1340 上的 FC vHBA 
+
+
+| 用于集群管理的专用公有 1GbE 端口 | 两个 Intel 1350GbE 端口 
+
+
+| 16 Gb FC 交换机 | Cisco MDS 9148s 
+
+
+| 40GbE 交换机 | Cisco Nexus 9332 交换机 
+|===
+下表列出了 NetApp AFF A700 和 AFF A300 存储系统硬件和软件。
+
+|===
+| 硬件和软件组件 | AFF A700 详细信息 | AFF A300 详细信息 
+
+
+| 存储系统 | 配置为高可用性（ HA ）主动 - 主动对的 AFF A700 控制器 | 配置为高可用性（ HA ）主动 - 主动对的 AFF A300 控制器 
+
+
+| ONTAP 版本 | 9.4 | 9.5 
+
+
+| 驱动器总数 | 36 | 24 
+
+
+| 驱动器大小 | 3.8 TB | 3.8 TB 
+
+
+| 驱动器类型 | SSD | SSD 
+
+
+| FC 目标端口 | 八个 16 Gb 端口（每个节点四个） | 八个 16 Gb 端口（每个节点四个） 
+
+
+| 以太网端口 | 四个 10 Gb 端口（每个节点两个） | 四个 10 Gb 端口（每个节点两个） 
+
+
+| Storage Virtual Machine （ SVM ） | 在两个节点聚合中使用一个 SVM | 在两个节点聚合中使用一个 SVM 
+
+
+| 以太网逻辑接口（ LIF ） | 四个 1 Gb 管理 LIF （连接到单独专用 VLAN 的每个节点两个） | 四个 1 Gb 管理 LIF （连接到单独专用 VLAN 的每个节点两个） 
+
+
+| FC LIF | 四个 16 Gb 数据 LIF | 四个 16 Gb 数据 LIF 
+|===
+下表列出了 NetApp AFF A700 和 AFF A300 存储系统布局。
+
+|===
+| 存储布局 | AFF A700 详细信息 | AFF A300 详细信息 
+
+
+| SVM | 用于 Epic 应用程序数据库的单个 SVM | 用于 Epic 应用程序数据库的单个 SVM 
+
+
+| 聚合 | 每个 20 TB | 每个 30 TB 
+
+
+| 用于生产的卷 | 每个 RHEL VM 16 个 342GB 卷 | 每个 RHEL VM 16 个 512 GB 卷 
+
+
+| 用于生产的 LUN | 十六个 307 GB LUN ，每个卷一个 | 十六个 460 GB LUN ，每个卷一个 
+
+
+| 日志的卷 | 每个 RHEL VM 两个 95 Gb 卷 | 每个 RHEL VM 两个 240 GB 卷 
+
+
+| 日志的 LUN | 两个 75 Gb LUN ，每个卷一个 | 两个 190 Gb LUN ，每个卷一个 
+|===

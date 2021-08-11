@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_create_aws_s3_bucket.html 
+keywords: create, aws, s3, bucket, cloud, fabricpool, flexpod, tiers, create 
+summary: 存储分段是用于保存数据的对象存储容器。您必须先提供存储数据的存储分段的名称和位置，然后才能将其作为云层添加到聚合中。 
+---
+= 创建 AWS S3 存储分段
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+存储分段是用于保存数据的对象存储容器。您必须先提供存储数据的存储分段的名称和位置，然后才能将其作为云层添加到聚合中。
+
+
+NOTE: 无法使用 OnCommand System Manager ， OnCommand Unified Manager 或 ONTAP 创建存储分段。
+
+FabricPool 支持为每个聚合连接一个存储分段，如下图所示。一个存储分段可以附加到一个聚合，一个存储分段可以附加到多个聚合。但是，不能将单个聚合附加到多个分段。虽然一个存储分段可以附加到一个集群中的多个聚合，但 NetApp 不建议将一个存储分段附加到多个集群中的聚合。
+
+在规划存储架构时，请考虑分段到聚合关系可能会对性能产生何种影响。许多对象存储提供程序都会在存储分段或容器级别设置支持的最大 IOPS 数。需要最高性能的环境应使用多个分段，以减少对象存储 IOPS 限制可能影响多个 FabricPool 聚合的性能的可能性。将单个存储分段或容器附加到集群中的所有 FabricPool 聚合对于重视易管理性而不是云层性能的环境来说，可能会更加有利。
+
+image:cloud-fabricpool_image10.png["错误：缺少图形映像"]
+
+
+
+== 创建 S3 存储区。
+
+. 在 AWS 管理控制台中的主页页面中，在搜索栏中输入 s3 。
+. 在云中选择 S3 可扩展存储。
++
+image:cloud-fabricpool_image11.png["错误：缺少图形映像"]
+
+. 在 S3 主页上，选择创建存储分段。
+. 输入符合 DNS 要求的名称，然后选择要创建存储分段的区域。
++
+image:cloud-fabricpool_image12.png["错误：缺少图形映像"]
+
+. 单击创建以创建对象存储分段。
+
+
+link:cloud-fabricpool_add_a_cloud_tier_to_ontap.html["接下来：将云层添加到 ONTAP"]

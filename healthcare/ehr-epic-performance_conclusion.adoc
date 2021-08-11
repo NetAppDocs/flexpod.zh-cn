@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-epic-performance_conclusion.html 
+keywords: flash, storage, epic, array, pools, adaptive, qos, performance 
+summary: 到 2020 年，所有 Epic 客户都必须使用闪存存储。NetApp ONTAP 是首款获得 Epic 高舒适性评级的全闪存阵列，并列在企业存储阵列下。所有运行 GA 版 ONTAP 的 NetApp 平台都非常舒适。 
+---
+= 结论
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+到 2020 年，所有 Epic 客户都必须使用闪存存储。NetApp ONTAP 是首款获得 Epic 高舒适性评级的全闪存阵列，并列在企业存储阵列下。所有运行 GA 版 ONTAP 的 NetApp 平台都非常舒适。
+
+EPIC 要求在称为池的存储分配上以物理方式分隔生产，报告和清晰度等关键工作负载。NetApp 在一个集群中为每个节点提供多个存储池，并为整个 Epic 解决方案提供简化的单个集群和单个操作系统。ONTAP 支持 NAS 和 SAN 的所有协议，并为 SSD ， HDD 和云提供混合存储层。
+
+ONTAP 9.3 引入了自适应 QoS ， ONTAP 9.4 进行了大量增强，因此无需物理隔离即可使用软件创建存储池。此功能可显著简化架构开发，允许整合节点和磁盘，并可通过在节点间分布来提高生产等关键工作负载的性能。此外，它还可以消除因抢占资源而导致的存储性能问题，并确保在工作负载的整个生命周期内保持性能稳定。

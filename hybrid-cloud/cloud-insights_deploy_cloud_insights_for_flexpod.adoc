@@ -1,0 +1,190 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-insights_deploy_cloud_insights_for_flexpod.html 
+keywords: cloud, insights, service, vmware, vm, rhel, red, hat, enterprise, acquisition, unit, flexpod, datacenter 
+summary: 要部署 Cloud Insights for FlexPod ，必须完成以下任务。 
+---
+= 部署适用于 FlexPod 的 Cloud Insights
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+要部署解决方案，您必须完成以下任务：
+
+. 注册 Cloud Insights 服务
+. 创建要配置为采集单元的 VMware 虚拟机（ VM ）
+. 安装 Red Hat Enterprise Linux （ RHEL ）主机
+. 在 Cloud Insights 门户中创建采集单元实例并安装软件
+. 将受监控的存储系统从 FlexPod 数据中心添加到 Cloud Insights 。
+
+
+
+
+== 注册 NetApp Cloud Insights 服务
+
+要注册 NetApp Cloud Insights 服务，请完成以下步骤：
+
+. 转至 https://cloud.netapp.com/cloud-insights["https://cloud.netapp.com/cloud-insights"^]
+. 单击屏幕中央的按钮开始 14 天免费试用，或者单击右上角的链接注册或使用现有 NetApp Cloud Central 帐户登录。
+
+
+
+
+== 创建要配置为采集单元的 VMware 虚拟机
+
+要创建 VMware VM 以配置为采集单元，请完成以下步骤：
+
+. 启动 Web 浏览器并登录到 VMware vSphere ，然后选择要托管 VM 的集群。
+. 右键单击该集群，然后从菜单中选择创建虚拟机。
++
+image:cloud-insights_image3.png["错误：缺少图形映像"]
+
+. 在新建虚拟机向导中，单击下一步。
+. 指定虚拟机的名称并选择要将其安装到的数据中心，然后单击下一步。
+. 在以下页面上，选择要将虚拟机安装到的集群，节点或资源组，然后单击下一步。
+. 选择托管 VM 的共享数据存储库，然后单击下一步。
+. 确认虚拟机的兼容模式已设置为 `ESXi 6.7 或更高版本` ，然后单击下一步。
+. 选择子操作系统系列 Linux ，子操作系统版本： Red Hat Enterprise Linux 7 （ 64 位）。
++
+image:cloud-insights_image4.png["错误：缺少图形映像"]
+
+. 下一页用于自定义虚拟机上的硬件资源。Cloud Insights 采集单元需要以下资源。选择资源后，单击下一步：
++
+.. 两个 CPU
+.. 8 GB RAM
+.. 100 GB 硬盘空间
+.. 一种可通过端口 443 上的 SSL 连接访问 FlexPod 数据中心和 Cloud Insights 服务器中资源的网络。
+.. 要从中启动的选定 Linux 分发版（ Red Hat Enterprise Linux ）的 ISO 映像。
++
+image:cloud-insights_image5.png["错误：缺少图形映像"]
+
+
+
+. 要创建虚拟机，请在准备完成页面上查看设置，然后单击完成。
+
+
+
+
+== 安装 Red Hat Enterprise Linux
+
+要安装 Red Hat Enterprise Linux ，请完成以下步骤：
+
+. 启动虚拟机，单击窗口以启动虚拟控制台，然后选择安装 Red Hat Enterprise Linux 7.6 选项。
++
+image:cloud-insights_image6.png["错误：缺少图形映像"]
+
+. 选择首选语言，然后单击 Continue 。
++
+下一页是安装摘要。大多数选项都应接受默认设置。
+
+. 您必须通过执行以下选项来自定义存储布局：
++
+.. 要自定义服务器的分区，请单击安装目标。
+.. 确认已选择具有黑色复选标记的 100 GiB VMware 虚拟磁盘，然后选择 I will Configure Partitioning 单选按钮。
++
+image:cloud-insights_image7.png["错误：缺少图形映像"]
+
+.. 单击 Done 。
++
+此时将显示一个新菜单，用于自定义分区表。每个为 ` /opt/NetApp` 和 ` /var/log/NetApp` 专用 25 GB 。您可以自动将其余存储分配给系统。
+
++
+image:cloud-insights_image8.png["错误：缺少图形映像"]
+
+.. 要返回到安装摘要，请单击完成。
+
+
+. 单击网络和主机名。
++
+.. 输入服务器的主机名。
+.. 单击滑块按钮打开网络适配器。如果在网络上配置了动态主机配置协议（ DHCP ），您将收到一个 IP 地址。如果不是，请单击配置，然后手动分配地址。
++
+image:cloud-insights_image9.png["错误：缺少图形映像"]
+
+.. 。单击 Done 以返回到 Installation Summary 。
+
+
+. 在安装摘要页面上，单击开始安装。
+. 在安装进度页面上，您可以设置 root 密码或创建本地用户帐户。安装完成后，单击重新启动以重新启动服务器。
++
+image:cloud-insights_image10.png["错误：缺少图形映像"]
+
+. 系统重新启动后，登录到服务器并将其注册到 Red Hat 订阅管理器。
++
+image:cloud-insights_image11.png["错误：缺少图形映像"]
+
+. 附加 Red Hat Enterprise Linux 的可用订阅。
++
+image:cloud-insights_image12.png["错误：缺少图形映像"]
+
+
+
+
+
+== 在 Cloud Insights 门户中创建采集单元实例并安装软件
+
+要在 Cloud Insights 门户中创建采集单元实例并安装软件，请完成以下步骤：
+
+. 从 Cloud Insights 的主页中，将鼠标悬停在主菜单左侧的 "Admin" 条目上，然后从菜单中选择 "Data Collectors" 。
++
+image:cloud-insights_image13.png["错误：缺少图形映像"]
+
+. 在数据收集器页面的顶部中间，单击采集单元的链接。
++
+image:cloud-insights_image14.png["错误：缺少图形映像"]
+
+. 要创建新的采集单元，请单击右侧的按钮。
++
+image:cloud-insights_image15.png["错误：缺少图形映像"]
+
+. 选择要用于托管采集单元的操作系统，然后按照以下步骤从网页复制安装脚本。
++
+在此示例中，它是一个 Linux 服务器，提供一个代码片段和一个令牌，用于粘贴到主机的命令行界面中。此网页将等待采集单元连接。
+
++
+image:cloud-insights_image16.png["错误：缺少图形映像"]
+
+. 将此代码片段粘贴到已配置的 Red Hat Enterprise Linux 计算机的 CLI 中，然后单击 Enter 。
++
+image:cloud-insights_image17.png["错误：缺少图形映像"]
+
++
+安装程序会下载一个压缩的软件包并开始安装。安装完成后，您会收到一条消息，指出采集单元已注册到 NetApp Cloud Insights 中。
+
++
+image:cloud-insights_image18.png["错误：缺少图形映像"]
+
+
+
+
+
+== 将受监控的存储系统从 FlexPod 数据中心添加到 Cloud Insights
+
+要从 FlexPod 部署添加 ONTAP 存储系统，请完成以下步骤：
+
+. 返回到 Cloud Insights 门户上的 Acquisition Units 页面，找到列出的新注册的单元。要显示单元的摘要，请单击该单元。
++
+image:cloud-insights_image19.png["错误：缺少图形映像"]
+
+. 要启动向导以添加存储系统，请在摘要页面上单击用于创建数据收集器的按钮。第一页显示可从中收集数据的所有系统。使用搜索栏搜索 ONTAP 。
++
+image:cloud-insights_image20.png["错误：缺少图形映像"]
+
+. 选择 ONTAP 数据管理软件。
++
+此时将显示一个页面，用于为部署命名并选择要使用的采集单元。您可以提供 ONTAP 系统的连接信息和凭据，并对连接进行测试以确认。
+
++
+image:cloud-insights_image21.png["错误：缺少图形映像"]
+
+. 单击 Complete Setup 。
++
+此门户将返回到 " 数据收集器 " 页面，而数据收集器将开始首次轮询，以便从 FlexPod 数据中心的 ONTAP 存储系统收集数据。
+
++
+image:cloud-insights_image22.png["错误：缺少图形映像"]
+
+

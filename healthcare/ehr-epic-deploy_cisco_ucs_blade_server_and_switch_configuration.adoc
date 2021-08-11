@@ -1,0 +1,56 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-epic-deploy_cisco_ucs_blade_server_and_switch_configuration.html 
+keywords: cisco, ucs, blade, server, switch, configuration 
+summary: FlexPod for Epic 软件在设计时在各个级别都具有容错能力。系统中没有单点故障。本文档旨在提供有关 Epic 软件的 FlexPod 环境基本配置的高级指导。 
+---
+= Cisco UCS 刀片式服务器和交换机配置
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+FlexPod for Epic 软件在设计时在各个级别都具有容错能力。系统中没有单点故障。我们建议使用热备用刀片式服务器以获得最佳性能。
+
+本文档旨在提供有关 Epic 软件的 FlexPod 环境基本配置的高级指导。在本节中，我们将简要介绍一些步骤以及一些示例，以准备 FlexPod 配置中的 Cisco UCS 计算平台要素。本指南的前提条件是， FlexPod 配置已按照使用 FC 存储的 FlexPod 数据中心中的说明进行机架安装，供电和布线。
+
+
+
+== Cisco Nexus 交换机配置
+
+为解决方案部署了一对容错 Cisco Nexus 9300 系列以太网交换机。这些交换机应按照一节中所述进行布线 link:ehr-epic-deploy_deployment_and_configuration_overview.html#cabling-diagram["" 布线图 " 。"] Cisco Nexus 配置可确保为 Epic 应用程序优化以太网流量。
+
+. 完成初始设置和许可后，运行以下命令在两台交换机上设置全局配置参数：
++
+....
+spanning-tree port type network default
+spanning-tree port type edge bpduguard default
+spanning-tree port type edge bpdufilter default
+port-channel load-balance src-dst l4port
+ntp server <global-ntp-server-ip> use-vrf management
+ntp master 3
+ip route 0.0.0.0/0 <ib-mgmt-vlan-gateway>
+copy run start
+....
+. 使用全局配置模式在每个交换机上为解决方案创建 VLAN ：
++
+....
+vlan <ib-mgmt-vlan-id>
+name IB-MGMT-VLAN
+vlan <native-vlan-id>
+name Native-VLAN
+vlan <vmotion-vlan-id>
+name vMotion-VLAN
+vlan <vm-traffic-vlan-id>
+name VM-Traffic-VLAN
+vlan <infra-nfs-vlan-id>
+name Infra-NFS-VLAN
+exit
+copy run start
+....
+. 根据创建用于故障排除的 NTP 分发接口，端口通道，端口通道参数和端口说明 https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi65u1_n9fc.html["采用 FC Cisco 验证设计的 FlexPod 数据中心"^]。
+
+
+link:ehr-epic-deploy_esxi_configuration_best_practices.html["下一步： ESXi 配置最佳实践"]

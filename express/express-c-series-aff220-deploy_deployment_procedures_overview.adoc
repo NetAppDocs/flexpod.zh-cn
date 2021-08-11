@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-aff220-deploy_deployment_procedures_overview.html 
+keywords: vmware, vcenter, server, appliance, download 
+summary: 本文档详细介绍了如何配置完全冗余且高度可用的 FlexPod Express 系统以及如何配置多个 Cisco UCS 主机。 
+---
+= 部署过程
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+本文档详细介绍了如何配置完全冗余，高可用性的 FlexPod Express 系统。为了反映这种冗余，在每个步骤中配置的组件称为组件 A 或组件 B例如，控制器 A 和控制器 B 可识别本文档中配置的两个 NetApp 存储控制器。交换机 A 和交换机 B 可识别一对 Cisco Nexus 交换机。
+
+此外，本文档还介绍配置多个 Cisco UCS 主机的步骤，这些主机按顺序标识为服务器 A ，服务器 B 等。
+
+要指示您应在步骤中包含与您的环境相关的信息，请在命令结构中显示 ` \<<text>>` 。请参见以下 `vlan create` 命令示例：
+
+....
+Controller01>vlan create vif0 <<mgmt_vlan_id>>
+....
+通过本文档，您可以完全配置 FlexPod 快速环境。在此过程中，您需要通过多个步骤插入客户专用的命名约定， IP 地址和虚拟局域网（ VLAN ）方案。下表介绍了部署所需的 VLAN ，如本指南所述。此表可根据特定站点变量填写，并用于实施文档配置步骤。
+
+
+NOTE: 如果使用单独的带内和带外管理 VLAN ，则必须在它们之间创建第 3 层路由。在此验证中，使用了一个通用管理 VLAN 。
+
+|===
+| AN 名称 | VLAN 用途 | 用于验证本文档的 ID 
+
+
+| 管理 VLAN | 用于管理接口的 VLAN | 3437 
+
+
+| 原生 VLAN | 将未标记的帧分配到的 VLAN | 2. 
+
+
+| NFS VLAN | 用于 NFS 流量的 VLAN | 3438 
+
+
+| VMware vMotion VLAN | 为将虚拟机从一台物理主机移动到另一台物理主机而指定的 VLAN | 3441 
+
+
+| 虚拟机流量 VLAN | 虚拟机应用程序流量的 VLAN | 3442 
+
+
+| iSCSI-A-VLAN | 网络结构 A 上用于 iSCSI 流量的 VLAN | 3439 
+
+
+| iSCSI-B-VLAN | 网络结构 B 上用于 iSCSI 流量的 VLAN | 3440 
+|===
+在整个 FlexPod Express 配置过程中都需要 VLAN 编号。这些 VLAN 称为 ` \<<var_xxxx_vlan>>` ，其中 `xxxx` 是 VLAN 的用途（例如 iSCSI-A ）。
+
+下表列出了创建的 VMware 虚拟机。
+
+|===
+| 虚拟机问题描述 | 主机名 
+
+
+| VMware vCenter Server |  
+|===

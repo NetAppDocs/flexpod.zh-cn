@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_attach_a_cloud_tier_to_an_ontap_aggregate.html 
+keywords: attach, cloud, tier, ontap, aggregate, fabricpool, flexpod, ontap, cli, oncommand, system, manager 
+summary: 在将对象存储添加到 ONTAP 并由其标识后，必须将其附加到聚合才能创建 FabricPool 。可以使用 OnCommand 系统管理器或 ONTAP 命令行界面完成此任务。 
+---
+= 将云层附加到 ONTAP 聚合
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+在将对象存储添加到 ONTAP 并由其标识后，必须将其附加到聚合才能创建 FabricPool 。可以使用 OnCommand 系统管理器或 ONTAP 命令行界面完成此任务。
+
+可以将多种类型的对象存储连接到一个集群，但每个聚合只能附加一种类型的对象存储。例如，一个聚合可以使用 Google Cloud ，另一个聚合可以使用 Amazon S3 ，但一个聚合无法同时附加到这两个聚合。
+
+
+NOTE: 将云层附加到聚合是一项永久性操作。无法从已附加到的聚合中取消附加云层。
+
+
+
+== OnCommand 系统管理器
+
+要使用 OnCommand System Manager 将云层附加到聚合，请完成以下步骤：
+
+. 启动 OnCommand 系统管理器。
+. 单击应用程序和层。
++
+image:cloud-fabricpool_image14.png["错误：缺少图形映像"]
+
+. 单击存储层。
+. 单击某个聚合。
+. 单击操作并选择附加云层。
++
+image:cloud-fabricpool_image15.png["错误：缺少图形映像"]
+
+. 选择云层。
+. 查看并更新聚合上卷的分层策略（可选）。默认情况下，卷分层策略设置为仅 Snapshot 。
+. 单击保存。
+
+
+
+
+== ONTAP 命令行界面
+
+要使用 ONTAP 命令行界面将云层附加到聚合，请运行以下命令：
+
+....
+storage aggregate object-store attach
+-aggregate <name>
+-object-store-name <name>
+....
+示例
+
+....
+storage aggregate object-store attach -aggregate aggr1 -object-store-name - aws_infra_fp_bk_1
+....
+link:cloud-fabricpool_set_volume_tiering_policy.html["下一步：设置卷分层策略。"]

@@ -1,0 +1,88 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-c190-deploy_technology_requirements.html 
+keywords: technology, requirements, hardware, software, express, c, series, deployment 
+summary: FlexPod 快速系统需要硬件和软件组件的组合。FlexPod Express 还介绍了以两个单位向系统添加虚拟机管理程序节点所需的硬件组件。 
+---
+= 技术要求
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+FlexPod 快速系统需要硬件和软件组件的组合。FlexPod Express 还介绍了以两个单位向系统添加虚拟机管理程序节点所需的硬件组件。
+
+
+
+== 硬件要求
+
+无论选择何种虚拟机管理程序，所有 FlexPod 快速配置都使用相同的硬件。因此，即使业务需求发生变化，您也可以在同一个 FlexPod Express 硬件上使用不同的虚拟机管理程序。
+
+下表列出了 FlexPod 快速配置和实施所需的硬件组件。在任何解决方案实施中使用的硬件组件可能会因客户要求而异。
+
+|===
+| 硬件 | 数量 
+
+
+| AFF C190 双节点集群 | 1. 
+
+
+| Cisco C220 M5 服务器 | 2. 
+
+
+| Cisco Nexus 31108PC-V 交换机 | 2. 
+
+
+| 适用于 Cisco UCS C220 M5 机架式服务器的 Cisco UCS 虚拟接口卡（ VIC ） 1457 | 2. 
+|===
+下表列出了实施 10GbE 所需的硬件以及基本配置。
+
+|===
+| 硬件 | 数量 
+
+
+| Cisco UCS C220 M5 服务器 | 2. 
+
+
+| Cisco VIC 1457 | 2. 
+|===
+
+
+== 软件要求
+
+下表列出了实施 FlexPod 快速解决方案架构所需的软件组件。
+
+|===
+| 软件 | version | 详细信息 
+
+
+| Cisco 集成管理控制器（ CIMC ） | 4.0.4 | 适用于 Cisco UCS C220 M5 机架式服务器 
+
+
+| Cisco nenic 驱动程序 | 1.0.29 | 适用于 VIC 1457 接口卡 
+
+
+| Cisco NX-OS | 7.0 （ 3 ） i7 （ 6 ） | 适用于 Cisco Nexus 31108PC-V 交换机 
+
+
+| NetApp ONTAP | 9.6 | 适用于 AFF C190 控制器 
+|===
+下表列出了在 FlexPod Express 上实施所有 VMware vSphere 所需的软件。
+
+|===
+| 软件 | version 
+
+
+| VMware vCenter Server 设备 | 6.7U2 
+
+
+| VMware vSphere ESXi 虚拟机管理程序 | 6.7U2 
+
+
+| 适用于 ESXi 的 NetApp VAAI 插件 | 1.1.2 
+
+
+| NetApp VSC | 9.6 
+|===

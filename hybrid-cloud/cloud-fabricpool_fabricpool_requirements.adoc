@@ -1,0 +1,135 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_fabricpool_requirements.html 
+keywords: cloud, fabricpool, flexpod, requirements, platforms, intercluster, lif, connectivity, volume, licensing, object, store, profiler 
+summary: FabricPool 要求使用 ONTAP 9.2 或更高版本，并在本节列出的任何平台上使用 SSD 聚合。 
+---
+= FabricPool 要求
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+FabricPool 要求使用 ONTAP 9.2 或更高版本，并在本节列出的任何平台上使用 SSD 聚合。其他 FabricPool 要求取决于所附加的云层。对于容量固定且相对较小的入门级 AFF 平台，例如 NetApp AFF C190 ， FabricPool 可以非常高效地将非活动数据移至云层。
+
+
+
+== 平台
+
+以下平台支持 FabricPool ：
+
+* NetApp AFF
++
+** A800
+** A700S ， A700
+** A320 ， A300
+** A220 ， A200
+** C190
+** AFF8080 ， AFF8060 和 AFF8040
+
+
+* NetApp FAS
++
+** FAS9000
+** FAS8200
+** FAS8080 ， FAS8060 和 FAS8040
+** FAS2750 ， FAS2720
+** FAS2650 ， FAS2620
+
+
+
+
+
+NOTE: 只有 FAS 平台上的 SSD 聚合才能使用 FabricPool 。
+
+* 云层
++
+** 阿里云对象存储服务（标准，不常访问）
+** Amazon S3 （ Standard ， Standard-IA ， One Zone-IA ，智能分层）
+** Amazon Commercial Cloud Services （ C2S ）
+** Google Cloud Storage （多区域，区域，近线，冷线）
+** IBM Cloud Object Storage （标准，存储，冷存储， Flex ）
+** Microsoft Azure Blob Storage （热存储和冷存储）
+
+
+
+
+
+
+== 集群间 LIFs
+
+使用 FabricPool 的集群高可用性（ HA ）对需要两个集群间逻辑接口（ LIF ）才能与云层进行通信。NetApp 建议在其他 HA 对上创建集群间 LIF ，以便将云层无缝附加到这些节点上的聚合。
+
+ONTAP 用于连接到 AWS S3 对象存储的 LIF 必须位于 10 Gbps 端口上。
+
+如果在具有不同路由的节点上使用多个克隆用户 LIF ， NetApp 建议将其放置在不同的 IP 空间中。在配置期间， FabricPool 可以从多个 IP 空间中进行选择，但无法选择 IP 空间中的特定集群间 LIF 。
+
+
+NOTE: 禁用或删除集群间 LIF 会中断与云层的通信。
+
+
+
+== 连接
+
+FabricPool 读取延迟是与云层连接的函数。使用 10 Gbps 端口的集群间 LIF （如下图所示）可提供充足的性能。NetApp 建议验证特定网络环境的延迟和吞吐量，以确定其对 FabricPool 性能的影响。
+
+
+NOTE: 在低性能环境中使用 FabricPool 时，必须继续满足客户端应用程序的最低性能要求，并相应地调整恢复时间目标。
+
+image:cloud-fabricpool_image6.png["错误：缺少图形映像"]
+
+
+
+=== 对象存储配置程序
+
+对象存储配置程序（如下图所示）可通过 ONTAP 命令行界面访问，它可在将对象存储连接到 FabricPool 聚合之前测试这些对象存储的延迟和吞吐量性能。
+
+
+NOTE: 必须先将云层添加到 ONTAP 中，然后才能将其与对象存储配置程序结合使用。
+
+使用以下命令从 ONTAP 中的高级权限模式启动对象存储配置程序：
+
+....
+storage aggregate object-store profiler start -object-store-name <name> -node <name>
+....
+要查看结果，请运行以下命令：
+
+....
+storage aggregate object-store profiler show
+....
+云层提供的性能与性能层上的性能不同（通常为 GB/ 秒）。虽然 FabricPool 聚合可以轻松提供类似于 SATA 的性能，但对于不需要类似 SATA 的性能的分层解决方案，它们还可以承受高达 10 秒的延迟和低吞吐量。
+
+image:cloud-fabricpool_image7.png["错误：缺少图形映像"]
+
+
+
+== Volumes
+
+存储精简配置是 FlexPod 虚拟基础架构管理员的标准做法。NetApp Virtual Storage Console （ VSC ）无需任何空间保证（精简配置）即可为 VMware 数据存储库配置存储卷，并根据 NetApp 最佳实践使用优化的存储效率设置。如果使用 VSC 创建 VMware 数据存储库，则无需执行其他操作，因为不应为该数据存储库卷分配空间保证。
+
+
+NOTE: FabricPool 无法将云层附加到包含使用 " 无 " 以外的空间保证的卷的聚合（例如 " 卷 " ）。
+
+....
+volume modify -space-guarantee none
+....
+设置 `spage-guarantee none` 参数可为卷提供精简配置。此保证类型的卷所占用的空间量会随着数据的添加而增加，而不是由初始卷大小决定。这种方法对于 FabricPool 至关重要，因为卷必须支持热数据并恢复到性能层的云层数据。
+
+
+
+== 许可
+
+在为 AFF 和 FAS 混合闪存系统附加第三方对象存储提供程序（例如 Amazon S3 ）作为云层时， FabricPool 需要基于容量的许可证。
+
+FabricPool 许可证以永久或按期限（ 1 年或 3 年）形式提供。
+
+当存储在云层上的数据量（已用容量）达到许可容量时，分层到云层将停止。除非增加许可证容量，否则无法对其他数据进行分层，包括使用所有分层策略将 SnapMirror 副本分层到卷。虽然分层停止，但仍可从云层访问数据。在增加许可容量之前，其他冷数据仍会保留在 SSD 上。
+
+购买任何新的 ONTAP 9.5 或更高版本的集群时都会附带一个 10 TB 容量的基于期限的免费 FabricPool 许可证，但可能会产生额外的支持成本。可以以 1 TB 为增量购买 FabricPool 许可证（包括现有许可证的额外容量）。
+
+只能从不包含 FabricPool 聚合的集群中删除 FabricPool 许可证。
+
+
+NOTE: FabricPool 许可证在集群范围内。购买许可证时，您应具有可用的 UUID （`cluster identify show` ）。有关其他许可信息，请参见 https://kb.netapp.com/support/s/article/ka21A0000008qb3QAA/ONTAP-FabricPool-FP-Licensing-Overview["NetApp 知识库"^]。

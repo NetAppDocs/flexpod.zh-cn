@@ -1,0 +1,441 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-c190-deploy_deploy_cisco_nexus_31108pc-v.html 
+keywords: deploy, cisco, nexus, initial, setup, swtich, 31108pc, v, configure, switch, server 
+summary:  
+---
+= 部署 Cisco Nexus 31108PC-V
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+本节详细介绍了 FlexPod Express 环境中使用的 Cisco Nexus 331108PC-V 交换机配置。
+
+
+
+== Cisco Nexus 31108PC-V 交换机的初始设置
+
+以下过程介绍了如何配置 Cisco Nexus 交换机以在基础 FlexPod Express 环境中使用。
+
+
+NOTE: 此操作步骤假定您使用的是运行 NX-OS 软件版本 7.0 （ 3 ） i7 （ 6 ）的 Cisco Nexus 31108PC-V 。
+
+. 首次启动并连接到交换机的控制台端口后， Cisco NX-OS 设置将自动启动。此初始配置可解决基本设置，例如交换机名称， mgmt0 接口配置和安全 Shell （ SSH ）设置。
+. FlexPod 快速管理网络可以通过多种方式进行配置。31108PC-V 交换机上的 mgmt0 接口可以连接到现有管理网络，也可以采用背对背配置连接 31108PC-V 交换机的 mgmt0 接口。但是，此链路不能用于外部管理访问，例如 SSH 流量。
++
+
+NOTE: 在本部署指南中， FlexPod Express Cisco Nexus 31108PC-V 交换机连接到现有管理网络。
+
+. 要配置 Cisco Nexus 31108PC-V 交换机，请启动交换机并按照屏幕上的提示进行操作，如此处所示，对这两台交换机进行初始设置，并将相应的值替换为交换机特定信息。
++
+....
+This setup utility will guide you through the basic configuration of
+the system. Setup configures only enough connectivity for management
+of the system.
+*Note: setup is mainly used for configuring the system initially,
+when no configuration is present. So setup always assumes system
+defaults and not the current system configuration values.
+Press Enter at anytime to skip a dialog. Use ctrl-c at anytime
+to skip the remaining dialogs.
+Would you like to enter the basic configuration dialog (yes/no): y
+Do you want to enforce secure password standard (yes/no) [y]: y
+  Create another login account (yes/no) [n]: n
+  Configure read-only SNMP community string (yes/no) [n]: n
+  Configure read-write SNMP community string (yes/no) [n]: n
+  Enter the switch name : 31108PC-V-B
+  Continue with Out-of-band (mgmt0) management configuration? (yes/no) [y]: y
+    Mgmt0 IPv4 address : <<var_switch_mgmt_ip>>
+    Mgmt0 IPv4 netmask : <<var_switch_mgmt_netmask>>
+  Configure the default gateway? (yes/no) [y]: y
+    IPv4 address of the default gateway : <<var_switch_mgmt_gateway>>
+  Configure advanced IP options? (yes/no) [n]: n
+  Enable the telnet service? (yes/no) [n]: n
+  Enable the ssh service? (yes/no) [y]: y
+    Type of ssh key you would like to generate (dsa/rsa) [rsa]: rsa
+    Number of rsa key bits <1024-2048> [1024]: <enter>
+  Configure the ntp server? (yes/no) [n]: y
+    NTP server IPv4 address : <<var_ntp_ip>>
+  Configure default interface layer (L3/L2) [L2]: <enter>
+  Configure default switchport interface state (shut/noshut) [noshut]: <enter>
+  Configure CoPP system profile (strict/moderate/lenient/dense) [strict]: <enter>
+....
+. 然后，您将看到配置摘要，系统会询问您是否要对其进行编辑。如果配置正确，请输入 `n` 。
++
+....
+Would you like to edit the configuration? (y
+es/no) [n]: n
+....
+. 然后，系统会询问您是否要使用此配置并保存它。如果是，请输入 `y` 。
++
+....
+Use this configuration and save it? (yes/no) [y]: Enter
+....
+. 对 Cisco Nexus 交换机 B 重复此操作步骤
+
+
+
+
+== 启用高级功能
+
+要提供其他配置选项，必须在 Cisco NX-OS 中启用某些高级功能。要在 Cisco Nexus 交换机 A 和交换机 B 上启用相应功能，请使用命令（ config t ）进入配置模式并运行以下命令：
+
+....
+feature interface-vlan
+feature lacp
+feature vpc
+....
+
+NOTE: 默认端口通道负载平衡哈希使用源 IP 地址和目标 IP 地址来确定端口通道中各个接口之间的负载平衡算法。除了源 IP 地址和目标 IP 地址之外，还可以为哈希算法提供更多输入，从而在端口通道的各个成员之间实现更好的分布。出于同样的原因， NetApp 强烈建议将源和目标 TCP 端口添加到哈希算法中。
+
+在配置模式（ config t ）下，输入以下命令，在 Cisco Nexus 交换机 A 和交换机 B 上设置全局端口通道负载平衡配置：
+
+....
+port-channel load-balance src-dst ip-l4port
+....
+
+
+== 配置全局生成树
+
+Cisco Nexus 平台使用一种新的保护功能，称为网桥保证。如果设备不再运行生成树算法，则网桥保证有助于防止单向链路或其他软件故障继续转发数据流量。根据平台的不同，可以将端口置于多种状态之一，包括网络或边缘状态。
+
+NetApp 建议设置网桥保证，以便默认情况下将所有端口都视为网络端口。此设置强制网络管理员查看每个端口的配置。此外，它还会显示最常见的配置错误，例如未标识的边缘端口或未启用网桥保证功能的邻居。此外，生成树块中的端口较多而不是太少会更安全，这样就可以使用默认端口状态来增强网络的整体稳定性。
+
+添加服务器，存储和上行链路交换机时，请密切关注生成树的状态，尤其是在它们不支持网桥保证的情况下。在这种情况下，您可能需要更改端口类型才能使端口处于活动状态。
+
+默认情况下，作为另一层保护，在边缘端口上启用网桥协议数据单元（ BPDU ）保护。为了防止网络中出现环路，如果在此接口上看到来自另一个交换机的 BPDU ，则此功能将关闭此端口。
+
+在配置模式（ config t ）下，运行以下命令以配置 Cisco Nexus 交换机 A 和交换机 B 上的默认生成树选项，包括默认端口类型和 BPDU 保护：
+
+....
+spanning-tree port type network default
+spanning-tree port type edge bpduguard default
+spanning-tree port type edge bpdufilter default
+ntp server <<var_ntp_ip>> use-vrf management
+ntp master 3
+....
+
+
+== 定义 VLAN
+
+在配置具有不同 VLAN 的各个端口之前，必须在交换机上定义第 2 层 VLAN 。此外，最好对 VLAN 进行命名，以便将来进行故障排除。
+
+在配置模式（ config t ）下，运行以下命令来定义和描述 Cisco Nexus 交换机 A 和交换机 B 上的第 2 层 VLAN ：
+
+....
+vlan <<nfs_vlan_id>>
+  name NFS-VLAN
+vlan <<iSCSI_A_vlan_id>>
+  name iSCSI-A-VLAN
+vlan <<iSCSI_B_vlan_id>>
+  name iSCSI-B-VLAN
+vlan <<vmotion_vlan_id>>
+  name vMotion-VLAN
+vlan <<vmtraffic_vlan_id>>
+  name VM-Traffic-VLAN
+vlan <<mgmt_vlan_id>>
+  name MGMT-VLAN
+vlan <<native_vlan_id>>
+  name NATIVE-VLAN
+exit
+....
+
+
+== 配置访问和管理端口说明
+
+与为第 2 层 VLAN 分配名称一样，为所有接口设置说明有助于配置和故障排除。
+
+在每个交换机的配置模式（ config t ）中，为 FlexPod 快速大型配置输入以下端口说明：
+
+
+
+=== Cisco Nexus 交换机 A
+
+....
+int eth1/1
+  description AFF C190-A e0c
+int eth1/2
+  description AFF C190-B e0c
+int eth1/3
+  description UCS-Server-A: MLOM port 0 vSwitch0
+int eth1/4
+  description UCS-Server-B: MLOM port 0 vSwitch0
+int eth1/5
+  description UCS-Server-A: MLOM port 1 iScsiBootvSwitch
+int eth1/6
+  description UCS-Server-B: MLOM port 1 iScsiBootvSwitch
+int eth1/25
+  description vPC peer-link 31108PC-V-B 1/25
+int eth1/26
+  description vPC peer-link 31108PC-V-B 1/26
+int eth1/33
+  description AFF C190-A e0M
+int eth1/34
+  description UCS Server A: CIMC
+....
+
+
+=== Cisco Nexus 交换机 B
+
+....
+int eth1/1
+  description AFF C190-A e0d
+int eth1/2
+  description AFF C190-B e0d
+int eth1/3
+  description UCS-Server-A: MLOM port 2 vSwitch0
+int eth1/4
+description UCS-Server-B: MLOM port 2 vSwitch0
+int eth1/5
+  description UCS-Server-A: MLOM port 3 iScsiBootvSwitch
+int eth1/6
+  description UCS-Server-B: MLOM port 3 iScsiBootvSwitch
+int eth1/25
+  description vPC peer-link 31108PC-V-A 1/25
+int eth1/26
+  description vPC peer-link 31108PC-V-A 1/26
+int eth1/33
+  description AFF C190-B e0M
+int eth1/34
+  description UCS Server B: CIMC
+....
+
+
+== 配置服务器和存储管理接口
+
+服务器和存储的管理接口通常仅使用一个 VLAN 。因此，请将管理接口端口配置为访问端口。为每个交换机定义管理 VLAN ，并将生成树端口类型更改为边缘。
+
+在配置模式（ config t ）下，输入以下命令为服务器和存储的管理接口配置端口设置：
+
+
+
+=== Cisco Nexus 交换机 A
+
+....
+int eth1/33-34
+  switchport mode access
+  switchport access vlan <<mgmt_vlan>>
+  spanning-tree port type edge
+  speed 1000
+exit
+....
+
+
+=== Cisco Nexus 交换机 B
+
+....
+int eth1/33-34
+  switchport mode access
+  switchport access vlan <<mgmt_vlan>>
+  spanning-tree port type edge
+  speed 1000
+exit
+....
+
+
+== 执行虚拟端口通道全局配置
+
+通过虚拟端口通道（ vPC ），物理连接到两个不同 Cisco Nexus 交换机的链路可以显示为连接到第三个设备的单端口通道。第三个设备可以是交换机，服务器或任何其他网络设备。vPC 可以提供第 2 层多路径功能，通过增加带宽，在节点之间启用多个并行路径以及存在备用路径的负载平衡流量，您可以创建冗余。
+
+vPC 具有以下优势：
+
+* 允许单个设备在两个上游设备之间使用端口通道
+* 消除生成树协议阻止的端口
+* 提供无环路拓扑
+* 使用所有可用的上行链路带宽
+* 在链路或设备发生故障时提供快速融合
+* 提供链路级别故障恢复能力
+* 帮助提供高可用性
+
+
+要使 vPC 功能正常运行，需要在两个 Cisco Nexus 交换机之间进行一些初始设置。如果使用背对背 mgmt0 配置，请使用接口上定义的地址，并使用 `ping` ` <<switch_A/B_mgmt0_IP_addr>>vRF` management 命令验证它们是否可以通信。
+
+在配置模式（ config t ）下，运行以下命令为两台交换机配置 vPC 全局配置：
+
+
+
+=== Cisco Nexus 交换机 A
+
+....
+vpc domain 1
+ role priority 10
+  peer-keepalive destination <<switch_B_mgmt0_ip_addr>> source <<switch_A_mgmt0_ip_addr>> vrf
+management
+peer-switch
+peer-gateway
+auto-recovery
+delay restore 150
+ip arp synchronize
+int eth1/25-26
+  channel-group 10 mode active
+int Po10
+  description vPC peer-link
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan <<native_vlan_id>>
+  switchport trunk allowed vlan <<nfs_vlan_id>>,<<vmotion_vlan_id>>, <<vmtraffic_vlan_id>>, <<mgmt_vlan>, <<iSCSI_A_vlan_id>>, <<iSCSI_B_vlan_id>>
+  spanning-tree port type network
+  vpc peer-link
+  no shut
+exit
+copy run start
+....
+
+
+=== Cisco Nexus 交换机 B
+
+....
+vpc domain 1
+  peer-switch
+  role priority 20
+  peer-keepalive destination <<switch_A_mgmt0_ip_addr>> source <<switch_B_mgmt0_ip_addr>> vrf management
+  peer-gateway
+  auto-recovery
+  delay-restore 150
+   ip arp synchronize
+int eth1/25-26
+  channel-group 10 mode active
+int Po10
+  description vPC peer-link
+  switchport
+  switchport trunk native vlan <<native_vlan_id>>
+  switchport trunk allowed vlan <<nfs_vlan_id>>,<<vmotion_vlan_id>>, <<vmtraffic_vlan_id>>, <<mgmt_vlan>>, <<iSCSI_A_vlan_id>>, <<iSCSI_B_vlan_id>>
+  spanning-tree port type network
+  vpc peer-link
+no shut
+exit
+copy run start
+....
+
+
+== 配置存储端口通道
+
+NetApp 存储控制器允许使用链路聚合控制协议（ Link Aggregation Control Protocol ， LACP ）与网络建立主动 - 主动连接。最好使用 LACP ，因为它会在交换机之间添加协商和日志记录功能。由于网络是为 vPC 设置的，因此，通过这种方法，您可以将主动 - 主动连接从存储连接到不同的物理交换机。每个控制器与每个交换机之间都有两条链路。但是，所有四个链路都属于同一个 vPC 和接口组（ ifgrp ）。
+
+在配置模式（ config t ）下，对每个交换机运行以下命令，为连接到 NetApp AFF 控制器的端口配置各个接口以及生成的端口通道配置。
+
+. 在交换机 A 和交换机 B 上运行以下命令，为存储控制器 A 配置端口通道：
++
+....
+int eth1/1
+  channel-group 11 mode active
+int Po11
+  description vPC to Controller-A
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan <<native_vlan_id>>
+  switchport trunk allowed vlan <<nfs_vlan_id>>,<<mgmt_vlan_id>>,<<iSCSI_A_vlan_id>>, <<iSCSI_B_vlan_id>>
+  spanning-tree port type edge trunk
+  mtu 9216
+  vpc 11
+  no shut
+....
+. 在交换机 A 和交换机 B 上运行以下命令，为存储控制器 B 配置端口通道：
++
+....
+int eth1/2
+  channel-group 12 mode active
+int Po12
+  description vPC to Controller-B
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan <<native_vlan_id>>
+  switchport trunk allowed vlan <<nfs_vlan_id>>,<<mgmt_vlan_id>>, <<iSCSI_A_vlan_id>>, <<iSCSI_B_vlan_id>>
+  spanning-tree port type edge trunk
+  mtu 9216
+  vpc 12
+  no shut
+exit
+copy run start
+....
+
+
+
+
+== 配置服务器连接
+
+Cisco UCS 服务器具有一个四端口虚拟接口卡 VIC1457 ，用于数据流量以及使用 iSCSI 启动 ESXi 操作系统。这些接口配置为相互故障转移，可在单链路之外提供额外冗余。通过将这些链路分布在多个交换机上，即使在交换机完全发生故障时，服务器也能正常运行。
+
+在配置模式（ config t ）下，运行以下命令，为连接到每个服务器的接口配置端口设置。
+
+
+
+=== Cisco Nexus 交换机 A ： Cisco UCS Server-A 和 Cisco UCS Server-B 配置
+
+....
+int eth1/5
+  switchport mode trunk
+  switchport trunk native vlan <<native_vlan_id>>
+  switchport trunk allowed vlan <<iSCSI_A_vlan_id>>,<<nfs_vlan_id>>,<<vmotion_vlan_id>>,<<vmtraffic_vlan_id>>,<<mgmt_vlan_id>>
+  spanning-tree port type edge trunk
+  mtu 9216
+  no shut
+exit
+copy run start
+....
+
+
+=== Cisco Nexus 交换机 B ： Cisco UCS Server-A 和 Cisco UCS Server-B 配置
+
+....
+int eth1/6
+  switchport mode trunk
+  switchport trunk native vlan <<native_vlan_id>>
+  switchport trunk allowed vlan <<iSCSI_B_vlan_id>>,<<nfs_vlan_id>>,<<vmotion_vlan_id>>,<<vmtraffic_vlan_id>>,<<mgmt_vlan_id>>
+  spanning-tree port type edge trunk
+  mtu 9216
+  no shut
+exit
+copy run start
+....
+
+
+== 配置服务器端口通道
+
+在交换机 A 和交换机 B 上运行以下命令，为 Server-A 配置端口通道：
+
+....
+int eth1/3
+  channel-group 13 mode active
+int Po13
+  description vPC to Server-A
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan <<native_vlan_id>>
+  switchport trunk allowed vlan  <<nfs_vlan_id>>,<<vmotion_vlan_id>>,<<vmtraffic_vlan_id>>,<<mgmt_vlan_id>>
+  spanning-tree port type edge trunk
+  mtu 9216
+  vpc 13
+  no shut
+....
+在交换机 A 和交换机 B 上运行以下命令，为 Server-B 配置端口通道：
+
+....
+int eth1/4
+  channel-group 14 mode active
+int Po14
+  description vPC to Server-B
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan <<native_vlan_id>>
+  switchport trunk allowed vlan  <<nfs_vlan_id>>,<<vmotion_vlan_id>>,<<vmtraffic_vlan_id>>,<<mgmt_vlan_id>>
+  spanning-tree port type edge trunk
+  mtu 9216
+  vpc 14
+  no shut
+....
+
+NOTE: 此解决方案验证使用的 MTU 为 9000 。但是，您可以根据应用程序要求为 MTU 配置不同的值。在整个 FlexPod 解决方案中设置相同的 MTU 值非常重要。组件之间的 MTU 配置不正确会导致数据包被丢弃，需要重新传输这些数据包，从而影响解决方案的整体性能。
+
+
+NOTE: 要通过添加更多 Cisco UCS 服务器来扩展解决方案，请使用交换机 A 和 B 上新添加的服务器所插入的交换机端口运行上述命令
+
+
+
+== 通过上行链路连接到现有网络基础架构
+
+根据可用的网络基础架构，可以使用多种方法和功能来上行链路连接 FlexPod 环境。如果存在现有的 Cisco Nexus 环境， NetApp 建议使用 vPC 通过上行链路将 FlexPod 环境中的 Cisco Nexus 31108 交换机连接到基础架构中。对于 10GbE 基础架构解决方案，上行链路可以是 10GbE 上行链路，如果需要，上行链路可以是 1GbE 基础架构解决方案。可以使用上述过程创建到现有环境的上行链路 vPC 。配置完成后，请务必运行 copy start 在每个交换机上保存配置。
+
+link:express-c-series-c190-design_netapp_storage_deployment_procedure_@part_1@.html["接下来： NetApp 存储部署操作步骤（第 1 部分）"]

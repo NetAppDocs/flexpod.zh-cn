@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_flexpod_overview_and_architecture.html 
+keywords: flexpod, cloud, fabricpool, networking, cisco, mds, storage, ucs, vmware, vsphere 
+summary: FlexPod 是一组定义的硬件和软件，可为虚拟化和非虚拟化解决方案奠定集成基础。 
+---
+= FlexPod 概述和架构
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== FlexPod 概述
+
+FlexPod 是一组定义的硬件和软件，可为虚拟化和非虚拟化解决方案奠定集成基础。FlexPod 在一个软件包中包含 NetApp AFF 存储， Cisco Nexus 网络， Cisco MDS 存储网络， Cisco 统一计算系统（ Cisco UCS ）和 VMware vSphere 软件。该设计非常灵活，可以将网络，计算和存储安装到一个数据中心机架中，也可以根据客户的数据中心设计进行部署。端口密度允许网络组件容纳多种配置。
+
+FlexPod 架构的一个优势是能够自定义或灵活调整环境以满足客户的需求。FlexPod 单元可以根据需求和需求的变化轻松进行扩展。一个单元既可以纵向扩展（向 FlexPod 单元添加资源），也可以横向扩展（添加更多 FlexPod 单元）。FlexPod 参考架构重点介绍了光纤通道和基于 IP 的存储解决方案的故障恢复能力，成本效益以及部署简便性。存储系统能够在一个接口上提供多个协议，这为客户提供了一个选择并保护了他们的投资，因为它确实是一种 " 一次线 " 架构。下图显示了 FlexPod 的许多硬件组件。
+
+image:cloud-fabricpool_image2.png["错误：缺少图形映像"]
+
+
+
+== FlexPod 架构
+
+下图显示了 VMware vSphere 和 FlexPod 解决方案的组件以及 Cisco UCS 6454 互联阵列所需的网络连接。此设计包含以下组件：
+
+* Cisco UCS 5108 刀片式服务器机箱与 Cisco UCS 互联阵列之间的端口通道 40 Gb 以太网连接
+* Cisco UCS 互联阵列与 Cisco Nexus 9000 之间的 40 Gb 以太网连接
+* Cisco Nesxus 9000 和 NetApp AFF A300 存储阵列之间的 40 Gb 以太网连接
+
+
+随着 Cisco UCS 互联阵列和 NetApp AFF A300 之间的 Cisco MDS 交换机的推出，这些基础架构选项得以扩展。此配置可使 FC 启动的主机对共享存储进行 16 Gb FC 块级访问。此参考架构强化了一次线连接策略，因为在向该架构添加额外存储时，不需要从主机重新布线到 Cisco UCS 互联阵列。
+
+image:cloud-fabricpool_image3.png["错误：缺少图形映像"]

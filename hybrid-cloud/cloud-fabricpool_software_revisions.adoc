@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_software_revisions.html 
+keywords: software, revision, hardware, versions, basic, requirements, cloud, fabricpool 
+summary: 下表显示了经过验证的硬件和软件版本，此页面详细介绍了满足基本要求后应采取的步骤。 
+---
+= 软件版本
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+下表显示了经过验证的硬件和软件版本。
+
+|===
+| 层 | Device | 图像 | 注释 
+
+
+| 存储 | NetApp AFF A300 | ONTAP 9.6P2 |  
+
+
+| 计算 | 采用 Cisco UCS VIC 1340 的 Cisco UCS B200 M5 刀片式服务器 | 4.0 版（ 4b ） |  
+
+
+.2+| 网络 | Cisco Nexus 6332-16UP 互联阵列 | 4.0 版（ 4b ） |  
+
+
+| NX-OS 独立模式下的 Cisco Nexus 93180YC-EX 交换机 | 版本 7.0 （ 3 ） i7 （ 6 ） |  
+
+
+| 存储网络 | Cisco MDS 9148S | 8.3 （ 2 ）版 |  
+
+
+.2+| 虚拟机管理程序 .2+|  | VMware vSphere ESXi 6.7U2 | ESXi 6.7.013006603 
+
+
+| VMware vCenter Server | vCenter Server 6.7.0.30000 内部版本 13639309 
+
+
+| 云提供商 |  | Amazon AWS S3 | 具有默认选项的标准 S3 存储分段 
+|===
+中概述了 FabricPool 的基本要求 link:cloud-fabricpool_fabricpool_requirements.html["FabricPool 要求"]。满足所有基本要求后，完成以下步骤以配置 FabricPool ：
+
+. 安装 FabricPool 许可证。
+. 创建 AWS S3 对象存储分段。
+. 将云层添加到 ONTAP 。
+. 将云层附加到聚合。
+. 设置卷分层策略。
+
+
+link:cloud-fabricpool_install_fabricpool_license.html["下一步：安装 FabricPool 许可证。"]

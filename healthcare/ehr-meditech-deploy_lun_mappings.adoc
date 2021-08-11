@@ -1,0 +1,15 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_lun_mappings.html 
+keywords: lun, mappings, meditech, host 
+summary: 创建 LUN 时会为 MEDITECH 主机建立 LUN 映射。 
+---
+= LUN 映射
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+创建 LUN 时会为 MEDITECH 主机建立 LUN 映射。

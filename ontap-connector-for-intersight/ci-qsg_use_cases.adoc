@@ -1,0 +1,105 @@
+---
+sidebar: sidebar 
+permalink: ontap-connector-for-intersight/ci-qsg_use_cases.html 
+keywords: netapp, ontap, cisco, intersight, storage, use cases, monitor, monitoring, orchestration, reference workflows, custom workflows, storage inventory, widgets 
+summary: 以下是从 Cisco Intersight 监控和编排 NetApp 存储的几个用例示例。 
+---
+= 用例
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+以下是从 Cisco Intersight 监控和编排 NetApp 存储的几个用例示例。
+
+
+
+== 用例 1 ：监控 NetApp 存储清单和小工具
+
+如果 NetApp 存储环境在 Cisco Intersight 中可用，您可以从存储清单中详细监控 NetApp 存储对象，并从存储小工具中获取概览。
+
+. 部署 Intersight Assist OVA （ vCenter 环境中的 OnPrem 任务）。
+. 在 Intersight Assist 中添加 NetApp AIQ UM 设备。
+. 转到 * 存储 * 并浏览 NetApp 存储清单。
+. 将适用于 NetApp 存储的 * 小工具 * 添加到 * 监控信息板 * 中。
++
+这是一个 https://tv.netapp.com/detail/video/6228096841001["链接。"^] 观看 Cisco Intersight 提供的 NetApp ONTAP 存储监控功能视频。
+
+
+
+
+
+== 用例 2 ：使用参考工作流编排 NetApp 存储
+
+在 Cisco Intersight 中提供 NetApp 存储和 vCenter 环境后，您可以执行开箱即用的端到端参考工作流，其中包括存储和虚拟化任务。
+
+. 部署 Intersight Assist OVA （ vCenter 环境中的 OnPrem 任务）。
+. 在 Intersight Assist 中添加 NetApp AIQ UM 设备。
+. 通过 Intersight Assist 将 vCenter 目标添加到 Intersight 。
+. 执行开箱即用的参考工作流。
++
+以下是参考工作流列表：
+
++
+** 新的存储接口
+** 新建 VMFS 数据存储库
+** 更新 VMFS 数据存储库
+** 删除 VMFS 数据存储库
+** 新建 NAS 数据存储库
+** 更新 NAS 数据存储库
+** 删除 NAS 数据存储库
+** 新建存储主机
+** 更新存储主机
+** 删除存储主机
+** 新建存储导出策略
+** 删除存储导出策略
+** 新建 Storage Virtual Machine
+** 新建虚拟机
+
+
+
+
+
+
+== 用例 3 ：使用无设计人员表单的自定义工作流
+
+如果 NetApp 存储和 vCenter 环境在 Cisco Intersight 中可用，则可以使用 NetApp 存储和虚拟化任务构建自定义工作流。
+
+. 部署 Intersight Assist OVA （ vCenter 环境中的 OnPrem 任务）
+. 在 Intersight Assist 中添加 NetApp AIQ UM 设备。
+. 通过 Intersight Assist 将 vCenter 目标添加到 Intersight 。
+. 导航到 Intersight 中的 * 流程编排 * 选项卡。
+. 选择 * 创建工作流 * 。
+. 将存储和虚拟化任务添加到工作流中。
++
+以下是 Cisco Intersight 提供的 NetApp 存储任务：
+
++
+** 任务 1 ：将存储导出策略添加到卷
+** 任务 2 ：将启动程序连接到存储主机（ igroup ）
+** 任务 3 ：展开存储 LUN
+** 任务 4 ：展开存储卷
+** 任务 5 ：查找 NetApp igroup LUN 映射
+** 任务 6 ：按 ID 查找存储 LUN
+** 任务 7 ：按 ID 查找存储卷
+** 任务 8 ：新建存储导出策略
+** 任务 9 ：新建存储光纤通道接口
+** 任务 10 ：新建存储主机
+** 任务 11 ：新建存储 IP 接口
+** 任务 12 ：新建存储 LUN
+** 任务 13 ：新的存储 LUN ID
+** 任务 14 ：新建 Storage Virtual Machine
+** 任务 15 ：新建存储卷
+** 任务 16 ：删除存储导出策略
+** 任务 17 ：删除存储主机
+** 任务 18 ：删除存储 LUN
+** 任务 19 ：删除存储 LUN ID
+** 任务 20 ：删除存储卷
+
+
+
+
+要了解有关使用 NetApp 存储和虚拟化任务自定义工作流的更多信息，请观看视频 https://tv.netapp.com/detail/video/6228095945001["Cisco Intersight 中的 NetApp ONTAP 存储编排"^]。

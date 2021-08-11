@@ -1,0 +1,191 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-epic-sizing_technical_specifications_for_small,_medium,_and_large_architectures.html 
+keywords: technical, specifications, architecture, components, software, epic 
+summary: FlexPod 设计可提供一个灵活的基础架构，其中包含许多不同的组件和软件版本。 
+---
+= 小型，中型和大型架构的技术规格
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+FlexPod 设计可提供一个灵活的基础架构，其中包含许多不同的组件和软件版本。使用 ... https://fieldportal.netapp.com/content/443847["TR-4036 ： FlexPod 技术规格"^] 作为构建或组合有效 FlexPod 配置的指南。详细介绍的配置只是 FlexPod 的最低要求，它们只是一个示例。可以根据不同环境和使用情形的需要在所含产品系列中扩展这些功能。
+
+下表列出了 Epic 生产数据库工作负载的容量配置。列出的总容量可满足所有 Epic 组件的需求。
+
+|===
+|  | 小型 | 中等 | 大型 
+
+
+| 平台 | 一个 AFF A300 HA 对 | 一个 AFF A300 HA 对 | 一个 AFF A300 HA 对 
+
+
+| 磁盘架 | 24 个 3.8 TB | 48 个 3.8 TB | 96 个 3.8 TB 
+
+
+| Epic 数据库大小 | 3 到 20 TB | 20 TB-40 TB | >40 TB 
+
+
+| 总 IOPS | 22,000 | 50,000 | 125,000 
+
+
+| 原始 | 92.16 TB | 184.32 TB | 368.64 TB 
+
+
+| 可用容量 | 55.02 TiB | 134.36 TiB | 269.51 TiB 
+
+
+| 有效容量（ 2 ： 1 存储效率） | 130.04 TiB | 268.71 TiB | 539.03 TiB 
+|===
+单个 AFF A300 HA 对可以轻松满足 Epic 生产工作负载的需求。AFF A300 HA 对可以向上推 200 ， 000 IOPS ，从而满足大型 Epic 部署的需求，并为更多共享工作负载提供空间。
+
+某些客户环境可能会同时运行多个 Epic 生产工作负载，或者它们可能只是具有更高的 IOP 要求。在这种情况下，请与 NetApp 客户团队合作，根据所需的 IOPS 和容量估算存储系统的规模，并找到合适的平台来为工作负载提供服务。有些客户在一个 AFF A700 HA 对上运行多个 Epic 环境。
+
+下表列出了小型，中型和大型配置所需的标准软件。
+
+|===
+| 软件 | 产品系列 | 版本或版本 
+
+
+| 存储 | 数据 ONTAP | ONTAP 9.3 GA 
+
+
+.3+| 网络 | Cisco UCS-FI | Cisco UCS Manager 3.2 （ 2f ） 
+
+
+| Cisco 以太网交换机 | 7.0 （ 3 ） i7 （ 2 ） 
+
+
+| Cisco FC ： Cisco MDS 9132T | 8.2 （ 2 ） 
+
+
+.2+| 虚拟机管理程序 | 虚拟机管理程序 | VMware vSphere ESXi 6.5 U1 
+
+
+| 虚拟机 | RHEL 7.4 
+
+
+.4+| 管理 | 虚拟机管理程序管理系统 | VMware vCenter Server 6.5 U1 （ VCSA ） 
+
+
+| NetApp 虚拟存储控制台 | VSC 7.0P1 
+
+
+| SnapCenter | SnapCenter 4.0 
+
+
+| Cisco UCS Manager | 3.2 （ 2f ）或更高版本 
+|===
+下表列出了小型配置基础架构组件。
+
+|===
+| 层 | 产品系列 | 数量和型号 | 详细信息 
+
+
+.4+| 计算 | Cisco UCS 5108 机箱 | 两个 | 根据支持用户所需的刀片式服务器数量 
+
+
+| Cisco UCS 刀片式服务器 | 4 个 B200 M5 | 每个模块具有 2 个 18 核， 2.7 GHz 和 384 GB BIOS 3.2 （ 2f ） 
+
+
+| Cisco UCS VIC | 4 个 UCS 1340 | VMware ESXi fNIC FC 驱动程序： 1.6.0.34 VMware ESXi eNIC 以太网驱动程序： 1.0.6.0 （请参见表） 
+
+
+| 2 个 Cisco UCS FI | 使用 Cisco UCS Manager 3.2 的 6332-16UP （ 2f ） |  
+
+
+| 网络 | Cisco 以太网交换机 |  | 2 个 Cisco Nexus 93180YC-FX 
+
+
+.2+| 存储网络 | 用于 BLOB 存储的 IP 网络 N9k |  | FI 和 UCS 机箱 
+
+
+| FC ： Cisco MDS 9132T |  | 两台 Cisco 9132T 交换机 
+
+
+.3+| 存储 | NetApp AFF A300 | 1 个 HA 对 | 1 个双节点集群 
+
+
+| DS224C 磁盘架 | 1 个 DS224C 磁盘架（满载 24 个驱动器） | 一个完全填充的磁盘架 
+
+
+| SSD | 24 个 3.8 TB |  
+|===
+对于大多数小型 Epic 客户部署，一个 3.8 TB SSD 驱动器的磁盘架就足以满足要求。但是，对于共享工作负载，可能需要更多磁盘容量。您必须根据自己的容量进行相应的规模估算。
+
+下表列出了中型配置基础架构组件。
+
+|===
+| 层 | 产品系列 | 数量和型号 | 详细信息 
+
+
+.4+| 计算 | Cisco UCS 5108 机箱 | 四个 | 根据支持用户所需的刀片式服务器数量 
+
+
+| Cisco UCS 刀片式服务器 | 4 个 B200 M5 | 每个模块具有 2 个 18 核， 2.7 GHz/3.0 GHz 和 384 GB 4 插槽，用于缓存数据库 BIOS 3.2 （ 2f ） 
+
+
+| Cisco UCS VIC | 4 个 UCS 1340 | VMware ESXi fNIC FC 驱动程序： 1.6.0.34 VMware ESXi eNIC 以太网驱动程序： 1.0.6.0 （请参见表） 
+
+
+| 2 个 Cisco UCS FI | 使用 Cisco UCS Manager 3.2 （ 2f ）的 6332-16UP |  
+
+
+| 网络 | Cisco 以太网交换机 |  | 2 个 Cisco Nexus 93180YC-FX 
+
+
+.2+| 存储网络 | IP 网络：用于 BLOB 存储的 Cisco N9k |  | FI 和 Cisco UCS 机箱 
+
+
+| FC ： Cisco MDS 9132T |  | 两台 Cisco 9132T 交换机 
+
+
+.3+| 存储 | NetApp AFF A300 | 2 个 HA 对 | 2 个双节点集群，适用于所有 Epic 工作负载（生产，报告，清晰度， VMware ， Citrix ， CIFS 等） 
+
+
+| DS224C 磁盘架 | 2 个 DS224C 磁盘架 | 2 个完全填充的磁盘架 
+
+
+| SSD | 48 个 3.8 TB |  
+|===
+对于几乎所有中型 Epic 客户部署，四个磁盘架（含 3.8 TB SSD 驱动器）都足以满足要求。但是，请根据所需容量相应地评估您的磁盘容量要求和大小。
+
+下表列出了大型配置基础架构组件。
+
+|===
+| 层 | 产品系列 | 数量和型号 | 详细信息 
+
+
+.4+| 计算 | Cisco UCS 5108 机箱 | 8. |  
+
+
+| Cisco UCS 刀片式服务器 | 4 个 B200 M5 | 每个模块具有 2 个 24 核， 2.7 GHz 和 576 GB BIOS 3.2 （ 2f ） 
+
+
+| Cisco UCS VIC | 4 个 UCS 1340 | VMware ESXi fNIC FC 驱动程序： 1.6.0.34 VMware ESXi eNIC 以太网驱动程序： 1.0.6.0 （请参见表） 
+
+
+| 2 个 Cisco UCS FI | 使用 Cisco UCS Manager 3.2 （ 2f ）的 6332-16UP |  
+
+
+| 网络 | Cisco 以太网交换机 |  | 2 个 Cisco Nexus 93180YC-FX 
+
+
+.2+| 存储网络 | IP 网络：用于 BLOB 存储的 Cisco N9k |  |  
+
+
+| FC ： Cisco MDS 9706 |  | 两台 Cisco 9706 交换机 
+
+
+.3+| 存储 | NetApp AFF A300 | 3 个 HA 对 | 3 个双节点集群，用于 Epic 工作负载（生产，报告，澄清， VMware ， Citrix ， CIFS 等） 
+
+
+| DS224C 磁盘架 | 4 个 DS224C 磁盘架 | 4 个完全填充的磁盘架 
+
+
+| SSD | 96 个 3.8 TB |  
+|===
+某些客户环境可能会同时运行多个 Epic 生产工作负载，或者它们的 IOPS 要求可能更高。在这种情况下，请与 NetApp 客户团队合作，根据所需的 IOPS 和容量估算存储系统的规模，并确定适合处理工作负载的平台。有些客户在一个 AFF A700 HA 对上运行多个 Epic 环境。

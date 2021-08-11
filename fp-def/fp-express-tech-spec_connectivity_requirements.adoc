@@ -1,0 +1,50 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec_connectivity_requirements.html 
+keywords: connectivity, requirements, flexpod, express, aff, fas, e, series 
+summary: 本节介绍不同版本的 FlexPod Express 的连接要求。 
+---
+= 连接要求
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+本节介绍不同版本的 FlexPod Express 的连接要求。
+
+
+
+== FlexPod Express 与 NetApp FAS 的连接要求
+
+采用 NetApp FAS 的 FlexPod Express 的连接要求包括：
+
+* NetApp FAS 存储控制器必须直接连接到 Cisco Nexus 交换机，但 Cisco UCS 管理的配置除外，在该配置中，存储控制器连接到互联阵列。
+* 不能在核心 FlexPod 组件之间实时放置任何其他设备。
+* 要将 Cisco Nexus 3000/9000 系列交换机连接到 NetApp 存储控制器，需要使用虚拟端口通道（ Virtual Port Channel ， vPC ）。
+* 虽然不需要，但建议在整个环境中启用巨型帧支持。
+
+
+
+
+== 采用 NetApp E 系列的 FlexPod Express 的连接要求
+
+使用 E 系列的 FlexPod Express 的连接要求包括：
+
+* E 系列存储控制器必须直接连接到互联阵列。
+* 不应在核心 FlexPod 组件之间内联放置任何其他设备。
+* 互联阵列和以太网交换机之间需要使用 vPC 。
+
+
+
+
+== FlexPod Express 与 NetApp AFF 的连接要求
+
+采用 NetApp AFF 的 FlexPod Express 的连接要求包括：
+
+* NetApp AFF 存储控制器必须直接连接到 Cisco Nexus 交换机，但 Cisco UCS 管理的配置除外，在该配置中，存储控制器连接到网络结构。互连。
+* 不能在核心 FlexPod 组件之间实时放置任何其他设备。
+* 要将 Cisco Nexus 3000/9000 系列交换机连接到 NetApp 存储控制器，需要使用虚拟端口通道（ Virtual Port Channel ， vPC ）。
+* 虽然不需要，但建议在整个环境中启用巨型帧支持。
+

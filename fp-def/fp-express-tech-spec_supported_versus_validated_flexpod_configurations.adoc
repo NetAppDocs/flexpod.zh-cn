@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec_supported_versus_validated_flexpod_configurations.html 
+keywords: supported, cersus, validated, flexpod, express, configurations, imt 
+summary: FlexPod 架构由本文档中所述的一组规则定义。Cisco 硬件兼容性列表（ HCL ）和 NetApp IMT 必须支持硬件组件和软件配置。 
+---
+= 支持的 FlexPod 配置与经验证的 配置
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+FlexPod 架构由本文档中所述的一组规则定义。Cisco 硬件兼容性列表（ Hardware Compatibility List ， HCL ）和必须支持硬件组件和软件配置 http://mysupport.netapp.com/matrix["NetApp 互操作性表工具（ IMT ）"^]。
+
+每个 Cisco 验证设计（ Cisco Validated Design ， CVD ）或 NetApp 验证架构（ NetApp Verified Architecture ， NVA ）都是一种可能的 FlexPod 配置。Cisco 和 NetApp 会记录这些配置组合，并通过广泛的端到端测试对其进行验证。如果与这些配置不同的 FlexPod 部署遵循本文档中的准则，并且所有组件在 Cisco HCL 和 NetApp 中均列为兼容，则完全支持这些部署 http://mysupport.netapp.com/matrix["IMT"^]。
+
+例如，如果软件，硬件和配置符合本文档中定义的准则，则完全支持添加其他存储控制器或 Cisco UCS 服务器并将软件升级到较新版本。

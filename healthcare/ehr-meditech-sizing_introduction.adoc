@@ -1,0 +1,85 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-sizing_introduction.html 
+keywords: flexpod, directional, sizing, solution, benefits, scope, audience 
+summary: 本报告为 MEDITECH EHR 应用程序软件环境的 FlexPod 规模估算提供了指导。 
+---
+= TR-4774 ：适用于 MEDITECH 定向规模估算的 FlexPod
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Branon Agee ， John Duignan ， NetApp Mike Brennan ， Jon Ebmeir ， Cisco
+
+与以下合作伙伴：image:cisco logo.png["错误：缺少图形映像"]
+
+本报告为 MEDITECH EHR 应用程序软件环境的 FlexPod 规模估算提供了指导。
+
+
+
+== 目的
+
+可以部署 FlexPod 系统来托管 MEDITECH expanse ， 6.x ， 5.x 和 Magic 服务。托管 MEDITECH 应用程序层的 FlexPod 服务器为可靠的高性能基础架构提供了一个集成平台。FlexPod 集成平台由经验丰富的 FlexPod 渠道合作伙伴快速部署，并由 Cisco 和 NetApp 技术支持中心提供支持。
+
+规模估算基于 MEDITECH 的硬件配置提案和 MEDITECH 任务文档中的信息。目标是确定计算，网络和存储基础架构组件的最佳大小。
+
+。 link:ehr-meditech-sizing_meditech_workload_overview.html["Meditech 工作负载概述"] 第节介绍了可在 MEDITECH 环境中找到的计算和存储工作负载类型。
+
+。 link:ehr-meditech-sizing_technical_specifications_for_small,_medium_and_large_architectures.html["小型，中型和大型架构的技术规格"] 第节详细介绍了本节所述不同存储架构的示例材料清单。提供的配置仅供一般参考。请始终根据工作负载使用规模估算器调整系统的大小，并相应地调整配置。
+
+
+
+== 解决方案的整体优势
+
+在 FlexPod 架构基础上运行 MEDITECH 环境可以帮助医疗保健组织提高工作效率并降低资本和运营支出。FlexPod 提供了一个经过严格测试的预先验证的融合基础架构，该基础架构由 Cisco 和 NetApp 的战略合作伙伴关系提供。它经过专门设计和设计，可提供可预测的低延迟系统性能和高可用性。这种方法可以加快 MEDITECH EHR 系统用户的响应速度。
+
+Cisco 和 NetApp 的 FlexPod 解决方案通过高性能，模块化，预先验证，融合，虚拟化， 高效，可扩展且经济高效的平台。采用 MEDITECH 的 FlexPod 数据中心可为医疗保健行业带来以下优势：
+
+* * 模块化架构 * 。FlexPod 可通过针对每个特定工作负载的自定义 FlexPod 系统来满足 MEDITECH 模块化架构的各种需求。所有组件均通过集群模式服务器和存储管理网络结构进行连接，并使用一个统一的管理工具集。
+* * 简化操作并降低成本 * 。您可以通过使用更高效，可扩展的共享资源来取代原有平台，从而消除原有平台的成本和复杂性，无论临床医生身在何处，均可为其提供支持。此解决方案可提高资源利用率，从而提高投资回报率（ ROI ）。
+* * 加快基础架构部署 * 。FlexPod 数据中心与 MEDITECH 的集成设计使客户可以快速轻松地为现场和远程数据中心启动和运行新的基础架构。
+* * 横向扩展架构 * 。您可以将 SAN 和 NAS 从 TB 扩展到数十 PB ，而无需重新配置正在运行的应用程序。
+* * 无中断运行 * 。您可以在不中断业务的情况下执行存储维护，硬件生命周期操作和软件升级。
+* * 安全多租户 * 。此优势可满足日益增长的虚拟化服务器和共享存储基础架构需求，从而可以安全地多租户处理特定于设施的信息。如果您要托管多个数据库和软件实例，则此优势非常重要。
+* * 池化资源优化 * 。这一优势有助于减少物理服务器和存储控制器数量，平衡工作负载需求，提高利用率并同时提高性能。
+* * 服务质量（ QoS ）。 * FlexPod 可在整个堆栈上提供服务质量（ QoS ）。行业领先的 QoS 存储策略可在共享环境中提供不同的服务级别。这些策略可以为工作负载提供最佳性能，并有助于隔离和控制失控的应用程序。
+* * 存储效率 * 。您可以利用 NetApp 7 ： 1 存储效率降低存储成本。
+* * 灵活性 * 。FlexPod 系统提供行业领先的工作流自动化，编排和管理工具，可以使 IT 更快速地响应业务请求。这些业务请求包括从 MEDITECH 备份和配置更多测试和培训环境到为人口健康管理计划复制分析数据库等。
+* * 工作效率 * 。您可以快速部署和扩展此解决方案，以获得最佳临床医生最终用户体验。
+* * 数据网络结构 * 。NetApp Data Fabric 架构可以跨站点，跨物理边界和跨应用程序将数据集于一体。NetApp Data Fabric 专为以数据为中心的世界中的数据驱动型企业而构建。数据在多个位置创建和使用，通常与应用程序和基础架构共享。Data Fabric 提供了一种一致且集成的数据管理方式。它还可以让 IT 更好地控制数据，并简化日益增加的 IT 复杂性。
+
+
+
+
+== 范围
+
+本文档介绍了使用 Cisco UCS 和基于 NetApp ONTAP 的存储的环境。它提供了用于托管 MEDITECH 的示例参考架构。
+
+它不包括：
+
+* 使用 NetApp System Performance Modeler （ SPM ）或其他 NetApp 规模估算工具提供详细的规模估算指南。
+* 针对非生产工作负载进行规模估算。
+
+
+
+
+== audience
+
+本文档面向 NetApp 和合作伙伴系统工程师以及 NetApp 专业服务人员。NetApp 假定读者已很好地了解计算和存储规模估算概念，并在技术上熟悉 Cisco UCS 和 NetApp 存储系统。
+
+
+
+== 相关文档
+
+以下技术报告和其他文档与本技术报告相关，并构成在 FlexPod 基础架构上对 MEDITECH 进行规模估算，设计和部署所需的一整套文档。
+
+* https://www.netapp.com/us/media/tr-4753.pdf["TR-4753 ：《适用于 MEDITECH 的 FlexPod 数据中心部署指南》"^]
+* https://www.netapp.com/us/media/tr-4190.pdf["TR-4190 ：《适用于 MEDITECH 环境的 NetApp 规模估算准则》"^]
+* https://fieldportal.netapp.com/content/248456["TR-4319 ：《适用于 MEDITECH 环境的 NetApp 部署准则》"^]
+
+
+
+NOTE: 要访问其中某些报告，需要 NetApp Field Portal 的登录凭据。

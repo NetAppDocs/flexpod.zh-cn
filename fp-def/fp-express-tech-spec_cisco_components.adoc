@@ -1,0 +1,96 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec__cisco_components.html 
+keywords: cisco, components, blade, server, options, rack, ucs, nexus, switches 
+summary: Cisco 为 FlexPod 快速设计和架构做出了重大贡献；它为解决方案的计算和网络层做出了贡献。 
+---
+= Cisco 组件
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Cisco 为 FlexPod 快速设计和架构做出了重大贡献；它为解决方案的计算和网络层做出了贡献。本节介绍可用于 FlexPod Express 的 Cisco UCS 和 Cisco Nexus 组件。
+
+
+
+== Cisco UCS B 系列刀片式服务器选项
+
+Cisco UCS Mini 平台目前支持的 Cisco UCS B 系列刀片式服务器为 B200 M5 和 B420 M4 。下表列出了 Cisco UCS Mini 平台支持的其他刀片式服务器。
+
+|===
+| Cisco UCS B 系列服务器 | 部件号 | 技术规格 
+
+
+| Cisco UCS B200 M5 | UCSB-B200-M5 | https://www.cisco.com/c/en/us/support/servers-unified-computing/ucs-b200-m5-blade-server/model.html[] 
+
+
+| Cisco UCS B200 M4 | UCSB-B200-M4 | http://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/b200m4-specsheet.pdf[] 
+
+
+| Cisco UCS B420 M4 | UCSB-B420-M4 | http://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/b420m4-spec-sheet.pdf[] 
+|===
+
+
+== Cisco UCS C 系列机架式服务器选项
+
+Cisco UCS C 系列刀片式服务器提供单机架和双机架单元（ RU ）两种型号，并提供各种 CPU ，内存和 I/O 选项。下表中列出的部件号适用于基础服务器，不包括 CPU ，内存，磁盘驱动器， PCIe 卡或 Cisco FEX 。FlexPod 提供并支持多个配置选项。
+
+|===
+| Cisco UCS C 系列机架式服务器 | 部件号 | 技术规格 
+
+
+| Cisco UCS C220 M4 | UCSC-C220-M4S | http://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c220m4-sff-spec-sheet.pdf[] 
+
+
+| Cisco UCS C240 M4 | UCSC-C240-M4S | http://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c240m4-sff-spec-sheet.pdf[] 
+
+
+| Cisco UCS C460 M4 | UCSC-C460-M4 | http://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c460m4_specsheet.pdf[] 
+|===
+
+
+== Cisco Nexus 交换机
+
+所有 FlexPod 快速架构都需要冗余交换机。
+
+采用 NetApp AFF 或 FAS 架构的 FlexPod Express 采用 Cisco Nexus 31108 交换机构建。采用 Cisco UCS Mini （ Cisco UCS 管理）架构的 FlexPod Express 可通过使用 Cisco Nexus 3524 交换机进行验证。也可以使用标准交换机部署此配置。
+
+采用 E 系列的 FlexPod Express 可以使用标准交换机进行部署。
+
+下表列出了 Cisco Nexus 系列机箱的部件号，不包括其他 SFP 或附加模块。
+
+|===
+| Cisco Nexus 系列交换机 | 部件号 | 技术规格 
+
+
+| Cisco Nexus 3048 | N3K-C3048TP-1GE | http://www.cisco.com/c/en/us/products/collateral/switches/nexus-3000-series-switches/data_sheet_c78-685363.html[] 
+
+
+| Cisco Nexus 31108 | N3K-C31108PC-V | http://www.cisco.com/c/en/us/products/switches/nexus-31108pc-v-switch/index.html[] 
+
+
+| Cisco Nexus 9396 | N9K-C9396PX | http://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/datasheet-c78-729405.html[] 
+
+
+| Cisco Nexus 3172 | N3K-C3172 | https://www.cisco.com/c/en/us/products/collateral/switches/nexus-3000-series-switches/data_sheet_c78-729483.html[] 
+|===
+
+
+== Cisco 支持许可选项
+
+FlexPod 快速架构中的所有 Cisco 设备都需要有效的 SMARTnet 支持合同。
+
+
+NOTE: 所需的许可证以及这些许可证的部件号应由销售代表进行验证，因为它们可能因不同产品而异。
+
+下表列出了 Cisco 支持许可选项。
+
+|===
+| Cisco 支持许可 | 许可证指南 
+
+
+| SMARTNET 24X7X4 | http://www.cisco.com/web/services/portfolio/product-technical-support/smartnet/index.html[] 
+|===

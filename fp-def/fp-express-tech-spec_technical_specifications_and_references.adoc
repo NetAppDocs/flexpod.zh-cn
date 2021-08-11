@@ -1,0 +1,395 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec__technical_specifications_and_references.html 
+keywords: technical, specifications, references, blade, servers, ucs, b, series, rack, disk, shelves, fas, adapters, controllers 
+summary: 本节介绍每个 FlexPod 快速组件的其他重要技术规格。 
+---
+= 技术规格和参考
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+本节介绍每个 FlexPod 快速组件的其他重要技术规格。
+
+
+
+== Cisco UCS B 系列刀片式服务器
+
+下表列出了 Cisco UCS B 系列刀片式服务器选项。
+
+|===
+| 组件 | Cisco UCS B200 M4 | Cisco UCS B420 M4 | Cisco UCS B200 M5 
+
+
+| 处理器支持 | Intel Xeon E5-2600 | Intel Xeon E5-4600 | Intel Xeon 可扩展处理器 
+
+
+| 最大内存容量 | 24 个 DIMM ，最大容量为 768 GB | 48 个 DIMM ，最大 3 TB | 24 个 DIMM ，最大 3072 GB 
+
+
+| 内存大小和速度 | 32 GB DDR4 ； 2133 MHz | 64 GB DDR4 ； 2400MHz | 16 GB ， 32 GB ， 64 GB 和 128 GB DDR4 ； 266 Mhz 
+
+
+| SAN 启动支持 | 是的。 | 是的。 | 是的。 
+
+
+| 夹层 I/O 适配器插槽 | 2. | 3. | 2 个，正面和背面，包括 GPU 支持 
+
+
+| I/O 最大吞吐量 | 80 Gbps | 160 Gbps | 80 Gbps 
+|===
+
+
+== Cisco UCS C 系列机架式服务器
+
+下表列出了 Cisco UCS C 系列机架式服务器选项。
+
+|===
+| 组件 | Cisco UCS C220 M4 | Cisco UCS C240 M4 | Cisco UCS C460 M4 | Cisco UCS C220 M5 
+
+
+| 处理器支持 | 1 或 2 个 Intel E5-2600 系列 | 1 或 2 个 Intel Xeon E5-2600 系列 | 2 或 4 个 Intel Xeon E7-4800/8800 系列 | Intel Xeon 可扩展处理器（ 1 或 2 ） 
+
+
+| 最大内存容量 | 1.5 GB | 1.5 TB | 6 TB | 3072 GB 
+
+
+| PCIe 插槽 | 2. | 6. | 10 | 2. 
+
+
+| 外形规格 | 1 RU | 2 RU | 4 RU | 1 RU 
+|===
+下表列出了 Cisco UCS C 系列机架式服务器选项的产品规格。
+
+|===
+| 组件 | Cisco UCS 产品规格 
+
+
+| Cisco UCS C220 M4 | http://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c220m4-sff-spec-sheet.pdf[] 
+
+
+| Cisco UCS C240 M4 | http://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c240-m4-rack-server/datasheet-c78-732455.html[] 
+
+
+| Cisco UCS C460 M4 | http://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c460-m4-rack-server/datasheet-c78-730907.html[] 
+
+
+| Cisco UCS C220 M5 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c220m5-sff-specsheet.pdf[] 
+|===
+
+
+== Cisco Nexus 3000 系列交换机
+
+下表列出了 Cisco Nexus 3000 系列交换机选项。
+
+|===
+| 组件 | Cisco Nexus 3048 | Cisco Nexus 3524 | Cisco Nexus 31108 | Cisco Nexus 3172PQ 
+
+
+| 外形规格 | 1 RU | 1 RU | 1 RU | 1 RU 
+
+
+| 最大 1 Gbps 端口数 | 48 | 24 | 48 （ 10/40/100 Gbps ） | 72 个 1/10GbE 端口，或 48 个 1/10GbE 加上 6 个 40GbE 端口 
+
+
+| 转发速率 | 132 Mbps | 360 Mbps | 1.2 个 pps | 1 个端口 
+
+
+| 巨型帧支持 | 是的。 | 是的。 | 是的。 | 是的。 
+|===
+下表列出了 Cisco Nexus 3000 系列交换机选项的产品规格。
+
+|===
+| 组件 | Cisco Nexus 产品规格 
+
+
+| Cisco Nexus 31108 | http://www.cisco.com/c/en/us/products/switches/nexus-31108pc-v-switch/index.html[] 
+
+
+| Cisco Nexus 3172PQ | https://www.cisco.com/c/en/us/products/switches/nexus-3172pq-switch/index.html[] 
+
+
+| Cisco Nexus 3048 | https://www.cisco.com/c/en/us/products/switches/nexus-3048-switch/index.html[] 
+
+
+| Cisco Nexus 3172PQ-XL | https://www.cisco.com/c/en/us/products/switches/nexus-3172pq-switch/index.html[] 
+
+
+| Cisco Nexus 3548 XL | https://www.cisco.com/c/en/us/products/switches/nexus-3548-x-switch/index.html[] 
+
+
+| Cisco Nexus 3524 XL | https://www.cisco.com/c/en/us/products/switches/nexus-3524-x-switch/index.html[] 
+
+
+| Cisco Nexus 3548 | https://www.cisco.com/c/en/us/products/switches/nexus-3548-x-switch/index.html[] 
+
+
+| Cisco Nexus 3524 | https://www.cisco.com/c/en/us/products/switches/nexus-3524-x-switch/index.html[] 
+|===
+下表列出了 Cisco Nexus 9000 系列交换机选项。
+
+|===
+| 组件 | Cisco Nexus 9396 | Cisco Nexus 9372 
+
+
+| 外形规格 | 2 RU | 1 RU 
+
+
+| 最大端口数 | 60 | 54 
+
+
+| 10 Gbps SFP+ 上行链路端口 | 48 | 48 
+|===
+下表列出了 Cisco Nexus 9000 系列交换机选项数据表。
+
+|===
+| 组件 | Cisco Nexus 产品规格 
+
+
+| Cisco Nexus 9396 | http://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/datasheet-c78-736967.html[] 
+
+
+| Cisco Nexus 9372 | http://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/datasheet-c78-736967.html[] 
+
+
+| Nexus 9396X | https://www.cisco.com/c/en/us/products/switches/nexus-9396px-switch/index.html?dtid=osscdc000283[] 
+|===
+
+
+== NetApp FAS 存储控制器
+
+下表列出了当前的 NetApp FAS 存储控制器选项。
+
+|===
+| 当前组件 | FAS2620 | FAS2650 
+
+
+| Configuration | 一个 2U 机箱中有 2 个控制器 | 一个 4U 机箱中有 2 个控制器 
+
+
+| 最大原始容量 | 1440 TB | 1243 TB 
+
+
+| 内部驱动器 | 12 | 24 
+
+
+| 最大驱动器数（内部和外部） | 144. | 144. 
+
+
+| 最大卷大小 2+| 100 TB 
+
+
+| 最大聚合大小 2+| 4 TB 
+
+
+| LUN 的最大数量 2+| 每个控制器 2 ， 048 个 
+
+
+| 支持的存储网络 2+| iSCSI ， FC ， FCoE ， NFS 和 CIFS 
+
+
+| NetApp FlexVol 卷的最大数量 2+| 每个控制器 1 ， 000 个。 
+
+
+| NetApp Snapshot 副本的最大数量 2+| 每个控制器 255 ， 000 个 
+
+
+| 最大程度地提高 NetApp Flash Pool 智能数据缓存能力 2+| 24 TB 
+|===
+
+NOTE: 有关 FAS 存储控制器选项的详细信息，请参见 https://hwu.netapp.com/Controller/Index?platformTypeId=2032["FAS 型号"^] 部分 Hardware Universe 。对于 AFF ，请参见 部分。
+
+下表列出了 FAS8020 控制器系统的特征。
+
+|===
+| 组件 | FAS8020 
+
+
+| Configuration | 一个 3U 机箱中有 2 个控制器 
+
+
+| 最大原始容量 | 2880 TB 
+
+
+| 最大驱动器数 | 480 
+
+
+| 最大卷大小 | 70 TB 
+
+
+| 最大聚合大小 | 324TB 
+
+
+| LUN 的最大数量 | 每个控制器 8 ， 192 个 
+
+
+| 支持的存储网络 | iSCSI ， FC ， NFS 和 CIFS 
+
+
+| FlexVol 卷的最大数量 | 每个控制器 1 ， 000 个 
+
+
+| 最大 Snapshot 副本数 | 每个控制器 255 ， 000 个 
+
+
+| 最大程度地提高 NetApp Flash Cache 智能数据缓存能力 | 3 TB 
+
+
+| 最大 Flash Pool 数据缓存 | 24 TB 
+|===
+下表列出了 NetApp 存储控制器的产品规格。
+
+|===
+| 组件 | 存储控制器产品规格 
+
+
+| FAS2600 系列 | http://www.netapp.com/us/products/storage-systems/fas2600/fas2600-tech-specs.aspx[] 
+
+
+| FAS2500 系列 | http://www.netapp.com/us/products/storage-systems/fas2500/fas2500-tech-specs.aspx[] 
+
+
+| FAS8000 系列 | http://www.netapp.com/us/products/storage-systems/fas8000/fas8000-tech-specs.aspx[] 
+|===
+
+
+== NetApp FAS 以太网适配器
+
+下表列出了 NetApp FAS 10GbE 适配器。
+
+|===
+| 组件 | X1117A-R6 
+
+
+| 端口数 | 2. 
+
+
+| 适配器类型 | 采用光纤的 SFP+ 
+|===
+FAS8000 系列控制器支持 X1117A-R6 SFP+ 适配器。
+
+FAS2600 和 FAS2500 系列存储系统具有板载 10GbE 端口。有关详细信息，请参见 https://hwu.netapp.com/Resources/generatedPDFs/AdapterCards-9.1_ONTAP-FAS.pdf?tag=8020["NetApp 10GbE 适配器产品规格"^]。
+
+
+NOTE: 有关基于 AFF 或 FAS 型号的适配器详细信息，请参见 https://hwu.netapp.com/Adapter/Index["适配器部分"^] 在 Hardware Universe 中。
+
+
+
+== NetApp FAS 磁盘架
+
+下表列出了当前的 NetApp FAS 磁盘架选项。
+
+|===
+| 组件 | DS460C | DS224C | DS212C | DS2246 | DS4246 
+
+
+| 外形规格 | 4 RU | 2 RU | 2 RU | 2 RU | 4 RU 
+
+
+| 每个机箱的驱动器数 | 60 | 24 | 12 | 24 | 24 
+
+
+| 驱动器外形规格 | 3.5 英寸大型 | 2.5 英寸小型计算机 | 3.5 英寸大型 | 2.5 英寸小型计算机 | 3.5 英寸大型 
+
+
+| 磁盘架 I/O 模块 | 双 IOM12 模块 | 双 IOM12 模块 | 双 IOM12 模块 | 双 IOM6 模块 | 双 IOM6 模块 
+|===
+有关详细信息，请参见 NetApp 磁盘架产品规格。
+
+
+NOTE: 有关磁盘架的详细信息，请参见 NetApp Hardware Universe https://hwu.netapp.com/Shelves/Index?osTypeId=2032["磁盘架部分"^]。
+
+
+
+== NetApp FAS 磁盘驱动器
+
+NetApp 磁盘的技术规格包括外形规格大小，磁盘容量，磁盘 RPM ，支持控制器和 Data ONTAP 版本要求，位于上的驱动器部分 http://hwu.netapp.com/Drives/Index?queryId=1581392["NetApp Hardware Universe"^]。
+
+
+
+== E 系列存储控制器
+
+下表列出了当前 E 系列存储控制器选项。
+
+|===
+| 当前组件 | E2812 | E2824 | E2860 
+
+
+| Configuration | 一个 2U 机箱中有 2 个控制器 | 一个 2U 机箱中有 2 个控制器 | 一个 4U 机箱中有 2 个控制器 
+
+
+| 最大原始容量 | 1800 TB | 1756.8 TB | 1800 TB 
+
+
+| 内部驱动器 | 12 | 24 | 60 
+
+
+| 最大驱动器数（内部和外部） 3+| 180 
+
+
+| 最大 SSD 数 3+| 120 
+
+
+| 磁盘池卷的最大卷大小 3+| 1024 TB 
+
+
+| 最大磁盘池数 3+| 20 
+
+
+| 支持的存储网络 3+| iSCSI 和 FC 
+
+
+| 最大卷数 3+| 512 
+|===
+下表列出了当前 E 系列存储控制器的产品规格。
+
+|===
+| 组件 | 存储控制器产品规格 
+
+
+| E2800 | http://www.netapp.com/us/media/ds-3805.pdf[] 
+|===
+
+
+== E 系列适配器
+
+下表列出了 E 系列适配器。
+
+|===
+| 组件 | X-56023-0E-C | X-56025-00-0E-C | X-56027-00-0E-C | X-56024-00-0E-C | X-56026-00-0E-C 
+
+
+| 端口数 | 2. | 4. | 4. | 2. | 2. 
+
+
+| 适配器类型 | 10 Gb Base-T | 16 G FC 和 10GbE iSCSI | （ SAS ）。 | 16 G FC 和 10GbE iSCSI | （ SAS ）。 
+|===
+
+
+== E 系列磁盘架
+
+下表列出了 E 系列磁盘架选项。
+
+|===
+| 组件 | DE212C | DE224C | DE460C 
+
+
+| 外形规格 | 2 RU | 2 RU | 4 RU 
+
+
+| 每个机箱的驱动器数 | 12 | 24 | 60 
+
+
+| 驱动器外形规格 | 2.5 英寸小型 3.5 英寸 | 2.5 英寸 | 2.5 英寸小型 3.5 英寸 
+
+
+| 磁盘架 I/O 模块 | IOM12 | IOM12 | IOM12 
+|===
+
+
+== E 系列磁盘驱动器
+
+NetApp 磁盘驱动器的技术规格包括外形规格大小，磁盘容量，磁盘 RPM ，支持控制器和 SANtricity 版本要求，位于上的驱动器部分 http://hwu.netapp.com/Drives/Index?queryId=1844075["NetApp Hardware Universe"^]。

@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_performance_considerations.html 
+keywords: performance, considerations, size, tier, cloud, fabricpool 
+summary: 在考虑规模估算时，应评估以下内容。 
+---
+= 性能注意事项
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== 调整性能层的大小
+
+在考虑规模估算时，请记住，性能层应能够执行以下任务：
+
+* 支持热数据
+* 支持冷数据，直到分层扫描将数据移至云层
+* 支持热数据并写入到性能层的云层数据
+* 支持与附加云层关联的 WAFL 元数据
+
+
+对于大多数环境， FabricPool 聚合上的性能容量比为 1 ： 10 非常保守，同时可显著节省存储空间。例如，如果要将 200 TB 分层到云层，则性能层聚合至少应为 20 TB 。
+
+
+NOTE: 如果性能层容量大于 70% ，则从云层写入到性能层将被禁用。如果发生这种情况，则直接从云层读取块。
+
+
+
+== 调整云层大小
+
+在考虑规模估算时，充当云层的对象存储应能够执行以下任务：
+
+* 支持读取现有冷数据
+* 支持写入新冷数据
+* 支持对象删除和碎片整理
+

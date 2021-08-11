@@ -1,0 +1,65 @@
+---
+section: hybrid-cloud
+title: 混合云
+entries:
+- title: 适用于 FlexPod 的 NetApp Cloud Insights
+  url: "/hybrid-cloud/cloud-insights_netapp_cloud_insights_for_flexpod.html"
+  type: solutions
+  entries:
+  - title: 用例
+    url: "/hybrid-cloud/cloud-insights_use_cases.html"
+  - title: 架构
+    url: "/hybrid-cloud/cloud-insights_architecture.html"
+  - title: 设计注意事项
+    url: "/hybrid-cloud/cloud-insights_design_considerations.html"
+  - title: 部署适用于 FlexPod 的 Cloud Insights
+    url: "/hybrid-cloud/cloud-insights_deploy_cloud_insights_for_flexpod.html"
+  - title: 用例
+    url: "/hybrid-cloud/cloud-insights_use_cases_01.html"
+  - title: 视频和演示
+    url: "/hybrid-cloud/cloud-insights_videos_and_demos.html"
+  - title: 追加信息
+    url: "/hybrid-cloud/cloud-insights_additional_information.html"
+- title: 采用 FabricPool 的 FlexPod —将非活动数据分层到 Amazon AWS S3
+  url: "/hybrid-cloud/cloud-fabricpool_introduction.html"
+  type: solutions
+  entries:
+  - title: FlexPod 概述和架构
+    url: "/hybrid-cloud/cloud-fabricpool_flexpod_overview_and_architecture.html"
+  - title: FabricPool
+    url: "/hybrid-cloud/cloud-fabricpool_fabricpool.html"
+  - title: FabricPool 要求
+    url: "/hybrid-cloud/cloud-fabricpool_fabricpool_requirements.html"
+  - title: Configuration
+    url: "/hybrid-cloud/cloud-fabricpool_software_revisions.html"
+    entries:
+    - title: 安装 FabricPool 许可证
+      url: "/hybrid-cloud/cloud-fabricpool_install_fabricpool_license.html"
+    - title: 创建 AWS S3 存储分段
+      url: "/hybrid-cloud/cloud-fabricpool_create_aws_s3_bucket.html"
+    - title: 将云层添加到 ONTAP
+      url: "/hybrid-cloud/cloud-fabricpool_add_a_cloud_tier_to_ontap.html"
+    - title: 将云层附加到 ONTAP 聚合
+      url: "/hybrid-cloud/cloud-fabricpool_attach_a_cloud_tier_to_an_ontap_aggregate.html"
+    - title: 设置卷分层策略
+      url: "/hybrid-cloud/cloud-fabricpool_set_volume_tiering_policy.html"
+    - title: 设置卷分层最小冷却天数
+      url: "/hybrid-cloud/cloud-fabricpool_set_volume_tiering_minimum_cooling_days.html"
+  - title: 性能注意事项
+    url: "/hybrid-cloud/cloud-fabricpool_performance_considerations.html"
+  - title: 拥有成本
+    url: "/hybrid-cloud/cloud-fabricpool_cost_of_ownership.html"
+  - title: 结论
+    url: "/hybrid-cloud/cloud-fabricpool_conclusion.html"
+  - title: 从何处查找追加信息
+    url: "/hybrid-cloud/cloud-fabricpool_where_to_find_additional_information.html"
+- title: FlexPod Datacenter with IBM Cloud Private with Cisco UCS Manager ， NetApp
+    ONTAP 9.3 AFF 和 VMware vSphere 6.5U1 [ 设计 ]
+  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_icp_ucsm32.html
+- title: 采用 Apprenda 8.2 ， Cisco ACI 3.1 和 Kubernetes 1.9.4 的适用于平台即服务的 FlexPod 数据中心
+    [ 设计 ]
+  url: https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/whitepaper-c11-740803.pdf
+- title: 采用 Cisco CloudCenter 和 NetApp 私有存储的适用于混合云的 FlexPod 数据中心 [ 设计 ｝
+  url: http://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_hybridcloud_design.html
+- title: 适用于混合云的 FlexPod 数据中心与 Cisco CloudCenter 和 NetApp 私有存储
+  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_hybridcloud.html

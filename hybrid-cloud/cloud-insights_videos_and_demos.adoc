@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-insights_videos_and_demos.html 
+keywords: videos, demos, cloud, insights, flexpod, express, video, demonstration 
+summary: 您可以观看使用 NetApp Cloud Insights 的视频演示。 
+---
+= 视频和演示
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+您可以观看有关使用 NetApp Cloud Insights 评估内部环境中资源的视频演示 https://netapp.hubs.vidyard.com/watch/1ycNWx4hzFsaV1dQHFyxY2?["此处"^]。
+
+您可以观看使用 NetApp Cloud Insights 监控基础架构并为基础架构设置警报阈值的视频演示 https://netapp.hubs.vidyard.com/watch/DgUxcxES3Ujdqe1JhhkfAW["此处"^]。
+
+您可以观看使用 NetApp Cloud Insights 评估环境中各个应用程序的视频演示 https://netapp.hubs.vidyard.com/watch/vcC4RGoD54DPp8Th9hyhu3["此处"^]。

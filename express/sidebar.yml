@@ -1,0 +1,140 @@
+---
+section: express
+title: FlexPod Express
+entries:
+- title: 采用 Cisco UCS C 系列和 NetApp AFF C190 系列的 FlexPod Express 设计指南
+  url: "/express/express-c-series-c190-design_executive_summary.html"
+  type: solutions
+  entries:
+  - title: 计划摘要
+    url: "/express/express-c-series-c190-design_program_summary.html"
+  - title: 技术要求
+    url: "/express/express-c-series-c190-design_technology_requirements.html"
+  - title: 设计选择
+    url: "/express/express-c-series-c190-design_design_choices.html"
+  - title: 结论
+    url: "/express/express-c-series-c190-design_conclusion.html"
+  - title: 从何处查找追加信息
+    url: "/express/express-c-series-c190-design_where_to_find_additional_information.html"
+- title: "《采用 Cisco UCS C 系列和 NetApp AFF C190 系列的 FlexPod 快速部署指南》"
+  url: "/express/express-c-series-c190-deploy_program_summary_overview.html"
+  type: solutions
+  entries:
+  - title: 解决方案概述
+    url: "/express/express-c-series-c190-deploy_solution_overview.html"
+  - title: 技术要求
+    url: "/express/express-c-series-c190-deploy_technology_requirements.html"
+  - title: FlexPod 快速布线信息
+    url: "/express/express-c-series-c190-deploy_flexpod_express_cabling_information.html"
+  - title: 部署过程
+    entries:
+    - title: 概述
+      url: "/express/express-c-series-c190-deploy_deployment_procedures_overview.html"
+    - title: 部署 Cisco Nexus 31108PC-V
+      url: "/express/express-c-series-c190-deploy_deploy_cisco_nexus_31108pc-v.html"
+    - title: NetApp 存储部署操作步骤（第 1 部分）
+      url: "/express/express-c-series-c190-deploy_netapp_storage_deployment_procedure_@part_1@.html"
+    - title: 部署 Cisco UCS C 系列机架式服务器
+      url: "/express/express-c-series-c190-deploy_deploy_cisco_ucs_c-series_rack_server.html"
+    - title: NetApp AFF 存储部署操作步骤（第 2 部分）
+      url: "/express/express-c-series-c190-deploy_netapp_aff_storage_deployment_procedure_@part_2@.html"
+    - title: VMware vSphere 6.7U2 部署操作步骤
+      url: "/express/express-c-series-c190-deploy_vmware_vsphere_6.7u2_deployment_procedure.html"
+    - title: VMware vCenter Server 6.7U2 安装操作步骤
+      url: "/express/express-c-series-c190-deploy_vmware_vcenter_server_6.7u2_installation_procedure.html"
+    - title: VMware vCenter Server 6.7U2 和 vSphere 集群配置
+      url: "/express/express-c-series-c190-deploy_vmware_vcenter_server_6.7u2_and_vsphere_clustering_configuration.html"
+    - title: NetApp Virtual Storage Console 9.6 部署过程
+      url: "/express/express-c-series-c190-deploy_netapp_virtual_storage_console_9.6_deployment_procedures.html"
+  - title: 结论
+    url: "/express/express-c-series-c190-deploy_conclusion.html"
+  - title: 致谢
+    url: "/express/express-c-series-c190-deploy_acknowledgments.html"
+  - title: 从何处查找追加信息
+    url: "/express/express-c-series-c190-deploy_where_to_find_additional_information.html"
+  - title: 版本历史记录
+    url: "/express/express-c-series-c190-deploy_version_history.html"
+- title: 采用 Cisco UCS C 系列和 AFF A220 系列的 FlexPod Express 设计指南
+  url: "/express-c-series-aff220-design_executive_summary.html"
+  type: solutions
+  entries:
+  - title: 计划摘要
+    url: "/express/express-c-series-aff220-design_program_summary.html"
+  - title: 解决方案概述
+    url: "/express/express-c-series-aff220-design_solution_overview.html"
+  - title: 技术要求
+    url: "/express/express-c-series-aff220-design_technology_requirements.html"
+  - title: 设计选择
+    url: "/express/express-c-series-aff220-design_design_choices.html"
+  - title: 解决方案验证
+    url: "/express/express-c-series-aff220-design_solution_verification.html"
+  - title: 结论
+    url: "/express/express-c-series-aff220-design_conclusion.html"
+  - title: 从何处查找追加信息
+    url: "/express/express-c-series-aff220-design_where_to_find_additional_information.html"
+- title: "《采用 Cisco UCS C 系列和 AFF A220 系列的 FlexPod 快速部署指南》"
+  url: "/express/express-c-series-aff220-deploy_program_summary.html"
+  type: solutions
+  entries:
+  - title: 解决方案概述
+    url: "/express/express-c-series-aff220-deploy_solution_overview.html"
+  - title: 技术要求
+    url: "/express/express-c-series-aff220-deploy_technology_requirements.html"
+  - title: FlexPod 快速布线信息
+    url: "/express/express-c-series-aff220-deploy_flexpod_express_cabling_information.html"
+  - title: 部署过程
+    url: "/express/express-c-series-aff220-deploy_deployment_procedures_overview.html"
+    entries:
+    - title: Cisco Nexus 3172P 部署操作步骤
+      url: "/express/express-c-series-aff220-deploy_cisco_nexus_3172p_deployment_procedure.html"
+    - title: NetApp 存储部署操作步骤（第 1 部分）
+      url: "/express/express-c-series-aff220-deploy_netapp_storage_deployment_procedure_@part_1@.html"
+    - title: Cisco UCS C 系列机架式服务器部署操作步骤
+      url: "/express/express-c-series-aff220-deploy_cisco_ucs_c-series_rack_server_deployment_procedure.html"
+    - title: NetApp AFF 存储部署操作步骤（第 2 部分）
+      url: "/express/express-c-series-aff220-deploy_netapp_aff_storage_deployment_procedure_@part_2@.html"
+    - title: VMware vSphere 6.7 部署操作步骤
+      url: "/express/express-c-series-aff220-deploy_vmware_vsphere_6.7_deployment_procedure.html"
+    - title: 安装 VMware vCenter Server 6.7
+      url: "/express/express-c-series-aff220-deploy_install_vmware_vcenter_server_6.7.html"
+    - title: 配置 VMware vCenter Server 6.7 和 vSphere 集群
+      url: "/express/express-c-series-aff220-deploy_configure_vmware_vcenter_server_6.7_and_vsphere_clustering.html"
+  - title: 结论
+    url: "/express/express-c-series-aff220-deploy_conclusion.html"
+  - title: 从何处查找追加信息
+    url: "/express/express-c-series-aff220-deploy_where_to_find_additional_information.html"
+- title: "《采用 VMware vSphere 6.7U1 的 FlexPod Express 和采用基于 IP 的直连存储的 NetApp AFF A220
+    设计指南》"
+  url: "/express/express-direct-attach-design_overview.html"
+  type: solutions
+  entries:
+  - title: 计划摘要
+    url: "/express/express-direct-attach-design_program_summary.html"
+  - title: 解决方案概述
+    url: "/express/express-direct-attach-design_solution_overview.html"
+  - title: 技术要求
+    url: "/express/express-direct-attach-design_technology_requirements.html"
+  - title: 设计选择
+    url: "/express/express-direct-attach-design_design_choices.html"
+  - title: 解决方案验证
+    url: "/express/express-direct-attach-design_solution_verification.html"
+  - title: 结论
+    url: "/express/express-direct-attach-design_conclusion.html"
+  - title: 从何处查找追加信息
+    url: "/express/express-direct-attach-design_where_to_find_additional_information.html"
+- title: 采用 VMware vSphere 6.7U1 的 FlexPod Express 以及采用基于 IP 的直连存储的 NetApp AFF A220
+  url: "/express/express-direct-attach-aff220-deploy_program_summary.html"
+  type: solutions
+  entries:
+  - title: 解决方案概述
+    url: "/express/express-direct-attach-aff220-deploy_solution_overview.html"
+  - title: 技术要求
+    url: "/express/express-direct-attach-aff220-deploy_technology_requirements.html"
+  - title: FlexPod 快速布线信息
+    url: "/express/express-direct-attach-aff220-deploy_flexpod_express_cabling_information.html"
+  - title: 部署过程
+    url: "/express/express-direct-attach-aff220-deploy_deployment_procedures.html"
+  - title: 结论
+    url: "/express/express-direct-attach-aff220-deploy_conclusion.html"
+  - title: 追加信息
+    url: "/express/express-direct-attach-aff220-deploy_additional_information.html"

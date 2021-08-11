@@ -1,0 +1,67 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_set_volume_tiering_policy.html 
+keywords: volume, tiering, policy, ontap, cli, oncommand, system, manager, cloud, fabricpool 
+summary:  
+---
+= 设置卷分层策略
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+默认情况下，卷使用无卷分层策略。创建卷后，可以使用 OnCommand 系统管理器或 ONTAP 命令行界面更改卷分层策略。
+
+在与 FlexPod 结合使用时， FabricPool 提供了三种卷分层策略：自动，仅 Snapshot 和无。
+
+* * 自动 *
++
+** 卷中的所有冷块都会移至云层。假设聚合的利用率超过 50% ，则非活动块大约需要 31 天才能变冷。使用 `tiering-minimum-cooling-days` 设置，自动冷却期可在 2 天到 63 天之间进行调整。
+** 如果随机读取卷中分层策略设置为 " 自动 " 的冷块，则这些冷块会变热并写入性能层。
+** 如果卷中分层策略设置为自动的冷块按顺序读取，则这些冷块将保持冷状态并保留在云层上。它们不会写入性能层。
+
+
+* * 仅 Snapshot *
++
+** 卷中未与活动文件系统共享的冷 Snapshot 块将移至云层。假设聚合的利用率超过 50% ，则非活动快照块变冷大约需要 2 天时间。使用 `tiering-minimum-cooling-days` 设置，仅 Snapshot 散热期可从 2 天调整为 63 天。
+** 读取卷中分层策略设置为仅 Snapshot 的冷块时，这些冷块会变热并写入性能层。
+
+
+* * 无（默认） *
++
+** 设置为使用无作为分层策略的卷不会将冷数据分层到云层。
+** 将分层策略设置为无会阻止新的分层。
+** 先前已移至云层的卷数据将保留在云层中，直到变热为止，并会自动移回性能层。
+
+
+
+
+
+
+== OnCommand 系统管理器
+
+要使用 OnCommand 系统管理器更改卷的分层策略，请完成以下步骤：
+
+. 启动 OnCommand 系统管理器。
+. 选择一个卷。
+. 单击更多操作并选择更改分层策略。
+. 选择要应用于卷的分层策略。
+. 单击保存。
++
+image:cloud-fabricpool_image16.png["错误：缺少图形映像"]
+
+
+
+
+
+== ONTAP 命令行界面
+
+要使用 ONTAP 命令行界面更改卷的分层策略，请运行以下命令：
+
+....
+volume modify -vserver <svm_name> -volume <volume_name>
+-tiering-policy <auto|snapshot-only|all|none>
+....
+link:cloud-fabricpool_set_volume_tiering_minimum_cooling_days.html["下一步：设置卷分层最小冷却天数。"]

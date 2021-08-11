@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-insights_use_cases.html 
+keywords: target, cases, audience, cloud, insights, flexpod, ontap 
+summary: 本节列出了本解决方案适用的目标受众和案例。 
+---
+= 用例
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+此解决方案适用场景的使用情形如下：
+
+* 希望监控作为 FlexPod 解决方案一部分部署的 ONTAP 存储系统中的各种资源和利用率的组织。
+* 希望对使用 AFF 或 FAS 系统的 FlexPod 解决方案中发生的问题进行故障排除并缩短解决时间的组织。
+* 对成本优化预测感兴趣的组织，包括自定义信息板，用于提供有关资源浪费的详细信息，以及在包括 ONTAP 在内的 FlexPod 环境中可以节省哪些成本。
+
+
+
+
+== 目标受众
+
+解决方案的目标受众包括以下组：
+
+* IT 主管以及关注成本优化和业务连续性的人员。
+* 对数据中心或混合云设计和管理感兴趣的解决方案架构师。
+* 负责故障排除和意外事件解决的技术支持工程师。
+
+
+您可以对 Cloud Insights 进行配置，以提供多种有用的数据类型，这些数据可用于协助进行规划，故障排除，维护以及确保业务连续性。使用 Cloud Insights 监控 FlexPod Datacenter 解决方案，并在易于理解的自定义信息板中显示聚合的数据； 不仅可以预测部署中的资源何时需要扩展以满足需求，还可以确定导致系统出现问题的特定应用程序或存储卷。这有助于确保所监控的基础架构可预测并根据预期运行，从而使组织能够按定义的 SLA 交付并根据需要扩展基础架构，从而避免浪费和额外成本。

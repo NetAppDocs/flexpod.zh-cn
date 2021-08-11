@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_add_a_cloud_tier_to_ontap.html 
+keywords: add, cloud, tier, ontap, aggregate, storage, fabricpool, flexpod, ontap, cli, oncommand, manager 
+summary: 在将对象存储附加到聚合之前，必须将其添加到 ONTAP 并由其标识。可以使用 OnCommand 系统管理器或 ONTAP 命令行界面完成此任务。 
+---
+= 将云层添加到 ONTAP
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+在将对象存储附加到聚合之前，必须将其添加到 ONTAP 并由其标识。可以使用 OnCommand 系统管理器或 ONTAP 命令行界面完成此任务。
+
+FabricPool 支持将 Amazon S3 ， IBM 对象云存储和 Microsoft Azure Blob 存储对象存储作为云层。
+
+您需要以下信息：
+
+* 服务器名称（ FQDN ）；例如， `s3.amazonaws.com`
+* 访问密钥 ID
+* 机密密钥
+* 容器名称（存储分段名称）
+
+
+
+
+== OnCommand 系统管理器
+
+要使用 OnCommand System Manager 添加云层，请完成以下步骤：
+
+. 启动 OnCommand 系统管理器。
+. 单击存储。
+. 单击聚合和磁盘。
+. 单击 Cloud Tiers 。
+. 选择对象存储提供程序。
+. 根据需要填写对象存储提供程序的文本字段。
++
+在容器名称字段中，输入对象存储的分段或容器名称。
+
+. 单击保存并附加聚合。
+
+
+image:cloud-fabricpool_image13.png["错误：缺少图形映像"]
+
+
+
+== ONTAP 命令行界面
+
+要使用 ONTAP 命令行界面添加云层，请输入以下命令：
+
+....
+object-store config create
+-object-store-name <name>
+-provider-type <AWS>
+-port <443/8082> (AWS)
+-server <name>
+-container-name <bucket-name>
+-access-key <string>
+-secret-password <string>
+-ssl-enabled true
+-ipspace default
+....
+link:cloud-fabricpool_attach_a_cloud_tier_to_an_ontap_aggregate.html["下一步：将云层附加到 ONTAP 聚合。"]

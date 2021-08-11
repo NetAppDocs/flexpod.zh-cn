@@ -1,0 +1,184 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-epic-deploy_netapp_configuration.html 
+keywords: configuration, ha, pair, configuration, storage, fc, protocol, flexpod, epic 
+summary: 为 Epic 软件环境部署的 NetApp 存储使用高可用性（ HA ）对配置中的存储控制器。需要通过 FC 协议（ FCP ）将存储从两个控制器提供给 Epic 数据库服务器。 
+---
+= NetApp 配置
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+为 Epic 软件环境部署的 NetApp 存储使用高可用性（ HA ）对配置中的存储控制器。需要通过 FC 协议（ FCP ）将存储从两个控制器提供给 Epic 数据库服务器。此配置可提供两个控制器的存储，以便在正常操作期间均匀平衡应用程序负载。
+
+Epic 全闪存参考架构战略手册详细介绍了将生产工作负载划分为故障域调用池的史诗般要求。请先阅读本文档的详细信息，然后再继续。请注意， ONTAP 节点可以视为一个单独的存储池。
+
+
+
+== ONTAP 配置
+
+本节介绍使用相关 ONTAP 命令的部署和配置过程示例。重点是展示如何配置存储以实施 NetApp 建议的存储布局， NetApp 建议使用 HA 控制器对。ONTAP 的主要优势之一是能够在不影响现有 HA 对的情况下进行横向扩展。
+
+EPIC 为每个客户提供详细的存储性能要求和布局指导，包括存储呈现方式和主机端存储布局。Epic 将提供以下自定义文档：
+
+* 《 Epic 硬件配置指南》，用于售前规模估算。
+* 部署期间用于 LUN 和卷布局的 Epic 数据库存储布局建议。
+
+
+必须参考 Epic 数据库存储布局建议来开发满足这些要求的客户专用存储系统布局和配置。
+
+以下示例介绍了如何部署支持 10 TB 数据库的 AFF A700 存储系统。下表显示了在示例部署中用于支持生产数据库的存储的配置参数。
+
+|===
+| 参数 | 控制器 1 | 控制器 2 
+
+
+| 控制器主机名 | 产品 1-01 | 产品 1-02 
+
+
+| 聚合 ONTAP | aggr0_prod1-01 （ ADP 11 个分区） | aggr0_prod1-02 （ ADP 11 个分区） 
+
+
+| 聚合数据 | 产品 1-01_aggr1 （ 22 个分区） | Prod1-02_aggr1 （ 22 个分区） 
+
+
+| 卷（大小） | epiod_prod_db1 （ 2 TB ） epiod_prod_db2 TB （ 2 TB ） epio_prod_db3 （ 2 TB ） epiod_prod_db4 （ 2 TB ） epiod_prod_db6 （ 2 TB ） epio_prod_db7 （ 2 TB ） epiod_prod_db8 （ 2 TB ） epiod_njgb （ 1 GB ）（ 1 GB ） | epio_report_db1 （ 2 TB ） epio_report_db3 （ 2 TB ） epio_report_db4 （ 2 TB ） epio_report_db5 （ 2 TB ） epio_report_db6 （ 2 TB ） epio_report_db7 （ 2 TB ） epio_report_db8 （ 2 TB ） epio_report_db4 （ 1 TB ） epiod_report_jgb （ 1 GB ） 
+
+
+| LUN 路径（大小） | /d_prod_db1/vd_prod_db1 （ 1.4TB ） /epo_prod_db2/epic （ 1.4TB ） /epic prod_db3/epic prod_db3 （ 1.4TB ） /epic prod_db4/4 TB （ 1.4TB ） /epic db4 （ 1.4 TB ） /epic ） /nd_projic （ 1.g_d/nepic ） /nst/nepic ） | /r_d_db1/4TB_report_db1 （ 1.4TB ） /epo_prod_db2/epic report_db2 （ 1.4TB ） /epic prod_db3/epic report_db3 （ 1.4TB ） /epic prod_4/epic report_db4 （ 1.4TB ） /epic ） /epic prod_dbd_db4 （ 1.gb ） /ng_report_epic （ 1.7_epic ） /epic ） /epic 报告 
+
+
+| 虚拟机 | RHEL | RHEL 
+
+
+| LUN 类型 | Linux （由使用 FC 的 RHEL VM 直接挂载为 RDM ） | Linux （由使用 FC 的 RHEL VM 直接挂载为 RDM ） 
+
+
+| FCP 启动程序组（ igroup ）名称 | IG_Epic prod （ Linux ） | IG_Epic 报告（ Linux ） 
+
+
+| 主机操作系统 | VMware | VMware 
+
+
+| Epic 数据库服务器主机名 | Epic 产品 | Epic 报告 
+
+
+| SVM | SVM_prod. | SVM_ps （生产服务） SVM_CIFS 
+|===
+
+
+=== ONTAP 许可证
+
+设置存储控制器后，应用许可证以启用 NetApp 建议的 ONTAP 功能。Epic 工作负载所需的许可证包括 FC ， CIFS ， Snapshot ， SnapRestore ， FlexClone ， 和 SnapMirror 。
+
+要应用这些许可证，请打开 NetApp System Manager ，然后转到 " 配置 - 许可证 " 并添加相应的许可证。或者，也可以使用命令行界面运行以下命令来添加许可证：
+
+....
+license add -license-code <code>
+....
+
+
+=== AutoSupport 配置
+
+AutoSupport 工具会通过 HTTPS 向 NetApp 发送摘要支持信息。要配置 AutoSupport ，请运行以下 ONTAP 命令：
+
+....
+autosupport modify -node * -state enable
+autosupport modify -node * -mail-hosts <mailhost.customer.com>
+autosupport modify -node prod1-01 -from prod1-01@customer.com
+autosupport modify -node prod1-02 -from prod1-02@customer.com
+autosupport modify -node * -to storageadmins@customer.com
+autosupport modify -node * -support enable
+autosupport modify -node * -transport https
+autosupport modify -node * -hostnamesubj true
+....
+
+
+=== 硬件辅助接管配置
+
+在每个节点上，启用硬件辅助接管，以最大程度地减少在控制器发生不太可能的故障后启动接管所需的时间。要配置硬件辅助接管，请完成以下步骤：
+
+. 运行以下 ONTAP 命令。将 prod1-01 的配对地址选项设置为管理端口的 IP 地址。
++
+....
+EPIC::> storage failover modify -node prod1-01 -hwassist-partner-ip <prod1-02-mgmt-ip>
+....
+. 运行以下 ONTAP 命令。将配对地址选项设置为 cluster1-02 的管理端口的 IP 地址。
++
+....
+EPIC::> storage failover modify -node prod1-02 -hwassist-partner-ip <prod1-01-mgmt-ip>
+....
+. 运行以下 ONTAP 命令，在 prod1-01 和 prod1-02 HA 控制器对上启用硬件辅助接管：
++
+....
+EPIC::> storage failover modify -node prod1-01 -hwassist true
+EPIC::> storage failover modify -node prod1-02 -hwassist true
+....
+
+
+
+
+=== ONTAP 存储配置
+
+存储配置工作流如下：
+
+. 创建聚合。
+. 创建 Storage Virtual Machine （ SVM ）。
++
+创建聚合后，下一步是创建 SVM 。在 ONTAP 中，存储以 SVM 的形式进行虚拟化。主机和客户端不再访问物理存储硬件。使用 System Manager 图形用户界面或命令行界面创建 SVM 。
+
+. 创建 FC LIF 。
++
+端口和存储在 SVM 上进行配置，并通过称为逻辑接口（ Logical Interface ， LIF ）的虚拟端口提供给主机和客户端。
+
++
+您可以使用所有协议在一个 SVM 中运行所有工作负载。对于 Epic ， NetApp 建议为生产 FC 配置一个 SVM ，为 CIFS 配置一个 SVM 。
+
++
+.. 在 System Manager 图形用户界面中启用并启动 SVM 设置中的 FC 。
+.. 将 FC LIF 添加到 SVM 。根据每个 LUN 构建的路径数，在每个存储节点上配置多个 FC LIF 。
+
+
+. 创建启动程序组（ igroup ）。
++
+igroup 是由 FC 协议主机 WWPN 或 iSCSI 主机节点名称组成的表，用于定义哪些 LUN 可供主机使用。例如，如果您有一个主机集群，则可以使用 igroup 来确保特定 LUN 只对集群中的一个主机可见，或者对集群中的所有主机可见。您可以定义多个 igroup 并将其映射到 LUN ，以控制哪些启动程序可以访问 LUN 。
+
++
+使用 System Manager 图形用户界面或 CLI 创建类型为 vmware 的 FC igroup 。
+
+. 在 FC 交换机上创建分区。
++
+FC 或 FCoE 分区是指网络结构中一个或多个端口的逻辑分组。要使设备能够彼此查看，连接，创建彼此的会话并进行通信，两个端口都需要具有公共区域成员资格。建议使用单个启动程序分区。
+
++
+.. 在交换机上创建分区，然后在分区中添加 NetApp 目标和 Cisco UCS 刀片启动程序。
++
+NetApp 最佳实践是单个启动程序分区。每个分区仅包含一个启动程序和控制器上的目标 WWPN 。分区使用端口名称，而不是节点名称。
+
+
+
+. 创建卷和 LUN 。
++
+.. 使用 System Manager 图形用户界面（或命令行界面）创建用于托管 LUN 的卷。默认情况下，卷上会设置所有存储效率设置和数据保护。您可以选择使用 `vol modify` 命令打开卷上的卷加密和 QoS 策略。请注意，卷的大小必须足以容纳 LUN 和 Snapshot 副本。要保护卷免受容量问题的影响，请启用 `autosize` 和 `autodelete` 选项。创建卷后，创建将托管 Epic 工作负载的 LUN 。
+.. 使用 System Manager 图形用户界面（或 CLI ）创建类型为 `VMware` 的 FC LUN ，以托管 Epic 工作负载。NetApp 在 System Manager 中通过一个非常易于遵循的向导简化了 LUN 创建过程。
++
+您还可以使用 VSC 配置卷和 LUN 。请参见 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-fc-esx-cpg/home.html["《适用于 ESX 的 FC 配置快速指南》"^]。
+
++
+请参见 http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.dot-cm-sanag%2Fhome.html["《 SAN 管理和 SAN 配置指南》"^] 如果未使用 VSC 。
+
+
+
+. 将 LUN 映射到 igroup 。
++
+创建 LUN 和 igroup 后，将 LUN 映射到相关的 igroup ，以便为所需主机提供对 LUN 的访问权限。
+
++
+现在，可以发现这些 LUN 并将其映射到 ESXi 服务器。刷新 ESXi 主机上的存储并添加新发现的 LUN 。
+
+
+
+link:ehr-epic-deploy_genio_tool.html["接下来： Genio 工具。"]
