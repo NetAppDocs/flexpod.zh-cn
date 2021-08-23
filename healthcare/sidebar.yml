@@ -3,12 +3,14 @@ section: healthcare
 title: 医疗保健
 entries:
 - title: "《 FlexPod 数据中心 Epic 定向规模估算指南》"
-  url: "/healthcare/ehr-epic-sizing_introduction.html"
   type: solutions
   entries:
+  - title: 概述
+    url: "/healthcare/ehr-epic-sizing_introduction.html"
   - title: 参考架构
-    url: "/healthcare/ehr-epic-sizing_netapp_storage_reference_architectures_for_epic.html"
     entries:
+    - title: 适用于 Epic 的 NetApp 存储参考架构
+      url: "/healthcare/ehr-epic-sizing_netapp_storage_reference_architectures_for_epic.html"
     - title: 适用于 Epic 的 Cisco UCS 参考架构
       url: "/healthcare/ehr-epic-sizing_cisco_ucs_reference_architecture_for_epic.html"
   - title: 小型，中型和大型架构的技术规格
@@ -18,14 +20,16 @@ entries:
   - title: 致谢
     url: "/healthcare/ehr-epic-sizing_acknowledgements.html"
 - title: "《适用于 Epic EHR 的 FlexPod 数据中心部署指南》"
-  url: "/healthcare/ehr-epic-deploy_overview.html"
   type: solutions
   entries:
+  - title: 概述
+    url: "/healthcare/ehr-epic-deploy_overview.html"
   - title: 设计
     url: "/healthcare/ehr-epic-deploy_design.html"
   - title: 部署和配置
-    url: "/healthcare/ehr-epic-deploy_deployment_and_configuration_overview.html"
     entries:
+    - title: 概述
+      url: "/healthcare/ehr-epic-deploy_deployment_and_configuration_overview.html"
     - title: 基础架构硬件和软件组件
       url: "/healthcare/ehr-epic-deploy_infrastructure_hardware_and_software_components.html"
     - title: 基础架构配置
@@ -45,9 +49,10 @@ entries:
   - title: 致谢
     url: "/healthcare/ehr-epic-deploy_acknowledgements.html"
 - title: 用于 Epic 性能测试的 FlexPod
-  url: "/healthcare/ehr-epic-performance_introduction.html"
   type: solutions
   entries:
+  - title: 概述
+    url: "/healthcare/ehr-epic-performance_introduction.html"
   - title: 内容提要
     url: "/healthcare/ehr-epic-performance_executive_summary.html"
   - title: 测试方法
@@ -61,9 +66,10 @@ entries:
   - title: 致谢
     url: "/healthcare/ehr-epic-performance_acknowledgements.html"
 - title: "《适用于 MEDITECH 的 FlexPod 方向性规模估算指南》"
-  url: "/healthcare/ehr-meditech-sizing_introduction.html"
   type: solutions
   entries:
+  - title: 概述
+    url: "/healthcare/ehr-meditech-sizing_introduction.html"
   - title: Meditech 工作负载概述
     url: "/healthcare/ehr-meditech-sizing_meditech_workload_overview.html"
   - title: 小型，中型和大型架构的技术规格
@@ -73,14 +79,16 @@ entries:
   - title: 致谢
     url: "/healthcare/ehr-meditech-sizing_acknowledgments.html"
 - title: "《适用于 MEDITECH 的 FlexPod 数据中心部署指南》"
-  url: "/healthcare/ehr-meditech-deploy_overview.html"
   type: solutions
   entries:
+  - title: 概述
+    url: "/healthcare/ehr-meditech-deploy_overview.html"
   - title: 设计
     url: "/healthcare/ehr-meditech-deploy_design.html"
   - title: 部署和配置
-    url: "/healthcare/ehr-meditech-deploy_deployment_and_configuration_overview.html"
     entries:
+    - title: 概述
+      url: "/healthcare/ehr-meditech-deploy_deployment_and_configuration_overview.html"
     - title: 基础架构配置
       url: "/healthcare/ehr-meditech-deploy_base_infrastructure_configuration.html"
     - title: Cisco UCS 刀片式服务器和交换机配置
@@ -108,9 +116,10 @@ entries:
   - title: 从何处查找追加信息
     url: "/healthcare/ehr-meditech-deploy_where_to_find_additional_information.html"
 - title: 适用于医疗成像的 FlexPod
-  url: "/healthcare/medical-imaging_introduction.html"
   type: solutions
   entries:
+  - title: 概述
+    url: "/healthcare/medical-imaging_introduction.html"
   - title: 架构
     url: "/healthcare/medical-imaging_architecture.html"
   - title: 解决方案基础架构硬件和软件组件

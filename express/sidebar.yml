@@ -3,9 +3,10 @@ section: express
 title: FlexPod Express
 entries:
 - title: 采用 Cisco UCS C 系列和 NetApp AFF C190 系列的 FlexPod Express 设计指南
-  url: "/express/express-c-series-c190-design_executive_summary.html"
   type: solutions
   entries:
+  - title: 概述
+    url: "/express/express-c-series-c190-design_executive_summary.html"
   - title: 计划摘要
     url: "/express/express-c-series-c190-design_program_summary.html"
   - title: 技术要求
@@ -17,9 +18,10 @@ entries:
   - title: 从何处查找追加信息
     url: "/express/express-c-series-c190-design_where_to_find_additional_information.html"
 - title: "《采用 Cisco UCS C 系列和 NetApp AFF C190 系列的 FlexPod 快速部署指南》"
-  url: "/express/express-c-series-c190-deploy_program_summary_overview.html"
   type: solutions
   entries:
+  - title: 概述
+    url: "/express/express-c-series-c190-deploy_program_summary_overview.html"
   - title: 解决方案概述
     url: "/express/express-c-series-c190-deploy_solution_overview.html"
   - title: 技术要求
@@ -55,9 +57,10 @@ entries:
   - title: 版本历史记录
     url: "/express/express-c-series-c190-deploy_version_history.html"
 - title: 采用 Cisco UCS C 系列和 AFF A220 系列的 FlexPod Express 设计指南
-  url: "/express-c-series-aff220-design_executive_summary.html"
   type: solutions
   entries:
+  - title: 概述
+    url: "/express/express-c-series-aff220-design_executive_summary.html"
   - title: 计划摘要
     url: "/express/express-c-series-aff220-design_program_summary.html"
   - title: 解决方案概述
@@ -73,9 +76,10 @@ entries:
   - title: 从何处查找追加信息
     url: "/express/express-c-series-aff220-design_where_to_find_additional_information.html"
 - title: "《采用 Cisco UCS C 系列和 AFF A220 系列的 FlexPod 快速部署指南》"
-  url: "/express/express-c-series-aff220-deploy_program_summary.html"
   type: solutions
   entries:
+  - title: 概述
+    url: "/express/express-c-series-aff220-deploy_program_summary.html"
   - title: 解决方案概述
     url: "/express/express-c-series-aff220-deploy_solution_overview.html"
   - title: 技术要求
@@ -105,9 +109,10 @@ entries:
     url: "/express/express-c-series-aff220-deploy_where_to_find_additional_information.html"
 - title: "《采用 VMware vSphere 6.7U1 的 FlexPod Express 和采用基于 IP 的直连存储的 NetApp AFF A220
     设计指南》"
-  url: "/express/express-direct-attach-design_overview.html"
   type: solutions
   entries:
+  - title: 概述
+    url: "/express/express-direct-attach-design_overview.html"
   - title: 计划摘要
     url: "/express/express-direct-attach-design_program_summary.html"
   - title: 解决方案概述
@@ -123,9 +128,10 @@ entries:
   - title: 从何处查找追加信息
     url: "/express/express-direct-attach-design_where_to_find_additional_information.html"
 - title: 采用 VMware vSphere 6.7U1 的 FlexPod Express 以及采用基于 IP 的直连存储的 NetApp AFF A220
-  url: "/express/express-direct-attach-aff220-deploy_program_summary.html"
   type: solutions
   entries:
+  - title: 概述
+    url: "/express/express-direct-attach-aff220-deploy_program_summary.html"
   - title: 解决方案概述
     url: "/express/express-direct-attach-aff220-deploy_solution_overview.html"
   - title: 技术要求

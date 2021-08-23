@@ -3,9 +3,10 @@ section: hybrid-cloud
 title: 混合云
 entries:
 - title: 适用于 FlexPod 的 NetApp Cloud Insights
-  url: "/hybrid-cloud/cloud-insights_netapp_cloud_insights_for_flexpod.html"
   type: solutions
   entries:
+  - title: 概述
+    url: "/hybrid-cloud/cloud-insights_netapp_cloud_insights_for_flexpod.html"
   - title: 用例
     url: "/hybrid-cloud/cloud-insights_use_cases.html"
   - title: 架构
@@ -21,9 +22,10 @@ entries:
   - title: 追加信息
     url: "/hybrid-cloud/cloud-insights_additional_information.html"
 - title: 采用 FabricPool 的 FlexPod —将非活动数据分层到 Amazon AWS S3
-  url: "/hybrid-cloud/cloud-fabricpool_introduction.html"
   type: solutions
   entries:
+  - title: 概述
+    url: "/hybrid-cloud/cloud-fabricpool_introduction.html"
   - title: FlexPod 概述和架构
     url: "/hybrid-cloud/cloud-fabricpool_flexpod_overview_and_architecture.html"
   - title: FabricPool
@@ -31,8 +33,9 @@ entries:
   - title: FabricPool 要求
     url: "/hybrid-cloud/cloud-fabricpool_fabricpool_requirements.html"
   - title: Configuration
-    url: "/hybrid-cloud/cloud-fabricpool_software_revisions.html"
     entries:
+    - title: FabricPool 软件版本
+      url: "/hybrid-cloud/cloud-fabricpool_software_revisions.html"
     - title: 安装 FabricPool 许可证
       url: "/hybrid-cloud/cloud-fabricpool_install_fabricpool_license.html"
     - title: 创建 AWS S3 存储分段

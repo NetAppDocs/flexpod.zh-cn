@@ -3,9 +3,10 @@ section: security
 title: FlexPod 和安全性
 entries:
 - title: FlexPod ，《勒索软件解决方案》
-  url: "/security/security-ransomware_what_is_ransomware.html"
   type: solutions
   entries:
+  - title: 什么是勒索软件？
+    url: "/security/security-ransomware_what_is_ransomware.html"
   - title: FlexPod 概述
     url: "/security/security-ransomware_flexpod_overview.html"
   - title: 勒索软件保护措施

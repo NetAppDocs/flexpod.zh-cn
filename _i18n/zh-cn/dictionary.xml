@@ -7356,29 +7356,12 @@
   <block id="17cfc2f2b50e58c93aaf0a477ff54037" category="sidebar">FlexPod 解决方案文档</block>
   <block id="af0963a66759af7047416c9d85f32efe" category="sidebar">FlexPod —从此处开始</block>
   <block id="17c3771ed0b6c1ae15740eff715e9922" category="sidebar">视频和演示</block>
-  <block id="561f51a8fac655b8afe9f85e933f3cd7" category="sidebar">有关 FlexPod 功能的简短视频 / 演示</block>
   <block id="d6b9ea32b921a9f56de32062ba4b94f3" category="sidebar">博客</block>
-  <block id="7e0771ebe116f8746b3724da9f35c0a7" category="sidebar">重点介绍 FlexPod 功能的技术博客</block>
   <block id="cfa345d8fdba7b2e9598cce9c0e3c744" category="sidebar">借助 FlexPod 实现人工智能和现代数据分析</block>
   <block id="91770f038cd944a1d3b9b347edeb2b10" category="sidebar">新增功能</block>
-  <block id="dade0dd1180dee647f1b894ef71d9501" category="sidebar">查看适用于 AI/ML 的最新 FlexPod 解决方案</block>
-  <block id="1617278f8275e3f52ad2d7a6fdda4d80" category="sidebar">有关适用于 AI/ML 的 FlexPod 解决方案的简短视频演示</block>
-  <block id="0f4aac7b4346346bec5488672ffa1c83" category="sidebar">重点介绍 AI/ML 的 FlexPod 功能的技术博客</block>
-  <block id="b5ae67eddb453ea10af38fd01683b93e" category="sidebar">业务应用程序和企业数据库</block>
-  <block id="96cb06d6b042a4453d069121054d704f" category="sidebar">适用于业务应用程序企业数据库功能的简短视频 / 演示</block>
-  <block id="b5e0e66dc2926ca27808d9dd0946d95f" category="sidebar">重点介绍适用于业务应用程序和企业数据库的 FlexPod 功能的技术博客</block>
   <block id="e61ead4102c89a9758572df81301a1d2" category="sidebar">混合云</block>
-  <block id="8ab6156e8c3ab40e34ab30adb54d3de2" category="sidebar">了解最新的 FlexPod 混合云解决方案</block>
-  <block id="02f5ae8d8d91f35b3dd9607c40d83a2b" category="sidebar">适用于混合云的 FlexPod 解决方案的简短视频演示</block>
-  <block id="a3856f645f5994642fd22ce5b28f4927" category="sidebar">重点介绍适用于混合云的 FlexPod 功能的技术博客</block>
   <block id="7cb27dbb321a2dda7b1a59417ac87d24" category="sidebar">适用于 VDI 的 FlexPod</block>
-  <block id="f3e983196855bb2d038908b8bf34f7c3" category="sidebar">查看适用于 VDI 的最新 FlexPod 解决方案</block>
-  <block id="a586237ec3b1a8e7556c55f82d8b3cdb" category="sidebar">有关适用于 VDI 的 NetApp 解决方案的简短视频 / 演示</block>
-  <block id="406b3ce398a65634fe3ac62e720799f0" category="sidebar">重点介绍适用于 VDI 的 FlexPod 功能的技术博客</block>
   <block id="e24bc29daa40702c050f7f3b61476c6f" category="sidebar">借助 FlexPod 实现医疗保健</block>
-  <block id="3aec91bb4222793571b60f8aaea29df1" category="sidebar">了解最新的 FlexPod 医疗保健解决方案</block>
-  <block id="e5b598c3fd188955b4c7b290c64bb4e6" category="sidebar">有关适用于医疗保健的 FlexPod 解决方案的简短视频 / 演示</block>
-  <block id="c7316f9a430aae5ec75d74d571ec5ed1" category="sidebar">重点介绍 FlexPod 医疗保健功能的技术博客</block>
   <block id="b1b5d8cebde8af104d3749c7d984f391" category="sidebar">FlexPod 定义</block>
   <block id="1f1a6514305e31e63aa9ce9e1338aa48" category="sidebar">FlexPod 快速技术规格</block>
   <block id="985a4a270fc5521f74f971f639acb4ba" category="sidebar">FlexPod 平台</block>
@@ -7460,4 +7443,8 @@
   <block id="a803c2a0103e234c57f3136b6ceb15bf" category="sidebar">勒索软件保护措施</block>
   <block id="57a36291f8c4c9ad21e7abcbc792caf5" category="sidebar">保护和恢复 FlexPod 上的数据</block>
   <block id="309d921b4e477874006fde9b0223cc7c" category="sidebar">继续开展业务运营，无需支付任何费用</block>
+  <block id="7d15915b1c0d83b2d07ba91bb371d99c" category="sidebar">FlexPod 业务应用程序和企业数据库</block>
+  <block id="9651c3a3b7cbc999c2c50c39dbf61c04" category="sidebar">采用 FlexPod 的混合云</block>
+  <block id="0466740965e7956f8fc2a734a83f5686" category="sidebar">FabricPool 软件版本</block>
+  <block id="6cb34c048fceb40f7d64efc563d407f9" category="sidebar">什么是勒索软件？</block>
 </blocks>
