@@ -110,7 +110,6 @@
   <block id="2abc157d263e35282dcd9b561414fc09" category="summary">NetApp 存储控制器在 FlexPod 架构中为启动和应用程序数据存储提供了存储基础。NetApp 组件包括存储控制器，集群互连交换机，驱动器和磁盘架以及许可选项。</block>
   <block id="2ca7c673d212fe0aac08f9e41ac63265" category="doc">NetApp 组件</block>
   <block id="c1a132b08c3d15f664a4e983ca90172e" category="section-title">NetApp 存储控制器选项</block>
-  <block id="85aa468559f0b1f790cdef84e7412410" category="paragraph">在 FlexPod 架构中需要使用冗余 NetApp FAS 或 AFF 控制器。这些控制器运行 ONTAP 软件。订购存储控制器后，可以在这些控制器上预加载首选软件版本。对于 ONTAP ，系统会订购一个完整的集群。整个集群包括一对存储控制器和一个集群互连（交换机或无交换机）。</block>
   <block id="f3d1ddd3608cc33b94186096baefa680" category="paragraph">根据选定的存储平台，可以使用不同的选项和配置。有关这些附加组件的详细信息，请咨询您的销售代表。</block>
   <block id="0801ff54af9cce0b9f0f9dc6d4f359d8" category="paragraph">下表中列出的控制器系列适合在 FlexPod Datacenter 解决方案中使用，因为它们与 Cisco Nexus 交换机的连接是无缝的。请参见<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block> 有关每个控制器型号的特定兼容性详细信息。</block>
   <block id="ab55821a5158bbae88cc564fe08c13bb" category="cell">存储控制器系列</block>
@@ -205,7 +204,6 @@
   <block id="f312eeb62002bbf3617b218baf8ae4da" category="cell"><block ref="f312eeb62002bbf3617b218baf8ae4da" category="inline-link-rx"></block></block>
   <block id="160f9594439a5c252e567ca5fa56f9aa" category="summary">FlexPod 平台是一种预先设计的最佳实践数据中心架构，它基于 Cisco 统一计算系统（ Cisco UCS ）， Cisco Nexus 系列交换机和 NetApp 存储控制器（ NetApp AFF 或 FAS 系统）构建。</block>
   <block id="d0ed65e54397020ba99377dad07d0960" category="doc">TR-4036 ： FlexPod 数据中心技术规格</block>
-  <block id="c21f0d8dd96a1d7bc606c36253404aae" category="paragraph">斯里兰卡 Sree Lakshmi 和 NetApp 的 Arvind Ramakrishnan</block>
   <block id="44449d841c637b73894538d1cb10ad73" category="paragraph">FlexPod 是一个适合运行各种虚拟化虚拟机管理程序以及裸机操作系统和企业工作负载的平台。FlexPod 不仅提供了基线配置，而且还可以灵活地调整规模并进行优化，以满足多种不同的使用情形和要求。</block>
   <block id="0f9b398b73c49f27eb0e6ce88a41a230" category="inline-link">FlexPod 融合基础架构</block>
   <block id="823b3b69aad760899b67dee8091a03a3" category="admonition">在订购完整的 FlexPod 配置之前，请参见<block ref="4d4c2ccc5cc5a93d3d89d2afd9d2f8a7" category="inline-link-rx"></block> 请访问 netapp.com 上的第页，了解这些技术规格的最新版本。</block>
@@ -241,14 +239,10 @@
   <block id="1887d9d6b7314b8c1dd849fca8e56223" category="list-text">如果解决方案使用 C 系列服务器，则需要两个 Cisco UCS C 系列机架式服务器。</block>
   <block id="99c0ea390e48259a4fbf2269863d83b2" category="paragraph">对于 Cisco UCS C 系列机架式服务器的大型部署，您可以选择一对 2232PP FEX 模块。但是， 2232PP 不是硬件要求。</block>
   <block id="bb649be95dbc5df4aef3ad2ccb562f87" category="list-text">采用高可用性（ HA ）对配置的两个 NetApp 存储控制器：</block>
-  <block id="302b17543e5e3a6b3330298e6a63a4cf" category="paragraph">此配置可以包含任何受支持的 NetApp FAS 或 AFF 系列存储控制器。请参见<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block> 应用程序以获取受支持的 FAS 和 AFF 控制器型号的最新列表。</block>
-  <block id="72eee99f567d32f06a532212d1d7b437" category="list-text">HA 配置要求每个控制器具有两个冗余接口来进行数据访问；这些接口可以是 FCoE ， FC 或 10 Gb 以太网（ 10GbE ）。</block>
   <block id="0052efad5d260a806d52bfcfe640936f" category="inline-link">交换机</block>
   <block id="6f13026c20a1afa20a978290723178d9" category="list-text">如果解决方案使用 NetApp ONTAP ，则需要经过 NetApp 批准的集群互连拓扑。有关详细信息，请参见<block ref="8e1fea0ef6ffd9e11ab75b3d4af03217" category="inline-link-rx"></block> 选项卡 Hardware Universe 。</block>
-  <block id="f52e34ce40c43df796df0349c77dd218" category="list-text">如果解决方案使用 ONTAP ，则每个控制器至少需要两个额外的 10GbE 端口才能进行数据访问。</block>
   <block id="e3313d2a580d4ea7c09b15c5c979da6a" category="list-text">对于具有两个节点的 ONTAP 集群，您可以配置双节点无交换机集群。</block>
   <block id="5482261cd927b97915d0cb11f2a92148" category="list-text">对于具有两个以上节点的 ONTAP 集群，需要一对集群互连交换机。</block>
-  <block id="100bff185e67a567c732e1842ccebd36" category="list-text">一个具有任何受支持磁盘类型的 NetApp 磁盘架。有关支持的磁盘架型号的最新列表，请参见 NetApp Hardware Universe 的磁盘架选项卡。</block>
   <block id="42419c0e478fd6f7bbffe6b8974833ca" category="summary">NetApp 存储控制器在 FlexPod 快速架构中为启动和应用程序数据存储提供了存储基础。本节列出了 FlexPod 快速架构中的不同 NetApp 选项。</block>
   <block id="4ba8114dd624dc2130553b7742f70d88" category="section-title">NetApp FAS</block>
   <block id="6f4427b59f55f6827f3d3145a95ee28d" category="paragraph">在 FlexPod 快速架构中，需要使用冗余 AFF C190 ， AFF A220 或 FAS2750 系列控制器。这些控制器运行 ONTAP 软件。订购存储控制器时，可以在这些控制器上预加载首选软件版本。对于 ONTAP ，可以使用一对集群互连交换机部署集群，也可以采用无交换机集群配置部署集群。</block>
@@ -730,11 +724,6 @@
   <block id="010a6cb0eccdea35662ad711d443f2ec" category="doc">可选功能</block>
   <block id="1749d12df3df2319d3eee218a277ff83" category="section-title">MetroCluster</block>
   <block id="1cc86d2d4461432b3b903fda17791ec4" category="paragraph">FlexPod 支持两种 NetApp MetroCluster 软件版本，可在双节点或四节点集群配置中实现持续可用性。MetroCluster 可为关键工作负载提供同步复制。它需要使用连接到 Cisco 交换机的双站点配置。对于 MetroCluster FC ，站点之间支持的最大距离约为 186 英里（ 300 公里），对于 MetroCluster IP ，支持的最大距离约为 435 英里（ 700 公里）。下图分别展示了采用 NetApp MetroCluster 架构的 FlexPod 数据中心和采用 NetApp MetroCluster IP 架构的 FlexPod 数据中心。</block>
-  <block id="501e047417fa2cdd118f632e1426b85c" category="paragraph">有关详细信息和指导，请参见以下部署文档：</block>
-  <block id="c4325031d96572e8678952bdef6b1b91" category="inline-link">NVA-0030-Deploy ：采用 NetApp MetroCluster FC 的 FlexPod 数据中心</block>
-  <block id="99f01aa3264178876ab422966e7c37ce" category="list-text">* FlexPod MetroCluster FC/*<block ref="6f446c3549a8e0e66decc9ca2a4768a5" category="inline-link-rx"></block>。</block>
-  <block id="e2b39a282bf653c5d79e69f6c4bf219c" category="inline-link">CVD ：采用 NetApp MetroCluster IP 的 FlexPod 数据中心</block>
-  <block id="da486cc19ce5e83469e6ad2674c1cecf" category="list-text">* FlexPod MetroCluster IP.*<block ref="2192052989cfb0dc4629fa95683ce34b" category="inline-link-rx"></block>。</block>
   <block id="ca2380af14784cf2292bca74ecc5950f" category="paragraph"><block ref="ca2380af14784cf2292bca74ecc5950f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a2f84fe24ac1cc3a35b8fd2e10f8fb69" category="paragraph"><block ref="a2f84fe24ac1cc3a35b8fd2e10f8fb69" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ab2679ebd7bb85b68b87dac6f34ef516" category="section-title">端到端 FC-NVMe</block>
@@ -908,7 +897,6 @@
   <block id="e9f91f6c582fc9c06492922408255841" category="cell">N20-C508</block>
   <block id="808b1571f5756e4a697697421e6df46d" category="inline-link">Cisco UCS 5100 系列刀片式服务器机箱</block>
   <block id="2f81ceda3b0bfc238f7f690e7473830e" category="cell"><block ref="2f81ceda3b0bfc238f7f690e7473830e" category="inline-link-rx"></block></block>
-  <block id="d86c1f4f619a3bba741383fdac037459" category="paragraph">每个 Cisco UCS 5108 刀片式服务器机箱都必须具有两个 Cisco UCS 2200/2300 系列 IOM ，以便为互联阵列提供冗余连接。有关可容纳哪些互联阵列和 Cisco UCS 5108 IOM 组合的详细信息，请参见。</block>
   <block id="a657b94e4c9e579fa82aa858106b19f3" category="paragraph">Cisco UCS B 系列刀片式服务器提供半宽和全宽两种型号，并提供各种 CPU ，内存和 I/O 选项。下表列出的部件号适用于基础服务器。它们不包括 CPU ，内存，驱动器或夹层适配器卡。FlexPod 架构中提供并支持多个配置选项。</block>
   <block id="58f718ee214b0714734639e81128fbb3" category="cell">Cisco UCS B 系列刀片式服务器</block>
   <block id="cd9477b63872b9cb0b9d373edd1c82f7" category="cell"><block ref="cd9477b63872b9cb0b9d373edd1c82f7" category="inline-link-rx"></block></block>
@@ -7447,4 +7435,41 @@
   <block id="9651c3a3b7cbc999c2c50c39dbf61c04" category="sidebar">采用 FlexPod 的混合云</block>
   <block id="0466740965e7956f8fc2a734a83f5686" category="sidebar">FabricPool 软件版本</block>
   <block id="6cb34c048fceb40f7d64efc563d407f9" category="sidebar">什么是勒索软件？</block>
+  <block id="fbebe2a055b4dcf362a0493004ef468f" category="paragraph">在 FlexPod 架构中需要使用冗余 NetApp FAS ， AFF 或 AFF ASA 控制器。这些控制器运行 ONTAP 软件。订购存储控制器后，可以在这些控制器上预加载首选软件版本。对于 ONTAP ，系统会订购一个完整的集群。整个集群包括一对存储控制器和一个集群互连（交换机或无交换机）。</block>
+  <block id="dac9e0940606682208e977faac4e179e" category="paragraph">NetApp 公司 Sree Lakshmi Landa ， Arvind Ramakrishnan 和 Jyh-shing Chen</block>
+  <block id="74f1a060fec1286151922916e9cb7cc9" category="paragraph">FlexPod 平台是一种预先设计的最佳实践数据中心架构，它基于 Cisco 统一计算系统（ Cisco UCS ）， Cisco Nexus 系列交换机和 NetApp 存储控制器（ NetApp AFF ， ASA 或 FAS 系统）构建。</block>
+  <block id="cc910127c1a0f3009d24973fab296857" category="paragraph">NetApp ONTAP 软件安装在所有 NetApp FAS ， AFF 和 AFF 全 SAN 阵列（ ASA ）系统上。FlexPod 已通过 ONTAP 软件的验证，可提供高度可扩展的存储架构，支持无中断运行，无中断升级和灵活的数据基础架构。</block>
+  <block id="b84c25a0a6333d1b6ec82954312075f9" category="paragraph">此配置可以包含任何受支持的 NetApp FAS ， AFF 或 ASA 系列存储控制器。请参见<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block> 应用程序以获取受支持的 FAS ， AFF 和 ASA 控制器型号的最新列表。</block>
+  <block id="f19ed772a308d90aafe4bc81c025d843" category="list-text">HA 配置要求每个控制器具有两个冗余接口来进行数据访问；这些接口可以是 FCoE ， FC 或 10/25/100GB 以太网（ 10GbE ）。</block>
+  <block id="1e43cedc7bbfa39913e13dd030f51171" category="list-text">如果解决方案使用 ONTAP ，则每个控制器至少需要两个额外的 10/25/100GbE 端口才能进行数据访问。</block>
+  <block id="9ae783a3ab636618c5130cf4e28efd11" category="list-text">一个具有任何受支持磁盘类型的 NetApp 磁盘架。请参见的磁盘架选项卡 <block ref="910181e0dcbc3888beac11d697ebd30b" category="inline-link-macro-rx"></block> 有关支持的磁盘架型号的最新列表。</block>
+  <block id="107d17c23965093bdabe46bc6b6ba610" category="section-title">AFF ASA A 系列</block>
+  <block id="dbb86a37ca706fad417eb540ecf9bff8" category="paragraph">支持在 FlexPod 中使用所有当前型号的 NetApp AFF ASA A 系列存储控制器。追加信息可在所有 SAN 阵列文档资源， ONTAP AFF 全 SAN 阵列系统技术报告和 NetApp Hardware Universe 中找到。有关特定 AFF 型号的详细信息，请参见下表中列出的平台专用文档。</block>
+  <block id="8edae448eb4c721effbdf809fd185881" category="cell">NetApp AFF ASA A800</block>
+  <block id="4a7b86ad78c8ba8757536489d20f9502" category="inline-link">AFF ASA A800 平台文档</block>
+  <block id="f57218ceec3975958769e7ef8d88662f" category="cell"><block ref="f57218ceec3975958769e7ef8d88662f" category="inline-link-rx"></block></block>
+  <block id="76230c3a7bd329c3a04a86fbc92976bd" category="cell">NetApp AFF ASA A700</block>
+  <block id="c53631b035c05bd428821e22dd6f2419" category="inline-link">AFF ASA A700 平台文档</block>
+  <block id="2ae12155440a384dd9d1153571d45471" category="cell"><block ref="2ae12155440a384dd9d1153571d45471" category="inline-link-rx"></block></block>
+  <block id="aafe0e1c53b524c9bed54653f1c4a0a6" category="cell">NetApp AFF ASA A400</block>
+  <block id="11c182a198b8ae3b16428bc673141058" category="inline-link">AFF ASA A400 平台文档</block>
+  <block id="86d7eaf61ea8b8d4697e7ce4c2c5e96f" category="cell"><block ref="86d7eaf61ea8b8d4697e7ce4c2c5e96f" category="inline-link-rx"></block></block>
+  <block id="6cea84fb4efd66ee16d7e9ec06547f0b" category="cell">NetApp AFF ASA A250</block>
+  <block id="527843652c5ccaf5877107bbb3b5c75f" category="inline-link">AFF ASA A250 平台文档</block>
+  <block id="642dbf17c3fc84fac2bf46864ba46956" category="cell"><block ref="642dbf17c3fc84fac2bf46864ba46956" category="inline-link-rx"></block></block>
+  <block id="bcafb16f83e5ee87f9a5f2dfa7e154eb" category="cell">NetApp AFF ASA A220</block>
+  <block id="0fe164f47d43f2cbfd102d0aa1d2dfb9" category="inline-link">AFF ASA A220 平台文档</block>
+  <block id="35e833762d254950955265d789112b72" category="cell"><block ref="35e833762d254950955265d789112b72" category="inline-link-rx"></block></block>
+  <block id="0a3ce874fb8892a0ef377541f9e22ae0" category="paragraph">从 ONTAP 9.8 开始，可以在第三个站点部署 ONTAP 调解器，以监控 MetroCluster IP 解决方案，并在发生站点灾难时实现自动计划外切换。</block>
+  <block id="0656baab6b20856ac35525618612d0a6" category="paragraph">下图展示了采用 NetApp MetroCluster 架构的 FlexPod Datacenter 。</block>
+  <block id="ba2830cdd34f42264ebedc2885654b49" category="paragraph">下图展示了采用 NetApp MetroCluster IP 架构的 FlexPod 数据中心。</block>
+  <block id="31f3e5f374c9981c7f755a62df9aa5f7" category="paragraph">对于具有扩展的第 2 层站点到站点连接的 FlexPod MetroCluster IP 解决方案部署，如果网络带宽和交换机满足下图所示的要求，则可以通过共享 ISL 并将 FlexPod 交换机用作合规的 MetroCluster IP 交换机来节省成本。 其中展示了具有 ISL 共享和合规交换机的 FlexPod MetroCluster IP 解决方案。</block>
+  <block id="dcef946275e6f1b48b1149dd3ce50394" category="paragraph">下图显示了采用 VXLAN 多站点网络结构部署的 FlexPod MetroCluster IP 解决方案的 VXLAN 多站点网络结构和 MetroCluster IP 存储网络结构。</block>
+  <block id="19fbeb4208b5ee6112e7e9897e7b98c6" category="list-text">适用于 FlexPod MetroCluster IP 解决方案的 VXLAN 多站点网络结构</block>
+  <block id="21b055a7983c5da979e2032a8d151070" category="paragraph"><block ref="21b055a7983c5da979e2032a8d151070" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8b8fc1f77a77033a4f875b9d3c41cba0" category="list-text">适用于 FlexPod MetroCluster IP 解决方案的 MetroCluster IP 存储网络结构</block>
+  <block id="fff3221387526a475e245a0672623dde" category="paragraph"><block ref="fff3221387526a475e245a0672623dde" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a6838277329036ad65d76f3631b28615" category="paragraph">每个 Cisco UCS 5108 刀片式服务器机箱都必须具有两个 Cisco UCS 2200/23400/2400 系列 IOM ，以便为互联阵列提供冗余连接。</block>
+  <block id="69f41216a6f701dbadf4920121ca1d1c" category="list-text">Cisco Intersight 托管模式：</block>
+  <block id="bec37368cdee36a2d40b5acd316c52ac" category="list-text">Cisco UCS 6400 系列互联阵列— 4.1 （ 2 ）</block>
 </blocks>

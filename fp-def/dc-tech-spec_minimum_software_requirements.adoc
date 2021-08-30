@@ -26,6 +26,11 @@ FlexPod 配置具有以下最低软件要求：
 ** Cisco UCS 6400 系列互联阵列— 4.0 （ 1 ）
 
 
+* Cisco Intersight 托管模式：
++
+** Cisco UCS 6400 系列互联阵列— 4.1 （ 2 ）
+
+
 * 对于 Cisco Nexus 5000 系列交换机， Cisco NX-OS 软件版本 5.0 （ 3 ） N1 （ 1c ）或更高版本，包括 NX-OS 5.1.x
 * 对于 Cisco Nexus 7000 系列交换机：
 +

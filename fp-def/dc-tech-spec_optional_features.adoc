@@ -20,15 +20,31 @@ NetApp 支持多个可选组件，可进一步增强 FlexPod 数据中心架构�
 
 FlexPod 支持两种 NetApp MetroCluster 软件版本，可在双节点或四节点集群配置中实现持续可用性。MetroCluster 可为关键工作负载提供同步复制。它需要使用连接到 Cisco 交换机的双站点配置。对于 MetroCluster FC ，站点之间支持的最大距离约为 186 英里（ 300 公里），对于 MetroCluster IP ，支持的最大距离约为 435 英里（ 700 公里）。下图分别展示了采用 NetApp MetroCluster 架构的 FlexPod 数据中心和采用 NetApp MetroCluster IP 架构的 FlexPod 数据中心。
 
-有关详细信息和指导，请参见以下部署文档：
+从 ONTAP 9.8 开始，可以在第三个站点部署 ONTAP 调解器，以监控 MetroCluster IP 解决方案，并在发生站点灾难时实现自动计划外切换。
 
-* * FlexPod MetroCluster FC/* http://www.netapp.com/us/media/nva-0030-deploy.pdf["NVA-0030-Deploy ：采用 NetApp MetroCluster FC 的 FlexPod 数据中心"^]。
-* * FlexPod MetroCluster IP.* https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi67_n9k_aci_metrocluster.html["CVD ：采用 NetApp MetroCluster IP 的 FlexPod 数据中心"^]。
-
+下图展示了采用 NetApp MetroCluster 架构的 FlexPod Datacenter 。
 
 image:dc-tech-spec_image1.png["错误：缺少图形映像"]
 
+下图展示了采用 NetApp MetroCluster IP 架构的 FlexPod 数据中心。
+
 image:dc-tech-spec_image2.png["错误：缺少图形映像"]
+
+对于具有扩展的第 2 层站点到站点连接的 FlexPod MetroCluster IP 解决方案部署，如果网络带宽和交换机满足下图所示的要求，则可以通过共享 ISL 并将 FlexPod 交换机用作合规的 MetroCluster IP 交换机来节省成本。 其中展示了具有 ISL 共享和合规交换机的 FlexPod MetroCluster IP 解决方案。
+
+image:dc-tech-spec_image10.png["错误：缺少图形映像"]
+
+下图显示了采用 VXLAN 多站点网络结构部署的 FlexPod MetroCluster IP 解决方案的 VXLAN 多站点网络结构和 MetroCluster IP 存储网络结构。
+
+* 适用于 FlexPod MetroCluster IP 解决方案的 VXLAN 多站点网络结构
+
+
+image:dc-tech-spec_image11.png["错误：缺少图形映像"]
+
+* 适用于 FlexPod MetroCluster IP 解决方案的 MetroCluster IP 存储网络结构
+
+
+image:dc-tech-spec_image12.png["错误：缺少图形映像"]
 
 
 

@@ -12,6 +12,6 @@ summary: NetApp ONTAP 软件安装在每个 NetApp FAS 或 AFF 系统上。FlexP
 :imagesdir: ./../media/
 
 
-NetApp ONTAP 软件安装在每个 NetApp FAS 或 AFF 系统上。FlexPod 已通过 ONTAP 软件的验证，可提供高度可扩展的存储架构，支持无中断运行，无中断升级和灵活的数据基础架构。
+NetApp ONTAP 软件安装在所有 NetApp FAS ， AFF 和 AFF 全 SAN 阵列（ ASA ）系统上。FlexPod 已通过 ONTAP 软件的验证，可提供高度可扩展的存储架构，支持无中断运行，无中断升级和灵活的数据基础架构。
 
 有关 ONTAP 的详细信息，请参见 http://www.netapp.com/us/products/data-management-software/ontap.aspx["ONTAP 数据管理软件"^] 产品页面。

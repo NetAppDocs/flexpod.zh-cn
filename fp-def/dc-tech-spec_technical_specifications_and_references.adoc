@@ -365,6 +365,30 @@ NetApp 存储控制器的技术规格包括以下组件：
 |===
 
 
+=== AFF ASA A 系列
+
+支持在 FlexPod 中使用所有当前型号的 NetApp AFF ASA A 系列存储控制器。追加信息可在所有 SAN 阵列文档资源， ONTAP AFF 全 SAN 阵列系统技术报告和 NetApp Hardware Universe 中找到。有关特定 AFF 型号的详细信息，请参见下表中列出的平台专用文档。
+
+|===
+| 组件 | AFF A 系列控制器平台文档 
+
+
+| NetApp AFF ASA A800 | http://docs.netapp.com/allsan/index.jsp["AFF ASA A800 平台文档"] 
+
+
+| NetApp AFF ASA A700 | http://docs.netapp.com/allsan/index.jsp["AFF ASA A700 平台文档"] 
+
+
+| NetApp AFF ASA A400 | http://docs.netapp.com/allsan/index.jsp["AFF ASA A400 平台文档"] 
+
+
+| NetApp AFF ASA A250 | http://docs.netapp.com/allsan/index.jsp["AFF ASA A250 平台文档"] 
+
+
+| NetApp AFF ASA A220 | http://docs.netapp.com/allsan/index.jsp["AFF ASA A220 平台文档"] 
+|===
+
+
 === NetApp 磁盘架
 
 NetApp 磁盘架的技术规格包括外形规格大小，每个机箱的驱动器数量以及磁盘架 I/O 模块；下表提供了此文档。有关详细信息，请参见 http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["NetApp 磁盘架和存储介质技术规格"^] 和。

@@ -39,15 +39,15 @@ FlexPod 配置具有以下最低硬件要求：
 
 * 采用高可用性（ HA ）对配置的两个 NetApp 存储控制器：
 +
-此配置可以包含任何受支持的 NetApp FAS 或 AFF 系列存储控制器。请参见 https://hwu.netapp.com/["NetApp Hardware Universe"^] 应用程序以获取受支持的 FAS 和 AFF 控制器型号的最新列表。
+此配置可以包含任何受支持的 NetApp FAS ， AFF 或 ASA 系列存储控制器。请参见 https://hwu.netapp.com/["NetApp Hardware Universe"^] 应用程序以获取受支持的 FAS ， AFF 和 ASA 控制器型号的最新列表。
 
 +
-** HA 配置要求每个控制器具有两个冗余接口来进行数据访问；这些接口可以是 FCoE ， FC 或 10 Gb 以太网（ 10GbE ）。
+** HA 配置要求每个控制器具有两个冗余接口来进行数据访问；这些接口可以是 FCoE ， FC 或 10/25/100GB 以太网（ 10GbE ）。
 ** 如果解决方案使用 NetApp ONTAP ，则需要经过 NetApp 批准的集群互连拓扑。有关详细信息，请参见 https://hwu.netapp.com/Switch/Index["交换机"^] 选项卡 Hardware Universe 。
-** 如果解决方案使用 ONTAP ，则每个控制器至少需要两个额外的 10GbE 端口才能进行数据访问。
+** 如果解决方案使用 ONTAP ，则每个控制器至少需要两个额外的 10/25/100GbE 端口才能进行数据访问。
 ** 对于具有两个节点的 ONTAP 集群，您可以配置双节点无交换机集群。
 ** 对于具有两个以上节点的 ONTAP 集群，需要一对集群互连交换机。
 
 
-* 一个具有任何受支持磁盘类型的 NetApp 磁盘架。有关支持的磁盘架型号的最新列表，请参见 NetApp Hardware Universe 的磁盘架选项卡。
+* 一个具有任何受支持磁盘类型的 NetApp 磁盘架。请参见的磁盘架选项卡 link:https://hwu.netapp.com/Shelves/Index?osTypeId=2032["NetApp Hardware Universe"^] 有关支持的磁盘架型号的最新列表。
 

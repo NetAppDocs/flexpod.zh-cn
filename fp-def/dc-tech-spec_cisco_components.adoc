@@ -53,7 +53,7 @@ Cisco UCS 6454 系列提供线速，低延迟，无损 10/25/40/100GbE 以太网
 
 | Cisco UCS 5108 | N20-C508 | http://www.cisco.com/c/en/us/products/servers-unified-computing/ucs-5100-series-blade-server-chassis/index.html["Cisco UCS 5100 系列刀片式服务器机箱"] 
 |===
-每个 Cisco UCS 5108 刀片式服务器机箱都必须具有两个 Cisco UCS 2200/2300 系列 IOM ，以便为互联阵列提供冗余连接。有关可容纳哪些互联阵列和 Cisco UCS 5108 IOM 组合的详细信息，请参见。
+每个 Cisco UCS 5108 刀片式服务器机箱都必须具有两个 Cisco UCS 2200/23400/2400 系列 IOM ，以便为互联阵列提供冗余连接。
 
 
 
