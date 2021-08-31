@@ -18,7 +18,7 @@ FlexPod 架构还具有以下与互操作性和支持相关的其他要求：
 * 所有设备都需要有效的支持合同，包括：
 +
 ** Cisco 设备的 SMART Net Total Care （ SMARTnet Total Care ， SMARTnet ）支持
-** 对 NetApp 设备的 SupportEdge Premium 支持
+** 对 NetApp 设备的 SupportEdge Advisor 或 SupportEdge Premium 支持
 
 
 

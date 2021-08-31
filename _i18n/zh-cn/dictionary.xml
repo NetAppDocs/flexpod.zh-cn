@@ -7437,10 +7437,8 @@
   <block id="6cb34c048fceb40f7d64efc563d407f9" category="sidebar">什么是勒索软件？</block>
   <block id="fbebe2a055b4dcf362a0493004ef468f" category="paragraph">在 FlexPod 架构中需要使用冗余 NetApp FAS ， AFF 或 AFF ASA 控制器。这些控制器运行 ONTAP 软件。订购存储控制器后，可以在这些控制器上预加载首选软件版本。对于 ONTAP ，系统会订购一个完整的集群。整个集群包括一对存储控制器和一个集群互连（交换机或无交换机）。</block>
   <block id="dac9e0940606682208e977faac4e179e" category="paragraph">NetApp 公司 Sree Lakshmi Landa ， Arvind Ramakrishnan 和 Jyh-shing Chen</block>
-  <block id="74f1a060fec1286151922916e9cb7cc9" category="paragraph">FlexPod 平台是一种预先设计的最佳实践数据中心架构，它基于 Cisco 统一计算系统（ Cisco UCS ）， Cisco Nexus 系列交换机和 NetApp 存储控制器（ NetApp AFF ， ASA 或 FAS 系统）构建。</block>
   <block id="cc910127c1a0f3009d24973fab296857" category="paragraph">NetApp ONTAP 软件安装在所有 NetApp FAS ， AFF 和 AFF 全 SAN 阵列（ ASA ）系统上。FlexPod 已通过 ONTAP 软件的验证，可提供高度可扩展的存储架构，支持无中断运行，无中断升级和灵活的数据基础架构。</block>
   <block id="b84c25a0a6333d1b6ec82954312075f9" category="paragraph">此配置可以包含任何受支持的 NetApp FAS ， AFF 或 ASA 系列存储控制器。请参见<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block> 应用程序以获取受支持的 FAS ， AFF 和 ASA 控制器型号的最新列表。</block>
-  <block id="f19ed772a308d90aafe4bc81c025d843" category="list-text">HA 配置要求每个控制器具有两个冗余接口来进行数据访问；这些接口可以是 FCoE ， FC 或 10/25/100GB 以太网（ 10GbE ）。</block>
   <block id="1e43cedc7bbfa39913e13dd030f51171" category="list-text">如果解决方案使用 ONTAP ，则每个控制器至少需要两个额外的 10/25/100GbE 端口才能进行数据访问。</block>
   <block id="9ae783a3ab636618c5130cf4e28efd11" category="list-text">一个具有任何受支持磁盘类型的 NetApp 磁盘架。请参见的磁盘架选项卡 <block ref="910181e0dcbc3888beac11d697ebd30b" category="inline-link-macro-rx"></block> 有关支持的磁盘架型号的最新列表。</block>
   <block id="107d17c23965093bdabe46bc6b6ba610" category="section-title">AFF ASA A 系列</block>
@@ -7472,4 +7470,9 @@
   <block id="a6838277329036ad65d76f3631b28615" category="paragraph">每个 Cisco UCS 5108 刀片式服务器机箱都必须具有两个 Cisco UCS 2200/23400/2400 系列 IOM ，以便为互联阵列提供冗余连接。</block>
   <block id="69f41216a6f701dbadf4920121ca1d1c" category="list-text">Cisco Intersight 托管模式：</block>
   <block id="bec37368cdee36a2d40b5acd316c52ac" category="list-text">Cisco UCS 6400 系列互联阵列— 4.1 （ 2 ）</block>
+  <block id="cf5bd5fc9c0cc6da411822bc35fd08db" category="inline-link">AFF ASA A 系列文档</block>
+  <block id="e9c5cbf5c293a99accdc40c5466598b6" category="cell"><block ref="e9c5cbf5c293a99accdc40c5466598b6" category="inline-link-rx"></block></block>
+  <block id="aa2f8bc486f5931602b4fd5aa1b0bde8" category="paragraph">FlexPod 平台是一种预先设计的最佳实践数据中心架构，它基于 Cisco 统一计算系统（ Cisco UCS ）， Cisco Nexus 系列交换机和 NetApp 存储控制器（ AFF ， ASA 或 FAS 系统）构建。</block>
+  <block id="49f8002032516f551341370d8bbb87c4" category="list-text">HA 配置要求每个控制器具有两个冗余接口来进行数据访问；这些接口可以是 FCoE ， FC 或 10/25/100GB 以太网（ GbE ）。</block>
+  <block id="69f069c4c370b3ec1c58983efd30432c" category="list-text">对 NetApp 设备的 SupportEdge Advisor 或 SupportEdge Premium 支持</block>
 </blocks>
