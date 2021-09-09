@@ -4,6 +4,8 @@ title: 企业数据库
 entries:
 - title: SAP
   entries:
+  - title: 采用 FlexPod 的 SAP 简介
+    url: "/ent-db/index.html"
   - title: SAP HANA FC SAN CVD [ 部署 ]
     url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_sap_ucsm40_fcsan.html
   - title: "《采用 SQL 的 SAP 非 HANA 白皮书（ WP ）》（设计）"

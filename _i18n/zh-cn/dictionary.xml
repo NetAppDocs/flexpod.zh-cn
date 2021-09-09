@@ -665,12 +665,7 @@
   <block id="b57f077428dce4df34f2d8532f2648c5" category="paragraph">FlexPod Express 不仅提供了基线配置，还可以灵活地调整规模并进行优化，以满足多种不同的使用情形和要求。本文档将根据所使用的存储系统，采用 NetApp FAS 的 FlexPod Express 以及采用 E 系列的 FlexPod Express 对 FlexPod Express 配置进行分类。</block>
   <block id="3fa8666b8a47acf64248b6b5f67a82a5" category="summary">FlexPod 快速平台支持本节中列出的存储软件。</block>
   <block id="a64c8d59be31b09362634dedf23d4e86" category="doc">存储软件</block>
-  <block id="d8e932523c7d30227113d9baa1f68493" category="paragraph">NetApp ONTAP 软件安装在每个 NetApp 存储系统上。</block>
-  <block id="ea9e42abcc28802c2dec00398a321049" category="inline-link">ONTAP 数据管理软件产品页面</block>
-  <block id="f097249a06eda4087c5b437e50e70470" category="paragraph">FlexPod 已通过 ONTAP 的验证，可提供高度可扩展的存储架构，支持无中断运行，无中断升级和灵活的数据基础架构。有关 ONTAP 的详细信息，请参见<block ref="807368d97abf0aca5e6981675b58ea14" category="inline-link-rx"></block>。</block>
   <block id="02a5537e181da938c0f5cb453ba3d4a7" category="section-title">E 系列 SANtricity 软件</block>
-  <block id="8cb2faddff4ef53c3d7eb03456379b03" category="inline-link">SANtricity 软件产品站点</block>
-  <block id="e3c20a827c7db443e1b16705ba8eae07" category="paragraph">E 系列 SANtricity 软件是在每个 E 系列存储系统上运行的操作系统。SANtricity 提供了一个高度灵活的系统，可满足不同的应用程序需求，并提供内置的高可用性和各种数据保护功能。有关详细信息，请参见<block ref="470ed698d82b5bb5ff621d39c0dc617f" category="inline-link-rx"></block>。</block>
   <block id="28b69efdba58f83101dca273e330e519" category="summary">FlexPod 设计可提供一个灵活的基础架构，其中包含许多不同的组件和软件版本。</block>
   <block id="5eac17db957622119d1b18a268d7c299" category="doc">FlexPod 规则</block>
   <block id="2415fc49fbe847187613f58fe7ec0149" category="paragraph">使用规则集作为构建或整合有效 FlexPod 配置的指南。本文档中列出的数字和规则是 FlexPod 配置的最低要求。可以根据不同环境和使用情形的需要在所含产品系列中扩展这些功能。</block>
@@ -7475,4 +7470,16 @@
   <block id="aa2f8bc486f5931602b4fd5aa1b0bde8" category="paragraph">FlexPod 平台是一种预先设计的最佳实践数据中心架构，它基于 Cisco 统一计算系统（ Cisco UCS ）， Cisco Nexus 系列交换机和 NetApp 存储控制器（ AFF ， ASA 或 FAS 系统）构建。</block>
   <block id="49f8002032516f551341370d8bbb87c4" category="list-text">HA 配置要求每个控制器具有两个冗余接口来进行数据访问；这些接口可以是 FCoE ， FC 或 10/25/100GB 以太网（ GbE ）。</block>
   <block id="69f069c4c370b3ec1c58983efd30432c" category="list-text">对 NetApp 设备的 SupportEdge Advisor 或 SupportEdge Premium 支持</block>
+  <block id="5906d6dbdea0ad13566afd9cead9fc2c" category="paragraph">FlexPod Express 支持运行 NetApp ONTAP 或 SANtricity 操作系统的存储系统。</block>
+  <block id="07bb9fea02eb345871ff44646d8ceb97" category="paragraph">NetApp ONTAP 软件是在 AFF 和 FAS 存储系统上运行的操作系统。ONTAP 提供了一个高度可扩展的存储架构，可实现无中断运行，无中断升级和灵活的数据基础架构。</block>
+  <block id="1e3274a40d2751f8442f3b15fddb1f21" category="inline-link">ONTAP 产品页面</block>
+  <block id="0f9b0a6f89a44a0888a692ccc45abc12" category="paragraph">有关 ONTAP 的详细信息，请参见<block ref="88cc62f55a4daad34ef58813e7e4f1c6" category="inline-link-rx"></block>。</block>
+  <block id="0ba0549652aeb08deee908e7e20e4817" category="paragraph">E 系列 SANtricity 软件是在 E 系列存储系统上运行的操作系统。SANtricity 提供了一个高度灵活的系统，可满足不同的应用程序需求，并提供内置的高可用性和各种数据保护功能。</block>
+  <block id="54ea526e0f7043f1dc938cd7369a4327" category="inline-link">SANtricity 产品页面</block>
+  <block id="6b5301ce1cf7e0e48684f0dfb047d000" category="paragraph">有关详细信息，请参见<block ref="886f8cec6f6fad388084013f5ad16d82" category="inline-link-rx"></block>。</block>
+  <block id="107b85601e13443e848d96d910bee735" category="summary">本页介绍如何将 FlexPod 与 SAP HANA 和其他 SAP 应用程序结合使用。</block>
+  <block id="7caa0b3fa0fd74ced773a86b62850a8b" category="doc">基于 FlexPod 的 SAP 简介</block>
+  <block id="1d17aeb7ab368ca4f28128e50a5cf276" category="paragraph">FlexPod 平台是一种预先设计的最佳实践数据中心架构，它基于 Cisco 统一计算系统（ Cisco UCS ）， Cisco Nexus 系列交换机和 NetApp 存储控制器构建。</block>
+  <block id="864daa7ed7265e3176099021d13f4763" category="paragraph">FlexPod 是运行 SAP 应用程序的合适平台，此处提供的解决方案可帮助您快速，可靠地部署 SAP HANA ，并采用量身定制的数据中心集成模式。FlexPod 不仅提供了基线配置，而且还可以灵活地调整规模并进行优化，以满足多种不同的使用情形和要求。</block>
+  <block id="5b7e41bd189664acad4c873cf6e0c2df" category="sidebar">采用 FlexPod 的 SAP 简介</block>
 </blocks>

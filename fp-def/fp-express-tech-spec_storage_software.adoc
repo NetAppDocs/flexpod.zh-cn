@@ -12,18 +12,20 @@ summary: FlexPod 快速平台支持本节中列出的存储软件。
 :imagesdir: ./../media/
 
 
-FlexPod 快速平台支持本节中列出的存储软件。
+FlexPod Express 支持运行 NetApp ONTAP 或 SANtricity 操作系统的存储系统。
 
 
 
 == NetApp ONTAP
 
-NetApp ONTAP 软件安装在每个 NetApp 存储系统上。
+NetApp ONTAP 软件是在 AFF 和 FAS 存储系统上运行的操作系统。ONTAP 提供了一个高度可扩展的存储架构，可实现无中断运行，无中断升级和灵活的数据基础架构。
 
-FlexPod 已通过 ONTAP 的验证，可提供高度可扩展的存储架构，支持无中断运行，无中断升级和灵活的数据基础架构。有关 ONTAP 的详细信息，请参见 http://www.netapp.com/us/products/platform-os/ontap/index.aspx["ONTAP 数据管理软件产品页面"^]。
+有关 ONTAP 的详细信息，请参见 http://www.netapp.com/us/products/platform-os/ontap/index.aspx["ONTAP 产品页面"^]。
 
 
 
 == E 系列 SANtricity 软件
 
-E 系列 SANtricity 软件是在每个 E 系列存储系统上运行的操作系统。SANtricity 提供了一个高度灵活的系统，可满足不同的应用程序需求，并提供内置的高可用性和各种数据保护功能。有关详细信息，请参见 http://www.netapp.com/us/products/platform-os/santricity/index.aspx["SANtricity 软件产品站点"^]。
+E 系列 SANtricity 软件是在 E 系列存储系统上运行的操作系统。SANtricity 提供了一个高度灵活的系统，可满足不同的应用程序需求，并提供内置的高可用性和各种数据保护功能。
+
+有关详细信息，请参见 http://www.netapp.com/us/products/platform-os/santricity/index.aspx["SANtricity 产品页面"^]。

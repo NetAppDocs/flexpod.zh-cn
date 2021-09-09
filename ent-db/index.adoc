@@ -1,0 +1,17 @@
+---
+sidebar: sidebar 
+permalink: ent-db/index.html 
+keywords: index, introduction, sap, hana, storage 
+summary: 本页介绍如何将 FlexPod 与 SAP HANA 和其他 SAP 应用程序结合使用。 
+---
+= 基于 FlexPod 的 SAP 简介
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+FlexPod 平台是一种预先设计的最佳实践数据中心架构，它基于 Cisco 统一计算系统（ Cisco UCS ）， Cisco Nexus 系列交换机和 NetApp 存储控制器构建。
+
+FlexPod 是运行 SAP 应用程序的合适平台，此处提供的解决方案可帮助您快速，可靠地部署 SAP HANA ，并采用量身定制的数据中心集成模式。FlexPod 不仅提供了基线配置，而且还可以灵活地调整规模并进行优化，以满足多种不同的使用情形和要求。
