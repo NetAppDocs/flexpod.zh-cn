@@ -372,7 +372,6 @@
   <block id="2fe9f1b02d69ad8ef2e636eb4f330189" category="summary">本文档提供了 FlexPod 快速平台的技术规格。</block>
   <block id="7501c5e58e67ce758d854a0f76243785" category="doc">FlexPod 平台</block>
   <block id="929267c420e3d3c55cf94c77cb6278ff" category="paragraph">FlexPod 平台有三种：</block>
-  <block id="aeda0c1e440fcd1c6c3baa6b69d759d7" category="list-text">* FlexPod Datacenter 。 * 此平台是一个可大规模扩展的虚拟数据中心基础架构，适合工作负载企业级应用程序，虚拟化， VDI 以及公有和私有云。FlexPod 数据中心具有自己的规格，如中所述<block ref="edbf5529a56a24d958ac2eea62717089" category="inline-link-rx"></block>。</block>
   <block id="ec80c81f43eaed2db319aaaddeb1b47c" category="list-text">* FlexPod Express* 。此平台是一个紧凑型融合基础架构，面向远程办公室和边缘使用情形。</block>
   <block id="82da3c7bdf42770183f1b2651ae3ac0a" category="inline-link">适用于高性能 Oracle RAC 的 FlexPod Select 。</block>
   <block id="ea29f1a94a5cc0b3c2459d7f61b47043" category="list-text">* FlexPod Select* 。此平台是专为高性能应用程序构建的架构，例如<block ref="6aad01ba0b9744c0d680fcb06a4741ad" category="inline-link-rx"></block></block>
@@ -663,7 +662,6 @@
   <block id="59dad7986b7e1d4c7d25feadecf54af7" category="paragraph">NetApp 公司 Karthick Radhakrishnan ， Arvind Ramakrishnan ， Lindsey Street ， Savita Kumari</block>
   <block id="01b5eb7de901fc377f6709faad98f27e" category="paragraph">FlexPod Express 是一种预先设计的最佳实践架构，它基于 Cisco 统一计算系统（ Cisco UCS ）和 Cisco Nexus 系列交换机构建，存储层使用 NetApp FAS 或 NetApp E 系列存储构建。FlexPod Express 是一个适合运行各种虚拟化虚拟机管理程序，裸机操作系统（ OS ）和企业工作负载的平台。</block>
   <block id="b57f077428dce4df34f2d8532f2648c5" category="paragraph">FlexPod Express 不仅提供了基线配置，还可以灵活地调整规模并进行优化，以满足多种不同的使用情形和要求。本文档将根据所使用的存储系统，采用 NetApp FAS 的 FlexPod Express 以及采用 E 系列的 FlexPod Express 对 FlexPod Express 配置进行分类。</block>
-  <block id="3fa8666b8a47acf64248b6b5f67a82a5" category="summary">FlexPod 快速平台支持本节中列出的存储软件。</block>
   <block id="a64c8d59be31b09362634dedf23d4e86" category="doc">存储软件</block>
   <block id="02a5537e181da938c0f5cb453ba3d4a7" category="section-title">E 系列 SANtricity 软件</block>
   <block id="28b69efdba58f83101dca273e330e519" category="summary">FlexPod 设计可提供一个灵活的基础架构，其中包含许多不同的组件和软件版本。</block>
@@ -7482,4 +7480,6 @@
   <block id="1d17aeb7ab368ca4f28128e50a5cf276" category="paragraph">FlexPod 平台是一种预先设计的最佳实践数据中心架构，它基于 Cisco 统一计算系统（ Cisco UCS ）， Cisco Nexus 系列交换机和 NetApp 存储控制器构建。</block>
   <block id="864daa7ed7265e3176099021d13f4763" category="paragraph">FlexPod 是运行 SAP 应用程序的合适平台，此处提供的解决方案可帮助您快速，可靠地部署 SAP HANA ，并采用量身定制的数据中心集成模式。FlexPod 不仅提供了基线配置，而且还可以灵活地调整规模并进行优化，以满足多种不同的使用情形和要求。</block>
   <block id="5b7e41bd189664acad4c873cf6e0c2df" category="sidebar">采用 FlexPod 的 SAP 简介</block>
+  <block id="b751a075630ee799e9ae603044754240" category="list-text">* FlexPod Datacenter 。 * 此平台是一个可大规模扩展的虚拟数据中心基础架构，适合工作负载企业级应用程序，虚拟化， VDI 以及公有和私有云。FlexPod 数据中心具有自己的规格，如中所述<block ref="c74831bb1a85ac0f8575eb8eeac86329" category="inline-link-rx"></block>。</block>
+  <block id="245c499a8eb2230fa27979a452c776e5" category="summary">FlexPod 快速平台支持本节中列出的存储操作系统。</block>
 </blocks>

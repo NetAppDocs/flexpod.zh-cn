@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: fp-def/fp-express-tech-spec_storage_software.html 
 keywords: storage, software, flexpod, express, ontap, e, series, santricity 
-summary: FlexPod 快速平台支持本节中列出的存储软件。 
+summary: FlexPod 快速平台支持本节中列出的存储操作系统。 
 ---
 = 存储软件
 :hardbreaks:
