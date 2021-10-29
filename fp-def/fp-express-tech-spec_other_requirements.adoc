@@ -17,7 +17,7 @@ FlexPod Express 的其他要求包括：
 * 所有设备都需要有效的支持合同，包括：
 +
 ** Cisco 设备的 SMARTnet 支持
-** 对 NetApp 设备的 SupportEdge Premium 支持
+** 对 NetApp 设备的 SupportEdge Advisor 或 SupportEdge Premium 支持
 
 
 * 必须在中列出并支持所有软件组件 http://support.netapp.com/matrix/["NetApp IMT"^]。
