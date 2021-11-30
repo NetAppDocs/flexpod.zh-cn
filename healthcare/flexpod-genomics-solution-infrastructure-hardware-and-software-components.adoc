@@ -1,0 +1,113 @@
+---
+sidebar: sidebar 
+permalink: healthcare/flexpod-genomics-solution-infrastructure-hardware-and-software-components.html 
+keywords: GATK, setup, validation, cabling, hardware, software 
+summary: 本节介绍此解决方案中使用的解决方案基础架构和软件组件。 
+---
+= 解决方案基础架构硬件和软件组件
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-genomics-benefits-of-deploying-genomic-workloads-on-flexpod.html["先前版本：在 FlexPod 上部署基因组工作负载的优势。"]
+
+下图显示了用于 GATK 设置和验证的 FlexPod 系统。我们使用了 https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_vmware_vsphere_7_0_ontap_9_7.html["采用 VMware vSphere 7.0 和 NetApp ONTAP 9.7 的 FlexPod Datacenter Cisco 验证设计（ CVD ）"^] 在设置过程中。
+
+image:flexpod-genomics-image6.png["错误：缺少图形映像"]
+
+下图显示了 FlexPod 布线详细信息。
+
+image:flexpod-genomics-image7.png["错误：缺少图形映像"]
+
+下表列出了在 FlexPod 上启用 GATK 测试期间使用的硬件组件。下面是 https://mysupport.netapp.com/matrix/["NetApp 互操作性表工具"^] （ IMT ）和。
+
+|===
+| 层 | 产品系列 | 数量和型号 | 详细信息 
+
+
+| 计算 | Cisco UCS 5108 机箱 | 1 或 2 |  
+
+
+|  | Cisco UCS 刀片式服务器 | 6 个 B200 M5 | 每个都具有 2 个 20 或更多核心， 2.7 GHz 和 128-384 GB RAM 
+
+
+|  | Cisco UCS 虚拟接口卡（ VIC ） | Cisco UCS 1440 | 请参见 
+
+
+|  | 2 个 Cisco UCS 互联阵列 | 6332 | - 
+
+
+| 网络 | Cisco Nexus 交换机 | 2 个 Cisco Nexus 9332 | - 
+
+
+| 存储网络 | 用于通过 SMB/CIFS ， NFS 或 iSCSI 协议进行存储访问的 IP 网络 | 与上述相同的网络交换机 | - 
+
+
+|  | 通过 FC 进行存储访问 | 2 个 Cisco MDS 9148S | - 
+
+
+| 存储 | NetApp AFF A700 全闪存存储系统 | 1 个集群 | 具有两个节点的集群 
+
+
+|  | 磁盘架 | 一个 DS224C 或 NS224 磁盘架 | 已完全填充 24 个驱动器 
+
+
+|  | SSD | 24 ， 1.2 TB 或更大容量 | - 
+|===
+此表列出了基础架构软件。
+
+|===
+| 软件 | 产品系列 | 版本或版本 | 详细信息 
+
+
+| 各种 | Linux | RHEL 8.3 | - 
+
+
+|  | Windows | Windows Server 2012 R2 （ 64 位） | - 
+
+
+|  | NetApp ONTAP | ONTAP 9.8 或更高版本 | - 
+
+
+|  | Cisco UCS 互联阵列 | Cisco UCS Manager 4.1 或更高版本 | - 
+
+
+|  | Cisco 以太网 3000 或 9000 系列交换机 | 对于 9000 系列，对于 3000 系列，则为 7.0 （ 3 ） i7 （ 7 ）或更高版本，对于 9.2 （ 4 ）或更高版本 | - 
+
+
+|  | Cisco FC ： Cisco MDS 9132T | 8.4 （ 1a ）或更高版本 | - 
+
+
+|  | 虚拟机管理程序 | VMware vSphere ESXi 7.0 | - 
+
+
+| 存储 | 虚拟机管理程序管理系统 | VMware vCenter Server 7.0 （ vCSA ）或更高版本 | - 
+
+
+| 网络 | NetApp 虚拟存储控制台（ VSC ） | VSC 9.7 或更高版本 | - 
+
+
+|  | NetApp SnapCenter | SnapCenter 4.3 或更高版本 | - 
+
+
+|  | Cisco UCS Manager | 4.1 （ 3c ）或更高版本 |  
+
+
+| 虚拟机管理程序 | ESXi |  |  
+
+
+| 管理 | 虚拟机管理程序管理系统 VMware vCenter Server 7.0 （ vCSA ）或更高版本 |  |  
+
+
+|  | NetApp 虚拟存储控制台（ VSC ） | VSC 9.7 或更高版本 |  
+
+
+|  | NetApp SnapCenter | SnapCenter 4.3 或更高版本 |  
+
+
+|  | Cisco UCS Manager | 4.1 （ 3c ）或更高版本 |  
+|===
+link:flexpod-genomics-genomics---gatk-setup-and-execution.html["接下来：基因组学— GATK 设置和执行。"]

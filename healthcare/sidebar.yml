@@ -2,6 +2,27 @@
 section: healthcare
 title: 医疗保健
 entries:
+- title: 适用于基因组学的 FlexPod
+  type: solutions
+  entries:
+  - title: 简介
+    url: "/healthcare/flexpod-genomics-introduction.html"
+  - title: 在 FlexPod 上部署基因组工作负载的优势
+    url: "/healthcare/flexpod-genomics-benefits-of-deploying-genomic-workloads-on-flexpod.html"
+  - title: 解决方案基础架构硬件和软件组件
+    url: "/healthcare/flexpod-genomics-solution-infrastructure-hardware-and-software-components.html"
+  - title: 基因组学— GATK 设置和执行
+    url: "/healthcare/flexpod-genomics-genomics---gatk-setup-and-execution.html"
+  - title: 使用 JAR 文件执行 GATK 的输出
+    url: "/healthcare/flexpod-genomics-appendix-a.html"
+  - title: 使用 ./gatk 脚本执行 GATK 的输出
+    url: "/healthcare/flexpod-genomics-appendix-b.html"
+  - title: 使用 Cromwell 引擎执行 GATK 的输出
+    url: "/healthcare/flexpod-genomics-appendix-c.html"
+  - title: GPU 设置
+    url: "/healthcare/flexpod-genomics-appendix-d-gpu-setup.html"
+  - title: 结论
+    url: "/healthcare/flexpod-genomics-conclusion.html"
 - title: "《 FlexPod 数据中心 Epic 定向规模估算指南》"
   type: solutions
   entries:

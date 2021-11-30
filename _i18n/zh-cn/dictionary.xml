@@ -647,7 +647,6 @@
   <block id="99850d99c802817315214eb8be6522a3" category="paragraph">FlexPod Express 的其他要求包括：</block>
   <block id="50db735fd2ca91e20999ba15fc078612" category="list-text">所有设备都需要有效的支持合同，包括：</block>
   <block id="67e78efd215ff62dd9c56a052712f4b3" category="list-text">Cisco 设备的 SMARTnet 支持</block>
-  <block id="e65e193a3c9727db3a61ab17fa9816a0" category="list-text">对 NetApp 设备的 SupportEdge Premium 支持</block>
   <block id="975553b14d65150985ded5e645ea34a3" category="list-text">必须在中列出并支持所有软件组件<block ref="542750ff2ff69f0b5f9f0ab1166bb952" category="inline-link-rx"></block>。</block>
   <block id="aa0f4a94fdeef146af0a597f526d5c88" category="list-text">必须列出所有 NetApp 硬件组件并在上受支持<block ref="6a8cef5b71adde6301ea0984592ea5c1" category="inline-link-rx"></block>。</block>
   <block id="37dca77319b34332b146930ec37563f5" category="inline-link">Cisco HCL</block>
@@ -1321,7 +1320,6 @@
   <block id="d4780504a816544f6e2645b57ea78a79" category="inline-link">Cisco 许可</block>
   <block id="926dfe010cd806b1815f2e2e910d07ee" category="paragraph">有关各个许可层所涵盖功能的详细信息，请访问<block ref="8697cd039441f6238fc2562e0fa792ae" category="inline-link-rx"></block>。</block>
   <block id="220a07bd22d8383b964d4c6d90dbe241" category="doc">Cisco Intersight 与 NetApp ONTAP 存储：快速入门指南</block>
-  <block id="7c9c04a409d56fc02762025ea399879a" category="paragraph">NetApp 公司 Rachel Lithman 和 Sree Lan</block>
   <block id="f870dce89b1a86f562fc0615d943bfa6" category="paragraph">与以下合作伙伴：<block ref="4d9c1ec1584e887e0af42904bd173b15" category="inline-image-macro-rx" type="image"></block></block>
   <block id="efc7d87f859f5f426ae59b13b26a5e7f" category="summary">声明目标后，如果您拥有优势层许可证，则 NetApp 存储小工具，存储清单和虚拟化选项卡将变为可用。如果您拥有 Premier 层许可证，则可以使用业务流程选项卡。</block>
   <block id="c093ae35c304b80ba64b56e6cd80eccf" category="doc">从 Cisco Intersight 监控 NetApp 存储</block>
@@ -7482,4 +7480,354 @@
   <block id="5b7e41bd189664acad4c873cf6e0c2df" category="sidebar">采用 FlexPod 的 SAP 简介</block>
   <block id="b751a075630ee799e9ae603044754240" category="list-text">* FlexPod Datacenter 。 * 此平台是一个可大规模扩展的虚拟数据中心基础架构，适合工作负载企业级应用程序，虚拟化， VDI 以及公有和私有云。FlexPod 数据中心具有自己的规格，如中所述<block ref="c74831bb1a85ac0f8575eb8eeac86329" category="inline-link-rx"></block>。</block>
   <block id="245c499a8eb2230fa27979a452c776e5" category="summary">FlexPod 快速平台支持本节中列出的存储操作系统。</block>
+  <block id="61cc46b957612003be945c20fa10a67c" category="admonition">只有在通过 NetApp Active IQ Unified Manager 9.9 或更高版本监控存储阵列时，才会显示以下性能指标摘要信息。</block>
+  <block id="0b7287babbe3c16553a6f9cd3e22a10b" category="summary">Cisco Intersight 推出了新版本，可为您提供新功能，增强功能和错误修复。</block>
+  <block id="b312f45322f166ee041a7a16747fd5c1" category="doc">新增功能 &amp;#8217</block>
+  <block id="8a53d76b23b9bd398a76313ad1fa9a21" category="paragraph">本节列出了 Cisco Intersight 与 NetApp ONTAP 存储的新增特性和功能。</block>
+  <block id="a5f3f63c2f6e1d6d4605650633b9ce8a" category="section-title">2021年10月</block>
+  <block id="de34eca679dd6247c92b150abb3a7de0" category="inline-link-macro">用例 3 ：使用无设计人员表单创建自定义工作流，以获取完整的 NetApp 存储任务列表</block>
+  <block id="3a4b493c0e825641268aee1e0f9870d6" category="list-text">更新了 Cisco Intersight 中可用的 NetApp 存储任务列表。请参见 <block ref="fbd0daa77f229ba539f28706ca5be227" category="inline-link-macro-rx"></block>。</block>
+  <block id="754b6987e50dda52c9ced2b9e6a1c5a2" category="list-text">已在集群列表页面下添加运行状况列。</block>
+  <block id="b9af62df3144700ecbf415dca380fa7b" category="list-text">现在，已在选定集群的 " 常规 " 页面下提供扩展的详细信息。</block>
+  <block id="9413b697ad103ecb2a9939006df613ac" category="list-text">现在可以通过导航窗格访问 NTP 服务器表。</block>
+  <block id="28639af9987b0edbfaeff009a5cf089f" category="list-text">在节点页面下添加了一个新的传感器选项卡，其中包含 PSU ，风扇， FRU 信息。</block>
+  <block id="23ea9591aa7cd8e92ec6510589a7c09d" category="list-text">CIFS 和 NVMe 信息现在列在 Storage Virtual Machine 的 " 常规 " 页面下。</block>
+  <block id="b77580e30c5da9fbe1d65bcbd5aa6f14" category="list-text">VLAN 和链路聚合组摘要现在可在端口常规页面下查看。</block>
+  <block id="cbc1bce1da822fe664e5f3e591f9ff5c" category="list-text">在卷总容量表下添加的总数据容量列。</block>
+  <block id="b475ee88bad1c3a8e0c02734aa611a21" category="list-text">在 " 平均卷统计信息 " ， " 平均 LUN 统计信息 " ， " 平均聚合统计信息 " ， " 平均 Storage VM 统计信息 " 和 " 平均节点统计信息 " 表下添加了 " 延迟 " ， "IOPS" 和 " 吞吐量 " 列</block>
+  <block id="5c90847404629f1a208160217f5678bb" category="admonition">以上性能指标仅适用于通过 NetApp Active IQ Unified Manager 9.9 或更高版本监控的存储阵列。</block>
+  <block id="f639dd547fc10c6cec8e186b3a4524c8" category="paragraph">NetApp 公司 Rachel Lithman 和 Jyh-Shing Chen</block>
+  <block id="2dd892d3836e4f76d33d56d0c04079e2" category="summary">本节介绍如何设置 FlexPod 和 GATK 以及如何使用 Cromwell 引擎， JAR 文件或 ./Gatk 脚本执行 GATK 。</block>
+  <block id="97b65a4d825b764508962d3d74abfe45" category="doc">基因组学— GATK 设置和执行</block>
+  <block id="38dae60f2d18d1ce05ef80cec3185805" category="inline-link-macro">先前版本：解决方案基础架构硬件和软件组件。</block>
+  <block id="e956c8e0274cd30ca7b20aea47551686" category="paragraph"><block ref="e956c8e0274cd30ca7b20aea47551686" category="inline-link-macro-rx"></block></block>
+  <block id="a8e8153315dd0ecd2603e0af273f0175" category="inline-link">NHGRI</block>
+  <block id="af5d2acf376c6db304f66cb7cb769e43" category="paragraph">根据国家人类基因组研究所（<block ref="3a1b2056a96d9c6a418a62856b564d87" category="inline-link-rx"></block>）， " 基因组学是对一个人的所有基因（基因组）的研究，包括这些基因相互作用以及与人的环境相互作用。"</block>
+  <block id="168396d7f2bd4e4f265bdb6eee804bfa" category="paragraph">根据<block ref="3a1b2056a96d9c6a418a62856b564d87" category="inline-link-rx"></block>" 去氧碳核克利酸（ Deoxyribonucleic acid ， DNA/ 脱氧核素）是一种化合物，其中包含开发和指导几乎所有生物体活动所需的说明。DNA 分子由两个绞合成对的线组成，通常称为双螺旋。 " " 一个生物体的一整套基因称为其基因组。 "</block>
+  <block id="7eb14837137d00ca4ecab9489fe0a0bc" category="paragraph">测序是指确定基准在一个 DNA 链中的确切顺序的过程。当今最常见的排序类型之一称为 " 按合成排序 " 。此技术使用荧光信号的辐射来对基准进行排序。研究人员可以使用基因排序来搜索遗传变体以及在某个人仍处于萌芽阶段时可能对疾病的发展或发展起作用的任何变体。</block>
+  <block id="3342cc8fee560c270c2cccae32ce9ee9" category="section-title">从样本到变体标识，标注和预测</block>
+  <block id="cfc9bae1a548763f71ed038223946eb0" category="paragraph">从较高的层面来看，基因组学可以分为以下几个步骤。以下列表并不详尽：</block>
+  <block id="2a66c01794aa310652e4fc880f3bf53d" category="list-text">样本收集。</block>
+  <block id="3a33f10b22753c80d2d5eae449946e3f" category="inline-link">基因组测序</block>
+  <block id="a23a4c5adc6803551c01aafffcfb13fb" category="list-text"><block ref="7de9e6f1b75fa228a4675b79d8181e84" category="inline-link-rx"></block> 使用序列发生器生成原始数据。</block>
+  <block id="80a2828f37ba5a155ea5dba631a88286" category="inline-link">deduplication</block>
+  <block id="ab9cb547cbad013313b611cab3795822" category="inline-link">图标</block>
+  <block id="a7257ea902e2eb531f02e621fb00eb22" category="list-text">预处理。例如：<block ref="671653e812ff6779ff72dbedb0555d3c" category="inline-link-rx"></block> 使用<block ref="9f9a0d8e0b06c07517f43e6a973520e1" category="inline-link-rx"></block>。</block>
+  <block id="b932ed707259daf911f8a7846516654d" category="list-text">基因组分析。</block>
+  <block id="1dcc68b481b2e0ffa9eb9f60b4cbf247" category="list-text">映射到参考基因组。</block>
+  <block id="492f18b60811bf85ce118c0c6a1a5c4a" category="inline-link">变体</block>
+  <block id="bfb4a365524d28b4c411f29668b48087" category="list-text"><block ref="b755a4efeb5a191e47f56a3ae4409c17" category="inline-link-rx"></block> 通常使用 GATK 和类似工具执行标识和标注。</block>
+  <block id="3ade9c9031acca1943dc7ec58c5f5ffb" category="list-text">集成到电子运行状况记录（ EHR ）系统中。</block>
+  <block id="010c0cfd30b64002f2c5ff50c0173092" category="inline-link">人口分层</block>
+  <block id="e7a272f932b605b39de67ce5a2a31337" category="list-text"><block ref="d7d15900e263d826cd4aa0e23b9a2c5e" category="inline-link-rx"></block> 并确定跨地理位置和种族背景的遗传变体。</block>
+  <block id="37b4b994ef40eabd1d66158f1284934b" category="inline-link">预测模型</block>
+  <block id="15d721d462cffc54eb4d193b85c0f3b1" category="list-text"><block ref="853c44c8cbce3818ccb04bfb87d99a8d" category="inline-link-rx"></block> 使用显著的单核退潮多形态。</block>
+  <block id="13148717f8faa9037f37d28971dfc219" category="inline-link">验证</block>
+  <block id="fecf9b46306f7e1f99c3567521fbebcd" category="list-text"><block ref="9cb1bf5675838afcd9d043b34540e795" category="inline-link-rx"></block>。</block>
+  <block id="f66ba25a9fe053c20e78cdd3af27de2e" category="paragraph">下图显示了从采样到变体标识，标注和预测的过程。</block>
+  <block id="67b067025d7257a5a1de840ac15e85a5" category="paragraph"><block ref="67b067025d7257a5a1de840ac15e85a5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e9a9a39bf6ce0e923caa820ce58c4ffd" category="paragraph">人类基因组项目于 2003 年 4 月完成，该项目对公有域中的人类基因组序列进行了高质量的模拟。这种参考基因组引发了基因组功能研究和开发的爆炸式增长。几乎每一种人类疾病都有其基因特征。直到最近，医生一直在利用基因预测和确定诸如镰状细胞性贫血之类的缺陷，这是由一个基因的变化所导致的某种继承模式引起的。人类基因组项目所提供的数据的宝贵财富导致了基因组功能的当前状态的出现。</block>
+  <block id="98235347bc7a13d923deb3a8832ed83d" category="paragraph">基因组学具有一系列广泛的优势。以下是医疗保健和生命科学领域的一小部分优势：</block>
+  <block id="28b95e66eb53d0c547718cacfa6024e0" category="list-text">更好地在护理点进行诊断</block>
+  <block id="9356a70029a13b47339a5c53fba219ac" category="list-text">预后更好</block>
+  <block id="e44504b973b0dfe28ae515d27bd31a83" category="list-text">精确医学</block>
+  <block id="fd024ca88082f5c1829e867255c5351b" category="list-text">个性化的治疗计划</block>
+  <block id="b90ba232506efc29e2ad9c1232bd1024" category="list-text">改善疾病监控</block>
+  <block id="e8894fbde5a632926200dce8645b0842" category="list-text">减少不利事件</block>
+  <block id="8f09cd1b26aed9bcc251624d1db9d9b1" category="list-text">改善获得治疗的途径</block>
+  <block id="75b3db1b1e41e55fea4b7e7c02a8f6ee" category="list-text">改进了疾病监控</block>
+  <block id="610956098b2b82a1d170b0f13ea10eb1" category="list-text">有效地参与临床试验，并根据基因型更好地选择患者进行临床试验。</block>
+  <block id="c3e79705f9b108292c8c5b98266a974c" category="inline-link">四向 Beast ，</block>
+  <block id="8374b95f3c988765d2da6842c94dd742" category="paragraph">基因组学是一种<block ref="e0c3be533c48d8149d9879a67f5249eb" category="inline-link-rx"></block> 因为数据集的整个生命周期都有计算需求：采集，存储，分布和分析。</block>
+  <block id="82f437c2c06f35bf1425ac85ca24170d" category="section-title">基因组分析工具包（ GATK ）</block>
+  <block id="3bc729cf2c38bd9489b637dc7c474f7f" category="inline-link">Broad Institute</block>
+  <block id="f50dbee15cb4bcdc4ec93691a3b31daf" category="paragraph">GATK 是作为中的数据科学平台而开发的<block ref="9e25016cbb0e59c585f7044a3b71a8fc" category="inline-link-rx"></block>。GATK 是一组开源工具，可用于进行基因组分析，尤其是变体发现，标识，标注和基因分型。GATK 的一个优势是，可以将一组工具和 / 或命令链接在一起，形成一个完整的工作流。广义学院要应对的主要挑战如下：</block>
+  <block id="5b72d80bb98501fdc6c21a46f45c59d6" category="list-text">了解疾病的根本原因和生物机制。</block>
+  <block id="32a91ccabb1ab7f0c9e2c70510574c1f" category="list-text">确定可用于基本发生原因 of a disease 的治疗干预措施。</block>
+  <block id="1762f0074b1a5bdcc679a16354e20696" category="list-text">了解从各种变体到在人类物理中发挥作用的视觉特征。</block>
+  <block id="4f6f5cc3fccf73f75ae9ccf4ad2f4d1e" category="inline-link">框架</block>
+  <block id="ad9ad604d051ce970e90b98dd42ed95d" category="list-text">制定标准和策略<block ref="56083357195c6305ad535a0070b360e8" category="inline-link-rx"></block> 用于基因组数据表示，存储，分析，安全性等。</block>
+  <block id="a28229ff70cfba94437e0f588e813400" category="list-text">实现可互操作的基因组聚合数据库（ gnomAD ）的标准化和社交化。</block>
+  <block id="4ace6bcf8a0ede77c156aaa4d0a78495" category="list-text">基于基因组的患者监控，诊断和治疗更加精确。</block>
+  <block id="6ff1831433fb78a77b6782909b93d536" category="list-text">帮助实施能够在症状出现之前很好地预测疾病的工具。</block>
+  <block id="40b277447c778122bc46735699b77ae8" category="list-text">创建一个跨学科合作伙伴社区并赋予其能力，帮助解决生物医学领域最棘手，最重要的问题。</block>
+  <block id="b52eb319cd5a3dc54a6661141f64fbee" category="inline-link">GATK 网站</block>
+  <block id="1dbff750a78930ad0a9c2705ba648a1f" category="paragraph">GATK 和 Broad Institute 表示，基因组测序应视为病理学实验室的一种协议；每个任务都经过了详细记录，优化，可重现，并在样本和实验中保持一致。下面是 Broad Institute 建议的一组步骤，有关详细信息，请参见<block ref="d1fda450db19327e607528d3e22cbc7b" category="inline-link-rx"></block>。</block>
+  <block id="2e7a0925dd9c346bd9a9d640b7b0721a" category="section-title">FlexPod 设置</block>
+  <block id="6ee042dd31575a620aac88eab0463013" category="inline-link">采用 VMware vSphere 7.0 和 NetApp ONTAP 9.7 的 FlexPod Datacenter</block>
+  <block id="b5fd2dd9b9fa5284b81edaa4a298966b" category="paragraph">基因组工作负载验证包括从头开始设置 FlexPod 基础架构平台。FlexPod 平台具有高可用性，可以独立扩展；例如，可以独立扩展网络，存储和计算。我们使用以下经过 Cisco 验证的设计指南作为参考架构文档来设置 FlexPod 环境：<block ref="9db3eb828d7339020baf25053de269f1" category="inline-link-rx"></block>。请参见以下 FlexPod 平台设置亮点：</block>
+  <block id="88c2df3d9a0ee027251fa5dba07f31c3" category="paragraph">要执行 FlexPod 实验室设置，请完成以下步骤：</block>
+  <block id="92a53e4a8fc54b440ee6fdb21d2683b4" category="list-text">FlexPod 实验室设置和验证使用以下 IP4 预留和 VLAN 。</block>
+  <block id="b064f6c4304b5362558ffd2b640f3c43" category="paragraph"><block ref="b064f6c4304b5362558ffd2b640f3c43" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f19fff53d177e94c092d8d29bd766268" category="list-text">在 ONTAP SVM 上配置基于 iSCSI 的启动 LUN 。</block>
+  <block id="718ff075289e3ae181eeef915b1204e5" category="paragraph"><block ref="718ff075289e3ae181eeef915b1204e5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="80ddfa97a7e8ca2584120557416ff54b" category="list-text">将 LUN 映射到 iSCSI 启动程序组。</block>
+  <block id="8e4a1da55118ddb60348e74e25ed7bd0" category="paragraph"><block ref="8e4a1da55118ddb60348e74e25ed7bd0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ece420e6bc829b40fc87711893b51fe8" category="paragraph"><block ref="ece420e6bc829b40fc87711893b51fe8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1d96163193c62050dfb4ea32a067be28" category="list-text">使用 iSCSI 启动安装 vSphere 7.0 。</block>
+  <block id="3043da7b2b18b3075aa8151e28627fd8" category="list-text">向 vCenter 注册 ESXi 主机。</block>
+  <block id="13729c1826dd24ce5338b52ad45e2e45" category="paragraph"><block ref="13729c1826dd24ce5338b52ad45e2e45" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d74010a54f3f106a93136a90c1c29182" category="list-text">在 ONTAP 存储上配置 NFS 数据存储库 `infra_datastore_nfs` 。</block>
+  <block id="5f9e3ab355be0603ee315c8ca7e5589e" category="paragraph"><block ref="5f9e3ab355be0603ee315c8ca7e5589e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ce25f736fcae8b05528353899b694e09" category="list-text">将数据存储库添加到 vCenter 。</block>
+  <block id="3edf6c7e566fce26da48183b45dd99db" category="paragraph"><block ref="3edf6c7e566fce26da48183b45dd99db" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cbddd91e269074f1f015500ffa76229b" category="list-text">使用 vCenter 向 ESXi 主机添加 NFS 数据存储库。</block>
+  <block id="2e87902ac8c20c0a46e1ddb7eb6daf38" category="paragraph"><block ref="2e87902ac8c20c0a46e1ddb7eb6daf38" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8c048b6502f84a92ebb423090c54b9ad" category="list-text">使用 vCenter 创建 Red Hat Enterprise Linux （ RHEL ） 8.3 VM 以运行 GATK 。</block>
+  <block id="690decc9fcc9564db27cb104ba583d07" category="list-text">NFS 数据存储库会提供给虚拟机并挂载在 ` /mnt/genomics` 中，用于存储 GATK 可执行文件，脚本，二进制对齐映射（ BAM ）文件，参考文件，索引文件，词典文件和输出文件，以用于变量调用。</block>
+  <block id="f030137c3e56f7067a890e83d4829cc5" category="paragraph"><block ref="f030137c3e56f7067a890e83d4829cc5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c799a831df1523c49ae0a14d0706af36" category="section-title">GATK 设置和执行</block>
+  <block id="7228c6ba77ed60ef3069f5cc740a9a31" category="paragraph">在 RedHat Enterprise 8.3 Linux VM 上安装以下前提条件：</block>
+  <block id="0c2a4a2da13f42bd884c7e8314bbe961" category="list-text">Java 8 或 SDK 1.8 或更高版本</block>
+  <block id="ebe2ce843265c4bf2cd82874928ce9c6" category="inline-link">GitHub 站点</block>
+  <block id="56f18825a76309ae6391073aeb14f1b3" category="inline-link">已下载</block>
+  <block id="7fafb49c8b79c9b35fd809c67d0018e2" category="inline-link">公有域</block>
+  <block id="2acb74ef419dbf01ec1a4325d32a3b55" category="list-text">从 Broad Institute 下载 GATK 4.2.0.0<block ref="89f1945dcd9a523343dbc766972f4d59" category="inline-link-rx"></block>。基因组序列数据通常以一系列制表符分隔的 ASCII 列的形式存储。但是， ASCII 需要的存储空间太多。因此，一个新标准会逐渐演变为 BAM （ \* 。 bam ）文件。BAM 文件以压缩，索引和二进制形式存储序列数据。我们<block ref="0809bbe1e9b4a8e9889932e12805e169" category="inline-link-rx"></block> 一组公开可用的 BAM 文件，用于从执行 GATK<block ref="c0cccfb9ad8ec6458c804dbeba43ba0f" category="inline-link-rx"></block>。我们还下载了索引文件（ \* 。 bai ），词典文件（ \* 。dict ）和引用数据文件（ * 。FASAA ）公有。</block>
+  <block id="d6b011beb13a11cf91feaa3cc986effb" category="paragraph">下载后， GATK 工具包将包含一个 JAR 文件和一组支持脚本。</block>
+  <block id="086ce071fe1ad1f4a3e0e2c0daffab6d" category="list-text">`gatk-package-4.2.0.0-local.jar` 可执行文件</block>
+  <block id="74a1449f7d1cd8f832d5f6053455e9ae" category="list-text">`gatk` 脚本文件。</block>
+  <block id="a6257654feff49776b16fdd5d0614505" category="paragraph">我们下载了一个由父，母和子 * 。 bam 文件组成的系列的 BAM 文件以及相应的索引，词典和参考基因组文件。</block>
+  <block id="99e4e2a513b7b5ab2ec53521df8cbcd8" category="section-title">克伦威尔引擎</block>
+  <block id="0f217972ba4782e962e2a3eaeefffe9c" category="inline-link">模式</block>
+  <block id="3455b050e251b7f98e02276cf4e610a6" category="inline-link">Cromwell 引擎配置文件</block>
+  <block id="8a4170eb5a6a7d35029828115b79e670" category="paragraph">Cromwell 是一款开源引擎，适用于支持工作流管理的科学工作流。可以将 Cromwell 引擎分为两种运行方式<block ref="83a23f9446eddc4053d457126818d444" category="inline-link-rx"></block>，服务器模式或单工作流运行模式。可以使用控制 Cromwell 引擎的行为<block ref="fd25519784a12a9c420aa9ee89025851" category="inline-link-rx"></block>。</block>
+  <block id="10901892610e8878b38acfa47b965517" category="inline-link">RESTful</block>
+  <block id="5c21c1c0292363dbb8e48a016e417842" category="list-text">* 服务器模式。 * 启用<block ref="3d88e61f0ef99b49adc5b48c9547ff37" category="inline-link-rx"></block> 在 Cromwell 引擎中执行工作流。</block>
+  <block id="18389a4a9ad5795744699cff0ba66c15" category="inline-link">ref</block>
+  <block id="78fd1f9f6e4339d078a801e271c443e8" category="list-text">* 运行模式。 * 运行模式最适合在克伦威尔执行单个工作流，<block ref="bec7f6b49d367b38ddeb9c15495dd799" category="inline-link-rx"></block> 查看运行模式下的一整套可用选项。</block>
+  <block id="303789c78fc99914ca9d353a7cfd1892" category="inline-link">Workflow 问题描述语言</block>
+  <block id="249c497e56e4c7f669ad92b9c95a4940" category="paragraph">我们使用克伦威尔引擎大规模执行工作流和管道。Cromwell 引擎使用用户友好型<block ref="74cd6fd7c8a85bb1450fb7db50073066" category="inline-link-rx"></block> （ WDL ）编写脚本的语言。此外，还支持第二个工作流脚本编写标准，称为通用工作流语言（ Common Workflow Language ， CWL ）。在本技术报告中，我们使用了 WDL 。WDL 最初是由广泛的基因组分析管道研究所开发的。使用 WDL 工作流可以通过多种策略来实施，其中包括：</block>
+  <block id="629f75dc396e5b03ddf4eb8845579ea3" category="list-text">* 线性链。 * 顾名思义，任务 1 的输出将作为输入发送到任务 2 。</block>
+  <block id="f7212d14b389e88eab8440dfa4beb33c" category="list-text">* 多输入 / 输出。 * 这与线性链类似，因为每个任务都可以将多个输出作为输入发送到后续任务。</block>
+  <block id="398fb394b3210342c5cbb21fde7c7f54" category="list-text">* 散点收集。 * 这是最强大的企业应用程序集成（ EAI ）策略之一，尤其是在事件驱动型架构中使用时。每个任务以分离的方式执行，每个任务的输出将整合到最终输出中。</block>
+  <block id="9dd4bf1c410ca4c59ef628412973e6ed" category="paragraph">使用 WDL 在独立模式下运行 GATK 的步骤有三个：</block>
+  <block id="6fe6fa7cbbedb4d98848dfd8db191054" category="list-text">使用 `womtool.jar` 验证语法。</block>
+  <block id="2ed13b97b6232d30322d81a36aa65ae8" category="list-text">生成输入 JSON 。</block>
+  <block id="a53117475307ace0b33a7219a3622ad3" category="list-text">使用 Cromwell 引擎和 `Cromwell.jar` 运行工作流。</block>
+  <block id="f55d4edd97c3434ee24b8941e0a70961" category="paragraph">可以使用多种方法执行 GATK ；本文档将探讨其中三种方法。</block>
+  <block id="070f1097597dcd94f9434104f5c937f6" category="section-title">使用 JAR 文件执行 GATK</block>
+  <block id="869bc599248155da392ac2ee62ddd781" category="paragraph">下面我们来了解一下使用哈普斯特型变量调用程序执行单一变体调用管道的情况。</block>
+  <block id="58a4516730c58a2f2c5306875045d2e2" category="paragraph">在这种执行方法中，我们使用 GATK 本地执行 JAR 文件，使用一个 Java 命令调用该 JAR 文件，并将多个参数传递到该命令。</block>
+  <block id="8b6d379b060b440d214542125f821ea8" category="list-text">此参数表示我们正在调用 `Hplotypecaller` 变量调用程序管道。</block>
+  <block id="a366a909519de9195cd2da769a005d7f" category="list-text">` - 输入` 指定输入 BAM 文件。</block>
+  <block id="85e4f4408781e925446f5895d9aa27af" category="list-text">` -output` 以变体调用格式（ * 。 vcf ）指定变体输出文件 <block ref="3fa8b247ed9dfba2fcb5a4abad8161ce" category="inline-link-rx"></block>）。</block>
+  <block id="4c1de9e410cf8d59c518b55e2f25376c" category="list-text">使用 ` -reference` 参数时，我们将传递一个参考基因组。</block>
+  <block id="0d676a3bb423dbb9ae4c8c90eaa96b2d" category="inline-link-macro">使用 JAR 文件执行 GATK 的输出。</block>
+  <block id="c3788ce914c6275d82d5162654598491" category="paragraph">执行后，可以在部分中找到输出详细信息 <block ref="8ca41227703289daf59cbb3eb07b8bb9" category="inline-link-macro-rx"></block></block>
+  <block id="ef14bc697b78af1403b123ae147d235b" category="section-title">使用 ./gatk 脚本执行 GATK</block>
+  <block id="daa11e2f971b5abffc11225d74fdbac8" category="paragraph">GATK 工具套件可使用 ` 。 /gatk` 脚本执行。让我们来看看以下命令：</block>
+  <block id="659fd22d59c41d40ae2d8a9a80d29137" category="paragraph">我们会向命令传递多个参数。</block>
+  <block id="d887665c63a7291c9e1ac9d3f5905165" category="list-text">` -i` 指定输入 BAM 文件。</block>
+  <block id="125c3593d9228135bab6202d07433af8" category="list-text">` -O` 以变体调用格式（ * 。 vcf ）指定变体输出文件 <block ref="3fa8b247ed9dfba2fcb5a4abad8161ce" category="inline-link-rx"></block>）。</block>
+  <block id="b1e66c8eb239c0b7b45f04354fda837e" category="list-text">使用 ` -R` 参数时，我们会传递一个参考基因组。</block>
+  <block id="016e203cf9beada735f224ab14d0b3af" category="inline-link-macro">使用 ` 。 /gatk` 脚本执行 GATK 的输出。</block>
+  <block id="53d05d4cce8abe1712aa45ae5724fc09" category="paragraph">执行后，可以在部分中找到输出详细信息 <block ref="82670f1e96ccc4d84cd1c4d4db2387f8" category="inline-link-macro-rx"></block></block>
+  <block id="dc5d8fbe2af173209ccfae07de7c4fc2" category="section-title">使用 Cromwell 引擎执行 GATK</block>
+  <block id="1a87984b0683c55fb89143a7c31444d0" category="paragraph">我们使用 Cromwell 引擎管理 GATK 执行。我们来检查命令行及其参数。</block>
+  <block id="bf54b2be749a48327d0d8ceb71f49b81" category="paragraph">在此，我们通过传递 ` -JAR` 参数来调用 Java 命令，以指示我们要执行 JAR 文件，例如， `Cromwell-65.jar` 。传递的下一个参数（`run` ）表示 Cromwell 引擎正在运行模式，另一个可能的选项是服务器模式。下一个参数为 ` * 。 wdll` ，运行模式应使用该参数执行管道。下一个参数是要执行的工作流的一组输入参数。</block>
+  <block id="423aeb73a29e0011afe50dd1fad87534" category="paragraph">以下是 `ghplo.wdll` 文件的内容：</block>
+  <block id="22db9af9db43dcfad20d0447df924156" category="paragraph">下面是相应的 JSON 文件以及对 Cromwell 引擎的输入。</block>
+  <block id="884708786f86a60f86c9751da1cc2173" category="inline-link-macro">使用 Cromwell 引擎执行 GATK 的输出。</block>
+  <block id="a1523448c007825557ed81d6ea9b2d36" category="paragraph">请注意， Cromwell 使用内存数据库来执行。执行后，输出日志将显示在一节中 <block ref="206accbab448e279c07f028a5bfe64ec" category="inline-link-macro-rx"></block></block>
+  <block id="d498b3c312cefbfcb8078db60b6a357a" category="inline-link">GATK 文档</block>
+  <block id="f76562fdb453d4aa92825813eec78c15" category="paragraph">有关如何执行 GATK 的一组完整步骤，请参见<block ref="6e6331e31b8a83ca5cae2a40d13fdd4b" category="inline-link-rx"></block>。</block>
+  <block id="d83cd6767071cfaa10e8edde2154f31c" category="inline-link-macro">下一步：使用 JAR 文件执行 GATK 的输出。</block>
+  <block id="0955af3d96d96b37fc835acd9b356dc3" category="paragraph"><block ref="0955af3d96d96b37fc835acd9b356dc3" category="inline-link-macro-rx"></block></block>
+  <block id="f140297d934c48ee8e3b67da76aea3f6" category="summary">截至发布时， GATK 工具不支持在内部执行基于 GPU 的原生。我们提供了以下设置和指导，帮助读者了解使用 GATK PCIe 夹层卡在后部安装的 NVIDIA Tesla P6 GPU 上使用 FlexPod 的简单程度。</block>
+  <block id="829772e8973a386ae6b1a1678758eed8" category="doc">GPU 设置</block>
+  <block id="6f93786c5882b7f0cc9340a841e772e0" category="inline-link-macro">previous ：使用 Cromwell 引擎执行 GATK 的输出。</block>
+  <block id="910438e385e3befebd80ee0f7a129a09" category="paragraph"><block ref="910438e385e3befebd80ee0f7a129a09" category="inline-link-macro-rx"></block></block>
+  <block id="4978402016f26583eb2d45231c41fd89" category="paragraph">我们使用以下 Cisco 验证设计（ Cisco Validated Design ， CVD ）作为参考架构和最佳实践指南来设置 FlexPod 环境，以便可以运行使用 GPU 的应用程序。</block>
+  <block id="bd3b4de4e190a2011ca7395b26a824c5" category="inline-link">适用于 AI/ML 的 FlexPod 数据中心与适用于深度学习的 Cisco UCS 480 ML</block>
+  <block id="73e0c329df8665eb0c3b4037d4ba437a" category="list-text"><block ref="73e0c329df8665eb0c3b4037d4ba437a" category="inline-link-rx"></block></block>
+  <block id="8f44d37b0b54e3a6872008a92472e7c7" category="paragraph">下面是此设置期间的一组要点：</block>
+  <block id="d958d7aa69d3b24d268670679d00d2d2" category="list-text">我们在 UCS B200 M5 服务器的夹层插槽中使用了 PCIe NVIDIA Tesla P6 GPU 。</block>
+  <block id="d966347e604163a456ab3d4e3718c030" category="paragraph"><block ref="d966347e604163a456ab3d4e3718c030" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f940b0033e4b43e3e212b787fe1670e0" category="paragraph"><block ref="f940b0033e4b43e3e212b787fe1670e0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d53350d6f6ff3119a3b5d21470f00b73" category="list-text">对于此设置，我们已在 NVIDIA 合作伙伴门户上注册，并获得了一个评估许可证（也称为授权），以便能够在计算模式下使用 GPU 。</block>
+  <block id="b9d0be081df2397ac6f138d979023898" category="list-text">我们从 NVIDIA 合作伙伴网站下载了所需的 NVIDIA vGPU 软件。</block>
+  <block id="cea32370c669f2fcc6a419e6b73131b3" category="list-text">我们从 NVIDIA 合作伙伴网站下载了授权 ` * 。 bin` 文件。</block>
+  <block id="0f32b160cfcd3499a930878d29b6ed25" category="list-text">我们安装了一个 NVIDIA vGPU 许可证服务器，并使用从 NVIDIA 合作伙伴站点下载的 ` * 。 bin` 文件将授权添加到许可证服务器。</block>
+  <block id="7f9f34352293614b9bebdab47afb36e8" category="list-text">确保在 NVIDIA 合作伙伴门户上为您的部署选择正确的 NVIDIA vGPU 软件版本。在此设置中，我们使用的驱动程序版本为 460.73.02 。</block>
+  <block id="6afa1ca2b52709a30dc305f116845435" category="inline-link">NVIDIA vGPU Manager</block>
+  <block id="f6dde3fe91c3309780cc23ec78a264b2" category="list-text">此命令将安装<block ref="8dfdcc1b3def6ddf3b82101a1b233305" category="inline-link-rx"></block> 在 ESXi 中。</block>
+  <block id="7eb52140787764d9abbdb19475dcbb73" category="list-text">重新启动 ESXi 服务器后，运行以下命令以验证 GPU 的安装并检查其运行状况。</block>
+  <block id="e2d5a00791bce9a01f99bc6fd613a39d" category="inline-link">配置</block>
+  <block id="37a453d78969a68cec2776ec753e56c9" category="list-text">使用 vCenter ，<block ref="88dff5fd971c4f20673419ef29670bcd" category="inline-link-rx"></block> 图形设备设置为 "shared direction" 。</block>
+  <block id="ee8749ff90c46d7c73d0b3c43739a5b3" category="paragraph"><block ref="ee8749ff90c46d7c73d0b3c43739a5b3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8578ef91824b124ee5729e44eb5e1717" category="paragraph"><block ref="8578ef91824b124ee5729e44eb5e1717" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f838afa31ded10e6d805072209143fe3" category="list-text">确保已为 RedHat VM 禁用安全启动。</block>
+  <block id="46e87ac1b7b47cbb1fead2c0e6eceff1" category="list-text">确保 VM 启动选项固件设置为 EFI （<block ref="f1e4e374cb92edeec252d29ba60d946d" category="inline-link-rx"></block>）。</block>
+  <block id="21b1bd927fc39fdc29192d6d08fad1ca" category="paragraph"><block ref="21b1bd927fc39fdc29192d6d08fad1ca" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f44cec5eda72f2b56adecf99a00fccc6" category="list-text">确保已将以下参数添加到 VM 选项高级编辑配置中。`pciPassthru .64bitMMIOSizeGB` 参数的值取决于 GPU 内存和分配给虚拟机的 GPU 数量。例如：</block>
+  <block id="54ec5a67cf1ec0e22cf9afb6fa7a7125" category="list-text">如果为虚拟机分配了 4 个 32 GB V100 GPU ，则此值应为 128 。</block>
+  <block id="0cdd6d2db47d532725d23f95f97ecb01" category="list-text">如果为虚拟机分配了 4 个 16 GB P6 GPU ，则此值应为 64 。</block>
+  <block id="39ebb3e4a532f92ae295381403ed2745" category="paragraph"><block ref="39ebb3e4a532f92ae295381403ed2745" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="44d6d337dcd22f2394cde64772ab8ac2" category="paragraph"><block ref="44d6d337dcd22f2394cde64772ab8ac2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7d40f0792479a764e6c465ac40d48723" category="list-text">在 vCenter 中将 vGPU 作为新的 PCI 设备添加到虚拟机时，请确保选择 NVIDIA GRID vGPU 作为 PCI 设备类型。</block>
+  <block id="fbc11c24236b0c90aab7e00814fdbbaf" category="list-text">选择适合所用 GPU ， GPU 内存和使用目的的正确 GPU 配置文件：例如，图形与计算。</block>
+  <block id="d1ec8d5bd22fe13e3a47c0d5a4802d73" category="paragraph"><block ref="d1ec8d5bd22fe13e3a47c0d5a4802d73" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7cb283279098f7b948a27780160ba293" category="list-text">在 RedHat Linux VM 上，可以运行以下命令来安装 NVIDIA 驱动程序：</block>
+  <block id="25dfc29a0d7d253cecad06c400f2f9fd" category="list-text">运行以下命令，验证是否报告了正确的 vGPU 配置文件：</block>
+  <block id="c960049b101a81339829fc8b560dcd58" category="list-text">重新启动后，验证是否报告了正确的 NVIDIA vGPU 以及驱动程序版本。</block>
+  <block id="1378dcd124183474cfaaebdcce83446e" category="list-text">确保已在 vGPU 网格配置文件中的 VM 上配置许可证服务器 IP 。</block>
+  <block id="32be43c4ee0d272392399ae2ce395e6a" category="list-text">复制模板。</block>
+  <block id="9af4169bc0ca268e584083701c40435e" category="list-text">编辑文件 ` /etc/nvidia/rid` ，添加许可证服务器 IP 地址，并将功能类型设置为 1 。</block>
+  <block id="e4f18a76842b5a5da7056e787454b052" category="list-text">重新启动虚拟机后，您应在许可证服务器中的 " 已许可客户端 " 下看到一个条目，如下所示。</block>
+  <block id="f67a63b49b077f964bb0529352c34e13" category="paragraph"><block ref="f67a63b49b077f964bb0529352c34e13" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0f6b0f8e38375a188cc2d884be36b529" category="list-text">有关下载 GATK 和 Cromwell 软件的详细信息，请参见 " 解决方案设置 " 一节。</block>
+  <block id="c512f1ab62bf3af8384e0439a4fa715b" category="list-text">在 GATK 可以在内部使用 GPU 之后，工作流问题描述语言为 ` * 。WDL` 具有运行时属性，如下所示。</block>
+  <block id="a8ae67fc64e7f9c2fc1250d7fecac2fe" category="paragraph"><block ref="a8ae67fc64e7f9c2fc1250d7fecac2fe" category="inline-link-macro-rx"></block></block>
+  <block id="45924647fad6b3c09925e5d8119d2b91" category="summary">借助 FlexPod 融合基础架构平台，医疗保健组织可以托管一个或多个基因组工作负载以及其他临床和非临床医疗保健应用程序。本技术报告在 FlexPod 平台验证期间使用了一种名为 GATK 的开源行业标准基因组学工具。</block>
+  <block id="a48be507ff04e20350765eeb401d40c5" category="doc">TR-4911 ： FlexPod 基因组学</block>
+  <block id="9ae5e06a0036a46b932d38fdeaf0db88" category="paragraph">NetApp 公司 JayaKishore Esanakula</block>
+  <block id="d581c6e137eaef5e7d7a6f87c1cc49dd" category="paragraph">在医疗保健和生命科学方面，与基因组学相比，医学领域更重要的领域很少，而基因组学正在迅速成为医生和护士的重要临床工具。基因组学与医学影像和数字病理学相结合，可帮助我们了解患者的基因可能会受到治疗协议的影响。基因组学在医疗保健领域的成功越来越取决于大规模数据互操作性。最终目标是，了解大量基因数据，确定临床相关的相关性和变体，以改进诊断并实现精准医学。基因组学有助于我们了解疾病爆发的起源，疾病的演变以及哪些治疗方法和策略可能会很有效。显然，基因组学具有许多涵盖预防，诊断和治疗的优势。医疗保健组织正在努力应对多种挑战，其中包括：</block>
+  <block id="ac96a219e32aa096ea0c228db50b7ebc" category="list-text">提高护理质量</block>
+  <block id="c560ceb2b8d2979dec2f4b0160daca80" category="list-text">基于价值的维护</block>
+  <block id="3fcb118fcec78599eb2ff0e1bc1172ed" category="list-text">数据爆炸式增长</block>
+  <block id="d3edf8f587c52836b73484f04f19ce9c" category="list-text">大流行病</block>
+  <block id="9861c74e8494666907dda0b51251d8e0" category="list-text">可穿戴设备，远程监控和护理</block>
+  <block id="069c092829c09c18615c63370c93b203" category="list-text">网络安全</block>
+  <block id="17c75319d815dc51cf92c24c6dd514be" category="paragraph">标准化的临床途径和临床协议是现代医学的重要组成部分之一。标准化的一个关键方面是护理提供商之间的互操作性，不仅对于医疗记录，而且对于基因组数据。一个大问题是，医疗保健组织是否会放弃对基因组数据的所有权，而不是让患者拥有其个人基因组数据和相关医疗记录？</block>
+  <block id="15b6a1872e273de99aec0b54278bfd95" category="paragraph">可互操作的患者数据是实现精准医疗的关键，而精准医疗是近期数据激增背后的推动力之一。精准医疗的目标是提高健康维护，疾病预防，诊断和治疗解决方案的有效性和准确性。</block>
+  <block id="469a7dba5374f716c196751512e7175b" category="paragraph">数据增长率呈指数级增长。2021 年 2 月初，美国实验室每周对大约 8 ， 000 个 COVID-19 型菌种进行了排序。截至 2021 年 4 月，按顺序排列的基因组数量已增加到每周 29 ， 000 个。每个完全序列化的人类基因组的大小约为 125 GB 。因此，按每周排序 29 ， 000 个基因组的速率，剩余的总基因组存储每年将超过 180 PB 。许多国家 / 地区已承诺为基因组流行病提供资源，以改进基因组监控并为应对下一波全球健康挑战做好准备。</block>
+  <block id="9398ce508a1919ed9d2cd31d7f763f43" category="inline-link">采用 Cisco UCS X 系列的 FlexPod Datacenter 白皮书</block>
+  <block id="a291263aa15053c9578aebe401317fca" category="paragraph">基因组研究成本的降低正在以前所未有的速度推动基因测试和研究。这三个 PS 处于转折点：计算机电源，数据隐私和医学个性化。到 2025 年，研究人员估计将对 1 亿到 20 亿个人类基因组进行测序。要使基因组学发挥效用并成为一项有价值的主张，基因组学功能必须是护理工作流的无缝组成部分；它应该易于访问，并可在患者就诊期间执行操作。同样重要的是，将患者电子病历数据与患者基因组学数据集成在一起。随着 FlexPod 等一流的融合基础架构的出现，企业可以将其基因组功能融入医生，护士和诊所经理的日常工作流中。有关最新的 FlexPod 平台信息，请参见此<block ref="e723cbaec8a2516b620ce8cf798a650f" category="inline-link-rx"></block>。</block>
+  <block id="45120dfc407a95d7bf9f7d47cd021154" category="paragraph">对于医生来说，基因组学的真正价值包括精准医学和基于患者基因组数据的个性化治疗计划。过去临床医生和数据科学家之间从未有过这样的协同作用，基因组学也从最近的技术创新以及医疗保健组织与行业技术领导者之间的真正合作中受益。</block>
+  <block id="0dc7e3e442836d1e3cc5c4940a0fe22d" category="paragraph">学术医疗中心和其他医疗保健和生命科学组织正在努力建立基因组科学卓越中心（ Center of excellence ， COE ）。据Charlie Gersbach 博士Greg Crawford 和Duke 大学的 Tim E Reddy 说： " 我们知道，基因不是通过简单的二进制开关打开或关闭的，而是由多个协同工作的基因监管开关造成的。" 他们还确定 " 基因组的这些部分都不是孤立地工作的。基因组是一个非常复杂的网络，它是进化所交织的 " （<block ref="a54d9319136da135232b356df7a6e3a9" category="inline-link-rx"></block>）。</block>
+  <block id="54da275b9838dab5f699c9b89602a7fb" category="paragraph">10 多年来， NetApp 和 Cisco 一直在努力逐步改进 FlexPod 平台。所有客户反馈都会得到倾听，评估，并与 FlexPod 中的价值流和功能集相关联。正是这一持续的反馈，协作，改进和庆祝活动循环让 FlexPod 在全球范围内成为值得信赖的融合基础架构平台。它经过全面简化和设计，成为医疗保健组织最可靠，最强大，最灵活的平台。</block>
+  <block id="5f97ce6e439f0ccc4c58201215eae1b5" category="paragraph">借助 FlexPod 融合基础架构平台，医疗保健组织可以托管一个或多个基因组工作负载以及其他临床和非临床医疗保健应用程序。本技术报告在 FlexPod 平台验证期间使用了一种名为 GATK 的开源行业标准基因组学工具。但是，本文档不会深入探讨基因组学或 GATK 。</block>
+  <block id="4b83abb1081797d58557ffdc1a5a86df" category="paragraph">本文档面向医疗保健行业的技术主管以及 Cisco 和 NetApp 合作伙伴解决方案工程师和专业服务人员。NetApp 假定读者已很好地了解计算和存储规模估算概念，并在技术上熟悉医疗保健威胁，医疗保健安全，医疗保健 IT 系统， Cisco UCS 和 NetApp 存储系统。</block>
+  <block id="8d4a25bfa147f5ca5ab0579c6f81c3d8" category="section-title">在 FlexPod 上部署的医院功能</block>
+  <block id="3e5fb53c648daf2c6b5a50cb7dac5074" category="paragraph">一家典型的医院拥有多种多样的 IT 系统。大多数此类系统都是从供应商购买的，而很少有系统是由医院内部系统构建的。因此，医院系统必须管理其数据中心的多样化基础架构环境。当医院将其系统统一为 FlexPod 等融合基础架构平台时，企业可以将其数据中心运营标准化。借助 FlexPod ，医疗保健组织可以在同一平台上实施临床和非临床系统，从而统一数据中心运营。</block>
+  <block id="0b8cfedd4a79fe75ca16c871d9ae39b6" category="paragraph"><block ref="0b8cfedd4a79fe75ca16c871d9ae39b6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="07cdee747024a43a4c64bea9773d4435" category="inline-link-macro">接下来：在 FlexPod 上部署基因组工作负载的优势。</block>
+  <block id="4bd9e8f9ce97225c3a380f01f5b7e85f" category="paragraph"><block ref="4bd9e8f9ce97225c3a380f01f5b7e85f" category="inline-link-macro-rx"></block></block>
+  <block id="e239a4af23c07be4edc5da5f02c9ec6a" category="summary">本节介绍 ./gatk 输出的执行情况。</block>
+  <block id="cf7ed72860d2f07aca095418459499d1" category="doc">使用 &lt;code&gt;./gatk&lt;/code&gt; 脚本执行 GATK 的输出</block>
+  <block id="4aff7c37c0df4078c9912732b49d5f0f" category="inline-link-macro">previous ：使用 JAR 文件执行 GATK 的输出。</block>
+  <block id="0a6a679033adfebd6c3297de34721d52" category="paragraph"><block ref="0a6a679033adfebd6c3297de34721d52" category="inline-link-macro-rx"></block></block>
+  <block id="6c6bd1dd631cf29930af277add3f1dac" category="paragraph">使用 ` 。 /gatk` 脚本执行 GATK 后，生成了以下示例输出。</block>
+  <block id="f971af00761e2131cd67cdd6d21b3952" category="paragraph">请注意，输出文件位于执行后指定的位置。</block>
+  <block id="2ab2d995e6a1e8cb94cbd27ea2de69e4" category="inline-link-macro">下一步：使用 Cromwell 引擎执行 GATK 的输出。</block>
+  <block id="4cdf299dfb01669ad4e43bc5e320cc01" category="paragraph"><block ref="4cdf299dfb01669ad4e43bc5e320cc01" category="inline-link-macro-rx"></block></block>
+  <block id="95d39fda1f517c8191e134e84bbd99f6" category="summary">本节介绍 GATK 的 JAR 文件输出。</block>
+  <block id="7414f6be9622dd99240584a1f3cfb12f" category="doc">使用 JAR 文件执行 GATK 的输出</block>
+  <block id="d0e990141e029708fa37dcf100c8af52" category="inline-link-macro">上一篇：基因组学— GATK 设置和执行。</block>
+  <block id="75d0ed1766acb5eef5e9d26b3af4fee4" category="paragraph"><block ref="75d0ed1766acb5eef5e9d26b3af4fee4" category="inline-link-macro-rx"></block></block>
+  <block id="a14d291d2a4ad024d1d31a2cbcd6445b" category="paragraph">使用 Jar 文件执行 GATK 会生成以下示例输出。</block>
+  <block id="fb08e15744e912200b45cf04b5fce2ad" category="inline-link-macro">Next ：使用 ` ./gatk` 脚本执行 GATK 的输出。</block>
+  <block id="cecb20ab793e557284156e6c28f058e7" category="paragraph"><block ref="cecb20ab793e557284156e6c28f058e7" category="inline-link-macro-rx"></block></block>
+  <block id="6dd0338ec9090def75796558b1a98126" category="summary">全球许多医疗保健组织都将 FlexPod 作为一个通用平台进行了标准化。借助 FlexPod ，您可以放心地部署医疗保健功能。</block>
+  <block id="674b2b558188d0721367a35646bd9651" category="inline-link-macro">上一步： GPU 设置。</block>
+  <block id="eaf19c32156aa84418daf7db65bbce6f" category="paragraph"><block ref="eaf19c32156aa84418daf7db65bbce6f" category="inline-link-macro-rx"></block></block>
+  <block id="7be50704b86d14035c8732673e69b94d" category="paragraph">全球许多医疗保健组织都将 FlexPod 作为一个通用平台进行了标准化。借助 FlexPod ，您可以放心地部署医疗保健功能。采用 NetApp ONTAP 的 FlexPod 标配，能够即装即用地实施一组行业领先的协议。无论对给定患者运行基因组学的请求来自何处， FlexPod 平台都标配了互操作性，可访问性，可用性和可扩展性。在 FlexPod 平台上实现标准化后，创新文化将具有传染性。</block>
+  <block id="158f95e8a45680b9b6982a0aa68f0ebb" category="inline-link"><block ref="158f95e8a45680b9b6982a0aa68f0ebb" category="inline-link-rx"></block></block>
+  <block id="231b980e61bf161f718d4f2ad94f3ebe" category="paragraph"><block ref="231b980e61bf161f718d4f2ad94f3ebe" category="inline-link-rx"></block></block>
+  <block id="decd3565dd007f2452830c3f826ff704" category="inline-link"><block ref="decd3565dd007f2452830c3f826ff704" category="inline-link-rx"></block></block>
+  <block id="3d1da8fafa0a86efa99f98d720b7f205" category="paragraph"><block ref="3d1da8fafa0a86efa99f98d720b7f205" category="inline-link-rx"></block></block>
+  <block id="1ae6b2f7f1fad59fc238abf083ff0117" category="list-text">史诗般的荣誉卷</block>
+  <block id="7d44274174c3d4f450aa686fa446d669" category="inline-link"><block ref="7d44274174c3d4f450aa686fa446d669" category="inline-link-rx"></block></block>
+  <block id="bf53074ecbd16fa4c8bb41af82ad5d90" category="paragraph"><block ref="bf53074ecbd16fa4c8bb41af82ad5d90" category="inline-link-rx"></block></block>
+  <block id="7817e57b6ff0d2856eead20c15935bc7" category="list-text">敏捷高效— FlexPod 如何推动数据中心现代化</block>
+  <block id="f7926fcf44693494ebd39d451b62f973" category="inline-link"><block ref="f7926fcf44693494ebd39d451b62f973" category="inline-link-rx"></block></block>
+  <block id="5846e1714fe6b3a59fbf92fb13144912" category="paragraph"><block ref="5846e1714fe6b3a59fbf92fb13144912" category="inline-link-rx"></block></block>
+  <block id="db49f76a2f051143f3026604e3d59f00" category="list-text">医疗保健领域的人工智能</block>
+  <block id="2275a2c3460c7a300ff1ccd02b364046" category="inline-link"><block ref="2275a2c3460c7a300ff1ccd02b364046" category="inline-link-rx"></block></block>
+  <block id="79826130f905876403727b62024eea3c" category="paragraph"><block ref="79826130f905876403727b62024eea3c" category="inline-link-rx"></block></block>
+  <block id="61180aaf0b2d71322476b407dec66f81" category="list-text">FlexPod for HealthCare 可帮助您轻松实现转型</block>
+  <block id="51715f6336f71f0c342d4f6d79941b19" category="inline-link"><block ref="51715f6336f71f0c342d4f6d79941b19" category="inline-link-rx"></block></block>
+  <block id="2331140ce18354b448afad499fd44f5d" category="paragraph"><block ref="2331140ce18354b448afad499fd44f5d" category="inline-link-rx"></block></block>
+  <block id="1a1737c8198f24d4d034d37b96784b6d" category="list-text">适用于医疗保健的 AI 和分析（ NetApp ）</block>
+  <block id="3f6fbe0eeb0b40131d6099047ee11cf6" category="inline-link"><block ref="3f6fbe0eeb0b40131d6099047ee11cf6" category="inline-link-rx"></block></block>
+  <block id="3d59760af9fb9d0cfe13fe40ba137808" category="paragraph"><block ref="3d59760af9fb9d0cfe13fe40ba137808" category="inline-link-rx"></block></block>
+  <block id="f84e9db44c6ef05870d1f60e67ce9b9b" category="list-text">医疗保健智能基础架构选择中的人工智能有助于取得更大成功</block>
+  <block id="0372ba8eced17850294543c71eb6118f" category="inline-link"><block ref="0372ba8eced17850294543c71eb6118f" category="inline-link-rx"></block></block>
+  <block id="faf2964740264b736e400781dfa2c882" category="paragraph"><block ref="faf2964740264b736e400781dfa2c882" category="inline-link-rx"></block></block>
+  <block id="70689bb53b651bffed114562eb2de79d" category="list-text">采用 ONTAP 9.8 的 FlexPod 数据中心，适用于 Cisco Intersight 的 ONTAP 存储连接器和 Cisco Intersight 托管模式。</block>
+  <block id="85b6f40da1dd376375fcdd94046b6bfa" category="inline-link"><block ref="85b6f40da1dd376375fcdd94046b6bfa" category="inline-link-rx"></block></block>
+  <block id="cdc77f5b33c21c1d5440d5ddb0650984" category="paragraph"><block ref="cdc77f5b33c21c1d5440d5ddb0650984" category="inline-link-rx"></block></block>
+  <block id="7448c0af956621de1d47336148747ed7" category="list-text">采用 Red Hat Enterprise Linux OpenStack Platform 的 FlexPod Datacenter</block>
+  <block id="efe8467db2333a8910bb7046fcf991b1" category="inline-link"><block ref="efe8467db2333a8910bb7046fcf991b1" category="inline-link-rx"></block></block>
+  <block id="3f1013d4bb65987494ee5879de605440" category="paragraph"><block ref="3f1013d4bb65987494ee5879de605440" category="inline-link-rx"></block></block>
+  <block id="62783f5d69cb5d3cb22b077c1d2b8777" category="cell">2021年11月</block>
+  <block id="fe1bc822f2404fb1ab43d7837136416e" category="summary">本节介绍此解决方案中使用的解决方案基础架构和软件组件。</block>
+  <block id="162de77f673ae7701a2da8987ca5b6d0" category="inline-link-macro">先前版本：在 FlexPod 上部署基因组工作负载的优势。</block>
+  <block id="9eac6f8218ddc99636914205ec0238dc" category="paragraph"><block ref="9eac6f8218ddc99636914205ec0238dc" category="inline-link-macro-rx"></block></block>
+  <block id="04bf1689d990df67888cd8ad6423d14d" category="inline-link">采用 VMware vSphere 7.0 和 NetApp ONTAP 9.7 的 FlexPod Datacenter Cisco 验证设计（ CVD ）</block>
+  <block id="cadb4cbc1581df1b5938a2cf44bafb40" category="paragraph">下图显示了用于 GATK 设置和验证的 FlexPod 系统。我们使用了<block ref="69429a6d0c3d623ad8b6ac530d0f3f28" category="inline-link-rx"></block> 在设置过程中。</block>
+  <block id="a855456ca90a458c046339021eef6109" category="paragraph"><block ref="a855456ca90a458c046339021eef6109" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6fedfde87d9ac99695104ac386058722" category="paragraph">下图显示了 FlexPod 布线详细信息。</block>
+  <block id="ddb78da1e0da555f6ac3b4c3e50b85ce" category="paragraph"><block ref="ddb78da1e0da555f6ac3b4c3e50b85ce" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9ed4a475dd3705157a9fed8811f63ce2" category="inline-link">NetApp 互操作性表工具</block>
+  <block id="720dfac51884ad49096e4824af7384ad" category="inline-link">Cisco 硬件兼容性列表（ HCL ）</block>
+  <block id="82c4683f09c621ea3c6f0e607c0d1748" category="paragraph">下表列出了在 FlexPod 上启用 GATK 测试期间使用的硬件组件。下面是<block ref="b7322bec4509d45107de6de43ca1f517" category="inline-link-rx"></block> （ IMT ）和<block ref="64415f5b492bec102b21b846c79e2183" category="inline-link-rx"></block>。</block>
+  <block id="b11aa3f1fce49eb0c09fe430ffd6714b" category="cell">6 个 B200 M5</block>
+  <block id="c3a88c969ac7451e0323fb5963ef55ce" category="cell">每个都具有 2 个 20 或更多核心， 2.7 GHz 和 128-384 GB RAM</block>
+  <block id="9307d0e5aab5590e69104bdc63f80f40" category="cell">2 个 Cisco UCS 互联阵列</block>
+  <block id="53b354612d26628e73986a80e254864e" category="cell">6332</block>
+  <block id="336d5ebc5436534e61d16e63ddfca327" category="cell">-</block>
+  <block id="faeeb64cc66dba207df5a24bc14342e0" category="cell">2 个 Cisco Nexus 9332</block>
+  <block id="d660c64b46f7a4a5cd00d32de9bd06b7" category="cell">2 个 Cisco MDS 9148S</block>
+  <block id="3792ffde891ab3054b4d2a164fb0934f" category="cell">NetApp AFF A700 全闪存存储系统</block>
+  <block id="e85172e1a672fddc2ce806b85dc7970a" category="cell">1 个集群</block>
+  <block id="6858b274cabd083394fc9e063bf26334" category="cell">具有两个节点的集群</block>
+  <block id="ab9c5134405b9a9940a29cf11204eaa4" category="cell">一个 DS224C 或 NS224 磁盘架</block>
+  <block id="7a310f8e87dfecd60218d462adb7b514" category="cell">24 ， 1.2 TB 或更大容量</block>
+  <block id="061fdb63710014559e9a95fc78bdc328" category="paragraph">此表列出了基础架构软件。</block>
+  <block id="f22794f69ce5910cb4be68ff9026570d" category="cell">各种</block>
+  <block id="edc9f0a5a5d57797bf68e37364743831" category="cell">Linux</block>
+  <block id="de5525e18a94a51e3609173c8c069b5e" category="cell">RHEL 8.3</block>
+  <block id="aea23489ce3aa9b6406ebb28e0cda430" category="cell">Windows</block>
+  <block id="247279cbf8b7f87cd5037b22b088fda9" category="cell">Windows Server 2012 R2 （ 64 位）</block>
+  <block id="c3ce6809be6bdc67ae978395484d0585" category="cell">ONTAP 9.8 或更高版本</block>
+  <block id="111d233747a7f1aee64400950dfb5f48" category="cell">Cisco 以太网 3000 或 9000 系列交换机</block>
+  <block id="4767bf6d3a758e4a62d7e8a79ddc3d06" category="cell">对于 9000 系列，对于 3000 系列，则为 7.0 （ 3 ） i7 （ 7 ）或更高版本，对于 9.2 （ 4 ）或更高版本</block>
+  <block id="d13767bbd0456872d85c549acedcf887" category="cell">8.4 （ 1a ）或更高版本</block>
+  <block id="efc3b280c9c136af95cdd3c48c903692" category="cell">VMware vSphere ESXi 7.0</block>
+  <block id="446d7a2a294cfc95fdadaeb8b2cd4d3a" category="cell">VMware vCenter Server 7.0 （ vCSA ）或更高版本</block>
+  <block id="208d44e32e4cae1c8b7b37abae6c84cc" category="cell">4.1 （ 3c ）或更高版本</block>
+  <block id="1aa66ef3a8e34a7a538960a80d2e1e31" category="cell">ESXi</block>
+  <block id="01b3f26e6a58f887753d14bacdc7c3c1" category="cell">虚拟机管理程序管理系统 VMware vCenter Server 7.0 （ vCSA ）或更高版本</block>
+  <block id="5584df5caffb3ed702d2c5eecefc2fb3" category="inline-link-macro">接下来：基因组学— GATK 设置和执行。</block>
+  <block id="3b500bb5c5d09fb0d60887b38cb44a83" category="paragraph"><block ref="3b500bb5c5d09fb0d60887b38cb44a83" category="inline-link-macro-rx"></block></block>
+  <block id="03b635654fbb63317189e17097b5e517" category="summary">本节简要列出了在 FlexPod 融合基础架构平台上运行基因组工作负载的优势。</block>
+  <block id="a362bbe8bd0b38cbbc77444979ac0d88" category="doc">在 FlexPod 上部署基因组工作负载的优势</block>
+  <block id="5231f9fa4d08024f4620b759f83d0e97" category="inline-link-macro">上一页：简介。</block>
+  <block id="1d6abf1900471f4281ff69f7300edeea" category="paragraph"><block ref="1d6abf1900471f4281ff69f7300edeea" category="inline-link-macro-rx"></block></block>
+  <block id="ea50e04856bd0db9f9c62a2f1f5e6623" category="paragraph">本节简要列出了在 FlexPod 融合基础架构平台上运行基因组工作负载的优势。我们来快速介绍一下医院的功能。以下业务架构视图显示了一家医院在混合云就绪 FlexPod 融合基础架构平台上部署的功能。</block>
+  <block id="e4963e6c52256bd2fc5b6fbf32eed348" category="list-text">* 避免医疗保健孤岛。 * 医疗保健孤岛是一个非常值得关注的问题。各个部门往往不是根据自己的选择而是按照演变过程有机地孤立到自己的一组硬件和软件中。例如，放射学，心脏病学， EHR ，基因组学， 分析，收入周期和其他部门最终会获得各自的一套专用软件和硬件。医疗保健组织拥有一组有限的 IT 专业人员来管理其硬件和软件资产。当这组人需要管理一组非常多样化的硬件和软件时，就会出现转折点。供应商为医疗保健组织提供的一系列流程不一致，使异构性变得更加糟糕。</block>
+  <block id="228348316269048465c606f3f9b72c66" category="list-text">* 从小规模入手，然后不断增长。 * GATK 工具套件专为 CPU 执行而设计，最适合 FlexPod 等平台。FlexPod 支持网络，计算和存储的独立可扩展性。从小规模入手，随着您的基因组功能和环境增长进行扩展。医疗保健组织无需投资专用平台即可运行基因组工作负载。相反，企业可以利用 FlexPod 等多种平台在同一平台上运行基因组学和非基因组工作负载。例如，如果儿科部门希望实施基因组学功能， IT 领导层可以在现有 FlexPod 实例上配置计算，存储和网络。随着基因组业务部门的发展，医疗保健组织可以根据需要扩展其 FlexPod 平台。</block>
+  <block id="de195cc2166915523ad4cb1fd347be09" category="list-text">* 单一控制窗格和无与伦比的灵活性。 * Cisco Intersight 通过将应用程序与基础架构相连接，从裸机服务器和虚拟机管理程序到无服务器应用程序提供可见性和管理，从而显著简化 IT 运营，从而降低成本并降低风险。此统一 SaaS 平台采用统一的开放式 API 设计，可与第三方平台和工具本机集成。此外，它还允许您的数据中心运营团队在现场或任何位置使用移动应用程序进行管理。</block>
+  <block id="b4f9d60f06892c15a0ee877d4d5c3917" category="paragraph">用户可以利用 Intersight 作为管理平台，快速释放环境中的有形价值。Intersight 可以为许多日常手动任务实现自动化，从而消除错误并简化日常操作。此外，借助 Intersight 提供的高级支持功能，采用者可以提前解决问题并加快问题描述解决速度。综合来看，企业在应用程序基础架构上花费的时间和资金远远少于在核心业务开发上花费的时间和资金。</block>
+  <block id="3939f796e36703e9db327c9570a95260" category="paragraph">利用 Intersight 管理和 FlexPod 易于扩展的架构，企业可以在一个 FlexPod 平台上运行多个基因组工作负载，从而提高利用率并降低总拥有成本（ TCO ）。FlexPod 可以灵活地进行规模估算，从小型 FlexPod 快速计划开始，并可扩展到大型 FlexPod 数据中心实施。借助 Cisco Intersight 内置的基于角色的访问控制功能，医疗保健组织可以实施强大的访问控制机制，从而避免需要单独的基础架构堆栈。医疗保健组织内的多个业务部门可以将基因组作为一项关键核心能力。</block>
+  <block id="625631f3e07150b8b24d4b8387119edd" category="paragraph">最终， FlexPod 有助于简化 IT 运营并降低运营成本， IT 基础架构管理员可以将精力集中在帮助临床医生创新的任务上，而不是仅仅为了让他们保持正常运行。</block>
+  <block id="6706db4316a6632cb20d560fc933ceb1" category="list-text">经过验证的设计和有保障的结果。 * FlexPod 设计和部署指南经过验证，可以重复使用，其中涵盖了放心部署 FlexPod 所需的全面配置详细信息和行业最佳实践。Cisco 和 NetApp 经验证的设计指南，部署指南和架构可帮助您的医疗保健或生命科学组织从一开始就消除实施经验证且值得信赖的平台时的猜测。借助 FlexPod ，您可以加快部署速度，降低成本，复杂性和风险。FlexPod 经验证的设计和部署指南将 FlexPod 确立为各种基因组工作负载的理想平台。</block>
+  <block id="f59c589a8a56328d42c01fe4907799db" category="list-text">* 创新与敏捷性。 * FlexPod 是 Epic ， Cerner ， Meditech 等 EHR 公司以及 Agfa ， GE ，飞利浦等成像系统的理想平台。有关的详细信息，请参见<block ref="29fbfe5255d192aa57455db81ba41a3d" category="inline-link-rx"></block> 和目标平台架构，请参见 Epic 用户 Web 。运行基因组学<block ref="24f2c347deb06bba4de59a5266702e7d" category="inline-link-rx"></block> 让医疗保健组织能够灵活地继续其创新之旅。借助 FlexPod ，实施组织变革自然成为必然。当企业在 FlexPod 平台上实现标准化时，医疗保健 IT 专家可以为创新配置时间，精力和资源，从而实现生态系统所需的灵活性。</block>
+  <block id="c7e8b95fdeca6082100682f1b89e8b20" category="list-text">* 数据解放。 * 借助 FlexPod 融合基础架构平台和 NetApp ONTAP 存储系统，可以通过一个平台上的各种规模协议提供和访问基因组数据。采用 NetApp ONTAP 的 FlexPod 提供了一个简单，直观且功能强大的混合云平台。由 NetApp ONTAP 提供支持的 Data Fabric 可跨站点，跨物理边界和跨应用程序将数据集于一体。您的 Data Fabric 专为以数据为中心的环境中的数据驱动型企业而构建。数据在多个位置创建和使用，通常需要利用并与其他位置，应用程序和基础架构共享。因此，您需要采用一致且集成的方式来管理它。FlexPod 可以让您的 IT 团队掌控一切，并简化日益增加的 IT 复杂性。</block>
+  <block id="7fcbd234b81a57e30b18381191dd1e46" category="list-text">* 安全多租户。 * FlexPod 使用符合 FIPS 140-2 的加密模块，因此，企业可以将安全性作为基本要素来实施，而不是事后考虑。无论平台大小如何， FlexPod 都支持企业从一个融合基础架构平台实施安全多租户。采用安全多租户和 QoS 的 FlexPod 有助于分离工作负载并最大程度地提高利用率。这有助于避免资本被锁定到可能未充分利用且需要专业技能集进行管理的专用平台中。</block>
+  <block id="0e5a582d6f9c304c0a0fc9615b2a0860" category="list-text">* 存储效率。 * 基因组学要求底层存储具有行业领先的存储效率功能。您可以利用 NetApp 存储效率功能降低存储成本，例如重复数据删除（实时和按需），数据压缩和数据缩减（<block ref="2511e8b77417e5fdbc8e7e20b5b8e078" category="inline-link-rx"></block>）。NetApp 重复数据删除可在 FlexVol 卷中提供块级重复数据删除。从本质上说，重复数据删除会删除重复的块，从而仅在 FlexVol 卷中存储唯一的块。重复数据删除的粒度较高，并在 FlexVol 卷的活动文件系统上运行。下图简要显示了 NetApp 重复数据删除的工作原理。重复数据删除是应用程序透明的。因此，可以使用它对使用 NetApp 系统的任何应用程序生成的数据进行重复数据删除。您可以将卷重复数据删除作为实时进程和后台进程运行。您可以将其配置为自动运行，计划运行或通过命令行界面， NetApp ONTAP System Manager 或 NetApp Active IQ Unified Manager 手动运行。</block>
+  <block id="10f94032ef2cb29d3e07c7bc067d4ca7" category="paragraph"><block ref="10f94032ef2cb29d3e07c7bc067d4ca7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="16762cd538db70dc1f593eb0cf98827b" category="list-text">* 实现基因组互操作性。 * ONTAP FlexCache 是一种远程缓存功能，可简化文件分发，减少 WAN 延迟并降低 WAN 带宽成本<block ref="63d4389703454517b5feb2781d7680eb" category="inline-link-rx"></block>）。基因组变体识别和标注期间的一项关键活动是临床医生之间的协作。即使协作临床医生位于不同地理位置， ONTAP FlexCache 技术也能提高数据吞吐量。鉴于 * 。 bam 文件的典型大小（ 1 GB 到 100 GB ），底层平台必须能够向不同地理位置的临床医生提供文件。采用 ONTAP FlexCache 的 FlexPod 让基因组数据和应用程序真正实现了多站点就绪，让全球各地的研究人员可以无缝协作，实现低延迟和高吞吐量。在多站点环境下运行基因组学应用程序的医疗保健组织可以使用数据网络结构进行横向扩展，以平衡易管理性与成本和速度。</block>
+  <block id="789db2f78a47869b28997382a583555e" category="list-text">* 智能使用存储平台。 * 采用 ONTAP 自动分层和 NetApp Fabric Pool 技术的 FlexPod 可简化数据管理。FabricPool 有助于降低存储成本，而不会影响性能，效率，安全性或保护。FabricPool 对企业级应用程序是透明的，它可以降低存储 TCO ，而无需重新构建应用程序基础架构，从而充分利用云效率。FlexPod 可以从 FabricPool 的存储分层功能中受益，从而更高效地利用 ONTAP 闪存存储。有关详细信息，请参见<block ref="63b79d43061ec72f186174afdddca55f" category="inline-link-rx"></block>。下图简要概述了 FabricPool 及其优势。</block>
+  <block id="3199d90c5f76a586e586227db0c2dfa1" category="paragraph"><block ref="3199d90c5f76a586e586227db0c2dfa1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="23d03ad1893d1c6319f7c48873801373" category="list-text">* 更快的变体分析和标注速度。 * FlexPod 平台的部署和实施速度更快。FlexPod 平台可实现大规模数据可用，并提供低延迟和更高吞吐量，从而实现临床医生协作。增强的互操作性有助于创新。医疗保健组织可以并行运行基因组和非基因组工作负载，这意味着组织不需要专门的平台来开始其基因组学之旅。</block>
+  <block id="87d7875636ae7bcdaad8a4a10966f54a" category="paragraph">FlexPod ONTAP 会定期为存储平台添加前沿功能。FlexPod 数据中心是部署 FC-NVMe 以允许需要高性能存储访问的应用程序的最佳共享基础架构基础。随着 FC-NVMe 不断发展，包括高可用性，多路径和额外的操作系统支持， FlexPod 非常适合作为首选平台，可提供支持这些功能所需的可扩展性和可靠性。ONTAP 通过端到端 NVMe 实现更快的 I/O ，从而加快完成基因组分析的速度（<block ref="052854cdaf79fe8fde9db576b2736034" category="inline-link-rx"></block>）。</block>
+  <block id="61f26bd7773055bfc82209f3a9c73c19" category="paragraph">按顺序排列的原始基因组数据会产生较大的文件大小，因此，请务必将这些文件提供给变体分析器，以减少从样本收集到变体标注所需的总时间。NVMe （非易失性内存快速）用作存储访问和数据传输协议时，可提供前所未有的吞吐量水平和最快的响应时间。FlexPod 可在通过 PCI Express 总线（ PCIe ）访问闪存存储时部署 NVMe 协议。PCIe 支持实施数万个命令队列，从而提高了并行处理能力和吞吐量。从存储到内存的一个协议可以快速访问数据。</block>
+  <block id="24a083988dae6d465b9481b8dabcf67a" category="list-text">* 从零到零的灵活性进行临床研究。 * 灵活，可扩展的存储容量和性能使医疗保健研究组织能够以弹性或实时（ JIT ）的方式优化环境。通过将存储与计算和网络基础架构分离，可以在不中断的情况下纵向和横向扩展 FlexPod 平台。使用 Cisco Intersight ，可以使用内置和自定义自动化工作流来管理 FlexPod 平台。借助 Cisco Intersight 工作流，医疗保健组织可以缩短应用程序生命周期管理时间。当学术医疗中心要求将患者数据匿名化并提供给其研究信息学中心和 / 或质量中心时，其 IT 组织可以利用 Cisco Intersight FlexPod 工作流在数秒内（而不是数小时）执行安全数据备份，克隆和还原。借助 NetApp Trident 和 Kubernetes ， IT 组织可以配置新的数据科学家，并在几分钟内（有时甚至几秒钟内）为模型开发提供临床数据。</block>
+  <block id="3539feb3c06649d9964ea975bad6192e" category="list-text">* 保护基因组数据。 * NetApp SnapLock 提供了一个专用卷，可在其中存储文件并将其置于不可擦除，不可重写的状态。用户驻留在 FlexVol 卷中的生产数据可以通过 NetApp SnapMirror 或 SnapVault 技术镜像或存储到 SnapLock 卷。在保留期限结束之前，无法删除 SnapLock 卷，卷本身及其托管聚合中的文件。使用 ONTAP FPolicy 软件，企业可以禁止对具有特定扩展名的文件执行操作，从而防止勒索软件攻击。可以为特定文件操作触发 FPolicy 事件。此事件与策略相关联，策略将调用需要使用的引擎。您可以为策略配置一组可能包含勒索软件的文件扩展名。如果具有不允许扩展名的文件尝试执行未经授权的操作，则 FPolicy 会阻止执行该操作 <block ref="e1bbc7c6d846c6a1951657f170d26ce1" category="inline-link-rx"></block>）。</block>
+  <block id="f863cdc999b4058c68191075db7a3a6c" category="list-text">* FlexPod 合作支持。 * NetApp 和 Cisco 建立了 FlexPod 合作支持，这是一种强大，可扩展且灵活的支持模式，可满足 FlexPod 融合基础架构的独特支持要求。此模式结合了 NetApp 和 Cisco 的经验，资源和技术支持专业知识，可以简化识别和解决 FlexPod 支持问题的流程，而不管问题位于何处。下图概述了 FlexPod 合作支持模式。客户联系可能拥有问题描述的供应商， Cisco 和 NetApp 将合作解决此问题。Cisco 和 NetApp 拥有跨公司工程和开发团队，他们携手解决问题。此支持模式可减少翻译期间的信息丢失，建立信任并减少停机时间。</block>
+  <block id="fc7551e4d35bf2ed787d8517f14650e7" category="paragraph"><block ref="fc7551e4d35bf2ed787d8517f14650e7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ef135c74c1afbabf9b1a05c3729e6306" category="inline-link-macro">接下来：解决方案基础架构硬件和软件组件。</block>
+  <block id="fe7f09f3418264ba93ec6b03c1df1ec5" category="paragraph"><block ref="fe7f09f3418264ba93ec6b03c1df1ec5" category="inline-link-macro-rx"></block></block>
+  <block id="d68a8c02998023d2f388f550704264e1" category="summary">本节显示了使用 Cromwell 引擎执行 GATK 后的输出。</block>
+  <block id="0f785b6a5555ed4bcd551fab331ca7a2" category="doc">使用 Cromwell 引擎执行 GATK 的输出</block>
+  <block id="11fffe01d469840980d9b9a5f45bf9ed" category="inline-link-macro">previous ：使用 ` ./gatk` 脚本执行 GATK 的输出。</block>
+  <block id="de3dfc758141427b11edfa64d359f781" category="paragraph"><block ref="de3dfc758141427b11edfa64d359f781" category="inline-link-macro-rx"></block></block>
+  <block id="bbc63c84c18100b4182421f802410308" category="paragraph">使用 Cromwell 引擎执行 GATK 后，生成了以下示例输出。</block>
+  <block id="9b442a5691d6c853f564cb2a8b9e6565" category="inline-link-macro">下一步： GPU 设置。</block>
+  <block id="3e3bcdbd50e0dea99b844de96cde5458" category="paragraph"><block ref="3e3bcdbd50e0dea99b844de96cde5458" category="inline-link-macro-rx"></block></block>
+  <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新增功能</block>
+  <block id="33e4e289cefe243134e8d14e37181dd1" category="sidebar">适用于基因组学的 FlexPod</block>
+  <block id="b913c1c1cde143cea45cb35af2f91d75" category="sidebar">使用 ./gatk 脚本执行 GATK 的输出</block>
 </blocks>

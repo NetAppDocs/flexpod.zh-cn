@@ -25,6 +25,9 @@ image:ci-qsg_image9.png["屏幕截图显示操作和管理存储屏幕"]
 
 以下屏幕截图显示了存储集群概述。
 
+
+NOTE: 只有在通过 NetApp Active IQ Unified Manager 9.9 或更高版本监控存储阵列时，才会显示以下性能指标摘要信息。
+
 image:ci-qsg_image10.png["屏幕截图显示了存储集群概述"]
 
 

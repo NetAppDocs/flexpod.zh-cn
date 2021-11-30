@@ -12,7 +12,7 @@ summary: NetApp 和 Cisco 合作提供 Cisco Intersight ，这是 FlexPod 生态
 :imagesdir: ./../media/
 
 
-NetApp 公司 Rachel Lithman 和 Sree Lan
+NetApp 公司 Rachel Lithman 和 Jyh-Shing Chen
 
 与以下合作伙伴：image:cisco logo.png["错误：缺少图形映像"]
 
