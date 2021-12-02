@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: ontap-connector-for-intersight/reference-new.html 
+permalink: ontap-connector-for-intersight/ci-qsg_new.html 
 keywords: netapp, cisco, ontap, intersight, flexpod, what's new, features, release notes, enhancements 
 summary: Cisco Intersight 推出了新版本，可为您提供新功能，增强功能和错误修复。 
 ---
@@ -18,12 +18,11 @@ summary: Cisco Intersight 推出了新版本，可为您提供新功能，增强
 
 == 2021年10月
 
-* 更新了 Cisco Intersight 中可用的 NetApp 存储任务列表。请参见 link:ontap-connector-for-intersight/ci-qsg_use_cases.html["用例 3 ：使用无设计人员表单创建自定义工作流，以获取完整的 NetApp 存储任务列表"]。
+* 更新了 Cisco Intersight 中可用的 NetApp 存储任务列表。请参见 link:ci-qsg_use_cases.html["使用案例 3 使用无设计人员表单的自定义工作流"] 有关 NetApp 存储任务的完整列表。
 * 已在集群列表页面下添加运行状况列。
 * 现在，已在选定集群的 " 常规 " 页面下提供扩展的详细信息。
 * 现在可以通过导航窗格访问 NTP 服务器表。
-* 在节点页面下添加了一个新的传感器选项卡，其中包含 PSU ，风扇， FRU 信息。
-* CIFS 和 NVMe 信息现在列在 Storage Virtual Machine 的 " 常规 " 页面下。
+* 添加了一个新的传感器选项卡，其中包含 Storage Virtual Machine 的常规页面。
 * VLAN 和链路聚合组摘要现在可在端口常规页面下查看。
 * 在卷总容量表下添加的总数据容量列。
 * 在 " 平均卷统计信息 " ， " 平均 LUN 统计信息 " ， " 平均聚合统计信息 " ， " 平均 Storage VM 统计信息 " 和 " 平均节点统计信息 " 表下添加了 " 延迟 " ， "IOPS" 和 " 吞吐量 " 列

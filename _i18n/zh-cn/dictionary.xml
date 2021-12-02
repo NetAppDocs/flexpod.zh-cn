@@ -7485,13 +7485,9 @@
   <block id="b312f45322f166ee041a7a16747fd5c1" category="doc">新增功能 &amp;#8217</block>
   <block id="8a53d76b23b9bd398a76313ad1fa9a21" category="paragraph">本节列出了 Cisco Intersight 与 NetApp ONTAP 存储的新增特性和功能。</block>
   <block id="a5f3f63c2f6e1d6d4605650633b9ce8a" category="section-title">2021年10月</block>
-  <block id="de34eca679dd6247c92b150abb3a7de0" category="inline-link-macro">用例 3 ：使用无设计人员表单创建自定义工作流，以获取完整的 NetApp 存储任务列表</block>
-  <block id="3a4b493c0e825641268aee1e0f9870d6" category="list-text">更新了 Cisco Intersight 中可用的 NetApp 存储任务列表。请参见 <block ref="fbd0daa77f229ba539f28706ca5be227" category="inline-link-macro-rx"></block>。</block>
   <block id="754b6987e50dda52c9ced2b9e6a1c5a2" category="list-text">已在集群列表页面下添加运行状况列。</block>
   <block id="b9af62df3144700ecbf415dca380fa7b" category="list-text">现在，已在选定集群的 " 常规 " 页面下提供扩展的详细信息。</block>
   <block id="9413b697ad103ecb2a9939006df613ac" category="list-text">现在可以通过导航窗格访问 NTP 服务器表。</block>
-  <block id="28639af9987b0edbfaeff009a5cf089f" category="list-text">在节点页面下添加了一个新的传感器选项卡，其中包含 PSU ，风扇， FRU 信息。</block>
-  <block id="23ea9591aa7cd8e92ec6510589a7c09d" category="list-text">CIFS 和 NVMe 信息现在列在 Storage Virtual Machine 的 " 常规 " 页面下。</block>
   <block id="b77580e30c5da9fbe1d65bcbd5aa6f14" category="list-text">VLAN 和链路聚合组摘要现在可在端口常规页面下查看。</block>
   <block id="cbc1bce1da822fe664e5f3e591f9ff5c" category="list-text">在卷总容量表下添加的总数据容量列。</block>
   <block id="b475ee88bad1c3a8e0c02734aa611a21" category="list-text">在 " 平均卷统计信息 " ， " 平均 LUN 统计信息 " ， " 平均聚合统计信息 " ， " 平均 Storage VM 统计信息 " 和 " 平均节点统计信息 " 表下添加了 " 延迟 " ， "IOPS" 和 " 吞吐量 " 列</block>
@@ -7830,4 +7826,7 @@
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新增功能</block>
   <block id="33e4e289cefe243134e8d14e37181dd1" category="sidebar">适用于基因组学的 FlexPod</block>
   <block id="b913c1c1cde143cea45cb35af2f91d75" category="sidebar">使用 ./gatk 脚本执行 GATK 的输出</block>
+  <block id="c47b18a4d429299b996de436c91a4416" category="inline-link-macro">使用案例 3 使用无设计人员表单的自定义工作流</block>
+  <block id="7fd44dc2c5fafe252191e6ef332a6773" category="list-text">更新了 Cisco Intersight 中可用的 NetApp 存储任务列表。请参见 <block ref="026b254cc8ff2f5d36709bcf93418a5f" category="inline-link-macro-rx"></block> 有关 NetApp 存储任务的完整列表。</block>
+  <block id="4b6fb03e9a4a802c4ef171e5df2f924b" category="list-text">添加了一个新的传感器选项卡，其中包含 Storage Virtual Machine 的常规页面。</block>
 </blocks>
