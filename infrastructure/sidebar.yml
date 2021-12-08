@@ -1,0 +1,15 @@
+---
+section: infrastructure
+title: 基础架构
+entries:
+- title: 采用 Cisco UCSM ， VMware vSphere 7.0 和 NetApp ONTAP 9 的适用于 FlexPod 的端到端 NVMe
+  type: solutions
+  entries:
+  - title: 简介
+    url: "/infrastructure/nvme-vsphere-introduction.html"
+  - title: 测试方法
+    url: "/infrastructure/nvme-vsphere-testing-approach.html"
+  - title: 测试结果
+    url: "/infrastructure/nvme-vsphere-test-results.html"
+  - title: 结论
+    url: "/infrastructure/nvme-vsphere-conclusion.html"

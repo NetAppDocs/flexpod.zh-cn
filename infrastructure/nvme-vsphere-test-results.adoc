@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: infrastructure/nvme-vsphere-test-results.html 
+keywords: test, results, iops, latency 
+summary:  
+---
+= 测试结果
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:nvme-vsphere-testing-approach.html["上一篇：测试方法。"]
+
+测试包括运行 FIO 工作负载，以测量 FC-NVMe 在 IOPS 和延迟方面的性能。
+
+下图显示了我们在使用 8 KB 块大小运行 100% 随机读取工作负载时的结果。
+
+image:nvme-vsphere-image3.png["错误：缺少图形映像"]
+
+在我们的测试中，我们发现系统实现了超过 120 万次 IOPS ，而服务器端延迟仅保持在 0.35 毫秒以下。
+
+下图显示了我们在使用 8 KB 块大小运行 100% 随机写入工作负载时的结果。
+
+image:nvme-vsphere-image4.png["错误：缺少图形映像"]
+
+在我们的测试中，我们发现系统实现了接近 30 万次的 IOPS ，同时服务器端延迟仅保持在 1 毫秒以下。
+
+对于随机读取率为 80% ，写入率为 20% 的 8 KB 块大小，我们观察到以下结果：
+
+image:nvme-vsphere-image5.png["错误：缺少图形映像"]
+
+在我们的测试中，我们发现系统实现了超过 100 万次的 IOPS ，同时服务器端延迟仅保持在 1 毫秒以下。
+
+对于 64 KB 块大小和 100% 顺序读取，我们观察到以下结果：
+
+image:nvme-vsphere-image6.png["错误：缺少图形映像"]
+
+在我们的测试中，我们发现该系统实现了大约 25 万次 IOPS ，而服务器端延迟仅保持在 1 毫秒以下。
+
+对于 64 KB 块大小和 100% 顺序写入，我们观察到以下结果：
+
+image:nvme-vsphere-image7.png["错误：缺少图形映像"]
+
+在我们的测试中，我们发现该系统可实现约 120 ， 000 次 IOPS ，而服务器端延迟保持在 1 毫秒以下。
+
+link:nvme-vsphere-conclusion.html["接下来：总结。"]

@@ -1,0 +1,15 @@
+---
+sidebar: sidebar 
+permalink: infrastructure/nvme-vsphere-abstract.html 
+keywords:  
+summary:  
+---
+= 摘要
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+本技术报告简要概述了基于 FlexPod 的 VMware vSphere 7 在光纤通道上的 NVMe （ FC-NVMe ）性能。FlexPod 是部署 FC-NVMe 以为应用程序提供高性能存储访问的最佳共享基础架构基础。

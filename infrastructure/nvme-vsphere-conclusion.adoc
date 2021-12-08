@@ -1,0 +1,117 @@
+---
+sidebar: sidebar 
+permalink: infrastructure/nvme-vsphere-conclusion.html 
+keywords: conclusion, additional information, acknowledgements, interoperability matrixes 
+summary: 借助 FlexPod ， Cisco 和 NetApp 创建了一个灵活且可扩展的平台，可用于多种使用情形和应用程序。借助 FC-NVMe ， FlexPod 新增了另一项功能，可帮助企业高效地支持在同一共享基础架构中同时运行的业务关键型应用程序。 
+---
+= 结论
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./..media/
+
+
+link:nvme-vsphere-test-results.html["上一步：测试结果。"]
+
+对于延迟不到 1 毫秒的顺序读取工作负载，此解决方案的观察吞吐量为 14 GBps 和 220 K IOPS 。对于随机读取工作负载，吞吐量达到了 9.5 GBps 和 1.25 万次 IOPS 。FlexPod 通过 FC-NVMe 提供这种性能的能力可以满足任何任务关键型应用程序的需求。
+
+采用 VMware vSphere 7.0 U2 的 FlexPod 数据中心是为各种 IT 工作负载部署 FC-NVMe 的最佳共享基础架构基础，可为需要此功能的应用程序提供高性能存储访问。随着 FC-NVMe 不断发展，包括高可用性，多路径和额外的操作系统支持， FlexPod 非常适合作为首选平台，可提供支持这些功能所需的可扩展性和可靠性。
+
+借助 FlexPod ， Cisco 和 NetApp 创建了一个灵活且可扩展的平台，可用于多种使用情形和应用程序。借助 FC-NVMe ， FlexPod 新增了另一项功能，可帮助企业高效地支持在同一共享基础架构中同时运行的业务关键型应用程序。借助 FlexPod 的灵活性和可扩展性，客户还可以从规模合适的基础架构入手，并随着不断变化的业务需求进行扩展和适应。
+
+
+
+== 追加信息
+
+要了解有关本文档中所述信息的更多信息，请查看以下文档和 / 或网站：
+
+* Cisco Unified Computing System （ UCS ）
++
+http://www.cisco.com/en/US/products/ps10265/index.html["http://www.cisco.com/en/US/products/ps10265/index.html"^]
+
+* Cisco UCS 6400 系列互联阵列数据表
++
+https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/datasheet-c78-741116.html["https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/datasheet-c78-741116.html"^]
+
+* Cisco UCS 5100 系列刀片式服务器机箱
++
+http://www.cisco.com/en/US/products/ps10279/index.html["http://www.cisco.com/en/US/products/ps10279/index.html"^]
+
+* Cisco UCS B 系列刀片式服务器
++
+http://www.cisco.com/en/US/partner/products/ps10280/index.html["http://www.cisco.com/en/US/partner/products/ps10280/index.html"^]
+
+* Cisco UCS C 系列机架式服务器
++
+http://www.cisco.com/c/en/us/products/servers-unified-computing/ucs-c-series-rack-servers/index.html["http://www.cisco.com/c/en/us/products/servers-unified-computing/ucs-c-series-rack-servers/index.html"^]
+
+* Cisco Unified Computing System 适配器
++
+http://www.cisco.com/en/US/products/ps10277/prod_module_series_home.html["http://www.cisco.com/en/US/products/ps10277/prod_module_series_home.html"^]
+
+* Cisco UCS Manager
++
+http://www.cisco.com/en/US/products/ps10281/index.html["http://www.cisco.com/en/US/products/ps10281/index.html"^]
+
+* Cisco Nexus 9000 系列交换机
++
+http://www.cisco.com/c/en/us/products/switches/nexus-9000-series-switches/index.html["http://www.cisco.com/c/en/us/products/switches/nexus-9000-series-switches/index.html"^]
+
+* Cisco MDS 9000 多层光纤交换机
++
+http://www.cisco.com/c/en/us/products/storage-networking/mds-9000-series-multilayer-switches/index.html["http://www.cisco.com/c/en/us/products/storage-networking/mds-9000-series-multilayer-switches/index.html"^]
+
+* Cisco MDS 9132T 32 Gbps 32 端口光纤通道交换机
++
+https://www.cisco.com/c/en/us/products/collateral/storage-networking/mds-9100-series-multilayer-fabric-switches/datasheet-c78-739613.html["https://www.cisco.com/c/en/us/products/collateral/storage-networking/mds-9100-series-multilayer-fabric-switches/datasheet-c78-739613.html"^]
+
+* NetApp ONTAP 9.
++
+http://www.netapp.com/us/products/platform-os/ontap/index.aspx["http://www.netapp.com/us/products/platform-os/ontap/index.aspx"^]
+
+* NetApp AFF A 系列
++
+http://www.netapp.com/us/products/storage-systems/all-flash-array/aff-a-series.aspx["http://www.netapp.com/us/products/storage-systems/all-flash-array/aff-a-series.aspx"^]
+
+* VMware vSphere
++
+https://www.vmware.com/products/vsphere["https://www.vmware.com/products/vsphere"^]
+
+* VMware vCenter Server
++
+http://www.vmware.com/products/vcenter-server/overview.html["http://www.vmware.com/products/vcenter-server/overview.html"^]
+
+* 现代 SAN 的最佳实践
++
+https://www.netapp.com/us/media/tr-4080.pdf["https://www.netapp.com/us/media/tr-4080.pdf"^]
+
+* 推出适用于 FlexPod 的端到端 NVMe
++
+https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/whitepaper-c11-741907.html["https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/whitepaper-c11-741907.html"^]
+
+
+
+
+
+== 互操作性表
+
+* NetApp 互操作性表工具
++
+http://support.netapp.com/matrix/["http://support.netapp.com/matrix/"^]
+
+* Cisco UCS 硬件兼容性列表
++
+https://ucshcltool.cloudapps.cisco.com/public/["https://ucshcltool.cloudapps.cisco.com/public/"^]
+
+* VMware 兼容性指南
++
+http://www.vmware.com/resources/compatibility["http://www.vmware.com/resources/compatibility"^]
+
+
+
+
+
+== 致谢
+
+作者谨向 Cisco 的 John George ， NetApp 的 Scott Lane 和 Bobby Oommen 表示感谢，感谢他们在项目执行期间提供的帮助和指导。

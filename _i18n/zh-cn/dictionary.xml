@@ -7829,4 +7829,158 @@
   <block id="c47b18a4d429299b996de436c91a4416" category="inline-link-macro">使用案例 3 使用无设计人员表单的自定义工作流</block>
   <block id="7fd44dc2c5fafe252191e6ef332a6773" category="list-text">更新了 Cisco Intersight 中可用的 NetApp 存储任务列表。请参见 <block ref="026b254cc8ff2f5d36709bcf93418a5f" category="inline-link-macro-rx"></block> 有关 NetApp 存储任务的完整列表。</block>
   <block id="4b6fb03e9a4a802c4ef171e5df2f924b" category="list-text">添加了一个新的传感器选项卡，其中包含 Storage Virtual Machine 的常规页面。</block>
+  <block id="3274a50ba9f0d3c0adefdfa11c5094be" category="doc">测试结果</block>
+  <block id="782ca8c3b3f6b85a20e7774ff589f789" category="inline-link-macro">上一篇：测试方法。</block>
+  <block id="cf68be33c569e87bc6218ae412a7bbcc" category="paragraph"><block ref="cf68be33c569e87bc6218ae412a7bbcc" category="inline-link-macro-rx"></block></block>
+  <block id="59a129edf6585b5b94078f507b12dbe4" category="paragraph">测试包括运行 FIO 工作负载，以测量 FC-NVMe 在 IOPS 和延迟方面的性能。</block>
+  <block id="6738aae3cd4df39bbc26a3bad293665a" category="paragraph">下图显示了我们在使用 8 KB 块大小运行 100% 随机读取工作负载时的结果。</block>
+  <block id="b0d3cee0e72680a6ada8eb5a06a22eb1" category="paragraph"><block ref="b0d3cee0e72680a6ada8eb5a06a22eb1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5141efc6b88a2bed36d90e38c96f7ab7" category="paragraph">在我们的测试中，我们发现系统实现了超过 120 万次 IOPS ，而服务器端延迟仅保持在 0.35 毫秒以下。</block>
+  <block id="c9cd8369c2faac65ea4ea6f107ac6ecf" category="paragraph">下图显示了我们在使用 8 KB 块大小运行 100% 随机写入工作负载时的结果。</block>
+  <block id="f7661ca9c6d708cd0c9ee2e71db142c3" category="paragraph"><block ref="f7661ca9c6d708cd0c9ee2e71db142c3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="79d053da52285166e8bd9e1c70c87099" category="paragraph">在我们的测试中，我们发现系统实现了接近 30 万次的 IOPS ，同时服务器端延迟仅保持在 1 毫秒以下。</block>
+  <block id="b0c9c578d76018d5878d63bd9a39aeba" category="paragraph">对于随机读取率为 80% ，写入率为 20% 的 8 KB 块大小，我们观察到以下结果：</block>
+  <block id="2e1c58920917bdd785a16681f848654d" category="paragraph"><block ref="2e1c58920917bdd785a16681f848654d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b19321a96e9ac599b3b8d87709e85476" category="paragraph">在我们的测试中，我们发现系统实现了超过 100 万次的 IOPS ，同时服务器端延迟仅保持在 1 毫秒以下。</block>
+  <block id="37e25507485409498126e40407e02f41" category="paragraph">对于 64 KB 块大小和 100% 顺序读取，我们观察到以下结果：</block>
+  <block id="341dcf5271845a25c9d049cf4187cda1" category="paragraph"><block ref="341dcf5271845a25c9d049cf4187cda1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="13ede1c85f4be2a1bfcc52e1f43293b4" category="paragraph">在我们的测试中，我们发现该系统实现了大约 25 万次 IOPS ，而服务器端延迟仅保持在 1 毫秒以下。</block>
+  <block id="8964077aad0764d48818dac44f07a511" category="paragraph">对于 64 KB 块大小和 100% 顺序写入，我们观察到以下结果：</block>
+  <block id="947d8364f394e40fc69981ec054af32c" category="paragraph"><block ref="947d8364f394e40fc69981ec054af32c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cfe45bc6d480e92e2538f6d8a0844088" category="paragraph">在我们的测试中，我们发现该系统可实现约 120 ， 000 次 IOPS ，而服务器端延迟保持在 1 毫秒以下。</block>
+  <block id="5dc13e73a0465851a2ba30b55bd352de" category="paragraph"><block ref="5dc13e73a0465851a2ba30b55bd352de" category="inline-link-macro-rx"></block></block>
+  <block id="14f26e1bc4c8924cbf01bd8dbea343fe" category="summary">此解决方案简要概述了基于 FlexPod 的 VMware vSphere 7 的 FC-NVMe 性能。经验证，解决方案可成功传递 FC-NVMe 流量，并为具有各种数据块大小的 FC-NVMe 捕获了性能度量指标。</block>
+  <block id="1b3e89e012899156ba5550bd4371ef7a" category="doc">TR-4914 ：采用 Cisco UCSM ， VMware vSphere 7.0 和 NetApp ONTAP 9 的适用于 FlexPod 的端到端 NVMe</block>
+  <block id="2365b7af8882a5c751cd63a1f4ee5d88" category="paragraph">NetApp 公司 Chris Schmitt 和 Kamini Singh</block>
+  <block id="5c8f5d2d89f99e064ca145e1b674b0f3" category="paragraph">NVMe 数据存储标准是一项新兴的核心技术，通过为当前和未来的内存技术提供极高的带宽和极低的延迟存储访问，正在转变企业数据存储访问和传输。NVMe 将 SCSI 命令集替换为 NVMe 命令集。</block>
+  <block id="31b69b7e1c4e960e6cedf19de53f4322" category="paragraph">NVMe 可与非易失性闪存驱动器，多核 CPU 和 GB 内存配合使用。它还利用了自 20 世纪 70 年代以来计算机科学领域的重大进步，实现了简化的命令集，可以更高效地解析和处理数据。端到端 NVMe 架构还使数据中心管理员能够重新思考他们可以在多大程度上推动虚拟化和容器化环境，以及面向事务的数据库可以支持的可扩展性。</block>
+  <block id="09f15216328f20676143c09d02767181" category="paragraph">FlexPod 是一种最佳实践数据中心架构，其中包括 Cisco 统一计算系统（ Cisco UCS ）， Cisco Nexus 交换机， Cisco MDS 交换机和 NetApp AFF 系统。这些组件是根据 Cisco 和 NetApp 的最佳实践进行连接和配置的，可为放心运行各种企业工作负载提供一个出色的平台。FlexPod 可以纵向扩展以提高性能和容量（根据需要单独添加计算，网络或存储资源），也可以横向扩展以适应需要多个一致部署的环境（例如部署更多 FlexPod 堆栈）。</block>
+  <block id="e8b94bd82e142d7440b2225c538c2741" category="paragraph">下图显示了 FlexPod 组件系列。</block>
+  <block id="1454b90737e9a70aa21407e131562c61" category="paragraph"><block ref="1454b90737e9a70aa21407e131562c61" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2e9ea0ababa2da0236c1f9f5471a7488" category="paragraph">FlexPod 是推出 FC-NVMe 的理想平台。支持此功能的方法包括：在现有 Cisco UCS B200 M5 或 M6 服务器或 Cisco UCS C 系列 M5 或 M6 机架式服务器中添加 Cisco UCS VIC 1400 系列和端口扩展器；以及简单，无中断地升级到 Cisco UCS 系统 Cisco MDS 32Gbps 交换机； 和 NetApp AFF 存储阵列。安装支持的硬件和软件后， FC-NVMe 的配置与 FCP 配置类似。</block>
+  <block id="7acd6a467f483afa5e35fc90a1800225" category="paragraph">NetApp ONTAP 9.5 及更高版本可提供完整的 FC-NVMe 解决方案。通过对 AFF A300 ， AFF A400 ， AFF A700 ， AFF A700s 和 AFF A800 阵列进行无中断 ONTAP 软件更新，这些设备可以支持端到端 NVMe 存储堆栈。因此，具有第六代主机总线适配器（ HBA ）和 NVMe 驱动程序支持的服务器可以使用原生 NVMe 与这些阵列进行通信。</block>
+  <block id="836e469eca1073cea18717fc8a4286e2" category="section-title">解决方案的优势</block>
+  <block id="8a00ffcca52af99daf08edb962c9ceeb" category="paragraph">适用于 FlexPod 的端到端 NVMe 可为客户提供卓越的价值，并具有以下解决方案优势：</block>
+  <block id="54502830ada1e4b4b82c7d936f4c269d" category="list-text">NVMe 依赖于 PCIe ，这是一种高速，高带宽的硬件协议，比 SCSI ， SAS 和 SATA 等旧标准速度要快得多。Cisco UCS 服务器和 NetApp 存储阵列之间的高带宽，超低延迟连接，适用于大多数要求苛刻的应用程序。</block>
+  <block id="e47e7787f697c0c24a924681d0e1b4d0" category="list-text">FC-NVMe 解决方案无损，可满足下一代应用程序的可扩展性要求。这些新技术包括人工智能（ AI ），机器学习（ ML ），深度学习（ DL ），实时分析和其他任务关键型应用程序。</block>
+  <block id="0741486bab90bf898dc73f717739c21b" category="list-text">通过高效利用整个堆栈中的所有资源降低 IT 成本。</block>
+  <block id="d69be026b050768811ccdabac96cbafa" category="list-text">显著缩短响应时间并提升应用程序性能，这与提高 IOPS 和吞吐量并降低延迟相对应。对于现有工作负载，解决方案可将性能提高 ~60% ，并将延迟降低 ~50% 。</block>
+  <block id="5ff92b3471b3232211467fc1e17bbe3c" category="list-text">FC-NVMe 是一种简化的协议，具有出色的队列功能，尤其是在每秒 I/O 操作数（ IOPS ；即事务数更多）和并行活动数较多的情况下。</block>
+  <block id="1a225cc1a41f04ca9c5b251d8c2ec01e" category="list-text">为 FlexPod 组件（例如 Cisco UCS ， Cisco MDS 和 NetApp AFF 存储阵列）提供无中断软件升级。无需修改应用程序。</block>
+  <block id="a2fd382ce5cff0928aa9f57571fdde76" category="inline-link-macro">下一步：测试方法。</block>
+  <block id="7209294d21223fab68b6c4dd8b3859fa" category="paragraph"><block ref="7209294d21223fab68b6c4dd8b3859fa" category="inline-link-macro-rx"></block></block>
+  <block id="1d3e394196ca20a245bc3d85ea19f8e3" category="summary">借助 FlexPod ， Cisco 和 NetApp 创建了一个灵活且可扩展的平台，可用于多种使用情形和应用程序。借助 FC-NVMe ， FlexPod 新增了另一项功能，可帮助企业高效地支持在同一共享基础架构中同时运行的业务关键型应用程序。</block>
+  <block id="ac0ec60d36dfa69ed9c33bff90080b23" category="inline-link-macro">上一步：测试结果。</block>
+  <block id="da4457b5f68502fd9980ca6ca4d26523" category="paragraph"><block ref="da4457b5f68502fd9980ca6ca4d26523" category="inline-link-macro-rx"></block></block>
+  <block id="357ae1052d4a9a1f8ad31341782e681d" category="paragraph">对于延迟不到 1 毫秒的顺序读取工作负载，此解决方案的观察吞吐量为 14 GBps 和 220 K IOPS 。对于随机读取工作负载，吞吐量达到了 9.5 GBps 和 1.25 万次 IOPS 。FlexPod 通过 FC-NVMe 提供这种性能的能力可以满足任何任务关键型应用程序的需求。</block>
+  <block id="45151779d60c25e99023c85fb7e5f70e" category="paragraph">采用 VMware vSphere 7.0 U2 的 FlexPod 数据中心是为各种 IT 工作负载部署 FC-NVMe 的最佳共享基础架构基础，可为需要此功能的应用程序提供高性能存储访问。随着 FC-NVMe 不断发展，包括高可用性，多路径和额外的操作系统支持， FlexPod 非常适合作为首选平台，可提供支持这些功能所需的可扩展性和可靠性。</block>
+  <block id="2e9b438bb0a923f9a4cfd56c7eb47eba" category="paragraph">借助 FlexPod ， Cisco 和 NetApp 创建了一个灵活且可扩展的平台，可用于多种使用情形和应用程序。借助 FC-NVMe ， FlexPod 新增了另一项功能，可帮助企业高效地支持在同一共享基础架构中同时运行的业务关键型应用程序。借助 FlexPod 的灵活性和可扩展性，客户还可以从规模合适的基础架构入手，并随着不断变化的业务需求进行扩展和适应。</block>
+  <block id="21b8b4e69eb4bcd7890b3ce6dff80e12" category="list-text">Cisco Unified Computing System （ UCS ）</block>
+  <block id="584b12a2ac3f6fd3e0e7049156fdd91c" category="inline-link"><block ref="584b12a2ac3f6fd3e0e7049156fdd91c" category="inline-link-rx"></block></block>
+  <block id="3c65018c18cf8ce78db5681a338977ae" category="paragraph"><block ref="3c65018c18cf8ce78db5681a338977ae" category="inline-link-rx"></block></block>
+  <block id="a9bc4af6dc522e2b661cd4b6503061e4" category="list-text">Cisco UCS 6400 系列互联阵列数据表</block>
+  <block id="71a8d27297a8ea56627190298acb7a23" category="inline-link"><block ref="71a8d27297a8ea56627190298acb7a23" category="inline-link-rx"></block></block>
+  <block id="ae0111867c908af61ab7655ef25c16fb" category="paragraph"><block ref="ae0111867c908af61ab7655ef25c16fb" category="inline-link-rx"></block></block>
+  <block id="a3dbaa31ff645cd7a47a13288a226f5d" category="inline-link"><block ref="a3dbaa31ff645cd7a47a13288a226f5d" category="inline-link-rx"></block></block>
+  <block id="a34348cc0f49f6f3fb873c621819ae6a" category="paragraph"><block ref="a34348cc0f49f6f3fb873c621819ae6a" category="inline-link-rx"></block></block>
+  <block id="aa03af91e97e3a7938de166d258e0470" category="inline-link"><block ref="aa03af91e97e3a7938de166d258e0470" category="inline-link-rx"></block></block>
+  <block id="6020fe19150345d99b481804bbc989d5" category="paragraph"><block ref="6020fe19150345d99b481804bbc989d5" category="inline-link-rx"></block></block>
+  <block id="cd2d76930423ad7cca8537acf2a3068d" category="inline-link"><block ref="cd2d76930423ad7cca8537acf2a3068d" category="inline-link-rx"></block></block>
+  <block id="6cd4f16d8b1f703abed74c85ee281843" category="paragraph"><block ref="6cd4f16d8b1f703abed74c85ee281843" category="inline-link-rx"></block></block>
+  <block id="3e18b63e5077aa1deedf66c411dc8962" category="list-text">Cisco Unified Computing System 适配器</block>
+  <block id="f513f9c79ebe79e00b99cb4ecf13210b" category="inline-link"><block ref="f513f9c79ebe79e00b99cb4ecf13210b" category="inline-link-rx"></block></block>
+  <block id="a4717af815ea61bfcbc2feac8fd0f6fb" category="paragraph"><block ref="a4717af815ea61bfcbc2feac8fd0f6fb" category="inline-link-rx"></block></block>
+  <block id="14fee3a0e9e863a2a4ad52686e64bb8c" category="inline-link"><block ref="14fee3a0e9e863a2a4ad52686e64bb8c" category="inline-link-rx"></block></block>
+  <block id="ff21394970e5bbf12b466a766bcbd877" category="paragraph"><block ref="ff21394970e5bbf12b466a766bcbd877" category="inline-link-rx"></block></block>
+  <block id="67be4cd88f4003fcf0aa3708830b1930" category="inline-link"><block ref="67be4cd88f4003fcf0aa3708830b1930" category="inline-link-rx"></block></block>
+  <block id="40d407225fc884be5c71714aca43a1e4" category="paragraph"><block ref="40d407225fc884be5c71714aca43a1e4" category="inline-link-rx"></block></block>
+  <block id="3a373635e800d81fd6378be296ce1927" category="list-text">Cisco MDS 9000 多层光纤交换机</block>
+  <block id="f011e1d4812d8030d2924298e204fc70" category="inline-link"><block ref="f011e1d4812d8030d2924298e204fc70" category="inline-link-rx"></block></block>
+  <block id="9609058c7d02b009db6d66db2c603718" category="paragraph"><block ref="9609058c7d02b009db6d66db2c603718" category="inline-link-rx"></block></block>
+  <block id="64bb879a7dafb3e944b0357c4a709261" category="list-text">Cisco MDS 9132T 32 Gbps 32 端口光纤通道交换机</block>
+  <block id="11db24b66c77035ede185430bf9d09f9" category="inline-link"><block ref="11db24b66c77035ede185430bf9d09f9" category="inline-link-rx"></block></block>
+  <block id="23c1509f5b84de26c4b1055eb21193f6" category="paragraph"><block ref="23c1509f5b84de26c4b1055eb21193f6" category="inline-link-rx"></block></block>
+  <block id="a5119a6bd0f4d733e0f1f4c10f9d063b" category="list-text">NetApp ONTAP 9.</block>
+  <block id="56069277df4c901b9bbe8e803e67db24" category="inline-link"><block ref="56069277df4c901b9bbe8e803e67db24" category="inline-link-rx"></block></block>
+  <block id="e5fd571885e12d60c887ac4ff16b1b18" category="paragraph"><block ref="e5fd571885e12d60c887ac4ff16b1b18" category="inline-link-rx"></block></block>
+  <block id="30d37924aae959f5f8be738ca035502f" category="list-text">NetApp AFF A 系列</block>
+  <block id="c6a079892f1cff76919834401bb28e4c" category="inline-link"><block ref="c6a079892f1cff76919834401bb28e4c" category="inline-link-rx"></block></block>
+  <block id="91fbc750242e3f6e73b7346d7de4255d" category="paragraph"><block ref="91fbc750242e3f6e73b7346d7de4255d" category="inline-link-rx"></block></block>
+  <block id="0efcb78d6dd86f734d5f4bc64ccf8c30" category="inline-link"><block ref="0efcb78d6dd86f734d5f4bc64ccf8c30" category="inline-link-rx"></block></block>
+  <block id="08b9bce1e64e2ff433f4a5d4ab2d177f" category="paragraph"><block ref="08b9bce1e64e2ff433f4a5d4ab2d177f" category="inline-link-rx"></block></block>
+  <block id="1437b8b2e8fc7321b26cb3260b2497de" category="inline-link"><block ref="1437b8b2e8fc7321b26cb3260b2497de" category="inline-link-rx"></block></block>
+  <block id="3d6f191554274501ba88fe69ea6ba807" category="paragraph"><block ref="3d6f191554274501ba88fe69ea6ba807" category="inline-link-rx"></block></block>
+  <block id="581a5130c89459868713aba87d5ddef8" category="list-text">现代 SAN 的最佳实践</block>
+  <block id="28cf8118bed6bfff2d8c5e8b980c1d1d" category="inline-link"><block ref="28cf8118bed6bfff2d8c5e8b980c1d1d" category="inline-link-rx"></block></block>
+  <block id="8773dad2264bd751de05c2821b5b7106" category="paragraph"><block ref="8773dad2264bd751de05c2821b5b7106" category="inline-link-rx"></block></block>
+  <block id="0d226f32134d70adc638b78bc53393a8" category="list-text">推出适用于 FlexPod 的端到端 NVMe</block>
+  <block id="651d79725508fd0119e3f81dd49cf222" category="inline-link"><block ref="651d79725508fd0119e3f81dd49cf222" category="inline-link-rx"></block></block>
+  <block id="7b00214f336cfd8e3b6c48d0df0025a3" category="paragraph"><block ref="7b00214f336cfd8e3b6c48d0df0025a3" category="inline-link-rx"></block></block>
+  <block id="7aaf95441fd5c24881cd267924f4466b" category="section-title">互操作性表</block>
+  <block id="0919916303e590e1fc82d7bf4eecfa6b" category="inline-link"><block ref="0919916303e590e1fc82d7bf4eecfa6b" category="inline-link-rx"></block></block>
+  <block id="85974e66cddabad7238a4eec399c793e" category="paragraph"><block ref="85974e66cddabad7238a4eec399c793e" category="inline-link-rx"></block></block>
+  <block id="569e776974c7eff044e2da8f8153566d" category="list-text">Cisco UCS 硬件兼容性列表</block>
+  <block id="70896e149d49fd7ef77574e6cd6467d1" category="inline-link"><block ref="70896e149d49fd7ef77574e6cd6467d1" category="inline-link-rx"></block></block>
+  <block id="e069122d2e90856ce8a194155dfe6294" category="paragraph"><block ref="e069122d2e90856ce8a194155dfe6294" category="inline-link-rx"></block></block>
+  <block id="33a5856b62b0795c60374ac94b38ff05" category="inline-link"><block ref="33a5856b62b0795c60374ac94b38ff05" category="inline-link-rx"></block></block>
+  <block id="d6ac65bf36b9bb86fd269d9f52d82cf3" category="paragraph"><block ref="d6ac65bf36b9bb86fd269d9f52d82cf3" category="inline-link-rx"></block></block>
+  <block id="0b761cfbb2be11fcc3bd9c4447e089c4" category="paragraph">作者谨向 Cisco 的 John George ， NetApp 的 Scott Lane 和 Bobby Oommen 表示感谢，感谢他们在项目执行期间提供的帮助和指导。</block>
+  <block id="adb629e7b9571b85f36338a7308d3ea7" category="summary">本节简要概述了 FC-NVMe on FlexPod 验证测试。其中包括测试环境 / 配置以及针对使用 VMware vSphere 7 的 FlexPod 的 FC-NVMe 执行工作负载测试所采用的测试计划。</block>
+  <block id="0cf60f5f532710fb3fc684833fbc52fb" category="doc">测试方法</block>
+  <block id="7c54c22f386bd3b54b9b61e8c93bfb23" category="paragraph"><block ref="7c54c22f386bd3b54b9b61e8c93bfb23" category="inline-link-macro-rx"></block></block>
+  <block id="27ca21876995024e46fc189c526da150" category="paragraph">Cisco Nexus 9000 系列交换机支持两种操作模式：</block>
+  <block id="57b515ea7813a4d426d5ba78eabc281d" category="list-text">NX-OS 独立模式，使用 Cisco NX-OS 软件</block>
+  <block id="ffe1740a370eca3eb8bf6399772ffc24" category="list-text">ACI 网络结构模式，使用 Cisco Application Centric Infrastructure （ Cisco ACI ）平台</block>
+  <block id="fc3aa2974d4884cd963eac1c25c20aa4" category="paragraph">在独立模式下，交换机的性能与典型的 Cisco Nexus 交换机类似，端口密度更高，延迟低，连接速度更低。</block>
+  <block id="fe1c42d88dbba4744f92edbb76b5a4be" category="paragraph">采用 NX-OS 的 FlexPod 在计算层，网络层和存储层中设计为完全冗余。从设备或流量路径的角度来看，不存在单点故障。下图显示了此 FC-NVMe 验证中使用的最新 FlexPod 设计的各个要素的连接。</block>
+  <block id="1a53d38ba1544ccbf531bdca08f785fa" category="paragraph"><block ref="1a53d38ba1544ccbf531bdca08f785fa" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="60c9302e13567e5be52b9ef8ade8be50" category="paragraph">从 FC SAN 角度来看，此设计使用最新的第四代 Cisco UCS 6454 互联阵列以及在服务器中具有端口扩展器的 Cisco UCS VIC 1400 平台。Cisco UCS 机箱中的 Cisco UCS B200 M6 刀片式服务器使用 Cisco UCS VIC 1440 ，并将端口扩展器连接到 Cisco UCS 2408 阵列扩展器 IOM ，并且每个以太网光纤通道（ FCoE ）虚拟主机总线适配器（ vHBA ）的速度均为 40 Gbps 。由 Cisco UCS 管理的 Cisco UCS C220 M5 机架式服务器使用 Cisco UCS VIC 1457 ，每个互联阵列具有两个 25 Gbps 接口。每个 C220 M5 FCoE vHBA 的速度均为 50 Gbps 。</block>
+  <block id="680762378b447ceaa8c388af5a826657" category="paragraph">互联阵列可通过 32 Gbps SAN 端口通道连接到最新一代的 Cisco MDS 9148T 或 9132T FC 交换机。Cisco MDS 交换机与 NetApp AFF A800 存储集群之间的连接也是 32 Gbps FC 。此配置支持 32 Gbps FC ，光纤通道协议（ FCP ）以及存储集群与 Cisco UCS 之间的 FC-NVMe 存储。在此验证中，每个存储控制器使用四个 FC 连接。在每个存储控制器上，四个 FC 端口同时用于 FCP 和 FC-NVMe 协议。</block>
+  <block id="5e0c7ed874ce8f4c61ce2a70f5c216d5" category="paragraph">Cisco Nexus 交换机与最新一代 NetApp AFF A800 存储集群之间的连接速度也为 100 Gbps ，存储控制器上具有端口通道，交换机上具有 VPC 。NetApp AFF A800 存储控制器在高速外设连接接口快速（ Peripheral Connect Interface Express ， PCIe ）总线上配备了 NVMe 磁盘。</block>
+  <block id="d1fd21e5896206a9eefa5051e741cb40" category="inline-link">采用 UCS 托管模式的 FlexPod Datacenter ，采用 Cisco UCS 4.2 （ 1 ）， VMware vSphere 7.0U2 和 NetApp ONTAP 9.9</block>
+  <block id="c7a4509b40decadb49a5221fcd638737" category="paragraph">此验证中使用的 FlexPod 实施基于<block ref="6f18f38be02f890aedb1b9fbdab2000c" category="inline-link-rx"></block>。</block>
+  <block id="99fb86edec4684b06474ee611758a8f6" category="section-title">经验证的硬件和软件</block>
+  <block id="7ec755c1c3dd5f89cc06830f1ad21cd0" category="paragraph">下表列出了解决方案验证过程中使用的硬件和软件版本。请注意， Cisco 和 NetApp 具有互操作性表，应参考这些表来确定是否支持任何特定的 FlexPod 实施。有关详细信息，请参见以下资源：</block>
+  <block id="e4cd53129cc4d7b20f289aa364c15ee4" category="list-text"><block ref="e4cd53129cc4d7b20f289aa364c15ee4" category="inline-link-rx"></block></block>
+  <block id="45304a3fc78b38f4236bba1dd02f945a" category="inline-link">Cisco UCS 硬件和软件互操作性工具</block>
+  <block id="0b973c281c756cdd48ddc559ee712e1a" category="list-text"><block ref="0b973c281c756cdd48ddc559ee712e1a" category="inline-link-rx"></block></block>
+  <block id="28c02808d035abd3371299d909f5e0ad" category="cell">计算</block>
+  <block id="54d92758c639e3149b8477fb8fbd7a8b" category="list-text">两个 Cisco UCS 6454 互联阵列</block>
+  <block id="fdcb4a186beb36dce6cccb2c0bf40a3a" category="list-text">一个 Cisco UCS 5108 刀片式服务器机箱，带有两个 Cisco UCS 2408 I/O 模块</block>
+  <block id="662443be9d7c17c03a11d59e6070e061" category="list-text">四个 Cisco UCS B200 M6 刀片式服务器，每个刀片式服务器具有一个 Cisco UCS VIC 1440 适配器和端口扩展卡</block>
+  <block id="3dc2ed116d99b2738437b92167b9255e" category="cell">4.2 版（ 1f ）</block>
+  <block id="2e1804a8f86e3360faa59a0e6c35ebe9" category="cell">包括 Cisco UCS Manager ， Cisco UCS VIC 1440 和端口扩展器</block>
+  <block id="2b55387dd066c5bac646ac61543d152d" category="cell">CPU</block>
+  <block id="782d6923371160b137ad9cb74900584f" category="cell">两个 Intel Xeon Gold 6330 CPU ，主频为 2.0 GHz ，具有 42 MB 第 3 层缓存，每个 CPU 28 个核心</block>
+  <block id="4789f23283b3a61f858b641a1bef19a3" category="cell">内存</block>
+  <block id="3d52408762ee832c813d927207074186" category="cell">1024 GB （ 16 个 64 GB DIMM ，运行速率为 3200 MHz ）</block>
+  <block id="ae931a94f0a2669c2621baeb8f329bcb" category="cell">两台 Cisco Nexus 9336C-x2 交换机，采用 NX-OS 独立模式</block>
+  <block id="3454187a3bd238e1127c1a3908f72a94" category="cell">版本 9.3 （ 8 ）</block>
+  <block id="2d9c3ae178d1c13e0c097005526087d3" category="cell">两个 Cisco MDS 9132T 32 Gbps 32 端口 FC 交换机</block>
+  <block id="2519c978262e289b4c206fa969ef7392" category="cell">版本 8.4 （ 2c ）</block>
+  <block id="0a19e46f5401a4cda5fb7492d73fd009" category="cell">支持 FC-NVMe SAN 分析</block>
+  <block id="704547ba4d4a8b912fc21259d7fd9225" category="cell">两个 NetApp AFF A800 存储控制器，具有 24 个 1.8 TB NVMe SSD</block>
+  <block id="93c816ffe69b578572a6d0bb31923fce" category="cell">NetApp ONTAP 9.9.1.1 P1</block>
+  <block id="c8e134f3baa115ca65925b5be12b21e8" category="cell">7.0U2</block>
+  <block id="f7eea647714641318ee86fedbbed4691" category="cell">VMware ESXi</block>
+  <block id="28d14b47338f273ae463f5202a7b3039" category="cell">7.0.2</block>
+  <block id="1d6f6e1f6fb6825e57caa47713d1d35f" category="cell">VMware ESXi 原生光纤通道 NIC 驱动程序（ NFNIC ）</block>
+  <block id="333097ffdb80252354a766c2f7608a57" category="cell">5.0.12</block>
+  <block id="a375bd1e9e888365f82fb4b14d8fab87" category="cell">在 VMware 上支持 FC-NVMe</block>
+  <block id="7f2a1639f12c9cad91a6ddf10a589196" category="cell">VMware ESXi 原生以太网 NIC 驱动程序（ NENIC ）</block>
+  <block id="3f1d21bf3b3851ee53f41f51934eb0db" category="cell">1.0.35.0</block>
+  <block id="eed71d0b27b71177e3d536f88303483b" category="cell">测试工具</block>
+  <block id="7226d2a470936f81133f1895b4590679" category="cell">光纤</block>
+  <block id="1fd471297dc154377b5a06d0f4f8d8c3" category="cell">3.19</block>
+  <block id="b7147bcdeea01051fc17935b5a32b501" category="paragraph">我们制定了一个性能测试计划，用于使用综合工作负载在 FlexPod 上验证 NVMe 。通过此工作负载，我们可以执行 8 KB 随机读取和写入以及 64 KB 读取和写入。我们使用 VMware ESXi 主机对 AFF A800 存储运行测试用例。</block>
+  <block id="2e79064e688222f91a066aece210a0b8" category="paragraph">我们使用 FIO 这一开源合成 I/O 工具来生成综合工作负载，该工具可用于性能测量。</block>
+  <block id="42cce40e218d5c950d88fc7b34fcd165" category="paragraph">为了完成性能测试，我们对存储和服务器执行了几个配置步骤。以下是实施的详细步骤：</block>
+  <block id="c842c76389c01f5e0e1a240acfea745f" category="list-text">在存储方面，我们创建了四个 Storage Virtual Machine （ SVM ，以前称为 Vserver ），每个 SVM 八个卷，每个卷一个命名空间。我们创建了 1 TB 卷和 960 GB 命名空间。我们为每个 SVM 创建了四个 LIF ，并为每个 SVM 创建了一个子系统。SVM LIF 均匀分布在集群上的八个可用 FC 端口之间。</block>
+  <block id="184a0c27499df02752fb18d292b274b4" category="list-text">在服务器端，我们在每个 ESXi 主机上创建了一个虚拟机（ VM ），总共四个 VM 。我们在服务器上安装了 FIO 以运行综合工作负载。</block>
+  <block id="7a7acdd97d3b2e04e7f8a97609258a92" category="list-text">配置存储和 VM 后，我们可以从 ESXi 主机连接到存储命名空间。这样，我们就可以根据命名空间创建数据存储库，然后根据这些数据存储库创建虚拟机磁盘（ Virtual Machine Disk ， VMDK ）。</block>
+  <block id="7dc96590f7bab3379a7a79986056d22a" category="inline-link-macro">接下来：测试结果。</block>
+  <block id="096a470899a55b7a333eae4cffec63d0" category="paragraph"><block ref="096a470899a55b7a333eae4cffec63d0" category="inline-link-macro-rx"></block></block>
+  <block id="e353dbe42c8654f33588d4da0b517469" category="doc">摘要</block>
+  <block id="5c132e38b08825778491f35b81da58ff" category="paragraph">本技术报告简要概述了基于 FlexPod 的 VMware vSphere 7 在光纤通道上的 NVMe （ FC-NVMe ）性能。FlexPod 是部署 FC-NVMe 以为应用程序提供高性能存储访问的最佳共享基础架构基础。</block>
+  <block id="25ef19e5b86411048323be68f8ad1ef7" category="sidebar">采用 Cisco UCSM ， VMware vSphere 7.0 和 NetApp ONTAP 9 的适用于 FlexPod 的端到端 NVMe</block>
 </blocks>

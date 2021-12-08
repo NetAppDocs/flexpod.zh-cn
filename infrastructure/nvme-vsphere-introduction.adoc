@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: infrastructure/nvme-vsphere-introduction.html 
+keywords: tr-4914, tr4914, 4914, nvme, vmware, vsphere, flexpod, fc, fc-nvme 
+summary: 此解决方案简要概述了基于 FlexPod 的 VMware vSphere 7 的 FC-NVMe 性能。经验证，解决方案可成功传递 FC-NVMe 流量，并为具有各种数据块大小的 FC-NVMe 捕获了性能度量指标。 
+---
+= TR-4914 ：采用 Cisco UCSM ， VMware vSphere 7.0 和 NetApp ONTAP 9 的适用于 FlexPod 的端到端 NVMe
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+NetApp 公司 Chris Schmitt 和 Kamini Singh
+
+与以下合作伙伴：image:cisco logo.png["错误：缺少图形映像"]
+
+NVMe 数据存储标准是一项新兴的核心技术，通过为当前和未来的内存技术提供极高的带宽和极低的延迟存储访问，正在转变企业数据存储访问和传输。NVMe 将 SCSI 命令集替换为 NVMe 命令集。
+
+NVMe 可与非易失性闪存驱动器，多核 CPU 和 GB 内存配合使用。它还利用了自 20 世纪 70 年代以来计算机科学领域的重大进步，实现了简化的命令集，可以更高效地解析和处理数据。端到端 NVMe 架构还使数据中心管理员能够重新思考他们可以在多大程度上推动虚拟化和容器化环境，以及面向事务的数据库可以支持的可扩展性。
+
+FlexPod 是一种最佳实践数据中心架构，其中包括 Cisco 统一计算系统（ Cisco UCS ）， Cisco Nexus 交换机， Cisco MDS 交换机和 NetApp AFF 系统。这些组件是根据 Cisco 和 NetApp 的最佳实践进行连接和配置的，可为放心运行各种企业工作负载提供一个出色的平台。FlexPod 可以纵向扩展以提高性能和容量（根据需要单独添加计算，网络或存储资源），也可以横向扩展以适应需要多个一致部署的环境（例如部署更多 FlexPod 堆栈）。
+
+下图显示了 FlexPod 组件系列。
+
+image:nvme-vsphere-image1.png["错误：缺少图形映像"]
+
+FlexPod 是推出 FC-NVMe 的理想平台。支持此功能的方法包括：在现有 Cisco UCS B200 M5 或 M6 服务器或 Cisco UCS C 系列 M5 或 M6 机架式服务器中添加 Cisco UCS VIC 1400 系列和端口扩展器；以及简单，无中断地升级到 Cisco UCS 系统 Cisco MDS 32Gbps 交换机； 和 NetApp AFF 存储阵列。安装支持的硬件和软件后， FC-NVMe 的配置与 FCP 配置类似。
+
+NetApp ONTAP 9.5 及更高版本可提供完整的 FC-NVMe 解决方案。通过对 AFF A300 ， AFF A400 ， AFF A700 ， AFF A700s 和 AFF A800 阵列进行无中断 ONTAP 软件更新，这些设备可以支持端到端 NVMe 存储堆栈。因此，具有第六代主机总线适配器（ HBA ）和 NVMe 驱动程序支持的服务器可以使用原生 NVMe 与这些阵列进行通信。
+
+
+
+== 目标
+
+此解决方案简要概述了基于 FlexPod 的 VMware vSphere 7 的 FC-NVMe 性能。经验证，解决方案可成功传递 FC-NVMe 流量，并为具有各种数据块大小的 FC-NVMe 捕获了性能度量指标。
+
+
+
+== 解决方案的优势
+
+适用于 FlexPod 的端到端 NVMe 可为客户提供卓越的价值，并具有以下解决方案优势：
+
+* NVMe 依赖于 PCIe ，这是一种高速，高带宽的硬件协议，比 SCSI ， SAS 和 SATA 等旧标准速度要快得多。Cisco UCS 服务器和 NetApp 存储阵列之间的高带宽，超低延迟连接，适用于大多数要求苛刻的应用程序。
+* FC-NVMe 解决方案无损，可满足下一代应用程序的可扩展性要求。这些新技术包括人工智能（ AI ），机器学习（ ML ），深度学习（ DL ），实时分析和其他任务关键型应用程序。
+* 通过高效利用整个堆栈中的所有资源降低 IT 成本。
+* 显著缩短响应时间并提升应用程序性能，这与提高 IOPS 和吞吐量并降低延迟相对应。对于现有工作负载，解决方案可将性能提高 ~60% ，并将延迟降低 ~50% 。
+* FC-NVMe 是一种简化的协议，具有出色的队列功能，尤其是在每秒 I/O 操作数（ IOPS ；即事务数更多）和并行活动数较多的情况下。
+* 为 FlexPod 组件（例如 Cisco UCS ， Cisco MDS 和 NetApp AFF 存储阵列）提供无中断软件升级。无需修改应用程序。
+
+
+link:nvme-vsphere-testing-approach.html["下一步：测试方法。"]
