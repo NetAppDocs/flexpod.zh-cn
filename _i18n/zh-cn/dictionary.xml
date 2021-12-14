@@ -7983,4 +7983,29 @@
   <block id="e353dbe42c8654f33588d4da0b517469" category="doc">摘要</block>
   <block id="5c132e38b08825778491f35b81da58ff" category="paragraph">本技术报告简要概述了基于 FlexPod 的 VMware vSphere 7 在光纤通道上的 NVMe （ FC-NVMe ）性能。FlexPod 是部署 FC-NVMe 以为应用程序提供高性能存储访问的最佳共享基础架构基础。</block>
   <block id="25ef19e5b86411048323be68f8ad1ef7" category="sidebar">采用 Cisco UCSM ， VMware vSphere 7.0 和 NetApp ONTAP 9 的适用于 FlexPod 的端到端 NVMe</block>
+  <block id="8107695c6d7deb6f421fdffa4d6e7df7" category="sidebar">适用于采用 Cisco UCS Mini 和 NetApp AFF / FAS （ NVA ）的 VMware vSphere 7.0 的 FlexPod Express</block>
+  <block id="87a971542df3ff14010fa8aae834b5b7" category="sidebar">适用于 SAP 解决方案的 FlexPod 数据中心使用光纤通道 SAN 与 Cisco UCS Mnager 4.0 和 NetApp ONTAP 9.7</block>
+  <block id="4977bb12e747bb06984bb21c0f4f3151" category="sidebar">使用 SQL 在 FlexPod 上部署 SAP 应用程序服务器</block>
+  <block id="3233ebc457b5203d5068f2f1ebefc465" category="sidebar">采用 Cisco ACI ， Cisco UCS Manager 4.0 和 NetApp AFF A 系列的适用于 SAP 解决方案的 FlexPod Datacenter</block>
+  <block id="f7ddcbada961aed8796552abed289c8d" category="sidebar">在采用 Cisco 容器平台的 FlexPod 上部署 SAP 数据中心</block>
+  <block id="bbb30e43b4cdf72f7ecccf34c7d3daec" category="sidebar">《采用 Cisco ACI 的适用于 SAP 解决方案的 FlexPod Datacenter ， Cisco UCS Manager 4.0 和 NetApp AFF A 系列设计指南》</block>
+  <block id="99f8347a9f811141b792f62f79e237f3" category="sidebar">适用于 SAP 解决方案的 FlexPod 数据中心，采用 Cisco UCS 第三代和 NetApp AFF A 系列</block>
+  <block id="50fbdfa5afaeed259fc748fdf086bdcb" category="sidebar">采用 Cisco UCS Manager 4.0 和采用 ONTAP 9.6 的 NetApp AFF A 的 FlexPod Datacenter for SAP 解决方案</block>
+  <block id="61ff255146e4fcbd1bda09a8e5d41cf2" category="sidebar">适用于 Microsoft SQL Server 2019 和 VMware vSphere 6.7 的 FlexPod Datacenter</block>
+  <block id="ab2acd3b2765cfe6f6e9c62d59d93690" category="sidebar">在 VMware 和 Hyper-V 上运行的 Linux VM 上运行 FlexPod Datacenter 和 Microsoft SQL Server 2017</block>
+  <block id="d8d9af257f02bffd2d92213b9efa9f5f" category="sidebar">《采用 VMware vSphere 7.0 的 FlexPod 数据中心， Cisco VXLAN 单站点网络结构和 NetApp ONTAP 9.7 设计指南》</block>
+  <block id="a48aebb37b56c1a4d26975457d63eeb8" category="sidebar">采用 NetApp ONTAP 9.7 ， Cisco Intersight 和 VMware vSphere 6.7 U3 的 FlexPod Datacenter —设计</block>
+  <block id="0c7a516e32b082b31bda03bb6878b53e" category="sidebar">采用 NetApp ONTAP 9.7 ， Cisco Intersight 和 VMware vSphere 6.7 U3 的 FlexPod Datacenter — Deploy</block>
+  <block id="8d2c7acca4025e737c3f4355826ec2de" category="sidebar">采用 Cisco Intersight 和 NetApp ONTAP 9.7 的 FlexPod 数据中心设计指南</block>
+  <block id="dfa87e00a076f509a2df0369c3145704" category="sidebar">采用 NetApp ONTAP 9.6 ， Cisco UCS 第 4 代， VMware vSphere 6.7U2 （ CVD ）的 FlexPod 数据中心</block>
+  <block id="2498e142ba642e0f4aa9aa7efe4e70f6" category="sidebar">采用 VMware vSphere 6.7 U1 ， Cisco UCS 第四代和 NetApp AFF A 系列的 FlexPod Datacenter —设计</block>
+  <block id="d4889b00654de2e35312e3117701950b" category="sidebar">采用 VMware vSphere 6.7 U1 ， Cisco UCS 第四代和 NetApp AFF A 系列的 FlexPod Datacenter — Deploy</block>
+  <block id="649e277e513a10420ec478f17109e379" category="sidebar">采用 Cisco ACI Multi-Pod ， NetApp MetroCluster IP 和 VMware vSphere 6.7 的 FlexPod 数据中心设计指南</block>
+  <block id="734e45a14e22d25e99de3abd0d2a1510" category="sidebar">《采用 Cisco ACI Multi-Pod ， NetApp MetroCluster IP 和 VMware vSphere 6.7 的 FlexPod 数据中心部署指南》</block>
+  <block id="ef500a82dc8ad1887fe510a32683569c" category="sidebar">《适用于 OpenShift 容器平台的 FlexPod 数据中心 4 设计指南》</block>
+  <block id="ab9336a5da6f0f0e756cc5f626c1da03" category="sidebar">采用 Cisco UCS 480 ML 的 FlexPod Datacenter Nvidia T4 vGPU 深度学习 CVD 设计指南</block>
+  <block id="6b6a85c2fbd19770e05e227ae9a92029" category="sidebar">采用 Cisco UCS 480 ML 的 FlexPod Datacenter Nvidia T4 vGPU 深度学习 CVD 部署指南</block>
+  <block id="d6205320f3a7011e64b601100518be60" category="sidebar">采用 Cisco UCS C480 ML 的 FlexPod Datacenter for AI/ML 深度学习设计指南</block>
+  <block id="26b2da44f63ebbe0d09d512b64685d73" category="sidebar">采用 VMware 和 NVIDIA 的 3D 图形可视化 FlexPod</block>
+  <block id="ebf263f6e0d06b26f79aafb2dda2fffe" category="sidebar">FlexPod for 3D Graphics 可视化与 Citrix 和 NVIDIA （白皮书）</block>
 </blocks>
