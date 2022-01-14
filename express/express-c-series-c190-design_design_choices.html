@@ -1,0 +1,2988 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head class="at-element-marker">
+  <title>设计选择</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="设计选择" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/zh-cn/flexpod/express/express-c-series-c190-design_design_choices.html" />
+	<meta property="og:description" content="本节中列出的技术是在架构设计阶段选择的。每个技术在 FlexPod Express 基础架构解决方案中都有一个特定用途。" />
+  <meta property="og:image" content="https://docs.netapp.com/zh-cn/flexpod/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/>
+  
+  <meta name="description" content="本节中列出的技术是在架构设计阶段选择的。每个技术在 FlexPod Express 基础架构解决方案中都有一个特定用途。">
+  <meta name="keywords" content=" AFF C190, CIFS, NFS, iSCSI, FCP, SnapMirror, SnapVault, SnapRestore, SnapManager, SnapCenter, FabricPool">
+  
+  
+
+  <!-- Icons -->
+  <link rel="icon" href="/zh-cn/flexpod/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed -->
+  
+
+  <!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+  <!-- Elastic Search -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
+
+  <!-- Controls AsciiDoctor Admonition Blocks -->
+  <link rel="stylesheet" type="text/css" href="/zh-cn/flexpod/css/font-awesome.min.css">
+
+  <!-- Controls the shadow effect for search dropdown menu -->
+  <link rel="stylesheet" href="/zh-cn/flexpod/css/boxshadowproperties.css">
+
+  <!-- NetApp CSS controls the technical content -->
+  <link rel="stylesheet" type="text/css" href="/zh-cn/flexpod/css/netapp.css">
+
+  <!-- WWW CSS Content -->
+  <link rel="stylesheet" type="text/css" href="/zh-cn/flexpod/css/www-luci-dotcom.min.css">
+  <link rel="stylesheet" type="text/css" href="/zh-cn/flexpod/css/www-netapp-dotcom.css">
+  <link rel="stylesheet" href="/zh-cn/flexpod/css/www-netapp-library-critical.min.css" media="all" >
+  <link rel="stylesheet" href="/zh-cn/flexpod/css/www-netapp-library-non-critical.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="/zh-cn/flexpod/css/www-netapp-library-global-header-footer.min.css">
+
+  <!-- NetApp IE Customizations -->
+  <link rel="stylesheet" href='/zh-cn/flexpod/css/na-utility.css' type='text/css'>
+  <link rel="stylesheet" href='/zh-cn/flexpod/css/na-sidebar.css' type='text/css'>
+  <link rel='stylesheet' href='/zh-cn/flexpod/css/clouddocs.css' type='text/css'>
+  <link rel='stylesheet' href='/zh-cn/flexpod/css/na-pagenav.css' type='text/css'>
+
+  
+  <link rel="stylesheet" href="/zh-cn/flexpod/css/landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/zh-cn/flexpod/css/tabbed-blocks.css" type="text/css">
+  <link rel="stylesheet" href='/zh-cn/flexpod/css/product-family.css' type="text/css">
+  
+
+  
+  <link rel='stylesheet' href='/zh-cn/flexpod/css/na-feature.css' type='text/css'>
+  
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  <!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
+  
+    <script src='/zh-cn/flexpod/js/na-search.js'></script>
+  
+
+  
+  <script src='/zh-cn/flexpod/js/na-pagenav.js'></script>
+  
+
+  <link rel='stylesheet' href='/zh-cn/flexpod/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/zh-cn/flexpod/css/prism-netapp.css' type='text/css'>
+
+
+  <script src='/zh-cn/flexpod/js/na-utility.js'></script>
+  <script src='/zh-cn/flexpod/js/clouddocs.js'></script>
+  <script>
+  if (document.location.hostname === "docs.netapp.com") {
+    var head = document.getElementsByTagName('head')[0];
+    var adobe = document.createElement("script");
+    adobe.type = "text/javascript";
+    adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js";
+    head.appendChild(adobe);
+  }
+  </script>
+  <script src='/zh-cn/flexpod/js/jquery.navgoco.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src='/zh-cn/flexpod/js/toc.js'></script>
+  <script src='/zh-cn/flexpod/js/customscripts.js'></script>
+
+  <script>
+      $(document).ready(function() {
+          
+          var collapseOnInit = true;
+          
+
+          var navSettings = {
+              "caretHtml": '',
+              "accordion": collapseOnInit,
+              "openClass": 'active', // open
+              "save": false, // leave false or nav highlighting doesn't work right
+              "cookie": {
+                  "name": 'navgoco',
+                  "expires": false,
+                  "path": '/'
+              },
+              "slide": {
+                  "duration": 400,
+                  "easing": 'swing'
+              }
+          };
+
+          // Initialize navgoco with default options
+          $("#mysidebar").navgoco(navSettings);
+          
+
+          $("#collapseAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', false);
+          });
+
+          $("#expandAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', true);
+          });
+
+      });
+
+  </script>
+  <script>
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+  </script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-81697994-3"></script>
+  <script>
+  if (document.location.hostname === "docs.netapp.com") {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-81697994-3');
+  }
+  </script>
+  <script src='/zh-cn/flexpod/js/version-dropdown.js'></script>
+  <script src='/zh-cn/flexpod/js/product-family.js'></script>
+  <script src='/zh-cn/flexpod/js/FileSaver.min.js'></script>
+  <script src='/zh-cn/flexpod/js/jszip-utils.min.js'></script>
+  <script src='/zh-cn/flexpod/js/jszip.min.js'></script>
+  <script src='/zh-cn/flexpod/js/pdf-ux.js'></script>
+</head>
+
+
+  <body class role="document">
+    <div id="page" class="n-off-canvas-menu">
+      <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
+      <div class="n-off-canvas-menu__content-wrap">
+        <header class="site-header" id="banner">
+  <!-- Start top_hat -->
+  <div class="n-top-hat">
+    <div class="n-container">
+      <div class="n-top-hat__cross-property-nav">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/products-a-z/" class="n-top-hat__link">产品和解决方案</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/support-and-training/netapp-university/" class="n-top-hat__link">支持和培训</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://cloud.netapp.com" class="n-top-hat__link">云中心</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://community.netapp.com/" class="n-top-hat__link">社区</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://blog.netapp.com/" class="n-top-hat__link">日志</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://customers.netapp.com/en/" class="n-top-hat__link">客户案例</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">联系人</a>
+          </li>
+        </ul>
+      </div>
+      <div class="n-top-hat__utils">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">联系人</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End top_hat -->
+
+  <!-- Start property bar -->
+  <style>
+    .n-property-navigation-bar__menus--desktop-experience .n-menu--mega__default-content__heading span {
+    color: #34B0FF;
+    }
+  </style>
+  <div class="n-property-bar " data-ntap-ui="sticky-nav">
+    <div class="n-property-bar__inner-wrap">
+      <div class="n-property-bar__menu-toggle">
+        <a href="#" class="n-property-bar__menu-toggle-link">
+          <span class="n-property-bar__menu-toggle-text">Menu</span>
+          <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+            <title>bars</title>
+            <use xlink:href="/zh-cn/flexpod/common/svg/sprite.svg#bars"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="n-property-bar__property-mark ">
+        <a href="https://www.netapp.com" class="n-property-bar__property-link">
+          <div class="n-property-bar__logo">
+            <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+              <title>netapp-mark</title>
+              <use xlink:href="/zh-cn/flexpod/common/svg/sprite.svg#netapp-mark"></use>
+            </svg>
+            <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
+              <title>netapp-logo</title>
+              <use xlink:href="/zh-cn/flexpod/common/svg/sprite.svg#netapp-logo"></use>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search" 
+          data-search-html="/zh-cn/flexpod/search.html"
+          data-type="widget" 
+          data-placeholder="搜索文档" 
+          data-no-results-found="未找到与 {query} 匹配的结果。" 
+          data-did-you-mean="搜索 {suggestion}。" 
+          data-no-results-found-did-you-mean="未找到与 {query} 匹配的结果。您是否要搜索 {suggestion}?" 
+          data-results-found="找到 {hitCount} 个结果"  
+          data-sk-es-pf-indexes=""></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/flexpod/common/svg/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="n-property-bar__toolbar">
+    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
+      <div id="ie-i18n-menu">
+      <span class="ie-i18n-lang">简体中文</span>
+        <button class="ie-i18n-icon-container" type="button">
+          <svg class="n-globe__icon" aria-labelledby="title">
+            <title>globe</title>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/flexpod/common/svg/sprite.svg#globe"></use>
+          </svg>
+        </button>
+      </div>
+      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
+        <div class="n-language-selector-menu">
+          <ul class="n-menu__list">
+            <li class="n-menu__list-column">
+              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/zh-cn/flexpod/express/express-c-series-c190-design_design_choices.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/us-en/flexpod/express/express-c-series-c190-design_design_choices.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/ja-jp/flexpod/express/express-c-series-c190-design_design_choices.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
+                </li></ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- End Language Selector -->
+
+    <div class="n-property-bar__cta"></div>
+  </div>
+  <script>
+    $(function(){
+        var currentLocalization = $('html').attr('lang');
+
+        var localizationsDictionary = {
+            "en-CA" : "https://www.netapp.com/search/index.aspx?for_cr=canada&",
+            "en-IN" : "https://www.netapp.com/search/index.aspx?for_cr=india&",
+            "nl-NL" : "https://www.netapp.com/search/index.aspx?for_cr=netherlands&",
+            "ru-RU" : "https://www.netapp.com/search/index.aspx?for_cr=russia&",
+            "sv-SE" : "https://www.netapp.com/search/index.aspx?for_cr=sweden&",
+            "it-IT" : "https://www.netapp.com/search/index.aspx?for_cr=italy&",
+            "he-IL" : "https://www.netapp.com/search/index.aspx?for_cr=israel&",
+            "ko-KR" : "https://www.netapp.com/search/index.aspx?for_cr=korea&",
+            "zh-TW" : "https://www.netapp.com/search/index.aspx?for_cr=taiwan&",
+            "en-GB" : "https://www.netapp.com/search/index.aspx?for_cr=unitedkingdom&",
+            "en-SG" : "https://www.netapp.com/search/index.aspx?for_cr=asean&",
+            "en-AU" : "https://www.netapp.com/search/index.aspx?for_cr=australia&",
+            "pt-BR" : "https://www.netapp.com/search/index.aspx?for_cr=brasil&",
+            "de-CH" : "https://www.netapp.com/search/index.aspx?for_cr=switzerland&",
+            "es-MX" : "https://www.netapp.com/search/index.aspx?for_cr=mexico&"
+        };
+
+        if($('html').hasClass('ntap-whitelisted') && localizationsDictionary.hasOwnProperty(currentLocalization)) {
+            $('.n-property-bar__property-link').attr('href', '/');
+        }
+    });
+  </script>
+  <!-- End property bar -->
+</header>
+
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+  <!-- Sidebar Column -->
+  
+  <div class="col-md-3" >
+      <div class="n-pdf-header">
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+    <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>可用的 PDF<span>
+    </span>
+  </a>
+</div>
+<div class="n-pdf-body-container">
+  <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+        <a target="_blank" href="/zh-cn/flexpod/pdfs/fullsite-sidebar/FlexPod_解决方案.pdf" >
+          <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>此文档站点的 PDF</a>
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/FlexPod_定义.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            FlexPod 定义
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/FlexPod_快速技术规格.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            FlexPod 快速技术规格
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/FlexPod_数据中心技术规格.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            FlexPod 数据中心技术规格
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/FlexPod_数据中心.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            FlexPod 数据中心
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/混合云.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            混合云
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/适用于_FlexPod_的_NetApp_Cloud_Insights.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            适用于 FlexPod 的 NetApp Cloud Insights
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/采用_FabricPool_的_FlexPod__将非活动数据分层到_Amazon_AWS_S3.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            采用 FabricPool 的 FlexPod —将非活动数据分层到 Amazon AWS S3
+          </a>
+          
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/Configuration.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            Configuration
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/企业数据库.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            企业数据库
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/SAP.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            SAP
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/Oracle.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            Oracle
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/Microsoft_SQL_Server.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            Microsoft SQL Server
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/医疗保健.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            医疗保健
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/适用于基因组学的_FlexPod.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            适用于基因组学的 FlexPod
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/__FlexPod_数据中心_Epic_定向规模估算指南_.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            《 FlexPod 数据中心 Epic 定向规模估算指南》
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/参考架构.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            参考架构
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/_适用于_Epic_EHR_的_FlexPod_数据中心部署指南_.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            《适用于 Epic EHR 的 FlexPod 数据中心部署指南》
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/部署和配置.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            部署和配置
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/用于_Epic_性能测试的_FlexPod.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            用于 Epic 性能测试的 FlexPod
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/_适用于_MEDITECH_的_FlexPod_方向性规模估算指南_.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            《适用于 MEDITECH 的 FlexPod 方向性规模估算指南》
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/_适用于_MEDITECH_的_FlexPod_数据中心部署指南_.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            《适用于 MEDITECH 的 FlexPod 数据中心部署指南》
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/部署和配置.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            部署和配置
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/适用于医疗成像的_FlexPod.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            适用于医疗成像的 FlexPod
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/虚拟桌面基础架构.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            虚拟桌面基础架构
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/现代应用程序.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            现代应用程序
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/Microsoft_应用程序.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            Microsoft 应用程序
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/FlexPod_Express.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            FlexPod Express
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/采用_Cisco_UCS_C_系列和_NetApp_AFF_C190_系列的_FlexPod_Express_设计指南.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            采用 Cisco UCS C 系列和 NetApp AFF C190 系列的 FlexPod Express 设计指南
+          </a>
+          
+
+
+
+
+
+
+    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
+  <a target="_blank" href="/zh-cn/flexpod/pdfs/pages/express/express-c-series-c190-design_design_choices.pdf" >
+    <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+    PDF of this page
+  </a>
+</li>
+
+</ul>
+  
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/_采用_Cisco_UCS_C_系列和_NetApp_AFF_C190_系列的_FlexPod_快速部署指南_.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            《采用 Cisco UCS C 系列和 NetApp AFF C190 系列的 FlexPod 快速部署指南》
+          </a>
+          
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/部署过程.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            部署过程
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/采用_Cisco_UCS_C_系列和_AFF_A220_系列的_FlexPod_Express_设计指南.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            采用 Cisco UCS C 系列和 AFF A220 系列的 FlexPod Express 设计指南
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/_采用_Cisco_UCS_C_系列和_AFF_A220_系列的_FlexPod_快速部署指南_.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            《采用 Cisco UCS C 系列和 AFF A220 系列的 FlexPod 快速部署指南》
+          </a>
+          
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/部署过程.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            部署过程
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/_采用_VMware_vSphere_6_7U1_的_FlexPod_Express_和采用基于_IP_的直连存储的_NetApp_AFF_A220_设计指南_.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            《采用 VMware vSphere 6.7U1 的 FlexPod Express 和采用基于 IP 的直连存储的 NetApp AFF A220 设计指南》
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/采用_VMware_vSphere_6_7U1_的_FlexPod_Express_以及采用基于_IP_的直连存储的_NetApp_AFF_A220.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            采用 VMware vSphere 6.7U1 的 FlexPod Express 以及采用基于 IP 的直连存储的 NetApp AFF A220
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/FlexPod_和安全性.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            FlexPod 和安全性
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/FlexPod___勒索软件解决方案_.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            FlexPod ，《勒索软件解决方案》
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/__Cisco_Intersight_与_NetApp_ONTAP_存储快速入门指南_.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            《 Cisco Intersight 与 NetApp ONTAP 存储快速入门指南》
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/基础架构.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            基础架构
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/采用_Cisco_UCSM___VMware_vSphere_7_0_和_NetApp_ONTAP_9_的适用于_FlexPod_的端到端_NVMe.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            采用 Cisco UCSM ， VMware vSphere 7.0 和 NetApp ONTAP 9 的适用于 FlexPod 的端到端 NVMe
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+</li></ul>
+  <div class="zip-pdf-link-container" style="display: none;">   
+    <a href="#" id="zipPdf">
+      <img src="/zh-cn/flexpod/images/pdf-zip.png" width="16" height="16"/>
+      <pre>收集单独的 PDF 文档<span class="zip-size"></span></pre>
+    </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+</div>
+<script>
+  $("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+  $("#toggleButtonPdf").click(function () {
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+  });
+</script><div class="sidebar-nav-container">
+  <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/index.html">
+        FlexPod 解决方案文档
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> FlexPod 定义</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> FlexPod 快速技术规格</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/fp-def/fp-express-tech-spec_overview.html">
+        概述
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/fp-def/fp-express-tech-spec_flexpod_platforms.html">
+        FlexPod 平台
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/fp-def/fp-express-tech-spec_flexpod_rules.html">
+        FlexPod 规则
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/fp-def/fp-express-tech-spec_supported_versus_validated_flexpod_configurations.html">
+        支持的 FlexPod 配置与经验证的 配置
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/fp-def/fp-express-tech-spec_storage_software.html">
+        存储软件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/fp-def/fp-express-tech-spec_minimum_hardware_requirements.html">
+        最低硬件要求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/fp-def/fp-express-tech-spec_minimum_software_requirements.html">
+        最低软件要求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/fp-def/fp-express-tech-spec_connectivity_requirements.html">
+        连接要求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/fp-def/fp-express-tech-spec_other_requirements.html">
+        其他要求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/fp-def/fp-express-tech-spec__optional_features.html">
+        可选功能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/fp-def/fp-express-tech-spec__cisco_components.html">
+        Cisco 组件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/fp-def/fp-express-tech-spec__netapp_components.html">
+        NetApp 组件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/fp-def/fp-express-tech-spec__power_and_cabling_requirements.html">
+        电源和布线要求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/fp-def/fp-express-tech-spec__technical_specifications_and_references.html">
+        技术规格和参考
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/fp-def/fp-express-tech-spec__previous_architectures_and_equipment.html">
+        以前的架构和设备
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/fp-def/fp-express-tech-spec_legacy_equipment.html">
+        旧设备
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/fp-def/fp-express-tech-spec_additional_information.html">
+        追加信息
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> FlexPod 数据中心技术规格</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/fp-def/dc-tech-spec_solution_overview.html">
+        概述
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/fp-def/dc-tech-spec_flexpod_platforms.html">
+        FlexPod 平台
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/fp-def/dc-tech-spec_flexpod_rules.html">
+        FlexPod 规则
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/fp-def/dc-tech-spec_supported_versus_validated_flexpod_configurations.html">
+        支持的 FlexPod 配置与经验证的 配置
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/fp-def/dc-tech-spec_netapp_ontap.html">
+        NetApp ONTAP
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/fp-def/dc-tech-spec_cisco_nexus_switching_modes_of_operation.html">
+        Cisco Nexus 切换操作模式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/fp-def/dc-tech-spec_minimum_hardware_requirements.html">
+        最低硬件要求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/fp-def/dc-tech-spec_minimum_software_requirements.html">
+        最低软件要求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/fp-def/dc-tech-spec_connectivity_requirements.html">
+        连接要求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/fp-def/dc-tech-spec_other_requirements.html">
+        其他要求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/fp-def/dc-tech-spec_optional_features.html">
+        可选功能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/fp-def/dc-tech-spec_cisco_components.html">
+        Cisco 组件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/fp-def/dc-tech-spec_netapp_components.html">
+        NetApp 组件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/fp-def/dc-tech-spec_power_and_cabling_requirements.html">
+        电源和布线要求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/fp-def/dc-tech-spec_technical_specifications_and_references.html">
+        技术规格和参考资料
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/fp-def/dc-tech-spec_legacy_equipment.html">
+        旧设备
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/fp-def/dc-tech-spec_where_to_find_additional_information.html">
+        从何处查找追加信息
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> FlexPod 数据中心</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi70_vxlan_evpn_design.html">
+        《采用 VMware vSphere 7.0 的 FlexPod 数据中心， Cisco VXLAN 单站点网络结构和 NetApp ONTAP 9.7 设计指南》
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_vmware_vsphere_7_0_ontap_9_7.html">
+        采用 VMware vSphere 7.0 和 NetApp ONTAP 9.7 的 FlexPod Datacenter
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_dc_ontap_97_ucs_4_vmw_vs_67_U3_design.html">
+        采用 NetApp ONTAP 9.7 ， Cisco Intersight 和 VMware vSphere 6.7 U3 的 FlexPod Datacenter —设计
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_dc_ontap_97_ucs_4_vmw_vs_67_U3.html">
+        采用 NetApp ONTAP 9.7 ， Cisco Intersight 和 VMware vSphere 6.7 U3 的 FlexPod Datacenter — Deploy
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_dc_ontap_97_ucs_4_vmw_vs_67_U3_design.html">
+        采用 Cisco Intersight 和 NetApp ONTAP 9.7 的 FlexPod 数据中心设计指南
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_vmware_netappaffa_u2.html">
+        采用 NetApp ONTAP 9.6 ， Cisco UCS 第 4 代， VMware vSphere 6.7U2 （ CVD ）的 FlexPod 数据中心
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_vmware_netappaffa_design.html">
+        采用 VMware vSphere 6.7 U1 ， Cisco UCS 第四代和 NetApp AFF A 系列的 FlexPod Datacenter —设计
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_vmware_netappaffa.html">
+        采用 VMware vSphere 6.7 U1 ， Cisco UCS 第四代和 NetApp AFF A 系列的 FlexPod Datacenter — Deploy
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/whitepaper-c11-741907.html">
+        推出适用于 FlexPod 的端到端 NVMe
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi67_n9k_aci_metrocluster_design.html">
+        采用 Cisco ACI Multi-Pod ， NetApp MetroCluster IP 和 VMware vSphere 6.7 的 FlexPod 数据中心设计指南
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi67_n9k_aci_metrocluster.html">
+        《采用 Cisco ACI Multi-Pod ， NetApp MetroCluster IP 和 VMware vSphere 6.7 的 FlexPod 数据中心部署指南》
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 混合云</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 适用于 FlexPod 的 NetApp Cloud Insights</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/hybrid-cloud/cloud-insights_netapp_cloud_insights_for_flexpod.html">
+        概述
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/hybrid-cloud/cloud-insights_use_cases.html">
+        用例
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/hybrid-cloud/cloud-insights_architecture.html">
+        架构
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/hybrid-cloud/cloud-insights_design_considerations.html">
+        设计注意事项
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/hybrid-cloud/cloud-insights_deploy_cloud_insights_for_flexpod.html">
+        部署适用于 FlexPod 的 Cloud Insights
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/hybrid-cloud/cloud-insights_use_cases_01.html">
+        用例
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/hybrid-cloud/cloud-insights_videos_and_demos.html">
+        视频和演示
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/hybrid-cloud/cloud-insights_additional_information.html">
+        追加信息
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 采用 FabricPool 的 FlexPod —将非活动数据分层到 Amazon AWS S3</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/hybrid-cloud/cloud-fabricpool_introduction.html">
+        概述
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/hybrid-cloud/cloud-fabricpool_flexpod_overview_and_architecture.html">
+        FlexPod 概述和架构
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/hybrid-cloud/cloud-fabricpool_fabricpool.html">
+        FabricPool
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/hybrid-cloud/cloud-fabricpool_fabricpool_requirements.html">
+        FabricPool 要求
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Configuration</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/hybrid-cloud/cloud-fabricpool_software_revisions.html">
+        FabricPool 软件版本
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/hybrid-cloud/cloud-fabricpool_install_fabricpool_license.html">
+        安装 FabricPool 许可证
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/hybrid-cloud/cloud-fabricpool_create_aws_s3_bucket.html">
+        创建 AWS S3 存储分段
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/hybrid-cloud/cloud-fabricpool_add_a_cloud_tier_to_ontap.html">
+        将云层添加到 ONTAP
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/hybrid-cloud/cloud-fabricpool_attach_a_cloud_tier_to_an_ontap_aggregate.html">
+        将云层附加到 ONTAP 聚合
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/hybrid-cloud/cloud-fabricpool_set_volume_tiering_policy.html">
+        设置卷分层策略
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/hybrid-cloud/cloud-fabricpool_set_volume_tiering_minimum_cooling_days.html">
+        设置卷分层最小冷却天数
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/hybrid-cloud/cloud-fabricpool_performance_considerations.html">
+        性能注意事项
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/hybrid-cloud/cloud-fabricpool_cost_of_ownership.html">
+        拥有成本
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/hybrid-cloud/cloud-fabricpool_conclusion.html">
+        结论
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/hybrid-cloud/cloud-fabricpool_where_to_find_additional_information.html">
+        从何处查找追加信息
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_icp_ucsm32.html">
+        FlexPod Datacenter with IBM Cloud Private with Cisco UCS Manager ， NetApp ONTAP 9.3 AFF 和 VMware vSphere 6.5U1 [ 设计 ]
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/whitepaper-c11-740803.pdf">
+        采用 Apprenda 8.2 ， Cisco ACI 3.1 和 Kubernetes 1.9.4 的适用于平台即服务的 FlexPod 数据中心 [ 设计 ]
+      </a></li><li class=" "><a class="na-navbar-padding" href="http://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_hybridcloud_design.html">
+        采用 Cisco CloudCenter 和 NetApp 私有存储的适用于混合云的 FlexPod 数据中心 [ 设计 ｝
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_hybridcloud.html">
+        适用于混合云的 FlexPod 数据中心与 Cisco CloudCenter 和 NetApp 私有存储
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 企业数据库</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SAP</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/ent-db/index.html">
+        采用 FlexPod 的 SAP 简介
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_sap_ucsm40_fcsan.html">
+        SAP HANA FC SAN CVD [ 部署 ]
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/sap-appservers-flexpod-with-sql.pdf">
+        《采用 SQL 的 SAP 非 HANA 白皮书（ WP ）》（设计）
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_sap_ontap96.html">
+        采用 Cisco UCS 第三代和 NetApp AFF A 系列的适用于 SAP 解决方案的 FlexPod 数据中心 [ 设计 ]
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_sap_ucsm40_fcsan_design.html">
+        适用于 SAP 解决方案的 FlexPod 数据中心使用采用 Cisco UCS Manager 4.0 和 NetApp ONTAP 9.7 的光纤通道 SAN [ 设计 ]
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/solutions/collateral/data-center-virtualization/unified-computing/sap-datahub-on-flexpod-with-cisco-container-platform.html">
+        在采用 Cisco 容器平台的 FlexPod 上部署 SAP 数据中心（白皮书）
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_ACI_sap_netappaffa_design.html">
+        采用 Cisco ACI ， Cisco UCS Manager 4.0 和 NetApp AFF A 系列的适用于 SAP 解决方案的 FlexPod Datacenter [ 设计 ]
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_ACI_sap_netappaffa.html">
+        采用 Cisco ACI ， Cisco UCS Manager 4.0 和 NetApp AFF A 系列的适用于 SAP 解决方案的 FlexPod Datacenter 部署
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_sap_netappaffa_design.html">
+        采用 Cisco UCS Manager 4.0 和采用 ONTAP 9.6 （ CVD ）的 NetApp AFF A 的 FlexPod Datacenter for SAP 解决方案 [ 设计 ]
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/solutions/collateral/data-center-virtualization/unified-computing/flexpod-oracle-database-sap-app-servers.html">
+        基于 FlexPod 的 SAP 应用程序服务器与 Oracle 数据库以及 Cisco UCS 和 NetApp AFF （白皮书）
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/dam/en/us/solutions/collateral/data-center-virtualization/unified-computing/whitepaper-c11-741878.pdf">
+        基于 FlexPod 数据中心的虚拟化 SAP HANA —设计注意事项和最佳实践（白皮书）
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_saphana_aci_UCSM32.html">
+        采用 Cisco UCS Manager 3.2 和 Cisco Application Centric Infrastructure （ ACI ）的适用于 SAP 解决方案的 FlexPod Datacenter [ 设计 ]
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_saphana_n9k_aff_ucsm.html">
+        使用 NetApp AFF A 系列和 Cisco UCS Manager 3.2 ，使用基于 IP 的存储的适用于 SAP 解决方案的 FlexPod 数据中心
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_sap_ucsm40_fcsan.html">
+        适用于 SAP 解决方案的 FlexPod 数据中心使用光纤通道 SAN 与 Cisco UCS Mnager 4.0 和 NetApp ONTAP 9.7
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/sap-appservers-flexpod-with-sql.pdf">
+        使用 SQL 在 FlexPod 上部署 SAP 应用程序服务器
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_ACI_sap_netappaffa.html">
+        采用 Cisco ACI ， Cisco UCS Manager 4.0 和 NetApp AFF A 系列的适用于 SAP 解决方案的 FlexPod Datacenter
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/solutions/collateral/data-center-virtualization/unified-computing/sap-datahub-on-flexpod-with-cisco-container-platform.html">
+        在采用 Cisco 容器平台的 FlexPod 上部署 SAP 数据中心
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_ACI_sap_netappaffa_design.html">
+        《采用 Cisco ACI 的适用于 SAP 解决方案的 FlexPod Datacenter ， Cisco UCS Manager 4.0 和 NetApp AFF A 系列设计指南》
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_sap_ontap96.html">
+        适用于 SAP 解决方案的 FlexPod 数据中心，采用 Cisco UCS 第三代和 NetApp AFF A 系列
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_sap_netappaffa_design.html">
+        采用 Cisco UCS Manager 4.0 和采用 ONTAP 9.6 的 NetApp AFF A 的 FlexPod Datacenter for SAP 解决方案
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Oracle</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_oracle_ucs_m5.html">
+        在 Cisco UCS 上使用 Oracle 19c RAC 数据库的 FlexPod 数据中心以及采用基于光纤通道的 NVMe 的 NetApp AFF [ 部署 ]
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_orc12cr2_affaseries.html">
+        在 Cisco UCS 和 NetApp AFF A 系列上使用 Oracle RAC 数据库的 FlexPod Datacenter [ 设计 ]
+      </a></li><li class=" "><a class="na-navbar-padding" href="http://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_orcrac_12c_bm.html">
+        在 Oracle Linux 上使用 Oracle RAC 的 FlexPod Datacenter 部署
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_orc12cr2_affaseries.html">
+        FlexPod 数据中心与基于 Cisco UCS 和 NetApp AFF A 系列的 Oracle RAC 数据库
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Microsoft SQL Server</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/mssql2019_flexpod.html">
+        适用于 Microsoft SQL Server 2019 和 VMware vSphere 6.7 的 FlexPod Datacenter [ 设计 ]
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/mssql2016_flexpod_vmware_cvd.html">
+        采用 Microsoft SQL Server 2016 和 VMware vSphere 6.5 的 FlexPod Datacenter
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/mssql2017_flexpod_linux.html">
+        在 VMware 和 Hyper-V 上运行的 Linux VM 上使用 FlexPod Datacenter 和 Microsoft SQL Server 2017 的性能 [ 设计 ]
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/mssql2019_flexpod.html">
+        适用于 Microsoft SQL Server 2019 和 VMware vSphere 6.7 的 FlexPod Datacenter
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/mssql2017_flexpod_linux.html">
+        在 VMware 和 Hyper-V 上运行的 Linux VM 上运行 FlexPod Datacenter 和 Microsoft SQL Server 2017
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 医疗保健</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 适用于基因组学的 FlexPod</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/flexpod-genomics-introduction.html">
+        简介
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/flexpod-genomics-benefits-of-deploying-genomic-workloads-on-flexpod.html">
+        在 FlexPod 上部署基因组工作负载的优势
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/flexpod-genomics-solution-infrastructure-hardware-and-software-components.html">
+        解决方案基础架构硬件和软件组件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/flexpod-genomics-genomics---gatk-setup-and-execution.html">
+        基因组学— GATK 设置和执行
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/flexpod-genomics-appendix-a.html">
+        使用 JAR 文件执行 GATK 的输出
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/flexpod-genomics-appendix-b.html">
+        使用 ./gatk 脚本执行 GATK 的输出
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/flexpod-genomics-appendix-c.html">
+        使用 Cromwell 引擎执行 GATK 的输出
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/flexpod-genomics-appendix-d-gpu-setup.html">
+        GPU 设置
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/flexpod-genomics-conclusion.html">
+        结论
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 《 FlexPod 数据中心 Epic 定向规模估算指南》</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-epic-sizing_introduction.html">
+        概述
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 参考架构</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-epic-sizing_netapp_storage_reference_architectures_for_epic.html">
+        适用于 Epic 的 NetApp 存储参考架构
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-epic-sizing_cisco_ucs_reference_architecture_for_epic.html">
+        适用于 Epic 的 Cisco UCS 参考架构
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-epic-sizing_technical_specifications_for_small,_medium,_and_large_architectures.html">
+        小型，中型和大型架构的技术规格
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-epic-sizing_additional_information.html">
+        追加信息
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-epic-sizing_acknowledgements.html">
+        致谢
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 《适用于 Epic EHR 的 FlexPod 数据中心部署指南》</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-epic-deploy_overview.html">
+        概述
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-epic-deploy_design.html">
+        设计
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 部署和配置</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-epic-deploy_deployment_and_configuration_overview.html">
+        概述
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-epic-deploy_infrastructure_hardware_and_software_components.html">
+        基础架构硬件和软件组件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-epic-deploy_base_infrastructure_configuration.html">
+        基础架构配置
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-epic-deploy_cisco_ucs_blade_server_and_switch_configuration.html">
+        Cisco UCS 刀片式服务器和交换机配置
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-epic-deploy_cisco_mds_9148s_configuration.html">
+        Cisco MDS 9148S 配置
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-epic-deploy_esxi_configuration_best_practices.html">
+        ESXi 配置最佳实践
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-epic-deploy_netapp_configuration.html">
+        NetApp 配置
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-epic-deploy_genio_tool.html">
+        Genio 工具
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-epic-deploy_where_to_find_additional_information_overview.html">
+        从何处查找追加信息
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-epic-deploy_acknowledgements.html">
+        致谢
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 用于 Epic 性能测试的 FlexPod</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-epic-performance_introduction.html">
+        概述
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-epic-performance_executive_summary.html">
+        内容提要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-epic-performance_test_methodology.html">
+        测试方法
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-epic-performance_workload_testing.html">
+        工作负载测试
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-epic-performance_conclusion.html">
+        结论
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-epic-performance_additional_information.html">
+        追加信息
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-epic-performance_acknowledgements.html">
+        致谢
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 《适用于 MEDITECH 的 FlexPod 方向性规模估算指南》</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-meditech-sizing_introduction.html">
+        概述
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-meditech-sizing_meditech_workload_overview.html">
+        Meditech 工作负载概述
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-meditech-sizing_technical_specifications_for_small,_medium_and_large_architectures.html">
+        小型，中型和大型架构的技术规格
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-meditech-sizing_additional_information.html">
+        追加信息
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-meditech-sizing_acknowledgments.html">
+        致谢
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 《适用于 MEDITECH 的 FlexPod 数据中心部署指南》</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-meditech-deploy_overview.html">
+        概述
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-meditech-deploy_design.html">
+        设计
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 部署和配置</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-meditech-deploy_deployment_and_configuration_overview.html">
+        概述
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-meditech-deploy_base_infrastructure_configuration.html">
+        基础架构配置
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-meditech-deploy_cisco_ucs_blade_server_and_switch_configuration.html">
+        Cisco UCS 刀片式服务器和交换机配置
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-meditech-deploy_esxi_configuration_best_practices.html">
+        ESXi 配置最佳实践
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-meditech-deploy_netapp_configuration.html">
+        NetApp 配置
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-meditech-deploy_aggregate_configuration.html">
+        聚合配置
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-meditech-deploy_storage_virtual_machine_configuration.html">
+        Storage Virtual Machine 配置
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-meditech-deploy_volume_configuration.html">
+        卷配置
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-meditech-deploy_lun_configuration.html">
+        LUN 配置
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-meditech-deploy_initiator_group_configuration.html">
+        启动程序组配置
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-meditech-deploy_lun_mappings.html">
+        LUN 映射
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-meditech-deploy_meditech_modules_and_components.html">
+        Meditech 模块和组件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-meditech-deploy_acknowledgments.html">
+        致谢
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/ehr-meditech-deploy_where_to_find_additional_information.html">
+        从何处查找追加信息
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 适用于医疗成像的 FlexPod</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/medical-imaging_introduction.html">
+        概述
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/medical-imaging_architecture.html">
+        架构
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/medical-imaging_solution_infrastructure_hardware_and_software_components.html">
+        解决方案基础架构硬件和软件组件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/medical-imaging_solution_sizing.html">
+        解决方案规模估算
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/medical-imaging_best_practices.html">
+        最佳实践
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/medical-imaging_conclusion.html">
+        结论
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/healthcare/medical-imaging_additional_information.html">
+        追加信息
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 虚拟桌面基础架构</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/cisco_ucs_ctx1912esxi7u1_flexpodV2.html">
+        采用 Citrix 虚拟应用程序桌面 1912 LTSR 和 VMware vSphere 7 的 FlexPod 数据中心，最多可容纳 6000 个席位
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_ontap96_vmware710_67_u2_ucs_40_6700_seats.html">
+        采用 NetApp ONTAP 9.6 ， VMware Horizon View 7.10 和 VMware vSphere 6.7 U2 以及 Cisco UCS Manager 4.0 的 FlexPod Datacenter ，最多可容纳 7700 个席位
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/whitepaper-c11-741654.pdf">
+        FlexPod for 3D Graphics 可视化与 VMware 和 NVIDIA （白皮书）
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/cisco_ucs_xd715esxi65u1_flexpod.html">
+        采用 Citrix XenDesktop/XenApp 7.15 和 VMware vSphere 6.5 Update 1 的 FlexPod Datacenter ，可容纳 6000 个席位
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_vmware_horizon_n9k_aff_ucsm32.html">
+        采用 VMware Horizon View 7.3 的 FlexPod Datacenter 和采用 Cisco UCS Manager 3.2 的 VMware vSphere 6.5 Update 1 ，可容纳 5000 个席位
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_ontap96_vmware710_67_u2_ucs_40_6700_seats.html">
+        采用 NetApp ONTAP 9.6 ， VMware Horizon View 7.10 和 VMware vSphere 6.7 U2 以及 Cisco UCS Manager 4.0 的 FlexPod Datacenter ，最多可容纳 7700 个席位
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 现代应用程序</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_c480m5l_aiml_design.html">
+        采用 Cisco UCS 480 ML 的 FlexPod Datacenter Nvidia T4 vGPU 深度学习 CVD 设计指南 [ 设计 ]
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/dam/en/us/solutions/collateral/data-center-virtualization/unified-computing/trident-on-container-platform-with-flexpod.pdf">
+        使用 FlexPod 在 Cisco 容器平台上部署 NetApp Trident CSI 插件【部署】
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_openshift_platform_4.html">
+        适用于 OpenShift 容器平台 4 的 FlexPod 数据中心（ Deploy ）
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_c480m5l_aiml_design.html">
+        采用 Cisco UCS C480 ML 的 FlexPod Datacenter for AI/ML 深度学习设计指南 [ 设计 ]
+      </a></li><li class=" "><a class="na-navbar-padding" href="http://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_docker_deploy_design.html">
+        采用 Docker 数据中心的 FlexPod 数据中心用于容器管理 [ 设计 ]
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_openshift4_design.html">
+        《适用于 OpenShift 容器平台的 FlexPod 数据中心 4 设计指南》
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_c480m5l_aiml_design.html">
+        采用 Cisco UCS 480 ML 的 FlexPod Datacenter Nvidia T4 vGPU 深度学习 CVD 设计指南
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_480ml_aiml_deployment.html">
+        采用 Cisco UCS 480 ML 的 FlexPod Datacenter Nvidia T4 vGPU 深度学习 CVD 部署指南
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_c480m5l_aiml_design.html">
+        采用 Cisco UCS C480 ML 的 FlexPod Datacenter for AI/ML 深度学习设计指南
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/dam/en/us/solutions/collateral/data-center-virtualization/desktop-virtualization-solutions-vmware-horizon-view/whitepaper-c11-741606.pdf">
+        采用 VMware 和 NVIDIA 的 3D 图形可视化 FlexPod
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/whitepaper-c11-741586.pdf">
+        FlexPod for 3D Graphics 可视化与 Citrix 和 NVIDIA （白皮书）
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Microsoft 应用程序</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="http://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/exchange2013_aci_flexpod_vmware_design.html">
+        采用 Microsoft Exchange 2013 ， F5 BIG-IP 和 Cisco ACI 的 FlexPod Datacenter [ 设计 ]
+      </a></li><li class=" "><a class="na-navbar-padding" href="http://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/exchange2013_aci_flexpod_vmware.html">
+        采用 Microsoft Exchange 2013 ， F5 BIG-IP 和 Cisco ACI 的 FlexPod 数据中心 [ 部署 ]
+      </a></li><li class=" "><a class="na-navbar-padding" href="http://www.cisco.com/c/dam/en/us/td/docs/unified_computing/ucs/UCS_CVDs/sharepoint2013_aci_flexpod_vmware.pdf">
+        采用 Microsoft SharePoint 2013 和 Cisco ACI 的 FlexPod Datacenter [ 设计 ]
+      </a></li><li class=" "><a class="na-navbar-padding" href="http://www.cisco.com/c/dam/en/us/td/docs/unified_computing/ucs/UCS_CVDs/sharepoint2013_aci_flexpod_vmware_deploy.pdf">
+        采用 Microsoft SharePoint 2013 和 Cisco ACI 的 FlexPod Datacenter 部署
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> FlexPod Express</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 采用 Cisco UCS C 系列和 NetApp AFF C190 系列的 FlexPod Express 设计指南</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-c190-design_executive_summary.html">
+        概述
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-c190-design_program_summary.html">
+        计划摘要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-c190-design_technology_requirements.html">
+        技术要求
+      </a></li><li class="  active "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-c190-design_design_choices.html">
+        设计选择
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-c190-design_conclusion.html">
+        结论
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-c190-design_where_to_find_additional_information.html">
+        从何处查找追加信息
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 《采用 Cisco UCS C 系列和 NetApp AFF C190 系列的 FlexPod 快速部署指南》</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-c190-deploy_program_summary_overview.html">
+        概述
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-c190-deploy_solution_overview.html">
+        解决方案概述
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-c190-deploy_technology_requirements.html">
+        技术要求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-c190-deploy_flexpod_express_cabling_information.html">
+        FlexPod 快速布线信息
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 部署过程</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-c190-deploy_deployment_procedures_overview.html">
+        概述
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-c190-deploy_deploy_cisco_nexus_31108pc-v.html">
+        部署 Cisco Nexus 31108PC-V
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-c190-deploy_netapp_storage_deployment_procedure_@part_1@.html">
+        NetApp 存储部署操作步骤（第 1 部分）
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-c190-deploy_deploy_cisco_ucs_c-series_rack_server.html">
+        部署 Cisco UCS C 系列机架式服务器
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-c190-deploy_netapp_aff_storage_deployment_procedure_@part_2@.html">
+        NetApp AFF 存储部署操作步骤（第 2 部分）
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-c190-deploy_vmware_vsphere_6.7u2_deployment_procedure.html">
+        VMware vSphere 6.7U2 部署操作步骤
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-c190-deploy_vmware_vcenter_server_6.7u2_installation_procedure.html">
+        VMware vCenter Server 6.7U2 安装操作步骤
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-c190-deploy_vmware_vcenter_server_6.7u2_and_vsphere_clustering_configuration.html">
+        VMware vCenter Server 6.7U2 和 vSphere 集群配置
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-c190-deploy_netapp_virtual_storage_console_9.6_deployment_procedures.html">
+        NetApp Virtual Storage Console 9.6 部署过程
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-c190-deploy_conclusion.html">
+        结论
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-c190-deploy_acknowledgments.html">
+        致谢
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-c190-deploy_where_to_find_additional_information.html">
+        从何处查找追加信息
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-c190-deploy_version_history.html">
+        版本历史记录
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 采用 Cisco UCS C 系列和 AFF A220 系列的 FlexPod Express 设计指南</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-aff220-design_executive_summary.html">
+        概述
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-aff220-design_program_summary.html">
+        计划摘要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-aff220-design_solution_overview.html">
+        解决方案概述
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-aff220-design_technology_requirements.html">
+        技术要求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-aff220-design_design_choices.html">
+        设计选择
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-aff220-design_solution_verification.html">
+        解决方案验证
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-aff220-design_conclusion.html">
+        结论
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-aff220-design_where_to_find_additional_information.html">
+        从何处查找追加信息
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 《采用 Cisco UCS C 系列和 AFF A220 系列的 FlexPod 快速部署指南》</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-aff220-deploy_program_summary.html">
+        概述
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-aff220-deploy_solution_overview.html">
+        解决方案概述
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-aff220-deploy_technology_requirements.html">
+        技术要求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-aff220-deploy_flexpod_express_cabling_information.html">
+        FlexPod 快速布线信息
+      </a></li><li class="subfolders "><a href="/zh-cn/flexpod/express/express-c-series-aff220-deploy_deployment_procedures_overview.html">
+        <div class="na-navbar-padding"> 部署过程</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-aff220-deploy_cisco_nexus_3172p_deployment_procedure.html">
+        Cisco Nexus 3172P 部署操作步骤
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-aff220-deploy_netapp_storage_deployment_procedure_@part_1@.html">
+        NetApp 存储部署操作步骤（第 1 部分）
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-aff220-deploy_cisco_ucs_c-series_rack_server_deployment_procedure.html">
+        Cisco UCS C 系列机架式服务器部署操作步骤
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-aff220-deploy_netapp_aff_storage_deployment_procedure_@part_2@.html">
+        NetApp AFF 存储部署操作步骤（第 2 部分）
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-aff220-deploy_vmware_vsphere_6.7_deployment_procedure.html">
+        VMware vSphere 6.7 部署操作步骤
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-aff220-deploy_install_vmware_vcenter_server_6.7.html">
+        安装 VMware vCenter Server 6.7
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-aff220-deploy_configure_vmware_vcenter_server_6.7_and_vsphere_clustering.html">
+        配置 VMware vCenter Server 6.7 和 vSphere 集群
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-aff220-deploy_conclusion.html">
+        结论
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-c-series-aff220-deploy_where_to_find_additional_information.html">
+        从何处查找追加信息
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 《采用 VMware vSphere 6.7U1 的 FlexPod Express 和采用基于 IP 的直连存储的 NetApp AFF A220 设计指南》</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-direct-attach-design_overview.html">
+        概述
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-direct-attach-design_program_summary.html">
+        计划摘要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-direct-attach-design_solution_overview.html">
+        解决方案概述
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-direct-attach-design_technology_requirements.html">
+        技术要求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-direct-attach-design_design_choices.html">
+        设计选择
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-direct-attach-design_solution_verification.html">
+        解决方案验证
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-direct-attach-design_conclusion.html">
+        结论
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-direct-attach-design_where_to_find_additional_information.html">
+        从何处查找追加信息
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 采用 VMware vSphere 6.7U1 的 FlexPod Express 以及采用基于 IP 的直连存储的 NetApp AFF A220</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-direct-attach-aff220-deploy_program_summary.html">
+        概述
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-direct-attach-aff220-deploy_solution_overview.html">
+        解决方案概述
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-direct-attach-aff220-deploy_technology_requirements.html">
+        技术要求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-direct-attach-aff220-deploy_flexpod_express_cabling_information.html">
+        FlexPod 快速布线信息
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-direct-attach-aff220-deploy_deployment_procedures.html">
+        部署过程
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-direct-attach-aff220-deploy_conclusion.html">
+        结论
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/express/express-direct-attach-aff220-deploy_additional_information.html">
+        追加信息
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="https://www.netapp.com/pdf.html?item=/media/21938-nva-1154-DEPLOY.pdf">
+        适用于采用 Cisco UCS Mini 和 NetApp AFF / FAS （ NVA ）的 VMware vSphere 7.0 的 FlexPod Express
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> FlexPod 和安全性</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> FlexPod ，《勒索软件解决方案》</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/security/security-ransomware_what_is_ransomware.html">
+        什么是勒索软件？
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/security/security-ransomware_flexpod_overview.html">
+        FlexPod 概述
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/security/security-ransomware_ransomware_protection_measures.html">
+        勒索软件保护措施
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/security/security-ransomware_protect_and_recover_data_on_flexpod.html">
+        保护和恢复 FlexPod 上的数据
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/security/security-ransomware_continue_business_operations_without_paying_ransom.html">
+        继续开展业务运营，无需支付任何费用
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/security/security-ransomware_conclusion.html">
+        结论
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/security/security-ransomware_acknowledgements.html">
+        致谢
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/security/security-ransomware_additional_information.html">
+        追加信息
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 《 Cisco Intersight 与 NetApp ONTAP 存储快速入门指南》</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/ontap-connector-for-intersight/index.html">
+        简介
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/ontap-connector-for-intersight/ci-qsg_new.html">
+        新增功能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/ontap-connector-for-intersight/ci-qsg_requirements.html">
+        要求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/ontap-connector-for-intersight/ci-qsg_before_you_begin.html">
+        开始之前
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/ontap-connector-for-intersight/ci-qsg_claim_targets.html">
+        声明目标
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/ontap-connector-for-intersight/ci-qsg_monitor_netapp_storage_from_cisco_intersight.html">
+        从 Cisco Intersight 监控 NetApp 存储
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/ontap-connector-for-intersight/ci-qsg_use_cases.html">
+        用例
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/ontap-connector-for-intersight/ci-qsg_references.html">
+        参考资料
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 基础架构</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 采用 Cisco UCSM ， VMware vSphere 7.0 和 NetApp ONTAP 9 的适用于 FlexPod 的端到端 NVMe</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/infrastructure/nvme-vsphere-introduction.html">
+        简介
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/infrastructure/nvme-vsphere-testing-approach.html">
+        测试方法
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/infrastructure/nvme-vsphere-test-results.html">
+        测试结果
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/infrastructure/nvme-vsphere-conclusion.html">
+        结论
+      </a></li></ul></li></ul></li></ul>
+</div>
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+  </div>
+  
+
+  <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
+    <!-- Begin of page container -->
+    <article class="page-content">
+      <div class="ie-utility">
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://www.netapp.com">主页</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">文档</a>
+        </li>
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/zh-cn/flexpod/">FlexPod</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          设计选择
+        </li>
+      </ul>
+    </div>
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
+      <div class="ie-nmt-disclaimer">
+  <span>
+    <div class="ie-nmt-disclaimer-container">
+      <div class="ie-nmt-disclaimer-icon">
+        <svg class="luci-icon" aria-hidden="true">
+          <use xlink:href="/zh-cn/flexpod/common/svg/sprite.svg#circle-info">
+        </svg>
+      </div>
+      <div class="ie-nmt-disclaimer-content">
+        <span> 简体中文版经机器翻译而成，仅供参考。如与英语版出现任何冲突，应以英语版为准。 </span>
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+  </span>
+</div><div class="n-doc__component-detail-heading-wrap">
+  <h1 class="n-doc__component-detail-heading">设计选择</h1>
+</div>
+
+
+<p class="page-details">
+  
+    
+    <time datetime="2021-08-11 05:36:06 +0000">08/11/2021</time>
+    
+  
+
+<span>提供者
+</span>
+
+
+</p>
+
+
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>本节中列出的技术是在架构设计阶段选择的。每个技术在 FlexPod Express 基础架构解决方案中都有一个特定用途。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="采用-ontap-9-6-的-netapp-aff-c190-系列">采用 ONTAP 9.6 的 NetApp AFF C190 系列</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>此解决方案利用了两种最新的 NetApp 产品： NetApp AFF C190 系统和 ONTAP 9.6 软件。</p>
+</div>
+<div class="sect2">
+<h3 id="aff-c190-系统">AFF C190 系统</h3>
+<div class="paragraph">
+<p>目标群体是希望以经济实惠的价格利用全闪存技术打造现代化 IT 基础架构的客户。AFF C190 系统附带了新的 ONTAP 9.6 和闪存捆绑包许可，这意味着具有以下功能：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>CIFS ， NFS ， iSCSI 和 FCP</p>
+</li>
+<li>
+<p>NetApp SnapMirror 数据复制软件， NetApp SnapVault 备份软件， NetApp SnapRestore 数据恢复软件， NetApp SnapManager 存储管理软件产品套件和 NetApp SnapCenter 软件</p>
+</li>
+<li>
+<p>FlexVol 技术</p>
+</li>
+<li>
+<p>重复数据删除，数据压缩和数据缩减</p>
+</li>
+<li>
+<p>精简配置</p>
+</li>
+<li>
+<p>存储 QoS</p>
+</li>
+<li>
+<p>NetApp RAID DP 技术</p>
+</li>
+<li>
+<p>NetApp Snapshot 技术</p>
+</li>
+<li>
+<p>FabricPool</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>下图显示了主机连接的两个选项。</p>
+</div>
+<div class="paragraph">
+<p>下图显示了可插入 SFP+ 模块的 UTA 2 端口。</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="express-c-series-c190-design_image4.png" alt="错误：缺少图形映像"></span></p>
+</div>
+<div class="paragraph">
+<p>下图显示了通过传统 RJ-45 以太网缆线连接的 10GBASE-T 端口。</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="express-c-series-c190-design_image5.png" alt="错误：缺少图形映像"></span></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/flexpod/images/note.svg" alt="注">
+</td>
+<td class="content">
+对于 10GBASE-T 端口选项，您必须使用基于 10GBASE-T 的上行链路交换机。
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>AFF C190 系统仅提供 960 GB SSD 。您可以从四个扩展阶段中进行选择：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>8 个 960 GB</p>
+</li>
+<li>
+<p>12 个 960 GB</p>
+</li>
+<li>
+<p>18 个 960 GB</p>
+</li>
+<li>
+<p>24 个 960 GB</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>有关 AFF C190 硬件系统的完整信息，请参见 <a href="https://www.netapp.com/us/products/entry-level-aff.aspx" target="_blank" rel="noopener">"NetApp AFF C190 全闪存阵列页面"</a>。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ontap-9-6-软件">ONTAP 9.6 软件</h3>
+<div class="paragraph">
+<p>NetApp AFF C190 系统使用全新的 ONTAP 9.6 数据管理软件。ONTAP 9.6 是行业领先的企业级数据管理软件。它将更高级别的精简性和灵活性与强大的数据管理功能，存储效率和领先的云集成相结合。</p>
+</div>
+<div class="paragraph">
+<p>ONTAP 9.6 具有多种非常适合 FlexPod Express 解决方案的功能。最重要的是 NetApp 对存储效率的承诺，存储效率是小型部署最重要的功能之一。ONTAP 9.6 提供了 NetApp 存储效率的标志功能，例如重复数据删除，数据压缩，数据缩减和精简配置。NetApp WAFL 系统始终会写入 4 KB 块；因此，如果这些块未使用分配的 4 KB 空间，则数据缩减会将多个块合并为一个 4 KB 块。下图说明了此过程。</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="express-c-series-c190-design_image6.png" alt="错误：缺少图形映像"></span></p>
+</div>
+<div class="paragraph">
+<p>ONTAP 9.6 现在支持为 NVMe 卷提供可选的 512 字节块大小。此功能可与本机使用 512 字节块的 VMware 虚拟机文件系统（ VMFS ）配合使用。您可以保留默认的 4 k 大小，也可以选择设置 512 字节的块大小。</p>
+</div>
+<div class="paragraph">
+<p>ONTAP 9.6 中的其他增强功能包括：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>* NetApp 聚合加密（ NAE ）。 * NAE 在聚合级别分配密钥，从而对聚合中的所有卷进行加密。此功能允许在聚合级别对卷进行加密和重复数据删除。</p>
+</li>
+<li>
+<p>* NetApp ONTAP FlexGroup 卷增强功能 * 。在 ONTAP 9.6 中，您可以轻松重命名 FlexGroup 卷。无需创建要将数据迁移到的新卷。也可以使用 ONTAP 系统管理器或命令行界面减小卷大小。</p>
+</li>
+<li>
+<p>* FabricPool 增强功能。 * ONTAP 9.6 增加了对对象存储作为云层的额外支持。此列表还添加了对 Google Cloud 和 Alibaba Cloud Object Storage Service （ OSS ）的支持。FabricPool 支持多个对象存储，包括 AWS S3 ， Azure Blob ， IBM Cloud 对象存储和 NetApp StorageGRID 基于对象的存储软件。</p>
+</li>
+<li>
+<p>* SnapMirror 增强功能 * 。在 ONTAP 9.6 中，新的卷复制关系在离开源阵列之前会默认加密，并在 SnapMirror 目标上解密。</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cisco-nexus-3000-系列">Cisco Nexus 3000 系列</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cisco Nexus 31108PC-V 是一款基于 10 Gbps SFP+ 的机架顶部（ ToR ）交换机，具有 48 个 SFP+ 端口和 6 个 QSFP28 端口。每个 SFP+ 端口可以以 100 Mbps ， 10 Gbps 的速率运行，每个 QSFP28 端口可以在原生 100 Gbps 或 40 Gbps 模式或 4 个 10 Gbps 模式下运行，从而提供灵活的迁移选项。此交换机是真正的无 PHY 交换机，针对低延迟和低功耗进行了优化。</p>
+</div>
+<div class="paragraph">
+<p>Cisco Nexus 31108PC-V 规范包括以下组件：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>对于 31108PC-V ，交换机容量和转发速率高达 2.2 Tbps</p>
+</li>
+<li>
+<p>48 个 SFP 端口支持 1 和 10 千兆以太网（ 10GbE ）； 6 个 QSFP28 端口支持每个 4 个 10GbE 或 40GbE 或 100GbE</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>下图显示了 Cisco Nexus 31108PC-V 交换机。</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="express-c-series-c190-design_image7.png" alt="错误：缺少图形映像"></span></p>
+</div>
+<div class="paragraph">
+<p>有关 Cisco Nexus 31108PC-V 交换机的详细信息，请参见 <a href="https://www.cisco.com/c/en/us/products/collateral/switches/nexus-3000-series-switches/data_sheet_c78-729483.html" target="_blank" rel="noopener">"Cisco Nexus 3172PQ ， 3172TQ ， 3172TQ-32T ， 3172PQ-XL 和 3172TQ-XL 交换机产品规格"</a>。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cisco-ucs-c-系列">Cisco UCS C 系列</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>之所以选择 Cisco UCS C 系列机架式服务器来支持 FlexPod Express ，是因为它具有多种配置选项，可以根据 FlexPod Express 部署中的特定要求进行定制。</p>
+</div>
+<div class="paragraph">
+<p>Cisco UCS C 系列机架式服务器采用行业标准外形规格提供统一计算，以降低 TCO 并提高灵活性。</p>
+</div>
+<div class="paragraph">
+<p>Cisco UCS C 系列机架式服务器具有以下优势：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>与外形规格无关的 Cisco UCS 入门点</p>
+</li>
+<li>
+<p>简化并快速部署应用程序</p>
+</li>
+<li>
+<p>将统一计算创新技术和优势扩展到机架式服务器</p>
+</li>
+<li>
+<p>通过熟悉的机架包装提供独特优势，增加客户的选择</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="express-c-series-c190-design_image8.png" alt="错误：缺少图形映像"></span></p>
+</div>
+<div class="paragraph">
+<p>如上图所示， Cisco UCS C220 M5 机架式服务器是业内用途最广泛的通用企业基础架构和应用程序服务器之一。它是一款高密度双插槽机架式服务器，可为包括虚拟化，协作和裸机应用程序在内的各种工作负载提供行业领先的性能和效率。Cisco UCS C 系列机架式服务器可以作为独立服务器部署，也可以作为 Cisco UCS 的一部分部署，以利用 Cisco 基于标准的统一计算创新技术，帮助客户降低 TCO 并提高业务灵活性。</p>
+</div>
+<div class="paragraph">
+<p>有关 C220 M5 服务器的详细信息，请参见 <a href="https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/datasheet-c78-739281.html" target="_blank" rel="noopener">"Cisco UCS C220 M5 机架式服务器数据表"</a>。</p>
+</div>
+<div class="sect2">
+<h3 id="适用于-c220-m5-机架式服务器的-cisco-ucs-vic-1457-连接">适用于 C220 M5 机架式服务器的 Cisco UCS VIC 1457 连接</h3>
+<div class="paragraph">
+<p>下图所示的 Cisco UCS VIC 1457 适配器是一个四端口小型可插拔（ SFP28 ）模块化主板 LAN （ mLOM ）卡，专为 M5 代 Cisco UCS C 系列服务器而设计。此卡支持 10/25Gbps 以太网或 FCoE 。该卡可以向主机提供符合 PCIe 标准的接口，这些接口可以动态配置为 NIC 或 HBA 。</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="express-c-series-c190-design_image9.png" alt="错误：缺少图形映像"></span></p>
+</div>
+<div class="paragraph">
+<p>有关 Cisco UCS VIC 1457 适配器的完整信息，请参见 <a href="https://www.cisco.com/c/en/us/products/collateral/interfaces-modules/unified-computing-system-adapters/datasheet-c78-741130.html" target="_blank" rel="noopener">"Cisco UCS 虚拟接口卡 1400 系列产品规格"</a>。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="vmware-vsphere-6-7u2">VMware vSphere 6.7U2</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>VMware vSphere 6.7U2 是适用于 FlexPod Express 的虚拟机管理程序选项之一。通过 VMware vSphere ，企业可以减少电耗和散热占用空间，同时确认已购买的计算容量已充分利用。此外， VMware vSphere 还支持在 vSphere 主机集群（维护模式下为 VMware Distributed Resource Scheduler 或 VMware DRS-MM ）之间实现硬件故障保护（ VMware 高可用性或 VMware HA ）和计算资源负载平衡。</p>
+</div>
+<div class="paragraph">
+<p>由于 VMware vSphere 6.7U2 仅重新启动内核，因此客户可以快速启动，从而加载 vSphere ESXi ，而无需重新启动硬件。vSphere 6.7U2 vSphere 客户端（基于 HTML5 的客户端）具有一些新的增强功能，例如具有代码捕获和 API Explore 的开发人员中心。通过代码捕获，您可以在 vSphere 客户端中记录您的操作，以提供简单，可用的代码输出。vSphere 6.7U2 还包含维护模式下的 DRS （ DRS-MM ）等新功能。</p>
+</div>
+<div class="paragraph">
+<p>VMware vSphere 6.7U2 提供以下功能：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>VMware 正在弃用外部 VMware Platform Services Controller （ PSC ）部署模式。</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/flexpod/images/note.svg" alt="注">
+</td>
+<td class="content">
+从下一个主要 vSphere 版本开始，外部 PSC 将不是可用选项。
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>为备份和还原 vCenter Server 设备提供了新的协议支持。将 NFS 和 SMB 作为受支持的协议选项进行介绍，总共可支持多达 7 个协议（ HTTP ， HTTPS ， FTP ， FTPS ， SCP ， NFS 和 SMB ）。</p>
+</li>
+<li>
+<p>使用内容库时的新增功能。现在，如果为 vCenter Server 配置了增强型链接模式，则可以在内容库之间同步原生 VM 模板。</p>
+</li>
+<li>
+<p>更新到 <a href="https://blogs.vmware.com/vsphere/2019/04/vcenter-server-6-7-update-2-whats-new.html" target="_blank" rel="noopener">"客户端插件页面"</a>。</p>
+</li>
+<li>
+<p>VMware vSphere Update Manager 还为 vSphere 客户端添加了增强功能。您可以在一个屏幕上执行附加检查合规性和修复操作。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>有关 VMware vSphere 6.7 U2 的详细信息，请参见 <a href="https://blogs.vmware.com/vsphere/2019/04/vcenter-server-6-7-update-2-whats-new.html" target="_blank" rel="noopener">"VMware vSphere 博客页面"</a>。</p>
+</div>
+<div class="paragraph">
+<p>有关 VMware vCenter Server 6.7 U2 更新的详细信息，请参见 <a href="https://docs.vmware.com/en/VMware-vSphere/6.7/rn/vsphere-vcenter-server-67u2-release-notes.html" target="_blank" rel="noopener">"发行说明"</a>。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/flexpod/images/note.svg" alt="注">
+</td>
+<td class="content">
+虽然此解决方案已通过 vSphere 6.7U2 的验证，但它支持通过其他组件认证的任何 vSphere 版本 <a href="https://mysupport.netapp.com/matrix/" target="_blank" rel="noopener">"NetApp 互操作性表工具（ IMT ）"</a>。NetApp 建议您部署下一个版本的 vSphere 以修复其问题并增强其功能。
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="启动架构">启动架构</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>FlexPod 快速启动架构支持的选项包括：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>iSCSI SAN LUN</p>
+</li>
+<li>
+<p>Cisco FlexFlash SD 卡</p>
+</li>
+<li>
+<p>本地磁盘</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>FlexPod 数据中心可从 iSCSI LUN 启动；因此，也可通过对 FlexPod Express 使用 iSCSI 启动来增强解决方案的易管理性。</p>
+</div>
+<div class="sect2">
+<h3 id="esxi-主机虚拟网络接口卡布局">ESXi 主机虚拟网络接口卡布局</h3>
+<div class="paragraph">
+<p>Cisco UCS VIC 1457 具有四个物理端口。此解决方案验证包括使用 ESXi 主机的中的这四个物理端口。如果 NIC 数量较小或较大，则可能具有不同的 vmnic 编号。</p>
+</div>
+<div class="paragraph">
+<p>在 iSCSI 启动实施中， iSCSI 启动需要单独的虚拟网络接口卡（ Virtual Network Interface Card ， vNIC ）来进行 iSCSI 启动。这些 VNIC 使用相应网络结构的 iSCSI VLAN 作为原生 VLAN ，并连接到 iSCSI 启动 VSwitch ，如下图所示。</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="express-c-series-c190-design_image10.png" alt="错误：缺少图形映像"></span></p>
+</div>
+<div class="paragraph">
+<p><a href="express-c-series-c190-design_conclusion.html">"接下来：总结。"</a></p>
+</div>
+</div>
+</div>
+</div>
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  
+  <!-- Start Page Toolbar -->
+  <div class="page-nav-toolbar">
+    <div id="version-dropdown"></div>
+    <div class="page-nav-contribute"  >
+      <a target="_blank" href="https://github.com/NetAppDocs/flexpod/issues/new?body=Page%3A%20[设计选择](https://docs.netapp.com/zh-cn/flexpod/express/express-c-series-c190-design_design_choices.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/flexpod/images/discuss-sm.svg" class="github-icon" />请求文档变更</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/flexpod/blob/main/express/express-c-series-c190-design_design_choices.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/flexpod/images/edit-sm.svg" class="github-icon" />在 GitHub 上编辑</a>
+      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/flexpod/images/article-sm.svg" class="github-icon" />提供者指南</a>
+    </div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">在此页面上</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  <div style="clear: both"></div><!-- Main needs to have height -->
+</div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+      <div class="n-footer__bottom-left">
+
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+            <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2022 NetApp, Inc.</a>
+            </li>
+
+</ul>
+</div>
+<div class="n-footer__social-links">
+<ul class="n-footer__social-link-list">
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com" target="_blank" title="blog" alt="blog">
+<span class="n-footer__social-link-text">blog</span>
+<svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+  <title>blog@</title>
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/flexpod/common/svg/sprite.svg#blog"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/" target="_blank" title="community" alt="community">
+<span class="n-footer__social-link-text">community</span>
+<svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+<title>community@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/flexpod/common/svg/sprite.svg#comments"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp" target="_blank" title="twitter" alt="twitter">
+<span class="n-footer__social-link-text">twitter</span>
+<svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+<title>twitter@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/flexpod/common/svg/sprite.svg#twitter"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp" target="_blank" title="facebook" alt="facebook">
+<span class="n-footer__social-link-text">facebook</span>
+<svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+<title>facebook@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/flexpod/common/svg/sprite.svg#facebook"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-linkedin" href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+<span class="n-footer__social-link-text">linkedin</span>
+<svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+<title>linkedin@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/flexpod/common/svg/sprite.svg#linkedin"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-youtube" href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+<span class="n-footer__social-link-text">youtube</span>
+<svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+<title>youtube@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/flexpod/common/svg/sprite.svg#youtube"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-slideshare" href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+<span class="n-footer__social-link-text">slideshare</span>
+<svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+<title>slideshare@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/flexpod/common/svg/sprite.svg#slideshare"></use>
+</svg>
+
+</a>
+</li>
+</ul>
+</div>
+
+</div>
+<div class="n-footer__bottom-right">
+  <p class="n-footer__fine-print">想就我们的网站提供反馈?<a target="_self" href="javascript:netapp_mailto()" class="n-footer__copyright">请告诉我们</a>
+  <a href="https://docs.netapp.com/zh-cn/announcements/" class="n-footer__copyright">通知</a>
+  </p>
+</div>
+</div>
+</div>
+</footer>
+
+      </div>
+
+      <!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/zh-cn/flexpod/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/zh-cn/flexpod/js/prism.js'></script>
+      <script type="text/javascript" src='/zh-cn/flexpod/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/zh-cn/flexpod/js/www-ntap.js'></script>
+    <script src='/zh-cn/flexpod/js/tabbed-blocks.js'></script>
+  </body>
+
+  
+</html>
