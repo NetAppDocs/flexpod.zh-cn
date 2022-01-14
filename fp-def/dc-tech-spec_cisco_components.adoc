@@ -65,46 +65,58 @@ Cisco UCS B 系列刀片式服务器提供半宽和全宽两种型号，并提�
 | Cisco UCS B 系列刀片式服务器 | 部件号 | 技术规格 
 
 
-| Cisco UCS B200 M5 | UCSB-B200-M5 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/datasheet-c78-739296.html["Cisco UCS B200 M5 刀片式服务器"] 
-
-
-| Cisco UCS B480 M5 | UCSB-B480-M5 | Cisco UCS B480 M5 刀片式服务器 
+| Cisco UCS B200 M6 | UCSB-B200-M6 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/datasheet-c78-2368888.html["Cisco UCS B200 M6 刀片式服务器"] 
 |===
 前几代 Cisco UCS B 系列刀片式服务器可在 FlexPod 架构中使用，前提是它们在上受支持 https://ucshcltool.cloudapps.cisco.com/public/["Cisco UCS 硬件和软件兼容性列表"^]。Cisco UCS B 系列刀片式服务器还必须具有有效的 SMARTnet 支持合同。
 
 
 
+== Cisco UCS X 系列机箱选项
+
+要使用 Cisco UCS X 系列计算节点，您必须使用 Cisco UCS X 系列机箱。下表介绍了 Cisco UCS X 系列机箱选项。
+
+|===
+| Cisco UCS X 系列刀片式服务器 | 部件号 | 技术规格 
+
+
+| Cisco UCS 9508 M6 | UCSX-9508 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/datasheet-c78-2472574.html["Cisco UCX9508 X 系列机箱"] 
+|===
+每个 Cisco UCS 9508 机箱都必须具有两个 Cisco UCS 9108 智能阵列模块（ Intelligent Fabric Module ， IFM ），以便为互联阵列提供冗余连接。
+
+
+
+== Cisco UCS X 系列设备选项
+
+Cisco UCS X 系列计算节点具有各种 CPU ，内存和 I/O 选项。下表列出的部件号适用于基础节点。它们不包括 CPU ，内存，驱动器或夹层适配器卡。FlexPod 架构中提供并支持多个配置选项。
+
+|===
+| Cisco UCS X 系列计算节点 | 部件号 | 技术规格 
+
+
+| Cisco UCS X210c M6 | UCSX-210C-M6 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/datasheet-c78-2465523.html?ccid=cc002456&oid=dstcsm026318["Cisco UCS X210c M6 计算节点"] 
+|===
+
+
 == Cisco UCS C 系列机架式服务器选项
 
-Cisco UCS C 系列机架式服务器提供单机架，双机架和四机架单元（ RU ）两种型号，并提供各种 CPU ，内存和 I/O 选项。下表中列出的部件号适用于基础服务器。它们不包括 CPU ，内存，驱动器，外设组件互连 Express （ PCIe ）卡或 Cisco Fabric Extender 。FlexPod 架构中提供并支持多个配置选项。
+Cisco UCS C 系列机架式服务器提供一个和两个机架单元（ RU ）型号，并提供各种 CPU ，内存和 I/O 选项。下表中列出的部件号适用于基础服务器。它们不包括 CPU ，内存，驱动器，外设组件互连 Express （ PCIe ）卡或 Cisco Fabric Extender 。FlexPod 架构中提供并支持多个配置选项。
 
-要使用 Cisco UCS C 系列机架式服务器节点，您必须安装一个 Cisco UCS C 系列机箱，如下表所示。
-
-|===
-| Cisco UCS C 系列机箱 | 部件号 | 技术规格 
-
-
-| Cisco UCS C4200 | UCSC-C4200-SFF | https://www.cisco.com/c/en/us/products/servers-unified-computing/ucs-c4200-series-rack-server-chassis/index.html["Cisco UCS C4200 系列机架式服务器机箱"] 
-|===
-下表介绍了 Cisco UCS CSeries 机架式服务器选项。
+下表列出了 Cisco UCS C 系列机架式服务器选项。
 
 |===
 | Cisco UCS C 系列机架式服务器 | 部件号 | 技术规格 
 
 
-| Cisco UCS C220 M5 | UCSC-C220-M5SN | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c220m5-sff-specsheet.pdf["Cisco UCS C220 M5 机架式服务器"] 
+| Cisco UCS C220 M6 | UCSC-C220-M6 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c220m6-sff-specsheet.pdf["Cisco UCS C220 M6 机架式服务器"] 
 
 
-| Cisco UCS C240 M5 | UCS-C-C240-M5S | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c240m5-sff-specsheet.pdf["Cisco UCS C240 M5 机架式服务器"] 
+| Cisco UCS C225 M6 | UCSC-C225-M6 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c225-m6-sff-specsheet.pdf["Cisco UCS C225 M6 机架式服务器"] 
 
 
-| Cisco UCS C480 M5 | UCSC-C480-M5 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c480-m5-high-performance-specsheet.pdf["Cisco UCS C480 M5 机架式服务器"] 
+| Cisco UCS C240 M6 | UCSC-C240-M6 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c240m6-sff-specsheet.pdf["Cisco UCS C240 M6 机架式服务器"] 
 
 
-| Cisco UCS C480 ML M5 | UCSC-C480-M5ML8 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c480m5-specsheet-ml-m5-server.pdf["Cisco UCS C480 ML M5 机架式服务器"] 
-
-
-| Cisco UCS C125 M5 | UCSC-C125 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c125m5-rack-server-node.pdf["Cisco UCS C125 M5 机架式服务器节点"] 
+| Cisco UCS C245 M6 | UCSC-C245M6 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c245m6-sff-specsheet.pdf["Cisco UCS C245 M6 机架式服务器"] 
 |===
 前几代 Cisco UCS C 系列服务器可在 FlexPod 架构中使用，前提是它们在上受支持 https://ucshcltool.cloudapps.cisco.com/public/["Cisco UCS 硬件和软件兼容性列表"^]。Cisco UCS C 系列服务器还必须具有有效的 SMARTnet 支持合同。
 

@@ -28,7 +28,7 @@ Cisco Integrated Management Controller （ CIMC ）配置包括以下硬件组�
 
 * 采用冗余配置的两个 10 Gbps 标准以太网交换机（建议使用 Cisco Nexus 0808 ，支持 Cisco Nexus 3000 和 9000 型号）
 * Cisco UCS C 系列独立机架式服务器
-* 采用高可用性（ HA ）对配置的两个 AFF C190 ， AFF A220 ， FAS2600 或 FAS 2700 系列控制器，部署为双节点集群
+* 采用高可用性（ HA ）对配置的两个 AFF C190 ， AFF A250 ， FAS2600 或 FAS 2700 系列控制器，部署为双节点集群
 
 
 
@@ -41,7 +41,7 @@ Cisco UCS 管理的确认包括以下硬件组件：
 * 一个 Cisco UCS 5108 交流（ AC ）刀片式服务器机箱
 * 两个 Cisco UCS 6324 互联阵列
 * Cisco UCS B 系列服务器（至少四个 Cisco UCS B200 M5 刀片式服务器）
-* 一个 HA 对配置中的两个 AFF C190 ， AFF A220 ， FAS2750 或 FAS2720 控制器（每个控制器需要两个可用的统一目标适配器 2 个端口）
+* 一个 HA 对配置中的两个 AFF C190 ， AFF A250 ， FAS2750 或 FAS2720 控制器（每个控制器需要两个可用的统一目标适配器 2 个端口）
 
 
 

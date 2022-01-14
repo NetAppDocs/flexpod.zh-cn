@@ -12,7 +12,7 @@ summary: FlexPod 平台是一种预先设计的最佳实践数据中心架构，
 :imagesdir: ./../media/
 
 
-NetApp 公司 Sree Lakshmi Landa ， Arvind Ramakrishnan 和 Jyh-shing Chen
+Arvind Ramakrishnan 和 NetApp 公司 Jyh-shing Chen
 
 FlexPod 平台是一种预先设计的最佳实践数据中心架构，它基于 Cisco 统一计算系统（ Cisco UCS ）， Cisco Nexus 系列交换机和 NetApp 存储控制器（ AFF ， ASA 或 FAS 系统）构建。
 
@@ -20,3 +20,5 @@ FlexPod 是一个适合运行各种虚拟化虚拟机管理程序以及裸机操
 
 
 NOTE: 在订购完整的 FlexPod 配置之前，请参见 http://www.netapp.com/us/technology/flexpod["FlexPod 融合基础架构"^] 请访问 netapp.com 上的第页，了解这些技术规格的最新版本。
+
+link:dc-tech-spec_flexpod_platforms.html["接下来： FlexPod 平台。"]

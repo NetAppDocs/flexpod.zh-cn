@@ -121,14 +121,7 @@
   <block id="398f9e30ff0bd016ab27d169e7118e2d" category="inline-link">FAS 系列文档</block>
   <block id="fef5355cae9a773f4459a7d0de27939e" category="cell"><block ref="fef5355cae9a773f4459a7d0de27939e" category="inline-link-rx"></block></block>
   <block id="b9697496d09a09579329bde0eb5c9178" category="section-title">集群互连交换机选项</block>
-  <block id="6c2297481b088185e5ba182cbf46cc86" category="paragraph">下表列出了可用于 FlexPod 架构的 NetApp 和 Cisco Nexus 集群互连交换机。此外， FlexPod 还支持所有 ONTAP 支持的集群交换机，包括非 Cisco 交换机，但前提是它们与要部署的 ONTAP 版本兼容。请参见<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block> 有关特定交换机型号的其他兼容性详细信息。</block>
   <block id="a44c62f2e89581c2cf4b405ac4bc48d1" category="cell">集群互连交换机</block>
-  <block id="280107a5f53cc09efecfd6d30a3b7ebc" category="cell">NetApp CN1610</block>
-  <block id="78c775143d1b75dea93759b6f72302e1" category="inline-link">NetApp 文档： CN1610 交换机</block>
-  <block id="ad1be6a1693415c44d1b97cf3aef658e" category="cell"><block ref="b1970dcba693cd791defbd5cd0df80c4" category="inline-link-rx"></block></block>
-  <block id="21cefb007c9064d8adcf6c162e74b0bf" category="cell">Cisco Nexus 3232C</block>
-  <block id="7d530c24bf5da866bd6477a130565497" category="inline-link">NetApp 文档： Cisco Nexus 3232C 交换机</block>
-  <block id="f54b379bc5d5889fc2f4360824c0bb26" category="cell"><block ref="7144707842add3e46bf60236f51d7769" category="inline-link-rx"></block></block>
   <block id="1d8bdbbecd2a7992d9b2c5314cbc8da8" category="cell">Cisco Nexus 3132Q-V</block>
   <block id="1d9f38092927f6d65753edab7ca3d039" category="inline-link">NetApp 文档： Cisco Nexus 3132Q-V 交换机</block>
   <block id="392fceb5a4d064176abe344715627cfb" category="cell"><block ref="bc5b55d95c18c102e8300585910ae029" category="inline-link-rx"></block></block>
@@ -446,40 +439,14 @@
   <block id="9efd743b10abbfb56a447d476d84417e" category="list-text">外形规格</block>
   <block id="c4c2ca353ebde914eae5eb3ee6ad320d" category="list-text">每个机箱的最大服务器数</block>
   <block id="7109b9831c1aee7996af4033af2245e5" category="cell">Cisco UCS 产品规格</block>
-  <block id="969c742cc1f67ded3ba56af450000e21" category="inline-link">Cisco UCS B200 M5 刀片式服务器</block>
-  <block id="8e57359e63cf6cdcfdadb1dd680000a2" category="cell"><block ref="8e57359e63cf6cdcfdadb1dd680000a2" category="inline-link-rx"></block></block>
-  <block id="85583ec9133ee818667d8a051abf55a2" category="inline-link">Cisco UCS B480 M5 刀片式服务器</block>
-  <block id="97e995af097461f41db2035cc2673c9e" category="cell"><block ref="97e995af097461f41db2035cc2673c9e" category="inline-link-rx"></block></block>
   <block id="b2671da9828321178769ed9542695042" category="section-title">Cisco UCS C 系列机架式服务器</block>
   <block id="502eb272214f8a3969413ac883ed309d" category="inline-link">Cisco 硬件兼容性</block>
-  <block id="308debbb882d651f09ce68e46ab08e4a" category="paragraph">Cisco UCS C 系列机架式服务器的技术规格包括处理器支持，最大内存容量， PCIe 插槽数量以及外形规格大小。有关兼容 UCS 服务器型号的更多详细信息，请参见<block ref="1420345f3000e0fcdfadf0c24d8bc000" category="inline-link-rx"></block> 列表下表分别说明了 C 系列机架式服务器产品规格和 Cisco UCS C 系列机箱选项。</block>
   <block id="36e1230654ecb861d1f18a90673720be" category="cell">Cisco UCS C220 M5</block>
-  <block id="9dbfe5ecebeb767db9e473efae5283cb" category="inline-link">Cisco UCS C220 M5 机架式服务器</block>
-  <block id="8a5eb45087f333d251f70a5f7e9bf374" category="cell"><block ref="8a5eb45087f333d251f70a5f7e9bf374" category="inline-link-rx"></block></block>
-  <block id="bca58b63cd85fdab9de541957a527160" category="cell">Cisco UCS C240 M5</block>
-  <block id="ce5b6f4f9340ca77556dbe039f065aac" category="inline-link">Cisco UCS C240 M5 机架式服务器</block>
-  <block id="9c396870f380c562a1a08fc0c830c64f" category="cell"><block ref="9c396870f380c562a1a08fc0c830c64f" category="inline-link-rx"></block></block>
-  <block id="9f27d088acad31980c4b68d9a7406794" category="cell">Cisco UCS C480 M5</block>
-  <block id="9ce81db7ec4774e65bb5a8a74b056063" category="inline-link">Cisco UCS C480 M5 机架式服务器</block>
-  <block id="213bc28b9d3389ddc814c422f8e441ad" category="cell"><block ref="213bc28b9d3389ddc814c422f8e441ad" category="inline-link-rx"></block></block>
-  <block id="d64fdb9ecfeca8c31e1a5ba915559e56" category="cell">Cisco UCS C480 ML M5</block>
-  <block id="4250a9b4c7bfc384f71a01aac99994e0" category="inline-link">Cisco UCS C480 ML M5 机架式服务器</block>
-  <block id="2d294f83ca6f187d5b0fc9397274bb37" category="cell"><block ref="2d294f83ca6f187d5b0fc9397274bb37" category="inline-link-rx"></block></block>
-  <block id="72997504aa1730a1755164ca30745f70" category="cell">Cisco UCS C125 M5</block>
-  <block id="666713763e15ca8adaf438f81a7a7fd1" category="inline-link">Cisco UCS C125 M5 机架式服务器节点</block>
-  <block id="2dc1199796eb999bb8e3c16781c75945" category="cell"><block ref="2dc1199796eb999bb8e3c16781c75945" category="inline-link-rx"></block></block>
-  <block id="824dd14b6823eabd047ffe2305e97428" category="cell">Cisco UCS C 系列机箱</block>
-  <block id="b4e1781b10581652e1594ce422d2d5dd" category="cell">Cisco UCS C4200</block>
-  <block id="333af42d1f6833cf68bfa28c5d405af9" category="inline-link">Cisco UCS C4200 系列机架式服务器机箱</block>
-  <block id="0660039d086a58e7d8393ab62b501e67" category="cell"><block ref="0660039d086a58e7d8393ab62b501e67" category="inline-link-rx"></block></block>
   <block id="c1129e1482a0749cc3a76e71693cd660" category="section-title">FlexPod AI ， ML 和 DL 的 GPU 建议</block>
   <block id="eb15ff603d7a4cfd03ec21c2259cb551" category="paragraph">下表中列出的 Cisco UCS C 系列机架式服务器可在 FlexPod 架构中用于托管 AI ， ML 和 DL 工作负载。Cisco UCS C480 ML M5 服务器专为 AI ， ML 和 DL 工作负载而构建，并使用基于 NVIDIA 的 SXM2 的 GPU ，而其他服务器则使用基于 PCIe 的 GPU 。</block>
   <block id="7fcbe0697ef92e59c1302c9100c308ae" category="paragraph">下表还列出了可用于这些服务器的建议 GPU 。</block>
   <block id="9aa1b03934893d7134a660af4204f2a9" category="cell">服务器</block>
   <block id="c9c42178ba31eb2b6b1fa19218d82381" category="cell">GPU</block>
-  <block id="1511442c046fe26e17f68c0b13654e86" category="cell">NVIDIA SXM2 V100 32G</block>
-  <block id="a3b17bd27fee85df2c163208731b8f04" category="cell">NVIDIA V100 （ 16GB/32 GB ） NVIDIA T4 （ 16 GB ）</block>
-  <block id="5fa0df421acb5d8efbcb4d4ac9e6c5eb" category="cell">NVIDIA T4 （ 16 GB ）</block>
   <block id="b9830d915994d2d90b9750c5314a78c5" category="section-title">适用于 Cisco UCS B 系列刀片式服务器的 Cisco UCS VIC 适配器</block>
   <block id="2808bcb1c92a1ab9e4ac1fbe8ac8ba55" category="paragraph">适用于 Cisco UCS B 系列刀片式服务器的 Cisco UCS 虚拟接口卡（ Virtual Interface Card ， VIC ）适配器的技术规格包括以下组件：</block>
   <block id="04dd8a21ab2ea0866c7eb1f31be00db0" category="list-text">上行链路端口数</block>
@@ -586,8 +553,6 @@
   <block id="d29d0bc0b0f5fe9cda62baf04b713836" category="list-text">NetApp FlexVol 卷的最大数量</block>
   <block id="19acffd0e8e9a24a5633acba17a63c64" category="list-text">支持的最大 SAN 主机数</block>
   <block id="b441412a52771cc2c951a3c1fd336788" category="list-text">最大 Snapshot 副本数</block>
-  <block id="bbfdeeedf76409a849f0759bb00329ab" category="paragraph">支持在 FlexPod 数据中心中使用所有可用型号的 FAS 存储控制器。有关所有 FAS 系列存储控制器的详细规格，请参见<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block> 下表列出的平台数据表中的和。</block>
-  <block id="63fff63564274c2fa37006921edd10ff" category="cell">FAS 系列控制器产品规格</block>
   <block id="5dbe6318c0e33df82115090386f676a0" category="cell">FAS9000 系列</block>
   <block id="8c732c0d3940f54af569403bb2e77413" category="inline-link">FAS9000 系列产品规格</block>
   <block id="e152be24a8aee8e7db513eb2b90ae1af" category="cell"><block ref="e152be24a8aee8e7db513eb2b90ae1af" category="inline-link-rx"></block></block>
@@ -605,22 +570,14 @@
   <block id="99d338f252ec9d84ad8431a31de3a262" category="cell">AFF A 系列控制器平台文档</block>
   <block id="a6d988e2bc1676553a68b4bd3414e350" category="cell">NetApp AFF A800</block>
   <block id="4d9751fc3b79bdb88b990f65afd7c6d4" category="inline-link">AFF A800 平台文档</block>
-  <block id="69653f667551477168e57cce28809778" category="cell"><block ref="69653f667551477168e57cce28809778" category="inline-link-rx"></block></block>
   <block id="9fd776d575e784a04bf5628e0db4f43c" category="cell">NetApp AFF A700</block>
   <block id="cc959946765e8b246923e4ef7f1bf3be" category="inline-link">AFF A700 平台文档</block>
-  <block id="24640eeed188fd78af0111da627cd2d4" category="cell"><block ref="24640eeed188fd78af0111da627cd2d4" category="inline-link-rx"></block></block>
   <block id="4c888568e86a3e3bc15e53b2a91a4ca2" category="cell">NetApp AFF A700s</block>
   <block id="049e978eaf17ad2f7d9e7561d653c22f" category="inline-link">AFF A700s 平台文档</block>
-  <block id="e25e626eb1bd733f17b88d5ab4660ce1" category="cell"><block ref="e25e626eb1bd733f17b88d5ab4660ce1" category="inline-link-rx"></block></block>
   <block id="6b1a2fb636318f0f5c51b7506abc53ad" category="cell">NetApp AFF A400</block>
   <block id="b9866313cde2044a8dd77a6b0e794e61" category="inline-link">AFF A400 平台文档</block>
-  <block id="e28a9feb275cc8aa17d5067a44ebf3a9" category="cell"><block ref="e28a9feb275cc8aa17d5067a44ebf3a9" category="inline-link-rx"></block></block>
   <block id="eb8440af98c502b8095408e970297e6b" category="cell">NetApp AFF A300</block>
-  <block id="8fdd49cd539b6d7b3a9fcece8b1101ca" category="inline-link">AFF A300 平台文档</block>
-  <block id="44380bc2052a1f5837358d8f5f241177" category="cell"><block ref="44380bc2052a1f5837358d8f5f241177" category="inline-link-rx"></block></block>
   <block id="1672d070f346948fb25e819b40bb3ade" category="cell">NetApp AFF A220</block>
-  <block id="c9c3a349ad4c3c640138cd0885ea5530" category="inline-link">AFF A220 平台文档</block>
-  <block id="2d528bdcff06e2cbf1543b4325d0728d" category="cell"><block ref="2d528bdcff06e2cbf1543b4325d0728d" category="inline-link-rx"></block></block>
   <block id="b0318f7a50c45231a138f7fe1f7ff669" category="inline-link">NetApp 磁盘架和存储介质技术规格</block>
   <block id="7d04ea5a4ab5376b6fc167c024508e50" category="paragraph">NetApp 磁盘架的技术规格包括外形规格大小，每个机箱的驱动器数量以及磁盘架 I/O 模块；下表提供了此文档。有关详细信息，请参见<block ref="38bd9540948719c989b4d751845e8bfd" category="inline-link-rx"></block> 和<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block>。</block>
   <block id="7f0e76e050a690f383ba518e5dc386f3" category="cell">NetApp FAS/AFF 磁盘架文档</block>
@@ -891,24 +848,7 @@
   <block id="2f81ceda3b0bfc238f7f690e7473830e" category="cell"><block ref="2f81ceda3b0bfc238f7f690e7473830e" category="inline-link-rx"></block></block>
   <block id="a657b94e4c9e579fa82aa858106b19f3" category="paragraph">Cisco UCS B 系列刀片式服务器提供半宽和全宽两种型号，并提供各种 CPU ，内存和 I/O 选项。下表列出的部件号适用于基础服务器。它们不包括 CPU ，内存，驱动器或夹层适配器卡。FlexPod 架构中提供并支持多个配置选项。</block>
   <block id="58f718ee214b0714734639e81128fbb3" category="cell">Cisco UCS B 系列刀片式服务器</block>
-  <block id="cd9477b63872b9cb0b9d373edd1c82f7" category="cell"><block ref="cd9477b63872b9cb0b9d373edd1c82f7" category="inline-link-rx"></block></block>
-  <block id="9ad1c651631c86a0c82e8d6480f42ed5" category="cell">UCSB-B480-M5</block>
   <block id="afdbf5a2581f3aef46bbb083b10290e8" category="paragraph">前几代 Cisco UCS B 系列刀片式服务器可在 FlexPod 架构中使用，前提是它们在上受支持<block ref="61c091fce51d2baac5905f12dd7d74cc" category="inline-link-rx"></block>。Cisco UCS B 系列刀片式服务器还必须具有有效的 SMARTnet 支持合同。</block>
-  <block id="d44d4522d0112c821658fabc9eac4e92" category="paragraph">Cisco UCS C 系列机架式服务器提供单机架，双机架和四机架单元（ RU ）两种型号，并提供各种 CPU ，内存和 I/O 选项。下表中列出的部件号适用于基础服务器。它们不包括 CPU ，内存，驱动器，外设组件互连 Express （ PCIe ）卡或 Cisco Fabric Extender 。FlexPod 架构中提供并支持多个配置选项。</block>
-  <block id="225be960b16005240846c076c9897f41" category="paragraph">要使用 Cisco UCS C 系列机架式服务器节点，您必须安装一个 Cisco UCS C 系列机箱，如下表所示。</block>
-  <block id="f12d08257c103086a1345907f983b0b9" category="cell">Cisco UCS C 系列机箱</block>
-  <block id="f90f8d9be25a96172598b93afc7b65e3" category="cell">UCSC-C4200-SFF</block>
-  <block id="ac19cca7a154dd5163379e4c70a38730" category="cell"><block ref="ac19cca7a154dd5163379e4c70a38730" category="inline-link-rx"></block></block>
-  <block id="3c968df3b84f45833a506ee08ce150db" category="paragraph">下表介绍了 Cisco UCS CSeries 机架式服务器选项。</block>
-  <block id="b1c9254bcf372f4776cdcbc083431fa7" category="cell">UCSC-C220-M5SN</block>
-  <block id="6e19f49fc7558516d8f3eb6a69f054eb" category="cell"><block ref="6e19f49fc7558516d8f3eb6a69f054eb" category="inline-link-rx"></block></block>
-  <block id="5e655338fc8afe7143dcbc26db6dbc17" category="cell">UCS-C-C240-M5S</block>
-  <block id="d34bc25818bf2e1a06025891d5737b23" category="cell"><block ref="d34bc25818bf2e1a06025891d5737b23" category="inline-link-rx"></block></block>
-  <block id="27994e8efe1fc20cab980b3106ca0b1f" category="cell">UCSC-C480-M5</block>
-  <block id="ce20dfd7ca71bdb34fcbd9f716300a4f" category="cell"><block ref="ce20dfd7ca71bdb34fcbd9f716300a4f" category="inline-link-rx"></block></block>
-  <block id="672db58806100a13f7a299b8ea313a15" category="cell">UCSC-C480-M5ML8</block>
-  <block id="df9a532ae87be33ec5790606b2d95e6e" category="cell"><block ref="df9a532ae87be33ec5790606b2d95e6e" category="inline-link-rx"></block></block>
-  <block id="a53d04d6a5f7c96f7cb39d872ae98ef7" category="cell">UCSC-C125</block>
   <block id="04383030436c933f07cb0d8227122679" category="paragraph">前几代 Cisco UCS C 系列服务器可在 FlexPod 架构中使用，前提是它们在上受支持<block ref="61c091fce51d2baac5905f12dd7d74cc" category="inline-link-rx"></block>。Cisco UCS C 系列服务器还必须具有有效的 SMARTnet 支持合同。</block>
   <block id="fb5c950fd99dc759dc80fc0f8f731db7" category="section-title">Cisco Nexus 5000 系列交换机选项</block>
   <block id="20e1d0ec1fa7b7b29470f35d7d948530" category="paragraph">在 FlexPod 架构中需要使用冗余 Cisco Nexus 5000 ， 7000 或 9000 系列交换机。下表列出的部件号适用于 Cisco Nexus 5000 系列机箱，不包括 SFP 模块，附加 FC 或以太网模块。</block>
@@ -1054,14 +994,12 @@
   <block id="dbf88aea6907acd1a2ddf8af6778500b" category="paragraph">Cisco Integrated Management Controller （ CIMC ）配置包括以下硬件组件：</block>
   <block id="7522eca6f14a81cd40ef3209e540e583" category="list-text">采用冗余配置的两个 10 Gbps 标准以太网交换机（建议使用 Cisco Nexus 0808 ，支持 Cisco Nexus 3000 和 9000 型号）</block>
   <block id="98b00d8d43ad07f702f22f5c8b541ca2" category="list-text">Cisco UCS C 系列独立机架式服务器</block>
-  <block id="b3761fdf4aa58e9755330e022e87b8d8" category="list-text">采用高可用性（ HA ）对配置的两个 AFF C190 ， AFF A220 ， FAS2600 或 FAS 2700 系列控制器，部署为双节点集群</block>
   <block id="1bd4b426108264f2676dc78d9d2018da" category="section-title">Cisco UCS 管理的配置</block>
   <block id="b2d15a256201c5ef01bc4171f55f63a5" category="paragraph">Cisco UCS 管理的确认包括以下硬件组件：</block>
   <block id="ff7cdf168363b590d56a466baa3afde4" category="list-text">采用冗余配置的两个 10 Gbps 标准以太网交换机（建议使用 Cisco Nexus 3524 ）</block>
   <block id="406d169fa8f2549e3ad818dfcdb19b11" category="list-text">一个 Cisco UCS 5108 交流（ AC ）刀片式服务器机箱</block>
   <block id="086baf60c6e72c66b3d26f73749806e4" category="list-text">两个 Cisco UCS 6324 互联阵列</block>
   <block id="441c43a56d0619fd5ae52f04a07feaf6" category="list-text">Cisco UCS B 系列服务器（至少四个 Cisco UCS B200 M5 刀片式服务器）</block>
-  <block id="c370eec5157fdf0c3be271d8ae02b5eb" category="list-text">一个 HA 对配置中的两个 AFF C190 ， AFF A220 ， FAS2750 或 FAS2720 控制器（每个控制器需要两个可用的统一目标适配器 2 个端口）</block>
   <block id="0a83f68af275e8c4353563c551c8994b" category="section-title">采用 E 系列的 FlexPod Express</block>
   <block id="b0a4ddda393f203e4b071531f5a7f619" category="paragraph">采用 E 系列入门级配置的 FlexPod Express 的硬件要求包括：</block>
   <block id="5b0208ade6c01d9081b5843bdfb89e40" category="list-text">一个 Cisco UCS Mini 机箱 5108 AC2 或 DC2 （仅 AC2 和 DC2 机箱支持 Cisco UCS 6324 互联阵列）</block>
@@ -7427,7 +7365,6 @@
   <block id="0466740965e7956f8fc2a734a83f5686" category="sidebar">FabricPool 软件版本</block>
   <block id="6cb34c048fceb40f7d64efc563d407f9" category="sidebar">什么是勒索软件？</block>
   <block id="fbebe2a055b4dcf362a0493004ef468f" category="paragraph">在 FlexPod 架构中需要使用冗余 NetApp FAS ， AFF 或 AFF ASA 控制器。这些控制器运行 ONTAP 软件。订购存储控制器后，可以在这些控制器上预加载首选软件版本。对于 ONTAP ，系统会订购一个完整的集群。整个集群包括一对存储控制器和一个集群互连（交换机或无交换机）。</block>
-  <block id="dac9e0940606682208e977faac4e179e" category="paragraph">NetApp 公司 Sree Lakshmi Landa ， Arvind Ramakrishnan 和 Jyh-shing Chen</block>
   <block id="cc910127c1a0f3009d24973fab296857" category="paragraph">NetApp ONTAP 软件安装在所有 NetApp FAS ， AFF 和 AFF 全 SAN 阵列（ ASA ）系统上。FlexPod 已通过 ONTAP 软件的验证，可提供高度可扩展的存储架构，支持无中断运行，无中断升级和灵活的数据基础架构。</block>
   <block id="b84c25a0a6333d1b6ec82954312075f9" category="paragraph">此配置可以包含任何受支持的 NetApp FAS ， AFF 或 ASA 系列存储控制器。请参见<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block> 应用程序以获取受支持的 FAS ， AFF 和 ASA 控制器型号的最新列表。</block>
   <block id="1e43cedc7bbfa39913e13dd030f51171" category="list-text">如果解决方案使用 ONTAP ，则每个控制器至少需要两个额外的 10/25/100GbE 端口才能进行数据访问。</block>
@@ -8008,4 +7945,77 @@
   <block id="d6205320f3a7011e64b601100518be60" category="sidebar">采用 Cisco UCS C480 ML 的 FlexPod Datacenter for AI/ML 深度学习设计指南</block>
   <block id="26b2da44f63ebbe0d09d512b64685d73" category="sidebar">采用 VMware 和 NVIDIA 的 3D 图形可视化 FlexPod</block>
   <block id="ebf263f6e0d06b26f79aafb2dda2fffe" category="sidebar">FlexPod for 3D Graphics 可视化与 Citrix 和 NVIDIA （白皮书）</block>
+  <block id="9367f6dc9792efedc23081b108a5e46e" category="cell">Cisco UCS B200 M6</block>
+  <block id="3562ba647d973f1176b057c70a2a0443" category="inline-link">Cisco UCS B200 M6 刀片式服务器</block>
+  <block id="d03de7dc86df4aeee0c38ece670efcbc" category="cell"><block ref="d03de7dc86df4aeee0c38ece670efcbc" category="inline-link-rx"></block></block>
+  <block id="539594db6fbc402732376a4908e6445a" category="paragraph">Cisco UCS C 系列机架式服务器的技术规格包括处理器支持，最大内存容量， PCIe 插槽数量以及外形规格大小。有关兼容 UCS 服务器型号的更多详细信息，请参见<block ref="1420345f3000e0fcdfadf0c24d8bc000" category="inline-link-rx"></block> 列表下表分别说明了 C 系列机架式服务器产品规格和 Cisco UCS C 系列机箱选项。</block>
+  <block id="9c1251df1e24c8cb7cbd38c2f4836a31" category="cell">Cisco UCS C220 M6</block>
+  <block id="d74072d736dabf4108650780997348d4" category="inline-link">Cisco UCS C220 M6 机架式服务器</block>
+  <block id="cdc99f88842c642faf411bcb03d51b23" category="cell"><block ref="cdc99f88842c642faf411bcb03d51b23" category="inline-link-rx"></block></block>
+  <block id="134cb2fcd7956f791e9e83c46de84bed" category="cell">Cisco UCS C225 M6</block>
+  <block id="4d3f89d17921496447ee078d2fffee14" category="inline-link">Cisco UCS C225 M6 机架式服务器</block>
+  <block id="26af3fca39364e55dbd211a1354f8c3d" category="cell"><block ref="26af3fca39364e55dbd211a1354f8c3d" category="inline-link-rx"></block></block>
+  <block id="085b74cee36712939842a07c08484828" category="cell">Cisco UCS C240 M6</block>
+  <block id="475287befc3891f579846f4fad04365b" category="inline-link">Cisco UCS C240 M6 机架式服务器</block>
+  <block id="a1e8232293242129cd1cf31e4fe7a56a" category="cell"><block ref="a1e8232293242129cd1cf31e4fe7a56a" category="inline-link-rx"></block></block>
+  <block id="7cb699ac2bdd827b24ebab7c5cfe9de3" category="cell">Cisco UCS C245 M6</block>
+  <block id="d39f4d0fe4d1ec12e0924a75526dbcc7" category="inline-link">Cisco UCS C245 M6 机架式服务器</block>
+  <block id="f444e0ee3760d489797cd37417043760" category="cell"><block ref="f444e0ee3760d489797cd37417043760" category="inline-link-rx"></block></block>
+  <block id="9199b52ef0a0fb0ae9c390d1f2a4b547" category="section-title">Cisco UCS X 系列机箱</block>
+  <block id="e062c4739ff99b41d57b233828e6a70d" category="paragraph">下表所示的 Cisco UCS X 系列机箱技术规格包括以下组件：</block>
+  <block id="655616edb2763fa526c32fc5b4dc3646" category="list-text">最大节点数</block>
+  <block id="f010ecd8871829fccf072c45d9303703" category="list-text">IFM 的 I/O 托架数量</block>
+  <block id="1c53572c6621131de05143ffd02b77eb" category="cell">Cisco UCS 9508 X 系列计算节点机箱</block>
+  <block id="8f14e45fceea167a5a36dedd4bea2543" category="cell">7.</block>
+  <block id="9fcd3fdf657d58915085167aeda73f8c" category="cell">IFM 的 I/O 托架</block>
+  <block id="1bf0ed5a72e3088f3041a2613d763d09" category="cell">两个用于 Cisco UCS 9108 智能阵列模块（ IFM ）的托架</block>
+  <block id="4e6d7fc309c44a3039917bf31ae90a44" category="inline-link-macro">Cisco UCS X9508 X 系列机箱产品规格</block>
+  <block id="8da71c07bd539f4d456e0b1d98cbdbef" category="paragraph">有关详细信息，请参见 <block ref="5c66b10e4aaaeb44ce24b56292e2b4ff" category="inline-link-macro-rx"></block>。</block>
+  <block id="29496dbb7e2d48a49c36fa2e3631c920" category="section-title">Cisco UCS X 系列计算节点</block>
+  <block id="10b60d0d12f87da4fdd5d86969b10e57" category="paragraph">下表所示的 Cisco UCS X 系列计算节点的技术规格包括以下组件：</block>
+  <block id="ba4532070e058c495c632836d34d8120" category="list-text">每个机箱的最大计算节点数</block>
+  <block id="53968ff28116cf22d7e6ebf3841bd871" category="cell">Cisco UCS X210c M6</block>
+  <block id="162f963cf06856a87b0d8dee5d843776" category="inline-link">Cisco UCS X210c M6 计算节点</block>
+  <block id="cf9f0c1cd26145b85b35ae6e6b63fe76" category="cell"><block ref="376004058cab648d219769ed0e0b6dc3" category="inline-link-rx"></block></block>
+  <block id="e095ad80d900786110d53ecd5cbd3e3e" category="cell">NVIDIA T4</block>
+  <block id="58f43c2bb3a97e83a0b8d65d21002781" category="cell">NVIDIA Tesla A10 ， A100</block>
+  <block id="5db2e4261da384e80f15127c4ee22890" category="paragraph">支持在 FlexPod 数据中心中使用所有可用型号的 FAS 存储控制器。有关所有 FAS 系列存储控制器的详细规格，请参见<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block>。有关特定 FAS 型号的详细信息，请参见下表中列出的平台专用文档。</block>
+  <block id="269268ccb99b0633e3aa811a9d379bd4" category="cell">FAS 系列控制器平台文档</block>
+  <block id="09d7147606356cb9d75c440889619ed0" category="cell">FAS500f 系列</block>
+  <block id="ea3f409de93f78c56764dda52d76dd0d" category="inline-link">FAS500f 系列产品规格</block>
+  <block id="117a2e13cbfbc5b019f43395e19aa7a4" category="cell"><block ref="117a2e13cbfbc5b019f43395e19aa7a4" category="inline-link-rx"></block></block>
+  <block id="a65bc179cb3e5725fe6126fd001c8afe" category="cell"><block ref="a65bc179cb3e5725fe6126fd001c8afe" category="inline-link-rx"></block></block>
+  <block id="376c9339140cac7719692f574b0d8949" category="cell"><block ref="376c9339140cac7719692f574b0d8949" category="inline-link-rx"></block></block>
+  <block id="73e154a912a6da332d5666ef47db16e0" category="cell"><block ref="73e154a912a6da332d5666ef47db16e0" category="inline-link-rx"></block></block>
+  <block id="fba10836ef83cfe0730ad0e55e0ce8a0" category="cell"><block ref="fba10836ef83cfe0730ad0e55e0ce8a0" category="inline-link-rx"></block></block>
+  <block id="25297dbc8df2aecff2fa2e9e47638d35" category="cell">NetApp AFF A250</block>
+  <block id="3ac00041ac1bd123acdee59cdfc05a50" category="inline-link">AFF A250 平台文档</block>
+  <block id="5936e0c2771ef74069a005d2fb9355a5" category="cell"><block ref="5936e0c2771ef74069a005d2fb9355a5" category="inline-link-rx"></block></block>
+  <block id="e5974ac049da72bf0d9c2228215d373b" category="list-text">采用高可用性（ HA ）对配置的两个 AFF C190 ， AFF A250 ， FAS2600 或 FAS 2700 系列控制器，部署为双节点集群</block>
+  <block id="6e1c422f8099cdf6eb51d54a7f387fc7" category="list-text">一个 HA 对配置中的两个 AFF C190 ， AFF A250 ， FAS2750 或 FAS2720 控制器（每个控制器需要两个可用的统一目标适配器 2 个端口）</block>
+  <block id="ed4bde4fa0721113bfb61cca4c8d0b99" category="paragraph">Arvind Ramakrishnan 和 NetApp 公司 Jyh-shing Chen</block>
+  <block id="73cbafda498a06bae0ca1f5a7714be30" category="inline-link-macro">接下来： FlexPod 平台。</block>
+  <block id="ffe6ecde43ed5c7ff2182a101c0d2390" category="paragraph"><block ref="ffe6ecde43ed5c7ff2182a101c0d2390" category="inline-link-macro-rx"></block></block>
+  <block id="909bf134633f8636fb0e6c6fc6a76084" category="cell">UCSB-B200-M6</block>
+  <block id="758a54dd9d8861be843cf6331b44fb65" category="section-title">Cisco UCS X 系列机箱选项</block>
+  <block id="20d19d58ae8a642ec1baf9555bf92a68" category="paragraph">要使用 Cisco UCS X 系列计算节点，您必须使用 Cisco UCS X 系列机箱。下表介绍了 Cisco UCS X 系列机箱选项。</block>
+  <block id="6f1e9e46dcfc04fdcfdc63db9a3862ba" category="cell">Cisco UCS X 系列刀片式服务器</block>
+  <block id="0d94aa8c894a9392de95561a747c3f8d" category="cell">Cisco UCS 9508 M6</block>
+  <block id="626ee8db46c2bef8f7dc7795bf3e8a6c" category="cell">UCSX-9508</block>
+  <block id="128c814ce3d1759186f82cec57b15de7" category="inline-link">Cisco UCX9508 X 系列机箱</block>
+  <block id="98a1917383cfb85332df0d8a642289d9" category="cell"><block ref="98a1917383cfb85332df0d8a642289d9" category="inline-link-rx"></block></block>
+  <block id="f98d4abf9bc30951a4da536e87687de6" category="paragraph">每个 Cisco UCS 9508 机箱都必须具有两个 Cisco UCS 9108 智能阵列模块（ Intelligent Fabric Module ， IFM ），以便为互联阵列提供冗余连接。</block>
+  <block id="96d0dfe3cbacf24246bfd66c4391d8f7" category="section-title">Cisco UCS X 系列设备选项</block>
+  <block id="3379b58b81e9e3c511e6860933c77cca" category="paragraph">Cisco UCS X 系列计算节点具有各种 CPU ，内存和 I/O 选项。下表列出的部件号适用于基础节点。它们不包括 CPU ，内存，驱动器或夹层适配器卡。FlexPod 架构中提供并支持多个配置选项。</block>
+  <block id="a16230a8b7edeb7b04b868db68434bcc" category="cell">Cisco UCS X 系列计算节点</block>
+  <block id="82991af31b2132bc4a6ba87666258cb9" category="cell">UCSX-210C-M6</block>
+  <block id="e3eb2e0fd35e41702e0f6e027c500376" category="paragraph">Cisco UCS C 系列机架式服务器提供一个和两个机架单元（ RU ）型号，并提供各种 CPU ，内存和 I/O 选项。下表中列出的部件号适用于基础服务器。它们不包括 CPU ，内存，驱动器，外设组件互连 Express （ PCIe ）卡或 Cisco Fabric Extender 。FlexPod 架构中提供并支持多个配置选项。</block>
+  <block id="64c9c8cddf853b7d2b17bf45b55a730d" category="paragraph">下表列出了 Cisco UCS C 系列机架式服务器选项。</block>
+  <block id="80c61fef5189a71aa18f9f292a24d3bb" category="cell">UCSC-C220-M6</block>
+  <block id="fe65f70f0945480ff0b503d4f47673a7" category="cell">UCSC-C225-M6</block>
+  <block id="310990c9d5d8dd38730d0c584fda1a1a" category="cell">UCSC-C240-M6</block>
+  <block id="b88aeccf539f84628e5459c2a7e1d725" category="cell">UCSC-C245M6</block>
+  <block id="643ccfec845d77bd902162df9edcdcbf" category="paragraph">下表列出了可用于 FlexPod 架构的 Nexus 集群互连交换机。此外， FlexPod 还支持所有 ONTAP 支持的集群交换机，包括非 Cisco 交换机，但前提是它们与要部署的 ONTAP 版本兼容。请参见<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block> 有关特定交换机型号的其他兼容性详细信息。</block>
+  <block id="0bc97a80630d922e5e5de8dd8689bcaa" category="inline-link">NetApp 文档： Cisco Nexus 9336C-x2 交换机</block>
+  <block id="1842d50bda8c8607d91b97316b2186a2" category="cell"><block ref="1842d50bda8c8607d91b97316b2186a2" category="inline-link-rx"></block></block>
 </blocks>

@@ -71,10 +71,7 @@ summary: 技术规格提供了有关 FlexPod 解决方案中硬件组件的详�
 | 组件 | Cisco UCS 产品规格 
 
 
-| Cisco UCS B200 M5 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/b200m5-specsheet.pdf["Cisco UCS B200 M5 刀片式服务器"] 
-
-
-| Cisco UCS B480 M5 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/datasheet-c78-739280.html["Cisco UCS B480 M5 刀片式服务器"] 
+| Cisco UCS B200 M6 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/datasheet-c78-2368888.html["Cisco UCS B200 M6 刀片式服务器"] 
 |===
 
 
@@ -86,25 +83,70 @@ Cisco UCS C 系列机架式服务器的技术规格包括处理器支持，最�
 | 组件 | Cisco UCS 产品规格 
 
 
-| Cisco UCS C220 M5 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/datasheet-c78-739281.html["Cisco UCS C220 M5 机架式服务器"] 
+| Cisco UCS C220 M6 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c220m6-sff-specsheet.pdf["Cisco UCS C220 M6 机架式服务器"] 
 
 
-| Cisco UCS C240 M5 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/datasheet-c78-739279.html["Cisco UCS C240 M5 机架式服务器"] 
+| Cisco UCS C225 M6 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c225-m6-sff-specsheet.pdf["Cisco UCS C225 M6 机架式服务器"] 
 
 
-| Cisco UCS C480 M5 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/datasheet-c78-739291.html["Cisco UCS C480 M5 机架式服务器"] 
+| Cisco UCS C240 M6 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c240m6-sff-specsheet.pdf["Cisco UCS C240 M6 机架式服务器"] 
 
 
-| Cisco UCS C480 ML M5 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/datasheet-c78-741211.html["Cisco UCS C480 ML M5 机架式服务器"] 
-
-
-| Cisco UCS C125 M5 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c125m5-rack-server-node.pdf["Cisco UCS C125 M5 机架式服务器节点"] 
+| Cisco UCS C245 M6 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c245m6-sff-specsheet.pdf["Cisco UCS C245 M6 机架式服务器"] 
 |===
+
+
+== Cisco UCS X 系列机箱
+
+下表所示的 Cisco UCS X 系列机箱技术规格包括以下组件：
+
+* 机架单元数
+* 最大节点数
+* 统一网络结构功能
+* IFM 的 I/O 托架数量
+
+
 |===
-| Cisco UCS C 系列机箱 | Cisco UCS 产品规格 
+| 组件 | Cisco UCS 9508 X 系列计算节点机箱 
 
 
-| Cisco UCS C4200 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c4200-series-rack-server-chassis/datasheet-c78-740839.html["Cisco UCS C4200 系列机架式服务器机箱"] 
+| 机架单元 | 7. 
+
+
+| 最大节点数 | 8. 
+
+
+| 支持统一网络结构 | 是的。 
+
+
+| IFM 的 I/O 托架 | 两个用于 Cisco UCS 9108 智能阵列模块（ IFM ）的托架 
+|===
+有关详细信息，请参见 link:https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/datasheet-c78-2472574.html["Cisco UCS X9508 X 系列机箱产品规格"^]。
+
+
+
+== Cisco UCS X 系列计算节点
+
+下表所示的 Cisco UCS X 系列计算节点的技术规格包括以下组件：
+
+* 处理器插槽数量
+* 处理器支持
+* 内存容量
+* 大小和速度
+* SAN 启动支持
+* 夹层适配器插槽的数量
+* I/O 最大吞吐量
+* 外形规格
+* 每个机箱的最大计算节点数
+
+
+|===
+
+
+| 组件 | Cisco UCS 产品规格 
+
+
+| Cisco UCS X210c M6 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/datasheet-c78-2465523.html?ccid=cc002456&oid=dstcsm026318["Cisco UCS X210c M6 计算节点"] 
 |===
 
 
@@ -118,19 +160,16 @@ Cisco UCS C 系列机架式服务器的技术规格包括处理器支持，最�
 | 服务器 | GPU 
 
 
-| Cisco UCS C480 ML M5 | NVIDIA SXM2 V100 32G 
+| Cisco UCS C220 M6 | NVIDIA T4 
 
 
-| Cisco UCS C480 M5 | NVIDIA V100 （ 16GB/32 GB ） NVIDIA T4 （ 16 GB ） 
+| Cisco UCS C225 M6 | NVIDIA T4 
 
 
-| Cisco UCS C240 M5 | NVIDIA V100 （ 16GB/32 GB ） NVIDIA T4 （ 16 GB ） 
+| Cisco UCS C240 M6 | NVIDIA Tesla A10 ， A100 
 
 
-| Cisco UCS C220 M5 | NVIDIA T4 （ 16 GB ） 
-
-
-| Cisco UCS C125 M5 | NVIDIA T4 （ 16 GB ） 
+| Cisco UCS C245 M6 | NVIDIA Tesla A10 ， A100 
 |===
 
 
@@ -319,10 +358,10 @@ NetApp 存储控制器的技术规格包括以下组件：
 
 === FAS 系列
 
-支持在 FlexPod 数据中心中使用所有可用型号的 FAS 存储控制器。有关所有 FAS 系列存储控制器的详细规格，请参见 https://hwu.netapp.com/["NetApp Hardware Universe"^] 下表列出的平台数据表中的和。
+支持在 FlexPod 数据中心中使用所有可用型号的 FAS 存储控制器。有关所有 FAS 系列存储控制器的详细规格，请参见 https://hwu.netapp.com/["NetApp Hardware Universe"^]。有关特定 FAS 型号的详细信息，请参见下表中列出的平台专用文档。
 
 |===
-| 组件 | FAS 系列控制器产品规格 
+| 组件 | FAS 系列控制器平台文档 
 
 
 | FAS9000 系列 | https://www.netapp.com/us/media/ds-3810.pdf["FAS9000 系列产品规格"] 
@@ -332,6 +371,9 @@ NetApp 存储控制器的技术规格包括以下组件：
 
 
 | FAS8300 系列 | https://www.netapp.com/us/media/ds-4020.pdf["FAS8300 系列产品规格"] 
+
+
+| FAS500f 系列 | https://docs.netapp.com/us-en/ontap-systems/fas500f/index.html["FAS500f 系列产品规格"] 
 
 
 | FAS2700 系列 | https://www.netapp.com/us/media/ds-3929.pdf["FAS2700 系列产品规格"] 
@@ -346,22 +388,19 @@ NetApp 存储控制器的技术规格包括以下组件：
 | 组件 | AFF A 系列控制器平台文档 
 
 
-| NetApp AFF A800 | http://docs.netapp.com/platstor/topic/com.netapp.nav.a800/home.html["AFF A800 平台文档"] 
+| NetApp AFF A800 | https://docs.netapp.com/us-en/ontap-systems/a800/index.html["AFF A800 平台文档"] 
 
 
-| NetApp AFF A700 | http://docs.netapp.com/platstor/topic/com.netapp.nav.fas9000/home.html["AFF A700 平台文档"] 
+| NetApp AFF A700 | https://docs.netapp.com/us-en/ontap-systems/fas9000/index.html["AFF A700 平台文档"] 
 
 
-| NetApp AFF A700s | http://docs.netapp.com/platstor/topic/com.netapp.nav.a700s/home.html["AFF A700s 平台文档"] 
+| NetApp AFF A700s | https://docs.netapp.com/us-en/ontap-systems/a700s/index.html["AFF A700s 平台文档"] 
 
 
-| NetApp AFF A400 | http://docs.netapp.com/platstor/index.jsp?topic=%2Fcom.netapp.nav.a400%2Fhome.html["AFF A400 平台文档"] 
+| NetApp AFF A400 | https://docs.netapp.com/us-en/ontap-systems/a400/index.html["AFF A400 平台文档"] 
 
 
-| NetApp AFF A300 | http://docs.netapp.com/platstor/topic/com.netapp.nav.a300/home.html["AFF A300 平台文档"] 
-
-
-| NetApp AFF A220 | http://docs.netapp.com/platstor/topic/com.netapp.nav.fas2700/home.html["AFF A220 平台文档"] 
+| NetApp AFF A250 | https://docs.netapp.com/us-en/ontap-systems/a250/index.html["AFF A250 平台文档"] 
 |===
 
 

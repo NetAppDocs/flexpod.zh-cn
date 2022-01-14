@@ -40,19 +40,18 @@ NetApp 存储控制器在 FlexPod 架构中为启动和应用程序数据存储�
 
 == 集群互连交换机选项
 
-下表列出了可用于 FlexPod 架构的 NetApp 和 Cisco Nexus 集群互连交换机。此外， FlexPod 还支持所有 ONTAP 支持的集群交换机，包括非 Cisco 交换机，但前提是它们与要部署的 ONTAP 版本兼容。请参见 https://hwu.netapp.com/["NetApp Hardware Universe"^] 有关特定交换机型号的其他兼容性详细信息。
+下表列出了可用于 FlexPod 架构的 Nexus 集群互连交换机。此外， FlexPod 还支持所有 ONTAP 支持的集群交换机，包括非 Cisco 交换机，但前提是它们与要部署的 ONTAP 版本兼容。请参见 https://hwu.netapp.com/["NetApp Hardware Universe"^] 有关特定交换机型号的其他兼容性详细信息。
 
 |===
+
+
 | 集群互连交换机 | 技术规格 
 
 
-| NetApp CN1610 | https://mysupport.netapp.com/documentation/docweb/index.html?productID=62373&language=en-US["NetApp 文档： CN1610 交换机"] 
-
-
-| Cisco Nexus 3232C | https://mysupport.netapp.com/documentation/docweb/index.html?productID=62619&language=en-US["NetApp 文档： Cisco Nexus 3232C 交换机"] 
-
-
 | Cisco Nexus 3132Q-V | https://mysupport.netapp.com/documentation/docweb/index.html?productID=62377&language=en-US["NetApp 文档： Cisco Nexus 3132Q-V 交换机"] 
+
+
+| Cisco Nexus 9336C-x2 | https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336/9336-overview.html["NetApp 文档： Cisco Nexus 9336C-x2 交换机"] 
 |===
 
 
