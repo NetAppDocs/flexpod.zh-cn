@@ -1191,7 +1191,6 @@
   <block id="881413045c8af6a58c42bcc219b2ba2d" category="paragraph">要从 Cisco Intersight 监控和编排 NetApp 存储，您需要在 vCenter 环境中安装 NetApp Active IQ Unified Manager 和 Cisco Intersight Assist 虚拟设备。</block>
   <block id="535c7b50cee98be8fc0e8e0894346790" category="section-title">安装或升级 NetApp Active IQ Unified Manager</block>
   <block id="55166d0f6b162adc50efaa35d68a0b33" category="inline-link-macro">Unified Manager 9.8 文档中心</block>
-  <block id="a311c3e5a074753d745d4e174a557b8f" category="paragraph">如果尚未安装或升级到 Active IQ Unified Manager 9.8p1 或更高版本，请安装或升级到该版本。有关说明，请转至 <block ref="2ef4c2f3ac730e1ba7d897833afaecb1" category="inline-link-macro-rx"></block>。</block>
   <block id="916e11edd7302abcc99270b63af50410" category="section-title">安装 Cisco Intersight Assist 虚拟设备</block>
   <block id="6d6948b0a48e475952bf18dc3895f7a3" category="inline-link">Cisco Intersight Virtual Appliance 许可，系统和网络要求</block>
   <block id="dd2e3bcd8cbadfd776b8fdcd3811c9e8" category="paragraph">确保满足<block ref="7800eff9d9526a65a7a22ce932db0f9b" category="inline-link-rx"></block>。</block>
@@ -1243,7 +1242,6 @@
   <block id="8f7052d0c9b4ba227843ecc0873ab47c" category="cell">需求详细信息</block>
   <block id="29d1db03b55072fc401d11d7d0750f61" category="cell">ONTAP 9.7P1 及更高版本</block>
   <block id="45699291c017a65a90e4bb25860f4315" category="cell">NetApp Active IQ Unified Manager</block>
-  <block id="42a00b8fd9d8ea541aaf0750811b7085" category="cell">NetApp Active IQ Unified Manager 9.8P1 及更高版本</block>
   <block id="5dc8e3707996259deb52abdfee00eac9" category="cell">NetApp 存储阵列</block>
   <block id="00b515e766e1cba805399ff9eb813a8f" category="cell">ONTAP 9.7P1 及更高版本支持所有 ONTAP ASA ， AFF 和 FAS 存储阵列</block>
   <block id="1f8e8bd6bc1c4895f936485882fbdf9d" category="cell">虚拟化虚拟机管理程序</block>
@@ -8018,4 +8016,17 @@
   <block id="643ccfec845d77bd902162df9edcdcbf" category="paragraph">下表列出了可用于 FlexPod 架构的 Nexus 集群互连交换机。此外， FlexPod 还支持所有 ONTAP 支持的集群交换机，包括非 Cisco 交换机，但前提是它们与要部署的 ONTAP 版本兼容。请参见<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block> 有关特定交换机型号的其他兼容性详细信息。</block>
   <block id="0bc97a80630d922e5e5de8dd8689bcaa" category="inline-link">NetApp 文档： Cisco Nexus 9336C-x2 交换机</block>
   <block id="1842d50bda8c8607d91b97316b2186a2" category="cell"><block ref="1842d50bda8c8607d91b97316b2186a2" category="inline-link-rx"></block></block>
+  <block id="809347d519acc479862e0161f1c91067" category="paragraph">如果尚未安装或升级到 Active IQ Unified Manager 9.10GA 或更高版本，请安装或升级到该版本。有关说明，请转至 <block ref="2ef4c2f3ac730e1ba7d897833afaecb1" category="inline-link-macro-rx"></block>。</block>
+  <block id="b9365bb9132d1eb8770275a763fc5d69" category="section-title">2022 年 1 月</block>
+  <block id="c3c52ee83b368023b0bc4d56084cc12c" category="list-text">为 NetApp Active IQ Unified Manager 9.10 或更高版本添加了基于事件的 Intersight 警报。</block>
+  <block id="3dd3b14e38a8724b67d519dfefeec2a4" category="admonition">为了确保与未来版本兼容并提供完整的功能，建议您将 NetApp Active IQ Unified Manager 升级到 9.10 版。</block>
+  <block id="951933f45709744f40fd6c17dda4d481" category="list-text">显式设置 Storage Virtual Machine 的每个已启用协议（ true 或 false ）</block>
+  <block id="9d6dec17bf6fe1958c5a63fb82a76045" category="list-text">已将 clusterHealthStatus 状态 ok-on-suppressed 映射为 OK</block>
+  <block id="cfecb2b5d83405e25a27176475594959" category="list-text">已将 " 运行状况 " 列重命名为 " 集群 " 列表页面下的 " 集群状态 " 列</block>
+  <block id="8f15ba3081d49b8f5f1ba3a4f53dd15d" category="list-text">如果集群已关闭或无法访问，则显示存储阵列 " 无法访问 "</block>
+  <block id="ba83f5fbe2f25c3ee466709ec68a1240" category="list-text">已将 " 集群常规 " 页面下的 " 运行状况 " 列重命名为 " 阵列状态 " 列</block>
+  <block id="460688420194ec2a09d1aff95cdee69c" category="list-text">现在， SVM 具有一个 " 卷 " 选项卡，用于显示 SVM 的所有卷</block>
+  <block id="b97365a71bc0d2d2926a3cc84b0a78ae" category="list-text">卷具有 Snapshot Capacity 部分</block>
+  <block id="d3c7d299e5b74bd5cd1d1b7633e85f3b" category="list-text">许可证现在可以正确显示</block>
+  <block id="e02992d23861a4f5e9db975bdb009202" category="cell">NetApp Active IQ Unified Manager 9.10GA 及更高版本</block>
 </blocks>

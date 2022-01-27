@@ -19,7 +19,7 @@ summary: 开始之前，请安装或升级 AIQ UM ，创建 Cisco Intersight 帐
 
 == 安装或升级 NetApp Active IQ Unified Manager
 
-如果尚未安装或升级到 Active IQ Unified Manager 9.8p1 或更高版本，请安装或升级到该版本。有关说明，请转至 link:http://docs.netapp.com/ocum-98/index.jsp["Unified Manager 9.8 文档中心"]。
+如果尚未安装或升级到 Active IQ Unified Manager 9.10GA 或更高版本，请安装或升级到该版本。有关说明，请转至 link:http://docs.netapp.com/ocum-98/index.jsp["Unified Manager 9.8 文档中心"]。
 
 
 

@@ -16,6 +16,26 @@ summary: Cisco Intersight 推出了新版本，可为您提供新功能，增强
 
 
 
+== 2022 年 1 月
+
+* 为 NetApp Active IQ Unified Manager 9.10 或更高版本添加了基于事件的 Intersight 警报。
+
+
+
+NOTE: 为了确保与未来版本兼容并提供完整的功能，建议您将 NetApp Active IQ Unified Manager 升级到 9.10 版。
+
+* 显式设置 Storage Virtual Machine 的每个已启用协议（ true 或 false ）
+* 已将 clusterHealthStatus 状态 ok-on-suppressed 映射为 OK
+* 已将 " 运行状况 " 列重命名为 " 集群 " 列表页面下的 " 集群状态 " 列
+* 如果集群已关闭或无法访问，则显示存储阵列 " 无法访问 "
+* 已将 " 集群常规 " 页面下的 " 运行状况 " 列重命名为 " 阵列状态 " 列
+* 现在， SVM 具有一个 " 卷 " 选项卡，用于显示 SVM 的所有卷
+* 卷具有 Snapshot Capacity 部分
+* 许可证现在可以正确显示
+
+
+
+
 == 2021年10月
 
 * 更新了 Cisco Intersight 中可用的 NetApp 存储任务列表。请参见 link:ci-qsg_use_cases.html["使用案例 3 使用无设计人员表单的自定义工作流"] 有关 NetApp 存储任务的完整列表。
