@@ -4,7 +4,7 @@ permalink: ontap-connector-for-intersight/ci-qsg_new.html
 keywords: netapp, cisco, ontap, intersight, flexpod, what's new, features, release notes, enhancements 
 summary: Cisco Intersight 推出了新版本，可为您提供新功能，增强功能和错误修复。 
 ---
-= 新增功能 &#8217
+= 新增功能
 :hardbreaks:
 :nofooter: 
 :icons: font

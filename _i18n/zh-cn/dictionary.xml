@@ -7417,7 +7417,6 @@
   <block id="245c499a8eb2230fa27979a452c776e5" category="summary">FlexPod 快速平台支持本节中列出的存储操作系统。</block>
   <block id="61cc46b957612003be945c20fa10a67c" category="admonition">只有在通过 NetApp Active IQ Unified Manager 9.9 或更高版本监控存储阵列时，才会显示以下性能指标摘要信息。</block>
   <block id="0b7287babbe3c16553a6f9cd3e22a10b" category="summary">Cisco Intersight 推出了新版本，可为您提供新功能，增强功能和错误修复。</block>
-  <block id="b312f45322f166ee041a7a16747fd5c1" category="doc">新增功能 &amp;#8217</block>
   <block id="8a53d76b23b9bd398a76313ad1fa9a21" category="paragraph">本节列出了 Cisco Intersight 与 NetApp ONTAP 存储的新增特性和功能。</block>
   <block id="a5f3f63c2f6e1d6d4605650633b9ce8a" category="section-title">2021年10月</block>
   <block id="754b6987e50dda52c9ced2b9e6a1c5a2" category="list-text">已在集群列表页面下添加运行状况列。</block>
@@ -7635,7 +7634,6 @@
   <block id="07cdee747024a43a4c64bea9773d4435" category="inline-link-macro">接下来：在 FlexPod 上部署基因组工作负载的优势。</block>
   <block id="4bd9e8f9ce97225c3a380f01f5b7e85f" category="paragraph"><block ref="4bd9e8f9ce97225c3a380f01f5b7e85f" category="inline-link-macro-rx"></block></block>
   <block id="e239a4af23c07be4edc5da5f02c9ec6a" category="summary">本节介绍 ./gatk 输出的执行情况。</block>
-  <block id="cf7ed72860d2f07aca095418459499d1" category="doc">使用 &lt;code&gt;./gatk&lt;/code&gt; 脚本执行 GATK 的输出</block>
   <block id="4aff7c37c0df4078c9912732b49d5f0f" category="inline-link-macro">previous ：使用 JAR 文件执行 GATK 的输出。</block>
   <block id="0a6a679033adfebd6c3297de34721d52" category="paragraph"><block ref="0a6a679033adfebd6c3297de34721d52" category="inline-link-macro-rx"></block></block>
   <block id="6c6bd1dd631cf29930af277add3f1dac" category="paragraph">使用 ` 。 /gatk` 脚本执行 GATK 后，生成了以下示例输出。</block>
@@ -8029,4 +8027,5 @@
   <block id="b97365a71bc0d2d2926a3cc84b0a78ae" category="list-text">卷具有 Snapshot Capacity 部分</block>
   <block id="d3c7d299e5b74bd5cd1d1b7633e85f3b" category="list-text">许可证现在可以正确显示</block>
   <block id="e02992d23861a4f5e9db975bdb009202" category="cell">NetApp Active IQ Unified Manager 9.10GA 及更高版本</block>
+  <block id="490414e0366b091220802d406e52c076" category="doc">新增功能</block>
 </blocks>
