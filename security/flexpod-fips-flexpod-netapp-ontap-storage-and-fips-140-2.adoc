@@ -1,0 +1,179 @@
+---
+sidebar: sidebar 
+permalink: security/flexpod-fips-flexpod-netapp-ontap-storage-and-fips-140-2.html 
+keywords: storage, data plane, control plane, encryption, NAE CLI, nve, key management, external key management 
+summary: NetApp 提供各种硬件，软件和服务，其中可以包括根据标准验证的加密模块的各种组件。因此， NetApp 使用多种方法在控制平面和数据平面上实现 FIPS 140-2 合规性。 
+---
+= FlexPod NetApp ONTAP 存储和 FIPS 140-2
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-fips-flexpod-cisco-networking-and-fips-140-2.html["先前版本： FlexPod Cisco 网络和 FIPS 140-2 。"]
+
+NetApp 提供各种硬件，软件和服务，其中可以包括根据标准验证的加密模块的各种组件。因此， NetApp 使用多种方法在控制平面和数据平面上实现 FIPS 140-2 合规性：
+
+* NetApp 提供的加密模块已通过传输中数据加密和空闲数据加密的 1 级验证。
+* NetApp 收购的硬件和软件模块均已通过这些组件供应商的 FIPS 140-2 验证。例如， NetApp 存储加密解决方案 利用经过 FIPS 级别 2 验证的驱动器。
+* NetApp 产品可以使用符合标准的经验证模块，即使该产品或功能不在验证范围内也是如此。例如， NetApp 卷加密（ NVE ）符合 FIPS 140-2 标准。虽然未单独进行验证，但它会利用经过 1 级验证的 NetApp 加密模块。要了解您的 ONTAP 版本的合规性详情，请联系您的 FlexPod SME 。
+
+
+* NetApp 加密模块已通过 FIPS 140-2 1 级验证 *
+
+* NetApp 加密安全模块（ NetApp Cryptographic Security Module ， NCSM ）已通过 FIPS 140-2 1 级验证。
+
+
+* NetApp 自加密驱动器已通过 FIPS 140-2 2 级认证 *
+
+NetApp 购买的自加密驱动器（ SED ）已经过原始设备制造商（ OEM ）的 FIPS 140-2 验证；需要这些驱动器的客户必须在订购时指定这些驱动器。驱动器在级别 2 进行验证。以下 NetApp 产品可以利用经验证的 SED ：
+
+* AFF A 系列和 FAS 存储系统
+* E 系列和 EF 系列存储系统
+
+
+* NetApp 聚合加密和 NetApp 卷加密 *
+
+NVE 和 NetApp 聚合加密（聚合加密， NAE ）技术分别在卷和聚合级别加密数据，使解决方案 与物理驱动器无关。
+
+NVE 是一种基于软件的空闲数据加密解决方案 ，从 ONTAP 9.1 开始提供，自 ONTAP 9.2 起已符合 FIPS 140-2 标准。通过 NVE ， ONTAP 可以对每个卷的数据进行精细加密。ONTAP 9.6 附带的 NAE 是 NVE 的一种增长；它允许 ONTAP 对每个卷的数据进行加密，并且这些卷可以在聚合中共享密钥。NVE 和 NAE 都使用 AES 256 位加密。数据也可以存储在没有 SED 的磁盘上。通过 NVE 和 NAE ，即使启用了加密，您也可以使用存储效率功能。纯应用程序层加密会使存储效率的所有优势失败。使用 NVE 和 NAE 可以保持存储效率，因为数据通过 NetApp WAFL 从网络传入 RAID 层，而 RAID 层决定了数据是否应加密。为了提高存储效率，您可以将聚合重复数据删除与 NAE 结合使用。NVE 卷和 NAE 卷可以同时位于同一 NAE 聚合上。NAE 聚合不支持未加密的卷。
+
+此过程的工作原理如下：对数据进行加密后，它会发送到经过 FIPS 140-2 1 级验证的加密模块。加密模块对数据进行加密并将其发送回 RAID 层。然后，加密数据将发送到磁盘。因此，结合使用 NVE 和 NAE 时，数据在传输到磁盘的过程中已加密。读取操作遵循反向路径。换言之，数据离开磁盘时会进行加密，发送到 RAID ，并通过加密模块进行解密，然后再发送到堆栈的其余部分，如下图所示。
+
+image:flexpod-fips-image3.png["错误：缺少图形映像"]
+
+
+NOTE: NVE 使用经过 FIPS 140-2 1 级验证的软件加密模块。
+
+有关 NVE 的详细信息，请参见 https://www.netapp.com/us/media/ds-3899.pdf["NVE 产品规格"^]。
+
+NVE 可保护云中的数据。Cloud Volumes ONTAP 和 Azure NetApp Files 能够提供 FIPS 140-2 合规的空闲数据加密。
+
+从 ONTAP 9.7 开始，如果您拥有 NVE 许可证以及板载或外部密钥管理，则新创建的聚合和卷会默认加密。从 ONTAP 9.6 开始，您可以使用聚合级别的加密为要加密的卷的所属聚合分配密钥。默认情况下，您在聚合中创建的卷会进行加密。对卷进行加密时，您可以覆盖默认值。
+
+
+
+== ONTAP NAE 命令行界面命令
+
+在运行以下命令行界面命令之前，请确保集群具有所需的 NVE 许可证。
+
+要创建聚合并对其进行加密，请运行以下命令（在 ONTAP 9.6 及更高版本的集群命令行界面上运行时）：
+
+....
+fp-health::> storage aggregate create -aggregate aggregatename -encrypt-with-aggr-key true
+....
+要将非 NAE 聚合转换为 NAE 聚合，请运行以下命令（在 ONTAP 9.6 及更高版本的集群命令行界面上运行时）：
+
+....
+fp-health::> storage aggregate modify -aggregate aggregatename  -node svmname -encrypt-with-aggr-key true
+....
+要将 NAE 聚合转换为非 NAE 聚合，请运行以下命令（在 ONTAP 9.6 及更高版本的集群命令行界面上运行时）：
+
+....
+fp-health::> storage aggregate modify -aggregate aggregatename -node svmname -encrypt-with-aggr-key false
+....
+
+
+== ONTAP NVE 命令行界面命令
+
+从 ONTAP 9.6 开始，您可以使用聚合级别的加密为要加密的卷的所属聚合分配密钥。默认情况下，您在聚合中创建的卷会进行加密。
+
+要在启用了 NAE 的聚合上创建卷，请运行以下命令（在 ONTAP 9.6 及更高版本的集群命令行界面上运行时）：
+
+....
+fp-health::> volume create -vserver svmname -volume volumename -aggregate aggregatename -encrypt true
+....
+要在不移动卷的情况下对现有卷进行 " 原位 " 加密，请运行以下命令（在 ONTAP 9.6 及更高版本的集群命令行界面上运行时）：
+
+....
+fp-health::> volume encryption conversion start -vserver svmname -volume volumename
+....
+要验证是否已为卷启用加密，请运行以下命令行界面命令：
+
+....
+fp-health::> volume show -is-encrypted true
+....
+
+
+== NSE
+
+NSE 使用 SED 通过硬件加速机制执行数据加密。
+
+NSE 配置为使用 FIPS 140-2 2 级自加密驱动器，通过 AES 256 位透明磁盘加密来保护空闲数据，从而有利于合规性和备用磁盘返回。驱动器在内部执行所有数据加密操作，如下图所示，包括生成加密密钥。为了防止未经授权访问数据，存储系统必须使用首次使用驱动器时建立的身份验证密钥向驱动器进行身份验证。
+
+image:flexpod-fips-image4.png["错误：缺少图形映像"]
+
+
+NOTE: NSE 会在每个驱动器上使用硬件加密，此加密已通过 FIPS 140-2 2 级别 2 验证。
+
+有关 NSE 的详细信息，请参见 https://www.netapp.com/us/media/ds-3213-en.pdf["NSE 产品规格"^]。
+
+
+
+== 密钥管理
+
+FIPS 140-2 标准适用场景 边界定义的加密模块，如下图所示。
+
+image:flexpod-fips-image5.png["错误：缺少图形映像"]
+
+密钥管理器会跟踪 ONTAP 使用的所有加密密钥。NSE SED 使用密钥管理器为 NSE SED 设置身份验证密钥。使用密钥管理器时， NVE 和 NAE 解决方案 的组合由软件加密模块，加密密钥和密钥管理器组成。对于每个卷， NVE 使用唯一的 XTS-AES 256 数据加密密钥，该密钥由密钥管理器存储。用于数据卷的密钥对于该集群中的数据卷是唯一的，它是在创建加密卷时生成的。同样， NAE 卷在每个聚合中使用唯一的 XTS-AES 256 数据加密密钥，密钥管理器也会存储这些密钥。创建加密聚合时会生成 NAE 密钥。ONTAP 不会对密钥执行重新生成，重复使用或以纯文本格式显示—它们由密钥管理器存储和保护。
+
+
+
+== 支持外部密钥管理器
+
+从 ONTAP 9.3 开始， NVE 和 NSE 解决方案均支持外部密钥管理器。FIPS 140-2 标准适用场景 —特定供应商实施中使用的加密模块。大多数情况下， FlexPod 和 ONTAP 客户会使用以下经过验证（根据 http://mysupport.netapp.com/matrix["NetApp 互操作性表"^]）密钥管理器：
+
+* Gemalto 或 SafeNet ，网址为
+* Vormetric （ Thales ）
+* IBM SKLM
+* Utimaco （原 MicroFocus ， HPE ）
+
+
+NSE 和 NVMe SED 身份验证密钥可使用行业标准 OASIS 密钥管理互操作性协议（ KMIP ）备份到外部密钥管理器。只有存储系统，驱动器和密钥管理器才能访问此密钥，如果将此驱动器移至安全域之外，则无法解锁，从而防止数据泄露。外部密钥管理器还存储 NVE 卷加密密钥和 NAE 聚合加密密钥。如果控制器和磁盘已移动，并且无法再访问外部密钥管理器，则 NVE 和 NAE 卷将无法访问，并且无法解密。
+
+以下示例命令会将两个密钥管理服务器添加到 Storage Virtual Machine （ SVM ） `svmname1` 的外部密钥管理器所使用的服务器列表中。
+
+....
+fp-health::> security key-manager external add-servers -vserver svmname1 -key-servers 10.0.0.20:15690, 10.0.0.21:15691
+....
+在多租户情形中使用 FlexPod 数据中心时， ONTAP 会在 SVM 级别为用户提供租户隔离，以确保安全。
+
+要验证外部密钥管理器列表，请运行以下命令行界面命令：
+
+....
+fp-health::> security key-manager external show
+....
+
+
+== 将加密结合使用实现双重加密（分层防护）
+
+如果您需要隔离对数据的访问并确保数据始终受到保护，则 NSE SED 可以与网络或网络结构级加密结合使用。如果管理员忘记配置或错误配置更高级别的加密，则 NSE SED 就像一个后备站。对于两个不同的加密层，您可以将 NSE SED 与 NVE 和 NAE 结合使用。
+
+
+
+== NetApp ONTAP 集群范围控制面板 FIPS 模式
+
+NetApp ONTAP 数据管理软件具有 FIPS 模式配置，可为客户实例化更高的安全性级别。此 FIPS 模式仅对控制平面进行适用场景 。根据 FIPS 140-2 的关键要素启用 FIPS 模式后，传输层安全 v1 （ Transport Layer Security v1 ， TLSv1 ）和 SSLv3 将被禁用，只有 TLS v1.1 和 TLS v1.2 保持启用状态。
+
+
+NOTE: FIPS 模式下的 ONTAP 集群范围控制窗格符合 FIPS 140-2 1 级标准。集群范围的 FIPS 模式使用 NCSM 提供的基于软件的加密模块。
+
+集群范围控制平面的 FIPS 140-2 合规模式可保护 ONTAP 的所有控制接口。默认情况下，仅 FIPS 140-2 模式处于禁用状态；但是，您可以通过将 `security config modify` 命令的 `is-fips-enabled` 参数设置为 `true` 来启用此模式。
+
+要在 ONTAP 集群上启用 FIPS 模式，请运行以下命令：
+
+....
+fp-health::> security config modify -interface SSL -is-fips-enabled true
+....
+启用 SSL FIPS 模式后，从 ONTAP 到外部客户端或 ONTAP 外部服务器组件的 SSL 通信将对 SSL 使用 FIPS 兼容加密。
+
+要显示整个集群的 FIPS 状态，请运行以下命令：
+
+....
+fp-health::> set advanced
+fp-health::*> security config modify -interface SSL -is-fips-enabled true
+....
+link:flexpod-fips-solution-benefits-of-flexpod-converged-infrastructure.html["接下来： FlexPod 融合基础架构的解决方案 优势。"]

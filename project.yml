@@ -27,6 +27,9 @@ homepage:
   tiles:
   - title: FlexPod —从此处开始
     links:
+    - title: 新增功能
+      summary: ''
+      url: https://fieldportal.netapp.com/content/1668183
     - title: 视频和演示
       summary: ''
       url: https://tv.netapp.com/search?q=FlexPod

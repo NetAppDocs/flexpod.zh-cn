@@ -1,0 +1,115 @@
+---
+sidebar: sidebar 
+permalink: security/flexpod-fips-solution-benefits-of-flexpod-converged-infrastructure.html 
+keywords: benefits, hardware, software, 
+summary: 为了演示 FlexPod 系统上的 FIPS 设置，我们在 FlexPod 系统上使用了开源 EHR 和开源图片归档和通信系统（ PACS ）系统进行实验室设置和工作负载验证。 
+---
+= FlexPod 融合基础架构的解决方案 优势
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-fips-flexpod-netapp-ontap-storage-and-fips-140-2.html["先前版本： FlexPod NetApp ONTAP 存储和 FIPS 140-2 。"]
+
+医疗保健组织拥有多个任务关键型系统。其中两个最关键的系统是电子健康记录（ EHR ）系统和医学影像系统。为了演示 FlexPod 系统上的 FIPS 设置，我们在 FlexPod 系统上使用了开源 EHR 和开源图片归档和通信系统（ PACS ）系统进行实验室设置和工作负载验证。有关 EHR 功能， EHR 逻辑应用程序组件以及在 FlexPod 系统上实施 EHR 系统时如何获益的完整列表，请参见 https://www.netapp.com/pdf.html?item=/media/22199-tr-4881.pdf["TR-4881 ：适用于电子健康记录系统的 FlexPod"^]。有关医疗成像系统功能，逻辑应用程序组件以及在 FlexPod 上实施医疗成像系统时如何受益的完整列表，请参见。
+
+在 FIPS 设置和工作负载验证期间，我们会运用典型医疗保健组织的工作负载特征。例如，我们采用了开源 EHR 系统，其中包括真实的患者数据访问和更改场景。此外，我们还在 ` * 中执行了医疗成像工作负载，其中包括医学数字成像和通信（ Dicom ）对象。dcm` 文件格式。包含元数据的 Dicom 对象存储在文件和块存储中。此外，我们还从虚拟化 RedHat Enterprise Linux （ RHEL ）服务器中实施了多路径功能。我们会将 Dicom 对象存储在 NFS 上，使用 iSCSI 挂载 LUN 以及使用 FC 挂载 LUN 。在 FIPS 设置和验证期间，我们发现 FlexPod 融合基础架构超出了我们的预期，并且性能无缝。
+
+下图显示了用于 FIPS 设置和验证的 FlexPod 系统。我们利用了 https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_vmware_vsphere_7_0_ontap_9_7.html["采用 VMware vSphere 7.0 和 NetApp ONTAP 9.7 的 FlexPod Datacenter Cisco 验证设计（ CVD ）"^] 在设置过程中。
+
+image:flexpod-fips-image6.png["错误：缺少图形映像"]
+
+
+
+== 解决方案基础架构硬件和软件组件
+
+以下两个图分别列出了在 FlexPod 上启用 FIPS 测试期间使用的硬件和软件组件。这些表中的建议仅为示例；您应与 NetApp SME 合作，确保这些组件适合您的组织。此外，请确保中支持这些组件和版本 https://mysupport.netapp.com/matrix/["NetApp 互操作性表工具"^] （ IMT ）和。
+
+|===
+| 层 | 产品系列 | 数量和型号 | 详细信息 
+
+
+| 计算 | Cisco UCS 5108 机箱 | 1 或 2 |  
+
+
+|  | Cisco UCS 刀片式服务器 | 3 个 B200 M5 | 每个都具有 2 个 20 或更多核心， 2.7 GHz 和 128-384 GB RAM 
+
+
+|  | Cisco UCS 虚拟接口卡（ VIC ） | Cisco UCS 1440 | 请参见 
+
+
+|  | 2 个 Cisco UCS 互联阵列 | 6332 | - 
+
+
+| 网络 | Cisco Nexus 交换机 | 2 个 Cisco Nexus 9332 | - 
+
+
+| 存储网络 | 用于通过 SMB/CIFS ， NFS 或 iSCSI 协议进行存储访问的 IP 网络 | 与上述相同的网络交换机 | - 
+
+
+|  | 通过 FC 进行存储访问 | 2 个 Cisco MDS 9148S | - 
+
+
+| 存储 | NetApp AFF A700 全闪存存储系统 | 1 个集群 | 具有两个节点的集群 
+
+
+|  | 磁盘架 | 一个 DS224C 或 NS224 磁盘架 | 已完全填充 24 个驱动器 
+
+
+|  | SSD | 大于 24 ， 1.2 TB 或更大的容量 | - 
+|===
+|===
+| 软件 | 产品系列 | 版本或版本 | 详细信息 
+
+
+| 各种 | Linux | RHEL 7.X | - 
+
+
+|  | Windows | Windows Server 2012 R2 （ 64 位） | - 
+
+
+|  | NetApp ONTAP | ONTAP 9.7 或更高版本 | - 
+
+
+|  | Cisco UCS 互联阵列 | Cisco UCS Manager 4.1 或更高版本 | - 
+
+
+|  | Cisco 以太网 3000 或 9000 系列交换机 | 对于 9000 系列，对于 3000 系列，则为 7.0 （ 3 ） i7 （ 7 ）或更高版本，对于 9.2 （ 4 ）或更高版本 | - 
+
+
+|  | Cisco FC ： Cisco MDS 9132T | 8.4 （ 1a ）或更高版本 | - 
+
+
+|  | 虚拟机管理程序 | VMware vSphere ESXi 6.7 U2 或更高版本 | - 
+
+
+| 存储 | 虚拟机管理程序管理系统 | VMware vCenter Server 6.7 U3 （ vCSA ）或更高版本 | - 
+
+
+| 网络 | NetApp 虚拟存储控制台（ VSC ） | VSC 9.7 或更高版本 | - 
+
+
+|  | NetApp SnapCenter | SnapCenter 4.3 或更高版本 | - 
+
+
+|  | Cisco UCS Manager | 4.1 （ 1c ）或更高版本 |  
+
+
+| 虚拟机管理程序 | ESXi |  |  
+
+
+| 管理 | 虚拟机管理程序管理系统 VMware vCenter Server 6.7 U3 （ vCSA ）或更高版本 |  |  
+
+
+|  | NetApp 虚拟存储控制台（ VSC ） | VSC 9.7 或更高版本 |  
+
+
+|  | NetApp SnapCenter | SnapCenter 4.3 或更高版本 |  
+
+
+|  | Cisco UCS Manager | 4.1 （ 1c ）或更高版本 |  
+|===
+link:flexpod-fips-additional-flexpod-security-consideration.html["接下来：其他 FlexPod 安全注意事项。"]

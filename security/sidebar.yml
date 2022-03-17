@@ -21,3 +21,28 @@ entries:
     url: "/security/security-ransomware_acknowledgements.html"
   - title: 追加信息
     url: "/security/security-ransomware_additional_information.html"
+- title: 适用于医疗保健的 FIPS 140-2 安全合规 FlexPod 解决方案
+  type: solutions
+  entries:
+  - title: 简介
+    url: "/security/flexpod-fips-introduction.html"
+  - title: 医疗保健领域的网络安全威胁
+    url: "/security/flexpod-fips-cybersecurity-threats-in-healthcare.html"
+  - title: FIPS 140-2 概述
+    url: "/security/flexpod-fips-overview-of-fips-140-2.html"
+  - title: 控制平面与数据平面
+    url: "/security/flexpod-fips-control-plane-versus-data-plane.html"
+  - title: FlexPod Cisco UCS 计算和 FIPS 140-2
+    url: "/security/flexpod-fips-flexpod-cisco-ucs-compute-and-fips-140-2.html"
+  - title: FlexPod Cisco 网络和 FIPS 140-2
+    url: "/security/flexpod-fips-flexpod-cisco-networking-and-fips-140-2.html"
+  - title: FlexPod NetApp ONTAP 存储和 FIPS 140-2
+    url: "/security/flexpod-fips-flexpod-netapp-ontap-storage-and-fips-140-2.html"
+  - title: FlexPod 融合基础架构的解决方案 优势
+    url: "/security/flexpod-fips-solution-benefits-of-flexpod-converged-infrastructure.html"
+  - title: 其他 FlexPod 安全注意事项
+    url: "/security/flexpod-fips-additional-flexpod-security-consideration.html"
+  - title: 结论
+    url: "/security/flexpod-fips-conclusion.html"
+  - title: 知识，版本历史记录以及在何处查找追加信息
+    url: "/security/flexpod-fips-where-to-find-additional-information.html"

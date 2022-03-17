@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: security/flexpod-fips-introduction.html 
+keywords: tr4892, 4892introduction, hitech, fips, hit, ephi, 
+summary: 本文档对基于 Cisco Unified Computing System （ Cisco UCS ）， Cisco Nexus ， Cisco MDS 和 NetApp ONTAP 的 FlexPod 基础架构进行了技术概述，用于托管一个或多个需要 FIPS 140-2 安全合规性的医疗保健 IT 应用程序或解决方案。 
+---
+= TR-4892 ：适用于医疗保健的 FIPS 140-2 安全合规 FlexPod 解决方案
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+NetApp Cisco 公司 John McAbel 的 JayaKishore Esanakula
+
+《经济和临床健康健康信息技术法案》（ HITECH ）要求对经联邦信息处理标准（ FIPS ） 140-2 验证的电子受保护健康信息（ ePHI ）进行加密。要获得 " 提升互操作性计划 " （以前称为 " 有意义的使用奖励计划 " ）认证，运行状况信息技术（ HIT ）应用程序和软件必须符合 FIPS 140-2 的要求。符合条件的提供商和医院必须使用符合 FIPS 140-2 （ 1 级）标准的命中率来获得医疗保健和医疗辅助奖励，并避免从医疗保健和医疗辅助中心（ CMS ）获得报销处罚。FIPS 140-2 认证加密算法符合作为技术保障的要求 https://www.hhs.gov/hipaa/for-professionals/security/laws-regulations/index.html["安全规则"^] 《健康信息可移植性和责任法案》（ HIPAA ）。
+
+FIPS 140-2 属于美国为硬件，软件和固件中的加密模块设置安全要求以保护敏感信息的政府标准。美国要求遵守本标准政府机构， IT 也经常用于金融服务和医疗保健等受监管行业。本技术报告有助于读者深入了解 FIPS 140-2 安全标准。它还有助于受众了解医疗保健组织面临的各种威胁。最后，该技术报告有助于了解在 FlexPod 融合基础架构上部署符合 FIPS 140-2 标准的 FlexPod 系统如何帮助保护医疗保健资产的安全。
+
+
+
+=== 范围
+
+本文档对基于 Cisco Unified Computing System （ Cisco UCS ）， Cisco Nexus ， Cisco MDS 和 NetApp ONTAP 的 FlexPod 基础架构进行了技术概述，用于托管一个或多个需要 FIPS 140-2 安全合规性的医疗保健 IT 应用程序或解决方案。
+
+
+
+=== audience
+
+本文档面向医疗保健行业的技术主管以及 Cisco 和 NetApp 合作伙伴解决方案工程师和专业服务人员。NetApp 假定读者已很好地了解计算和存储规模估算概念，并在技术上熟悉医疗保健威胁，医疗保健安全，医疗保健 IT 系统， Cisco UCS 和 NetApp 存储系统。
+
+link:flexpod-fips-cybersecurity-threats-in-healthcare.html["接下来：医疗保健领域的网络安全威胁。"]

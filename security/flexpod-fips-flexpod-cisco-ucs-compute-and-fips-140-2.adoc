@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: security/flexpod-fips-flexpod-cisco-ucs-compute-and-fips-140-2.html 
+keywords: compute, cisco, nist, compliance mode, fabric interconnect, fi, advanced malware protection 
+summary: FlexPod 架构可以使用符合 FIPS 140-2 的 Cisco UCS 服务器进行设计。根据美国SNIST ， Cisco UCS 服务器可以在 FIPS 140-2 1 级合规模式下运行。 
+---
+= FlexPod Cisco UCS 计算和 FIPS 140-2
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-fips-control-plane-versus-data-plane.html["上一步：控制平面与数据平面。"]
+
+FlexPod 架构可以使用符合 FIPS 140-2 的 Cisco UCS 服务器进行设计。根据美国SNIST ， Cisco UCS 服务器可以在 FIPS 140-2 1 级合规模式下运行。有关符合 FIPS 的 Cisco 组件的完整列表，请参见 https://www.cisco.com/c/en/us/solutions/industries/government/global-government-certifications/fips-140.html?flt0_general-table0=UCSM["Cisco 的 FIPS 140 页面"^]。Cisco UCS Manager 已通过 FIPS 140-2 验证。
+
+
+
+== Cisco UCS 和互联阵列
+
+Cisco UCS Manager 可通过 Cisco 互联阵列（ Fabric Interconnects ， FI ）进行部署和运行。
+
+有关 Cisco UCS 以及如何启用 FIPS 的详细信息，请参见 https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/release/notes/CiscoUCSManager-RN-3-2.html["Cisco UCS Manager 文档"^]。
+
+要在每个网络结构 A 和 B 上的 Cisco 互联阵列上启用 FIPS 模式，请运行以下命令：
+
+....
+fp-health-fabric-A# connect local-mgmt
+fp-health-fabric-A(local-mgmt)# enable fips-mode
+FIPS mode is enabled
+....
+
+NOTE: 要在 Cisco UCS Manager 3.2 （ 3 ）版之前的版本上将集群中的 FI 替换为 FI ，请在将替代 FI 添加到集群之前，先在现有 FI 上禁用 FIPS 模式（ disable `FIPS-mode` ）。集群形成后，在 Cisco UCS Manager 启动过程中， FIPS 模式将自动启用。
+
+Cisco 提供了可在计算或应用程序层实施的以下关键产品：
+
+* * 适用于端点的 Cisco 高级恶意软件保护（ AMP ）。 * 此解决方案 在 Microsoft Windows 和 Linux 操作系统上受支持，集成了预防，检测和响应功能。此安全软件可防止违规行为，在入口点阻止恶意软件，并持续监控和分析文件和流程活动，以快速检测，控制和修复可能规避前线防护的威胁。AMP 的恶意活动保护（ MAP ）组件持续监控所有端点活动，并提供运行时检测和阻止端点上正在运行的程序的异常行为。例如，如果端点行为表明存在勒索软件，则会终止违规流程，从而阻止端点加密并阻止攻击。
+* * 电子邮件安全性的 AMP 。 * 电子邮件已成为传播恶意软件和实施网络攻击的主要工具。平均而言，一天内会交换大约 1000 亿封电子邮件，这为攻击者提供了一个极好的渗透载体，可以渗透到用户的系统中。因此，抵御这种攻击是绝对必要的。AMP 可分析电子邮件中隐藏在恶意附件中的威胁，例如零日攻击和窃取恶意软件。此外，它还利用行业领先的 URL 智能来打击恶意链路。它可以为用户提供高级保护，防止他们遭受鱼叉式网络攻击，勒索软件和其他复杂攻击。
+* * 下一代入侵防护系统（ NGIP ）。 * Cisco Firepower NGIP 可以部署为数据中心的物理设备，也可以部署为 VMware 的虚拟设备（ NGIPSv for VMware ）。这种高效的入侵防护系统可提供可靠的性能和较低的总拥有成本。威胁保护可以通过可选的订阅许可证进行扩展，以提供 AMP ，应用程序可见性和控制以及 URL 筛选功能。虚拟化的 NGIP 可检查虚拟机（ VM ）之间的流量，并使在资源有限的站点上部署和管理 NGIP 解决方案变得更加轻松，从而增强对物理和虚拟资产的保护。
+
+
+link:flexpod-fips-flexpod-cisco-networking-and-fips-140-2.html["接下来： FlexPod Cisco 网络和 FIPS 140-2 。"]

@@ -1,0 +1,202 @@
+---
+sidebar: sidebar 
+permalink: security/flexpod-fips-flexpod-cisco-networking-and-fips-140-2.html 
+keywords: cisco mds, mds 9000, cryptograhic, snmpv3, ssh, 
+summary: 使用软件 8.4.x 的 Cisco MDS 9000 系列平台符合 FIPS 140-2 。Cisco MDS 可为 SNMPv3 和 SSH 实施加密模块和以下服务。 
+---
+= FlexPod Cisco 网络和 FIPS 140-2
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-fips-flexpod-cisco-ucs-compute-and-fips-140-2.html["先前版本： FlexPod Cisco UCS 计算和 FIPS 140-2 。"]
+
+
+
+== Cisco MDS
+
+使用软件 8.4.x 的 Cisco MDS 9000 系列平台为 https://www.cisco.com/c/en/us/solutions/industries/government/global-government-certifications/fips-140.html?flt0_general-table0=mds["符合 FIPS 140-2"^]。Cisco MDS 可为 SNMPv3 和 SSH 实施加密模块和以下服务。
+
+* 支持每个服务的会话建立
+* 支持每个服务密钥派生功能的所有底层加密算法
+* 每个服务的哈希
+* 为每个服务提供对称加密
+
+
+在启用 FIPS 模式之前，请在 MDS 交换机上完成以下任务：
+
+. 使密码长度至少为八个字符。
+. 禁用 Telnet 。用户应仅使用 SSH 登录。
+. 禁用通过 RADIUS/TACACS+ 进行远程身份验证。只能对交换机本地的用户进行身份验证。
+. 禁用 SNMP v1 和 v2 。交换机上为 SNMPv3 配置的任何现有用户帐户只能配置 SHA 以进行身份验证，并配置 AES/3DES 以保证隐私。
+. 禁用 VRRP 。
+. 删除具有用于身份验证的 MD5 或用于加密的 DES 的所有 ike 策略。修改策略，使其使用 SHA 进行身份验证，并使用 3DES/AES 进行加密。
+. 删除所有 SSH 服务器 RSA1 密钥对。
+
+
+要启用 FIPS 模式并在 MDS 交换机上显示 FIPS 状态，请完成以下步骤：
+
+. 显示 FIPS 状态。
++
+....
+MDSSwitch# show fips status
+FIPS mode is disabled
+MDSSwitch# conf
+Enter configuration commands, one per line.  End with CNTL/Z.
+....
+. 设置 2048 位 SSH 密钥。
++
+....
+MDSSwitch(config)# no feature ssh
+XML interface to system may become unavailable since ssh is disabled
+MDSSwitch(config)# no ssh key
+MDSSwitch(config)# show ssh key
+**************************************
+could not retrieve rsa key information
+bitcount: 0
+**************************************
+could not retrieve dsa key information
+bitcount: 0
+**************************************
+no ssh keys present. you will have to generate them
+**************************************
+MDSSwitch(config)# ssh key
+dsa   rsa
+MDSSwitch(config)# ssh key rsa 2048 force
+generating rsa key(2048 bits).....
+...
+generated rsa key
+....
+. 启用 FIPS 模式。
++
+....
+MDSSwitch(config)# fips mode enable
+FIPS mode is enabled
+System reboot is required after saving the configuration for the system to be in FIPS mode
+Warning: As per NIST requirements in 6.X, the minimum RSA Key Size has to be 2048
+....
+. 显示 FIPS 状态。
++
+....
+MDSSwitch(config)# show fips status
+FIPS mode is enabled
+MDSSwitch(config)# feature ssh
+MDSSwitch(config)# show feature | grep ssh
+sshServer            1        enabled
+....
+. 将配置保存到正在运行的配置中。
++
+....
+MDSSwitch(config)# copy ru st
+[########################################] 100%
+exitCopy complete.
+MDSSwitch(config)# exit
+....
+. 重新启动 MDS 交换机
++
+....
+MDSSwitch# reload
+This command will reboot the system. (y/n)?  [n] y
+....
+. 显示 FIPS 状态。
++
+....
+Switch(config)# fips mode enable
+Switch(config)# show fips status
+....
+
+
+有关详细信息，请参见 https://www.cisco.com/c/en/us/td/docs/switches/datacenter/mds9000/sw/5_0/configuration/guides/sec/nxos/sec/fips.html["启用 FIPS 模式"^]。
+
+
+
+== Cisco Nexus
+
+Cisco Nexus 9000 系列交换机（ 9.3 版） https://www.cisco.com/c/en/us/solutions/industries/government/global-government-certifications/fips-140.html?flt0_general-table0=nexus["符合 FIPS 140-2"^]。Cisco Nexus 为 SNMPv3 和 SSH 实施加密模块和以下服务。
+
+* 支持每个服务的会话建立
+* 支持每个服务密钥派生功能的所有底层加密算法
+* 每个服务的哈希
+* 为每个服务提供对称加密
+
+
+在启用 FIPS 模式之前，请在 Cisco Nexus 交换机上完成以下任务：
+
+. 禁用 Telnet 。用户应仅使用安全 Shell （ SSH ）登录。
+. 禁用 SNMPv1 和 v2 。设备上已配置 SNMPv3 的任何现有用户帐户只能配置 SHA 进行身份验证，并配置 AES/3DES 以保证隐私。
+. 删除所有 SSH 服务器 RSA1 密钥对。
+. 启用 HMAC-SHA1 消息完整性检查（ Message Integrity Checking ，麦克风），以便在 Cisco TrustSec 安全关联协议（ SAP ）协商期间使用。要执行此操作，请在 `CTS-manual` 或 `CTS-dot1x` 模式中输入 SAP hash-orolor `HMAC-SHA-1` 命令。
+
+
+要在 Nexus 交换机上启用 FIPS 模式，请完成以下步骤：
+
+. 设置 2048 位 SSH 密钥。
++
+....
+NexusSwitch# show fips status
+FIPS mode is disabled
+NexusSwitch# conf
+Enter configuration commands, one per line.  End with CNTL/Z.
+....
+. 设置 2048 位 SSH 密钥。
++
+....
+NexusSwitch(config)# no feature ssh
+XML interface to system may become unavailable since ssh is disabled
+NexusSwitch(config)# no ssh key
+NexusSwitch(config)# show ssh key
+**************************************
+could not retrieve rsa key information
+bitcount: 0
+**************************************
+could not retrieve dsa key information
+bitcount: 0
+**************************************
+no ssh keys present. you will have to generate them
+**************************************
+NexusSwitch(config)# ssh key
+dsa   rsa
+NexusSwitch(config)# ssh key rsa 2048 force
+generating rsa key(2048 bits).....
+...
+generated rsa key
+....
+. 启用 FIPS 模式。
++
+....
+NexusSwitch(config)# fips mode enable
+FIPS mode is enabled
+System reboot is required after saving the configuration for the system to be in FIPS mode
+Warning: As per NIST requirements in 6.X, the minimum RSA Key Size has to be 2048
+Show fips status
+NexusSwitch(config)# show fips status
+FIPS mode is enabled
+NexusSwitch(config)# feature ssh
+NexusSwitch(config)# show feature | grep ssh
+sshServer            1        enabled
+Save configuration to the running configuration
+NexusSwitch(config)# copy ru st
+[########################################] 100%
+exitCopy complete.
+NexusSwitch(config)# exit
+....
+. 重新启动 Nexus 交换机。
++
+....
+NexusSwitch# reload
+This command will reboot the system. (y/n)?  [n] y
+....
+. 显示 FIPS 状态。
++
+....
+NexusSwitch(config)# fips mode enable
+NexusSwitch(config)# show fips status
+....
+
+
+此外， Cisco NX OS 软件还支持可增强网络异常检测和安全性的网络流功能。网络流可捕获网络上每个对话的元数据，通信所涉及的各方，正在使用的协议以及事务持续时间。对信息进行汇总和分析后，可以深入了解正常行为。通过收集的数据，还可以确定可疑的活动模式，例如恶意软件在网络中传播，否则可能会被忽视。网络流使用流为网络监控提供统计信息。流量是指到达源接口（或 VLAN ）且密钥值相同的单向数据包流。密钥是指数据包中某个字段的标识值。您可以使用流记录创建流，以便为流定义唯一密钥。您可以使用流量导出器将网络流为流收集的数据导出到远程网络流收集器，例如 Cisco Stealthwatch 。Stealthwatch 使用此信息持续监控网络，并在发生勒索软件爆发时提供实时威胁检测和意外事件响应取证。
+
+link:flexpod-fips-flexpod-netapp-ontap-storage-and-fips-140-2.html["接下来： FlexPod NetApp ONTAP 存储和 FIPS 140-2 。"]
