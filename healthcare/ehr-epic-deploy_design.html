@@ -16,20 +16,11 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/>
-  
-  <meta name="description" content="FlexPod for Epic 的架构基于 Epic ， Cisco 和 NetApp 的指导，以及合作伙伴在与各种规模的 Epic 客户合作方面的经验。该架构具有适应性，可根据客户的数据中心战略应用 Epic 的最佳实践，无论该战略是小型还是大型，还是集中式，分布式还是多租户。">
-  <meta name="keywords" content=" design, flexpod, epic, cisco, architecture, storage, layout, volume, lun, configuration">
-  
-  
-
-  <!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="FlexPod for Epic 的架构基于 Epic ， Cisco 和 NetApp 的指导，以及合作伙伴在与各种规模的 Epic 客户合作方面的经验。该架构具有适应性，可根据客户的数据中心战略应用 Epic 的最佳实践，无论该战略是小型还是大型，还是集中式，分布式还是多租户。">
+  <meta name="keywords" content=" design, flexpod, epic, cisco, architecture, storage, layout, volume, lun, configuration"><!-- Icons -->
   <link rel="icon" href="/zh-cn/flexpod/images/favicon.ico" type="image/x-icon">
 
-  <!-- RSS Feed -->
-  
-
-  <!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+  <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
 
   <!-- Elastic Search -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
@@ -59,27 +50,11 @@
   
   <link rel="stylesheet" href="/zh-cn/flexpod/css/landing-page.css" type="text/css">
   <link rel="stylesheet" href="/zh-cn/flexpod/css/tabbed-blocks.css" type="text/css">
-  <link rel="stylesheet" href='/zh-cn/flexpod/css/product-family.css' type="text/css">
-  
-
-  
-  <link rel='stylesheet' href='/zh-cn/flexpod/css/na-feature.css' type='text/css'>
-  
-
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <link rel='stylesheet' href='/zh-cn/flexpod/css/na-feature.css' type='text/css'><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-  <!-- Used to import Promise for IE. Required for SearchKit -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
-  
-    <script src='/zh-cn/flexpod/js/na-search.js'></script>
-  
 
-  
-  <script src='/zh-cn/flexpod/js/na-pagenav.js'></script>
-  
-
-  <link rel='stylesheet' href='/zh-cn/flexpod/css/prism.css' type='text/css'>
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/zh-cn/flexpod/js/na-search.js'></script><script src='/zh-cn/flexpod/js/na-pagenav.js'></script><link rel='stylesheet' href='/zh-cn/flexpod/css/prism.css' type='text/css'>
   <link rel='stylesheet' href='/zh-cn/flexpod/css/prism-netapp.css' type='text/css'>
 
 
@@ -97,9 +72,7 @@
   <script src='/zh-cn/flexpod/js/jquery.navgoco.min.js'></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src='/zh-cn/flexpod/js/toc.js'></script>
-  <script src='/zh-cn/flexpod/js/customscripts.js'></script>
-
-  <script>
+  <script src='/zh-cn/flexpod/js/customscripts.js'></script><script>
       $(document).ready(function() {
           
           var collapseOnInit = true;
@@ -158,7 +131,6 @@
   }
   </script>
   <script src='/zh-cn/flexpod/js/version-dropdown.js'></script>
-  <script src='/zh-cn/flexpod/js/product-family.js'></script>
   <script src='/zh-cn/flexpod/js/FileSaver.min.js'></script>
   <script src='/zh-cn/flexpod/js/jszip-utils.min.js'></script>
   <script src='/zh-cn/flexpod/js/jszip.min.js'></script>
@@ -171,6 +143,25 @@
       <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
       <div class="n-off-canvas-menu__content-wrap">
         <header class="site-header" id="banner">
+  
+  <!-- Start Page Toolbar -->
+  <div class="page-nav-toolbar">
+    <div id="version-dropdown"></div>
+    <div class="page-nav-contribute"  >
+      <a target="_blank" href="https://github.com/NetAppDocs/flexpod/issues/new?body=Page%3A%20[设计](https://docs.netapp.com/zh-cn/flexpod/healthcare/ehr-epic-deploy_design.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/flexpod/images/discuss-sm.svg" class="github-icon" />请求文档变更</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/flexpod/blob/main/healthcare/ehr-epic-deploy_design.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/flexpod/images/edit-sm.svg" class="github-icon" />在 GitHub 上编辑</a>
+      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/flexpod/images/article-sm.svg" class="github-icon" />提供者指南</a>
+    </div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">在此页面上</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
   <!-- Start top_hat -->
   <div class="n-top-hat">
     <div class="n-container">
@@ -1665,6 +1656,50 @@
 
 
 
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/zh-cn/flexpod/pdfs/sidebar/适用于医疗保健的_FIPS_140_2_安全合规_FlexPod_解决方案.pdf" 
+            
+          >
+            <img src="/zh-cn/flexpod/images/pdf.png" width="16" height="16"/>
+            适用于医疗保健的 FIPS 140-2 安全合规 FlexPod 解决方案
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
           
         </li>
       </ul>
@@ -2417,6 +2452,31 @@
         致谢
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/security/security-ransomware_additional_information.html">
         追加信息
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 适用于医疗保健的 FIPS 140-2 安全合规 FlexPod 解决方案</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/security/flexpod-fips-introduction.html">
+        简介
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/security/flexpod-fips-cybersecurity-threats-in-healthcare.html">
+        医疗保健领域的网络安全威胁
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/security/flexpod-fips-overview-of-fips-140-2.html">
+        FIPS 140-2 概述
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/security/flexpod-fips-control-plane-versus-data-plane.html">
+        控制平面与数据平面
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/security/flexpod-fips-flexpod-cisco-ucs-compute-and-fips-140-2.html">
+        FlexPod Cisco UCS 计算和 FIPS 140-2
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/security/flexpod-fips-flexpod-cisco-networking-and-fips-140-2.html">
+        FlexPod Cisco 网络和 FIPS 140-2
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/security/flexpod-fips-flexpod-netapp-ontap-storage-and-fips-140-2.html">
+        FlexPod NetApp ONTAP 存储和 FIPS 140-2
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/security/flexpod-fips-solution-benefits-of-flexpod-converged-infrastructure.html">
+        FlexPod 融合基础架构的解决方案 优势
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/security/flexpod-fips-additional-flexpod-security-consideration.html">
+        其他 FlexPod 安全注意事项
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/security/flexpod-fips-conclusion.html">
+        结论
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/flexpod/security/flexpod-fips-where-to-find-additional-information.html">
+        知识，版本历史记录以及在何处查找追加信息
       </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> 《 Cisco Intersight 与 NetApp ONTAP 存储快速入门指南》</div>
       </a>
@@ -2466,26 +2526,22 @@
   
 
   <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
-    <!-- Begin of page container -->
-    <article class="page-content">
+    <!-- Begin of page container --><article class="page-content">
       <div class="ie-utility">
   <div class="ie-menu">
     <div class="n-breadcrumb">
       <ul class="n-breadcrumb__list">
         <li class="n-breadcrumb__list-item">
-          <a href="https://www.netapp.com">主页</a>
+          <a href="https://docs.netapp.com">docs.netapp.com</a>
         </li>
-        <li class="n-breadcrumb__list-item">
-          <a href="https://docs.netapp.com">文档</a>
-        </li>
+        
+
         
 
         <li class="n-breadcrumb__list-item">
           <a href="/zh-cn/flexpod/">FlexPod</a>
         </li>
-        <li class="n-breadcrumb__list-item">
-          设计
-        </li>
+
       </ul>
     </div>
     <div style="clear: both"></div><!-- Main needs to have height -->
@@ -2514,7 +2570,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-02-21 08:03:36 +0000">02/21/2022</time>
+    <time datetime="2022-03-17 20:31:32 +0000">03/17/2022</time>
     
   
 
@@ -2523,7 +2579,6 @@
 
 
 </p>
-
 
 <div id="preamble">
 <div class="sectionbody">
@@ -2751,27 +2806,7 @@ EPIC 要求通过 FC 将数据库，日志以及应用程序或系统存储作�
     <!-- Page Container -->
   </div>
 
-  
-  <!-- Start Page Toolbar -->
-  <div class="page-nav-toolbar">
-    <div id="version-dropdown"></div>
-    <div class="page-nav-contribute"  >
-      <a target="_blank" href="https://github.com/NetAppDocs/flexpod/issues/new?body=Page%3A%20[设计](https://docs.netapp.com/zh-cn/flexpod/healthcare/ehr-epic-deploy_design.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/flexpod/images/discuss-sm.svg" class="github-icon" />请求文档变更</a>
-      <a target="_blank" href="https://github.com/NetAppDocs/flexpod/blob/main/healthcare/ehr-epic-deploy_design.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/flexpod/images/edit-sm.svg" class="github-icon" />在 GitHub 上编辑</a>
-      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/flexpod/images/article-sm.svg" class="github-icon" />提供者指南</a>
-    </div>
-    <div class="page-nav-container">
-      <nav class="page-nav-fixed">
-        <div class="page-nav-title">在此页面上</div>
-        <div class="page-nav-links">
-          <ul class="page-nav-inner" id="page-menu"></ul>
-        </div>
-      </nav>
-    </div>
-  </div>
-  
-  <div style="clear: both"></div><!-- Main needs to have height -->
-</div>
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
 
         </main>
 
@@ -2873,9 +2908,7 @@ EPIC 要求通过 FC 将数据库，日志以及应用程序或系统存储作�
 </div>
 </footer>
 
-      </div>
-
-      <!-- Elasticsearch JS -->
+      </div><!-- Elasticsearch JS -->
       <script type="text/javascript" src='/zh-cn/flexpod/js/bundle.js'></script>
 
       <!-- Syntax Highlighting -->
@@ -2890,7 +2923,4 @@ EPIC 要求通过 FC 将数据库，日志以及应用程序或系统存储作�
     </script>
     <script src='/zh-cn/flexpod/js/www-ntap.js'></script>
     <script src='/zh-cn/flexpod/js/tabbed-blocks.js'></script>
-  </body>
-
-  
-</html>
+  </body></html>
