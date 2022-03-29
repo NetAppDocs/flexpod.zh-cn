@@ -78,26 +78,50 @@ summary: 以下是从 Cisco Intersight 监控和编排 NetApp 存储的几个用
 以下是 Cisco Intersight 提供的 NetApp 存储任务：
 
 +
-** 任务 1 ：将存储导出策略添加到卷
-** 任务 2 ：将启动程序连接到存储主机（ igroup ）
-** 任务 3 ：展开存储 LUN
-** 任务 4 ：展开存储卷
-** 任务 5 ：查找 NetApp igroup LUN 映射
-** 任务 6 ：按 ID 查找存储 LUN
-** 任务 7 ：按 ID 查找存储卷
-** 任务 8 ：新建存储导出策略
-** 任务 9 ：新建存储光纤通道接口
-** 任务 10 ：新建存储主机
-** 任务 11 ：新建存储 IP 接口
-** 任务 12 ：新建存储 LUN
-** 任务 13 ：新的存储 LUN ID
-** 任务 14 ：新建 Storage Virtual Machine
-** 任务 15 ：新建存储卷
-** 任务 16 ：删除存储导出策略
-** 任务 17 ：删除存储主机
-** 任务 18 ：删除存储 LUN
-** 任务 19 ：删除存储 LUN ID
-** 任务 20 ：删除存储卷
+** 将存储导出策略添加到卷
+** 将启动程序连接到存储主机（ igroup ）
+** 展开存储 LUN
+** 展开存储卷
+** 查找 NetApp igroup LUN 映射
+** 按 ID 查找存储 LUN
+** 按 ID 查找存储卷
+** 新建存储导出策略
+** 新的存储光纤通道接口
+** 新建存储主机
+** 新的存储 IP 接口
+** 新存储 LUN
+** 新的存储 LUN ID
+** 新建 Storage Virtual Machine
+** 新存储卷
+** 删除存储导出策略
+** 删除存储主机
+** 删除存储 LUN
+** 删除存储 LUN ID
+** 删除存储卷
+** 新建存储 Snapshot 策略
+** 新建存储 Snapshot 策略计划
+** 删除存储 Snapshot 策略
+** 删除存储 Snapshot 策略计划
+** 编辑存储 Snapshot 策略
+** 编辑存储 Snapshot 策略计划
+** 新建存储卷快照
+** 删除存储卷 Snapshot
+** 重命名存储卷 Snapshot
+** 新建存储导出策略规则
+** 编辑存储导出策略规则
+** 删除存储导出策略规则
+** 断开存储导出策略与卷的连接
+** 删除存储 FC 接口
+** 删除存储 IP 接口
+** 删除 Storage Virtual Machine
+** 编辑 Storage Virtual Machine 的聚合
+** 新建存储 NAS 智能卷
+** 新的 Storage Smart LUN
+** 删除 Storage Smart LUN
++
+
+NOTE: 新存储 NAS 智能卷和新存储智能 LUN 任务仅适用于 ONTAP 9.8 及更高版本。ONTAP 9.7P1 当前为支持的最低版本。
+
 
 
 

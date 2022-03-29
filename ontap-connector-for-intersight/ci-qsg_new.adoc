@@ -16,6 +16,24 @@ summary: Cisco Intersight 推出了新版本，可为您提供新功能，增强
 
 
 
+== 2022 年 4 月
+
+
+NOTE: 为了确保与未来版本兼容并提供完整的功能，建议您将 NetApp Active IQ Unified Manager 升级到 9.10P1 版。
+
+* 已将广播域添加到以太网端口详细信息页面
+* 在用户界面中将聚合和 SVM 的术语 " 聚合 " 更改为 " 层 "
+* 已将术语 " 集群状态 " 更改为 " 阵列状态 "
+* MTU 筛选器现在适用于 < ， > ， = ， <= ， >= 字符
+* 已将网络接口页面添加到集群清单
+* 已将 AutoSupport 添加到集群清单
+* 已将 `cdpd.enable` 选项添加到节点
+* 已为 CDP 邻居添加对象
+* 在 Cisco Intersight 中添加了 NetApp 工作流存储任务。请参见 link:ci-qsg_use_cases.html["使用案例 3 使用无设计人员表单的自定义工作流"] 有关 NetApp 存储任务的完整列表。
+
+
+
+
 == 2022 年 1 月
 
 * 为 NetApp Active IQ Unified Manager 9.10 或更高版本添加了基于事件的 Intersight 警报。

@@ -24,4 +24,7 @@ image:ci-qsg_image7.png["已启用 NetApp AIQ UM API 网关的屏幕截图"]
 
 以下示例显示了从 Cisco Intersight 声明的 NetApp AIQ UM 目标。
 
+
+NOTE: 声明 NetApp AIQ UM 目标时，由 Active IQ Unified Manager 管理的所有集群都会自动添加到 Intersight 中。
+
 image:ci-qsg_image8.png["从 Cisco Intersight 声明的 NetApp AIQ UM 目标的屏幕截图"]
