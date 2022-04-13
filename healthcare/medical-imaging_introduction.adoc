@@ -6,6 +6,7 @@ summary: 借助 FlexPod ，您可以从一个平台获得一个支持 FC ， FCo
 ---
 = TR-4865 ：适用于医疗成像的 FlexPod
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -57,7 +58,7 @@ COVID-19 显然重塑了数字化转型；据最近的一项调查显示 https:/
 * 利用卷积神经网络的 ML 模型可以实时实现图像处理功能的自动化，因此需要支持 GPU 的基础架构。FlexPod 提供了内置于同一系统中的 CPU 和 GPU 计算组件，并且 CPU 和 GPU 可以彼此独立扩展。
 * 如果在临床最佳实践建议中将 Dicom 标记用作事实，则系统必须以低延迟和高吞吐量执行更多的 Dicom 项目读取。
 * 在评估图像时，各组织的放射科医生之间的实时协作要求最终用户计算设备中具有高性能的图形处理能力。NetApp 提供行业领先的 VDI 解决方案，这些解决方案专为高端图形使用情形而设计并经过验证。有关详细信息，请参见 https://flexpod.com/solutions/use-cases/virtual-desktop-infrastructure/["此处"^]。
-* 在整个 ACO 运行状况组织中，无论映像的记录系统如何，都可以使用一个平台来管理图像和介质，方法是使用医学数字成像和通信等协议（ https://www.dicomstandard.org/about/["Dicom"^]）和对持续使用 DICOM- 的对象的 Web 访问（）
+* 在整个 ACO 运行状况组织中，无论映像的记录系统如何，都可以使用一个平台来管理图像和介质，方法是使用医学数字成像和通信等协议（ https://www.dicomstandard.org/about/["Dicom"^]）和对持续使用 DICOM- 的对象的 Web 访问（ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3447090/["WADO"^]）
 * 运行状况信息交换（ https://www.healthit.gov/topic/health-it-and-health-information-exchange-basics/what-hie["HIE"^]）包括消息中嵌入的图像。
 * 移动设备，例如手持式，无线扫描设备（例如，连接到手机的便携手持式超声波扫描仪），需要一个强大的网络基础架构，在边缘，核心和云端都具有 DoD 级别的安全性，可靠性和延迟。 https://www.netapp.com/us/data-fabric.aspx["NetApp 支持的数据网络结构"^] 为企业大规模提供此功能。
 * 较新的模式具有指数级存储需求；例如， CT 和 MRI 对于每个模式都需要几百 MB 的容量，但数字病理学图像（包括整个幻灯片成像）的大小可能只有几 GB 。FlexPod 的设计采用 https://www.netapp.com/us/media/sb-flexpod-advantage-performance-agility-economics.pdf["性能，可靠性和扩展是基本特征"^]。
@@ -93,7 +94,7 @@ FlexPod 提供了医疗成像行业特有的多项优势：
 * * 工作效率更高。 * 您可以快速部署和扩展此解决方案，以获得最佳临床医生最终用户体验。
 * * Data Fabric 。 * 由 NetApp 提供支持的 Data Fabric 可以跨站点，跨物理边界和跨应用程序将数据集于一体。NetApp 支持的 Data Fabric 专为以数据为中心的世界中的数据驱动型企业而构建。数据在多个位置创建和使用，通常需要利用并与其他位置，应用程序和基础架构共享。因此，您需要一种一致且集成的方式来管理它。此解决方案提供了一种数据管理方式，可让您的 IT 团队掌控一切，并简化日益增加的 IT 复杂性。
 * * FabricPool 。 * NetApp ONTAP FabricPool 有助于降低存储成本，而不会影响性能，效率，安全性或保护。FabricPool 对企业级应用程序是透明的，它可以降低存储 TCO ，而无需重新构建应用程序基础架构，从而充分利用云效率。FlexPod 可以从 FabricPool 的存储分层功能中受益，从而更高效地利用 ONTAP 闪存存储。有关完整信息，请参见 https://www.netapp.com/us/media/tr-4801.pdf["采用 FabricPool 的 FlexPod"^]。
-* * FlexPod 安全性。 * 安全性是 FlexPod 的基础。在过去几年中，勒索软件已成为一种日益严重的威胁。勒索软件是一种基于密码病毒的恶意软件，它使用加密技术构建恶意软件。此恶意软件可以使用对称密钥加密和非对称密钥加密来锁定受影响的数据，并要求勒索以提供密钥来对数据进行解密。要了解 FlexPod 如何帮助缓解勒索软件等威胁，请参见 https://www.netapp.com/us/media/tr-4802.pdf["解决方案到勒索软件"^]。FlexPod 基础架构组件也是联邦信息处理标准 合规。
+* * FlexPod 安全性。 * 安全性是 FlexPod 的基础。在过去几年中，勒索软件已成为一种日益严重的威胁。勒索软件是一种基于密码病毒的恶意软件，它使用加密技术构建恶意软件。此恶意软件可以使用对称密钥加密和非对称密钥加密来锁定受影响的数据，并要求勒索以提供密钥来对数据进行解密。要了解 FlexPod 如何帮助缓解勒索软件等威胁，请参见 https://www.netapp.com/us/media/tr-4802.pdf["解决方案到勒索软件"^]。FlexPod 基础架构组件也是联邦信息处理标准 https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.140-2.pdf["（ FIPS ） 140-2"^] 合规。
 * * FlexPod 合作支持。 * NetApp 和 Cisco 建立了 FlexPod 合作支持，这是一种强大，可扩展且灵活的支持模式，可满足 FlexPod 融合基础架构的独特支持要求。此模式结合了 NetApp 和 Cisco 的经验，资源和技术支持专业知识，可简化识别和解决 FlexPod 支持问题描述的流程，而无论问题位于何处。FlexPod 合作支持模式有助于确认您的 FlexPod 系统运行效率高，并受益于最新技术，同时还可以提供经验丰富的团队来帮助解决集成问题。
 +
 如果您的医疗保健组织运行业务关键型应用程序， FlexPod 合作支持就显得尤为重要。下图显示了 FlexPod 合作支持模式的概述。

@@ -6,6 +6,7 @@ summary: 本节介绍此解决方案中使用的解决方案基础架构和软�
 ---
 = 解决方案基础架构硬件和软件组件
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -22,7 +23,7 @@ image:flexpod-genomics-image6.png["错误：缺少图形映像"]
 
 image:flexpod-genomics-image7.png["错误：缺少图形映像"]
 
-下表列出了在 FlexPod 上启用 GATK 测试期间使用的硬件组件。下面是 https://mysupport.netapp.com/matrix/["NetApp 互操作性表工具"^] （ IMT ）和。
+下表列出了在 FlexPod 上启用 GATK 测试期间使用的硬件组件。下面是 https://mysupport.netapp.com/matrix/["NetApp 互操作性表工具"^] （ IMT ）和 https://ucshcltool.cloudapps.cisco.com/public/["Cisco 硬件兼容性列表（ HCL ）"^]。
 
 |===
 | 层 | 产品系列 | 数量和型号 | 详细信息 

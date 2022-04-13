@@ -6,6 +6,7 @@ summary: 对于 ESXi 主机端配置，请像运行任何企业数据库工作�
 ---
 = ESXi 配置最佳实践
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

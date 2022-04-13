@@ -6,6 +6,7 @@ summary: NetApp 建议将 NetApp RAID DP 技术作为 NetApp FAS 或 AFF 系统�
 ---
 = 聚合配置
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

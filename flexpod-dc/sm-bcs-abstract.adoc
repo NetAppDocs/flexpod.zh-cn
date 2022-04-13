@@ -1,0 +1,17 @@
+---
+sidebar: sidebar 
+permalink: sm-bcs-abstract.html 
+keywords:  
+summary:  
+---
+= 摘要
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+采用 NetApp SnapMirror 业务连续性（ SM-BC ）和 ONTAP 9.10 解决方案 的 FlexPod 数据中心可保护业务关键型数据，使其免受站点故障情形以及单点故障情形的影响。本技术报告概述了 FlexPod SM-BC 解决方案 及其解决方案 组件，并重点介绍了解决方案 的一些配置和验证方面。

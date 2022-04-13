@@ -6,6 +6,7 @@ summary: 本节详细介绍了用于配置 Cisco UCS C 系列独立机架服务�
 ---
 = 部署 Cisco UCS C 系列机架式服务器
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

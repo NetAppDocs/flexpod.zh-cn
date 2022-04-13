@@ -6,6 +6,7 @@ summary: 请始终使用互操作性表工具（ IMT ）验证是否支持所有
 ---
 = 基础架构硬件和软件组件
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

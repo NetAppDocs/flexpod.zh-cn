@@ -6,6 +6,7 @@ summary: 本文档中提供的 NetApp Storage FlexPod 部署指南仅涵盖使�
 ---
 = 概述
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

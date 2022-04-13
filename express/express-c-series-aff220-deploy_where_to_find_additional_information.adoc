@@ -6,6 +6,7 @@ summary: 有关本文档中的信息，请参见 NetApp 网站以及《采用 VM
 ---
 = 从何处查找追加信息
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

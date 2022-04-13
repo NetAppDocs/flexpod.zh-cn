@@ -6,6 +6,7 @@ summary: FlexPod 基础架构是一个模块化，融合，可选择虚拟化，
 ---
 = 其他 FlexPod 安全注意事项
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -20,7 +21,7 @@ HIT 系统的不同组件要求将数据存储在 SMB/CIFS ， NFS ， ext4 和 
 
 在 FlexPod 系统中部署时， Hit 可提供医疗保健行业特有的多项优势。下面列出了这些优势的高级问题描述 ：
 
-* * FlexPod 安全性 * 。安全性是 FlexPod 系统的基础。在过去几年中，勒索软件已成为一种威胁。勒索软件是一种基于密码学的恶意软件，它使用加密技术构建恶意软件。此恶意软件可以使用对称密钥加密和非对称密钥加密来锁定受影响的数据，并要求勒索以提供密钥来对数据进行解密。要了解 FlexPod 解决方案 如何帮助缓解勒索软件等威胁，请参见 https://www.netapp.com/us/media/tr-4802.pdf["TR-4802 ：《从解决方案 到勒索软件》"^]。FlexPod 基础架构组件也是。
+* * FlexPod 安全性 * 。安全性是 FlexPod 系统的基础。在过去几年中，勒索软件已成为一种威胁。勒索软件是一种基于密码学的恶意软件，它使用加密技术构建恶意软件。此恶意软件可以使用对称密钥加密和非对称密钥加密来锁定受影响的数据，并要求勒索以提供密钥来对数据进行解密。要了解 FlexPod 解决方案 如何帮助缓解勒索软件等威胁，请参见 https://www.netapp.com/us/media/tr-4802.pdf["TR-4802 ：《从解决方案 到勒索软件》"^]。FlexPod 基础架构组件也是 https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.140-2.pdf["符合 FIPS 140-2"^]。
 * * Cisco Intersight 。 * Cisco Intersight 是一款基于云的创新型管理即服务平台，可为全堆栈 FlexPod 管理和编排提供单一管理平台。Intersight 平台使用符合 FIPS 140-2 安全标准的加密模块。该平台的带外管理架构使其超出了某些标准或审计范围，例如 HIPAA 。网络上任何可识别的个人运行状况信息都不会发送到 Intersight 门户。
 * * NetApp FPolicy 技术。 * NetApp FPolicy （名称文件策略的演变）是一个文件访问通知框架，用于通过 NFS 或 SMB/CIFS 协议监控和管理文件访问。这项技术已成为 ONTAP 数据管理软件的一部分已有十多年来的发展，它有助于检测勒索软件。此零信任引擎提供的安全措施超出了访问控制列表（ ACL ）中的权限范围。FPolicy 有两种操作模式：原生 和外部：
 +

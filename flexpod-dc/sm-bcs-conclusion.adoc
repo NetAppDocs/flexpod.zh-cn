@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: flexpod-dc/sm-bcs-conclusion.html 
+keywords: conclusion 
+summary: 采用 SM-BC 的 FlexPod 数据中心采用主动 - 主动数据中心设计，为业务关键型工作负载提供业务连续性和灾难恢复。解决方案 通常会将部署在不同地理位置分散的城域中的两个数据中心互连在一起。NetApp SM-BC 解决方案 使用同步复制来保护业务关键型数据服务免受站点故障的影响。解决方案 要求两个 FlexPod 部署站点的往返网络延迟低于 10 毫秒。 
+---
+= 结论
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:sm-bcs-validated-scenarios.html["先前版本：解决方案 验证—经验证的场景。"]
+
+采用 SM-BC 的 FlexPod 数据中心采用主动 - 主动数据中心设计，为业务关键型工作负载提供业务连续性和灾难恢复。解决方案 通常会将部署在不同地理位置分散的城域中的两个数据中心互连在一起。NetApp SM-BC 解决方案 使用同步复制来保护业务关键型数据服务免受站点故障的影响。解决方案 要求两个 FlexPod 部署站点的往返网络延迟低于 10 毫秒。
+
+部署在第三个站点上的 NetApp ONTAP 调解器可监控 SM-BC 解决方案 ，并在检测到站点灾难时实现自动故障转移。采用 VMware HA 和延伸型 VMware vSphere Metro Storage Cluster 的 VMware vCenter 配置可与 NetApp SM-BC 无缝结合使用，从而使解决方案 能够满足所需的零 RPO 和接近零 RTO 目标。
+
+如果 FlexPod SM-BC 解决方案 符合要求，也可以部署在现有 FlexPod 基础架构上，或者通过向现有 FlexPod 添加额外的 FlexPod 解决方案 来实现业务连续性目标。NetApp 和 Cisco 还提供了其他管理，监控和自动化工具，例如 Cisco Intersight ， Ansible 和 HashiCorp Terraform 自动化工具，您可以轻松监控解决方案 ，深入了解其运行情况，并自动执行其部署和操作。
+
+从业务关键型应用程序（例如 Microsoft SQL Server ）的角度来看，即使站点存储中断，驻留在受 ONTAP SM-BC CG 关系保护的 VMware 数据存储库上的数据库仍然可用。验证测试期间已验证，数据库所在存储集群断电后，将发生 SM-BC CG 关系故障转移， Microsoft SQL Server 事务将继续进行，而不会造成应用程序中断。
+
+借助应用程序粒度数据保护，可以为业务关键型应用程序创建 ONTAP SM-BC CG 关系，以满足零 RPO 和接近零 RTO 要求。为了使运行 Microsoft SQL Server 应用程序的 VMware 集群能够在站点存储中断的情况下继续运行，每个站点上 ESXi 主机的启动 LUN 也会受到 SM-BC CG 关系的保护。
+
+借助 FlexPod 的灵活性和可扩展性，您可以从规模合适的基础架构入手，随着业务需求的变化不断扩展和发展。通过这一经过验证的设计，您可以在分布式集成基础架构上可靠地部署基于 VMware vSphere 的私有云，从而提供一个可在多种单点故障情形下以及站点故障下进行故障恢复的解决方案 ，以保护关键业务数据服务。
+
+link:sm-bcs-where-to-find-additional-information-and-version-history.html["下一步：从何处查找追加信息 和版本历史记录。"]

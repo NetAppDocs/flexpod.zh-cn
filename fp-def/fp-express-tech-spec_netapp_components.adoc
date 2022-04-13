@@ -6,6 +6,7 @@ summary: NetApp 存储控制器在 FlexPod 快速架构中为启动和应用程�
 ---
 = NetApp 组件
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

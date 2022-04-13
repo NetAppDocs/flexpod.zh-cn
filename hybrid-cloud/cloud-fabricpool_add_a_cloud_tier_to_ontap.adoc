@@ -6,6 +6,7 @@ summary: 在将对象存储附加到聚合之前，必须将其添加到 ONTAP �
 ---
 = 将云层添加到 ONTAP
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

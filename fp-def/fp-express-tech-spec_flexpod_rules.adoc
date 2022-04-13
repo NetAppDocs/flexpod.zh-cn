@@ -6,6 +6,7 @@ summary: FlexPod 设计支持灵活的基础架构，其中包含许多不同的
 ---
 = FlexPod 规则
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

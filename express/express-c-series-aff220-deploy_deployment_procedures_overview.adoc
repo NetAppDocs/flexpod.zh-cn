@@ -6,6 +6,7 @@ summary: 本文档详细介绍了如何配置完全冗余且高度可用的 Flex
 ---
 = 部署过程
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

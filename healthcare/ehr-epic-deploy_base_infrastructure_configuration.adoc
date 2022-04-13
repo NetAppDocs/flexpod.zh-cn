@@ -6,6 +6,7 @@ summary: 本节介绍配置基础架构所需的网络连接，存储连接和�
 ---
 = 基础架构配置
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

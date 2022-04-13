@@ -6,6 +6,7 @@ summary: FlexPod 架构由本文档中所述的一组规则定义。Cisco 硬件
 ---
 = 支持的 FlexPod 配置与经验证的 配置
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

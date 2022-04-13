@@ -6,6 +6,7 @@ summary: 专用于 MEDITECH 主机的 Meditech 卷可以采用厚配置或精简
 ---
 = 卷配置
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

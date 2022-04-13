@@ -6,6 +6,7 @@ summary: FlexPod 是一组定义的硬件和软件，可为虚拟化和非虚拟
 ---
 = FlexPod 概述和架构
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: 开始之前，请安装或升级 AIQ UM ，创建 Cisco Intersight 帐
 ---
 = 开始之前
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -30,7 +31,7 @@ summary: 开始之前，请安装或升级 AIQ UM ，创建 Cisco Intersight 帐
 * 步骤 *
 
 . 创建 Cisco Intersight 帐户。请访问 https://intersight.com/["https://intersight.com/"^] 以创建 Intersight 帐户。要创建 Cisco Intersight 帐户，您必须具有有效的 Cisco ID 。
-. 从以下位置下载 Intersight 虚拟设备： https://software.cisco.com/download/home/286319499/type/286323047/release/1.0.9-148["software.cisco.com"^]。有关详细信息，请转到。
+. 从以下位置下载 Intersight 虚拟设备： https://software.cisco.com/download/home/286319499/type/286323047/release/1.0.9-148["software.cisco.com"^]。有关详细信息，请转到 https://www.cisco.com/c/en/us/td/docs/unified_computing/Intersight/b_Cisco_Intersight_Appliance_Getting_Started_Guide/b_Cisco_Intersight_Appliance_Install_and_Upgrade_Guide_chapter_00.html["《 Intersight 设备安装和升级指南》"^]。
 . 部署 OVA 。部署 OVA 需要使用 DNS 和 NTP 。
 +
 .. 在部署 OVA 之前，使用 A/PTR 和 CNAME 别名记录配置 DNS 。请参见以下示例。

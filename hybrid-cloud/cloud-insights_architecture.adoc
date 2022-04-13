@@ -6,6 +6,7 @@ summary: 在本节中，我们将回顾 FlexPod 数据中心融合基础架构�
 ---
 = 架构
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: 本节列出了本解决方案适用的目标受众和案例。
 ---
 = 用例
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

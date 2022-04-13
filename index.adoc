@@ -7,6 +7,7 @@ summary: FlexPod 解决方案是一组战略和技术功能，重点强调 NetAp
 ---
 = FlexPod 解决方案
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: 要部署 Cloud Insights for FlexPod ，必须完成以下任务。
 ---
 = 部署适用于 FlexPod 的 Cloud Insights
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

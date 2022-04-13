@@ -6,6 +6,7 @@ summary: 通过在 FlexPod 架构基础上运行 MEDITECH 环境，您的医疗�
 ---
 = TR-4753 ：《适用于 MEDITECH 的 FlexPod 数据中心部署指南》
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

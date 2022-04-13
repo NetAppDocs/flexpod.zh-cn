@@ -6,6 +6,7 @@ summary: 您可以按照以下步骤完成 NetApp AFF 存储部署操作步骤�
 ---
 = NetApp 存储部署操作步骤（第 1 部分）
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

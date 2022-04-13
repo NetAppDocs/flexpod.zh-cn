@@ -6,6 +6,7 @@ summary: 使用 FC 作为数据网络协议时，请在每个存储控制器上�
 ---
 = 启动程序组配置
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

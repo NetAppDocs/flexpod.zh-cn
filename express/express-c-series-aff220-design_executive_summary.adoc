@@ -6,6 +6,7 @@ summary:
 ---
 = NVA-1125- 设计：采用 Cisco UCS C 系列和 AFF A220 系列的 FlexPod Express
 :hardbreaks:
+:allow-uri-read: 
 :firstname: *
 :author: *
 :authorinitials: *

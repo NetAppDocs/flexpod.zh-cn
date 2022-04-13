@@ -6,6 +6,7 @@ summary: 本文档中介绍的 NetApp 功能可帮助您在攻击发生后几分
 ---
 = 继续开展业务运营，无需支付任何费用
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

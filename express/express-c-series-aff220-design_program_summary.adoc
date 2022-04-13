@@ -6,6 +6,7 @@ summary: FlexPod 参考架构以经过 Cisco 验证的设计或经过 NetApp 验
 ---
 = 计划摘要
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: FlexPod for Epic 软件在设计时在各个级别都具有容错能力
 ---
 = Cisco UCS 刀片式服务器和交换机配置
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

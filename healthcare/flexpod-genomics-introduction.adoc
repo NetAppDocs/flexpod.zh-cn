@@ -6,6 +6,7 @@ summary: 借助 FlexPod 融合基础架构平台，医疗保健组织可以托�
 ---
 = TR-4911 ： FlexPod 基因组学
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: 获取 NetApp 许可证文件后，您可以使用 OnCommand System Man
 ---
 = 安装 FabricPool 许可证
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

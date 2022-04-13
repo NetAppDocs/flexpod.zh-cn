@@ -6,6 +6,7 @@ summary: 下表分别列出了医疗成像系统的 FlexPod 基础架构的硬�
 ---
 = 解决方案基础架构硬件和软件组件
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

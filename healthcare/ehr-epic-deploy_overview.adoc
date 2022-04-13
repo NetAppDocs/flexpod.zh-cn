@@ -6,6 +6,7 @@ summary: 本技术报告面向计划在 FlexPod 系统上部署 Epic 的客户�
 ---
 = TR-4693 ：《适用于 Epic EHR 的 FlexPod 数据中心部署指南》
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

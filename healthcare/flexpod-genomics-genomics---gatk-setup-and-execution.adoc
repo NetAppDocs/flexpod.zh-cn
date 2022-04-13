@@ -6,6 +6,7 @@ summary: 本节介绍如何设置 FlexPod 和 GATK 以及如何使用 Cromwell �
 ---
 = 基因组学— GATK 设置和执行
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -28,7 +29,7 @@ link:flexpod-genomics-solution-infrastructure-hardware-and-software-components.h
 
 . 样本收集。
 . https://medlineplus.gov/genetics/understanding/testing/sequencing/["基因组测序"^] 使用序列发生器生成原始数据。
-. 预处理。例如： https://www.nature.com/articles/nmeth.4268.pdf?origin=ppub["deduplication"^] 使用。
+. 预处理。例如： https://www.nature.com/articles/nmeth.4268.pdf?origin=ppub["deduplication"^] 使用 https://broadinstitute.github.io/picard/["图标"^]。
 . 基因组分析。
 +
 .. 映射到参考基因组。
@@ -134,7 +135,7 @@ image:flexpod-genomics-image17.png["错误：缺少图形映像"]
 在 RedHat Enterprise 8.3 Linux VM 上安装以下前提条件：
 
 * Java 8 或 SDK 1.8 或更高版本
-* 从 Broad Institute 下载 GATK 4.2.0.0 https://github.com/broadinstitute/gatk/releases["GitHub 站点"^]。基因组序列数据通常以一系列制表符分隔的 ASCII 列的形式存储。但是， ASCII 需要的存储空间太多。因此，一个新标准会逐渐演变为 BAM （ \* 。 bam ）文件。BAM 文件以压缩，索引和二进制形式存储序列数据。我们 一组公开可用的 BAM 文件，用于从执行 GATK。我们还下载了索引文件（ \* 。 bai ），词典文件（ \* 。dict ）和引用数据文件（ * 。FASAA ）公有。
+* 从 Broad Institute 下载 GATK 4.2.0.0 https://github.com/broadinstitute/gatk/releases["GitHub 站点"^]。基因组序列数据通常以一系列制表符分隔的 ASCII 列的形式存储。但是， ASCII 需要的存储空间太多。因此，一个新标准会逐渐演变为 BAM （ \* 。 bam ）文件。BAM 文件以压缩，索引和二进制形式存储序列数据。我们 https://ftp-trace.ncbi.nlm.nih.gov/ReferenceSamples/["已下载"^] 一组公开可用的 BAM 文件，用于从执行 GATK https://www.nih.gov/["公有域"^]。我们还下载了索引文件（ \* 。 bai ），词典文件（ \* 。dict ）和引用数据文件（ * 。FASAA ）公有。
 
 
 下载后， GATK 工具包将包含一个 JAR 文件和一组支持脚本。
@@ -149,7 +150,7 @@ image:flexpod-genomics-image17.png["错误：缺少图形映像"]
 
 === 克伦威尔引擎
 
-Cromwell 是一款开源引擎，适用于支持工作流管理的科学工作流。可以将 Cromwell 引擎分为两种运行方式 https://cromwell.readthedocs.io/en/stable/Modes/["模式"^]，服务器模式或单工作流运行模式。可以使用控制 Cromwell 引擎的行为。
+Cromwell 是一款开源引擎，适用于支持工作流管理的科学工作流。可以将 Cromwell 引擎分为两种运行方式 https://cromwell.readthedocs.io/en/stable/Modes/["模式"^]，服务器模式或单工作流运行模式。可以使用控制 Cromwell 引擎的行为 https://github.com/broadinstitute/cromwell/blob/develop/cromwell.example.backends/cromwell.examples.conf["Cromwell 引擎配置文件"^]。
 
 * * 服务器模式。 * 启用 https://cromwell.readthedocs.io/en/stable/api/RESTAPI/["RESTful"^] 在 Cromwell 引擎中执行工作流。
 * * 运行模式。 * 运行模式最适合在克伦威尔执行单个工作流， https://cromwell.readthedocs.io/en/stable/CommandLine/["ref"^] 查看运行模式下的一整套可用选项。

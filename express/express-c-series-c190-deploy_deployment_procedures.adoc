@@ -6,6 +6,7 @@ summary:
 ---
 = 部署过程
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

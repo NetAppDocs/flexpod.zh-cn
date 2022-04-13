@@ -6,6 +6,7 @@ summary: 借助 FlexPod ， Cisco 和 NetApp 创建了一个灵活且可扩展�
 ---
 = 结论
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

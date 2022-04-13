@@ -6,6 +6,7 @@ summary: FlexPod 是一款灵活的解决方案，可让您使用当前由 Cisco
 ---
 = 旧设备
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -16,7 +17,7 @@ FlexPod 是一款灵活的解决方案，可让您使用当前由 Cisco 和 NetA
 
 即使这些设备型号已不再可用，但如果您在可用性终止（ EOA ）日期之前购买了其中一种型号，则可以在 FlexPod 配置中使用该设备。有关 FlexPod 中支持的不再销售的原有设备型号的完整列表，请参见 https://mysupport.netapp.com/info/eoa/index.html["NetApp 服务和支持产品计划的可用性终止索引"^]。
 
-有关原有 Cisco 设备的详细信息，请参见的 Cisco EOL 和 EOA 通知 http://www.cisco.com/c/en/us/products/servers-unified-computing/ucs-c-series-rack-servers/eos-eol-notice-listing.html["Cisco UCS C 系列机架式服务器"^]，，和。
+有关原有 Cisco 设备的详细信息，请参见的 Cisco EOL 和 EOA 通知 http://www.cisco.com/c/en/us/products/servers-unified-computing/ucs-c-series-rack-servers/eos-eol-notice-listing.html["Cisco UCS C 系列机架式服务器"^]， http://www.cisco.com/c/en/us/products/servers-unified-computing/ucs-b-series-blade-servers/eos-eol-notice-listing.html["Cisco UCS B 系列刀片式服务器"^]，和 https://www.cisco.com/c/en/us/products/eos-eol-listing.html["Nexus 交换机"^]。
 
 原有 FC 网络结构支持包括以下内容：
 

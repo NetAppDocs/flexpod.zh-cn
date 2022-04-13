@@ -6,6 +6,7 @@ summary:
 ---
 = 声明，版本历史记录以及在何处查找追加信息
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

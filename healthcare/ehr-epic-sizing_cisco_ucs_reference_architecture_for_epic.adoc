@@ -6,6 +6,7 @@ summary: 在部署 Epic 方面， Cisco 设计的 Cisco UCS 参考架构直接�
 ---
 = 适用于 Epic 的 Cisco UCS 参考架构
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: 本节介绍不同版本的 FlexPod Express 的最低硬件要求。
 ---
 = 最低硬件要求
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

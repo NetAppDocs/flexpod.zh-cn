@@ -6,6 +6,7 @@ summary: FabricPool 是 ONTAP 中的一种混合存储解决方案，它使用�
 ---
 = FabricPool
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

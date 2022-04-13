@@ -6,6 +6,7 @@ summary: FlexPod 架构可以使用符合 FIPS 140-2 的 Cisco UCS 服务器进�
 ---
 = FlexPod Cisco UCS 计算和 FIPS 140-2
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

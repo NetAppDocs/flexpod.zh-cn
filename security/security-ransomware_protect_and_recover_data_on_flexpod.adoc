@@ -6,6 +6,7 @@ summary: 本节介绍在发生攻击时如何恢复最终用户的数据，以�
 ---
 = 保护和恢复 FlexPod 上的数据
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

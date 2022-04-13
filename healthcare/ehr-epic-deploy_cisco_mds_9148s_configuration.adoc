@@ -6,6 +6,7 @@ summary: Cisco MDS 9100 系列 FC 交换机可在 NetApp AFF A700 控制器和 C
 ---
 = Cisco MDS 9148S 配置
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

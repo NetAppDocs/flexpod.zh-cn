@@ -6,6 +6,7 @@ summary: 本节详细介绍了在 FlexPod 快速配置中安装 VMware vCenter S
 ---
 = 安装 VMware vCenter Server 6.7
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

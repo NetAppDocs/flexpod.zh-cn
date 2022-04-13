@@ -6,6 +6,7 @@ summary: FlexPod Express 通过提供经过验证的设计，使用行业领先�
 ---
 = 结论
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

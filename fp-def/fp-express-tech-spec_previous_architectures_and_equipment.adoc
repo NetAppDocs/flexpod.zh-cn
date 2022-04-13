@@ -6,6 +6,7 @@ summary: 本节列出了以前的 FlexPod 快速架构及其使用的硬件。
 ---
 = 以前的架构和设备
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

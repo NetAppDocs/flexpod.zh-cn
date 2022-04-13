@@ -6,6 +6,7 @@ summary: 本技术报告将在 NetApp 和 Cisco 的 FlexPod 融合基础架构�
 ---
 = TR-4801 ：采用 FabricPool 的 FlexPod —将非活动数据分层到 Amazon AWS S3
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

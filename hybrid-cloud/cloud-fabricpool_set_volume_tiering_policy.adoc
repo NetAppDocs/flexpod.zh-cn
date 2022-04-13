@@ -6,6 +6,7 @@ summary:
 ---
 = 设置卷分层策略
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

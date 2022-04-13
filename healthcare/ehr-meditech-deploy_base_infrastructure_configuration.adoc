@@ -6,6 +6,7 @@ summary: 要配置基础架构，必须具备以下网络连接，存储连接�
 ---
 = 基础架构配置
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

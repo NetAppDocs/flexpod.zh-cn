@@ -6,6 +6,7 @@ summary: 截至发布时， GATK 工具不支持在内部执行基于 GPU 的原
 ---
 = GPU 设置
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: 本节介绍 FlexPod 快速设计的电源和最低布线要求。
 ---
 = 电源和布线要求
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

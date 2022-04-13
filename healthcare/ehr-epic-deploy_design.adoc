@@ -6,6 +6,7 @@ summary: FlexPod for Epic 的架构基于 Epic ， Cisco 和 NetApp 的指导，
 ---
 = 设计
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

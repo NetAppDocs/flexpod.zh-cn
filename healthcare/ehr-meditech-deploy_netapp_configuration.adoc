@@ -6,6 +6,7 @@ summary: 为 MEDITECH 软件环境部署的 NetApp 存储将采用高可用性�
 ---
 = NetApp 配置
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

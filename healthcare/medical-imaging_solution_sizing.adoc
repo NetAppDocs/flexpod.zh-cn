@@ -6,6 +6,7 @@ summary: 本节介绍了研究的数量以及相应的基础架构要求。
 ---
 = 解决方案规模估算
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

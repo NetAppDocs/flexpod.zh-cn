@@ -6,6 +6,7 @@ summary: 技术规格提供了有关 FlexPod 解决方案中硬件组件的详�
 ---
 = 技术规格和参考资料
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -332,7 +333,7 @@ Cisco Nexus FEX 的技术规格包括速度，固定端口和链路的数量以�
 * 有关 Cisco QSFP 模块的信息，请参见 https://www.cisco.com/c/en/us/products/collateral/interfaces-modules/transceiver-modules/data_sheet_c78-660083.html["Cisco 40GBASE QSFP 模块产品规格"^]。
 * 有关 Cisco 100GB SFP 的信息，请参见 https://www.cisco.com/c/en/us/products/interfaces-modules/100-gigabit-modules/index.html["Cisco 100 千兆模块"^]。
 * 有关 Cisco FC SFP 模块的信息，请参见 https://www.cisco.com/c/en/us/products/collateral/storage-networking/mds-9000-series-multilayer-switches/product_data_sheet09186a00801bc698.html?dtid=osscdc000283["Cisco MDS 9000 系列可插拔收发器产品规格"^]。
-* 有关所有受支持的 Cisco SFP 和收发器模块的信息，请参见 http://www.cisco.com/en/US/docs/interfaces_modules/transceiver_modules/installation/note/78_15160.html["《 Cisco SFP 和 SFP+ 收发器模块安装说明》"^] 和。
+* 有关所有受支持的 Cisco SFP 和收发器模块的信息，请参见 http://www.cisco.com/en/US/docs/interfaces_modules/transceiver_modules/installation/note/78_15160.html["《 Cisco SFP 和 SFP+ 收发器模块安装说明》"^] 和 http://www.cisco.com/en/US/products/hw/modules/ps5455/prod_module_series_home.html["Cisco 收发器模块"^]。
 
 
 
@@ -382,7 +383,7 @@ NetApp 存储控制器的技术规格包括以下组件：
 
 === AFF A-Series
 
-支持在 FlexPod 中使用所有当前型号的 NetApp AFF A 系列存储控制器。追加信息可在中找到 https://www.netapp.com/us/media/ds-3582.pdf["AFF 技术规格"^] 数据表和中的。有关特定 AFF 型号的详细信息，请参见下表中列出的平台专用文档。
+支持在 FlexPod 中使用所有当前型号的 NetApp AFF A 系列存储控制器。追加信息可在中找到 https://www.netapp.com/us/media/ds-3582.pdf["AFF 技术规格"^] 数据表和中的 https://hwu.netapp.com/["NetApp Hardware Universe"^]。有关特定 AFF 型号的详细信息，请参见下表中列出的平台专用文档。
 
 |===
 | 组件 | AFF A 系列控制器平台文档 
@@ -430,7 +431,7 @@ NetApp 存储控制器的技术规格包括以下组件：
 
 === NetApp 磁盘架
 
-NetApp 磁盘架的技术规格包括外形规格大小，每个机箱的驱动器数量以及磁盘架 I/O 模块；下表提供了此文档。有关详细信息，请参见 http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["NetApp 磁盘架和存储介质技术规格"^] 和。
+NetApp 磁盘架的技术规格包括外形规格大小，每个机箱的驱动器数量以及磁盘架 I/O 模块；下表提供了此文档。有关详细信息，请参见 http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["NetApp 磁盘架和存储介质技术规格"^] 和 https://hwu.netapp.com/["NetApp Hardware Universe"^]。
 
 |===
 | 组件 | NetApp FAS/AFF 磁盘架文档 

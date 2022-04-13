@@ -6,6 +6,7 @@ summary: 本节介绍 NetApp ONTAP 数据管理软件以及适用于 Cisco UCS �
 ---
 = 勒索软件保护措施
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

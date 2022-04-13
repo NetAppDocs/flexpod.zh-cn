@@ -6,6 +6,7 @@ summary: 本节介绍 GATK 的 JAR 文件输出。
 ---
 = 使用 JAR 文件执行 GATK 的输出
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

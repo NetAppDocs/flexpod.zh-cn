@@ -6,6 +6,7 @@ summary: 安装 Cisco Intersight Assist 后，您可以申请 NetApp 存储和�
 ---
 = 声明目标
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

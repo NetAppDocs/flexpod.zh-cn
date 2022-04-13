@@ -6,6 +6,7 @@ summary: 本文档提供了有关为 MEDITECH 软件配置 FlexPod 环境的高�
 ---
 = Cisco UCS 刀片式服务器和交换机配置
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

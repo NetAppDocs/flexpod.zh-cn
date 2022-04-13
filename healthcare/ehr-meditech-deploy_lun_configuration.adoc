@@ -6,6 +6,7 @@ summary: 环境中的 MEDITECH 主机数量决定了在 NetApp FAS 或 AFF 系�
 ---
 = LUN 配置
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

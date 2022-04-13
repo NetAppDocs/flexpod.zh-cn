@@ -1,0 +1,149 @@
+---
+sidebar: sidebar 
+permalink: flexpod-dc/sm-bcs-compute.html 
+keywords: compute, connectivity, service profiles, san boot 
+summary: FlexPod SM-BC 解决方案 的计算配置遵循典型的 FlexPod 解决方案 最佳实践。以下各节重点介绍了用于验证的一些连接和配置。此外，还重点介绍了与 SM-BC 相关的一些注意事项，以提供实施参考和指导。 
+---
+= 解决方案 验证—计算
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:sm-bcs-solution-validation_overview.html["Preivous ：概述。"]
+
+FlexPod SM-BC 解决方案 的计算配置遵循典型的 FlexPod 解决方案 最佳实践。以下各节重点介绍了用于验证的一些连接和配置。此外，还重点介绍了与 SM-BC 相关的一些注意事项，以提供实施参考和指导。
+
+
+
+== 连接
+
+UCS B200 刀片式服务器与 IOM 之间的连接由 UCS VIC 卡通过 UCS 5108 机箱背板连接提供。用于验证的 UCS 2204XP 阵列扩展器具有 16 个 10 G 端口，每个端口可连接到八个半宽刀片式服务器，例如，每个服务器两个。为了增加服务器连接带宽，可以添加一个基于夹层的额外 VIC ，将服务器连接到备用 UCS 2408 IOM ，该 IOM 可为每个服务器提供四个 10G 连接。
+
+image:sm-bcs-image17.png["错误：缺少图形映像"]
+
+UCS 5108 机箱与用于验证的 UCS 6454 FI 之间的连接由使用四个 10G 连接的 IOM 2204XP 提供。FI 端口 1 到 4 已配置为这些连接的服务器端口。FI 端口 25 到 28 配置为本地站点的 Nexus 交换机 A 和 B 的网络上行链路端口。下图和表提供了要连接到 UCS 5108 机箱和 Nexus 交换机的 UCS 6454 CLI 的连接图和端口连接详细信息。
+
+image:sm-bcs-image18.png["错误：缺少图形映像"]
+
+|===
+| 本地设备 | 本地端口 | 远程设备 | 远程端口 
+
+
+| UCS 6454 FI A | 1. | IOM A | 1. 
+
+
+|  | 2. |  | 2. 
+
+
+|  | 3. |  | 3. 
+
+
+|  | 4. |  | 4. 
+
+
+|  | 25. | Nexus A | 1/13/1 
+
+
+|  | 26 |  | 1/2/1/13/2 
+
+
+|  | 27 | Nexus B | 1/13/3 
+
+
+|  | 28 |  | 1/13/4 
+
+
+|  | L1 | UCS 6454 FI B | L1 
+
+
+|  | L2 |  | L2 
+
+
+| UCS 6454 FI B | 1. | IOM B | 1. 
+
+
+|  | 2. |  | 2. 
+
+
+|  | 3. |  | 3. 
+
+
+|  | 4. |  | 4. 
+
+
+|  | 25. | Nexus A | 1/13/3 
+
+
+|  | 26 |  | 1/13/4 
+
+
+|  | 27 | Nexus B | 1/13/1 
+
+
+|  | 28 |  | 1/2/1/13/2 
+
+
+|  | L1 | UCS 6454 FI A | L1 
+
+
+|  | L2 |  | L2 
+|===
+
+NOTE: 尽管站点 A 使用的是 Nexus 9336C-FX 2 交换机，而站点 B 使用的是 Nexus 3232C 交换机，但上述连接对于站点 A 和 B 都是相似的。使用 40G 到 4x10G 分支缆线进行 Nexus 到 FI 连接。连接到 Nexus 的 FI 会利用端口通道，并且在 Nexus 交换机上配置了虚拟端口通道，以便将连接聚合到每个 FI 。
+
+
+NOTE: 如果使用的是 IOM ， FI 和 Nexus 交换机组件的不同组合，请务必对环境组合使用适当的缆线和端口速度。
+
+
+NOTE: 可以使用支持高速连接或更多连接的组件来增加带宽。通过添加与支持冗余的组件的附加连接，可以实现更多冗余。
+
+
+
+== 服务配置文件
+
+使用 UCS Manager （ UCSM ）或 Cisco Intersight 管理的互联阵列的刀片式服务器机箱可以使用 UCSM 中提供的服务配置文件和 Intersight 中的服务器配置文件对服务器进行抽象化。此验证使用 UCSM 和服务配置文件来简化服务器管理。使用服务配置文件，只需将原始服务配置文件与新硬件相关联，即可更换或升级服务器。
+
+对于 VMware ESXi 主机，创建的服务配置文件支持以下功能：
+
+* 使用 iSCSI 协议从任一站点的 AFF A250 存储启动 SAN 。
+* 为以下服务器创建了六个 vNIC ：
++
+** 两个冗余 vNIC （ vSwitch0-A 和 vSwitch0-B ）可传输带内管理流量。或者，这些 vNIC 也可由不受 SM-BC 保护的 NFS 协议数据使用。
+** vSphere 分布式交换机使用两个冗余 vNIC （ VDS-A 和 VDS-B ）来传输 VMware vMotion 和其他应用程序流量。
+** iSCSI-A vSwitch 使用 iSCSI-A vNIC 访问 iSCSI-A 路径。
+** iSCSI-B vSwitch 使用 iSCSI-B vNIC 提供对 iSCSI-B 路径的访问。
+
+
+
+
+
+
+== SAN 启动
+
+对于 iSCSI SAN 启动配置， iSCSI 启动参数设置为允许从两个 iSCSI 网络结构进行 iSCSI 启动。为了适应在主集群不可用时从二级集群提供 iSCSI SAN 启动 LUN 的 SM-BC 故障转移场景， iSCSI 静态目标配置应包括站点 A 和站点 B 的目标此外，要最大程度地提高启动 LUN 的可用性，请将 iSCSI 启动参数设置配置为从所有存储控制器启动。
+
+可以在设置 iSCSI 启动参数对话框下的服务配置文件模板的启动策略中配置 iSCSI 静态目标，如下图所示。下表显示了建议的 iSCSI 启动参数设置配置，该配置实施了上述启动策略以实现高可用性。
+
+image:sm-bcs-image19.png["错误：缺少图形映像"]
+
+|===
+| iSCSI 网络结构 | 优先级 | iSCSI 目标 | iSCSI LIF 
+
+
+| iSCSI A | 1. | 站点 A iSCSI 目标 | 站点 A 控制器 1 iSCSI A LIF 
+
+
+|  | 2. | 站点 B iSCSI 目标 | 站点 B 控制器 2 iSCSI A LIF 
+
+
+| iSCSI B | 1. | 站点 B iSCSI 目标 | 站点 B 控制器 1 iSCSI B LIF 
+
+
+|  | 2. | 站点 A iSCSI 目标 | 站点 A 控制器 2 iSCSI B LIF 
+|===
+* 标题： network URL ： /flexpo-dc/sm-bcs-network.html
+

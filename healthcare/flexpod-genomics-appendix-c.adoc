@@ -6,6 +6,7 @@ summary: 本节显示了使用 Cromwell 引擎执行 GATK 后的输出。
 ---
 = 使用 Cromwell 引擎执行 GATK 的输出
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

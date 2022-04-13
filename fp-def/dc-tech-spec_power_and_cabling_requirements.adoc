@@ -6,6 +6,7 @@ summary: FlexPod 设计对电源和布线具有最低要求。
 ---
 = 电源和布线要求
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

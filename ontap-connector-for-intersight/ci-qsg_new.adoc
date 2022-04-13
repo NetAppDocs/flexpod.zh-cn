@@ -6,6 +6,7 @@ summary: Cisco Intersight 推出了新版本，可为您提供新功能，增强
 ---
 = 新增功能
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

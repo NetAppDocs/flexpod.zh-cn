@@ -6,6 +6,7 @@ summary: 此解决方案简要概述了基于 FlexPod 的 VMware vSphere 7 的 F
 ---
 = TR-4914 ：采用 Cisco UCSM ， VMware vSphere 7.0 和 NetApp ONTAP 9 的适用于 FlexPod 的端到端 NVMe
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

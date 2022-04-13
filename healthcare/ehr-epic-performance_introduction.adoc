@@ -6,6 +6,7 @@ summary: 本报告的目标是重点介绍 FlexPod 在采用 Epic Healthcare 工
 ---
 = TR-4784 ： FlexPod for Epic Performance Testing
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

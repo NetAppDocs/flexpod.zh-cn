@@ -6,6 +6,7 @@ summary: 本节详细介绍了 Cisco Nexus 交换机 3172P A 和 B 以及 NetApp
 ---
 = FlexPod 快速布线信息
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

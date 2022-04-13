@@ -6,6 +6,7 @@ summary: FlexPod 快速平台支持本节中列出的存储操作系统。
 ---
 = 存储软件
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

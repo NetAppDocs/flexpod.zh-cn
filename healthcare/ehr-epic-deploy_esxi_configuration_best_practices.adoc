@@ -6,6 +6,7 @@ summary: 本文档概述了 ESXi 配置的最佳实践，这些最佳实践可�
 ---
 = ESXi 配置最佳实践
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

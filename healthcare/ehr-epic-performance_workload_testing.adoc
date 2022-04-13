@@ -6,6 +6,7 @@ summary: AFF A300 HA 对可以轻松运行现有最大的 Epic 实例。如果�
 ---
 = 工作负载测试
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

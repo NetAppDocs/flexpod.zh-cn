@@ -6,6 +6,7 @@ summary: 本报告为 MEDITECH EHR 应用程序软件环境的 FlexPod 规模估
 ---
 = TR-4774 ：适用于 MEDITECH 定向规模估算的 FlexPod
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

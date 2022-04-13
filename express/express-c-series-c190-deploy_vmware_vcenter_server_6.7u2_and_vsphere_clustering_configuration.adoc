@@ -6,6 +6,7 @@ summary: 要配置 VMware vCenter Server 6.7 和 vSphere 集群，请完成此�
 ---
 = VMware vCenter Server 6.7U2 和 vSphere 集群配置
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

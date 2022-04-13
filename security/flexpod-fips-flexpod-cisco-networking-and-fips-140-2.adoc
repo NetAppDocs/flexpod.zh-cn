@@ -6,6 +6,7 @@ summary: 使用软件 8.4.x 的 Cisco MDS 9000 系列平台符合 FIPS 140-2 。
 ---
 = FlexPod Cisco 网络和 FIPS 140-2
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

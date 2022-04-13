@@ -5,6 +5,7 @@ keywords: summary, infrastructure, cisco, ucs, flexpod, datacenter
 summary: 行业趋势表明，数据中心正在向共享基础架构和云计算转型。此外，企业还寻求为远程办公室和分支机构提供简单有效的解决方案，并利用他们在数据中心中熟悉的技术。 
 ---
 = NVA-1123-Deploy ：《采用 VMware vSphere 6.7 的 FlexPod Express 和 NetApp AFF A220 部署指南》
+:allow-uri-read: 
 
 
 NetApp 公司 Savita Kumari

@@ -6,6 +6,7 @@ summary: 以下部分详细介绍了 FlexPod Express 环境中使用的 Cisco Ne
 ---
 = Cisco Nexus 3172P 部署操作步骤
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

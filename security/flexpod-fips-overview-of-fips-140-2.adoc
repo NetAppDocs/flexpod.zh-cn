@@ -6,6 +6,7 @@ summary: FIPS 140-2 指定了在安全系统中使用的加密模块的安全要
 ---
 = FIPS 140-2 概述
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

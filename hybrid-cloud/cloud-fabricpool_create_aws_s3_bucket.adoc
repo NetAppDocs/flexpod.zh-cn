@@ -6,6 +6,7 @@ summary: 存储分段是用于保存数据的对象存储容器。您必须先�
 ---
 = 创建 AWS S3 存储分段
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

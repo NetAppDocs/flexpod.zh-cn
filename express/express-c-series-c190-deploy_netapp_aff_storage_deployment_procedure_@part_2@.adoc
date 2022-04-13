@@ -6,6 +6,7 @@ summary: 要创建 igroup ，请从集群管理节点 SSH 连接运行以下命�
 ---
 = NetApp AFF 存储部署操作步骤（第 2 部分）
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

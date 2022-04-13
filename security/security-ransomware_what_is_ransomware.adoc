@@ -6,6 +6,7 @@ summary: 勒索软件是一种基于密码学的恶意软件，即使用加密�
 ---
 = TR-4802 ： FlexPod ，《勒索软件解决方案》
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

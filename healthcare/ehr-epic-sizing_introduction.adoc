@@ -5,6 +5,7 @@ keywords: flexpod, epic, directional, sizing, solution, benefits, scope
 summary: 本技术报告提供了有关为 Epic 电子健康记录（ EHR ）应用程序软件环境估算 FlexPod （ NetApp 存储和 Cisco 统一计算系统）规模的指导。 
 ---
 = 《 FlexPod for Epic 定向规模估算指南》
+:allow-uri-read: 
 
 
 Brian O ’ Mahony ， Ganesh Kamath ， Atul Bhalodia ， NetApp Mike Brennan ， Jon Ebmeier ， Cisco

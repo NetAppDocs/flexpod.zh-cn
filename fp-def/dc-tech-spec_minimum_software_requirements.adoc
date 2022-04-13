@@ -6,6 +6,7 @@ summary: 以下信息介绍了 FlexPod 配置的最低软件要求。
 ---
 = 最低软件要求
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

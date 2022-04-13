@@ -6,6 +6,7 @@ summary: 本页介绍如何将 FlexPod 与 SAP HANA 和其他 SAP 应用程序�
 ---
 = 基于 FlexPod 的 SAP 简介
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

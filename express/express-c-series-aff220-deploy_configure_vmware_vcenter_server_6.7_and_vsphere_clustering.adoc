@@ -6,6 +6,7 @@ summary: 您可以通过完成以下步骤来配置 VMware vCenter Server 6.7 �
 ---
 = 配置 VMware vCenter Server 6.7 和 vSphere 集群
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

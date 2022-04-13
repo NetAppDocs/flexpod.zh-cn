@@ -6,6 +6,7 @@ summary: 本节介绍在 MEDITECH 环境中可能会发现的计算和存储工�
 ---
 = Meditech 工作负载概述
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

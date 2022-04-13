@@ -6,6 +6,7 @@ summary: 本文档详细介绍了如何配置完全冗余，高可用性的 Flex
 ---
 = 部署过程
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -458,7 +459,7 @@ NOTE: 在此解决方案验证中，使用的最大传输单元（ MTU ）为 90
 
 ==== 配置工作表
 
-在运行设置脚本之前，请填写产品手册中的配置工作表。中提供了配置工作表 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-ssg/home.html["《 ONTAP 9.5 软件设置指南》"^] （可在中使用）。下表显示了 ONTAP 9.5 的安装和配置信息。
+在运行设置脚本之前，请填写产品手册中的配置工作表。中提供了配置工作表 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-ssg/home.html["《 ONTAP 9.5 软件设置指南》"^] （可在中使用 http://docs.netapp.com/ontap-9/index.jsp["ONTAP 9 文档中心"^]）。下表显示了 ONTAP 9.5 的安装和配置信息。
 
 
 NOTE: 此系统在双节点无交换机集群配置中设置。

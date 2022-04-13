@@ -6,6 +6,7 @@ summary: FlexPod 架构旨在在整个计算，网络和存储堆栈中的组件
 ---
 = 架构
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

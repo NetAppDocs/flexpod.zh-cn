@@ -6,6 +6,7 @@ summary: 为了演示 FlexPod 系统上的 FIPS 设置，我们在 FlexPod 系�
 ---
 = FlexPod 融合基础架构的解决方案 优势
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -14,7 +15,7 @@ summary: 为了演示 FlexPod 系统上的 FIPS 设置，我们在 FlexPod 系�
 
 link:flexpod-fips-flexpod-netapp-ontap-storage-and-fips-140-2.html["先前版本： FlexPod NetApp ONTAP 存储和 FIPS 140-2 。"]
 
-医疗保健组织拥有多个任务关键型系统。其中两个最关键的系统是电子健康记录（ EHR ）系统和医学影像系统。为了演示 FlexPod 系统上的 FIPS 设置，我们在 FlexPod 系统上使用了开源 EHR 和开源图片归档和通信系统（ PACS ）系统进行实验室设置和工作负载验证。有关 EHR 功能， EHR 逻辑应用程序组件以及在 FlexPod 系统上实施 EHR 系统时如何获益的完整列表，请参见 https://www.netapp.com/pdf.html?item=/media/22199-tr-4881.pdf["TR-4881 ：适用于电子健康记录系统的 FlexPod"^]。有关医疗成像系统功能，逻辑应用程序组件以及在 FlexPod 上实施医疗成像系统时如何受益的完整列表，请参见。
+医疗保健组织拥有多个任务关键型系统。其中两个最关键的系统是电子健康记录（ EHR ）系统和医学影像系统。为了演示 FlexPod 系统上的 FIPS 设置，我们在 FlexPod 系统上使用了开源 EHR 和开源图片归档和通信系统（ PACS ）系统进行实验室设置和工作负载验证。有关 EHR 功能， EHR 逻辑应用程序组件以及在 FlexPod 系统上实施 EHR 系统时如何获益的完整列表，请参见 https://www.netapp.com/pdf.html?item=/media/22199-tr-4881.pdf["TR-4881 ：适用于电子健康记录系统的 FlexPod"^]。有关医疗成像系统功能，逻辑应用程序组件以及在 FlexPod 上实施医疗成像系统时如何受益的完整列表，请参见 https://www.netapp.com/media/19793-tr-4865.pdf["TR-4865 ：适用于医疗成像的 FlexPod"^]。
 
 在 FIPS 设置和工作负载验证期间，我们会运用典型医疗保健组织的工作负载特征。例如，我们采用了开源 EHR 系统，其中包括真实的患者数据访问和更改场景。此外，我们还在 ` * 中执行了医疗成像工作负载，其中包括医学数字成像和通信（ Dicom ）对象。dcm` 文件格式。包含元数据的 Dicom 对象存储在文件和块存储中。此外，我们还从虚拟化 RedHat Enterprise Linux （ RHEL ）服务器中实施了多路径功能。我们会将 Dicom 对象存储在 NFS 上，使用 iSCSI 挂载 LUN 以及使用 FC 挂载 LUN 。在 FIPS 设置和验证期间，我们发现 FlexPod 融合基础架构超出了我们的预期，并且性能无缝。
 
@@ -26,7 +27,7 @@ image:flexpod-fips-image6.png["错误：缺少图形映像"]
 
 == 解决方案基础架构硬件和软件组件
 
-以下两个图分别列出了在 FlexPod 上启用 FIPS 测试期间使用的硬件和软件组件。这些表中的建议仅为示例；您应与 NetApp SME 合作，确保这些组件适合您的组织。此外，请确保中支持这些组件和版本 https://mysupport.netapp.com/matrix/["NetApp 互操作性表工具"^] （ IMT ）和。
+以下两个图分别列出了在 FlexPod 上启用 FIPS 测试期间使用的硬件和软件组件。这些表中的建议仅为示例；您应与 NetApp SME 合作，确保这些组件适合您的组织。此外，请确保中支持这些组件和版本 https://mysupport.netapp.com/matrix/["NetApp 互操作性表工具"^] （ IMT ）和 https://ucshcltool.cloudapps.cisco.com/public/["Cisco 硬件兼容性列表（ HCL ）"^]。
 
 |===
 | 层 | 产品系列 | 数量和型号 | 详细信息 

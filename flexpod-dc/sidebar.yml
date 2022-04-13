@@ -2,6 +2,31 @@
 section: flexpod-dc
 title: FlexPod 数据中心
 entries:
+- title: 采用 NetApp SnapMirror 业务连续性和 ONTAP 9.10 的 FlexPod 数据中心
+  type: solutions
+  entries:
+  - title: 简介
+    url: "/flexpod-dc/sm-bcs-introduction.html"
+  - title: FlexPod SM-BC 解决方案
+    url: "/flexpod-dc/sm-bcs-flexpod-sm-bc-solution.html"
+  - title: 解决方案验证
+    entries:
+    - title: 概述
+      url: "/flexpod-dc/sm-bcs-solution-validation_overview.html"
+    - title: 计算
+      url: "/flexpod-dc/sm-bcs-compute.html"
+    - title: 网络
+      url: "/flexpod-dc/sm-bcs-network.html"
+    - title: 存储
+      url: "/flexpod-dc/sm-bcs-storage.html"
+    - title: 虚拟化
+      url: "/flexpod-dc/sm-bcs-virtualization.html"
+    - title: 经验证的场景
+      url: "/flexpod-dc/sm-bcs-validated-scenarios.html"
+  - title: 结论
+    url: "/flexpod-dc/sm-bcs-conclusion.html"
+  - title: 从何处查找追加信息和版本历史记录
+    url: "/flexpod-dc/sm-bcs-where-to-find-additional-information-and-version-history.html"
 - title: "《采用 VMware vSphere 7.0 的 FlexPod 数据中心， Cisco VXLAN 单站点网络结构和 NetApp ONTAP
     9.7 设计指南》"
   url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi70_vxlan_evpn_design.html

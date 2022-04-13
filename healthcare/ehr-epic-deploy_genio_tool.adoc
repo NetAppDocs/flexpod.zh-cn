@@ -6,6 +6,7 @@ summary: Genio 是 Epic 使用的存储性能测试工具。它模拟由 Epic �
 ---
 = Genio 工具
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: 以下链接和指南与本文档和 FlexPod 部署相关。
 ---
 = ONTAP 文档
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

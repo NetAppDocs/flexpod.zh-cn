@@ -6,6 +6,7 @@ summary: 此 FlexPod Express 解决方案是 FlexPod 融合基础架构计划的
 ---
 = 解决方案概述
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -72,4 +73,4 @@ FlexPod Express 最适合虚拟化和混合工作负载。虽然此解决方案�
 * 在 vSphere Update Manager （ VUM ）和 vSphere 客户端中增加了增强功能。现在，您可以在一个屏幕上执行连接，检查合规性和修复操作。
 
 
-有关此主题的详细信息，请参见 https://blogs.vmware.com/vsphere/2019/04/vcenter-server-6-7-update-2-whats-new.html["vSphere 6.7U2 页面"^] 和。
+有关此主题的详细信息，请参见 https://blogs.vmware.com/vsphere/2019/04/vcenter-server-6-7-update-2-whats-new.html["vSphere 6.7U2 页面"^] 和 https://docs.vmware.com/en/VMware-vSphere/6.7/rn/vsphere-vcenter-server-67u2-release-notes.html["《 vCenter Server 6.7U2 发行说明》"^]。

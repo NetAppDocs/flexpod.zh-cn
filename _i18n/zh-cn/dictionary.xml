@@ -8372,4 +8372,591 @@
   <block id="3537e24e4745c06b41a151532f5f0cd1" category="paragraph">如果尚未安装或升级到 Active IQ Unified Manager （建议使用最新版本，当前为 9.10P1 ），请安装或升级到此版本。有关说明，请转至 <block ref="b713007c96ed5cceca9ab6b5776ab58a" category="inline-link-macro-rx"></block>。</block>
   <block id="f2fe8cac791595f71f03311fed4e6b2f" category="admonition">声明 NetApp AIQ UM 目标时，由 Active IQ Unified Manager 管理的所有集群都会自动添加到 Intersight 中。</block>
   <block id="707a0e6f55c6b411d13ca40e08c31e14" category="cell">建议使用最新版本的 NetApp Active IQ Unified Manager （当前为 9.10P1 ）</block>
+  <block id="07360078de4b958f771427531bf4153f" category="summary">采用 SM-BC 的 FlexPod 数据中心采用主动 - 主动数据中心设计，为业务关键型工作负载提供业务连续性和灾难恢复。解决方案 通常会将部署在不同地理位置分散的城域中的两个数据中心互连在一起。NetApp SM-BC 解决方案 使用同步复制来保护业务关键型数据服务免受站点故障的影响。解决方案 要求两个 FlexPod 部署站点的往返网络延迟低于 10 毫秒。</block>
+  <block id="68465e6ec95e3e079a2ce31285c5ffca" category="inline-link-macro">先前版本：解决方案 验证—经验证的场景。</block>
+  <block id="a14aa7b4eddc474a1b6e4d9e952daca6" category="paragraph"><block ref="a14aa7b4eddc474a1b6e4d9e952daca6" category="inline-link-macro-rx"></block></block>
+  <block id="7aba7461f6fcaebac35dffb91f314616" category="paragraph">部署在第三个站点上的 NetApp ONTAP 调解器可监控 SM-BC 解决方案 ，并在检测到站点灾难时实现自动故障转移。采用 VMware HA 和延伸型 VMware vSphere Metro Storage Cluster 的 VMware vCenter 配置可与 NetApp SM-BC 无缝结合使用，从而使解决方案 能够满足所需的零 RPO 和接近零 RTO 目标。</block>
+  <block id="3e037da4c687e36a67b82b75747ae958" category="paragraph">如果 FlexPod SM-BC 解决方案 符合要求，也可以部署在现有 FlexPod 基础架构上，或者通过向现有 FlexPod 添加额外的 FlexPod 解决方案 来实现业务连续性目标。NetApp 和 Cisco 还提供了其他管理，监控和自动化工具，例如 Cisco Intersight ， Ansible 和 HashiCorp Terraform 自动化工具，您可以轻松监控解决方案 ，深入了解其运行情况，并自动执行其部署和操作。</block>
+  <block id="b52806cef125f9b9bee0c116a208a855" category="paragraph">从业务关键型应用程序（例如 Microsoft SQL Server ）的角度来看，即使站点存储中断，驻留在受 ONTAP SM-BC CG 关系保护的 VMware 数据存储库上的数据库仍然可用。验证测试期间已验证，数据库所在存储集群断电后，将发生 SM-BC CG 关系故障转移， Microsoft SQL Server 事务将继续进行，而不会造成应用程序中断。</block>
+  <block id="6064e07e43446e6aee4d94abadbddd44" category="paragraph">借助应用程序粒度数据保护，可以为业务关键型应用程序创建 ONTAP SM-BC CG 关系，以满足零 RPO 和接近零 RTO 要求。为了使运行 Microsoft SQL Server 应用程序的 VMware 集群能够在站点存储中断的情况下继续运行，每个站点上 ESXi 主机的启动 LUN 也会受到 SM-BC CG 关系的保护。</block>
+  <block id="b8a64195f6bd6275799f5d7da0c8911e" category="paragraph">借助 FlexPod 的灵活性和可扩展性，您可以从规模合适的基础架构入手，随着业务需求的变化不断扩展和发展。通过这一经过验证的设计，您可以在分布式集成基础架构上可靠地部署基于 VMware vSphere 的私有云，从而提供一个可在多种单点故障情形下以及站点故障下进行故障恢复的解决方案 ，以保护关键业务数据服务。</block>
+  <block id="fa85857e13e0f6d7620479158c9f3416" category="inline-link-macro">下一步：从何处查找追加信息 和版本历史记录。</block>
+  <block id="0dece230b7642f557d0efdba6bae8825" category="paragraph"><block ref="0dece230b7642f557d0efdba6bae8825" category="inline-link-macro-rx"></block></block>
+  <block id="24c974dec7e9ebb820775f4ee5e928ae" category="summary">FlexPod SM-BC 解决方案 的设计和实施详细信息取决于具体的 FlexPod 情况配置和解决方案 目标。在定义了一般业务连续性要求之后，可以通过以下方式创建 FlexPod SM-BC 解决方案 ：使用两个新的 FlexPod 系统实施全新的解决方案 ，在另一个站点添加新的 FlexPod 以与现有 FlexPod 配对，或者将两个现有 FlexPod 系统配对在一起。</block>
+  <block id="956f695311b03a7263d73658e1850744" category="doc">解决方案 验证—概述</block>
+  <block id="85c5fef27abce385b4a32476257223aa" category="inline-link-macro">先前版本： FlexPod SM-BC 解决方案 。</block>
+  <block id="f68e3104da8796e46150aaa480eac54d" category="paragraph"><block ref="f68e3104da8796e46150aaa480eac54d" category="inline-link-macro-rx"></block></block>
+  <block id="c9c8ce1b9ebbc43c5758733a06925275" category="paragraph">由于 FlexPod 解决方案在配置方面具有灵活性，因此可以使用所有受支持的 FlexPod 配置和组件。本节其余部分将提供有关对基于 VMware 的虚拟基础架构解决方案 执行实施验证的信息。除了与 SM-BC 相关的方面之外，此实施遵循标准 FlexPod 部署流程。请查看适用于您的特定配置的可用 FlexPod CVD 和 NVA ，了解一般 FlexPod 实施详细信息。</block>
+  <block id="89800aa027a8c30ffa7d0d1985f266ad" category="section-title">验证拓扑</block>
+  <block id="67e5f25dfe5b0ba1bd54503333235c7b" category="paragraph">为了验证 FlexPod SM-BC 解决方案 ，我们会使用 NetApp ， Cisco 和 VMware 提供的受支持技术组件。解决方案 具有运行 ONTAP 9.10.1 的 NetApp AFF A250 HA 对，站点 A 的双 Cisco Nexus 9336C-f2 交换机和站点 B 的双 Cisco Nexus 3232C 交换机以及两个站点的 Cisco UCS 6454 FI ， 和三个 Cisco UCS B200 M5 服务器，这些服务器位于运行 VMware vSphere 7.0u2 并由 UCS Manager 和 VMware vCenter 服务器管理的每个站点上。下图显示了组件级解决方案 验证拓扑，其中两个 FlexPod 系统在站点 A 上运行，站点 B 通过扩展的第 2 层站点间链路连接， ONTAP 调解器在站点 C 上运行</block>
+  <block id="24a78c21308239818de1b915e881a401" category="paragraph"><block ref="24a78c21308239818de1b915e881a401" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="fec970de22ce00287e2503c38bda96b7" category="paragraph">下表列出了用于解决方案 验证的硬件和软件。请务必注意， Cisco ， NetApp 和 VMware 都具有互操作性表，用于确定是否支持任何特定的 FlexPod 实施：</block>
+  <block id="592b2496cc4352ed1aeae5591919a086" category="list-text"><block ref="592b2496cc4352ed1aeae5591919a086" category="inline-link-rx"></block></block>
+  <block id="d44473496d593c44d9be3c18a5efaaf7" category="inline-link"><block ref="d44473496d593c44d9be3c18a5efaaf7" category="inline-link-rx"></block></block>
+  <block id="28e0d45b8cdcfb41fad36d71152dbc1c" category="list-text"><block ref="28e0d45b8cdcfb41fad36d71152dbc1c" category="inline-link-rx"></block></block>
+  <block id="3adbdb3ac060038aa0e6e6c138ef9873" category="cell">类别</block>
+  <block id="40ddf58fef213ff0d6433ef322edfe2e" category="cell">软件版本</block>
+  <block id="1fa97e20c6dbbcab41f1f53b9ab7e789" category="cell">Cisco UCS 互联阵列 6454</block>
+  <block id="5dcff1dc74d6cd6238f8d5cc7488fb2c" category="cell">4.2 （ 1f ）</block>
+  <block id="b7933d51de958f89ea9939c93a0a2f96" category="cell">4 个（每个站点 2 个）</block>
+  <block id="c7bd7c637a80e45c3d999c7a0ca18d89" category="cell">Cisco UCS B200 M5 服务器</block>
+  <block id="07dfd7ac7ac23089d7f24a99d6a481bf" category="cell">6 个（每个站点 3 个）</block>
+  <block id="0572d19c4ead9f14d01e55483846a150" category="cell">Cisco UCS IOM 2204XP</block>
+  <block id="fc39ad5276920a19c10cf8badc5f5add" category="cell">Cisco VIC 1440 （ PID ： UCSB-MLOM-40G-04 ）</block>
+  <block id="cc9d6832894e6279591b356d941c410d" category="cell">5.2 （ 1a ）</block>
+  <block id="4f1ab794051f11e06eb8f369921a3421" category="cell">2 个（每个站点 1 个）</block>
+  <block id="e03cb690f20e789dd93a34ed8805481d" category="cell">Cisco VIC 1340 （ PID ： UCSB-MLOM-40G-03 ）</block>
+  <block id="e2f81fb0163e07bf1c1ee0e1fd36056d" category="cell">4.5 （ 1a ）</block>
+  <block id="bccca60e2580f06daac38cd6d61844a2" category="cell">9.3 （ 6 ）</block>
+  <block id="acc750a7ef19585007a275340240087a" category="cell">2 （站点 A ）</block>
+  <block id="21cefb007c9064d8adcf6c162e74b0bf" category="cell">Cisco Nexus 3232C</block>
+  <block id="4147e83589a0fca953d8a5ebe484072c" category="cell">2 （站点 B ）</block>
+  <block id="ea2aca94e5b174a1b84f2c3891379526" category="cell">9.10.1</block>
+  <block id="03b0980fed141ff65a4ee480b9f3b94c" category="cell">NetApp System Manager</block>
+  <block id="41457fb5d8e3c193881f54acf22a93b3" category="cell">9.10.</block>
+  <block id="2ffe7358ce461fb4d630742ed966cf0b" category="cell">适用于 VMware vSphere 的 NetApp ONTAP 工具</block>
+  <block id="d8ee09e7304a78e9ed280f17fb6f1043" category="cell">适用于 VMware vSphere 的 NetApp SnapCenter 插件</block>
+  <block id="231910ff513901af9c1921224df901ba" category="cell">4.6</block>
+  <block id="f1fa5e6ccdbac25bb63068aebd57b7c2" category="cell">NetApp ONTAP 调解器</block>
+  <block id="0b0ec9f1cc28b3c19dc6c36dcd5af7cc" category="cell">1.3</block>
+  <block id="6ccd248cd02313575b465988f62f783e" category="cell">NAbox</block>
+  <block id="93541ca844cc8e0766af2148bee73692" category="cell">3.0.2</block>
+  <block id="a514874e2673f726592fdc81e33d378e" category="cell">NetApp 收获</block>
+  <block id="e6cbdf49c3f71c2274e05d1a6c692f1a" category="cell">21.11.1-1</block>
+  <block id="70962288c4edc19aa40f0b953095c224" category="cell">VMware ESXi nenic 以太网驱动程序</block>
+  <block id="43e02e05b2879c1406a010bf6a28f8f7" category="cell">VMware vCenter</block>
+  <block id="bf25ac3fc5bee2b3ec36e32661767682" category="cell">适用于 VMware VAAI 的 NetApp NFS 插件</block>
+  <block id="d1bd83a33f1a841ab7fda32449746cc4" category="cell">2.0</block>
+  <block id="fa6a5a3224d7da66d9e0bdec25f62cf0" category="cell">测试</block>
+  <block id="3a824154b16ed7dab899bf000b80eeee" category="cell">2022 年</block>
+  <block id="ea6b2efbdd4255a9f1b3bbc6399b58f4" category="cell">2019 年</block>
+  <block id="81b43651c3a694ee2791f1f72e535088" category="cell">Microsoft SQL Server Management Studio</block>
+  <block id="b1d8969d01aa0304dd3465c7e39361e0" category="cell">18.10</block>
+  <block id="e3cf940afa524b20b15c43b20405be77" category="cell">HammerDB</block>
+  <block id="a16b0b39889181577ded41b49cd80b1b" category="cell">4.3</block>
+  <block id="dd8f1e8a4b71cba95f086a5df0073935" category="cell">IOmeter</block>
+  <block id="7d23ff901039aef6293954d33d23c066" category="cell">1.1.0</block>
+  <block id="bd92f26c426509a602e4e071a55dd7d4" category="inline-link-macro">接下来：解决方案 验证—计算。</block>
+  <block id="e2ae000c1e1ce6a7571ee607596d9c48" category="paragraph"><block ref="e2ae000c1e1ce6a7571ee607596d9c48" category="inline-link-macro-rx"></block></block>
+  <block id="b39aed889c382b6901948c53e4f93baa" category="summary">FlexPod 数据中心 SM-BC 解决方案 可为各种单点故障情形以及站点灾难提供数据服务保护。每个站点上实施的冗余设计可提供高可用性，而具有跨站点同步数据复制功能的 SM-BC 实施可保护数据服务，使其免受站点范围内灾难的影响。已对部署的解决方案 进行了验证，以确定其所需的解决方案 功能以及解决方案 可保护的各种故障情形。</block>
+  <block id="62685e8381365cd8914177b38786cc9f" category="doc">解决方案 验证—经验证的场景</block>
+  <block id="cfd19a385bc77472210a50ca20d669fb" category="inline-link-macro">先前版本：解决方案 验证—虚拟化。</block>
+  <block id="ab7e34b23710acd06c346b984f8813fc" category="paragraph"><block ref="ab7e34b23710acd06c346b984f8813fc" category="inline-link-macro-rx"></block></block>
+  <block id="7a06599d60e94ff767c7f9c30aa59241" category="section-title">解决方案 功能验证</block>
+  <block id="858e84b5670f24c73fac74a1d335e223" category="paragraph">我们会使用多种测试用例来验证解决方案 功能，并模拟部分和完整的站点故障情形。为了最大限度地减少与现有 FlexPod 数据中心解决方案在 Cisco 验证设计计划下执行的测试的重复，本报告重点介绍了解决方案 中与 SM-BC 相关的方面。我们提供了一些常规 FlexPod 验证，供实践人员进行实施验证。</block>
+  <block id="a8fcb4424ad51a51d04b83f538136e73" category="paragraph">为了进行解决方案 验证，在两个站点的所有 ESXi 主机上为每个 ESXi 主机创建一个 Windows 10 虚拟机。安装了 IOmeter 工具，并使用该工具为从共享本地 iSCSI 数据存储库映射的两个虚拟数据磁盘生成 I/O 。配置的 IOMeter 工作负载参数包括 8 KB I/O ， 75% 读取和 50% 随机，每个数据磁盘具有 8 个未完成的 I/O 命令。对于执行的大多数测试场景， IOmeter I/O 的继续发生原因 表示此场景不会造成数据服务中断。</block>
+  <block id="30bf13d55e83bb6392b76d92aabe6690" category="paragraph">由于 SM-BC 对于数据库服务器等业务应用程序至关重要， 测试中还包括 Windows Server 2022 虚拟机上的 Microsoft SQL Server 2019 实例，用于确认在本地站点的存储不可用且远程站点存储恢复数据服务而不使用应用程序时，应用程序仍会继续运行 中断。</block>
+  <block id="dd3f17458866cabb06103ffd7c5dd98a" category="section-title">ESXi 主机 iSCSI SAN 启动测试</block>
+  <block id="b7e25394cdd58976445d42c9accba7c0" category="paragraph">解决方案 中的 ESXi 主机已配置为从 iSCSI SAN 启动。使用 SAN 启动可以简化更换服务器时的服务器管理，因为服务器的服务配置文件可以与新服务器关联，以便在不更改任何其他配置的情况下启动它。</block>
+  <block id="2c79110ea66dbf59c30607ec5c964ab4" category="paragraph">除了从本地 iSCSI 启动 LUN 启动站点上的 ESXi 主机之外，还会执行测试，以便在 ESXi 主机的本地存储控制器处于接管状态或其本地存储集群完全不可用时启动该主机。这些验证场景可确保根据设计正确配置 ESXi 主机，并可在存储维护或灾难恢复期间启动以实现业务连续性。</block>
+  <block id="effe6740451e770b2c99f6470ee924b9" category="paragraph">在配置 SM-BC 一致性组关系之前，存储控制器 HA 对托管的 iSCSI LUN 具有四个路径，根据最佳实践的实施情况，每个 iSCSI 网络结构有两个路径。主机可以通过两个 iSCSI VLAN/ 网络结构访问 LUN 到 LUN 托管控制器，也可以通过控制器的高可用性配对节点访问 LUN 。</block>
+  <block id="779f9d72487bc06de1d4dd6575cf1abc" category="paragraph">配置 SM-BC 一致性组关系并将镜像 LUN 正确映射到启动程序后， LUN 的路径数会增加一倍。在此实施中，它会从具有两个主动 / 优化路径和两个主动 / 非优化路径变为具有两个主动 / 优化路径和六个主动 / 非优化路径。</block>
+  <block id="01d3af4aa938319d3230fd9227032d20" category="paragraph">下图说明了 ESXi 主机访问 LUN 时可以使用的路径，例如 LUN 0 。由于 LUN 连接到站点 A 控制器 01 ，因此只有通过该控制器直接访问 LUN 的两个路径处于活动 / 优化状态，其余六个路径均处于活动 / 非优化状态。</block>
+  <block id="68c0826dc3cc47ed3a809a39395a1944" category="paragraph"><block ref="68c0826dc3cc47ed3a809a39395a1944" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e9bfcc66125565f8d0783b206973c8a1" category="paragraph">以下 storage-device-path 信息的屏幕截图显示了 ESXi 主机如何查看这两种类型的设备路径。两个主动 / 优化路径显示为具有 `主动（ I/O ）` 路径状态，而六个主动 / 非优化路径仅显示为 `主动` 。另请注意，目标列显示了两个 iSCSI 目标以及用于访问这些目标的相应 iSCSI LIF IP 地址。</block>
+  <block id="976e15be3669a59aa4ee855de1055973" category="paragraph"><block ref="976e15be3669a59aa4ee855de1055973" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="93e70340052732a2ab34f29ad1a7b8a8" category="paragraph">当其中一个存储控制器因维护或升级而关闭时，到达已关闭控制器的两条路径将不再可用，而是显示路径状态 `dead` 。</block>
+  <block id="4a50d18bba95021fefe36cc740160a98" category="paragraph">如果由于手动故障转移测试或自动灾难故障转移，一致性组在主存储集群上发生故障转移，则二级存储集群将继续为 SM-BC 一致性组中的 LUN 提供数据服务。由于 LUN 标识会保留下来，并且数据已同步复制，因此受 SM-BC 一致性组保护的所有 ESXi 主机启动 LUN 仍可从远程存储集群访问。</block>
+  <block id="e6dffdc8f6d0dfeeb8be7d38628997a3" category="section-title">VMware vMotion 和 VM/ 主机关联性测试</block>
+  <block id="ac27418936f343a79345273f45126dbf" category="paragraph">虽然通用 FlexPod VMware Datacenter 解决方案 支持多协议，例如 FC ， iSCSI ， NVMe 和 NFS ，但 FlexPod SM-BC 解决方案 功能支持通常用于业务关键型解决方案的 FC 和 iSCSI SAN 协议。此验证仅使用基于 iSCSI 协议的数据存储库和 iSCSI SAN 启动。</block>
+  <block id="10ed02be76241c0c94216e379600b108" category="paragraph">要允许虚拟机使用任何一个 SM-BC 站点的存储服务，集群中的所有主机都必须挂载两个站点的 iSCSI 数据存储库，以便在两个站点之间迁移虚拟机，并在发生灾难故障转移时进行迁移。</block>
+  <block id="9fc6df3d1f096fd6eef2d6324efb64b9" category="paragraph">对于在虚拟基础架构上运行的不需要跨站点实施 SM-BC 一致性组保护的应用程序，也可以使用 NFS 协议和 NFS 数据存储库。在这种情况下，在为 VM 分配存储时必须谨慎，这样，业务关键型应用程序才能正确使用受 SM-BC 一致性组保护的 SAN 数据存储库来提供业务连续性。</block>
+  <block id="96a9dfe952daba8fef3e00253fb12af1" category="paragraph">以下屏幕截图显示主机已配置为从两个站点挂载 iSCSI 数据存储库。</block>
+  <block id="dec5cbb3a951fa6d35079531698f83eb" category="paragraph"><block ref="dec5cbb3a951fa6d35079531698f83eb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="060c73be745b11b3a01d9ff618e0a328" category="paragraph">您可以选择在两个站点的可用 iSCSI 数据存储库之间迁移虚拟机磁盘，如下图所示。出于性能考虑，最好让虚拟机使用其本地存储集群中的存储来减少磁盘 I/O 延迟。由于物理往返距离延迟约为每 100 公里 1 毫秒，因此当两个站点相隔一定距离时尤其如此。</block>
+  <block id="2c52e19006187a938678027788550da8" category="paragraph"><block ref="2c52e19006187a938678027788550da8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="10d35814901409091a7af569605345c2" category="paragraph">对虚拟机在同一站点以及不同站点的不同主机上的 vMotion 进行了测试，并取得了成功。在站点间手动迁移虚拟机后， VM/ 主机关联性规则会激活虚拟机并将其迁移回正常情况下所属的组。</block>
+  <block id="005c15308fc282c14f74fc423aadd9c4" category="section-title">计划内存储故障转移</block>
+  <block id="2eeac46aa1c00254aab234b4ea3ade9b" category="paragraph">应在初始配置后对解决方案 执行计划内存储故障转移操作，以确定解决方案 在存储故障转移后是否正常工作。此测试有助于确定可能导致 I/O 中断的任何连接或配置问题。定期测试和解决任何连接或配置问题有助于在发生实际站点灾难时提供无中断的数据服务。也可以在计划的存储维护活动之前使用计划的存储故障转移，以便可以从不受影响的站点提供数据服务。</block>
+  <block id="de38bbec025684a26af05f74b6ed4f94" category="paragraph">要启动站点 A 存储数据服务到站点 B 的手动故障转移，您可以使用站点 B ONTAP 系统管理器执行此操作。</block>
+  <block id="fcaf9961b012e44c6c032ee99672f775" category="list-text">导航到保护 &gt; 关系屏幕，确认一致性组关系状态为 `in Sync` 。如果它仍处于 `Synchronizing` 状态，请等待状态变为 `in Sync` ，然后再执行故障转移。</block>
+  <block id="1161fec7b25d7cf23a19d6c672d4f86c" category="list-text">展开源名称旁边的点，然后单击故障转移。</block>
+  <block id="e5137e4f8e06f10e33011dcd2d73da8f" category="paragraph"><block ref="e5137e4f8e06f10e33011dcd2d73da8f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b693449c463380c29eec4c11104bfe14" category="list-text">确认故障转移以启动操作。</block>
+  <block id="42677b8e6a37924af563e0ebe782efc5" category="paragraph"><block ref="42677b8e6a37924af563e0ebe782efc5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2d8f3a0a44af6cd64d05bf48813bd594" category="paragraph">在站点 B System Manager 图形用户界面上对两个一致性组 `CG_ESXi_A` 和 `CG_infra_datastore_A` 启动故障转移后不久，为这两个一致性组提供服务的站点 A I/O 便移至站点 B因此，站点 A 的 I/O 会显著减少，如站点 A System Manager 性能窗格中所示。</block>
+  <block id="9881fdc2069e5f2583af734ff7465fde" category="paragraph"><block ref="9881fdc2069e5f2583af734ff7465fde" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9c99852f17a0d53a681c03fe4dc154e5" category="paragraph">另一方面，站点 B System Manager 信息板的 " 性能 " 窗格显示 IOPS 显著增加，这是因为提供了从站点 A 转移到大约 130 ， 000 IOPS 的额外 I/O 。 并达到大约 1GB/ 秒的吞吐量，同时 I/O 延迟保持在 1 毫秒以下。</block>
+  <block id="16c6afdf305438c2ed12ef39b6df8c96" category="paragraph"><block ref="16c6afdf305438c2ed12ef39b6df8c96" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8bb3a3cb1654ec8cab43949210d4d898" category="paragraph">随着 I/O 从站点 A 透明地迁移到站点 B ，现在可以关闭站点 A 存储控制器以进行计划内维护。完成维护工作或测试并恢复站点 A 存储集群并使其正常运行后，请先检查并等待一致性组保护状态重新更改为同步 `` ，然后再执行故障转移，将故障转移 I/O 从站点 B 返回到站点 A请注意，站点因维护或测试而关闭的时间越长，同步数据以及将一致性组返回到处于同步` 状态的 `所需的时间就越长。</block>
+  <block id="b102de62ff98238287aff2fba0812737" category="paragraph"><block ref="b102de62ff98238287aff2fba0812737" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6d8b9cb0819076358b7dd488b2e3fbd2" category="section-title">计划外存储故障转移</block>
+  <block id="3453e5c1f7fee8331d17af3a001b4f20" category="paragraph">发生实际灾难或进行灾难模拟期间，可能会发生计划外存储故障转移。例如，请参见下图，其中站点 A 的存储系统发生断电，触发计划外存储故障转移，站点 A LUN 的数据服务受 SM-BC 关系保护，然后从站点 B 继续提供</block>
+  <block id="391e7083306f139b4130dee44743cb82" category="paragraph"><block ref="391e7083306f139b4130dee44743cb82" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="dbfec800f7b65de48d694e095d88e10d" category="paragraph">要模拟站点 A 的存储灾难，可以通过物理关闭电源开关来关闭站点 A 的两个存储控制器，从而停止为控制器供电。 或者使用存储控制器服务处理器的 system power management 命令关闭控制器。</block>
+  <block id="64751fdba03d43500681f3ab1bb778dc" category="paragraph">当站点 A 的存储集群断电时，站点 A 存储集群提供的数据服务会突然停止。然后，用于监控第三个站点的 SM-BC 解决方案 的 ONTAP 调解器会检测站点的存储故障情况，并使 SM-BC 解决方案 能够执行自动计划外故障转移。这样，站点 B 存储控制器就可以继续为与站点 A 建立的 SM-BC 一致性组关系中配置的 LUN 提供数据服务</block>
+  <block id="2cfdb538aed18fffc7018c7b39abb185" category="paragraph">从应用程序角度来看，操作系统会短暂暂停数据服务，同时检查 LUN 的路径状态，然后恢复正常运行的站点 B 存储控制器的可用路径上的 I/O 。</block>
+  <block id="564a86177f3a50d7f9c0fcb62c7aea4d" category="paragraph">在验证测试期间，两个站点的 VM 上的 IOMeter 工具会为其本地数据存储库生成 I/O 。关闭站点 A 集群后， I/O 会短暂暂停，然后恢复。请参见以下两个数据，分别查看发生灾难前站点 A 和站点 B 存储集群的信息板，这些信息板显示每个站点的 IOPS 约为 80 ， 000 次，吞吐量约为 600 MB/ 秒。</block>
+  <block id="f6adbb8fc80b9d9c2084a93242639f73" category="paragraph"><block ref="f6adbb8fc80b9d9c2084a93242639f73" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="55210cd28d413b1aceffbd374e20b9de" category="paragraph"><block ref="55210cd28d413b1aceffbd374e20b9de" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a9c040da50755f0706931f8bdad30931" category="paragraph">关闭站点 A 的存储控制器后，我们可以直观地验证站点 B 存储控制器 I/O 是否急剧增加，以便代表站点 A 提供额外的数据服务（请参见下图）。此外， IOMeter VM 的 GUI 还显示，尽管站点 A 存储集群发生中断， I/O 仍会继续。请注意，如果有其他数据存储库由不受 SM-BC 关系保护的 LUN 提供支持，则在发生存储灾难时，这些数据存储库将无法再访问。因此，必须评估各种应用程序数据的业务需求，并将其正确放置在受 SM-BC 关系保护的数据存储库中，以确保业务连续性。</block>
+  <block id="e3ecab7648df8217681ed35970733c7c" category="paragraph"><block ref="e3ecab7648df8217681ed35970733c7c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="809cc5e94479b45f3e3aee800ba39572" category="paragraph">当站点 A 集群关闭时，一致组的关系会显示 `不同步` 状态，如下图所示。重新打开站点 A 存储控制器的电源后，存储集群将启动，站点 A 和站点 B 之间的数据同步将自动进行。</block>
+  <block id="c8dcf7928124fde6db9db80701ebc68a" category="paragraph"><block ref="c8dcf7928124fde6db9db80701ebc68a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c13b800dbe9192deeaebbbccebd0d6fc" category="paragraph">在将数据服务从站点 B 返回到站点 A 之前，您必须检查站点 A System Manager 并确保 SM-BC 关系正常运行且状态恢复同步。确认一致性组处于同步状态后，可以启动手动故障转移操作，将一致性组关系中的数据服务返回到站点 A</block>
+  <block id="1eeb5f24fc3939d51bfee5788ed8905d" category="paragraph"><block ref="1eeb5f24fc3939d51bfee5788ed8905d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a3e7907d9d92abafe948272003b2cfda" category="section-title">完成站点维护或站点故障</block>
+  <block id="94e1f67a9eaa3debcd9c5921a6fe8751" category="paragraph">站点可能需要进行站点维护，断电或受到飓风或地震等自然灾害的影响。因此，您必须练习计划内和计划外站点故障情形，以确保 FlexPod SM-BC 解决方案 配置正确，使其在所有业务关键型应用程序和数据服务发生此类故障时不受影响。已验证以下与站点相关的场景。</block>
+  <block id="e0953b89b7f701d0e7e7c04baebc697d" category="list-text">通过将虚拟机和关键数据服务迁移到另一站点来规划站点维护方案</block>
+  <block id="f25c2923b6a057e53249a6c23de5fc8b" category="list-text">通过关闭服务器和存储控制器以进行灾难模拟而发生计划外站点中断的情形</block>
+  <block id="4518b03678a4ceb2aa5bcd6f5f25ff1a" category="paragraph">要使站点做好计划内站点维护的准备，需要将受影响的虚拟机迁移出站点并执行 vMotion 以及手动故障转移 SM-BC 一致性组关系，以便将虚拟机和关键数据服务迁移到备用站点。测试按两个不同的顺序执行：首先执行 VMotion ，然后执行 SM-BC 故障转移和先执行 SM-BC 故障转移，再执行 vMotion ，以确认虚拟机继续运行且数据服务未中断。</block>
+  <block id="2529342fe0b49ceead1124cdd0985c74" category="paragraph">在执行计划内迁移之前，请更新 VM/ 主机关联性规则，以便站点上当前运行的 VM 自动迁移出正在维护的站点。以下屏幕截图显示了修改站点 A VM/ 主机关联性规则以使 VM 自动从站点 A 迁移到站点 B 的示例。您还可以选择临时禁用关联性规则，以便可以手动迁移 VM ，而不是指定现在需要在站点 B 上运行 VM 。</block>
+  <block id="6a5233f0e7c5c47e7647a49d3a7e773d" category="paragraph"><block ref="6a5233f0e7c5c47e7647a49d3a7e773d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6d74d923e145c1aad92758827d849e91" category="paragraph">迁移虚拟机和存储服务后，您可以关闭服务器，存储控制器，磁盘架和交换机的电源，并执行所需的站点维护活动。完成站点维护并恢复 FlexPod 实例后，您可以更改 VM 的主机组关联性以返回到其原始站点。之后，您应将 " 必须在组中的主机上运行 " VM/ 主机站点关联性规则改回 " 应在组中的主机上运行 " ，以便在发生灾难时，虚拟机可以在另一站点的主机上运行。在验证测试中，所有虚拟机均已成功迁移到另一站点，在对 SM-BC 关系执行故障转移后，数据服务继续正常运行。</block>
+  <block id="94e3e7ba85557776c1293f8556d55cd3" category="paragraph">对于计划外站点灾难模拟，服务器和存储控制器已关闭，以模拟站点灾难。VMware HA 功能可检测已关闭的虚拟机，并在运行正常的站点上重新启动这些虚拟机。此外，在第三个站点运行的 ONTAP 调解器会检测站点故障，而运行正常的站点会启动故障转移，并开始按预期为故障站点提供数据服务。</block>
+  <block id="d50edfe267cec15d690ec015a7156e39" category="paragraph">以下屏幕截图显示了存储控制器的服务处理器 CLI 用于突然关闭站点 A 集群以模拟站点 A 存储灾难。</block>
+  <block id="2b0620efb1a7f731997edf6317a12174" category="paragraph"><block ref="2b0620efb1a7f731997edf6317a12174" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d494470e2cbfb6c2f4f7e78037299573" category="paragraph">以下两个屏幕截图显示了由 NetApp 收集数据工具捕获并显示在 NASbox 监控工具的 Grafana 信息板中的存储集群的 Storage Virtual Machine 信息板。如 IOPS 和吞吐量图的右侧所示，站点 B 集群会在站点 A 集群关闭后立即接管集群 A 的存储工作负载。</block>
+  <block id="5c2d61ae9704cebfe8150f81696530ff" category="paragraph"><block ref="5c2d61ae9704cebfe8150f81696530ff" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ac4c49b6a5447a461af32ba2d8e6966f" category="paragraph"><block ref="ac4c49b6a5447a461af32ba2d8e6966f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6f171c5c1d5ae4c8e70d1b33c3ceada9" category="paragraph">Microsoft SQL Server 是一种广泛采用和部署的数据库平台，适用于企业 IT 。Microsoft SQL Server 2019 版为其关系和分析引擎提供了许多新功能和增强功能。它支持在内部，云中和混合环境中运行应用程序的工作负载，两者可以结合使用。此外，它还可以部署在多个平台上，包括 Windows ， Linux 和容器。</block>
+  <block id="d23e0b67e4eb3eb198b6bc355999516c" category="paragraph">作为 FlexPod SM-BC 解决方案 业务关键型工作负载验证的一部分，安装在 Windows Server 2022 虚拟机上的 Microsoft SQL Server 2019 与 IOMeter 虚拟机一起提供，用于执行计划内和计划外存储故障转移测试。在 Windows Server 2022 VM 上，安装了 SQL Server Management Studio 来管理 SQL 服务器。在测试中，使用 HammerDB 数据库工具生成数据库事务。</block>
+  <block id="b351abc44f63df299b47b6ffed47c5ce" category="paragraph">HammerDB 数据库测试工具配置为使用 Microsoft SQL Server TPROC-C 工作负载进行测试。对于架构构建配置，这些选项已更新为使用包含 10 个虚拟用户的 100 个仓库，如以下屏幕截图所示。</block>
+  <block id="87f99ef6fa5be0ed57c5dbf0a419b070" category="paragraph"><block ref="87f99ef6fa5be0ed57c5dbf0a419b070" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9e2d2b46f15ab19122ed8e0a97a74014" category="paragraph">更新架构构建选项后，架构构建过程便已启动。几分钟后，由于使用 system processor 命令行界面命令大约同时关闭了双节点 AFF A250 存储集群的两个节点，因此出现了计划外模拟站点 B 存储集群故障。</block>
+  <block id="47189c011b8e846918efcf2311e491ec" category="paragraph">在短暂暂停数据库事务后，启动了用于灾难修复的自动故障转移，并恢复了事务。以下屏幕截图显示了该时间的 HammerDB 事务计数器屏幕截图。由于 Microsoft SQL Server 的数据库通常驻留在站点 B 存储集群上，因此，当站点 B 的存储发生故障时，事务会短暂暂停，然后在发生自动故障转移后恢复。</block>
+  <block id="70e4185b9daa95bdd38c763537c51dab" category="paragraph"><block ref="70e4185b9daa95bdd38c763537c51dab" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0cfbccf792115fc29e978aecb3c82a2a" category="paragraph">存储集群指标是通过在安装了 NetApp 收集监控工具的情况下使用 NAbox 工具捕获的。结果将显示在 Storage Virtual Machine 和其他存储对象的预定义 Grafana 信息板中。此信息板可提供延迟，吞吐量， IOPS 和其他详细信息的度量值，站点 B 和站点 A 的读取和写入统计信息将分开</block>
+  <block id="c84be84ab2121fb2e8ab240e966d920d" category="paragraph">此屏幕截图显示了站点 B 存储集群的 NAbox Grafana 性能信息板。</block>
+  <block id="d5cdf555ee7df233cf973ce326d19ab0" category="paragraph"><block ref="d5cdf555ee7df233cf973ce326d19ab0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1387596ae133caf422ffc9241ba216b6" category="paragraph">在引入灾难之前，站点 B 存储集群的 IOPS 约为 100 ， 000 IOPS 。然后，由于发生灾难，性能指标在图形的右侧急剧下降到零。由于站点 B 存储集群已关闭，因此在发生灾难后，无法从站点 B 集群收集任何数据。</block>
+  <block id="2a14ff89df5dda027fda4cf42047a1f6" category="paragraph">另一方面，在自动故障转移之后，站点 A 存储集群的 IOPS 从站点 B 中接管了其他工作负载。在以下屏幕截图中，您可以轻松地在 IOPS 和吞吐量图的右侧看到额外的工作负载，其中显示了站点 A 存储集群的 Nanbox Grafana 性能信息板。</block>
+  <block id="df6fb0c4cb3df54105dbbc86c219957e" category="paragraph"><block ref="df6fb0c4cb3df54105dbbc86c219957e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="61ee2ddd1ac5ffc022e2da8b2cf9e931" category="paragraph">上述存储灾难测试场景确认，在数据库所在的站点 B 上， Microsoft SQL Server 工作负载可以在存储集群完全中断的情况下继续运行。检测到灾难并发生故障转移后，应用程序会透明地使用站点 A 存储集群提供的数据服务。</block>
+  <block id="f5c451f1cedf3e66c63549acb1998ee3" category="paragraph">在计算层，当特定站点上运行的 VM 发生主机故障时， VM 会通过 VMware HA 功能自动重新启动。要使站点计算完全中断， VM/ 主机关联性规则允许在运行正常的站点上重新启动 VM 。但是，要使业务关键型应用程序能够提供无中断服务，需要使用基于应用程序的集群，例如 Microsoft 故障转移集群或基于 Kubernetes 容器的应用程序架构，以避免应用程序停机。请参见有关实施基于应用程序的集群的相关文档，该文档不在本技术报告的讨论范围之内。</block>
+  <block id="fc37581a93e14f865030ca55b7270290" category="paragraph"><block ref="fc37581a93e14f865030ca55b7270290" category="inline-link-macro-rx"></block></block>
+  <block id="9bba922e59a4daeddb1809c2781a44a1" category="summary">FlexPod SM-BC 解决方案 的计算配置遵循典型的 FlexPod 解决方案 最佳实践。以下各节重点介绍了用于验证的一些连接和配置。此外，还重点介绍了与 SM-BC 相关的一些注意事项，以提供实施参考和指导。</block>
+  <block id="bc8a1d734e83e27cc8a2adc1858d6959" category="doc">解决方案 验证—计算</block>
+  <block id="ed0d7e76ce8e3038702fbab0cb9524ab" category="inline-link-macro">Preivous ：概述。</block>
+  <block id="e38775cef86d4cc66d36ea249100c217" category="paragraph"><block ref="e38775cef86d4cc66d36ea249100c217" category="inline-link-macro-rx"></block></block>
+  <block id="3f0294fb25b6df81fd5b767f0d74974f" category="paragraph">UCS B200 刀片式服务器与 IOM 之间的连接由 UCS VIC 卡通过 UCS 5108 机箱背板连接提供。用于验证的 UCS 2204XP 阵列扩展器具有 16 个 10 G 端口，每个端口可连接到八个半宽刀片式服务器，例如，每个服务器两个。为了增加服务器连接带宽，可以添加一个基于夹层的额外 VIC ，将服务器连接到备用 UCS 2408 IOM ，该 IOM 可为每个服务器提供四个 10G 连接。</block>
+  <block id="faf94a25f3b3dbcdc7d8df2b1e466b18" category="paragraph"><block ref="faf94a25f3b3dbcdc7d8df2b1e466b18" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3e760ed69fcce8d06a007f41a5c61d17" category="paragraph">UCS 5108 机箱与用于验证的 UCS 6454 FI 之间的连接由使用四个 10G 连接的 IOM 2204XP 提供。FI 端口 1 到 4 已配置为这些连接的服务器端口。FI 端口 25 到 28 配置为本地站点的 Nexus 交换机 A 和 B 的网络上行链路端口。下图和表提供了要连接到 UCS 5108 机箱和 Nexus 交换机的 UCS 6454 CLI 的连接图和端口连接详细信息。</block>
+  <block id="c6dd3a48117647945bebcc115abb8629" category="paragraph"><block ref="c6dd3a48117647945bebcc115abb8629" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4dd5e1c262b334b75713798615378310" category="cell">UCS 6454 FI A</block>
+  <block id="5cdf02cc1cc523d3abdae4b7fa856dd8" category="cell">IOM A</block>
+  <block id="8e296a067a37563370ded05f5a3bf3ec" category="cell">25.</block>
+  <block id="19630796906a81f321eb2c76bbb10bac" category="cell">Nexus A</block>
+  <block id="26501ba97c684cd722b33b9755ef0dba" category="cell">1/13/1</block>
+  <block id="4e732ced3463d06de0ca9a15b6153677" category="cell">26</block>
+  <block id="4cdb91f64bcc968939cab93b46464b40" category="cell">1/2/1/13/2</block>
+  <block id="7456d96f8c8db139387a6120d3d24d55" category="cell">Nexus B</block>
+  <block id="7789aa4bac3f89f6033c10cbdd67d334" category="cell">1/13/3</block>
+  <block id="33e75ff09dd601bbe69f351039152189" category="cell">28</block>
+  <block id="2d73824c65cba850008ab880aae967f1" category="cell">1/13/4</block>
+  <block id="9ec4c0afd450ceac7adb81c3bcfc9732" category="cell">L1</block>
+  <block id="d65e9db3ca9fe5a5b3409c6676068511" category="cell">UCS 6454 FI B</block>
+  <block id="7e6aa2d53f6ee2b1a34b017fa403cb76" category="cell">L2</block>
+  <block id="977159f7bb4f0bab752c1b340782e48c" category="cell">IOM B</block>
+  <block id="d1846819f7e6f286fed6fa7a54dbb257" category="admonition">尽管站点 A 使用的是 Nexus 9336C-FX 2 交换机，而站点 B 使用的是 Nexus 3232C 交换机，但上述连接对于站点 A 和 B 都是相似的。使用 40G 到 4x10G 分支缆线进行 Nexus 到 FI 连接。连接到 Nexus 的 FI 会利用端口通道，并且在 Nexus 交换机上配置了虚拟端口通道，以便将连接聚合到每个 FI 。</block>
+  <block id="5db79ec7bffed5b6b6af4d52ad6b2241" category="admonition">如果使用的是 IOM ， FI 和 Nexus 交换机组件的不同组合，请务必对环境组合使用适当的缆线和端口速度。</block>
+  <block id="6df25b5fb39ff5fa539e727e2254a866" category="admonition">可以使用支持高速连接或更多连接的组件来增加带宽。通过添加与支持冗余的组件的附加连接，可以实现更多冗余。</block>
+  <block id="4b86591776fc42ddcf8cb89e01768aaf" category="section-title">服务配置文件</block>
+  <block id="e233bcb8957b6e6f4b1933c238a30273" category="paragraph">使用 UCS Manager （ UCSM ）或 Cisco Intersight 管理的互联阵列的刀片式服务器机箱可以使用 UCSM 中提供的服务配置文件和 Intersight 中的服务器配置文件对服务器进行抽象化。此验证使用 UCSM 和服务配置文件来简化服务器管理。使用服务配置文件，只需将原始服务配置文件与新硬件相关联，即可更换或升级服务器。</block>
+  <block id="5a8a8c704590cbdb2553107bdaf0fb82" category="paragraph">对于 VMware ESXi 主机，创建的服务配置文件支持以下功能：</block>
+  <block id="0a980278599a7a8f202edf452fb52785" category="list-text">使用 iSCSI 协议从任一站点的 AFF A250 存储启动 SAN 。</block>
+  <block id="e48a1c6b4c86f73671741df9ae65050a" category="list-text">为以下服务器创建了六个 vNIC ：</block>
+  <block id="e42f1656522f026a4a7201fda2534a16" category="list-text">两个冗余 vNIC （ vSwitch0-A 和 vSwitch0-B ）可传输带内管理流量。或者，这些 vNIC 也可由不受 SM-BC 保护的 NFS 协议数据使用。</block>
+  <block id="877cc12ba9cd72dc90bf3e7f3ecb2885" category="list-text">vSphere 分布式交换机使用两个冗余 vNIC （ VDS-A 和 VDS-B ）来传输 VMware vMotion 和其他应用程序流量。</block>
+  <block id="96de6cb5ae7ab86747558a7756243087" category="list-text">iSCSI-A vSwitch 使用 iSCSI-A vNIC 访问 iSCSI-A 路径。</block>
+  <block id="35fc2427b2a52b34587ab7a3a4b9daac" category="list-text">iSCSI-B vSwitch 使用 iSCSI-B vNIC 提供对 iSCSI-B 路径的访问。</block>
+  <block id="445bfa48fdef1999bb00d0ae561f8e01" category="paragraph">对于 iSCSI SAN 启动配置， iSCSI 启动参数设置为允许从两个 iSCSI 网络结构进行 iSCSI 启动。为了适应在主集群不可用时从二级集群提供 iSCSI SAN 启动 LUN 的 SM-BC 故障转移场景， iSCSI 静态目标配置应包括站点 A 和站点 B 的目标此外，要最大程度地提高启动 LUN 的可用性，请将 iSCSI 启动参数设置配置为从所有存储控制器启动。</block>
+  <block id="2341218b89ffeb0e95de8a94808dc1af" category="paragraph">可以在设置 iSCSI 启动参数对话框下的服务配置文件模板的启动策略中配置 iSCSI 静态目标，如下图所示。下表显示了建议的 iSCSI 启动参数设置配置，该配置实施了上述启动策略以实现高可用性。</block>
+  <block id="b3360862d0e98ea04db2b2c54d13c081" category="paragraph"><block ref="b3360862d0e98ea04db2b2c54d13c081" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3bdc6d549899cc7ea734bf186a7df1c7" category="cell">iSCSI 网络结构</block>
+  <block id="502996d9790340c5fd7b86a5b93b1c9f" category="cell">优先级</block>
+  <block id="ba168a9601baaefb6e715226a8be8629" category="cell">iSCSI 目标</block>
+  <block id="78ad16677c3c367a8a8aec744bff8555" category="cell">iSCSI LIF</block>
+  <block id="9eab269a8ed687dd91b11209ed6284eb" category="cell">iSCSI A</block>
+  <block id="579e78241cf6a4652ac73bf45787d704" category="cell">站点 A iSCSI 目标</block>
+  <block id="8cfa0bf1642b326dc134539a161216cf" category="cell">站点 A 控制器 1 iSCSI A LIF</block>
+  <block id="8f952d17ea2abbbc5a2748b95e5b4944" category="cell">站点 B iSCSI 目标</block>
+  <block id="7bcaa8316e0807fd4f1560e5e852138d" category="cell">站点 B 控制器 2 iSCSI A LIF</block>
+  <block id="6add07bc86a316af4f25422f4c8887b7" category="cell">iSCSI B</block>
+  <block id="56d1b12d5a4e9f59a4453bb6a7cb7b08" category="cell">站点 B 控制器 1 iSCSI B LIF</block>
+  <block id="5975420dbf2246f6edb6a902578b5ff1" category="cell">站点 A 控制器 2 iSCSI B LIF</block>
+  <block id="5e7b9ab3adef639ef9c61005fee6237c" category="list-text">标题： network URL ： /flexpo-dc/sm-bcs-network.html</block>
+  <block id="efa3c8203ca8f331abebfd2b1b8197b6" category="summary">FlexPod SM-BC 解决方案 的网络配置遵循每个站点的典型 FlexPod 解决方案 最佳实践。对于站点间连接，解决方案 验证配置会将两个站点上的 FlexPod Nexus 交换机连接在一起，以提供站点间连接，从而扩展两个站点之间的 VLAN 。以下各节重点介绍了用于验证的一些连接和配置。</block>
+  <block id="74b5d0143f42e7eea9541ccef14b9fb7" category="doc">解决方案 验证—网络</block>
+  <block id="698c40fe15891da5bf5654625e3efc65" category="paragraph">每个站点上的 FlexPod Nexus 交换机均可通过高可用性配置在 UCS 计算和 ONTAP 存储之间提供本地连接。冗余组件和冗余连接可在发生单点故障时提供故障恢复能力。</block>
+  <block id="b1cb4f7e68966720bb2fb6ab56947b83" category="paragraph">下图显示了每个站点的 Nexus 交换机本地连接。除了图中显示的内容之外，还会为每个组件提供未显示的控制台和管理网络连接。40G 到 4 x 10G 分支缆线用于将 Nexus 交换机连接到 UCS CLI 和 ONTAP AFF A250 存储控制器。或者，也可以使用 100G 到 4 x 25G 分支缆线来提高 Nexus 交换机与 AFF A250 存储控制器之间的通信速度。为了简单起见，这两个 AFF A250 控制器在逻辑上是并排显示的，用于布线图。两个存储控制器之间的两个连接允许存储形成无交换机集群。</block>
+  <block id="4ba70b31ad5c60939fec9e9be3382a39" category="paragraph"><block ref="4ba70b31ad5c60939fec9e9be3382a39" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a39991fd2cc5d1a162e80a5a0b5dc413" category="paragraph">下表显示了每个站点的 Nexus 交换机和 AFF A250 存储控制器之间的连接。</block>
+  <block id="02ebbe4b6f7e4f1b43260e942cc56d56" category="cell">1 月 10 日</block>
+  <block id="1b16a119f87dee2f17d519dc3a7ca80c" category="cell">AFF A250 A</block>
+  <block id="9cb7b36b3f2bccc776862e6f2f494077" category="cell">e1a</block>
+  <block id="faa1f67856ad0ffedb981039b287dfb5" category="cell">1/2 年 10 月 1 日</block>
+  <block id="e737b5ac24a63afc00e81377a906728d" category="cell">e1b</block>
+  <block id="648d85b1b558eb14dd08a38f4e342b9c" category="cell">3 月 1 日</block>
+  <block id="d7167d4973554d077458158ba905b5a8" category="cell">AFF A250 B</block>
+  <block id="d5aafa08f3301b85d82fefb677c74a90" category="cell">4 月 1 日</block>
+  <block id="3a080b2a2f11ddee1a665fb9807eec24" category="cell">e1c</block>
+  <block id="7d4ab9ed3c0110be73af0fcd7e353f5d" category="cell">e1d</block>
+  <block id="8488d5257822f6fb065e88d06fa3992f" category="paragraph">下图显示了站点 A 和站点 B 上的 FlexPod 交换机之间的连接，并在随附的表中列出了布线详细信息。每个站点的两个交换机之间的连接用于 vPC 对等链路。另一方面，站点间交换机之间的连接提供站点间链路。这些链路可将 VLAN 扩展到多个站点，用于集群间通信， SM-BC 数据复制，带内管理以及远程站点资源的数据访问。</block>
+  <block id="560c8a216aaf0a8175bd1c490ba14806" category="paragraph"><block ref="560c8a216aaf0a8175bd1c490ba14806" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="68cf320e1ad0a674f48ca2a74fba0bae" category="cell">站点 A 交换机 A</block>
+  <block id="182be0c5cdcd5072bb1864cdee4d3d6e" category="cell">33</block>
+  <block id="91a6ad14308435c69100cc91ff6ff248" category="cell">站点 B 交换机 A</block>
+  <block id="c16a5320fa475530d9583c34fd356ef5" category="cell">31</block>
+  <block id="e369853df766fa44e1ed0ff613f563bd" category="cell">34</block>
+  <block id="6364d3f0f495b6ab9dcf8d3b5c6e0b01" category="cell">32</block>
+  <block id="9d842db30672923722d95b54c2f4ee64" category="cell">站点 A 交换机 B</block>
+  <block id="94a6b1c7756fbbdac699d7a97eda30fc" category="cell">站点 B 交换机 B</block>
+  <block id="d86b6dd5a7865845ef10607ad1527ff3" category="admonition">上表从每个 FlexPod 交换机的角度列出了连接。因此，该表包含重复的信息以供阅读。</block>
+  <block id="2acff16d6784867d4d2d2bbda158c6c0" category="section-title">端口通道和虚拟端口通道</block>
+  <block id="27923238cea40df4cb1391b537629a8f" category="paragraph">端口通道使用链路聚合控制协议（ LACP ）实现带宽聚合和链路故障恢复能力，从而实现链路聚合。虚拟端口通道（ Virtual Port Channel ， vPC ）允许在逻辑上将两个 Nexus 交换机之间的端口通道连接显示为一个。这样可以进一步提高单链路故障或单交换机故障等情况下的故障恢复能力。</block>
+  <block id="f38b37d866c20c890fc1a7483c54f820" category="paragraph">在到达 Nexus 交换机之前，存储的 UCS 服务器流量会采用 IOM A 到 FI A 的路径，而 IOM B 到 FI B 的路径。由于连接到 Nexus 交换机的 FI 使用的是 FI 端的端口通道，而 Nexus 交换机端的虚拟端口通道，因此 UCS 服务器可以有效地使用通过这两个 Nexus 交换机的路径，并可在发生单点故障时继续运行。在这两个站点之间， Nexus 交换机是互连的，如上图所示。站点之间有两个链路，每个链路用于连接交换机对，它们也使用端口通道配置。</block>
+  <block id="daea38d83b283fd14f6b63858872a799" category="paragraph">通过在冗余配置中将每个站点的存储控制器与本地 Nexus 交换机互连，可以实现带内管理，集群间和 iSCSI/NFS 数据存储协议连接。每个存储控制器都连接到两个 Nexus 交换机。这四个连接会配置为存储上接口组的一部分，以提高故障恢复能力。在 Nexus 交换机端，这些端口也属于交换机之间的 vPC 。</block>
+  <block id="fd1b3e9213e316dc1eb0902973bb8068" category="paragraph">下表列出了每个站点的端口通道 ID 和使用情况。</block>
+  <block id="0eca0ee5c011f7fbfe0916ad0a5e0b05" category="cell">端口通道 ID</block>
+  <block id="c64518704ce0c0d5501a45763f464276" category="cell">使用情况</block>
+  <block id="d6e0666e2a456f5d77f6e18373092fe6" category="cell">本地 Nexus 对等链路</block>
+  <block id="77b575a922ebd0de9af42f1012a915aa" category="cell">互联阵列 A 链路</block>
+  <block id="ade197264e891e882499adfb88c13f81" category="cell">光纤互连 B 链路</block>
+  <block id="116a0b6a71c744bf4634ab7969a55b15" category="cell">存储控制器 A 链路</block>
+  <block id="b498b5e98a8791b15bb784668713ed85" category="cell">存储控制器 B 链路</block>
+  <block id="f899139df5e1059396431415e770c6dd" category="cell">100</block>
+  <block id="5079f34eca8e111842431425b7af4101" category="cell">站点间交换机 A 链路</block>
+  <block id="3644a684f98ea8fe223c713b77189a77" category="cell">200</block>
+  <block id="8a448f82fc906d5783a1fdec09476125" category="cell">站点间交换机 B 链路</block>
+  <block id="87495e311a3944910e3cc0c7bee3d754" category="section-title">VLAN</block>
+  <block id="d0fccd96812e9060947e921b7bb488b7" category="paragraph">下表列出了为设置 FlexPod SM-BC 解决方案 验证环境而配置的 VLAN 及其使用情况。</block>
+  <block id="49ee3087348e8d44e1feda1917443987" category="cell">Name</block>
+  <block id="a94423b85557ae3746b860781f6b49ee" category="cell">本机 VLAN</block>
+  <block id="acfe0550b27169cff6127ec69ce18cca" category="cell">VLAN 2 用作原生 VLAN ，而不是默认 VLAN （ 1 ）</block>
+  <block id="efd6214a93c0d74dc05cdd319b18364a" category="cell">OOB-MGMT-VLAN</block>
+  <block id="2be9bd7a3434f7038ca27d1918de58bd" category="cell">33 ： 33</block>
+  <block id="4f317d7b1e3519d9d2bf2fa2d8336cb4" category="cell">设备的带外管理 VLAN</block>
+  <block id="97fdfddeebc2ba811d7fbc0c68f49843" category="cell">IB-MGMT-VLAN</block>
+  <block id="331316d4efb44682092a006307b9ae3a" category="cell">3334</block>
+  <block id="ea76b0fe19ec3d10fd0f1dd8f05d1fd4" category="cell">用于 ESXi 主机， VM 管理等的带内管理 VLAN</block>
+  <block id="b18880b438397d829ae559fcd6cec9c3" category="cell">NFS-VLAN</block>
+  <block id="59a3adea76fadcb6dd9e54c96fc155d1" category="cell">3335</block>
+  <block id="370d9092e1637bcff15d3d02725fbbc1" category="cell">用于 NFS 流量的可选 NFS VLAN</block>
+  <block id="98bd65207ee83bfd17ebb0db971eddf9" category="cell">3336</block>
+  <block id="9fecbc1245a71b86a4063d382dd1b924" category="cell">用于 iSCSI 流量的 iSCSI-A 网络结构 VLAN</block>
+  <block id="a4fa7175d4757e45eac71a8487751f63" category="cell">3337</block>
+  <block id="2d266ed8b228b49e3e8966a724bdcd9a" category="cell">用于 iSCSI 流量的 iSCSI-B 网络结构 VLAN</block>
+  <block id="e112bcac4afaa30ed9ccb59b9e0b06cb" category="cell">vmotion-vlan</block>
+  <block id="2de7cf2043693db2ee898479a6e44529" category="cell">3338</block>
+  <block id="8146886324c60518c6f897b17bd218f9" category="cell">VMware vMotion 流量 VLAN</block>
+  <block id="79be4b1857439c33a2a470d993d3eca6" category="cell">VM-Traffic-VLAN</block>
+  <block id="7ba0691b7777b6581397456412a41390" category="cell">3339</block>
+  <block id="112f1a9e12ed6a86ebb72e2ecc18c07f" category="cell">VMware VM 流量 VLAN</block>
+  <block id="8bcaeab695054b959c9ab15d28174f67" category="cell">集群间 VLAN</block>
+  <block id="f471223d1a1614b58a7dc45c9d01df19" category="cell">3340</block>
+  <block id="58d4d8fd300f92c3bac8231ae2a1b9ee" category="cell">用于 ONTAP 集群对等通信的集群间 VLAN</block>
+  <block id="02154716f03ff4e1482b38c58ed2d8cf" category="admonition">虽然 SM-BC 不支持 NFS 或 CIFS 协议以实现业务连续性，但您仍可以将其用于不需要保护业务连续性的工作负载。未为此验证创建 NFS 数据存储库。</block>
+  <block id="8d5ef1ff8ff6d0fcdbc8e9a431c6cf69" category="summary">在多站点 FlexPod SM-BC 解决方案 中，一个 VMware vCenter 可管理整个解决方案 的虚拟基础架构资源。两个数据中心中的主机都属于一个 VMware HA 集群，该集群跨越两个数据中心。主机可以访问 NetApp SM-BC 解决方案 ，在此可以从两个站点访问具有定义的 SM-BC 关系的存储。</block>
+  <block id="ec5040ac921964cc196a3adba148d2bb" category="doc">解决方案 验证—虚拟化</block>
+  <block id="c5e72f7daa822cf194f3859af7a1910f" category="inline-link-macro">先前版本：解决方案 验证—存储。</block>
+  <block id="7377f7c70d91b3224b98ca91011cc2c9" category="paragraph"><block ref="7377f7c70d91b3224b98ca91011cc2c9" category="inline-link-macro-rx"></block></block>
+  <block id="a228baed6afc642e3c7a6aa967a4f7e1" category="paragraph">SM-BC 解决方案 存储符合 VMware vSphere Metro Storage Cluster （ VMSC ）功能中的统一访问模式，可避免灾难和停机。为了获得最佳虚拟机性能，虚拟机磁盘应托管在本地 NetApp AFF A250 系统上，以便在正常操作下最大限度地减少 WAN 链路之间的延迟和流量。</block>
+  <block id="cd60e2316ddd792a67c9d799e88980f5" category="paragraph">在设计实施过程中，必须确定虚拟机在两个站点之间的分布情况。您可以根据站点首选项和应用程序要求确定这两个站点之间的虚拟机站点关联性和应用程序分布。VMware 集群 VM/ 主机组和 VM/ 主机规则用于配置 VM/ 主机关联性，以确保 VM 在所需站点的主机上运行。</block>
+  <block id="389ab4e0b3a788e3909cce9eda41904b" category="paragraph">但是，如果配置允许 VM 在两个站点上运行，则可以确保 VM 可以通过远程站点主机上的 VMware HA 重新启动，以提供解决方案 故障恢复能力。要使虚拟机能够同时在两个站点上运行，必须在所有 ESXi 主机上挂载所有 iSCSI 共享数据存储库，以确保站点之间虚拟机的 vMotion 操作顺畅。</block>
+  <block id="27f059ef259584a1b824e765cdd0e9d0" category="paragraph">下图显示了一个高级 FlexPod SM-BC 解决方案 虚拟化视图，其中包括 VMware HA 和 VMSC 功能，可为计算和存储服务提供高可用性。主动 - 主动数据中心解决方案 架构支持站点之间的工作负载移动，并提供灾难恢复 / 业务连续性保护。</block>
+  <block id="a147a552c32d5037b987ab2312e69d7c" category="paragraph"><block ref="a147a552c32d5037b987ab2312e69d7c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="186dd87f4e04649aa13ab6280b6c9f56" category="section-title">端到端网络连接</block>
+  <block id="1a3e67186367dcdcd8767a83f26e215c" category="paragraph">FlexPod SM-BC 解决方案 包括每个站点的 FlexPod 基础架构，站点之间的网络连接以及在第三个站点部署的 ONTAP 调解器，以满足所需的 RPO 和 RTO 目标。下图显示了每个站点的 Cisco UCS B200M5 服务器与站点内和站点间具有 SM-BC 功能的 NetApp 存储之间的端到端网络连接。</block>
+  <block id="053a2ac180463981566102bfcfad8e9d" category="paragraph"><block ref="053a2ac180463981566102bfcfad8e9d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d764408dc842bea0b64076752e22142c" category="paragraph">在此解决方案 验证中，每个站点的 FlexPod 部署架构都是相同的。但是，解决方案 支持非对称部署，如果满足要求，也可以将其添加到现有 FlexPod 解决方案中。</block>
+  <block id="22884a3cdeeeeb7dad2ea9a498fa8e37" category="paragraph">扩展的第 2 层架构用于无缝的多站点数据网络结构，可在每个数据中心的端口通道 Cisco UCS 计算和 NetApp 存储之间提供连接，并在数据中心之间提供连接。端口通道配置以及虚拟端口通道配置（如果适用）用于计算层，网络层和存储层之间以及跨站点链路之间的带宽聚合和容错。因此， UCS 刀片式服务器可以连接并多路径访问本地和远程 NetApp 存储。</block>
+  <block id="ce5ffb451af47dfa2491eb63c5143d6d" category="section-title">虚拟网络</block>
+  <block id="a36a62d7f651f0199b63aad7ba80cfb0" category="paragraph">无论主机位于何处，集群中的每个主机都使用相同的虚拟网络进行部署。此设计使用 VMware 虚拟交换机（ vSwitch ）和 VMware 虚拟分布式交换机（ VDS ）来分隔不同的流量类型。VMware vSwitch 主要用于 FlexPod 基础架构网络，而 VDS 用于应用程序网络，但不是必需的。</block>
+  <block id="3b7a3052edf1e478832ea4d7ace49f8a" category="paragraph">每个虚拟交换机（ vSwitch ， VDS ）部署有两个上行链路； ESXi 虚拟机管理程序级别的上行链路在 Cisco UCS 软件上称为 vmnic 和虚拟 NIC （ vNIC ）。vNIC 会使用 Cisco UCS 服务配置文件在每个服务器的 Cisco UCS VIC 适配器上创建。定义了六个 vNIC ，两个用于 vSwitch0 ，两个用于 vDS0 ，两个用于 vSwitch1 ，两个用于 iSCSI 上行链路，如下图所示。</block>
+  <block id="9f183657927c112be3e7cd269ec8c091" category="paragraph"><block ref="9f183657927c112be3e7cd269ec8c091" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="686c074d49721a316f632385b9203318" category="paragraph">vSwitch0 是在 VMware ESXi 主机配置期间定义的，它包含用于管理的 FlexPod 基础架构管理 VLAN 和 ESXi 主机 VMkernel （ VMK ）端口。对于所需的任何关键基础架构管理虚拟机，还会在 vSwitch0 上放置一个基础架构管理虚拟机端口组。</block>
+  <block id="19e8dd753125c0dfd41811cd6a73bce4" category="paragraph">请务必将此类管理基础架构虚拟机放置在 vSwitch0 上，而不是 VDS 上，因为如果 FlexPod 基础架构已关闭或重新启动，而您尝试在最初运行该管理虚拟机的主机以外的主机上激活该管理虚拟机， 它可以在 vSwitch0 上的网络上正常启动。如果 VMware vCenter 是管理虚拟机，则此过程尤其重要。如果 vCenter 位于 VDS 上，并移至另一台主机，然后再启动，则它在启动后将无法连接到网络。</block>
+  <block id="ba931ab340d3854ea4b99e903ecc28dd" category="paragraph">在此设计中使用了两个 iSCSI 启动 vSwitch 。Cisco UCS iSCSI 启动需要使用单独的 vNIC 进行 iSCSI 启动。这些 VNIC 使用适当网络结构的 iSCSI VLAN 作为原生 VLAN ，并连接到相应的 iSCSI 启动 vSwitch 。或者，您也可以通过部署新的 VDS 或使用现有 VDS 在 VDS 上部署 iSCSI 网络。</block>
+  <block id="f75bfddb1eecf3b144615b95d65a7c9a" category="section-title">VM 主机关联性组和规则</block>
+  <block id="7886b5fd570cb4a0ac1afa513b8bb583" category="paragraph">要使虚拟机能够在两个 SM-BC 站点的任何 ESXi 主机上运行，所有 ESXi 主机都必须从两个站点挂载 iSCSI 数据存储库。如果所有 ESXi 主机均已正确挂载两个站点中的数据存储库，则可以在使用 vMotion 的任何主机之间迁移虚拟机，并且虚拟机仍可访问从这些数据存储库创建的所有虚拟磁盘。</block>
+  <block id="47255a6cccc113ca9b4b931d0052da9f" category="paragraph">对于使用本地数据存储库的虚拟机，如果将其迁移到远程站点的主机，则其对虚拟磁盘的访问将变得远程，从而由于站点之间的物理距离而增加读取操作延迟。因此，最佳做法是将虚拟机保留在本地主机上，并利用站点上的本地存储。</block>
+  <block id="e1601d0972684722879adfb7a305e296" category="paragraph">通过使用 VM/ 主机关联性机制，您可以使用 VM/ 主机组为位于特定站点的虚拟机和主机创建 VM 组和主机组。使用 VM/ 主机规则，您可以为要遵循的 VM 和主机指定策略。要在站点维护或灾难情形下允许跨站点进行虚拟机迁移，请使用 " 应在组中的主机上运行 " 策略规范来实现这种灵活性。</block>
+  <block id="b9e562fbb462b9be2f3e290d60547d73" category="paragraph">以下屏幕截图显示了为站点 A 和站点 B 主机及 VM 创建的两个主机组和两个 VM 组</block>
+  <block id="01b148bd0fb942366a52b413b45d5f52" category="paragraph"><block ref="01b148bd0fb942366a52b413b45d5f52" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="38bb03bcade9630945dd6d8bcfff7dfd" category="paragraph">此外，以下两个图显示了为站点 A 和站点 B VM 创建的 VM/ 主机规则，这些 VM 将使用 " 应在组中的主机上运行 " 策略在其各自站点的主机上运行。</block>
+  <block id="5bb0c28b54b5f67f2b7a73129cc0182f" category="paragraph"><block ref="5bb0c28b54b5f67f2b7a73129cc0182f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="282079ecc0078000644d18fca4709052" category="paragraph"><block ref="282079ecc0078000644d18fca4709052" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6bd1ed4b0ed716bf9b964ae5ea8a4397" category="section-title">vSphere HA 检测信号</block>
+  <block id="172ba0f1e9e72809918e4f8b777adcd2" category="paragraph">VMware vSphere HA 具有用于主机状态验证的检测信号机制。主要检测信号机制是通过网络连接实现的，而二级检测信号机制是通过数据存储库实现的。如果未收到检测信号，则它会通过对默认网关或手动配置的隔离地址执行 Ping 操作来确定它是否与网络隔离。对于数据存储库检测信号， VMware 建议将延伸型集群的检测信号数据存储库从最少 2 个增加到 4 个。</block>
+  <block id="0323b32e97bf4ad40c68f0b32844cb6b" category="paragraph">对于解决方案 验证，使用两个 ONTAP 集群管理 IP 地址作为隔离地址。此外，还添加了建议的 vSphere HA 高级选项 `D ss.s.batDsPerHost` ，其值为 4 ，如下图所示。</block>
+  <block id="6a43b8562de203cf6c04bcb09d868c1c" category="paragraph"><block ref="6a43b8562de203cf6c04bcb09d868c1c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4833f38d3ef45f44218f78ed6d010a1e" category="paragraph">对于检测信号数据存储库，指定集群中的四个共享数据存储库并自动进行补充，如下图所示。</block>
+  <block id="beaa9bcc804e12c2597167f766b7c9aa" category="paragraph"><block ref="beaa9bcc804e12c2597167f766b7c9aa" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9eb2bd2480a35c698be7fc3c56207ade" category="inline-link">创建和使用 vSphere HA 集群</block>
+  <block id="58486898b4fe52f80d7a134d74186a4c" category="inline-link">VMware vSphere 城域存储集群（ VMSC ）</block>
+  <block id="af5299e77d937d0f90b53f5c8d31f369" category="inline-link">采用 NetApp SnapMirror 业务连续性（ SM-BC ）和 VMware vSphere 城域存储集群（ VMSC ）的 NetApp ONTAP</block>
+  <block id="fbf1a5366eed75e49cdd525f7972eadc" category="paragraph">有关 VMware HA 集群和 VMware vSphere Metro 存储集群的其他最佳实践和配置，请参见<block ref="e1c1274de4ccc0d5560df65f90d3e6aa" category="inline-link-rx"></block>，<block ref="4f7c5688f5dfddf1590f2246102bcda0" category="inline-link-rx"></block> 和 VMware 知识库<block ref="82bb4696814a89c9685efdd36751466a" category="inline-link-rx"></block>。</block>
+  <block id="04efca99cb9ed979fd07e0b0adfcd574" category="inline-link-macro">接下来：解决方案 验证—经验证的场景。</block>
+  <block id="3af9ad1096d1f95cac10da1c470c8ede" category="paragraph"><block ref="3af9ad1096d1f95cac10da1c470c8ede" category="inline-link-macro-rx"></block></block>
+  <block id="276f6adc3fdf9f6540c8de077b236afa" category="summary">从较高的层面来看， FlexPod SM-BC 解决方案 由两个 FlexPod 系统组成，它们位于两个站点上，彼此连接并配对，可提供高度可用，高度灵活且高度可靠的数据中心解决方案 ，即使站点发生故障也能提供业务连续性。</block>
+  <block id="9af5ccbc39ef9aaa593f52b2f61e513b" category="doc">FlexPod SM-BC 解决方案</block>
+  <block id="d6ea02e137d772bf4a6d50ea64e92259" category="paragraph"><block ref="d6ea02e137d772bf4a6d50ea64e92259" category="inline-link-macro-rx"></block></block>
+  <block id="30ff361479db216fbf25e9b5d21572e5" category="paragraph">除了部署两个新的 FlexPod 基础架构来创建 FlexPod SM-BC 解决方案 之外，还可以在与 SM-BC 兼容的两个现有 FlexPod 基础架构上实施解决方案 ，或者添加一个新的 FlexPod 以与现有 FlexPod 建立对等关系。</block>
+  <block id="e2b7862864feaaf0fc2ab902c6d5c536" category="paragraph">FlexPod SM-BC 解决方案 中的两个 FlexPod 系统无需在配置上完全相同。但是，两个 ONTAP 集群必须属于相同的存储系列，可以是两个 AFF 系统，也可以是两个 ASA 系统，但硬件型号不一定相同。SM-BC 解决方案 不支持 FAS 系统。</block>
+  <block id="22f7bbb4f3ccb6be869f61075736a37f" category="paragraph">这两个 FlexPod 站点需要网络连接，以满足解决方案 带宽和服务质量要求，并且根据 ONTAP SM-BC 解决方案 的要求，站点之间的往返延迟不超过 10 毫秒（ 10 毫秒）。对于此 FlexPod SM-BC 解决方案 验证，两个 FlexPod 站点通过扩展的第 2 层网络在同一实验室中进行互连。</block>
+  <block id="50479180c763aab6165404a4ab431c12" category="paragraph">NetApp ONTAP SM-BC 解决方案 可在两个 NetApp 存储集群之间提供同步复制，以便在园区或城域区域实现高可用性和灾难恢复。部署在第三个站点的 ONTAP 调解器可监控解决方案 ，并在发生站点灾难时实现自动故障转移。下图简要展示了解决方案 组件。</block>
+  <block id="88e2670c42a759ff89cc5580aa14c867" category="paragraph"><block ref="88e2670c42a759ff89cc5580aa14c867" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="61f2be6cbf24e7c92dc2edfb8f2fb54d" category="paragraph">借助 FlexPod SM-BC 解决方案 ，您可以在分布式且集成的基础架构上部署基于 VMware vSphere 的私有云。通过集成的解决方案 ，可以将多个站点作为一个解决方案 基础架构进行协调，以保护数据服务免受各种单点故障情形和整个站点故障的影响。</block>
+  <block id="f70547bb7e90203dfbd186b062251235" category="paragraph">本技术报告重点介绍了 FlexPod SM-BC 解决方案 的一些端到端设计注意事项。我们鼓励从业人员参考各种 FlexPod CVD 和 NVA 中提供的信息，了解更多 FlexPod 解决方案 实施详细信息。</block>
+  <block id="ee8a8d1c326a758e8bbce6904b954221" category="paragraph">虽然解决方案 已通过根据 CVD 中记录的 FlexPod 最佳实践部署两个 FlexPod 系统进行了验证，但它会考虑到 SM-BC 解决方案 的要求。本报告中讨论的已部署 FlexPod SM-BC 解决方案 已在各种故障情形以及模拟站点故障情形下进行了故障恢复能力和容错验证。</block>
+  <block id="5f95fbda20eeb9ce0859afe2ac6f42fa" category="section-title">解决方案要求</block>
+  <block id="d55296f4b026e62a918241b622da3019" category="paragraph">FlexPod SM-BC 解决方案 旨在满足以下关键要求：</block>
+  <block id="9301701eb20799a5377cbb244546c8bf" category="list-text">业务关键型应用程序和数据服务在发生完整数据中心（站点）故障时的业务连续性</block>
+  <block id="418c9ae18f07098eebf00a990e90f160" category="list-text">灵活的分布式工作负载放置，可在数据中心之间移动工作负载</block>
+  <block id="cfa5ddb0c2614aae7bad0ecc332e80bd" category="list-text">站点关联性，即在正常操作期间从同一数据中心站点本地访问虚拟机数据</block>
+  <block id="b849aa70383a86467dc914361535be70" category="list-text">在发生站点故障时快速恢复，不会丢失任何数据</block>
+  <block id="7e897f23ed71aef1c0a8acf1ae54e9e4" category="section-title">解决方案组件</block>
+  <block id="ff5962f66a546cab0b5c1d09acdc96bf" category="section-title">Cisco 计算组件</block>
+  <block id="0fddfe4f687bfe7be984708ccac8ea1e" category="paragraph">Cisco UCS 是一种集成计算基础架构，可提供统一计算资源，统一网络结构和统一管理。它使企业能够自动执行并加快应用程序部署，包括虚拟化和裸机工作负载。Cisco UCS 支持多种部署用例，包括远程和分支机构，数据中心和混合云用例。根据特定的解决方案 要求， FlexPod Cisco 计算实施可以使用不同规模的各种组件。以下各小节提供了某些 UCS 组件上的追加信息 。</block>
+  <block id="1c1324773aa16af39308c092452bba66" category="section-title">UCS 服务器和计算节点</block>
+  <block id="cbf2c961915d245c5bc4dbe6e9f03e9f" category="paragraph">下图显示了 UCS 服务器组件的一些示例，包括 UCS C 系列机架式服务器，采用 B 系列刀片式服务器的 UCS 5108 机箱以及采用 X 系列计算节点的新 UCS X9508 机箱。Cisco UCS C 系列机架式服务器采用一个和两个机架单元（ RU ）外形规格，采用 Intel 和 AMD CPU 型号，并具有各种 CPU 速度和核心，内存和 I/O 选项。Cisco UCS B 系列刀片式服务器和新的 X 系列计算节点还具有各种 CPU ，内存和 I/O 选项，它们在 FlexPod 架构中均受支持，可满足各种业务需求。</block>
+  <block id="b151b6585232af32237f041490ff3138" category="paragraph"><block ref="b151b6585232af32237f041490ff3138" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="67dfbae173a16bb9b4212febac631ca3" category="paragraph">除了此图所示的最新一代 C220/C225/C240/C245 M6 机架式服务器， B200 M6 刀片式服务器和 X210c 计算节点之外，如果仍然支持前几代机架式和刀片式服务器，也可以使用它们。</block>
+  <block id="137da4195668819859d586a01dedf130" category="section-title">I/O 模块和智能网络结构模块</block>
+  <block id="d1716f8ac396e71d8e8e6994441c7da8" category="paragraph">I/O 模块（ IOM ） / 阵列扩展器和智能阵列模块（ IFM ）分别为 Cisco UCS 5108 刀片式服务器机箱和 Cisco UCS X9508 X 系列机箱提供统一的网络结构连接。</block>
+  <block id="da6bb411d50f863cf84182075f1567fa" category="paragraph">第四代 UCS IOM 2408 具有八个 25-G 统一以太网端口，用于通过互联阵列（ Fabric Interconnect ， FI ）连接 UCS 5108 机箱。每个 2408 都通过中板与机箱中的每个刀片式服务器建立了四个 10-G 背板以太网连接。</block>
+  <block id="499454a33348a1b03fb6f906647fc1f1" category="paragraph">UCSX 9108 25G IFM 具有八个 25-G 统一以太网端口，用于通过互联阵列连接 UCS X9508 机箱中的刀片式服务器。每个 9108 都有四个 25 G 连接，连接到 X9108 机箱中的每个 UCS X210c 计算节点。9108 IFM 还可与互联阵列配合使用来管理机箱环境。</block>
+  <block id="e3602a6de7a1f5b1512e48791e0dc249" category="paragraph">下图显示了 UCS 5108 机箱的 UCS 2408 及更早版本 IOM 以及 X9508 机箱的 9108 IFM 。</block>
+  <block id="ba5a5683193c8cbfe4814060da408c75" category="paragraph"><block ref="ba5a5683193c8cbfe4814060da408c75" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="865f1fa02c43bb64704d961f4dfdec88" category="section-title">UCS 互联阵列</block>
+  <block id="8a3f2923cd31b679d734278ed58a2e62" category="paragraph">Cisco UCS 互联阵列（ Fabric Interconnects ， CLI ）可为整个 Cisco UCS 提供连接和管理功能。通常作为主动 / 主动对部署，系统的 CLI 会将所有组件集成到一个由 Cisco UCS Manager 或 Cisco Intersight 控制的高可用性管理域中。Cisco UCS CLI 为系统提供一个统一网络结构，具有低延迟和无损的直通交换功能，可使用一组缆线支持 LAN ， SAN 和管理流量。</block>
+  <block id="f251e9c5fd5520519a13968cc733d9d3" category="paragraph">第四代 Cisco UCS FI 有两种变体： UCS FI 6454 和 64108 。其中包括支持 10/25 Gbps 以太网端口， 1/25-Gbps 以太网端口， 40/100-Gbps 以太网上行链路端口以及可支持 10/25 千兆以太网或 8/16/32-Gbps 光纤通道的统一端口。下图显示了第四代 Cisco UCS CLI 以及也支持的第三代型号。</block>
+  <block id="61ea2a31c9217928f9ea8d75cf1a2967" category="paragraph"><block ref="61ea2a31c9217928f9ea8d75cf1a2967" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="57cb5ae4f8a0ecc07803f2d384dd8fa9" category="admonition">要支持 Cisco UCS X 系列机箱，需要在 Intersight Managed Mode （ IMM ）下配置第四代互联阵列。但是，在 IMM 模式和 UCSM 托管模式下均可支持 Cisco UCS 5108 B 系列机箱。</block>
+  <block id="52c695853e43619847d8405057610e1e" category="admonition">UCS FI 6324 采用 IOM 外形规格，并嵌入在 UCS Mini 机箱中，适用于仅需要小型 UCS 域的部署。</block>
+  <block id="3cacd032a25fe82301a65cf290e0040b" category="section-title">UCS 虚拟接口卡</block>
+  <block id="ba382b2c0e15cf03e7aec9f9d06d324b" category="paragraph">Cisco UCS 虚拟接口卡（ Virtual Interface Card ， VIC ）可为机架式和刀片式服务器统一系统管理以及 LAN 和 SAN 连接。它最多支持 256 个虚拟设备，可以作为虚拟网络接口卡（ Virtual Network Interface Card ， vNIC ），也可以作为使用 Cisco SingleConnect 技术的虚拟主机总线适配器（ Virtual Host Bus Adapter ， vHBA ）。通过虚拟化， VIC 卡大大简化了网络连接，并减少了解决方案 部署所需的网络适配器，缆线和交换机端口的数量。下图显示了一些可用于 B 系列和 C 系列服务器以及 X 系列计算节点的 Cisco UCS VIC 。</block>
+  <block id="e4bd8cdd88e968cab636ac39cac6fcfd" category="paragraph"><block ref="e4bd8cdd88e968cab636ac39cac6fcfd" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2ad3ddc9acd4f860fe2c398d9366d702" category="paragraph">不同的适配器型号支持不同的刀片式服务器和机架服务器，它们具有不同的端口数，端口速度以及模块化主板 LAN （ mLOM ），夹层卡和 PCIe 接口的外形规格。这些适配器可以支持 10/25/40/100-G 以太网和以太网光纤通道（ FCoE ）的某些组合。它们整合了 Cisco 的融合网络适配器（ Converged Network Adapter ， CNA ）技术，支持全面的功能集，并简化了适配器管理和应用程序部署。例如， VIC 支持 Cisco 的 Data Center Virtual Machine Fabric Extender （ VM-FEX ）技术，该技术可将 Cisco UCS 互联阵列端口扩展到虚拟机，从而简化服务器虚拟化部署。</block>
+  <block id="17e203aab8d4072397615b333b8f9cfc" category="paragraph">通过在 mLOM ，夹层和端口扩展器以及网桥卡配置中组合使用 Cisco VIC ，您可以充分利用刀片式服务器可用的带宽和连接。例如，通过使用 VIC 14825 （ mLOM ）和 14425 （夹层）上的两个 25-G 链路以及 X210c 计算节点上的 14000 （网桥卡）， VIC 总带宽为 2 x 50-G + 2 x 50-G ， 或者，采用双 IFM 配置时，每个网络结构 /IFM 需要 100 G ，而每个服务器总共需要 200 G 。</block>
+  <block id="8b3c2a8f703d14f1847400f765000c3b" category="inline-link">Cisco UCS</block>
+  <block id="aadc15f6998b9c88df15d3c5ca31c972" category="paragraph">有关 Cisco UCS 产品系列，技术规格和文档的详细信息，请参见<block ref="bcb0aaa6cd00f9ce97e568312fbca54f" category="inline-link-rx"></block> 有关信息，请访问网站。</block>
+  <block id="58ad6353bd749ce60542e9a1dc2da72c" category="section-title">Cisco 交换组件</block>
+  <block id="32d10992b210b4704a64acfc286014e5" category="paragraph">FlexPod 使用 Cisco Nexus 系列交换机为 Cisco UCS 和 NetApp 存储控制器之间的通信提供以太网交换网络结构。FlexPod 部署支持当前支持的所有 Cisco Nexus 交换机型号，包括 Cisco Nexus 3000 ， 5000 ， 7000 和 9000 系列。</block>
+  <block id="0eaa3c550576ab6a5a7a6f8d94d6690c" category="paragraph">在为 FlexPod 部署选择交换机型号时，需要考虑许多因素，例如性能，端口速度，端口密度，交换机延迟， 以及 ACI 和 VXLAN 支持等协议，以实现您的设计目标以及交换机的支持时间跨度。</block>
+  <block id="febf5b21efd458dcd08118fd63bc4e23" category="paragraph">许多最新的 FlexPod CVD 均使用 Cisco Nexus 9000 系列交换机进行验证，例如 Nexus 9336C-fx2 和 Nexus 93180YC-fx3 ，这些交换机可在紧凑的 1U 外形规格中提供高性能 40/100G 和 10/25G 端口，低延迟和卓越的能效。可通过上行链路端口和分支缆线支持其他速度。下图显示了几个 Cisco Nexus 9k 和 3k 交换机，包括用于此验证的 Nexus 9336C-x2 和 Nexus 3232C 。</block>
+  <block id="62975fbc145c03e0b3ee3bef4794986c" category="paragraph"><block ref="62975fbc145c03e0b3ee3bef4794986c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="00b72b9c60d99dffe6e5389480cd8ba5" category="inline-link">Cisco 数据中心交换机</block>
+  <block id="a7d8e8f019be4a66106ed930b22aaf86" category="paragraph">请参见<block ref="dd5f74353659ef96ab60875379009895" category="inline-link-rx"></block> 有关可用 Nexus 交换机及其规格和文档的详细信息。</block>
+  <block id="0770fc8319897f8444acad85a7dec263" category="section-title">MDS 交换机</block>
+  <block id="7d1b814bca229019bf2699315a374bf5" category="paragraph">Cisco MDS 9100/9200/9300 系列光纤交换机是 FlexPod 架构中的一个可选组件。这些交换机高度可靠，高度灵活，安全，可提供对网络结构中流量的可见性。下图显示了一些示例 MDS 交换机，这些交换机可用于为 FlexPod 解决方案 构建冗余 FC SAN 网络结构，以满足应用程序和业务需求。</block>
+  <block id="1c9c2abf5a68dc60b6bd853d9db75408" category="paragraph"><block ref="1c9c2abf5a68dc60b6bd853d9db75408" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c133fcf9dd074ad5c1961f224a67c3b1" category="paragraph">Cisco MDS 9132T/9148T/9396T 高性能 32G 多层光纤交换机经济高效，并且高度可靠，灵活且可扩展。高级存储网络特性和功能易于管理，并与整个 Cisco MDS 9000 系列产品组合兼容，可实现可靠的 SAN 实施。</block>
+  <block id="0ab60c8932ff5ce20b5435dd4ead51d2" category="paragraph">这款下一代硬件平台内置了一流的 SAN 分析和遥测功能。通过检查帧报头提取的遥测数据可以流式传输到分析可视化平台，包括 Cisco Data Center Network Manager 。FlexPod 还支持支持 16G FC 的 MDS 交换机，例如 MDS 9148S 。此外，除了 FC 协议之外，还支持 FCoE 和 FCIP 协议的多服务 MDS 交换机（例如 MDS 9250i ）也属于 FlexPod 解决方案 产品组合。</block>
+  <block id="538eb82bb05d5deebb7268362852c7a1" category="paragraph">在 9132T 和 9396T 等半模块化 MDS 交换机上，可以添加额外的端口扩展模块和端口许可证以支持额外的设备连接。在 9148T 等固定交换机上，可以根据需要添加其他端口许可证。这种按需购买的灵活性提供了一个运营支出部分，有助于降低实施和运行基于 MDS 交换机的 SAN 基础架构的资本支出。</block>
+  <block id="a4a1f1ade604d49da8231eac6a2a4240" category="inline-link">Cisco MDS 光纤交换机</block>
+  <block id="8c3bc47cd13b79709265f1dc8f5010be" category="paragraph">请参见<block ref="5a625fda7351d34515186d7331bfcf20" category="inline-link-rx"></block> 有关可用 MDS 光纤交换机的详细信息，请参见<block ref="9276805d6b0dd5ecb28d9ad89af92eab" category="inline-link-rx"></block> 和<block ref="9663e16401acc5458c2d08f12e7ec029" category="inline-link-rx"></block> 有关支持的 SAN 交换机的完整列表。</block>
+  <block id="dc4bc50705ba670ab0e5e3a38fb42338" category="paragraph">要创建 FlexPod SM-BC 解决方案 ，需要运行 ONTAP 软件 9.8 或更高版本的冗余 NetApp AFF 或 ASA 控制器。建议在 SM-BC 部署中使用最新的 ONTAP 版本（当前为 9.10.1 ），以便利用 ONTAP 持续创新，性能和质量改进以及增加的最大对象数量来支持 SM-BC 。</block>
+  <block id="0a8b52d930014bbe307146d18b325b63" category="paragraph">NetApp AFF 和 ASA 控制器具有行业领先的性能和创新功能，可提供企业级数据保护和功能丰富的数据管理功能。AFF 和 ASA 系统支持端到端 NVMe 技术，包括 NVMe 连接 SSD 和基于光纤通道的 NVMe （ NVMe/FC ）前端主机连接。通过采用基于 NVMe/FC 的 SAN 基础架构，您可以提高工作负载吞吐量并减少 I/O 延迟。但是，基于 NVMe/FC 的数据存储库当前只能用于不受 SM-BC 保护的工作负载，因为 SM-BC 解决方案 当前仅支持 iSCSI 和 FC 协议。</block>
+  <block id="1fd8840850e07e757d99d362e5fdbd02" category="paragraph">NetApp AFF 和 ASA 存储控制器还为客户提供了一个混合云基础，让他们可以利用 NetApp Data Fabric 带来的无缝数据移动性。借助 Data Fabric ，您可以轻松地将数据从数据生成的边缘获取到使用数据的核心和云，从而利用按需弹性计算以及 AI 和 ML 功能，获得切实可行的业务洞察力。</block>
+  <block id="b18e01c669760da29746d740d29840d1" category="paragraph">如下图所示， NetApp 提供了各种存储控制器和磁盘架，可满足您的性能和容量要求。有关 NetApp AFF 和 ASA 控制器功能和规格的信息，请参见下表以获取产品页面的链接。</block>
+  <block id="5307013968ce8ca68927da621ab25f67" category="paragraph"><block ref="5307013968ce8ca68927da621ab25f67" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8fcb4cf909a1e717c8e14cba12717e1d" category="cell">AFF 系列</block>
+  <block id="0f8dd7cba67dcc47444d804a7106cd3c" category="inline-link-macro">AFF 系列文档</block>
+  <block id="15da6d8626b1765a984b122772587fc9" category="cell"><block ref="15da6d8626b1765a984b122772587fc9" category="inline-link-macro-rx"></block></block>
+  <block id="7c108156e35361e38bd149e0cd5192f0" category="cell">ASA 系列</block>
+  <block id="d97374ec4f5cfe9d6dc727396402521d" category="inline-link-macro">ASA 系列文档</block>
+  <block id="3fc681e7694b642c59733ee9ee571332" category="cell"><block ref="3fc681e7694b642c59733ee9ee571332" category="inline-link-macro-rx"></block></block>
+  <block id="029f6f3d6d94376868a542dc9f992a86" category="inline-link">NetApp 磁盘架和存储介质文档</block>
+  <block id="c25fd9b70494845a20dd21814241524d" category="paragraph">请参见<block ref="dad413ffea13e60f46bf0b7da6acba7e" category="inline-link-rx"></block> 和<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block> 有关每个存储控制器型号的磁盘架和支持的磁盘架的详细信息。</block>
+  <block id="8b68a94e939becf799000e74594ceec1" category="section-title">解决方案 拓扑</block>
+  <block id="849cdcc0290877dcdcdc288864fc273f" category="paragraph">FlexPod 解决方案的拓扑结构十分灵活，可以纵向扩展或横向扩展以满足不同的解决方案 要求。如果解决方案 需要业务连续性保护，并且只需要最少的计算和存储资源，则可以使用简单的解决方案 拓扑，如下图所示。这种简单的拓扑结构使用 UCS C 系列机架服务器和 AFF/ASA 控制器，并在控制器中使用 SSD ，而无需额外的磁盘架。</block>
+  <block id="5082a4434d976e5a6455354fa5cc6950" category="paragraph"><block ref="5082a4434d976e5a6455354fa5cc6950" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6b173d0cede30ee7d46fdfb1033b909b" category="paragraph">冗余计算，网络和存储组件通过组件之间的冗余连接互连在一起。这种高可用性设计可提供解决方案 故障恢复能力，并使 IT 能够承受单点故障情形。多站点设计和 ONTAP SM-BC 同步数据复制关系可提供业务关键型数据服务，尽管可能会发生单站点存储故障。</block>
+  <block id="271f9b5d9a6d430b924c85d080bc4ee4" category="paragraph">在城域中，数据中心和分支机构之间的公司可能使用的非对称部署拓扑可能如下图所示。对于这种非对称设计，数据中心需要具有更多计算和存储资源的更高性能 FlexPod 。但是，分支机构的需求较低，并且 FlexPod 可以小得多。</block>
+  <block id="80eecd57b5fc9633a123b989c0b55aa5" category="paragraph"><block ref="80eecd57b5fc9633a123b989c0b55aa5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="70386b41b4b650f2b140ca020de291bd" category="paragraph">对于计算和存储资源需求较高的公司以及多个站点，基于 VXLAN 的多站点网络结构可以使多个站点拥有无缝网络结构，从而提高应用程序的移动性，从而可以从任何站点为应用程序提供服务。</block>
+  <block id="51ccc8f1fcc2135dce8bfff469482f2d" category="paragraph">可能存在使用 Cisco UCS 5108 机箱和 B 系列刀片式服务器的现有 FlexPod 解决方案 ，这些服务器必须受新 FlexPod 实例的保护。新的 FlexPod 实例可以使用最新的 UCS X9508 机箱，其中 X210c 计算节点由 Cisco Intersight 管理，如下图所示。在这种情况下，每个站点上的 FlexPod 系统都连接到一个更大的数据中心网络结构，而这些站点则通过互连网络进行连接，形成一个 VXLAN 多站点网络结构。</block>
+  <block id="2b80351477a32cc101ae034494c3ed09" category="paragraph"><block ref="2b80351477a32cc101ae034494c3ed09" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a09b49349906a5c6fc7c466b71f682c9" category="paragraph">对于在城域中设有数据中心和多个分支机构的公司，这些公司都需要受到保护才能提供业务连续性， 可以实施下图所示的 FlexPod SM-BC 部署拓扑，以保护关键应用程序和数据服务，使所有分支站点实现零 RPO 和接近零 RTO 目标。</block>
+  <block id="15a42d0cf8468dfb5ad24d2529d273e4" category="paragraph"><block ref="15a42d0cf8468dfb5ad24d2529d273e4" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cad73cdbb5479bd1c54e58c21c9608d6" category="paragraph">对于此部署模式，每个分支机构都与数据中心建立所需的 SM-BC 关系和一致性组。您必须考虑支持的 SM-BC 对象限制，以便整体一致性组关系和端点计数不会超过数据中心支持的最大值。</block>
+  <block id="7a2e958fb7c5046e59035ba1726ad02b" category="inline-link-macro">接下来：解决方案 验证概述。</block>
+  <block id="3fc165d3b04f40190da4689cdf0e0853" category="paragraph"><block ref="3fc165d3b04f40190da4689cdf0e0853" category="inline-link-macro-rx"></block></block>
+  <block id="9fc7e91d0cfa196bee652e5b3ab8991b" category="doc">解决方案验证</block>
+  <block id="29f5f58038d9fc18e3673d9f64beb81c" category="summary">本页介绍使用 NetApp SnapMirror 业务连续性和 ONTAP 9.10 的 FlexPod Datacenter 解决方案 。</block>
+  <block id="ed7f5de9cce855ce8d22d0d26afcdfd0" category="doc">TR-4920 ：采用 NetApp SnapMirror 业务连续性和 ONTAP 9.10 的 FlexPod 数据中心</block>
+  <block id="b51c42078dea4cad69d330e2e65bf73e" category="paragraph">NetApp 公司 Jyh-shing Chen</block>
+  <block id="b3a453722b38c1104de9561b33f9de2b" category="section-title">FlexPod 解决方案</block>
+  <block id="5964ddd52cd2fc9ce93694e8ae4e3014" category="paragraph">FlexPod 是一种最佳实践的融合基础架构数据中心架构，其中包括 Cisco 和 NetApp 的以下组件：</block>
+  <block id="f431b7cb714f9a8378b57b6f8ef92ab6" category="list-text">Cisco Unified Computing System （ Cisco UCS ）</block>
+  <block id="3584b38b025e179747a58996a30623c2" category="list-text">Cisco Nexus 和 MDS 系列交换机</block>
+  <block id="5c927677aae2a75bc0bce175f0d8721e" category="list-text">NetApp FAS ， NetApp AFF 和 NetApp 全 SAN 阵列（ ASA ）系统</block>
+  <block id="afccd3e97cff2cb182efde52a8c9ba77" category="paragraph">下图展示了用于创建 FlexPod 解决方案的一些组件。这些组件是根据 Cisco 和 NetApp 的最佳实践进行连接和配置的，可为放心运行各种企业工作负载提供理想的平台。</block>
+  <block id="e45496f48ee3edb8aea9e00ad6f4a493" category="paragraph"><block ref="e45496f48ee3edb8aea9e00ad6f4a493" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d053a252411ec8347c2220434bc68511" category="paragraph">我们提供了大量的 Cisco 验证设计（ CVD ）和 NetApp 验证架构（ NVA ）产品组合。这些 CVD 和 NVA 涵盖所有主要数据中心工作负载，是 NetApp 和 Cisco 在 FlexPod 解决方案上持续协作和创新的成果。</block>
+  <block id="738c77b57bbb8696160cdd1ca725a9f9" category="paragraph">FlexPod CVD 和 NVA 在其创建过程中融入了广泛的测试和验证，提供了参考解决方案 架构设计和分步部署指南，可帮助合作伙伴和客户部署和采用 FlexPod 解决方案。通过使用这些 CVD 和 NVA 作为设计和实施指南，企业可以降低风险，减少解决方案 停机时间，并提高所部署 FlexPod 解决方案的可用性，可扩展性，灵活性和安全性。</block>
+  <block id="b36481fbcb76752b7c6862e9a567e4b6" category="paragraph">所示的每个 FlexPod 组件系列（ Cisco UCS ， Cisco Nexus /MDS 交换机和 NetApp 存储）都提供了平台和资源选项，用于纵向或横向扩展基础架构，同时支持 FlexPod 的配置和连接最佳实践所需的特性和功能。FlexPod 还可以通过部署更多 FlexPod 堆栈来横向扩展，以满足需要多个一致部署的环境的需求。</block>
+  <block id="e4696c4718fd3cdeb771bd13a2469f6a" category="section-title">灾难恢复和业务连续性</block>
+  <block id="36da1149b7c346ffc03a7f9be2631271" category="paragraph">企业可以采用多种方法来确保应用程序和数据服务能够从灾难中快速恢复。制定灾难恢复（ DR ）和业务连续性（ Business Continuity ， BC ）计划，实施满足业务目标的解决方案 以及对灾难情形执行定期测试，可使企业在发生灾难后从灾难中恢复并继续提供关键业务服务。</block>
+  <block id="2974a37910d6b9a22cecf7d9cacc35d2" category="paragraph">对于不同类型的应用程序和数据服务，公司可能有不同的灾难恢复和业务连续性要求。在紧急情况或灾难情况下，可能不需要某些应用程序和数据，而在其他应用程序和数据中，则可能需要持续可用以满足业务需求。</block>
+  <block id="75faab0b3cb14d5bfd20e377a120804e" category="paragraph">对于无法提供的可能会中断业务的任务关键型应用程序和数据服务，需要仔细评估问题解答 问题，例如业务需要考虑的维护和灾难情形， 在发生灾难时，企业可以承受丢失多少数据，以及恢复可以和应该以多快的速度进行。</block>
+  <block id="88781bc78d3ab90ea0630c4156fecc89" category="paragraph">对于依靠数据服务创收的企业，可能需要使用解决方案 来保护数据服务，该不仅可以承受各种单点故障情形，还可以承受站点中断灾难情形，从而实现持续业务运营。</block>
+  <block id="27873d50d29dbb90b764c150fdc767bd" category="section-title">恢复点目标和恢复时间目标</block>
+  <block id="16c13429b2100171458973a13f863bb9" category="paragraph">恢复点目标（ RPO ）用于衡量您可以承受的丢失数据量，以及可以将数据恢复到的时间点。如果采用每日备份计划，企业可能会丢失一天的数据，因为上次备份以来对数据所做的更改可能会在灾难中丢失。对于业务关键型和任务关键型数据服务，您可能需要零 RPO 以及相关的计划和基础架构来保护数据而不会丢失任何数据。</block>
+  <block id="503c0362dd209631b96351a010cf6e37" category="paragraph">恢复时间目标（ Recovery Time Objective ， RTO ）用于衡量数据不可用的时间，或者数据服务必须恢复的速度。例如，一家公司可能会实施备份和恢复，由于其大小，因此会对某些数据集使用传统磁带。因此，要从备份磁带还原数据，可能需要几个小时，如果基础架构发生故障，甚至需要几天时间。除了还原数据之外，时间方面的考虑还必须包括恢复基础架构的时间。对于任务关键型数据服务，您可能需要极低的 RTO ，因此只能允许数秒或数分钟的故障转移时间来快速恢复数据服务联机，以实现业务连续性。</block>
+  <block id="152bd193ad82e78daa1aeac187780314" category="section-title">SM — BC</block>
+  <block id="c085087673f5bd7a3b0fa950792847b2" category="paragraph">从 ONTAP 9.8 开始，您可以使用 NetApp SM-BC 保护 SAN 工作负载，以实现透明的应用程序故障转移。您可以在两个 AFF 集群或两个 ASA 集群之间创建一致性组关系，以实现数据复制，从而实现零 RPO 和接近零 RTO 。</block>
+  <block id="a6c6fc6de80f2efe2880bfd79ba5a506" category="paragraph">SM-BC 解决方案 可通过 IP 网络使用 SnapMirror 同步技术复制数据。它提供了应用程序级粒度和自动故障转移功能，可使用基于 iSCSI 或 FC 协议的 SAN LUN 保护业务关键型数据服务，例如 Microsoft SQL Server ， Oracle 等。部署在第三个站点的 ONTAP 调解器可监控 SM-BC 解决方案 ，并在站点发生灾难时自动进行故障转移。</block>
+  <block id="30a3c42957ac38f5bb5b42bc4f0ff852" category="paragraph">一致性组（ Consistency Group ， CG ）是一组 FlexVol 卷，可为需要保护以实现业务连续性的应用程序工作负载提供写入顺序一致性保证。它可以在一个时间点同时为一组卷创建崩溃状态一致的 Snapshot 副本。源 CG 和目标 CG 之间建立了 SnapMirror 关系，也称为 CG 关系。选择作为 CG 一部分的一组卷可以映射到一个应用程序实例，一组应用程序实例或整个解决方案 。此外，还可以根据业务需求和变更按需创建或删除 SM-BC 一致性组关系。</block>
+  <block id="1fa08e94e60e2700844c8771baab0ea1" category="paragraph">如下图所示，一致性组中的数据会复制到另一个 ONTAP 集群，以实现灾难恢复和业务连续性。这些应用程序可连接到两个 ONTAP 集群中的 LUN 。I/O 通常由主集群提供服务，如果主集群发生灾难，则会自动从二级集群恢复。在设计 SM-BC 解决方案 时，必须观察 CG 关系支持的对象计数（例如，最多 20 个 CG 和最多 200 个端点），以避免超过支持的限制。</block>
+  <block id="4a7da73f847d9f12eb7e453d01604ab8" category="paragraph"><block ref="4a7da73f847d9f12eb7e453d01604ab8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="babf43012b910d7f98ae060e8f718349" category="inline-link-macro">接下来： FlexPod SM-BC 解决方案 。</block>
+  <block id="7db90d25efb147bf4878f6fec9466170" category="paragraph"><block ref="7db90d25efb147bf4878f6fec9466170" category="inline-link-macro-rx"></block></block>
+  <block id="093a45d87b6b8692e6c9a73c1a04c137" category="doc">从何处查找追加信息和版本历史记录</block>
+  <block id="05a45991363cf9b2d3487c588a24c16b" category="paragraph"><block ref="05a45991363cf9b2d3487c588a24c16b" category="inline-link-macro-rx"></block></block>
+  <block id="2b700c19ef20ee180935ccd2eb7dddd1" category="list-text">FlexPod 主页</block>
+  <block id="7e2e9ba533867bc2e0337175d24205ca" category="list-text">适用于 FlexPod 的 Cisco 验证设计和部署指南</block>
+  <block id="895f63a6e9912cd9f4cff1fa786be7a2" category="list-text">Cisco 服务器—统一计算系统（ Unified Computing System ， UCS ）</block>
+  <block id="3cd8b5fe5ca94a9fdb5caaf96875ef7e" category="inline-link"><block ref="3cd8b5fe5ca94a9fdb5caaf96875ef7e" category="inline-link-rx"></block></block>
+  <block id="6bfac05f3cc2c0adace9c385ef708fd9" category="paragraph"><block ref="6bfac05f3cc2c0adace9c385ef708fd9" category="inline-link-rx"></block></block>
+  <block id="60912794da9f465a275c0f0eb81e242c" category="list-text">采用 UCS 托管模式的 FlexPod Datacenter 4.2 （ 1 ）， VMware vSphere 7.0 U2 和 NetApp ONTAP 9.9 设计指南</block>
+  <block id="070aab031dbd1f01b07e6d74522ad4af" category="inline-link"><block ref="070aab031dbd1f01b07e6d74522ad4af" category="inline-link-rx"></block></block>
+  <block id="e865ddbce846644ac8a203fbf896a951" category="paragraph"><block ref="e865ddbce846644ac8a203fbf896a951" category="inline-link-rx"></block></block>
+  <block id="3fb886f7d378f8993086b399cbc42dfa" category="list-text">《采用 UCS 托管模式的 FlexPod UCS 4.2 （ 1 ）， VMware vSphere 7.0 U2 和 NetApp ONTAP 9.9 部署指南》</block>
+  <block id="ee94f02a3ab62318d9af06b2b2cb3991" category="inline-link"><block ref="ee94f02a3ab62318d9af06b2b2cb3991" category="inline-link-rx"></block></block>
+  <block id="ac977a73f1cb59251e7b2919b2069f41" category="paragraph"><block ref="ac977a73f1cb59251e7b2919b2069f41" category="inline-link-rx"></block></block>
+  <block id="4a8df3ad772c408338bf3b14f5fcf7b9" category="list-text">采用 Cisco UCS X 系列， VMware 7.0 U2 和 NetApp ONTAP 9.9 的 FlexPod 数据中心设计指南</block>
+  <block id="177190825c127fb85928d6705e05cbe9" category="inline-link"><block ref="177190825c127fb85928d6705e05cbe9" category="inline-link-rx"></block></block>
+  <block id="16c4284420fc680417cef199f93ab137" category="paragraph"><block ref="16c4284420fc680417cef199f93ab137" category="inline-link-rx"></block></block>
+  <block id="8344230dacf5765b09ccbf005c7a6ac0" category="list-text">《采用 Cisco UCS X 系列， VMware 7.0 U2 和 NetApp ONTAP 9.9 的 FlexPod 数据中心部署指南》</block>
+  <block id="9c4917cae82b3b77f4e5655173e8d546" category="inline-link"><block ref="9c4917cae82b3b77f4e5655173e8d546" category="inline-link-rx"></block></block>
+  <block id="27c758d585ce4e93c483fd6f6c95dddc" category="paragraph"><block ref="27c758d585ce4e93c483fd6f6c95dddc" category="inline-link-rx"></block></block>
+  <block id="04a3344cda9c34adafc53a3a845cf96e" category="list-text">《采用 Cisco UCS Mini 和 NetApp AFF/FAS NVA 的 VMware vSphere 7.0 FlexPod 快速设计指南》</block>
+  <block id="2eaaed414f833a584e30dd5a33d13e0c" category="paragraph"><block ref="2eaaed414f833a584e30dd5a33d13e0c" category="inline-link-rx"></block></block>
+  <block id="d32a057bfbbbc089d69a8f97ce2b63eb" category="list-text">《适用于采用 Cisco UCS Mini 和 NetApp AFF/FAS NVA 的 VMware vSphere 7.0 的 FlexPod 快速部署指南》</block>
+  <block id="68e019739173183f72d148751f45b0c1" category="paragraph"><block ref="68e019739173183f72d148751f45b0c1" category="inline-link-rx"></block></block>
+  <block id="b316806ad7781b9ba4c7a357182173a1" category="list-text">采用 VXLAN 多站点前端网络结构的 FlexPod MetroCluster IP</block>
+  <block id="c5904944998c9d8971f82e838aa20aae" category="inline-link"><block ref="c5904944998c9d8971f82e838aa20aae" category="inline-link-rx"></block></block>
+  <block id="a9da560cfa7afb0e337b53562318198d" category="paragraph"><block ref="a9da560cfa7afb0e337b53562318198d" category="inline-link-rx"></block></block>
+  <block id="548154ef6ff2d5d9d7b0e2270128b0ab" category="inline-link"><block ref="548154ef6ff2d5d9d7b0e2270128b0ab" category="inline-link-rx"></block></block>
+  <block id="c433b7eb50bc88ded8f9c48135130e28" category="paragraph"><block ref="c433b7eb50bc88ded8f9c48135130e28" category="inline-link-rx"></block></block>
+  <block id="f7080908d8b268ad04ad99671289ee7a" category="inline-link"><block ref="f7080908d8b268ad04ad99671289ee7a" category="inline-link-rx"></block></block>
+  <block id="3df26ff7ed45549c7227d7c11ac64481" category="paragraph"><block ref="3df26ff7ed45549c7227d7c11ac64481" category="inline-link-rx"></block></block>
+  <block id="df7b6f99cac600ea13a6b3d9bda08e5f" category="inline-link"><block ref="df7b6f99cac600ea13a6b3d9bda08e5f" category="inline-link-rx"></block></block>
+  <block id="643be86208528436ffbb2e32c951a9e9" category="paragraph"><block ref="643be86208528436ffbb2e32c951a9e9" category="inline-link-rx"></block></block>
+  <block id="1989c908909050dc1f8610bb560fecba" category="list-text">TR-4878 ：《 SnapMirror 业务连续性（ SM-BC ） ONTAP 9.8 》</block>
+  <block id="9038a93557de432fcfaca71342a59971" category="inline-link"><block ref="9038a93557de432fcfaca71342a59971" category="inline-link-rx"></block></block>
+  <block id="841e048e22838f566123911f3e0be2b3" category="paragraph"><block ref="841e048e22838f566123911f3e0be2b3" category="inline-link-rx"></block></block>
+  <block id="6a3ced0e806303d25bd9470e394e3916" category="list-text">如何正确删除 SnapMirror 关系 ONTAP 9</block>
+  <block id="7ae5f66d4ce65a0584b430cf8358e94f" category="inline-link"><block ref="7ae5f66d4ce65a0584b430cf8358e94f" category="inline-link-rx"></block></block>
+  <block id="15f6ac2f75a004ac74fc2bf633751d77" category="paragraph"><block ref="15f6ac2f75a004ac74fc2bf633751d77" category="inline-link-rx"></block></block>
+  <block id="58749e1fa46114aab2056041133a84b9" category="list-text">SnapMirror 同步灾难恢复基础知识</block>
+  <block id="9d44e2e91088d41a986c68b35e7addb1" category="inline-link"><block ref="9d44e2e91088d41a986c68b35e7addb1" category="inline-link-rx"></block></block>
+  <block id="1726ceb383554e9feadccf93460453d4" category="paragraph"><block ref="1726ceb383554e9feadccf93460453d4" category="inline-link-rx"></block></block>
+  <block id="882884d52fb8d922c4576ca62aa00f6f" category="list-text">异步 SnapMirror 灾难恢复基础知识</block>
+  <block id="94e1d7d3198aa2c25d5656bb140edbcc" category="inline-link"><block ref="94e1d7d3198aa2c25d5656bb140edbcc" category="inline-link-rx"></block></block>
+  <block id="15a8e730a99ac3951725ec26a2303de8" category="paragraph"><block ref="15a8e730a99ac3951725ec26a2303de8" category="inline-link-rx"></block></block>
+  <block id="03c39d763ca15978d9ef16c2ba5fe98a" category="list-text">数据保护和灾难恢复</block>
+  <block id="e708f30d18e0c35946ecf377308668ea" category="inline-link"><block ref="e708f30d18e0c35946ecf377308668ea" category="inline-link-rx"></block></block>
+  <block id="e23356d1f27b95964905abe3ede1030b" category="paragraph"><block ref="e23356d1f27b95964905abe3ede1030b" category="inline-link-rx"></block></block>
+  <block id="71a38375f76a7ed87f8e28fa9645d356" category="list-text">安装或升级 ONTAP 调解器服务</block>
+  <block id="e38e35c79a69f1b3454bc51321bf3046" category="inline-link"><block ref="e38e35c79a69f1b3454bc51321bf3046" category="inline-link-rx"></block></block>
+  <block id="247926d418ad56ee7198494c45019659" category="paragraph"><block ref="247926d418ad56ee7198494c45019659" category="inline-link-rx"></block></block>
+  <block id="21e41f19959ca7dea2ba5cf3729eeb5d" category="section-title">VMware vSphere HA 和 vSphere Metro Storage Cluster</block>
+  <block id="ae37e8baa68245d9d2c894d2da1bab32" category="inline-link"><block ref="ae37e8baa68245d9d2c894d2da1bab32" category="inline-link-rx"></block></block>
+  <block id="33add6e3cb0eb6498644cf9001f98fd5" category="paragraph"><block ref="33add6e3cb0eb6498644cf9001f98fd5" category="inline-link-rx"></block></block>
+  <block id="de8402faa342fc9625bdaa3961573a1b" category="inline-link"><block ref="de8402faa342fc9625bdaa3961573a1b" category="inline-link-rx"></block></block>
+  <block id="eda0ad9ec468bbcaad6eca5eb6ef6925" category="paragraph"><block ref="eda0ad9ec468bbcaad6eca5eb6ef6925" category="inline-link-rx"></block></block>
+  <block id="d50e63b9f70efedde8dc093be8ec12b2" category="list-text">VMware vSphere Metro Storage Cluster 建议的实践</block>
+  <block id="9e211a0ec0ebb7c473ed61cbc37819a8" category="inline-link"><block ref="9e211a0ec0ebb7c473ed61cbc37819a8" category="inline-link-rx"></block></block>
+  <block id="734feebed99ef4959e1522728f6dbd8a" category="paragraph"><block ref="734feebed99ef4959e1522728f6dbd8a" category="inline-link-rx"></block></block>
+  <block id="c912dc73def9e5758eb6e130fd3b21ee" category="list-text">采用 NetApp SnapMirror 业务连续性（ SM-BC ）和 VMware vSphere Metro Storage Cluster （ VMSC ）的 NetApp ONTAP 。（ 83370 ）</block>
+  <block id="e42e1f7327a67ae6a4439a303fc9c81d" category="inline-link"><block ref="e42e1f7327a67ae6a4439a303fc9c81d" category="inline-link-rx"></block></block>
+  <block id="077317c6b779e004e75e33d28168bab8" category="paragraph"><block ref="077317c6b779e004e75e33d28168bab8" category="inline-link-rx"></block></block>
+  <block id="0fb53f6fd950dbb18a8f27d8735f5ed7" category="list-text">使用 VMware vSphere Metro Storage Cluster 和 ONTAP 保护第 1 层应用程序和数据库</block>
+  <block id="1fb0c828050c8732d84945ca6ded7c37" category="inline-link"><block ref="1fb0c828050c8732d84945ca6ded7c37" category="inline-link-rx"></block></block>
+  <block id="7105f117d2822e18aa8b108416306262" category="paragraph"><block ref="7105f117d2822e18aa8b108416306262" category="inline-link-rx"></block></block>
+  <block id="c0ff01bc62a5fd31ba0e537030243f17" category="section-title">Microsoft SQL 和 HammerDB</block>
+  <block id="f6d2c8f6c5f57ce5542457131b856e66" category="list-text">Microsoft SQL Server 2019</block>
+  <block id="a0ce43473bf333ef719887f309aa1a01" category="inline-link"><block ref="a0ce43473bf333ef719887f309aa1a01" category="inline-link-rx"></block></block>
+  <block id="4f04e1cba6b79808453a88555b1b8b9c" category="paragraph"><block ref="4f04e1cba6b79808453a88555b1b8b9c" category="inline-link-rx"></block></block>
+  <block id="ced5bb365341602e07a076509e79d013" category="list-text">《在 VMware vSphere 上构建 Microsoft SQL Server 最佳实践指南》</block>
+  <block id="0e3bf5e326af487aef0404982ac6b6bd" category="inline-link"><block ref="0e3bf5e326af487aef0404982ac6b6bd" category="inline-link-rx"></block></block>
+  <block id="f46bc0bb92b41bfe04d99b9ecc22fb8d" category="paragraph"><block ref="f46bc0bb92b41bfe04d99b9ecc22fb8d" category="inline-link-rx"></block></block>
+  <block id="9a7ba451c083642a4249fcb908d1e675" category="list-text">HammerDB 网站</block>
+  <block id="2275bc8a958a9046b4c1fb9447a632cd" category="inline-link"><block ref="2275bc8a958a9046b4c1fb9447a632cd" category="inline-link-rx"></block></block>
+  <block id="b6529ced98949d9a27cefcb6c236e24e" category="paragraph"><block ref="b6529ced98949d9a27cefcb6c236e24e" category="inline-link-rx"></block></block>
+  <block id="2827ebfd09192aa78e8ebf5fc1e5b769" category="section-title">兼容性表</block>
+  <block id="18c8dc765719dd560c9a80ef03cf87e2" category="inline-link"><block ref="18c8dc765719dd560c9a80ef03cf87e2" category="inline-link-rx"></block></block>
+  <block id="864917b1ac2563708daec0b6fb665d8b" category="paragraph"><block ref="864917b1ac2563708daec0b6fb665d8b" category="inline-link-rx"></block></block>
+  <block id="0cf6fdc2108556d64f002f7b2bff8700" category="inline-link"><block ref="0cf6fdc2108556d64f002f7b2bff8700" category="inline-link-rx"></block></block>
+  <block id="373f063717834529bc600f08b98fc66c" category="paragraph"><block ref="373f063717834529bc600f08b98fc66c" category="inline-link-rx"></block></block>
+  <block id="cbb9a6e025db26e6e93575dee2958256" category="paragraph">采用 NetApp SnapMirror 业务连续性（ SM-BC ）和 ONTAP 9.10 解决方案 的 FlexPod 数据中心可保护业务关键型数据，使其免受站点故障情形以及单点故障情形的影响。本技术报告概述了 FlexPod SM-BC 解决方案 及其解决方案 组件，并重点介绍了解决方案 的一些配置和验证方面。</block>
+  <block id="11d56047eb2c0edaf57e943fb8e6a2af" category="summary">FlexPod SM-BC 解决方案 的存储配置遵循每个站点的典型 FlexPod 解决方案 最佳实践。对于 SM-BC 集群对等和数据复制，它们使用在两个站点的 FlexPod 交换机之间建立的站点间链路。以下各节重点介绍了用于验证的一些连接和配置。</block>
+  <block id="d996e1a7c19a3c614597fe3d017735e3" category="doc">解决方案 验证—存储</block>
+  <block id="a5c83135920d14aae2bfd3bb752f5726" category="inline-link-macro">先前版本：解决方案 验证 - 概述。</block>
+  <block id="41b051617d64484449db4f9e8900e50c" category="paragraph"><block ref="41b051617d64484449db4f9e8900e50c" category="inline-link-macro-rx"></block></block>
+  <block id="06a162921ff2263e0d2871473d84695c" category="paragraph">本地站点的 Nexus 交换机可提供与本地 UCS CLI 和刀片式服务器的存储连接。通过站点之间的 Nexus 交换机连接，远程 UCS 刀片式服务器也可以访问存储。下图和表显示了每个站点的存储控制器的存储连接图和连接列表。</block>
+  <block id="8d5a21ecdaacb7041f30f1ec08f09734" category="paragraph"><block ref="8d5a21ecdaacb7041f30f1ec08f09734" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cfde5efedf8c38f0dabe7dd36607a381" category="section-title">连接和接口</block>
+  <block id="e5676954a0640c487fa545ebf76683c3" category="paragraph">每个存储控制器上的两个物理端口连接到每个 Nexus 交换机，用于进行带宽聚合和冗余以进行此验证。这四个连接参与存储上的接口组配置。Nexus 交换机上的相应端口参与 vPC ，以实现链路聚合和故障恢复能力。</block>
+  <block id="9cbd0bfae1c6b1fd16d45c202ec7079d" category="paragraph">带内管理，集群间和 NFS/iSCSI 数据存储协议使用 VLAN 。在接口组上创建 VLAN 端口，用于隔离不同类型的流量。相应功能的逻辑接口（ Logical Interface ， LIF ）在相应的 VLAN 端口之上创建。下图显示了物理连接，接口组， VLAN 端口和逻辑接口之间的关系。</block>
+  <block id="e54c07bea9f9ec56e70f7617e6655e0a" category="paragraph"><block ref="e54c07bea9f9ec56e70f7617e6655e0a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a0cbdd0f9fa2b6b926f068804645359d" category="paragraph">NetApp 建议在 FlexPod 解决方案 中为 Cisco UCS 服务器实施 SAN 启动。通过实施 SAN 启动，您可以在 NetApp 存储系统中安全地保护操作系统，从而提高性能和灵活性。对于此解决方案 ，已验证 iSCSI SAN 启动。</block>
+  <block id="28d253d13551c6a1fdcd21944f3d5cca" category="paragraph">下图显示了从 NetApp 存储对 Cisco UCS 服务器进行 iSCSI SAN 启动的连接。在 iSCSI SAN 启动中，每个 Cisco UCS 服务器都分配有两个 iSCSI vNIC （每个 SAN 网络结构一个），用于提供从服务器一直到存储的冗余连接。连接到 Nexus 交换机（在此示例中为 e1a ， e1b ， e1c 和 e1d ）的 10/25G 以太网存储端口将分组在一起，形成一个接口组（ ifgrp ）（在此示例中为 a0a ）。iSCSI VLAN 端口在 ifgrp 上创建， iSCSI LIF 在 iSCSI VLAN 端口上创建。</block>
+  <block id="cb41f38ec7e49697e0d27007ac150944" category="paragraph">每个 iSCSI 启动 LUN 都会通过 iSCSI LIF 映射到从中启动的服务器，方法是将启动 LUN 与其启动 igroup 中的服务器 iSCSI 限定名称（ IQN ）相关联。服务器的启动 igroup 包含两个 IQN ，每个 vNIC/SAN 网络结构一个。此功能仅允许授权服务器访问专为该服务器创建的启动 LUN 。</block>
+  <block id="55ac8f95de03dae63e773cf18fa9e42c" category="paragraph"><block ref="55ac8f95de03dae63e773cf18fa9e42c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="fa823ae2ebe162d7679db67051dbcec5" category="section-title">集群对等</block>
+  <block id="5523ee15c7f11760b1c12c909bb93f73" category="paragraph">ONTAP 集群对等方通过集群间 LIF 进行通信。使用 ONTAP 系统管理器可在 " 保护 "&gt;" 概述 " 窗格下创建所需的集群间 LIF 。</block>
+  <block id="2ef037e6fd3215a5e5f43453eb38fd9f" category="paragraph"><block ref="2ef037e6fd3215a5e5f43453eb38fd9f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3994219c5d8592586d602006783ccde8" category="paragraph">要将这两个集群建立对等关系，请完成以下步骤：</block>
+  <block id="418040e7ecd8f332fdbb7c9d2e17c503" category="list-text">在第一个集群中生成集群对等密码短语。</block>
+  <block id="d7482f3c9d6aeec74e75962e8dd48e9b" category="paragraph"><block ref="d7482f3c9d6aeec74e75962e8dd48e9b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7f0a4d0b4aa8a7b2219a12713ede495a" category="list-text">在第二个集群中调用对等集群选项，并提供密码短语和集群间 LIF 信息。</block>
+  <block id="8ebe8c770968c184503552f19042f546" category="paragraph"><block ref="8ebe8c770968c184503552f19042f546" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6e6e55dbd232503db3d7ce09f1d55067" category="list-text">System Manager 保护 &gt; 概述窗格显示集群对等信息。</block>
+  <block id="c340f73561a220e105229294aa9d0139" category="paragraph"><block ref="c340f73561a220e105229294aa9d0139" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0ef91273109acbed8effcf5b1be24116" category="section-title">ONTAP 调解器安装和配置</block>
+  <block id="bd32fe592cad4acb8313af5687a61387" category="paragraph">ONTAP 调解器为 SM-BC 关系中的 ONTAP 集群建立仲裁。它可以在检测到故障时协调自动故障转移，并有助于避免在每个集群同时尝试建立主集群控制时出现脑裂情况。</block>
+  <block id="f3d138059c90d7379267d72988cf023b" category="paragraph">安装 ONTAP 调解器之前，请查看<block ref="8286668f8f150ad8639fad5d717953b0" category="inline-link-rx"></block> 第页，了解前提条件，支持的 Linux 版本以及在各种受支持的 Linux 操作系统上安装它们的过程。</block>
+  <block id="ad580b3d90a601ed6970a73155cceef1" category="paragraph">安装 ONTAP 调解器后，您可以将 ONTAP 调解器的安全证书添加到 ONTAP 集群中，然后在 System Manager 保护 &gt; 概述窗格中配置 ONTAP 调解器。以下屏幕截图显示了 ONTAP 调解器配置 GUI 。</block>
+  <block id="a3c3465ab2f22395f2c552ae6d0faee7" category="paragraph"><block ref="a3c3465ab2f22395f2c552ae6d0faee7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="276ec2da41abd62121ae9d50c680f9f2" category="paragraph">提供必要信息后，已配置的 ONTAP 调解器将显示在 System Manager 保护 &gt; 概述窗格中。</block>
+  <block id="476d6e2be625e9f0b52f2fa23edac311" category="paragraph"><block ref="476d6e2be625e9f0b52f2fa23edac311" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="91396f32084a9998cb0143b6427a9e1c" category="section-title">SM-BC 一致性组</block>
+  <block id="6fe78c84732eb9b36fc9158ee16ef46f" category="paragraph">一致性组为跨越一组指定卷的应用程序工作负载提供写入顺序一致性保证。对于 ONTAP 9.10.1 ，以下是一些重要限制。</block>
+  <block id="78352ff4c785a1d0437f0fc1e1c67ceb" category="list-text">一个集群中的最大 SM-BC 一致性组关系数为 20 。</block>
+  <block id="43d4069eb239ba838fc082850887f934" category="list-text">每个 SM-BC 关系支持的最大卷数为 16 。</block>
+  <block id="d76bce2b9d2e4187054b98c5d875cbff" category="list-text">一个集群中的最大源端点和目标端点总数为 200 。</block>
+  <block id="f129f10b239e6d4050491901be3a8a29" category="inline-link">限制和限制</block>
+  <block id="05e4b2d9ec40019e07ce6bde5ed92eb5" category="paragraph">有关更多详细信息，请参见上的 ONTAP SM-BC 文档<block ref="2b9ee9e7077ed59597a8e36380145b36" category="inline-link-rx"></block>。</block>
+  <block id="6b7d2b918d790ac901761dcac7291c41" category="paragraph">在验证配置中，使用 ONTAP 系统管理器创建一致性组，以保护两个站点的 ESXi 启动 LUN 和共享数据存储库 LUN 。要访问一致性组创建对话框，请转到 " 保护 "&gt;" 概述 "&gt;" 保护业务连续性 "&gt;" 保护一致性组 " 。要创建一致性组，请提供创建所需的源卷，目标集群和目标 Storage Virtual Machine 信息。</block>
+  <block id="d07f3b4d4b8a441b456537ec163ed5af" category="paragraph"><block ref="d07f3b4d4b8a441b456537ec163ed5af" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5d7e4c0a4f8aebc3ece496af69e138ce" category="paragraph">下表列出了验证测试中创建的四个一致性组以及每个一致性组中包含的卷。</block>
+  <block id="26ed02718973e705cd69ee6e109400e0" category="cell">System Manager</block>
+  <block id="ae9e13b66877a85be97724063f459ec2" category="cell">一致性组</block>
+  <block id="564a95e2696af68aa1c3a4953ecd1ce9" category="cell">站点 A</block>
+  <block id="ba1ebd1e1e2245fa87263eda5dba5471" category="cell">CG_ESXi_A</block>
+  <block id="ba53713f8e79803793a4194009c5ebf7" category="cell">ESXi_A</block>
+  <block id="2cd730287a3329495c24f79df61c62fd" category="cell">CG_infra_datastore_A</block>
+  <block id="70b3634f10ae5a6bf44eb1bf8ba96d2b" category="cell">infra_datastore_A_01 infra_datastore_A_02</block>
+  <block id="bb713afeab82bcb45a45d3cc1411e3eb" category="cell">站点 B</block>
+  <block id="fdf8707b5db2d54d9a74aef7ae263c20" category="cell">CG_ESXi_b</block>
+  <block id="45a2db8a4219a462f57d6e7ab58147df" category="cell">ESXi b</block>
+  <block id="6da1db591917cf5fc22ae3ce17b426f6" category="cell">cG_infra_datastore_b.</block>
+  <block id="fe1d4fc67faf81ca96cd377b1fcf913a" category="cell">infra_datastore_b_01 infra_datastore_b_02</block>
+  <block id="c509a982b5d03a70dd249079a1b9778d" category="paragraph">创建一致性组后，它们将显示在站点 A 和站点 B 中相应的保护关系下</block>
+  <block id="b70bea0f1a6d707e69c6b7c9d4edb42b" category="paragraph">此屏幕截图显示了站点 A 上的一致性组关系</block>
+  <block id="e3c14bd2eb264e172c1d8d0b4e6ca18d" category="paragraph"><block ref="e3c14bd2eb264e172c1d8d0b4e6ca18d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="546972fb4d05b96ea4543b38bd362780" category="paragraph">此屏幕截图显示了站点 B 上的一致性组关系</block>
+  <block id="81fda0bef41eea0774ec8eafd653e1aa" category="paragraph"><block ref="81fda0bef41eea0774ec8eafd653e1aa" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8a91f7851ff41198009931e0638b682e" category="paragraph">此屏幕截图显示了 CG_infra_datastore_b 组的一致性组关系详细信息。</block>
+  <block id="a0e6bfc59ba895e9122ebfb6462a1ac4" category="paragraph"><block ref="a0e6bfc59ba895e9122ebfb6462a1ac4" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bd413320f29058521b15e80d18cebd3b" category="section-title">卷， LUN 和主机映射</block>
+  <block id="6564ddd31817f3c2ca6e76c4634dd89d" category="paragraph">创建一致性组后， SnapMirror 会同步源卷和目标卷，以便数据始终保持同步。远程站点上的目标卷包含卷名称，并且 _dest 结尾为。例如，对于站点 A 集群中的 ESXi_A 卷，站点 B 中有相应的 ESXi_A_Dest 数据保护（ DP ）卷</block>
+  <block id="c6e12ac81b9fdfe7758da0cedec13578" category="paragraph">此屏幕截图显示了站点 A 的卷信息</block>
+  <block id="85ac4d8dafd13306e842035ab093815b" category="paragraph"><block ref="85ac4d8dafd13306e842035ab093815b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f414a5a361a296288e3479f40a488be5" category="paragraph">此屏幕截图显示站点 B 的卷信息</block>
+  <block id="1dec3a6773b283635108af7e39c2ea93" category="paragraph"><block ref="1dec3a6773b283635108af7e39c2ea93" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="30c2d0e3e8f3be4a108053cf24dc5f53" category="paragraph">为了便于透明的应用程序故障转移，还需要将镜像的 SM-BC LUN 映射到目标集群中的主机。这样，主机就可以正确查看源集群和目标集群中 LUN 的路径。以下两个屏幕截图捕获了站点 A 和站点 B 的 `igroup show` 和 `lun show` 输出。通过创建的映射，集群中的每个 ESXi 主机都将其自己的 SAN 启动 LUN 视为 ID 0 ，并将所有四个共享 iSCSI 数据存储库 LUN 视为 ID 0 。</block>
+  <block id="c85dcc7a58bce2a7b09436fe6df63c20" category="paragraph">此屏幕截图显示了站点 A 集群的主机 igroup 和 LUN 映射。</block>
+  <block id="70454f7d864dcb1bcd98ae914297eb70" category="paragraph"><block ref="70454f7d864dcb1bcd98ae914297eb70" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="edd1aecfd23dac52aaa6864e47531f66" category="paragraph">此屏幕截图显示了站点 B 集群的主机 igroup 和 LUN 映射。</block>
+  <block id="816e6c704d1dad7cb3a94e32c2da8ffe" category="paragraph"><block ref="816e6c704d1dad7cb3a94e32c2da8ffe" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bac8b52ac8113098f074ef33a0441eb1" category="inline-link-macro">接下来：解决方案 验证—虚拟化。</block>
+  <block id="aa81b985470b358604c301c837d7c91b" category="paragraph"><block ref="aa81b985470b358604c301c837d7c91b" category="inline-link-macro-rx"></block></block>
+  <block id="c1d535c9a4692514b630f09f40f0b0dc" category="sidebar">采用 NetApp SnapMirror 业务连续性和 ONTAP 9.10 的 FlexPod 数据中心</block>
+  <block id="097c7979ec41d500c7beaecba9d80bfd" category="sidebar">经验证的场景</block>
 </blocks>

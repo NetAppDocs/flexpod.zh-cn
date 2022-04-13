@@ -6,6 +6,7 @@ summary: 为了展示 NetApp 全闪存 FAS 平台的存储效率和性能， Net
 ---
 = 内容提要
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

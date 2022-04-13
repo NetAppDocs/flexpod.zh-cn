@@ -6,6 +6,7 @@ summary: 此 FlexPod Express 解决方案是 FlexPod 融合基础架构计划的
 ---
 = 解决方案概述
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

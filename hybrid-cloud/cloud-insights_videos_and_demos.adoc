@@ -6,6 +6,7 @@ summary: 您可以观看使用 NetApp Cloud Insights 的视频演示。
 ---
 = 视频和演示
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

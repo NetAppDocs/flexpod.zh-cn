@@ -6,6 +6,7 @@ summary:
 ---
 = 参考架构
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

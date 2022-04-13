@@ -6,6 +6,7 @@ summary: NetApp 和 Cisco 合作提供 Cisco Intersight ，这是 FlexPod 生态
 ---
 = 简介
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

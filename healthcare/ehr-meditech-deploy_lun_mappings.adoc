@@ -6,6 +6,7 @@ summary: 创建 LUN 时会为 MEDITECH 主机建立 LUN 映射。
 ---
 = LUN 映射
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

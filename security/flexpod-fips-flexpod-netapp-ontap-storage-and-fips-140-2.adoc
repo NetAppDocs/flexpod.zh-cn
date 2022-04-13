@@ -6,6 +6,7 @@ summary: NetApp 提供各种硬件，软件和服务，其中可以包括根据�
 ---
 = FlexPod NetApp ONTAP 存储和 FIPS 140-2
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

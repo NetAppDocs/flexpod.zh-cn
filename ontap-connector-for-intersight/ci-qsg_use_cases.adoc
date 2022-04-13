@@ -6,6 +6,7 @@ summary: 以下是从 Cisco Intersight 监控和编排 NetApp 存储的几个用
 ---
 = 用例
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

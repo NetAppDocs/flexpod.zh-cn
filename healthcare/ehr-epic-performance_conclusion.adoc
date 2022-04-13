@@ -6,6 +6,7 @@ summary: 到 2020 年，所有 Epic 客户都必须使用闪存存储。NetApp O
 ---
 = 结论
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

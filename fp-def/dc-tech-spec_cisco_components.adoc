@@ -6,6 +6,7 @@ summary: Cisco 为 FlexPod 的设计和架构做出了重大贡献，涵盖了�
 ---
 = Cisco 组件
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -228,7 +229,7 @@ NOTE: 某些 Cisco Nexus 9000 系列交换机还具有其他变体。FlexPod 解
 
 == Cisco MDS 选项
 
-Cisco MDS 交换机是 FlexPod 架构中的一个可选组件。在 FC SAN 中实施 Cisco MDS 交换机时，需要使用冗余 SAN 交换机网络结构。下表列出了部分受支持的 Cisco MDS 交换机的部件号和详细信息。请参见 https://mysupport.netapp.com/matrix/["NetApp IMT"^] 和 有关支持的 SAN 交换机的完整列表。
+Cisco MDS 交换机是 FlexPod 架构中的一个可选组件。在 FC SAN 中实施 Cisco MDS 交换机时，需要使用冗余 SAN 交换机网络结构。下表列出了部分受支持的 Cisco MDS 交换机的部件号和详细信息。请参见 https://mysupport.netapp.com/matrix/["NetApp IMT"^] 和 https://ucshcltool.cloudapps.cisco.com/public/["Cisco 硬件和软件兼容性列表"^] 有关支持的 SAN 交换机的完整列表。
 
 |===
 | Cisco MDS 9000 系列交换机 | 部件号 | Description 

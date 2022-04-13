@@ -6,6 +6,7 @@ summary: 要了解更多信息，请参见参考文档和网站。
 ---
 = 参考资料
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

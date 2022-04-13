@@ -1,0 +1,94 @@
+---
+sidebar: sidebar 
+permalink: flexpod-dc/sm-bcs-virtualization.html 
+keywords: network connectivity, virtual networking, vm-host, affinity, groups, rules, vsphere ha heartbeat 
+summary: 在多站点 FlexPod SM-BC 解决方案 中，一个 VMware vCenter 可管理整个解决方案 的虚拟基础架构资源。两个数据中心中的主机都属于一个 VMware HA 集群，该集群跨越两个数据中心。主机可以访问 NetApp SM-BC 解决方案 ，在此可以从两个站点访问具有定义的 SM-BC 关系的存储。 
+---
+= 解决方案 验证—虚拟化
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:sm-bcs-storage.html["先前版本：解决方案 验证—存储。"]
+
+在多站点 FlexPod SM-BC 解决方案 中，一个 VMware vCenter 可管理整个解决方案 的虚拟基础架构资源。两个数据中心中的主机都属于一个 VMware HA 集群，该集群跨越两个数据中心。主机可以访问 NetApp SM-BC 解决方案 ，在此可以从两个站点访问具有定义的 SM-BC 关系的存储。
+
+SM-BC 解决方案 存储符合 VMware vSphere Metro Storage Cluster （ VMSC ）功能中的统一访问模式，可避免灾难和停机。为了获得最佳虚拟机性能，虚拟机磁盘应托管在本地 NetApp AFF A250 系统上，以便在正常操作下最大限度地减少 WAN 链路之间的延迟和流量。
+
+在设计实施过程中，必须确定虚拟机在两个站点之间的分布情况。您可以根据站点首选项和应用程序要求确定这两个站点之间的虚拟机站点关联性和应用程序分布。VMware 集群 VM/ 主机组和 VM/ 主机规则用于配置 VM/ 主机关联性，以确保 VM 在所需站点的主机上运行。
+
+但是，如果配置允许 VM 在两个站点上运行，则可以确保 VM 可以通过远程站点主机上的 VMware HA 重新启动，以提供解决方案 故障恢复能力。要使虚拟机能够同时在两个站点上运行，必须在所有 ESXi 主机上挂载所有 iSCSI 共享数据存储库，以确保站点之间虚拟机的 vMotion 操作顺畅。
+
+下图显示了一个高级 FlexPod SM-BC 解决方案 虚拟化视图，其中包括 VMware HA 和 VMSC 功能，可为计算和存储服务提供高可用性。主动 - 主动数据中心解决方案 架构支持站点之间的工作负载移动，并提供灾难恢复 / 业务连续性保护。
+
+image:sm-bcs-image39.png["错误：缺少图形映像"]
+
+
+
+== 端到端网络连接
+
+FlexPod SM-BC 解决方案 包括每个站点的 FlexPod 基础架构，站点之间的网络连接以及在第三个站点部署的 ONTAP 调解器，以满足所需的 RPO 和 RTO 目标。下图显示了每个站点的 Cisco UCS B200M5 服务器与站点内和站点间具有 SM-BC 功能的 NetApp 存储之间的端到端网络连接。
+
+image:sm-bcs-image40.png["错误：缺少图形映像"]
+
+在此解决方案 验证中，每个站点的 FlexPod 部署架构都是相同的。但是，解决方案 支持非对称部署，如果满足要求，也可以将其添加到现有 FlexPod 解决方案中。
+
+扩展的第 2 层架构用于无缝的多站点数据网络结构，可在每个数据中心的端口通道 Cisco UCS 计算和 NetApp 存储之间提供连接，并在数据中心之间提供连接。端口通道配置以及虚拟端口通道配置（如果适用）用于计算层，网络层和存储层之间以及跨站点链路之间的带宽聚合和容错。因此， UCS 刀片式服务器可以连接并多路径访问本地和远程 NetApp 存储。
+
+
+
+== 虚拟网络
+
+无论主机位于何处，集群中的每个主机都使用相同的虚拟网络进行部署。此设计使用 VMware 虚拟交换机（ vSwitch ）和 VMware 虚拟分布式交换机（ VDS ）来分隔不同的流量类型。VMware vSwitch 主要用于 FlexPod 基础架构网络，而 VDS 用于应用程序网络，但不是必需的。
+
+每个虚拟交换机（ vSwitch ， VDS ）部署有两个上行链路； ESXi 虚拟机管理程序级别的上行链路在 Cisco UCS 软件上称为 vmnic 和虚拟 NIC （ vNIC ）。vNIC 会使用 Cisco UCS 服务配置文件在每个服务器的 Cisco UCS VIC 适配器上创建。定义了六个 vNIC ，两个用于 vSwitch0 ，两个用于 vDS0 ，两个用于 vSwitch1 ，两个用于 iSCSI 上行链路，如下图所示。
+
+image:sm-bcs-image41.png["错误：缺少图形映像"]
+
+vSwitch0 是在 VMware ESXi 主机配置期间定义的，它包含用于管理的 FlexPod 基础架构管理 VLAN 和 ESXi 主机 VMkernel （ VMK ）端口。对于所需的任何关键基础架构管理虚拟机，还会在 vSwitch0 上放置一个基础架构管理虚拟机端口组。
+
+请务必将此类管理基础架构虚拟机放置在 vSwitch0 上，而不是 VDS 上，因为如果 FlexPod 基础架构已关闭或重新启动，而您尝试在最初运行该管理虚拟机的主机以外的主机上激活该管理虚拟机， 它可以在 vSwitch0 上的网络上正常启动。如果 VMware vCenter 是管理虚拟机，则此过程尤其重要。如果 vCenter 位于 VDS 上，并移至另一台主机，然后再启动，则它在启动后将无法连接到网络。
+
+在此设计中使用了两个 iSCSI 启动 vSwitch 。Cisco UCS iSCSI 启动需要使用单独的 vNIC 进行 iSCSI 启动。这些 VNIC 使用适当网络结构的 iSCSI VLAN 作为原生 VLAN ，并连接到相应的 iSCSI 启动 vSwitch 。或者，您也可以通过部署新的 VDS 或使用现有 VDS 在 VDS 上部署 iSCSI 网络。
+
+
+
+== VM 主机关联性组和规则
+
+要使虚拟机能够在两个 SM-BC 站点的任何 ESXi 主机上运行，所有 ESXi 主机都必须从两个站点挂载 iSCSI 数据存储库。如果所有 ESXi 主机均已正确挂载两个站点中的数据存储库，则可以在使用 vMotion 的任何主机之间迁移虚拟机，并且虚拟机仍可访问从这些数据存储库创建的所有虚拟磁盘。
+
+对于使用本地数据存储库的虚拟机，如果将其迁移到远程站点的主机，则其对虚拟磁盘的访问将变得远程，从而由于站点之间的物理距离而增加读取操作延迟。因此，最佳做法是将虚拟机保留在本地主机上，并利用站点上的本地存储。
+
+通过使用 VM/ 主机关联性机制，您可以使用 VM/ 主机组为位于特定站点的虚拟机和主机创建 VM 组和主机组。使用 VM/ 主机规则，您可以为要遵循的 VM 和主机指定策略。要在站点维护或灾难情形下允许跨站点进行虚拟机迁移，请使用 " 应在组中的主机上运行 " 策略规范来实现这种灵活性。
+
+以下屏幕截图显示了为站点 A 和站点 B 主机及 VM 创建的两个主机组和两个 VM 组
+
+image:sm-bcs-image42.png["错误：缺少图形映像"]
+
+此外，以下两个图显示了为站点 A 和站点 B VM 创建的 VM/ 主机规则，这些 VM 将使用 " 应在组中的主机上运行 " 策略在其各自站点的主机上运行。
+
+image:sm-bcs-image43.png["错误：缺少图形映像"]
+
+image:sm-bcs-image44.png["错误：缺少图形映像"]
+
+
+
+== vSphere HA 检测信号
+
+VMware vSphere HA 具有用于主机状态验证的检测信号机制。主要检测信号机制是通过网络连接实现的，而二级检测信号机制是通过数据存储库实现的。如果未收到检测信号，则它会通过对默认网关或手动配置的隔离地址执行 Ping 操作来确定它是否与网络隔离。对于数据存储库检测信号， VMware 建议将延伸型集群的检测信号数据存储库从最少 2 个增加到 4 个。
+
+对于解决方案 验证，使用两个 ONTAP 集群管理 IP 地址作为隔离地址。此外，还添加了建议的 vSphere HA 高级选项 `D ss.s.batDsPerHost` ，其值为 4 ，如下图所示。
+
+image:sm-bcs-image45.png["错误：缺少图形映像"]
+
+对于检测信号数据存储库，指定集群中的四个共享数据存储库并自动进行补充，如下图所示。
+
+image:sm-bcs-image46.png["错误：缺少图形映像"]
+
+有关 VMware HA 集群和 VMware vSphere Metro 存储集群的其他最佳实践和配置，请参见 https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.avail.doc/GUID-5432CA24-14F1-44E3-87FB-61D937831CF6.html["创建和使用 vSphere HA 集群"^]， https://core.vmware.com/resource/vmware-vsphere-metro-storage-cluster-vmsc["VMware vSphere 城域存储集群（ VMSC ）"^] 和 VMware 知识库 https://kb.vmware.com/s/article/83370["采用 NetApp SnapMirror 业务连续性（ SM-BC ）和 VMware vSphere 城域存储集群（ VMSC ）的 NetApp ONTAP"^]。
+
+link:sm-bcs-validated-scenarios.html["接下来：解决方案 验证—经验证的场景。"]

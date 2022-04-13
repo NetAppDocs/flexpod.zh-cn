@@ -6,6 +6,7 @@ summary: FlexPod 快速系统需要硬件和软件组件的组合。FlexPod Expr
 ---
 = 技术要求
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

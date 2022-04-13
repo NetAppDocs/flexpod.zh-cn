@@ -6,6 +6,7 @@ summary: 分层最小冷却天数设置确定使用自动或仅 Snapshot 策略�
 ---
 = 设置卷分层最小冷却天数
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

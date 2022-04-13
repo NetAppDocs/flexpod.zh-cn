@@ -6,6 +6,7 @@ summary: 为 Epic 软件环境部署的 NetApp 存储使用高可用性（ HA �
 ---
 = NetApp 配置
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

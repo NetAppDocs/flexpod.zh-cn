@@ -6,6 +6,7 @@ summary: 检查您是否满足 NetApp ONTAP 存储与 Cisco Intersight 集成的
 ---
 = 要求
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

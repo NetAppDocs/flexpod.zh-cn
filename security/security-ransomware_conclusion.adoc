@@ -6,6 +6,7 @@ summary: 作者建议在发生攻击时不要支付勒索，因为这样做会�
 ---
 = 结论
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

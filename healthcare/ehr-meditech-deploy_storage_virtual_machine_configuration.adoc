@@ -6,6 +6,7 @@ summary: 本节介绍在 ONTAP 8.3 及更高版本上部署的相关信息。
 ---
 = Storage Virtual Machine 配置
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

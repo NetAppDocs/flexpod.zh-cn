@@ -6,6 +6,7 @@ summary: 全球许多医疗保健组织都将 FlexPod 作为一个通用平台�
 ---
 = 结论
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

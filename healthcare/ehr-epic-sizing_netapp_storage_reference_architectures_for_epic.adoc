@@ -6,6 +6,7 @@ summary: 适当的存储架构可通过数据库的整体大小和总 IOPS 来�
 ---
 = 适用于 Epic 的 NetApp 存储参考架构
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

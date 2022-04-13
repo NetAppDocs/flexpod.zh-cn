@@ -6,6 +6,7 @@ summary: 此参考验证已按照下图和表所示进行布线。
 ---
 = FlexPod 快速布线信息
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

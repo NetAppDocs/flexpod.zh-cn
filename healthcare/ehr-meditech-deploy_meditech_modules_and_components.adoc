@@ -6,6 +6,7 @@ summary: MEDITECH 应用程序涵盖多个模块和组件。
 ---
 = Meditech 模块和组件
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

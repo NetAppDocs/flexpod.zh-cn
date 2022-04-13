@@ -6,6 +6,7 @@ summary: 在给定 FlexPod 部署中，可以使用多种 Cisco Nexus 产品作�
 ---
 = Cisco Nexus 切换操作模式
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -5,6 +5,7 @@ keywords: NetApp ONTAP 9.4, NetApp AFF A220, VMware vSphere 6.7, Target audience
 summary: FlexPod Express 专为运行混合虚拟化工作负载而设计。它面向远程办公室和分支机构以及中小型企业。它也是希望专用解决方案的大型企业的最佳选择。这款全新的解决方案 for FlexPod Express 新增了 NetApp ONTAP 9.4 ， NetApp AFF A220 和 VMware vSphere 6.7 等新技术。 
 ---
 = 解决方案概述
+:allow-uri-read: 
 
 
 FlexPod Express 专为运行混合虚拟化工作负载而设计。它面向远程办公室和分支机构以及中小型企业。它也是希望专用解决方案的大型企业的最佳选择。这款全新的解决方案 for FlexPod Express 新增了 NetApp ONTAP 9.4 ， NetApp AFF A220 和 VMware vSphere 6.7 等新技术。

@@ -6,6 +6,7 @@ summary: 通过设置并配置 Cloud Insights 来监控您的 FlexPod Datacenter
 ---
 = 用例
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

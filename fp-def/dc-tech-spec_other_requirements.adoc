@@ -6,6 +6,7 @@ summary: FlexPod 架构还具有以下与互操作性和支持相关的其他要
 ---
 = 其他要求
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -14,7 +15,7 @@ summary: FlexPod 架构还具有以下与互操作性和支持相关的其他要
 
 FlexPod 架构还具有以下与互操作性和支持相关的其他要求：
 
-* 所有硬件和软件组件都必须在 NetApp 上列出并受支持 http://mysupport.netapp.com/matrix["IMT"^]，和 Cisco UCS 硬件和软件互操作性表工具。
+* 所有硬件和软件组件都必须在 NetApp 上列出并受支持 http://mysupport.netapp.com/matrix["IMT"^]， https://ucshcltool.cloudapps.cisco.com/public/["Cisco UCS 硬件和软件兼容性列表"^]和 Cisco UCS 硬件和软件互操作性表工具。
 * 所有设备都需要有效的支持合同，包括：
 +
 ** Cisco 设备的 SMART Net Total Care （ SMARTnet Total Care ， SMARTnet ）支持

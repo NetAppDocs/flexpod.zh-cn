@@ -6,6 +6,7 @@ summary: NetApp ONTAP 软件安装在每个 NetApp FAS 或 AFF 系统上。FlexP
 ---
 = NetApp ONTAP
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

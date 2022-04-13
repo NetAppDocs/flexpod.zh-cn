@@ -6,6 +6,7 @@ summary: 本文档提供了 FlexPod 快速平台的技术规格。
 ---
 = FlexPod 平台
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

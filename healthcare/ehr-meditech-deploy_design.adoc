@@ -6,6 +6,7 @@ summary: 适用于 MEDITECH 的 FlexPod 架构基于 MEDITECH ， Cisco 和 NetA
 ---
 = 设计
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

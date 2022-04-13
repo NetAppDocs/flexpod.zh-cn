@@ -6,6 +6,7 @@ summary: FlexPod 是一种经过预先设计，集成和验证的架构，可将
 ---
 = FlexPod 概述
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

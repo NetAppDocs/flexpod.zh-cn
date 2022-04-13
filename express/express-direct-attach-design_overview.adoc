@@ -5,6 +5,7 @@ keywords: NVA-1130, design, Cisco UCS, Express, ROBOs
 summary: FlexPod Express 是一种预先设计的最佳实践架构，基于 Cisco 统一计算系统， Cisco Nexus 系列交换机和 NetApp AFF 构建。FlexPod Express 中的组件与 FlexPod 数据中心的对应组件一样，可以在较小规模的整个 IT 基础架构环境中实现管理协作。 
 ---
 = NVA-1130-design ：采用 VMware vSphere 6.7U1 的 FlexPod Express 以及采用基于 IP 的直连存储的 NetApp AFF A220
+:allow-uri-read: 
 
 
 NetApp 公司 Sree Lakshmi Lan

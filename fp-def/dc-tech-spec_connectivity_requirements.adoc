@@ -6,6 +6,7 @@ summary: 下面列出了 FlexPod 配置的连接要求。
 ---
 = 连接要求
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

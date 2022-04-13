@@ -1,0 +1,77 @@
+---
+sidebar: sidebar 
+permalink: flexpod-dc/sm-bcs-introduction.html 
+keywords: tr4920, 4920, introduction, ucs, cisco, nexus, solution, fas, aff, asa, dr, business continuity 
+summary: 本页介绍使用 NetApp SnapMirror 业务连续性和 ONTAP 9.10 的 FlexPod Datacenter 解决方案 。 
+---
+= TR-4920 ：采用 NetApp SnapMirror 业务连续性和 ONTAP 9.10 的 FlexPod 数据中心
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+NetApp 公司 Jyh-shing Chen
+
+
+
+= 简介
+
+
+
+== FlexPod 解决方案
+
+FlexPod 是一种最佳实践的融合基础架构数据中心架构，其中包括 Cisco 和 NetApp 的以下组件：
+
+* Cisco Unified Computing System （ Cisco UCS ）
+* Cisco Nexus 和 MDS 系列交换机
+* NetApp FAS ， NetApp AFF 和 NetApp 全 SAN 阵列（ ASA ）系统
+
+
+下图展示了用于创建 FlexPod 解决方案的一些组件。这些组件是根据 Cisco 和 NetApp 的最佳实践进行连接和配置的，可为放心运行各种企业工作负载提供理想的平台。
+
+image:sm-bcs-image2.png["错误：缺少图形映像"]
+
+我们提供了大量的 Cisco 验证设计（ CVD ）和 NetApp 验证架构（ NVA ）产品组合。这些 CVD 和 NVA 涵盖所有主要数据中心工作负载，是 NetApp 和 Cisco 在 FlexPod 解决方案上持续协作和创新的成果。
+
+FlexPod CVD 和 NVA 在其创建过程中融入了广泛的测试和验证，提供了参考解决方案 架构设计和分步部署指南，可帮助合作伙伴和客户部署和采用 FlexPod 解决方案。通过使用这些 CVD 和 NVA 作为设计和实施指南，企业可以降低风险，减少解决方案 停机时间，并提高所部署 FlexPod 解决方案的可用性，可扩展性，灵活性和安全性。
+
+所示的每个 FlexPod 组件系列（ Cisco UCS ， Cisco Nexus /MDS 交换机和 NetApp 存储）都提供了平台和资源选项，用于纵向或横向扩展基础架构，同时支持 FlexPod 的配置和连接最佳实践所需的特性和功能。FlexPod 还可以通过部署更多 FlexPod 堆栈来横向扩展，以满足需要多个一致部署的环境的需求。
+
+
+
+== 灾难恢复和业务连续性
+
+企业可以采用多种方法来确保应用程序和数据服务能够从灾难中快速恢复。制定灾难恢复（ DR ）和业务连续性（ Business Continuity ， BC ）计划，实施满足业务目标的解决方案 以及对灾难情形执行定期测试，可使企业在发生灾难后从灾难中恢复并继续提供关键业务服务。
+
+对于不同类型的应用程序和数据服务，公司可能有不同的灾难恢复和业务连续性要求。在紧急情况或灾难情况下，可能不需要某些应用程序和数据，而在其他应用程序和数据中，则可能需要持续可用以满足业务需求。
+
+对于无法提供的可能会中断业务的任务关键型应用程序和数据服务，需要仔细评估问题解答 问题，例如业务需要考虑的维护和灾难情形， 在发生灾难时，企业可以承受丢失多少数据，以及恢复可以和应该以多快的速度进行。
+
+对于依靠数据服务创收的企业，可能需要使用解决方案 来保护数据服务，该不仅可以承受各种单点故障情形，还可以承受站点中断灾难情形，从而实现持续业务运营。
+
+
+
+== 恢复点目标和恢复时间目标
+
+恢复点目标（ RPO ）用于衡量您可以承受的丢失数据量，以及可以将数据恢复到的时间点。如果采用每日备份计划，企业可能会丢失一天的数据，因为上次备份以来对数据所做的更改可能会在灾难中丢失。对于业务关键型和任务关键型数据服务，您可能需要零 RPO 以及相关的计划和基础架构来保护数据而不会丢失任何数据。
+
+恢复时间目标（ Recovery Time Objective ， RTO ）用于衡量数据不可用的时间，或者数据服务必须恢复的速度。例如，一家公司可能会实施备份和恢复，由于其大小，因此会对某些数据集使用传统磁带。因此，要从备份磁带还原数据，可能需要几个小时，如果基础架构发生故障，甚至需要几天时间。除了还原数据之外，时间方面的考虑还必须包括恢复基础架构的时间。对于任务关键型数据服务，您可能需要极低的 RTO ，因此只能允许数秒或数分钟的故障转移时间来快速恢复数据服务联机，以实现业务连续性。
+
+
+
+== SM — BC
+
+从 ONTAP 9.8 开始，您可以使用 NetApp SM-BC 保护 SAN 工作负载，以实现透明的应用程序故障转移。您可以在两个 AFF 集群或两个 ASA 集群之间创建一致性组关系，以实现数据复制，从而实现零 RPO 和接近零 RTO 。
+
+SM-BC 解决方案 可通过 IP 网络使用 SnapMirror 同步技术复制数据。它提供了应用程序级粒度和自动故障转移功能，可使用基于 iSCSI 或 FC 协议的 SAN LUN 保护业务关键型数据服务，例如 Microsoft SQL Server ， Oracle 等。部署在第三个站点的 ONTAP 调解器可监控 SM-BC 解决方案 ，并在站点发生灾难时自动进行故障转移。
+
+一致性组（ Consistency Group ， CG ）是一组 FlexVol 卷，可为需要保护以实现业务连续性的应用程序工作负载提供写入顺序一致性保证。它可以在一个时间点同时为一组卷创建崩溃状态一致的 Snapshot 副本。源 CG 和目标 CG 之间建立了 SnapMirror 关系，也称为 CG 关系。选择作为 CG 一部分的一组卷可以映射到一个应用程序实例，一组应用程序实例或整个解决方案 。此外，还可以根据业务需求和变更按需创建或删除 SM-BC 一致性组关系。
+
+如下图所示，一致性组中的数据会复制到另一个 ONTAP 集群，以实现灾难恢复和业务连续性。这些应用程序可连接到两个 ONTAP 集群中的 LUN 。I/O 通常由主集群提供服务，如果主集群发生灾难，则会自动从二级集群恢复。在设计 SM-BC 解决方案 时，必须观察 CG 关系支持的对象计数（例如，最多 20 个 CG 和最多 200 个端点），以避免超过支持的限制。
+
+image:sm-bcs-image3.png["错误：缺少图形映像"]
+
+link:sm-bcs-flexpod-sm-bc-solution.html["接下来： FlexPod SM-BC 解决方案 。"]

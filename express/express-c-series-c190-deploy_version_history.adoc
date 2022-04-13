@@ -6,6 +6,7 @@ summary: 以下是本文档的版本历史记录。
 ---
 = 版本历史记录
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

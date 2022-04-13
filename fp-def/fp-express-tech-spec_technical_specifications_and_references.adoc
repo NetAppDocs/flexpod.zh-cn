@@ -6,6 +6,7 @@ summary: 本节介绍每个 FlexPod 快速组件的其他重要技术规格。
 ---
 = 技术规格和参考
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -200,7 +201,7 @@ summary: 本节介绍每个 FlexPod 快速组件的其他重要技术规格。
 | 最大程度地提高 NetApp Flash Pool 智能数据缓存能力 2+| 24 TB 
 |===
 
-NOTE: 有关 FAS 存储控制器选项的详细信息，请参见 https://hwu.netapp.com/Controller/Index?platformTypeId=2032["FAS 型号"^] 部分 Hardware Universe 。对于 AFF ，请参见 部分。
+NOTE: 有关 FAS 存储控制器选项的详细信息，请参见 https://hwu.netapp.com/Controller/Index?platformTypeId=2032["FAS 型号"^] 部分 Hardware Universe 。对于 AFF ，请参见 https://hwu.netapp.com/Controller/Index?platformTypeId=5265148["AFF 型号"^] 部分。
 
 下表列出了 FAS8020 控制器系统的特征。
 

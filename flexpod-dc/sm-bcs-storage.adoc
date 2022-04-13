@@ -1,0 +1,201 @@
+---
+sidebar: sidebar 
+permalink: flexpod-dc/sm-bcs-storage.html 
+keywords: connectivity, connections, interfaces, san boot, cluster peering, ONTAP Mediator, sm-bc consistency group, volumes, luns, host mappings 
+summary: FlexPod SM-BC 解决方案 的存储配置遵循每个站点的典型 FlexPod 解决方案 最佳实践。对于 SM-BC 集群对等和数据复制，它们使用在两个站点的 FlexPod 交换机之间建立的站点间链路。以下各节重点介绍了用于验证的一些连接和配置。 
+---
+= 解决方案 验证—存储
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:sm-bcs-solution-validation_overview.html["先前版本：解决方案 验证 - 概述。"]
+
+FlexPod SM-BC 解决方案 的存储配置遵循每个站点的典型 FlexPod 解决方案 最佳实践。对于 SM-BC 集群对等和数据复制，它们使用在两个站点的 FlexPod 交换机之间建立的站点间链路。以下各节重点介绍了用于验证的一些连接和配置。
+
+
+
+== 连接
+
+本地站点的 Nexus 交换机可提供与本地 UCS CLI 和刀片式服务器的存储连接。通过站点之间的 Nexus 交换机连接，远程 UCS 刀片式服务器也可以访问存储。下图和表显示了每个站点的存储控制器的存储连接图和连接列表。
+
+image:sm-bcs-image22.png["错误：缺少图形映像"]
+
+|===
+| 本地设备 | 本地端口 | 远程设备 | 远程端口 
+
+
+| AFF A250 A | e0c | AFF A250 B | e0c 
+
+
+|  | e0d |  | e0d 
+
+
+|  | e1a | Nexus A | 1 月 10 日 
+
+
+|  | e1b |  | 1/2 年 10 月 1 日 
+
+
+|  | e1c | Nexus B | 1 月 10 日 
+
+
+|  | e1d |  | 1/2 年 10 月 1 日 
+
+
+| AFF A250 B | e0c | AFF A250 A | e0c 
+
+
+|  | e0d |  | e0d 
+
+
+|  | e1a | Nexus A | 3 月 1 日 
+
+
+|  | e1b |  | 4 月 1 日 
+
+
+|  | e1c | Nexus B | 3 月 1 日 
+
+
+|  | e1d |  | 4 月 1 日 
+|===
+
+
+== 连接和接口
+
+每个存储控制器上的两个物理端口连接到每个 Nexus 交换机，用于进行带宽聚合和冗余以进行此验证。这四个连接参与存储上的接口组配置。Nexus 交换机上的相应端口参与 vPC ，以实现链路聚合和故障恢复能力。
+
+带内管理，集群间和 NFS/iSCSI 数据存储协议使用 VLAN 。在接口组上创建 VLAN 端口，用于隔离不同类型的流量。相应功能的逻辑接口（ Logical Interface ， LIF ）在相应的 VLAN 端口之上创建。下图显示了物理连接，接口组， VLAN 端口和逻辑接口之间的关系。
+
+image:sm-bcs-image23.png["错误：缺少图形映像"]
+
+
+
+== SAN 启动
+
+NetApp 建议在 FlexPod 解决方案 中为 Cisco UCS 服务器实施 SAN 启动。通过实施 SAN 启动，您可以在 NetApp 存储系统中安全地保护操作系统，从而提高性能和灵活性。对于此解决方案 ，已验证 iSCSI SAN 启动。
+
+下图显示了从 NetApp 存储对 Cisco UCS 服务器进行 iSCSI SAN 启动的连接。在 iSCSI SAN 启动中，每个 Cisco UCS 服务器都分配有两个 iSCSI vNIC （每个 SAN 网络结构一个），用于提供从服务器一直到存储的冗余连接。连接到 Nexus 交换机（在此示例中为 e1a ， e1b ， e1c 和 e1d ）的 10/25G 以太网存储端口将分组在一起，形成一个接口组（ ifgrp ）（在此示例中为 a0a ）。iSCSI VLAN 端口在 ifgrp 上创建， iSCSI LIF 在 iSCSI VLAN 端口上创建。
+
+每个 iSCSI 启动 LUN 都会通过 iSCSI LIF 映射到从中启动的服务器，方法是将启动 LUN 与其启动 igroup 中的服务器 iSCSI 限定名称（ IQN ）相关联。服务器的启动 igroup 包含两个 IQN ，每个 vNIC/SAN 网络结构一个。此功能仅允许授权服务器访问专为该服务器创建的启动 LUN 。
+
+image:sm-bcs-image24.png["错误：缺少图形映像"]
+
+
+
+== 集群对等
+
+ONTAP 集群对等方通过集群间 LIF 进行通信。使用 ONTAP 系统管理器可在 " 保护 ">" 概述 " 窗格下创建所需的集群间 LIF 。
+
+image:sm-bcs-image25.png["错误：缺少图形映像"]
+
+要将这两个集群建立对等关系，请完成以下步骤：
+
+. 在第一个集群中生成集群对等密码短语。
++
+image:sm-bcs-image26.png["错误：缺少图形映像"]
+
+. 在第二个集群中调用对等集群选项，并提供密码短语和集群间 LIF 信息。
++
+image:sm-bcs-image27.png["错误：缺少图形映像"]
+
+. System Manager 保护 > 概述窗格显示集群对等信息。
++
+image:sm-bcs-image28.png["错误：缺少图形映像"]
+
+
+
+
+
+== ONTAP 调解器安装和配置
+
+ONTAP 调解器为 SM-BC 关系中的 ONTAP 集群建立仲裁。它可以在检测到故障时协调自动故障转移，并有助于避免在每个集群同时尝试建立主集群控制时出现脑裂情况。
+
+安装 ONTAP 调解器之前，请查看 https://docs.netapp.com/us-en/ontap/mediator/index.html["安装或升级 ONTAP 调解器服务"^] 第页，了解前提条件，支持的 Linux 版本以及在各种受支持的 Linux 操作系统上安装它们的过程。
+
+安装 ONTAP 调解器后，您可以将 ONTAP 调解器的安全证书添加到 ONTAP 集群中，然后在 System Manager 保护 > 概述窗格中配置 ONTAP 调解器。以下屏幕截图显示了 ONTAP 调解器配置 GUI 。
+
+image:sm-bcs-image29.png["错误：缺少图形映像"]
+
+提供必要信息后，已配置的 ONTAP 调解器将显示在 System Manager 保护 > 概述窗格中。
+
+image:sm-bcs-image30.png["错误：缺少图形映像"]
+
+
+
+== SM-BC 一致性组
+
+一致性组为跨越一组指定卷的应用程序工作负载提供写入顺序一致性保证。对于 ONTAP 9.10.1 ，以下是一些重要限制。
+
+* 一个集群中的最大 SM-BC 一致性组关系数为 20 。
+* 每个 SM-BC 关系支持的最大卷数为 16 。
+* 一个集群中的最大源端点和目标端点总数为 200 。
+
+
+有关更多详细信息，请参见上的 ONTAP SM-BC 文档 https://docs.netapp.com/us-en/ontap/smbc/smbc_plan_additional_restrictions_and_limitations.html["限制和限制"^]。
+
+在验证配置中，使用 ONTAP 系统管理器创建一致性组，以保护两个站点的 ESXi 启动 LUN 和共享数据存储库 LUN 。要访问一致性组创建对话框，请转到 " 保护 ">" 概述 ">" 保护业务连续性 ">" 保护一致性组 " 。要创建一致性组，请提供创建所需的源卷，目标集群和目标 Storage Virtual Machine 信息。
+
+image:sm-bcs-image31.png["错误：缺少图形映像"]
+
+下表列出了验证测试中创建的四个一致性组以及每个一致性组中包含的卷。
+
+|===
+| System Manager | 一致性组 | Volumes 
+
+
+| 站点 A | CG_ESXi_A | ESXi_A 
+
+
+| 站点 A | CG_infra_datastore_A | infra_datastore_A_01 infra_datastore_A_02 
+
+
+| 站点 B | CG_ESXi_b | ESXi b 
+
+
+| 站点 B | cG_infra_datastore_b. | infra_datastore_b_01 infra_datastore_b_02 
+|===
+创建一致性组后，它们将显示在站点 A 和站点 B 中相应的保护关系下
+
+此屏幕截图显示了站点 A 上的一致性组关系
+
+image:sm-bcs-image32.png["错误：缺少图形映像"]
+
+此屏幕截图显示了站点 B 上的一致性组关系
+
+image:sm-bcs-image33.png["错误：缺少图形映像"]
+
+此屏幕截图显示了 CG_infra_datastore_b 组的一致性组关系详细信息。
+
+image:sm-bcs-image34.png["错误：缺少图形映像"]
+
+
+
+== 卷， LUN 和主机映射
+
+创建一致性组后， SnapMirror 会同步源卷和目标卷，以便数据始终保持同步。远程站点上的目标卷包含卷名称，并且 _dest 结尾为。例如，对于站点 A 集群中的 ESXi_A 卷，站点 B 中有相应的 ESXi_A_Dest 数据保护（ DP ）卷
+
+此屏幕截图显示了站点 A 的卷信息
+
+image:sm-bcs-image35.png["错误：缺少图形映像"]
+
+此屏幕截图显示站点 B 的卷信息
+
+image:sm-bcs-image36.png["错误：缺少图形映像"]
+
+为了便于透明的应用程序故障转移，还需要将镜像的 SM-BC LUN 映射到目标集群中的主机。这样，主机就可以正确查看源集群和目标集群中 LUN 的路径。以下两个屏幕截图捕获了站点 A 和站点 B 的 `igroup show` 和 `lun show` 输出。通过创建的映射，集群中的每个 ESXi 主机都将其自己的 SAN 启动 LUN 视为 ID 0 ，并将所有四个共享 iSCSI 数据存储库 LUN 视为 ID 0 。
+
+此屏幕截图显示了站点 A 集群的主机 igroup 和 LUN 映射。
+
+image:sm-bcs-image37.png["错误：缺少图形映像"]
+
+此屏幕截图显示了站点 B 集群的主机 igroup 和 LUN 映射。
+
+image:sm-bcs-image38.png["错误：缺少图形映像"]
+
+link:sm-bcs-virtualization.html["接下来：解决方案 验证—虚拟化。"]

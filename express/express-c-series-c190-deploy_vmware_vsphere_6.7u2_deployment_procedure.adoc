@@ -6,6 +6,7 @@ summary: 本节详细介绍了在 FlexPod 快速配置中安装 VMware ESXi 6.7U
 ---
 = VMware vSphere 6.7U2 部署操作步骤
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

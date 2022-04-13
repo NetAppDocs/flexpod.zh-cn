@@ -6,6 +6,7 @@ summary: 在考虑规模估算时，应评估以下内容。
 ---
 = 性能注意事项
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: 下面列出了 FlexPod Express 的其他要求。
 ---
 = 其他要求
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

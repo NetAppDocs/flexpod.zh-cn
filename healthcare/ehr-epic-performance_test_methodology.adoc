@@ -6,6 +6,7 @@ summary: Epic 使用 GenerationIO 工具（ Genio ）来验证存储是否已做
 ---
 = 测试方法
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

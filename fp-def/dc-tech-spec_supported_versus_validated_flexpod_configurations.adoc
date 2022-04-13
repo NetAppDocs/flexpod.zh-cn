@@ -6,13 +6,14 @@ summary: FlexPod 架构由本文档中所述的一组规则定义。
 ---
 = 支持的 FlexPod 配置与经验证的 配置
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
 :imagesdir: ./../media/
 
 
-FlexPod 架构由本文档中所述的一组规则定义。硬件组件和软件配置必须受支持 https://ucshcltool.cloudapps.cisco.com/public/["Cisco UCS 硬件和软件兼容性列表"^] 和。
+FlexPod 架构由本文档中所述的一组规则定义。硬件组件和软件配置必须受支持 https://ucshcltool.cloudapps.cisco.com/public/["Cisco UCS 硬件和软件兼容性列表"^] 和 http://mysupport.netapp.com/matrix["NetApp 互操作性表工具（ IMT ）"^]。
 
 每个 Cisco 验证设计（ Cisco Validated Design ， CVD ）或 NetApp 验证架构（ NetApp Verified Architecture ， NVA ）都是一种可能的 FlexPod 配置。Cisco 和 NetApp 会记录这些配置组合，并通过广泛的端到端测试对其进行验证。如果与这些配置不同的 FlexPod 部署符合本文档中的准则，并且所有组件均在 Cisco UCS 硬件和软件兼容性列表以及 NetApp 中列为兼容，则完全支持这些部署 http://mysupport.netapp.com/matrix["IMT"^]。
 

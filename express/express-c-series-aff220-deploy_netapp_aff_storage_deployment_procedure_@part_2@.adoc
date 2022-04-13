@@ -6,6 +6,7 @@ summary: 要创建 igroup ，您需要 iSCSI 启动程序 IQN ，并且必须完
 ---
 = NetApp AFF 存储部署操作步骤（第 2 部分）
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

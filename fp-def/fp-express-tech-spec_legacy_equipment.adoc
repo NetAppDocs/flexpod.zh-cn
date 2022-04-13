@@ -6,6 +6,7 @@ summary: 本节列出了 NetApp 原有磁盘架， FAS 控制器和存储控制�
 ---
 = 旧设备
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

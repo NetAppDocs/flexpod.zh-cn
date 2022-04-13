@@ -6,6 +6,7 @@ summary: 本节详细介绍了在使用 ONTAP 或 Cisco UCS 刀片式服务器�
 ---
 = 概述
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

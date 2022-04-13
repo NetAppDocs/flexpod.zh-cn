@@ -6,6 +6,7 @@ summary: 通过在 FlexPod 上运行医疗影像环境，您的医疗保健组�
 ---
 = 结论
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

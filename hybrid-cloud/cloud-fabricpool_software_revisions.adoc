@@ -6,6 +6,7 @@ summary: 下表显示了经过验证的硬件和软件版本，此页面详细�
 ---
 = 软件版本
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

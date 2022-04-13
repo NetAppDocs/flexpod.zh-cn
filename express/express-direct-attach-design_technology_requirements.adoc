@@ -5,6 +5,7 @@ keywords: requirements, hardware, software, A220, HA, VIC, B200 m5, fabric inter
 summary: FlexPod 快速系统需要硬件和软件组件的组合。FlexPod Express 还介绍了以两个单位向系统添加虚拟机管理程序节点所需的硬件组件。 
 ---
 = 技术要求
+:allow-uri-read: 
 
 
 FlexPod 快速系统需要硬件和软件组件的组合。FlexPod Express 还介绍了以两个单位向系统添加虚拟机管理程序节点所需的硬件组件。

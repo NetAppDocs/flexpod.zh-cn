@@ -5,6 +5,7 @@ keywords: express, datacenter, select, converged infrastructure, CVD, NVA, AFF A
 summary: FlexPod 参考架构以经过 Cisco 验证的设计或经过 NetApp 验证的架构的形式提供。如果给定 CVD 或 NVA 不会产生不受支持的配置，则允许根据客户要求进行差异。 
 ---
 = 计划摘要
+:allow-uri-read: 
 
 
 此 FlexPod Express 解决方案是 FlexPod 融合基础架构计划的一部分。

@@ -6,6 +6,7 @@ summary: 在实施 FIPS 140-2 策略时，了解要保护的内容非常重要�
 ---
 = 控制平面与数据平面
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

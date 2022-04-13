@@ -6,6 +6,7 @@ summary: 通过在 FlexPod 平台上运行医疗保健应用程序，支持 FIPS
 ---
 = 结论
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

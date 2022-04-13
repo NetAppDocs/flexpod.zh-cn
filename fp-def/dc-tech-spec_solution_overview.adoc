@@ -6,6 +6,7 @@ summary: FlexPod 平台是一种预先设计的最佳实践数据中心架构，
 ---
 = TR-4036 ： FlexPod 数据中心技术规格
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

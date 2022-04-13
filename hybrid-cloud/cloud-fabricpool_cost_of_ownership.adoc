@@ -6,6 +6,7 @@ summary: FabricPool 经济计算器可通过独立 IT 分析机构 Evaluator Gro
 ---
 = 拥有成本
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

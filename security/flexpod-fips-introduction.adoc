@@ -6,6 +6,7 @@ summary: 本文档对基于 Cisco Unified Computing System （ Cisco UCS ）， 
 ---
 = TR-4892 ：适用于医疗保健的 FIPS 140-2 安全合规 FlexPod 解决方案
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: FlexPod 数据中心和 FlexPod Express 提供基线配置，并可灵�
 ---
 = NVA-1142-Deploy ：采用 Cisco UCS C 系列和 NetApp AFF C190 系列的 FlexPod Express — NVA 部署
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

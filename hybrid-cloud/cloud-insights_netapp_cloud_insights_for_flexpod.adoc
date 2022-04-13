@@ -6,6 +6,7 @@ summary: 本技术报告详细介绍的解决方案是 NetApp Cloud Insights 服
 ---
 = TR-4868 ：《适用于 FlexPod 的 NetApp Cloud Insights 》
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

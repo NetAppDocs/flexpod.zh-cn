@@ -6,6 +6,7 @@ summary: 本节将讨论不同大小的存储架构的示例材料清单。
 ---
 = 小型，中型和大型架构的技术规格
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

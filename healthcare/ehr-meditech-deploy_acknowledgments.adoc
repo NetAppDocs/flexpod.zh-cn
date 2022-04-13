@@ -6,6 +6,7 @@ summary: 以下人员为本指南的创建做出了贡献。
 ---
 = 致谢
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

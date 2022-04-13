@@ -6,6 +6,7 @@ summary: 作者谨向 John George 表示感谢，感谢他对这一设计的支�
 ---
 = 致谢
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
