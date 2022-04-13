@@ -8527,8 +8527,6 @@
   <block id="fc37581a93e14f865030ca55b7270290" category="paragraph"><block ref="fc37581a93e14f865030ca55b7270290" category="inline-link-macro-rx"></block></block>
   <block id="9bba922e59a4daeddb1809c2781a44a1" category="summary">FlexPod SM-BC 解决方案 的计算配置遵循典型的 FlexPod 解决方案 最佳实践。以下各节重点介绍了用于验证的一些连接和配置。此外，还重点介绍了与 SM-BC 相关的一些注意事项，以提供实施参考和指导。</block>
   <block id="bc8a1d734e83e27cc8a2adc1858d6959" category="doc">解决方案 验证—计算</block>
-  <block id="ed0d7e76ce8e3038702fbab0cb9524ab" category="inline-link-macro">Preivous ：概述。</block>
-  <block id="e38775cef86d4cc66d36ea249100c217" category="paragraph"><block ref="e38775cef86d4cc66d36ea249100c217" category="inline-link-macro-rx"></block></block>
   <block id="3f0294fb25b6df81fd5b767f0d74974f" category="paragraph">UCS B200 刀片式服务器与 IOM 之间的连接由 UCS VIC 卡通过 UCS 5108 机箱背板连接提供。用于验证的 UCS 2204XP 阵列扩展器具有 16 个 10 G 端口，每个端口可连接到八个半宽刀片式服务器，例如，每个服务器两个。为了增加服务器连接带宽，可以添加一个基于夹层的额外 VIC ，将服务器连接到备用 UCS 2408 IOM ，该 IOM 可为每个服务器提供四个 10G 连接。</block>
   <block id="faf94a25f3b3dbcdc7d8df2b1e466b18" category="paragraph"><block ref="faf94a25f3b3dbcdc7d8df2b1e466b18" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3e760ed69fcce8d06a007f41a5c61d17" category="paragraph">UCS 5108 机箱与用于验证的 UCS 6454 FI 之间的连接由使用四个 10G 连接的 IOM 2204XP 提供。FI 端口 1 到 4 已配置为这些连接的服务器端口。FI 端口 25 到 28 配置为本地站点的 Nexus 交换机 A 和 B 的网络上行链路端口。下图和表提供了要连接到 UCS 5108 机箱和 Nexus 交换机的 UCS 6454 CLI 的连接图和端口连接详细信息。</block>
@@ -8575,7 +8573,6 @@
   <block id="6add07bc86a316af4f25422f4c8887b7" category="cell">iSCSI B</block>
   <block id="56d1b12d5a4e9f59a4453bb6a7cb7b08" category="cell">站点 B 控制器 1 iSCSI B LIF</block>
   <block id="5975420dbf2246f6edb6a902578b5ff1" category="cell">站点 A 控制器 2 iSCSI B LIF</block>
-  <block id="5e7b9ab3adef639ef9c61005fee6237c" category="list-text">标题： network URL ： /flexpo-dc/sm-bcs-network.html</block>
   <block id="efa3c8203ca8f331abebfd2b1b8197b6" category="summary">FlexPod SM-BC 解决方案 的网络配置遵循每个站点的典型 FlexPod 解决方案 最佳实践。对于站点间连接，解决方案 验证配置会将两个站点上的 FlexPod Nexus 交换机连接在一起，以提供站点间连接，从而扩展两个站点之间的 VLAN 。以下各节重点介绍了用于验证的一些连接和配置。</block>
   <block id="74b5d0143f42e7eea9541ccef14b9fb7" category="doc">解决方案 验证—网络</block>
   <block id="698c40fe15891da5bf5654625e3efc65" category="paragraph">每个站点上的 FlexPod Nexus 交换机均可通过高可用性配置在 UCS 计算和 ONTAP 存储之间提供本地连接。冗余组件和冗余连接可在发生单点故障时提供故障恢复能力。</block>
@@ -8886,8 +8883,6 @@
   <block id="cbb9a6e025db26e6e93575dee2958256" category="paragraph">采用 NetApp SnapMirror 业务连续性（ SM-BC ）和 ONTAP 9.10 解决方案 的 FlexPod 数据中心可保护业务关键型数据，使其免受站点故障情形以及单点故障情形的影响。本技术报告概述了 FlexPod SM-BC 解决方案 及其解决方案 组件，并重点介绍了解决方案 的一些配置和验证方面。</block>
   <block id="11d56047eb2c0edaf57e943fb8e6a2af" category="summary">FlexPod SM-BC 解决方案 的存储配置遵循每个站点的典型 FlexPod 解决方案 最佳实践。对于 SM-BC 集群对等和数据复制，它们使用在两个站点的 FlexPod 交换机之间建立的站点间链路。以下各节重点介绍了用于验证的一些连接和配置。</block>
   <block id="d996e1a7c19a3c614597fe3d017735e3" category="doc">解决方案 验证—存储</block>
-  <block id="a5c83135920d14aae2bfd3bb752f5726" category="inline-link-macro">先前版本：解决方案 验证 - 概述。</block>
-  <block id="41b051617d64484449db4f9e8900e50c" category="paragraph"><block ref="41b051617d64484449db4f9e8900e50c" category="inline-link-macro-rx"></block></block>
   <block id="06a162921ff2263e0d2871473d84695c" category="paragraph">本地站点的 Nexus 交换机可提供与本地 UCS CLI 和刀片式服务器的存储连接。通过站点之间的 Nexus 交换机连接，远程 UCS 刀片式服务器也可以访问存储。下图和表显示了每个站点的存储控制器的存储连接图和连接列表。</block>
   <block id="8d5a21ecdaacb7041f30f1ec08f09734" category="paragraph"><block ref="8d5a21ecdaacb7041f30f1ec08f09734" category="inline-image-macro-rx" type="image"></block></block>
   <block id="cfde5efedf8c38f0dabe7dd36607a381" category="section-title">连接和接口</block>
@@ -8959,4 +8954,14 @@
   <block id="aa81b985470b358604c301c837d7c91b" category="paragraph"><block ref="aa81b985470b358604c301c837d7c91b" category="inline-link-macro-rx"></block></block>
   <block id="c1d535c9a4692514b630f09f40f0b0dc" category="sidebar">采用 NetApp SnapMirror 业务连续性和 ONTAP 9.10 的 FlexPod 数据中心</block>
   <block id="097c7979ec41d500c7beaecba9d80bfd" category="sidebar">经验证的场景</block>
+  <block id="926c55d6254734317efca9c578785222" category="inline-link-macro">Preivous ：解决方案 验证—概述。</block>
+  <block id="015b55d92ffe05728fcc13ea0f166b7d" category="paragraph"><block ref="015b55d92ffe05728fcc13ea0f166b7d" category="inline-link-macro-rx"></block></block>
+  <block id="2624162f080c891f91de0c93697cdcd6" category="inline-link-macro">接下来：解决方案 验证—网络。</block>
+  <block id="510a9ef55077a4c865a658827d82e4ba" category="list-text">标题： network<block ref="a400e1c221e8c3e8b80a81f5085a481d" category="inline-link-macro-rx"></block></block>
+  <block id="abcffbe98efe96e429a99d1585c42fea" category="inline-link-macro">先前版本：解决方案 验证—计算。</block>
+  <block id="b3b724b3ba2d9437c4399b9adc6bd618" category="paragraph"><block ref="b3b724b3ba2d9437c4399b9adc6bd618" category="inline-link-macro-rx"></block></block>
+  <block id="49bca3ae2bb88d593b1c6cd906f3a1f5" category="inline-link-macro">接下来：解决方案 验证—存储。</block>
+  <block id="aa19bc894bc9430b5e38f9f1186a4112" category="paragraph"><block ref="aa19bc894bc9430b5e38f9f1186a4112" category="inline-link-macro-rx"></block></block>
+  <block id="182b99dd6e6e03bd87c6e4742f0efe61" category="inline-link-macro">先前版本：解决方案 验证 - 网络。</block>
+  <block id="b039f508b07fa442d12ced167cdee4ab" category="paragraph"><block ref="b039f508b07fa442d12ced167cdee4ab" category="inline-link-macro-rx"></block></block>
 </blocks>

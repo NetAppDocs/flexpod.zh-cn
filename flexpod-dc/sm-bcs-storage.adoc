@@ -13,7 +13,7 @@ summary: FlexPod SM-BC 解决方案 的存储配置遵循每个站点的典型 F
 :imagesdir: ./../media/
 
 
-link:sm-bcs-solution-validation_overview.html["先前版本：解决方案 验证 - 概述。"]
+link:sm-bcs-network.html["先前版本：解决方案 验证 - 网络。"]
 
 FlexPod SM-BC 解决方案 的存储配置遵循每个站点的典型 FlexPod 解决方案 最佳实践。对于 SM-BC 集群对等和数据复制，它们使用在两个站点的 FlexPod 交换机之间建立的站点间链路。以下各节重点介绍了用于验证的一些连接和配置。
 

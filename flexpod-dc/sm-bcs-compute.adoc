@@ -13,7 +13,7 @@ summary: FlexPod SM-BC 解决方案 的计算配置遵循典型的 FlexPod 解�
 :imagesdir: ./../media/
 
 
-link:sm-bcs-solution-validation_overview.html["Preivous ：概述。"]
+link:sm-bcs-solution-validation_overview.html["Preivous ：解决方案 验证—概述。"]
 
 FlexPod SM-BC 解决方案 的计算配置遵循典型的 FlexPod 解决方案 最佳实践。以下各节重点介绍了用于验证的一些连接和配置。此外，还重点介绍了与 SM-BC 相关的一些注意事项，以提供实施参考和指导。
 
@@ -145,5 +145,5 @@ image:sm-bcs-image19.png["错误：缺少图形映像"]
 
 |  | 2. | 站点 A iSCSI 目标 | 站点 A 控制器 2 iSCSI B LIF 
 |===
-* 标题： network URL ： /flexpo-dc/sm-bcs-network.html
+* 标题： networklink:sm-bcs-network.html["接下来：解决方案 验证—网络。"]
 

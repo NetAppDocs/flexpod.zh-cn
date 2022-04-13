@@ -13,6 +13,8 @@ summary: FlexPod SM-BC 解决方案 的网络配置遵循每个站点的典型 F
 :imagesdir: ./../media/
 
 
+link:sm-bcs-compute.html["先前版本：解决方案 验证—计算。"]
+
 FlexPod SM-BC 解决方案 的网络配置遵循每个站点的典型 FlexPod 解决方案 最佳实践。对于站点间连接，解决方案 验证配置会将两个站点上的 FlexPod Nexus 交换机连接在一起，以提供站点间连接，从而扩展两个站点之间的 VLAN 。以下各节重点介绍了用于验证的一些连接和配置。
 
 
@@ -186,3 +188,5 @@ NOTE: 上表从每个 FlexPod 交换机的角度列出了连接。因此，该�
 |===
 
 NOTE: 虽然 SM-BC 不支持 NFS 或 CIFS 协议以实现业务连续性，但您仍可以将其用于不需要保护业务连续性的工作负载。未为此验证创建 NFS 数据存储库。
+
+link:sm-bcs-storage.html["接下来：解决方案 验证—存储。"]
