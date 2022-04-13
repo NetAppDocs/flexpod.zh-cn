@@ -145,5 +145,4 @@ image:sm-bcs-image19.png["错误：缺少图形映像"]
 
 |  | 2. | 站点 A iSCSI 目标 | 站点 A 控制器 2 iSCSI B LIF 
 |===
-* 标题： networklink:sm-bcs-network.html["接下来：解决方案 验证—网络。"]
-
+link:sm-bcs-network.html["接下来：解决方案 验证—网络。"]
