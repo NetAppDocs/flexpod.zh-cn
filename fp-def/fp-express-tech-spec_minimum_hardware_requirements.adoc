@@ -27,7 +27,7 @@ summary: 本节介绍不同版本的 FlexPod Express 的最低硬件要求。
 
 Cisco Integrated Management Controller （ CIMC ）配置包括以下硬件组件：
 
-* 采用冗余配置的两个 10 Gbps 标准以太网交换机（建议使用 Cisco Nexus 0808 ，支持 Cisco Nexus 3000 和 9000 型号）
+* 采用冗余配置的两个10 Gbps标准以太网交换机(建议使用Cisco Nexus 31108、并支持Cisco Nexus 3000和9000型号)
 * Cisco UCS C 系列独立机架式服务器
 * 采用高可用性（ HA ）对配置的两个 AFF C190 ， AFF A250 ， FAS2600 或 FAS 2700 系列控制器，部署为双节点集群
 

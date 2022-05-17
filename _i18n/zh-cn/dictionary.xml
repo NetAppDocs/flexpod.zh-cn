@@ -992,7 +992,6 @@
   <block id="84daec59b75a10e0cd013d1db7a434f5" category="paragraph">使用 NetApp FAS 控制器进行底层存储的 FlexPod 快速解决方案的硬件要求包括本节中所述的配置。</block>
   <block id="d889bada95a4507597263f4085f7eb35" category="section-title">基于 CIMC 的配置（独立机架服务器）</block>
   <block id="dbf88aea6907acd1a2ddf8af6778500b" category="paragraph">Cisco Integrated Management Controller （ CIMC ）配置包括以下硬件组件：</block>
-  <block id="7522eca6f14a81cd40ef3209e540e583" category="list-text">采用冗余配置的两个 10 Gbps 标准以太网交换机（建议使用 Cisco Nexus 0808 ，支持 Cisco Nexus 3000 和 9000 型号）</block>
   <block id="98b00d8d43ad07f702f22f5c8b541ca2" category="list-text">Cisco UCS C 系列独立机架式服务器</block>
   <block id="1bd4b426108264f2676dc78d9d2018da" category="section-title">Cisco UCS 管理的配置</block>
   <block id="b2d15a256201c5ef01bc4171f55f63a5" category="paragraph">Cisco UCS 管理的确认包括以下硬件组件：</block>
@@ -1946,66 +1945,7 @@
   <block id="35e6d0a83f214bfb7e13505c0dea39d0" category="cell">Cisco UCS 互联阵列</block>
   <block id="69145b1a02ee505baf6d6d8506924db1" category="cell">2 个 6332</block>
   <block id="ed38874183f73e374cbbb3c0f4153523" category="doc">部署和配置</block>
-  <block id="88b26a2a43a7b948265880caf8a37ba6" category="summary">适当的存储架构可通过数据库的整体大小和总 IOPS 来确定。性能本身并不是唯一的因素，您可能会根据其他客户需求决定使用更大的节点数。</block>
-  <block id="009bad2e653df41b97c05b47965de568" category="doc">适用于 Epic 的 NetApp 存储参考架构</block>
-  <block id="e9bf68ed54b6d1ff63e8bda8c0b6a70f" category="inline-link">TR-3930i ：《 NetApp Epic 规模估算准则》</block>
-  <block id="5f27692148d0258d491eb56c542205ac" category="paragraph">根据 Epic 软件环境的存储要求， NetApp 根据环境大小提供了三种参考架构。Epic 要求使用 NetApp 规模估算方法正确调整 NetApp 存储系统的大小，以便在 Epic 环境中使用。有关定量性能要求和规模估算指导，请参见 NetApp<block ref="157aaed491ff6c4c1674a6d17016af89" category="inline-link-rx"></block>。要查看本文档，需要访问 NetApp Field Portal 。</block>
-  <block id="527c2557c52787373565e0e4d3678848" category="paragraph">此处列出的架构是设计的起点。必须在 SPM 工具中验证工作负载的磁盘数量和控制器利用率。与 NetApp Epic 团队合作验证所有设计。</block>
-  <block id="b24258fcfd062abea7a02faa7859904c" category="paragraph">所有 Epic 生产都部署在全闪存阵列上。在本报告中，旋转磁盘所需的磁盘池已整合到三个全闪存阵列磁盘池中。在阅读本节之前，您应查看 Epic 全闪存参考架构战略手册，了解 Epic 存储布局要求。</block>
-  <block id="8a7b8d0297d6c72a693058bbfe44c66d" category="paragraph">三种存储参考架构如下：</block>
-  <block id="9a4f5d68a07824ef3c0a32afba723ba2" category="list-text">* 小型 * 四节点架构，生产环境中有两个节点，灾难恢复环境中有两个节点（全球引用少于 5 M ）</block>
-  <block id="a7c052069fa7ee03b2468ce7aa1f8496" category="list-text">* 中型 * 六节点架构，在生产环境中有四个节点，在灾难恢复环境中有两个节点（全球参考量超过 5 百万）</block>
-  <block id="ca6a3231a40c1dc960d22c19c2679708" category="list-text">* 大型。 * 生产中包含 6 到 10 个节点的 12 个或更多节点架构（ 5M-10M 全球参考）</block>
-  <block id="9b8a43403f1d29b1500d844ee0b87085" category="admonition">全局引用 = （读取 IOPS + （每 80 秒写入突发的写入操作数 /45 ）） * 225 。这些数字来自客户专用的 Epic 硬件配置指南。</block>
-  <block id="861784db9f0bc1ae9a67c8e774cf8471" category="section-title">存储布局和 LUN 配置</block>
-  <block id="5c198594c9373d622b08ecc7f531156c" category="paragraph">要满足 Epic 的高可用性（ HA_ 和冗余要求，第一步是专门为 Epic 软件环境设计存储布局。设计注意事项应包括将磁盘池 1 与专用高性能存储上的磁盘池 2 隔离。有关每个磁盘池中有哪些工作负载的信息，请参见 Epic 全闪存参考架构战略手册。</block>
-  <block id="a0eb292f12089a8264d1e2b072cb388e" category="paragraph">将每个磁盘池放置在一个单独的节点上会创建隔离 Epic 生产和非生产工作负载所需的故障域。每个节点使用一个聚合可最大程度地提高磁盘利用率和聚合关联性，以提高性能。这种设计还可以通过聚合级重复数据删除最大限度地提高存储效率。</block>
-  <block id="c69ff345a5131d8cdf4b6aba970b7c08" category="paragraph">由于 Epic 允许为非生产需求共享存储资源，因此存储系统通常可以同时满足 clarity 服务器和生产服务存储需求，例如虚拟桌面基础架构 (VDI) ， CIFS 和其他企业功能。</block>
-  <block id="e480f53fc0142602e12654945d6b1fc1" category="paragraph">Epic 数据库存储布局建议文档针对每个数据库的 LUN 大小和数量提供了建议。这些建议可能需要根据您的环境进行调整。请务必与 Epic 支持人员一起查看这些建议，并最终确定 LUN 数量和 LUN 大小。</block>
-  <block id="e2478286e5820c4389cb6f28ce90071f" category="paragraph">NetApp 建议从较大的 LUN 开始，因为 LUN 本身的大小不会对存储产生任何成本。为了便于操作，请确保 LUN 数量和初始大小在 3 年后能够远远超出预期要求。与在扩展时添加 LUN 相比，扩展 LUN 更容易管理。对于精简配置的 LUN 和卷，已用存储空间将显示在聚合中。</block>
-  <block id="177c8dfcc8963ec3f56bc82bc30c8b27" category="paragraph">EPIC 要求通过 FC 将数据库，日志以及应用程序或系统存储作为 LUN 提供给数据库服务器。</block>
-  <block id="3cbd41842348185388541f1f4feba820" category="paragraph">为清晰起见，每个卷使用一个 LUN 进行 Epic 生产。对于大型部署， NetApp 建议为 Epic 数据库配置 24 到 32 个 LUN 。决定要使用的 LUN 数量的因素包括：</block>
-  <block id="09c2f69192afdcc0e1428319eb315b78" category="list-text">3 年后 Epic 数据库的总大小。对于较大的数据库，请确定该操作系统（ OS ）的 LUN 大小上限，并确保有足够的 LUN 可扩展。例如，如果您需要一个 60 TB 的 Epic 数据库，并且操作系统 LUN 的最大容量为 4 TB ，则需要 24 到 32 个 LUN 来提供扩展和机头空间。</block>
-  <block id="c0c39b5359e74406420e9a303c20185e" category="paragraph">无论架构是小型，中型还是大型：</block>
-  <block id="43610b4fcc97d37e58847aa4dc812d4c" category="list-text">ONTAP 支持轻松无中断纵向扩展和横向扩展。可以使用 ONTAP 无中断操作升级，添加或删除磁盘和节点。客户可以从四个节点入手，然后无中断地迁移到六个节点或升级到更大的控制器。</block>
-  <block id="51b3712736430a157a99898a9c28c377" category="list-text">NetApp OnCommand Workflow Automation 工作流可以备份和刷新 Epic 完整副本测试环境。此解决方案可简化架构并通过集成效率节省存储容量。</block>
-  <block id="d0d14d36d98064d61804ee627f554d33" category="list-text">灾难恢复影子数据库服务器是客户业务连续性策略的一部分（用于支持 SRO 功能，并可能配置为 SRW 实例）。因此，第三个存储系统的放置和规模估算通常与生产数据库存储系统中的放置和规模估算相同。</block>
   <block id="cf88100598cbddbdaefcdf61df162f6c" category="inline-link">TR-3446 ：《 SnapMirror 异步概述和最佳实践指南》</block>
-  <block id="faef4a16d4760c1fc2ee14b99d1b056e" category="list-text">数据库一致性需要考虑一些因素。如果在业务连续性方面使用了 NetApp SnapMirror 备份副本，请参见 Epic 文档《业务连续性技术解决方案指南》。有关使用 SnapMirror 技术的信息，请参见<block ref="45531869b54af9b60b0c919daf20d24b" category="inline-link-rx"></block>。</block>
-  <block id="a022912cbecb4b63af8df01258df7d65" category="list-text">将生产与潜在的抢占资源的工作负载隔离是 Epic 的一个主要设计目标。存储池是一个故障域，必须在其中隔离和保护工作负载性能。ONTAP 集群中的每个节点都是一个故障域，可视为一个存储池。</block>
-  <block id="e803d3af670a41355bc08f478905136d" category="paragraph">ONTAP 系列中的所有平台均可运行适用于 Epic 工作负载的全部功能集。</block>
-  <block id="1cbc76ab0d406cdf4fb7d8b3d30e328c" category="section-title">小型配置：四节点参考架构，全球参考数少于 5 M （总 IOPS 高达 ~22 K ）</block>
-  <block id="456c9ca28d5568552e4e0f93fa9064e7" category="paragraph">小型参考架构是一种四节点架构，在生产环境中有两个节点，在灾难恢复环境中有两个节点，全球参考数不到 5 M 。全球引用量少于 5 百万的客户可以使用此架构。在这种规模下，不需要将报告与清晰分开。</block>
-  <block id="1f150a5dcebec8b8773008b918ae21eb" category="paragraph">借助 NetApp 提供的独特多协议支持， QoS 以及在同一集群中创建故障域的能力，您可以在一个 HA 对上运行磁盘池 1 和磁盘 Pool2 的所有生产工作负载，并满足所有 NetApp 最佳实践和 Epic 的高舒适性评级要求。所有磁盘池 1 都将在 node1 上运行，而所有磁盘池 2 都将在 Pool2 上运行。</block>
-  <block id="7da3ffd1aebd60c68ed79af970717547" category="paragraph">借助 ONTAP 在同一集群中隔离工作负载的能力以及 ONTAP 多协议支持，所有生产 Epic 工作负载（生产，报告，澄清， VMware ， Citrix ， CIFS 以及与 Epic 相关的工作负载）可以在单个集群中的单个 HA 对上运行。通过此功能，您可以满足 Epic 的所有要求（记录在 Epic 全闪存参考架构战略手册中）以及所有 NetApp 最佳实践。基本上， pool1 在节点 prod-01 上运行，而 Pool2 在 prod-02 上运行，如下图所示。NAS 1 工作负载可以放置在具有 NetApp 多协议 NAS 和 SAN 功能的节点 2 上。</block>
-  <block id="9b6a020522ecedb0775be751deb6a692" category="paragraph">对于灾难恢复， Epic DR 池 3 会在 HA 对中的两个节点之间拆分。Epic DR 在节点 dr-01 上运行， DR 服务在 dr-02 上运行。</block>
-  <block id="3328398a32fe23e5769436c49c087b88" category="paragraph">可以根据工作负载的需要设置 NetApp SnapMirror 或 SnapVault 复制。</block>
-  <block id="d51ef2924c21f8f75c17e5970b6f3fbf" category="paragraph"><block ref="d51ef2924c21f8f75c17e5970b6f3fbf" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="38462cca14e4e52d0928dc502e1e0bbf" category="paragraph">从存储设计和布局角度来看，下图显示了生产数据库以及构成 Epic 工作负载的其他构造的高级存储布局。</block>
-  <block id="10c05569e16259a2148f0c0cbf12fdba" category="paragraph"><block ref="10c05569e16259a2148f0c0cbf12fdba" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="bd45ebb964ec1275bc8162f53198677b" category="section-title">中型配置：六节点参考架构，适用于超过 500 万个全局参考（总 IOPS 22K-50000 ）</block>
-  <block id="8dd6f6556bd7f8e6daaa73ca165d8528" category="paragraph">中型参考架构是一种六节点架构，在生产环境中有四个节点，在灾难恢复环境中有两个节点，并具有 5M-10M 全局参考。</block>
-  <block id="c8d11b8d13e6e283a239f04b24c43444" category="paragraph">对于这种规模，《全闪存参考架构战略手册》指出，您需要将 Epic Report 工作负载与 clarity 分开，并且在生产环境中至少需要四个节点。</block>
-  <block id="5e2e24e8a131704a27d83ab514092294" category="paragraph">六节点架构是 Epic 环境中最常部署的架构。全球参考超过 5 ， 000 ， 000 次的客户需要将报告和澄清信息放置在单独的故障域中。请参见 Epic 全闪存参考架构战略手册。</block>
-  <block id="5aecd07742be24ffcd88be07bb736d17" category="paragraph">全球参考数少于 5 ， 000 ， 000 的客户可以选择使用六个节点，而不是四个节点，以获得以下主要优势：</block>
-  <block id="82f9c17375067945fa2552aab1319012" category="list-text">从生产环境中卸载备份归档过程</block>
-  <block id="e7909c7203d257a37f38bcd8c221d607" category="list-text">从生产环境中卸载所有测试环境</block>
-  <block id="ce63d6206c3dbf67237dd4eff6526dbf" category="paragraph">生产在节点 prod-01 上运行。报告在节点 prod-02 上运行，该节点是生产环境的最新 Epic 镜像副本。支持，发布和发布验证等测试环境可以从 Epic 生产，报告或灾难恢复中进行克隆。下图显示了在生产环境中为完整副本测试环境创建的克隆。</block>
-  <block id="aadca7c22ba4f017d822c4754d9e9dd2" category="paragraph">第二个 HA 对用于满足生产服务存储要求。这些工作负载包括用于 clarity 数据库服务器（ SQL 或 Oracle ）， VMware ，超空间和 CIFS 的存储。客户可能拥有非 Epic 工作负载，这些工作负载可以添加到此架构中的节点 3 和节点 4 ，或者最好添加到同一集群中的单独 HA 对。</block>
-  <block id="0b59683c616a7c0320b48d82859678b0" category="paragraph">SnapMirror 技术用于在存储级别将生产数据库复制到第二个 HA 对。SnapMirror 备份副本可用于在第二个存储系统上为非生产环境（例如支持，发布和版本验证）创建 NetApp FlexClone 卷。生产数据库的存储级别副本还可以支持客户实施灾难恢复策略。</block>
-  <block id="5ca40e36a24e196ac976502bd22806a8" category="paragraph">为了提高存储效率，也可以从 Report NetApp Snapshot 副本备份创建完整测试克隆，并直接在节点 2 上运行。在这种设计中，不需要将 SnapMirror 目标副本保存在磁盘上。</block>
-  <block id="34fb91ef2f877ee511566fd4e1d9c9c7" category="paragraph"><block ref="34fb91ef2f877ee511566fd4e1d9c9c7" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="2456d5be525e509f5b6397d8c64bfc0e" category="paragraph">下图显示了六节点架构的存储布局。</block>
-  <block id="6562c5ad2648e13c32602c816f8c9afd" category="paragraph"><block ref="6562c5ad2648e13c32602c816f8c9afd" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="8321a11d5131a1e0702890d7db967b91" category="section-title">大型配置：适用于超过 10M 全局引用（超过 50K IOPS ）的参考架构</block>
-  <block id="d9fab33573544508f60838aa6f187b2d" category="paragraph">大型架构通常是一种 12 个或更多节点的架构，在生产环境中有 6 到 10 个节点，全球引用超过 10M 。对于大型 Epic 部署， Epic 生产， Epic 报告和 clarity 可以放置在一个专用 HA 对上，其中存储在节点之间均匀平衡，如下图所示。</block>
-  <block id="6ae5b3c4ee1c888755d915261dca5268" category="paragraph">大型客户有两种选择：</block>
-  <block id="55f96fd56f4dc3aeee28715b566a3e7e" category="list-text">保留六节点架构并使用 AFF A700 控制器。</block>
-  <block id="f3afb9762df884568de465907e080eb5" category="list-text">在专用的 AFF A300 HA 对上运行 Epic 生产，报告和灾难恢复。</block>
-  <block id="0e2f8f9fc07ffc70c330385e18bc77df" category="paragraph">您必须使用 SPM 比较控制器利用率。此外，在选择控制器时，还应考虑机架空间和电源。</block>
-  <block id="b62c68bf1025badfc43a1eb0a8011634" category="paragraph"><block ref="b62c68bf1025badfc43a1eb0a8011634" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="ada371b21b163b59338dae41ede1a954" category="paragraph">下图显示了大型参考架构的存储布局。</block>
-  <block id="5de5468479b8c22922d9ea75197c9ea0" category="paragraph"><block ref="5de5468479b8c22922d9ea75197c9ea0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1967302950c727fc26511a7a801bcb41" category="summary">本节介绍在 MEDITECH 环境中可能会发现的计算和存储工作负载类型。</block>
   <block id="841762089e5f9303f335b8a5550f3dfa" category="doc">Meditech 工作负载概述</block>
   <block id="789ae08bd96234d6c462e26b2c7a6251" category="section-title">Meditech 和备份工作负载</block>
@@ -2191,109 +2131,42 @@
   <block id="9b4b208365ad07b36658adef98d477e8" category="section-title">NetApp 支持工具和服务</block>
   <block id="7a1fabc75e2bb969a80ba5f7123be4e5" category="paragraph">NetApp 提供了一整套支持工具和服务。应在 NetApp AFF/FAS 系统上启用和配置 NetApp AutoSupport 工具，以便在发生硬件故障或系统配置不当时回电。致电主页可提醒 NetApp 支持团队及时修复任何问题。NetApp Active IQ 是一款基于 Web 的应用程序，它基于您的 NetApp 系统中的 AutoSupport 信息，可提供预测性和主动式洞察力，帮助提高可用性，效率和性能。</block>
   <block id="51f4112cb2d63d46680fde0358a5c441" category="section-title">FlexPod 设计区域</block>
-  <block id="27fe566bf0d9fe09b8d56d5f3d6b55d5" category="list-text">基于 Cisco UCS 的 Epic 的 Cisco 最佳实践</block>
-  <block id="8c28944e40532ac4e2107d1b34b4fad9" category="inline-link"><block ref="8c28944e40532ac4e2107d1b34b4fad9" category="inline-link-rx"></block></block>
-  <block id="2ead0a50f7fb5a9595d246c872851790" category="paragraph"><block ref="2ead0a50f7fb5a9595d246c872851790" category="inline-link-rx"></block></block>
   <block id="74cd4baf4935b804c7b41efa8252a5dc" category="section-title">NetApp 技术报告</block>
   <block id="2702d8e9b5a6f4444fe8c4713a33e624" category="list-text">TR-3929 ：《重新分配最佳实践指南》</block>
-  <block id="399964245f0ea2bb9ca79e2a5bc1e70d" category="inline-link"><block ref="399964245f0ea2bb9ca79e2a5bc1e70d" category="inline-link-rx"></block></block>
-  <block id="833c2eacb2f7829d8398a89f58b5b8f6" category="paragraph"><block ref="833c2eacb2f7829d8398a89f58b5b8f6" category="inline-link-rx"></block></block>
   <block id="c74501d85312f910195088df9c776a98" category="list-text">TR-3987 ：适用于 InterSystems Cach 的 Snap Creator Framework 插件</block>
-  <block id="148d4c620d84a428e80187d692cde02b" category="inline-link"><block ref="148d4c620d84a428e80187d692cde02b" category="inline-link-rx"></block></block>
-  <block id="f5877944589a2b7aa98879884a30b262" category="paragraph"><block ref="f5877944589a2b7aa98879884a30b262" category="inline-link-rx"></block></block>
-  <block id="6cc83d0792a7ca247319af6f8bd3e7e2" category="list-text">TR-3928 ：《 NetApp Epic 最佳实践》</block>
-  <block id="c744313fb652bfbbc1bfebf3af8d6a8d" category="inline-link"><block ref="c744313fb652bfbbc1bfebf3af8d6a8d" category="inline-link-rx"></block></block>
-  <block id="cbd8428d9964d4cb7fe9842019bd4009" category="paragraph"><block ref="cbd8428d9964d4cb7fe9842019bd4009" category="inline-link-rx"></block></block>
   <block id="85d4f8c7b3f03a6761d13807079142fe" category="list-text">TR-4017 ：《 FC SAN 最佳实践》</block>
-  <block id="1ba9e2e690ac480cf8fd2b0b8b870249" category="inline-link"><block ref="1ba9e2e690ac480cf8fd2b0b8b870249" category="inline-link-rx"></block></block>
-  <block id="d78e3a7998c0d635678e2195ddc8dfff" category="paragraph"><block ref="d78e3a7998c0d635678e2195ddc8dfff" category="inline-link-rx"></block></block>
-  <block id="09ea71362c0382a39f3ab61f215efe0c" category="inline-link"><block ref="09ea71362c0382a39f3ab61f215efe0c" category="inline-link-rx"></block></block>
-  <block id="267ec75c8eb84d51de95de5fd99d29a8" category="paragraph"><block ref="267ec75c8eb84d51de95de5fd99d29a8" category="inline-link-rx"></block></block>
   <block id="eb75aeb3b4b2b9734ba3e52f5483f0b2" category="section-title">ONTAP 文档</block>
   <block id="c9617ae303d0bce89d13bebecca2ea1b" category="inline-link"><block ref="c9617ae303d0bce89d13bebecca2ea1b" category="inline-link-rx"></block></block>
   <block id="bf78332b32395471af72955679895502" category="paragraph"><block ref="bf78332b32395471af72955679895502" category="inline-link-rx"></block></block>
   <block id="faa9b209c7df426f5e60bb9bdc8dfb09" category="list-text">适用于 vSphere 的 Virtual Storage Console （ VSC ）文档</block>
-  <block id="f0364e4ad871d66511b5fc6d53cbcfb3" category="inline-link"><block ref="f0364e4ad871d66511b5fc6d53cbcfb3" category="inline-link-rx"></block></block>
-  <block id="0d72922248da0d3056aeee0f966d7670" category="paragraph"><block ref="0d72922248da0d3056aeee0f966d7670" category="inline-link-rx"></block></block>
   <block id="6cd10930a4fa296fb47f14826dacbe19" category="inline-link"><block ref="6cd10930a4fa296fb47f14826dacbe19" category="inline-link-rx"></block></block>
   <block id="02ac65abd5347fb1bd8118ec873ab81b" category="paragraph"><block ref="02ac65abd5347fb1bd8118ec873ab81b" category="inline-link-rx"></block></block>
   <block id="c11ae620bbb94d6dc060c801fab49d56" category="list-text">适用于 ESXi 的 FC 快速指南</block>
-  <block id="a2d4658fbf58b202d3414a78d658bf9b" category="inline-link"><block ref="a2d4658fbf58b202d3414a78d658bf9b" category="inline-link-rx"></block></block>
-  <block id="9cc987fc439c39063aee72da8bf1900f" category="paragraph"><block ref="9cc987fc439c39063aee72da8bf1900f" category="inline-link-rx"></block></block>
   <block id="92a316e39c62e388cd3025d820669829" category="list-text">所有 ONTAP 9.3 文档</block>
-  <block id="0eab8ef9f3192950ba1235a6263168d0" category="inline-link"><block ref="0eab8ef9f3192950ba1235a6263168d0" category="inline-link-rx"></block></block>
-  <block id="fe909237dd19341fa40070c4946372bd" category="paragraph"><block ref="fe909237dd19341fa40070c4946372bd" category="inline-link-rx"></block></block>
   <block id="5b54d138cff1c5c86e5799b875279b81" category="list-text">软件设置指南</block>
-  <block id="0fe13acbdd9436bc5c77f8204518b195" category="inline-link"><block ref="0fe13acbdd9436bc5c77f8204518b195" category="inline-link-rx"></block></block>
-  <block id="0dd2777843bf7c27c1a81bcddc82ff10" category="paragraph"><block ref="0dd2777843bf7c27c1a81bcddc82ff10" category="inline-link-rx"></block></block>
   <block id="7e6d4063c199f76c46fecd71f3fd63f9" category="list-text">磁盘和聚合高级指南</block>
-  <block id="0ac8de1fddec417698a68fef1798a147" category="inline-link"><block ref="0ac8de1fddec417698a68fef1798a147" category="inline-link-rx"></block></block>
-  <block id="a8498b0906ccd4abc8a23d076c276112" category="paragraph"><block ref="a8498b0906ccd4abc8a23d076c276112" category="inline-link-rx"></block></block>
   <block id="a76193f5d9397d9c49ca283a20ccf649" category="list-text">《 SAN 管理指南》</block>
-  <block id="db35c87b644b2c54696f756bde7e20b9" category="inline-link"><block ref="db35c87b644b2c54696f756bde7e20b9" category="inline-link-rx"></block></block>
-  <block id="fdc823976b2526bb3c33db9473419ca8" category="paragraph"><block ref="fdc823976b2526bb3c33db9473419ca8" category="inline-link-rx"></block></block>
   <block id="8cb9ee34636093f5ba25008ebc7b7287" category="list-text">《 SAN 配置指南》</block>
-  <block id="acf12ea52d92c47ea6b6f8194eba33d4" category="inline-link"><block ref="acf12ea52d92c47ea6b6f8194eba33d4" category="inline-link-rx"></block></block>
-  <block id="60f8b6928473c9bcdabe0610a187ddc1" category="paragraph"><block ref="60f8b6928473c9bcdabe0610a187ddc1" category="inline-link-rx"></block></block>
-  <block id="1493fda2c3cb99290e8fb4ba6acf89b2" category="list-text">《适用于 Red Hat Enterprise Linux 的 FC 配置快速指南》</block>
-  <block id="144c42e3c53611ad690e16fa94401f0c" category="inline-link"><block ref="144c42e3c53611ad690e16fa94401f0c" category="inline-link-rx"></block></block>
-  <block id="7bc62d6b48ce15becbe1bd4084ce7490" category="paragraph"><block ref="7bc62d6b48ce15becbe1bd4084ce7490" category="inline-link-rx"></block></block>
   <block id="c3d70d54f560e8e0f0c366ec0087e194" category="list-text">《适用于 Windows 的 FC 配置快速指南》</block>
-  <block id="12172e01e9c186d2dc470613225f18b8" category="inline-link"><block ref="12172e01e9c186d2dc470613225f18b8" category="inline-link-rx"></block></block>
-  <block id="e0d9b1da83b682940364a2ee22816b62" category="paragraph"><block ref="e0d9b1da83b682940364a2ee22816b62" category="inline-link-rx"></block></block>
   <block id="2fc892a07617a9dc5ce581f242865c48" category="list-text">《 FC SAN 优化的 AFF 设置指南》</block>
-  <block id="0714e56f20697c28b852362ec0673c0e" category="inline-link"><block ref="0714e56f20697c28b852362ec0673c0e" category="inline-link-rx"></block></block>
-  <block id="e68429fbc82939d3900a3c282a74b1cc" category="paragraph"><block ref="e68429fbc82939d3900a3c282a74b1cc" category="inline-link-rx"></block></block>
   <block id="d3045df3df90cab89f90d0d37c532251" category="list-text">《 High-Availability 配置指南》</block>
-  <block id="8e6d96cf1cc08e03fcbea1b3ef621e99" category="inline-link"><block ref="8e6d96cf1cc08e03fcbea1b3ef621e99" category="inline-link-rx"></block></block>
-  <block id="28989b90c306fb26f2a7e67baec8c471" category="paragraph"><block ref="28989b90c306fb26f2a7e67baec8c471" category="inline-link-rx"></block></block>
   <block id="a08d0ca7bd8524176f9e086cd68875ee" category="list-text">《逻辑存储管理指南》</block>
-  <block id="9f7615326423ad46d31799df9a8be01b" category="inline-link"><block ref="9f7615326423ad46d31799df9a8be01b" category="inline-link-rx"></block></block>
-  <block id="703063388971abed570ec3b097cb1842" category="paragraph"><block ref="703063388971abed570ec3b097cb1842" category="inline-link-rx"></block></block>
   <block id="ec49151b952b3d31a6798d4806d04b16" category="list-text">性能管理高级指南</block>
-  <block id="673a6545df6d6b6f4f4b54d39d6bb45b" category="inline-link"><block ref="673a6545df6d6b6f4f4b54d39d6bb45b" category="inline-link-rx"></block></block>
-  <block id="215fe76acf8d23318698034d5f393385" category="paragraph"><block ref="215fe76acf8d23318698034d5f393385" category="inline-link-rx"></block></block>
   <block id="c2549eb1aedeb146d603f141e0cc0ffa" category="list-text">《 SMB/CIFS 配置高级指南》</block>
-  <block id="b1af71c6be15132f050a25644152fe96" category="inline-link"><block ref="b1af71c6be15132f050a25644152fe96" category="inline-link-rx"></block></block>
-  <block id="0c019aaa7e500332371f2c2391adb2da" category="paragraph"><block ref="0c019aaa7e500332371f2c2391adb2da" category="inline-link-rx"></block></block>
   <block id="a0a59362e21ec3c80e71e3d02aa6a8b8" category="list-text">SMB/CIFS 参考</block>
-  <block id="7b9a522fcc10c87375f1eb885c38416a" category="inline-link"><block ref="7b9a522fcc10c87375f1eb885c38416a" category="inline-link-rx"></block></block>
-  <block id="3dd5d7752f23c0ca9c4f50d9af644dec" category="paragraph"><block ref="3dd5d7752f23c0ca9c4f50d9af644dec" category="inline-link-rx"></block></block>
   <block id="9739187f50db857f27b204b12e6d365e" category="list-text">数据保护高级指南</block>
-  <block id="226918d56707f49bc9e76663b876e8d3" category="inline-link"><block ref="226918d56707f49bc9e76663b876e8d3" category="inline-link-rx"></block></block>
-  <block id="daba2c4513b64a917670c012aa0dc518" category="paragraph"><block ref="daba2c4513b64a917670c012aa0dc518" category="inline-link-rx"></block></block>
   <block id="81082b4a9d156a771a100d0e4e8fc15d" category="list-text">《数据保护磁带备份和恢复指南》</block>
-  <block id="980e2e75eb08658938b014b35a532628" category="inline-link"><block ref="980e2e75eb08658938b014b35a532628" category="inline-link-rx"></block></block>
-  <block id="0c85ac3c154442d3b524faa5c93fbbdd" category="paragraph"><block ref="0c85ac3c154442d3b524faa5c93fbbdd" category="inline-link-rx"></block></block>
   <block id="58c291db828d7a4127186176941d0d5b" category="list-text">《 NetApp 加密高级指南》</block>
-  <block id="5d5a37ba57b8fb7a75add1e312f8f99d" category="inline-link"><block ref="5d5a37ba57b8fb7a75add1e312f8f99d" category="inline-link-rx"></block></block>
-  <block id="6abdfa45bfc13fdae41a50035be43b43" category="paragraph"><block ref="6abdfa45bfc13fdae41a50035be43b43" category="inline-link-rx"></block></block>
   <block id="08a140811c847d2c6e0ea3628a3f4287" category="list-text">《网络管理指南》</block>
-  <block id="f31fa3bb2bee2b9bb9d705a524a98639" category="inline-link"><block ref="f31fa3bb2bee2b9bb9d705a524a98639" category="inline-link-rx"></block></block>
-  <block id="f9928f9fc7cf87a77b00b70aca02137b" category="paragraph"><block ref="f9928f9fc7cf87a77b00b70aca02137b" category="inline-link-rx"></block></block>
   <block id="03a44c9aa18c11dcca89fdef4aafbe0f" category="list-text">命令：《 ONTAP 9.3 手册页参考》</block>
-  <block id="775225fe0ecfcaf14edb976911eca2ea" category="inline-link"><block ref="775225fe0ecfcaf14edb976911eca2ea" category="inline-link-rx"></block></block>
-  <block id="cc198d6fc10efd5a0321fae4c34b38ea" category="paragraph"><block ref="cc198d6fc10efd5a0321fae4c34b38ea" category="inline-link-rx"></block></block>
   <block id="b814e78bcf0a01ed4aae9eff1d4c136c" category="section-title">《 Cisco Nexus ， MDS ， Cisco UCS 和 Cisco UCS Manager 指南》</block>
   <block id="ec933c934bea1d3e878210c936167726" category="list-text">Cisco UCS 服务器概述</block>
   <block id="dccb0f527753e20a1f5236458d03c64d" category="inline-link"><block ref="dccb0f527753e20a1f5236458d03c64d" category="inline-link-rx"></block></block>
   <block id="9b259f004a6bc0470e95eacbff8a3232" category="paragraph"><block ref="9b259f004a6bc0470e95eacbff8a3232" category="inline-link-rx"></block></block>
   <block id="d2686ba543c609968f6c7c9116a68e00" category="list-text">Cisco UCS 刀片式服务器概述</block>
-  <block id="c865e50ce15657e0ebddb0324c821e48" category="inline-link"><block ref="c865e50ce15657e0ebddb0324c821e48" category="inline-link-rx"></block></block>
-  <block id="190e32b1a11a225096d33067b3fcb260" category="paragraph"><block ref="190e32b1a11a225096d33067b3fcb260" category="inline-link-rx"></block></block>
   <block id="3e8f78de9bcbcb50a70c1dd6b1aa67de" category="list-text">Cisco UCS B200 M5 产品规格</block>
   <block id="8818f2fb023bbe1b5e3f07d2cfd9cffb" category="list-text">Cisco UCS Manager 概述</block>
-  <block id="9a843a4ab0a3b940220e382c63719789" category="inline-link"><block ref="9a843a4ab0a3b940220e382c63719789" category="inline-link-rx"></block></block>
-  <block id="b1363e4b6145dee2f7248d96d259c0d6" category="paragraph"><block ref="b1363e4b6145dee2f7248d96d259c0d6" category="inline-link-rx"></block></block>
-  <block id="1405e34f9097a3e011e1e6702febf38b" category="list-text">Cisco UCS Manager 3.2 （ 3a ）基础架构捆绑包（需要 Cisco.com 授权）</block>
-  <block id="c92ccaac6fb6ce3762e7e4f6dd8bee6d" category="inline-link"><block ref="c92ccaac6fb6ce3762e7e4f6dd8bee6d" category="inline-link-rx"></block></block>
-  <block id="99bccea9697590838b4052f9e21abe2c" category="paragraph"><block ref="99bccea9697590838b4052f9e21abe2c" category="inline-link-rx"></block></block>
   <block id="0baa6249e3b620f94845e5f9d3ba2ea4" category="list-text">Cisco Nexus 9300 平台交换机</block>
-  <block id="a0f60ef1c87752bc6f78f6f2a09689db" category="inline-link"><block ref="a0f60ef1c87752bc6f78f6f2a09689db" category="inline-link-rx"></block></block>
-  <block id="6e3ec990c2749760d56d5f5a92eeabda" category="paragraph"><block ref="6e3ec990c2749760d56d5f5a92eeabda" category="inline-link-rx"></block></block>
-  <block id="9def77bbebe626dd7e6149782228fd4a" category="list-text">Cisco MDS 9148S FC 交换机</block>
-  <block id="fc4ef427f0598947b6fb99689c93e80b" category="inline-link"><block ref="fc4ef427f0598947b6fb99689c93e80b" category="inline-link-rx"></block></block>
-  <block id="0db2fe56e3c64312a0cae9d7263612f4" category="paragraph"><block ref="0db2fe56e3c64312a0cae9d7263612f4" category="inline-link-rx"></block></block>
   <block id="df915ca44dfbf766140548415b4ed697" category="summary">MEDITECH 应用程序涵盖多个模块和组件。</block>
   <block id="463ab6fdbf0e97d2b9ffd8444397e952" category="doc">Meditech 模块和组件</block>
   <block id="29bb9635229fa03ce92a9f922a4cbdfa" category="paragraph">MEDITECH 应用程序涵盖多个模块和组件。下表列出了这些模块所涵盖的功能。有关追加信息设置和部署这些模块的信息，请参见 MEDITECH 文档。</block>
@@ -2679,92 +2552,12 @@
   <block id="eecfabc7f0efee8d39bbf58ca9da0f13" category="cell">1 个 DS224C 磁盘架</block>
   <block id="c06a3ad948ce876ff1edb0573bfc643c" category="cell">19 个 3.8 TB</block>
   <block id="3350c3bf1228026294ce0e7f9235937f" category="admonition">这些配置为规模估算指导提供了一个起点。某些客户环境可能会同时运行多个 MEDITECH 生产工作负载和非 MEDITECH 工作负载，或者它们的 IOP 要求可能更高。您应与 NetApp 客户团队合作，根据所需的 IOPS ，工作负载和容量来估算存储系统的规模，以确定适合为工作负载提供服务的平台。</block>
-  <block id="a2f7287cd019dd858724c14547187f48" category="summary">Genio 是 Epic 使用的存储性能测试工具。它模拟由 Epic 生产环境中使用的 InterSystems Cach é 数据库生成的工作负载，包括写入周期模式。它可作为命令行应用程序在部署了 Cache 的各种主机操作系统上使用。请始终使用 Epic 提供的最新 Genio 工具副本进行测试。</block>
-  <block id="e507e33c12800570fd6ac4c11974389f" category="doc">Genio 工具</block>
-  <block id="c2f7f8d3acd3dc65ab0fa649d531debe" category="paragraph">Genio 是 Epic 使用的存储性能测试工具。它模拟由 Epic 生产环境中使用的 InterSystems Cach é 数据库生成的工作负载，包括写入周期模式。它可作为命令行应用程序在部署了 Cache 的各种主机操作系统上使用。请始终使用 Epic 提供的最新 Genio 工具副本进行测试。</block>
-  <block id="99023123d980e7f1add5959348030815" category="paragraph">性能测试运行涉及使用一组 I/O 参数在生产 Epic 数据库主机上执行 Genio 应用程序。这些参数用于模拟客户 Epic 环境的 I/O 模式，包括写入周期。</block>
-  <block id="0e7fe8e4f62bbf819a709404a497e36d" category="paragraph">EPIC 将控制器推过硬件配置指南中详细介绍的 100% 全满负载，以确定控制器上的余量。Epic 还会运行全负载测试并模拟备份操作。</block>
-  <block id="7bb35ddfcc8264e8332afa6e4b48e7fa" category="paragraph">Epic 服务器支持代表使用它从主机角度验证存储性能。NetApp 还使用 Genio 在实验室中验证了 NetApp 存储系统的性能。</block>
-  <block id="69f73d34f9cb66b64eaccc67959121ec" category="summary">本节介绍配置基础架构所需的网络连接，存储连接和软件。</block>
-  <block id="ba70f1b4cd9c2101da3fd6435f5e37b6" category="paragraph">在配置基础架构之前，必须建立以下网络连接：</block>
-  <block id="7d1399d08cd57f6f6bc6d613fd2548dc" category="list-text">使用端口通道和虚拟端口通道的链路聚合可在整个环境中使用，从而可以设计更高的带宽和 HA 。</block>
-  <block id="5df927a7a1d33fc9afb74658198469cc" category="list-text">虚拟端口通道用于在 Cisco FI 和 Cisco Nexus 交换机之间使用。</block>
-  <block id="4f7824e307a02a18358f07c7c4ec6e03" category="list-text">每个服务器都具有与统一网络结构具有冗余连接的 vNIC 。NIC 故障转移用于在 FI 之间实现冗余。</block>
-  <block id="8bbe85ddec828679b9ccadea21a435d0" category="list-text">每个服务器都具有 vHBA ，并可通过冗余连接到统一网络结构。</block>
-  <block id="53e293342c64a44a35ceb996f5674dc6" category="list-text">Cisco UCS FI 会按照建议配置为终端主机模式，以便将 vNIC 动态固定到上行链路交换机。</block>
-  <block id="d883cfc4d0bda231d980ec277a7ddc25" category="paragraph">在配置基础架构之前，必须建立以下存储连接：</block>
-  <block id="99ea2a5003e224dbc6ffff72260b2cee" category="list-text">存储端口 ifgroups （ vPC ）</block>
-  <block id="db1d2914189f3203a5cef6f1e980cfa0" category="list-text">连接到交换机 N9kA 的 10 G 链路</block>
-  <block id="fa5644f3ad66999ee965988d6efd01c1" category="list-text">连接到交换机 N9K-B 的 10 G 链路</block>
-  <block id="3be15e2681389d7a77f653790f9b4629" category="list-text">1 G 链路，连接到管理交换机 N9k-A</block>
-  <block id="e120fa261f826afe1ad37a7166b00214" category="list-text">1 G 链路，连接到管理交换机 N9K-B</block>
-  <block id="ac0ca4fcb972dc247a54919ff2a993ff" category="list-text">通过 Cisco MDS 交换机实现 16 G FC 端到端连接。已配置单个启动程序分区。</block>
-  <block id="c1bb11de0c14f6a9c03ce157698695fb" category="list-text">FC SAN 启动以完全实现无状态计算。服务器从 AFF 存储集群上托管的启动卷中的 LUN 启动。</block>
-  <block id="9257fadc8912a486487e0f4b9baf4821" category="list-text">所有 Epic 工作负载都托管在 FC LUN 上，这些 LUN 分布在存储控制器节点上。</block>
-  <block id="bfcceb580131cc0969f6f346da7a69fe" category="list-text">ESXi 安装在 Cisco UCS 刀片式服务器上。</block>
-  <block id="dded19937efb354e497c153c92d7912b" category="list-text">安装和配置 vCenter ，并在 vCenter 中注册所有主机。</block>
-  <block id="4ae0a837a9b8ff3194da80893ed8642e" category="list-text">已在 vCenter 中安装并注册 VSC 。</block>
-  <block id="f1bfd4b2301b41748884dbebf9602824" category="list-text">已配置 NetApp 集群。</block>
-  <block id="c7415f369b7f31a5cb996491636ff762" category="inline-link-macro">接下来： Cisco UCS 刀片式服务器和交换机配置</block>
-  <block id="fff24ef686c660d031c52b12ddad2609" category="paragraph"><block ref="fff24ef686c660d031c52b12ddad2609" category="inline-link-macro-rx"></block></block>
-  <block id="9a6132044392e6c981db4c2b1f224151" category="summary">以下人员为本指南的编写做出了贡献。</block>
   <block id="0407c27180c9b019e644e8ad4c6a9324" category="doc">致谢</block>
-  <block id="c2fd88ad01f2e0ff628bfc26cd7da5a5" category="list-text">NetApp 技术营销工程师 Ganesh Kamath</block>
   <block id="98beb79b2f2d86652394e80d1e65420d" category="list-text">NetApp 技术营销工程师 Atul Bhalodia</block>
   <block id="49d7c87eb6e1417e303008c5907f9d07" category="list-text">NetApp 产品经理 Ketan Mota</block>
-  <block id="8990784705f2f30ecf3cf153e934b1a9" category="list-text">Cisco Systems ， Inc. 的 Jon Ebmeier</block>
-  <block id="ac050c15f598ad106e5b99329e4e209c" category="list-text">Cisco Systems ， Inc. 的 Mike Brennan</block>
-  <block id="40e9ace7390b9651f314786639bac190" category="summary">FlexPod for Epic 的架构基于 Epic ， Cisco 和 NetApp 的指导，以及合作伙伴在与各种规模的 Epic 客户合作方面的经验。该架构具有适应性，可根据客户的数据中心战略应用 Epic 的最佳实践，无论该战略是小型还是大型，还是集中式，分布式还是多租户。</block>
-  <block id="91bc7ce7fdd9cb711142ddd3403880fe" category="paragraph">正确的存储架构可通过总 IOPS 大小来确定。性能本身并不是唯一的因素，您可能会根据其他客户需求决定增加节点数量。使用 NetApp 的优势在于，集群可以随着需求的变化轻松无中断地纵向扩展。您也可以从集群中无中断删除节点以重新利用，或者在设备刷新期间删除节点。</block>
-  <block id="b07356d8d75f7c0e44b56ff4619b4a88" category="list-text">* 轻松实现无中断纵向扩展和横向扩展。 * 可以使用 ONTAP 无中断操作升级，添加或删除磁盘和节点。客户可以从四个节点入手，然后无中断地迁移到六个节点或升级到更大的控制器。</block>
-  <block id="150d02891c3c5abffbdd8a34deccaeb5" category="list-text">* 存储效率。 * 利用重复数据删除， FlexClone ，实时压缩，实时数据缩减，精简复制， 精简配置和聚合重复数据删除。通过 FlexClone 功能，您几乎可以即时创建克隆，以支持备份和测试环境更新。只有在进行更改后，这些克隆才会占用额外的存储空间。</block>
-  <block id="6f29bbe7322471165635f3b0bb247237" category="list-text">* OnCommand WFA 工作流备份和刷新 Epic 完整副本测试环境的能力。 * 此解决方案可简化架构并通过集成效率节省存储容量。这些架构在 Epic 备份解决方案中发挥了重要作用，并利用存储集成与任何备份解决方案集成。</block>
-  <block id="7d75924fa99567c41384fda46a5e42db" category="list-text">* 灾难恢复卷影数据库服务器。 * 灾难恢复卷影数据库服务器是客户业务连续性策略的一部分（用于支持存储只读 [SRO] 功能，并可能配置为存储读写 [SRW] 实例）。因此，第三个存储系统的放置和规模调整在大多数情况下与生产数据库存储系统中相同。</block>
-  <block id="fdb5c732cd36daa962784ea05945785e" category="list-text">* 数据库一致性（需要注意）。 * 如果在业务连续性方面使用 SnapMirror 备份副本，请参见文档《 Epic 业务连续性技术解决方案指南》。有关使用 SnapMirror 技术的信息，请参见<block ref="6f3c1dad0e99b4c05e6145259cddeecb" category="inline-link-rx"></block>。</block>
-  <block id="6991613dbf67070a63f8678316cf90f5" category="list-text">* 将生产与潜在的抢占资源的工作负载隔离是 Epic 的一个关键设计目标。 * 存储池是一个故障域，必须隔离和保护工作负载性能。ONTAP 集群中的每个节点都是一个故障域，可视为一个存储池。</block>
   <block id="028f1a38910f83032d7207681cbb26a8" category="section-title">存储架构</block>
-  <block id="2a70fb7477c294559ceb246e1109879f" category="inline-link">SPM</block>
-  <block id="07e7fe68482abf7cf5cdd4a682fab8ac" category="paragraph">下图显示了一个 6 节点架构，这是 Epic 环境中常用的一种架构。此外，还可以部署 4 节点或 12 节点，但这些架构只是设计的参考或起点。必须在中验证工作负载<block ref="728fb07f2693d78c16a85dedc11be23d" category="inline-link-rx"></block> 针对磁盘数量和控制器利用率的规模估算工具。所有 Epic 生产都部署在 AFF 阵列上。有关 Epic 存储布局要求，请参见《 Epic 全闪存参考架构战略手册》。</block>
-  <block id="7568824894a154fdaf5933be99d1ec82" category="admonition">与 NetApp Epic 团队合作验证所有设计。Epic 要求使用 NetApp 规模估算方法正确调整 NetApp 存储系统的大小，以便在 Epic 环境中使用。有关详细信息，请参见<block ref="dd4cdf12b1a2f7591d8859eee1d859d8" category="inline-link-rx"></block>。要查看本文档，需要访问 NetApp Field Portal 。</block>
-  <block id="27068280656ee8c1f91b340d0fad8143" category="paragraph">六节点架构包含四个生产节点和两个灾难恢复节点。借助这种架构，在生产四节点的环境中，《 Epic 全闪存参考架构战略手册》指出，您可以将 Epic 报告工作负载与澄清问题分开。</block>
-  <block id="e93dfc645cdb784f7f0827c81f707b87" category="paragraph">使用六个节点具有以下主要优势：</block>
-  <block id="743febaeb2c7493c1e6b72020c8db3f4" category="list-text">您可以从生产环境中卸载备份归档过程</block>
-  <block id="ae889725f35911cee06be192f50d4be8" category="list-text">您可以从生产环境中卸载所有测试环境</block>
-  <block id="e0369b99183d8b6fc35c0bbcc6762e7c" category="paragraph">生产在节点 prod-01 上运行。报告在节点 prod-02 上运行，该节点是生产环境的最新 Epic 镜像副本。支持，发布和版本验证（高级， REL 和 RELVAL ）等测试环境可以从 Epic 生产，报告或灾难恢复即时克隆。下图显示了在生产环境中为完整副本测试环境创建的克隆。</block>
-  <block id="025225f44fe23b8fc064aa44d122ab12" category="paragraph">第二个 HA 对用于满足生产服务存储要求。这些工作负载包括用于 clarity 数据库服务器（ SQL 或 Oracle ）， VMware ，超空间和 CIFS 的存储。客户可能会有非 Epic 工作负载，这些工作负载可以添加到此架构中的节点 3 和节点 4 ，或者最好添加到同一集群中的单独 HA 对。</block>
-  <block id="83cfdb0ae31584c251dff0a630370674" category="paragraph">SnapMirror 技术用于在存储级别将生产数据库复制到第二个 HA 。SnapMirror 备份副本可用于在第二个存储系统上为非生产环境创建 FlexClone 卷，例如支持，发布和版本验证。生产数据库的存储级别副本还可以支持客户实施灾难恢复策略。</block>
-  <block id="8cb20c6932cada415b34e417271d8879" category="paragraph">或者，为了提高存储效率，可以从报告 Snapshot 副本备份创建完整测试克隆，并直接在节点 2 上运行。在这种设计下，不需要将 SnapMirror 目标副本保存在磁盘上。</block>
-  <block id="b8c20f15e93e9265e39d80acc40da057" category="paragraph"><block ref="b8c20f15e93e9265e39d80acc40da057" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="2cf72fc786dbcd14e94751e67191a423" category="section-title">存储设计和布局</block>
-  <block id="66a168719e79e9b2fbe7e0e550c5ffca" category="paragraph">要满足 Epic 的 HA 和冗余要求，第一步是专门为 Epic 软件环境设计存储布局，包括将磁盘池 1 与磁盘池 2 隔离到专用高性能存储上。有关每个磁盘池中有哪些工作负载的信息，请参见 Epic 全闪存参考架构战略手册。</block>
-  <block id="86ea3029b46c8fae64f3b0bd7f0242d2" category="paragraph">将每个磁盘池放置在一个单独的节点上会创建对生产和非生产工作负载进行 Epic 隔离所需的故障域。每个节点使用一个聚合可最大程度地提高磁盘利用率和聚合关联性，以提高性能。这种设计还可以通过聚合级重复数据删除最大限度地提高存储效率。</block>
-  <block id="7d32b484ffb8a71750d827238a67c40b" category="paragraph">由于 Epic 允许为非生产需求共享存储资源，因此存储系统通常可以同时满足 VDI ， CIFS 和其他企业功能等 clarity 服务器和生产服务存储需求。</block>
-  <block id="ab6b049dae67046036f86fbdca72abbd" category="paragraph">下图显示了 6 节点架构的存储布局。每个存储系统都是一个完全冗余的 HA 对中的一个节点。此布局可确保每个控制器的利用率达到最大，并提高存储效率。</block>
-  <block id="e39c04242eda56f01aadb4f8437c5281" category="paragraph"><block ref="e39c04242eda56f01aadb4f8437c5281" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="1ccaa39e410a70899a9f5bc45be5cf18" category="section-title">存储节点配置</block>
-  <block id="6fa6373c8ea233e568425788e0466a3b" category="paragraph">* 高可用性 *</block>
-  <block id="3eda1383db3fe8ff0f6c8ddac9cfe5a9" category="paragraph">在 HA 对中配置了节点的存储系统可减轻节点故障的影响，并实现存储系统的无中断升级。连接到具有多个路径的节点的磁盘架可防止单路径故障，同时提高节点故障转移期间的性能一致性，从而提高存储故障恢复能力。</block>
-  <block id="008e50a8dfb51a25b5f88bbd9ca90a84" category="paragraph">* 硬件辅助故障转移 *</block>
-  <block id="fa82954ddd8299c18f58e8a6ef613d0f" category="paragraph">硬件辅助故障转移可使一个节点的远程 LAN 模块或服务处理器模块能够比检测信号超时触发器更快地通知其配对节点故障，从而最大限度地缩短存储节点故障转移时间，从而缩短故障转移前所用的时间。存储虚拟化后，故障转移时间会缩短，因为在故障转移期间，控制器标识不需要移动。仅软件磁盘所有权更改。</block>
-  <block id="4a8340c12206c306d63eb7e76edc11e9" category="paragraph">* NetApp 支持工具和服务 *</block>
-  <block id="b7dfc707b737a434d4ab9f4f26aa174c" category="paragraph">NetApp 提供了一整套支持工具和服务。应在 NetApp 存储系统上启用并配置 NetApp AutoSupport 工具，以便在发生硬件故障或系统配置不当时回电。对于任务关键型环境， NetApp 还建议使用 SupportEdge Premium 软件包，该软件包可提供操作专业知识，延长支持时间并缩短部件更换的响应时间。</block>
-  <block id="323b9e730516f163fb399d78b095e241" category="paragraph">* AFF A300 和 AFF A700 控制器上的全闪存优化特性 *</block>
-  <block id="5c679b1d44f869537a29afa9ff7ee075" category="paragraph">要使 AFF 解决方案正常运行，必须在全闪存优化的 FAS80x0 系统 HA 对中的两个节点上将环境变量 `bootarg.init.flash_optimized` 设置为 `true` 。具有纯闪存优化特性的平台仅支持 SSD 。</block>
   <block id="305160d35c5eb375133b99844c5c9c60" category="section-title">卷配置</block>
-  <block id="0d9e0e6c5891f37f04e7052b70c11640" category="paragraph">* Snapshot 副本 *</block>
-  <block id="f9a5f7bf9d03c5c5a8652a132f73694c" category="paragraph">应为为生产数据库提供存储的卷设置每晚卷级 Snapshot 计划。卷级 Snapshot 副本也可用作克隆生产数据库的源，以便用于开发，测试和暂存等非生产环境。NetApp 为 Epic 开发了 OnCommand WFA 工作流，用于自动备份生产数据库和更新测试环境。这些工作流会冻结和解冻数据库以创建应用程序一致的 Snapshot 副本。生产备份副本会自动提供给测试服务器，以供支持，发布和发布验证使用。这些工作流还可用于备份流和完整性检查。</block>
-  <block id="de12db4e55a7c25cd0f19ba2396764c7" category="paragraph">Snapshot 副本可用于支持 Epic 生产数据库的还原操作。</block>
-  <block id="8dd4e86207ea15a59d461c6deeead905" category="paragraph">您可以使用 SnapMirror 在独立于生产环境的存储系统上维护 Snapshot 副本。</block>
-  <block id="03f322205a24140e3aae3e6267d0c406" category="paragraph">对于 SAN 卷，在每个卷上禁用默认 Snapshot 策略。这些 Snapshot 副本通常由备份应用程序或 OnCommand WFA 工作流管理。NetApp 建议启用所有效率设置，以最大程度地提高磁盘利用率。</block>
-  <block id="78affddc1437c1085fdf159da17d99bb" category="paragraph">* 卷关联性 *</block>
-  <block id="a8223e662e0acad25f129e6f9195eb6e" category="paragraph">为了支持并发处理， ONTAP 会在启动时评估其可用硬件，并将其聚合和卷划分为不同的类，称为相关性。一般来说，属于一个关联性的卷可以与处于其他关联性的卷并行提供服务。相反，处于同一相关性的两个卷通常需要轮流等待节点 CPU 的计划时间（串行处理）。</block>
-  <block id="aa517899743b6ccb3e85d8457e529e94" category="paragraph">AFF A300 和 AFF A700 在每个节点上具有一个聚合关联性和四个卷关联性。为了获得最佳节点利用率并使用卷关联性，存储布局应为每个节点一个聚合，每个节点至少四个卷。通常，一个 Epic 数据库使用八个卷或 LUN 。</block>
   <block id="db8880d80ab20f2f01a010e5c454f7fb" category="section-title">LUN 配置</block>
-  <block id="5f52bc23f17d716c3361d239ef6ddac4" category="paragraph">文档《 Epic 数据库存储布局建议》详细介绍了每个数据库的 LUN 大小和数量。客户必须了解，借助 Epic 支持，确定 LUN 数量和 LUN 大小；这些数量可能需要稍作调整。</block>
-  <block id="eb799e9050dec41fb9a9bc817885ae5a" category="paragraph">建议从较大的 LUN 开始，因为 LUN 本身的大小不会对存储产生任何成本。为了便于操作，请确保 LUN 数量和初始大小在三年后能够远远超出预期要求。与扩展时添加 LUN 相比，扩展 LUN 更容易管理。如果对 LUN 和卷进行精简配置，则聚合中仅显示已用存储。</block>
-  <block id="1eba5ac2ac347549949e6e9e479d7f61" category="paragraph">为清晰起见，每个卷使用一个 LUN 进行 Epic 生产。对于大型部署， NetApp 建议为 Epic 数据库配置 24 到 32 个 LUN 。</block>
-  <block id="9dbee62adc9deab99e055a4224131068" category="paragraph">决定要使用的 LUN 数量的因素包括：</block>
-  <block id="c39e7648a8e7ce3761007fc274973c2a" category="list-text">三年后 Epic 数据库的总大小。对于较大的数据库，请确定该操作系统的 LUN 大小上限，并确保有足够的 LUN 可扩展。例如，如果您需要一个 60 TB 的 Epic 数据库，并且操作系统 LUN 的最大容量为 4 TB ，则需要 24 到 32 个 LUN 才能提供扩展和余量。</block>
   <block id="f0f4f4ee07bd69ccda90258104d093f0" category="summary">本节介绍在 ONTAP 8.3 及更高版本上部署的相关信息。</block>
   <block id="4e777d3b2a8b458c7f1f8e99e8ee985b" category="doc">Storage Virtual Machine 配置</block>
   <block id="5e8e41e494c729b71c38199837d82c03" category="admonition">Storage Virtual Machine （ SVM ）在 ONTAP API 和 ONTAP 命令行界面中也称为 Vserver 。</block>
@@ -2816,598 +2609,45 @@
   <block id="6b7b598323e29ffec89272c7a4dab997" category="list-text"><block ref="6b7b598323e29ffec89272c7a4dab997" category="inline-link-rx"></block></block>
   <block id="8f87ca3825cf554e2054b8d53073840e" category="inline-link">Cisco MDS 9132T FC 交换机</block>
   <block id="2cb00c21fb6289fb3fd2ceea04738a2a" category="list-text"><block ref="2cb00c21fb6289fb3fd2ceea04738a2a" category="inline-link-rx"></block></block>
-  <block id="f13522757699caa4bef7a36bfc8b9b25" category="summary">请始终使用互操作性表工具（ IMT ）验证是否支持所有版本的软件和固件。</block>
-  <block id="eb6491aa5f55e5c1e497b995fa4b77d1" category="doc">基础架构硬件和软件组件</block>
   <block id="c9dd6bad4c7d561872f2e2d498a990bf" category="inline-link">互操作性表工具（ IMT ）</block>
-  <block id="3a4b7d39db7d11d4d1898ec408f0bd41" category="paragraph">请始终使用<block ref="e24f898abe90ef46a13b3eea3ae2cf9c" category="inline-link-rx"></block> 验证是否支持所有版本的软件和固件。下表列出了测试中使用的基础架构硬件和软件组件。</block>
-  <block id="cbb780fc3810cb30cb2db1ee902d477a" category="cell">一个机箱</block>
-  <block id="de1066314108713cf3ccc30839cb17b1" category="cell">每个模块具有 18 个 CPU 核和 768 GB RAM BIOS 2.2 （ 8 ））</block>
-  <block id="90df3395bc80227b4b9fbf85613a5db5" category="cell">Cisco UCS VIC</block>
-  <block id="a839f7fa15411c1f2abff6b81b28a9f0" category="cell">4 个 UCS 1340</block>
-  <block id="1c43eb1e6c62c3c378ea34e40c4b1164" category="cell">VMware ESXi fNIC FC 驱动程序： 1.6.0.34 VMware ESXi eNIC 以太网驱动程序： 1.0.6.0</block>
-  <block id="9198fe7a65f8b2d47f34b90ea821d156" category="cell">2 个 Cisco UCS FI</block>
-  <block id="d2da2cbe42c22ed3b6616b6c11bc2d43" category="cell">采用 Cisco UCSM 3.2 的 6332-16UP （ 2f ）</block>
-  <block id="501b7e3d88baf1a5e26339a0206a15e1" category="cell">7.0 （ 3 ） i7 （ 2 ）</block>
-  <block id="30757242b418b8d368fe95a4ddbb9d5d" category="cell">2 个 Cisco Nexus 9372PX-E</block>
-  <block id="60e6d39242e7f8a195d0bade741e3f2f" category="cell">iSCSI ：使用 N9k 的 IP 解决方案</block>
-  <block id="f7a4aef8f369d68a12451f474f653edd" category="cell">FC ： Cisco MDS 9148S</block>
-  <block id="8318994c4a60d776e9144a146aeca1d5" category="cell">8.2 （ 2 ）</block>
-  <block id="7cbf49439212dfd9b01aa8916ba48c7f" category="cell">两台 Cisco 9148S 交换机</block>
-  <block id="1a7bbb1bdfc9c306ac96577d63cd4c75" category="cell">2 个 NetApp AFF A700s</block>
-  <block id="65068dcf2fb2dc043d2a32c78ca7e76c" category="cell">ONTAP 9.3 GA</block>
-  <block id="ee54d40275e0e1586ce6d459748e3c12" category="cell">1 个双节点集群</block>
-  <block id="b5258c4a080e08fb0d34de5b2dd7ce5e" category="cell">2 个 DS224C 磁盘架</block>
-  <block id="7c70559aebb45e8e2de11fe3aa2098db" category="cell">48 个 960 GB</block>
-  <block id="df5dc4e033f2d11ab92f2297fc2b7463" category="cell">VMware vSphere ESXi 6.5 U1</block>
   <block id="d3d9fdef0e91fc4aba18e57475fd74ea" category="cell">虚拟机</block>
-  <block id="381fbbd27845d2e8335b3da7ac170ebf" category="cell">RHEL 7.4</block>
-  <block id="01cac2b0ec40e9e509ec3915e2e9d81a" category="cell">VMware vCenter Server 6.5 U1 （ VCSA ）</block>
-  <block id="1eac26855b47184ec2df273b62d70b59" category="cell">vCenter Server 设备</block>
   <block id="16da49795bbc4995de01070dd3b75a98" category="cell">NetApp 虚拟存储控制台</block>
   <block id="5c014f8939a89da0166a347a0237cf4f" category="cell">SnapCenter</block>
-  <block id="042d24bff6ec5e4d7f194f9ad13316a6" category="cell">3.2 （ 2f ） *</block>
-  <block id="38b343d1c582fa297010445eced177ad" category="inline-link-macro">下一步：基础架构配置。</block>
-  <block id="fd332577a04b5a9b7e78568a8e272590" category="paragraph"><block ref="fd332577a04b5a9b7e78568a8e272590" category="inline-link-macro-rx"></block></block>
-  <block id="07e6efaeefb46513eb2c26b98e2f4ee1" category="summary">本报告的目标是重点介绍 FlexPod 在采用 Epic Healthcare 工作负载的 NetApp 全闪存 A300 和 A700 存储系统中的性能。</block>
-  <block id="83642a888abdb57d5022737c2a7047ee" category="doc">TR-4784 ： FlexPod for Epic Performance Testing</block>
-  <block id="a95b4d4ce30b353ade4cf41225da0b53" category="paragraph">Brian O ’ Maohony ， Ganesh Kamath Atul Bhalodia BRANDON Agee</block>
   <block id="40b796b77b40775e1361ce398a9a783c" category="section-title">目标</block>
-  <block id="3c273e7fca001c9bf71292455f82c202" category="section-title">Epic 硬件配置指南</block>
-  <block id="cf967a14166f977ac5a3b8778e58ad33" category="paragraph">为了获得可接受的最终用户性能， Epic 生产和灾难恢复操作数据库（ odb ）的目标读取和目标写入时间要求如下：</block>
-  <block id="7b99dedef21695e1d3276aad64345368" category="list-text">对于在系统调用级别测量的对数据库文件的随机读取：</block>
-  <block id="5e8d5eba3fa8c39fa6c420d4d21bf61f" category="list-text">平均读取延迟必须小于或等于 2 毫秒</block>
-  <block id="a836e1929127adc5d2a32e476b07cb4d" category="list-text">99% 的读取延迟必须低于 60 毫秒</block>
-  <block id="b75d9998ce0a0cf441bda4711f699baa" category="list-text">99.9% 的读取延迟必须低于 200 毫秒</block>
-  <block id="581b01b6eca13c03eca6e22227c3aa68" category="list-text">99.99% 的读取延迟必须低于 600 毫秒</block>
-  <block id="eafda77579f0073b0dce290723b7cf44" category="list-text">对于在系统调用级别测量的随机写入数据库文件：</block>
-  <block id="e26d7fe987f575ce7c3e718aa0098920" category="list-text">平均写入延迟必须小于或等于 1 毫秒，具体取决于大小</block>
-  <block id="0927387e2ad8fbaa485eded5dcad9fff" category="admonition">这些要求会随着时间的推移而发生变化。EPIC 准备了客户专用的 Epic 硬件配置指南（ HCG ）。有关要求的详细信息，请参见 HCG 。</block>
-  <block id="15bc590da3e553f8138a7ce60c2f0f47" category="paragraph">通过在 FlexPod 架构基础上运行 Epic 环境，医疗保健组织可以看到员工工作效率的提高以及资本和运营支出的降低。采用 Epic 的 FlexPod 数据中心可为医疗保健行业带来以下优势：</block>
-  <block id="b4c16f083b1a715e73e16858afc44af0" category="list-text">* 简化操作并降低成本。 * 通过将原有专有的 RISC/UNIX 平台更换为更高效且可扩展的共享资源，无论临床医生身在何处，都能为其提供支持，从而消除了这些平台的成本和复杂性。此解决方案可提高资源利用率以提高 ROI 。</block>
-  <block id="f5dbda2697b226d834c0036bd4cd45d5" category="list-text">* 更快地部署基础架构。 * 无论是在现有数据中心还是在远程位置，采用 Epic 的 FlexPod 数据中心经过集成和测试的设计都能帮助客户以更少的工作量在更短的时间内启动和运行新的基础架构。</block>
-  <block id="659261367807f7fb944bd4c20f5f9247" category="list-text">* 横向扩展架构。 * 无需重新配置正在运行的应用程序，即可将 SAN 和 NAS 从数 TB 扩展到数十 PB 。</block>
-  <block id="57456c79a1e37dd7739838a6bf0558e3" category="list-text">* 无中断运行。 * 在不中断业务运营的情况下执行存储维护，硬件生命周期操作和软件升级。</block>
-  <block id="96ac4107fa07074fc9ec062bff5b5ba8" category="list-text">* 安全多租户。 * FlexPod 支持共享虚拟化服务器和存储基础架构的需求，支持对设施特定信息进行安全多租户，尤其是在托管多个数据库和软件实例时。</block>
-  <block id="f8ed602939f6a2630d692b1db1c8bd51" category="list-text">* 池化资源优化。 * FlexPod 有助于减少物理服务器和存储控制器数量，并平衡工作负载需求。它还可以在提高性能的同时提高利用率。</block>
-  <block id="16e12ced36cf703fa7bcf011efe4d5e6" category="list-text">* 服务质量（ QoS ）。 * FlexPod 可在整个堆栈上提供 QoS 。行业领先的 QoS 存储策略可在共享环境中提供不同的服务级别。这些策略可以为工作负载提供最佳性能，并有助于隔离和控制失控的应用程序。</block>
-  <block id="db4a4e5bfc624217ddecb48707db3975" category="list-text">* 存储效率。 * 借助 NetApp 7 ： 1 存储效率担保降低存储成本。</block>
-  <block id="7db0ebb487acd3e6ab40ee6dce5355d6" category="list-text">* 灵活性。 * FlexPod 系统提供的行业领先的工作流自动化，流程编排和管理工具可以使 IT 更快速地响应业务请求。这些业务请求包括 Epic 备份和配置其他测试和培训环境，以及为人口健康管理计划复制分析数据库等。</block>
-  <block id="cbedf6b5ec12dd98591eb6972b338e46" category="list-text">* 工作效率。 * 快速部署和扩展此解决方案，以获得最佳临床医生最终用户体验。</block>
-  <block id="d5eba277872544309f2b285748223706" category="list-text">* Data Fabric 。 * NetApp Data Fabric 架构可以跨站点，跨物理边界和跨应用程序将数据集于一体。NetApp Data Fabric 专为以数据为中心的世界中的数据驱动型企业而构建。数据在多个位置创建和使用，并且通常必须与其他位置，应用程序和基础架构一起利用和共享。客户希望能够以一致且集成的方式管理数据。它提供了一种管理数据的方式，可以控制数据并简化日益增加的 IT 复杂性。</block>
-  <block id="c42cbc15d98b2d88ce66732a5166dd85" category="section-title">Cisco 统一计算系统， Cisco Nexus 和 MDS 交换以及 ONTAP 全闪存存储</block>
-  <block id="e52db12fc8345842729a4e2199510c66" category="paragraph">FlexPod for Epic Healthcare 可提供 IT 组织所需的性能，效率，易管理性，可扩展性和数据保护，以满足最严格的 Epic 要求。通过提高 Epic 生产数据库的性能并将应用程序部署时间从数月缩短到数周， FlexPod 可帮助企业最大限度地发挥其 Epic 投资的潜力。</block>
-  <block id="ae3d9e9236e37858694b97ff5f73f4d5" category="paragraph">Cisco Unified Computing System （ UCS ）作为一个自我集成的自我感知系统，由一个与统一 I/O 基础架构互连的管理域组成。适用于 Epic 环境的 Cisco UCS 已与 Epic 基础架构建议和最佳实践保持一致，以确保基础架构能够提供最可用的关键患者信息。</block>
-  <block id="518c59f5f043597f8e660b614ef74784" category="paragraph">Epic 基于 Cisco UCS 架构的基础是 Cisco UCS 技术及其集成系统管理， Intel Xeon 处理器和服务器虚拟化。这些集成技术可以解决数据中心的难题，并帮助您实现 Epic 数据中心设计的目标。Cisco UCS 将 LAN ， SAN 和系统管理统一为一个简化的链路，用于机架式服务器，刀片式服务器和虚拟机。Cisco UCS 是一种端到端 I/O 架构，它采用了 Cisco Unified Fabric 和 Cisco Fabric Extender （ FEX ）技术，可将 Cisco UCS 中的每个组件连接到一个网络结构和一个网络层。</block>
-  <block id="9abb7361b1f556d02a520d9c598ebe2f" category="paragraph">该系统设计为一个虚拟刀片式服务器机箱，可在多个刀片式服务器机箱之间进行整合和扩展。该系统实施了一个彻底简化的架构，消除了填充传统刀片式服务器机箱并导致复杂层的多个冗余设备。例如，以太网交换机，光纤通道交换机和机箱管理模块。Cisco UCS 包含一对冗余的 Cisco 互联阵列，可为所有 I/O 流量提供单点管理和单点控制。</block>
-  <block id="e7b88aff85f537a7ecc1f93f089e457b" category="paragraph">Cisco UCS 使用服务配置文件来帮助确保 UCS 基础架构中的虚拟服务器配置正确。服务配置文件包括有关服务器标识的关键服务器信息，例如 LAN 和 SAN 寻址， I/O 配置，固件版本，启动顺序，网络 VLAN ， 物理端口和服务质量（ QoS ）策略。可以在几分钟内动态创建服务配置文件并将其与系统中的任何物理服务器关联，而不是在几小时或几天内创建。将服务配置文件与物理服务器关联起来是一项简单的操作，可以在环境中的服务器之间迁移身份，而无需更改任何物理配置。它有助于快速裸机配置故障服务器的更换件。</block>
-  <block id="528a879dd77b9eac499474db461d5226" category="paragraph">使用服务配置文件有助于确保服务器在整个企业中的配置一致。使用多个 Cisco UCS 管理域时， UCS Central 可以使用全局服务配置文件在域之间同步配置和策略信息。如果一个域需要维护，则可以将虚拟基础架构迁移到另一个域。因此，即使单个域脱机，应用程序也会继续以高可用性运行。</block>
-  <block id="311676cd9cca336aa70c049119377bba" category="paragraph">Cisco UCS 已在一段多年的时间内与 Epic 进行了广泛测试，以证明它符合服务器配置要求。Cisco UCS 是受支持的服务器平台，如客户的《 Epic 硬件配置指南》中所述。</block>
-  <block id="0f8800d71d667547850f85ed17c081fc" category="section-title">Cisco Nexus 和 Cisco MDS 以太网和光纤通道交换</block>
-  <block id="a804697b8a5dca7049afba1c91f22fbf" category="paragraph">Cisco Nexus 交换机和 MDS 多层控制器可提供企业级连接和 SAN 整合。Cisco 多协议存储网络可通过提供灵活性和选项来降低业务风险。支持的协议包括光纤通道（ FC ），光纤连接（ Fibre Connection ， Ficon ），以太网 FC （ FCoE ）， IP 上 SCSI （ iSCSI ）和 IP 上 FC （ FCIP ）。</block>
-  <block id="016f004fbf72e5a7cd42fe569d4ffa0d" category="paragraph">Cisco Nexus 交换机可在一个平台中提供最全面的数据中心网络功能集之一。它们可以为数据中心和园区核心提供高性能和高密度。此外，它们还在一个具有高度弹性的模块化平台中为数据中心聚合，行尾部署和数据中心互连部署提供了一整套功能。</block>
-  <block id="2fd70c95b28e4909e3abe4b975d64055" category="paragraph">Cisco UCS 可将计算资源与 Cisco Nexus 交换机和统一 I/O 网络结构集成在一起，用于识别和处理不同类型的网络流量，包括存储 I/O ，流式桌面流量，管理以及对临床和业务应用程序的访问。</block>
-  <block id="bc21000aba734c49f852c55de37fa931" category="paragraph">概括地说， Cisco UCS 为 Epic 部署提供了以下重要优势：</block>
-  <block id="a3a79019796b227a4d001c6fb71a1235" category="list-text">* 基础架构可扩展性。 * 虚拟化，高效的电耗和散热，自动化的云扩展，高密度和高性能都支持高效的数据中心增长。</block>
   <block id="0be5b3d60fa1a62fc1c4b46695cbefff" category="list-text">* 操作连续性。 * 该设计集成了硬件， NX-OS 软件功能和管理功能，可支持零停机环境。</block>
   <block id="7c43b4cfb6124eac10c88babdf3b2e38" category="list-text">* 传输灵活性。 * 利用经济高效的解决方案逐步采用新的网络技术。</block>
-  <block id="4a386624aff981558c1ad4de9035f5f8" category="paragraph">Cisco UCS 与 Cisco Nexus 交换机和 MDS 多层导向器相结合，为 Epic 提供了极具吸引力的计算机，网络和 SAN 连接解决方案。</block>
-  <block id="c3bf016fc68bb0c11881799bb320f994" category="section-title">NetApp 全闪存存储系统</block>
-  <block id="31e465d6883564d8df8f09d297d4b16c" category="paragraph">NetApp AFF 系统可通过高性能，卓越的灵活性和一流的数据管理满足企业级存储需求。AFF 系统基于 ONTAP 数据管理软件构建，可在不影响 IT 运营效率，可靠性或灵活性的情况下加快业务发展。借助企业级全闪存阵列， AFF 系统可以加速，管理和保护业务关键型数据，并轻松无风险地过渡到数据中心的闪存介质。</block>
-  <block id="d4cb9f5c992a3fe86f30320888bae2db" category="paragraph">AFF A 系列全闪存系统专为闪存设计，可提供行业领先的性能，容量，密度，可扩展性，安全性， 和网络连接。随着新的入门级系统的增加，新的 AFF A 系列产品将企业级闪存扩展到中型企业。AFF A 系列是基于真正的统一横向扩展架构构建的速度最快的全闪存阵列系列，每个集群的 IOPS 高达 700 万次，延迟低于毫秒。</block>
-  <block id="98cc502c279f3c9d062baa031bd85b8b" category="paragraph">对于 AFF A 系列，您可以完成两倍的工作，而延迟是上一代 AFF 系统的一半。AFF A 系列的成员是业内首款提供 40 Gb 以太网（ 40GbE ）和 32 Gb 光纤通道（ FC ）连接的全闪存阵列。因此，它们消除了随着闪存速度的加快，越来越多的带宽瓶颈从存储转移到网络。</block>
-  <block id="9e8a314593ed27e058966730a576b116" category="paragraph">NetApp 凭借最新的固态驱动器（ SSD ）技术在全闪存存储创新方面处于领先地位。作为首款支持 15 TB SSD 的全闪存阵列，随着 A 系列的推出， AFF 系统也成为首款使用多流写入 SSD 的阵列。多流写入功能可显著增加 SSD 的可用容量。</block>
-  <block id="9edd11c957d916999ebcc3bd361255c1" category="paragraph">NetApp ONTAP 闪存基础知识是全闪存 FAS 性能的动力。ONTAP 是行业领先的数据管理软件。但是，众所周知， ONTAP 及其 NetApp WAFL （任意位置写入文件布局）文件系统本身已针对闪存介质进行了优化。</block>
-  <block id="073ceccce39122cf4ba669165b4e8f84" category="paragraph">ONTAP 闪存基础知识通过以下功能优化 SSD 性能和耐用性：</block>
-  <block id="4c32fd0dd84ab55de1716075af5112f5" category="list-text">NetApp 数据缩减技术，包括实时压缩，实时重复数据删除和实时数据缩减，可以显著节省空间。使用 NetApp Snapshot 和 NetApp FlexClone 技术可以进一步提高节省量。基于客户部署的研究表明，这些数据缩减技术实现的空间节省高达 933 倍。</block>
-  <block id="586fbf85f26c4c5e43550f4f1ab7eb7f" category="list-text">对可用块进行合并写入可最大限度地提高性能并延长闪存介质的使用寿命。</block>
-  <block id="f801d5d6b1fdf46575584e7f12fbb5ed" category="list-text">特定于闪存的读取路径优化可提供稳定一致的低延迟。</block>
-  <block id="06e86951dc6e1b9692162277ef02f5e8" category="list-text">并行处理可同时处理更多请求。</block>
-  <block id="6b5795f5c0e3fadd65baa6316d87b70b" category="list-text">软件定义的闪存访问可最大限度地提高部署灵活性。</block>
-  <block id="d7fc77fa744052f21af0404ebee7888c" category="list-text">高级磁盘分区（ ADP ）可提高存储效率，并进一步将可用容量增加近 20% 。</block>
-  <block id="a7db4d8f08bf9b2be47d082a89386494" category="list-text">Data Fabric 支持在内部或云端的闪存层和硬盘驱动器层之间实时迁移工作负载。</block>
-  <block id="455fed0cad7e745fc4fed31f7203c3af" category="paragraph">QoS 功能可确保在多工作负载和多租户环境中实现最低服务级别目标。</block>
-  <block id="8cfa7a718485043f388e1ce0a10cccfd" category="paragraph">自适应 QoS 的主要差异化优势如下：</block>
-  <block id="43dd7ef47304b5ca3e279ddc6c169dee" category="list-text">简单的自我管理 IOPS/TB 或吞吐量 MB/TB 。随着数据容量的增长，性能也会随之提高。</block>
-  <block id="94d14c54b3964ba704619a20a4c3692f" category="list-text">根据服务级别性能策略简化存储使用。</block>
-  <block id="0f1c31666a071c06dd8a3601e603f324" category="list-text">将混合工作负载整合到一个集群上，并提供有保障的性能服务级别。关键应用程序不再需要孤岛。</block>
-  <block id="e4087e5a0c6d18e249493d1f1becf526" category="list-text">通过整合节点和磁盘节省大量成本。</block>
-  <block id="7f0cfe102d906b3c83b8de2c65cd58a2" category="summary">本文档概述了 ESXi 配置的最佳实践，这些最佳实践可在 VMware 的系统间最佳实践中找到。</block>
   <block id="14344c7e1407102dba356f3a96926a7f" category="doc">ESXi 配置最佳实践</block>
-  <block id="b6f58dc2d6de93a1ce946eee7b9cb5d3" category="inline-link">适用于 VMware 的系统间最佳实践</block>
-  <block id="9e3d028ac8808decfd008af6570d77ea" category="paragraph">有关 ESXi 主机端配置，请参见<block ref="571aec3e212a7f28f53e52e01424675a" category="inline-link-rx"></block>。按照运行任何企业数据库工作负载的方式配置 VMware 主机：</block>
-  <block id="959603f23dbeee62ce786063e72ce161" category="list-text">适用于 VMware vSphere 的 Virtual Storage Console （ VSC ）可检查并设置最适合 NetApp 存储系统的 ESXi 主机多路径设置和 HBA 超时设置。VSC 设置的值基于 NetApp 的严格内部测试。</block>
-  <block id="69e58d3ca3c8da9feb3b5b6afd5ee9f1" category="list-text">为了获得最佳存储性能，客户应考虑使用支持阵列集成（ VAAI ）的 VMware vStorage API 存储硬件。适用于 VAAI 的 NetApp 插件是一个软件库，它集成了 ESXi 主机上安装的 VMware 虚拟磁盘库。通过 VMware VAAI 软件包，可以将某些任务从物理主机卸载到存储阵列。</block>
   <block id="df299b055549bc8ca66052728afa46a7" category="paragraph">您可以在阵列级别执行精简配置和硬件加速等任务，以减少 ESXi 主机上的工作负载。副本卸载功能和空间预留功能可提高 VSC 操作的性能。您可以从 NetApp 支持站点下载此插件安装包并获取此插件的安装说明。</block>
-  <block id="613e8e7bf589f31e9d839a920dbe2be0" category="paragraph">VSC 可设置 ESXi 主机超时，多路径设置和 HBA 超时设置以及其他值，以实现最佳性能并成功对 NetApp 存储控制器进行故障转移。</block>
-  <block id="bb050ea3dc7f994ebd24d6ec5ebad89e" category="list-text">在 VMware vSphere Web Client 主页页面中，单击 vCenter &gt; 主机。</block>
   <block id="119532d922c9cb5a03ab543abab4b39b" category="list-text">右键单击某个主机，然后选择操作 &gt; NetApp VSC &gt; 设置建议值。</block>
   <block id="4c53150a7d5b0d30a5be88983c1b112f" category="list-text">在 NetApp 建议设置对话框中，选择最适合您的系统的值。</block>
   <block id="5bdf7813f1843ab7cbdb024ffe39d76d" category="paragraph">默认情况下会设置标准建议值。</block>
-  <block id="6c4db28a24c43663ac7c0a45cffb21da" category="paragraph"><block ref="6c4db28a24c43663ac7c0a45cffb21da" category="inline-image-macro-rx" type="image"></block></block>
   <block id="18d0ad44a1e563aaf9f5871e32535a6c" category="list-text">单击确定。</block>
   <block id="41b7c35b4ecadf2ab857e78756379638" category="inline-link-macro">下一步： NetApp 配置。</block>
-  <block id="d2e9a03a96ddc6969831336f42b9d574" category="paragraph"><block ref="d2e9a03a96ddc6969831336f42b9d574" category="inline-link-macro-rx"></block></block>
-  <block id="6a931de2d0c435c616d893d70a0f5d67" category="summary">本技术报告提供了有关为 Epic 电子健康记录（ EHR ）应用程序软件环境估算 FlexPod （ NetApp 存储和 Cisco 统一计算系统）规模的指导。</block>
-  <block id="d47e4c0b89154b4f02f15622e2f3937e" category="doc">《 FlexPod for Epic 定向规模估算指南》</block>
-  <block id="3abe1136b0067d363c8e2e2c2e7fc8f7" category="paragraph">Brian O ’ Mahony ， Ganesh Kamath ， Atul Bhalodia ， NetApp Mike Brennan ， Jon Ebmeier ， Cisco</block>
   <block id="261addf78c7b2c961032b3dd08ba0b1f" category="section-title">目的</block>
-  <block id="bc5ff0bb16ec5347cffaaff3e42b4822" category="paragraph">托管 Epic 超空间的 FlexPod 系统， InterSystems Cach é 数据库， Cogitoclarity 分析和报告套件以及托管 Epic 应用程序层的服务服务器为可快速部署的可靠高性能基础架构提供了一个集成平台。FlexPod 集成平台由经验丰富的 FlexPod 渠道合作伙伴部署，并由 Cisco 和 NetApp 技术支持中心提供支持。</block>
-  <block id="b2d41c9782437ef4eecf42aca655dbf7" category="paragraph">本文档中介绍的规模估算练习涵盖了用户，全局参考计数，可用性和灾难恢复（ DR ）要求。目标是确定计算，网络和存储基础架构组件的最佳大小。</block>
-  <block id="cdf4b607b60143d3bd8215337f520a02" category="paragraph">本文档概述为以下主要部分：</block>
-  <block id="4ee2bcec265f41a5c011850eb9ea191a" category="inline-link-macro">参考架构</block>
-  <block id="52ffe9cd4e6eda50941f06cb7bb0f9d6" category="list-text"><block ref="9be0395381baebe6c30b43ef2b6e5f8b" category="inline-link-macro-rx"></block>介绍了可用于托管 Epic 生产数据库工作负载的小型，中型和大型计算存储架构。</block>
-  <block id="17d4132ac821bd09472bda468a3bb511" category="list-text"><block ref="5ad1e5149f76e1d2b0e0f01dc674f98e" category="inline-link-macro-rx"></block>，其中详细列出了存储架构的材料清单示例。所述配置仅供一般参考。请始终根据您的工作负载调整系统大小，并根据需要调整配置。</block>
-  <block id="cda1b25f3e8183161db8886a4ea679f0" category="paragraph">通过在 FlexPod 架构基础上运行 Epic 环境，医疗保健组织有望提高员工工作效率，降低资本支出和运营支出。FlexPod 是 Cisco 和 NetApp 战略合作伙伴关系中经过严格测试的预先验证的融合基础架构，经过专门设计和设计，可提供可预测的低延迟系统性能和高可用性。这种方法可为 Epic EHR 系统的用户带来高舒适性和最佳响应时间。</block>
-  <block id="5d366dfacc2e1f1d537020a69da1ad30" category="paragraph">Cisco 和 NetApp 的 FlexPod 解决方案采用高性能，模块化，预先验证，融合，虚拟化， 高效，可扩展且经济高效的平台。采用 Epic 的 FlexPod 数据中心可为医疗保健行业提供以下优势：</block>
-  <block id="818a0a53674ef2bfa164563e5bb519b1" category="list-text">* 模块化架构。 * FlexPod 通过针对每个特定工作负载专门配置的 FlexPod 平台来满足 Epic 模块化架构的各种需求。所有组件均通过集群模式服务器和存储管理网络结构以及一个统一的管理工具集进行连接。</block>
-  <block id="e0eea07a82d1a2c3aefb5516dfd86e0a" category="list-text">* 加速应用程序部署。 * 经过预先验证的架构可缩短实施集成时间并降低风险，以加快 Epic 项目计划的进度。适用于 Epic 的 NetApp OnCommand Workforce Automation （ WFA ）工作流可自动执行 Epic 备份和刷新，并且不再需要自定义不受支持的脚本。无论解决方案是用于首次推出 Epic ，硬件更新还是扩展，都可以将更多资源转移到项目的业务价值上。</block>
-  <block id="44d0d78246accd622cdb88b6e16ae1cd" category="list-text">* 简化操作并降低成本。 * 通过使用更高效且可扩展的共享资源来取代原有专有的 RISC 和 UNIX 平台，从而消除了这些平台的成本和复杂性，从而可以为临床医生提供支持。此解决方案可提高资源利用率以提高 ROI 。</block>
-  <block id="bc779e63424873eadc016e508d25ae88" category="list-text">* 更快地部署基础架构。 * 无论位于现有数据中心还是远程位置，采用 Epic 的 FlexPod 数据中心经过集成和测试的设计都能帮助客户以更少的工作量在更短的时间内启动和运行新基础架构。</block>
-  <block id="11bd23e97b7442580f1d2e203c2e7d67" category="list-text">* 无中断运行。 * 在不中断业务的情况下执行存储维护，硬件生命周期操作和软件升级。</block>
-  <block id="21c0785c905dbac148c29dbd2600a871" category="list-text">* 安全多租户。 * 支持日益增长的虚拟化服务器和存储共享基础架构需求，支持对设施特定信息进行安全多租户，尤其是在托管多个数据库和软件实例时。</block>
-  <block id="beba974a5deddf3ffa53bff86389e9f5" category="list-text">* 池化资源优化。 * 有助于减少物理服务器和存储控制器数量，负载平衡工作负载需求并提高利用率，同时提高性能。</block>
-  <block id="28f0324adaf6afdb3ef2666ca3c4e9c5" category="list-text">* 服务质量（ QoS ）。 * FlexPod 可在整个堆栈上提供 QoS 。行业领先的 QoS 存储策略可在共享环境中提供不同的服务级别。这些策略可以为工作负载提供最佳性能，并有助于隔离和控制失控的应用程序。</block>
-  <block id="e4408096d206b1fb1a79ce8ad173f2fe" category="inline-link">存储效率担保</block>
-  <block id="027acbd0c587106c65f47e53b1a5c877" category="list-text">* 存储效率。 * 利用 NetApp 7 ： 1 降低存储成本<block ref="e9c2f221ac001573dfbf766458b9c402" category="inline-link-rx"></block>。</block>
-  <block id="219631d27044b5bcc2a3d983415132b1" category="list-text">* 灵活性。 * FlexPod 系统提供的行业领先的工作流自动化，流程编排和管理工具可以使 IT 更快速地响应业务请求。这些请求的范围从 Epic 备份和配置其他测试和培训环境到为人口健康管理计划复制分析数据库。</block>
-  <block id="c513033095bb02d55791dacde3bf6bfa" category="list-text">* 工作效率。 * 快速部署和扩展此解决方案，以获得最佳临床医生最终用户体验。</block>
-  <block id="5ad9e9dfee445c0fa5078bd891c7e6b1" category="list-text">* Data Fabric 。 * NetApp Data Fabric 架构可以跨站点，跨物理边界和跨应用程序将数据集于一体。Data Fabric 专为以数据为中心的环境中的数据驱动型企业而构建。数据在多个位置创建和使用，通常需要利用并与其他位置，应用程序和基础架构共享。客户希望能够以一致且集成的方式管理数据。Data Fabric 提供了一种管理数据的方式，可以控制数据并简化日益增加的 IT 复杂性。</block>
-  <block id="d734a6e4575c33f0dd0bb5a0d5a3df3d" category="paragraph">本文档介绍了使用 Cisco Unified Computing System （ Cisco UCS ）和基于 NetApp ONTAP 的存储的环境。它提供了用于托管 Epic 的示例参考架构。</block>
   <block id="a8f0bd5f9473b195579882fa581c7357" category="paragraph">它不包括：</block>
-  <block id="8d5c36a3673e1b8077c9c1de4494f726" category="list-text">有关使用 NetApp System Performance Modeler （ SPM ）或其他 NetApp 规模估算工具的详细规模估算指南</block>
-  <block id="757d2e40bc2916f480fccdb6512621d6" category="list-text">针对非生产工作负载进行规模估算</block>
-  <block id="6ca4766d90d524c225cf7e21cc7c3def" category="paragraph">本文档面向 NetApp 以及合作伙伴系统工程师和专业服务人员。我们假定读者已很好地了解计算和存储规模估算概念，并在技术上熟悉 Cisco UCS 和 NetApp 存储系统。</block>
-  <block id="a52f60aff1e118fcd45a4fc38acd5219" category="section-title">相关文档</block>
-  <block id="67c2eb04c83c0cc76b3870adf0376e13" category="paragraph">以下技术报告与本技术报告相关。它们共同构成了在 FlexPod 基础架构上对 Epic 进行规模估算，设计和部署所需的一整套文档：</block>
-  <block id="ecb1e944e8a3d37434536fd21a2927ae" category="inline-link">TR-4693 ：《适用于 Epic EHR 的 FlexPod 数据中心部署指南》</block>
-  <block id="392107ed1220f85046efce431024fa57" category="list-text"><block ref="392107ed1220f85046efce431024fa57" category="inline-link-rx"></block></block>
-  <block id="28784e4d250e5f3d5396d8af3461ed50" category="list-text"><block ref="cd5e7c005bde3a65779866d41d2ae37c" category="inline-link-rx"></block> （需要访问 Field Portal ）</block>
-  <block id="a7828ffbf91528ecedfcc824a719b423" category="list-text"><block ref="4decdb7e2bf71c5815ff018a74f9774b" category="inline-link-rx"></block></block>
-  <block id="216d242d79e7dcc9c61e4d2c865eae2d" category="summary">AFF A300 HA 对可以轻松运行现有最大的 Epic 实例。如果您有两个或更多非常大的 Epic 实例，则可能需要根据 AFF SPM 工具的结果使用 SPM A700 。</block>
-  <block id="510bd156fd7b26082c5f7c62bd2ba947" category="doc">工作负载测试</block>
-  <block id="428cac60a6b385d620b8368307ff7a3b" category="section-title">AFF A300 操作步骤</block>
-  <block id="87dc154a226feafc8c0f6636a4ea0662" category="section-title">数据生成</block>
-  <block id="8af879a3e40ebce2f34b4e6aff012d4a" category="paragraph">LUN 中的数据是使用 Epic 的 Dgen.pl 脚本生成的。该脚本用于创建类似于 Epic 数据库中的数据。</block>
-  <block id="5aa54005d1e216630ce21afdeb82fb58" category="paragraph">从两个 RHEL VM epo-rhel1 和 epo-rhel2 运行了以下 dgen 命令：</block>
-  <block id="d9bbc6f8903918932c73dc2331c6b3b2" category="paragraph">` -pctfull` 是可选的，用于定义要填充数据的 LUN 百分比。默认值为 95% 。大小不会影响性能，但会影响将数据写入 LUN 的时间。</block>
-  <block id="084fb9aa1abedcfa50609ec2fd33a05f" category="paragraph">在 dgen 过程完成后，您可以对每个服务器运行 Genio 测试。</block>
-  <block id="998f9f11a502c14cb2153d6420c39b94" category="section-title">运行 Genio</block>
-  <block id="8264c9b3bd8cde2d74139ae382bb31b3" category="paragraph">测试了两台服务器。执行的 IOPS 将从 75 ， 000 次增加到 110 ， 000 次，这代表了一个非常大的 Epic 环境。这两个测试都同时运行。</block>
-  <block id="4b1907843e321dd98ba33c8a9acc8082" category="paragraph">从服务器 epio-rhel1 运行以下 Genio 命令：</block>
-  <block id="85bc6ef336f394022028b4ffc2b06be1" category="section-title">AFF A300 上的 Genio 结果</block>
-  <block id="a216162129be988c30420cbe22d7413c" category="paragraph">下表列出了 AFF A300 上的 Genio 结果</block>
-  <block id="ceade3037f194497077d49766908d807" category="cell">读取 IOPS</block>
-  <block id="096e7655a5c94dec635d9fe59470dded" category="cell">写入 IOPS</block>
-  <block id="73ff86be5df61807378775041d12e37c" category="cell">IOPS 总数</block>
-  <block id="57fde1c1968f5991d8e1ce0e6ebf42f8" category="cell">最长写入周期（秒）</block>
-  <block id="cd9acc1a2167065172720c215039815e" category="cell">有效写入延迟（毫秒）</block>
-  <block id="679b9ae9597ece2341cda489b55d77fc" category="cell">随机读取平均值（毫秒）</block>
-  <block id="f7e8d0ee77dd6dd04c05932f79efcdb4" category="cell">142505</block>
-  <block id="e79b743519dc083a9d431d0f6cc9724e" category="cell">46443.</block>
-  <block id="d3c9d42e943ee1029c57faea3ffc8ed9" category="cell">188929</block>
-  <block id="354317d50d0a86258dbf4c3899677678" category="cell">44.68</block>
-  <block id="599cc7775df4b8f839fba86d2b9d7177" category="cell">0.115</block>
-  <block id="7dbf455f8e8e1a7afd34ceb81beb1523" category="cell">0.66</block>
-  <block id="cd0444886586e349ac6a2b7bff76f3cf" category="section-title">AFF A700 操作步骤</block>
-  <block id="582229b5c095de0771bb56a57bade970" category="paragraph">对于大型 Epic 环境（通常全球引用量超过 1000 万次），客户可以选择 AFF A700 。</block>
-  <block id="5b4a96ab039ca55a02f6b276f8de3c98" category="paragraph">LUN 中的数据是使用 Epic 的 Dgen.pl 脚本生成的。该脚本用于创建类似于 Epic 数据库中的数据。</block>
-  <block id="2d4fe01b3afd886a83201d722ef0280a" category="paragraph">在所有三个 RHEL VM 上运行以下 dgen 命令。</block>
-  <block id="fd8a51355a64362de898afe9d11e5c52" category="paragraph">在 dgen 过程完成后，您可以为每个服务器运行 Genio 测试。</block>
-  <block id="83a55e0255883208723c63e26f1a850f" category="paragraph">测试了三台服务器。在两台服务器上，执行了从 75 ， 000 次到 100 ， 000 次的 IOPS 增长，这代表了一个非常大的 Epic 环境。第三台服务器设置为抢占资源的服务器，将 IOPS 从 75 ， 000 次增加到 170 ， 000 次。所有这三项测试都同时运行。</block>
-  <block id="3c0a18acac66a6fa1aa20c6f8849dfb0" category="section-title">Genio 会对 AFF A700 进行测试</block>
-  <block id="3dd69e24ace683629910339ab0ec39be" category="paragraph">下表显示了 AFF A700 的 Genio 测试结果。</block>
-  <block id="ecb0318b015b832ed5c04dbbeab6c2c1" category="cell">241 ， 180</block>
-  <block id="16232e1a3821c982fc3c7d3556f6763a" category="cell">78,654</block>
-  <block id="bd31db8bca3018e405832743d4407523" category="cell">319837</block>
-  <block id="2c7e75278e407194705486fb7bcff935" category="cell">43.24</block>
-  <block id="305cf1fb13b9539dcd317a0354c9ed61" category="cell">0.09</block>
-  <block id="c7522ce359dcd5a0ebdaeb22a34f6b89" category="cell">1.05</block>
-  <block id="53e5c2be5112a9f30330aa7748248ef0" category="section-title">采用 AQO 的性能 SLA</block>
-  <block id="37738e8cbb0ad8092882b2d6aed563c9" category="paragraph">NetApp 可以使用 AQO 策略为工作负载设置性能下限和上限值。下限设置可确保最低性能。IOPS/TB 可以应用于 Epic 等应用程序的一组卷。分配给 QoS 策略的 Epic 工作负载会受到保护，不会受到同一集群上其他工作负载的影响。最低要求得到保证，同时允许工作负载达到高峰并使用控制器上的可用资源。</block>
-  <block id="f2dde399e30b3fa14984bdfe2eef1307" category="paragraph">在此测试中，服务器 1 和服务器 2 受到 AQO 的保护，而第三台服务器则充当集群中发生原因性能下降的抢占资源的工作负载。AQO 允许服务器 1 和 2 按指定的 SLA 执行，而抢占资源的工作负载则表现为写入周期较长而出现降级的迹象。</block>
-  <block id="a4477f17229495dfd8e9ef39456e0e23" category="section-title">自适应服务质量默认值</block>
-  <block id="c0c09e3519d715f55bb6170567a98c1b" category="paragraph">ONTAP 配置有三种默认的 AQO 策略：价值，性能和极高。可以使用 `qos` 命令查看每个策略的值。使用命令末尾的 ` -instant` 可查看所有 AQO 设置。</block>
-  <block id="d0a96fbfa430640fab5fac4d5ca365c2" category="paragraph">以下是创建 AQO 策略的语法：</block>
-  <block id="883a8b3bf2f3fb6d5b71f53a844fe2fb" category="paragraph">AQO 策略中有一些重要设置：</block>
-  <block id="a0e138fc7727d5fbd206ee48a7ad1838" category="list-text">* 预期 IOPS* 。此自适应设置是策略的最小 IOPS/TB 值。保证工作负载至少获得此 IOPS/TB 级别。这是此测试中最重要的设置。在我们的示例测试中，性能 AQO 策略设置为 2048IOPS/TB 。</block>
-  <block id="d3f5579b8c8f62bfd7ce4446e3e671ea" category="list-text">* 峰值 IOPS* 。此自适应设置是策略的最大 IOPS/TB 值。在我们的示例测试中，性能 AQO 策略设置为 4096 IOPS/TB 。</block>
-  <block id="140e2ab3152595f0f3d794bc22175509" category="list-text">* 峰值 IOPS 分配。 * 选项为已分配空间或已用空间。将此参数设置为已用空间，因为此值会随着 LUN 中数据库的增长而发生变化。</block>
-  <block id="f4246790721ac311ff6b78c23c5deae2" category="list-text">* 绝对最小 IOPS 。 * 此设置为静态设置，不自适应。此参数可设置最小 IOPS ，而不考虑大小。此值仅在大小小于 1 TB 时使用，并且不会影响此测试。</block>
-  <block id="9975ac1402087f1a86bc33c5302f4298" category="paragraph">通常，生产环境中的 Epic 工作负载以大约 ~1000 IOPS/TB 的存储和容量运行，并且 IOPS 呈线性增长。默认 AQO 性能配置文件对于 Epic 工作负载来说已足够。</block>
-  <block id="1cd64115730bb56b4b6d6c341f275a2c" category="paragraph">在此测试中，实验室不会反映出一个生产规模较小且大小为 5 TB 的数据库。目标是以 75 ， 000 次 IOPS 运行每个测试。EpicProd AQO 策略的设置如下所示。</block>
-  <block id="273bd6d818fc0c0660390919c81df32f" category="list-text">预期 IOPS/TB = 总 IOPS/ 已用空间</block>
-  <block id="cb6c94be46a2930c9bec8e9422f228ff" category="list-text">15 ， 000 IOPS/TB = 75 ， 000 IOPS/5 TB</block>
-  <block id="5e33456de378d8beb39a441e8cd6ee4a" category="paragraph">下表显示了用于 EpicProd AQO 策略的设置。</block>
-  <block id="51ac4bf63a0c6a9cefa7ba69b4154ef1" category="cell">正在设置 ...</block>
   <block id="689202409e48743b914713f96d93947c" category="cell">价值</block>
-  <block id="84fb7b98e6e50302bf6cc709c92a6192" category="cell">5 TB</block>
-  <block id="f91ac817558ad058b8bc10a62b9ff990" category="cell">所需的 IOPS</block>
-  <block id="87cb3514b03d2ccb9e04625ceea22d1f" category="cell">75,000</block>
-  <block id="ed552a7e6158615d8b259ef83127639d" category="cell">峰值 IOPS 分配</block>
-  <block id="aa06850d5c9d77127d7340a724cb89be" category="cell">已用空间</block>
-  <block id="4dff4e68eb1da9bee708bd0f4361d4ff" category="cell">绝对最小 IOPS</block>
-  <block id="25f2f59ca889b1b5858411ddd8cab983" category="cell">7,500</block>
-  <block id="921ad87862a6cb534bf64a36dc685190" category="cell">预期 IOPS/TB</block>
-  <block id="b971529933d7df53a1bbf1328809f595" category="cell">15,000</block>
-  <block id="eddcc0fdb991cbf3e872a7d78bdaebf5" category="cell">峰值 IOPS/TB</block>
-  <block id="8487699fb65ed58bf886a609cc850b23" category="cell">30,000</block>
-  <block id="7efd3479aa85f058c1026b85f2ea2e97" category="paragraph">下图显示了如何在已用空间随时间增长时计算下限 IOPS 和上限 IOPS 。</block>
-  <block id="3d0738f5cbc3079aa42d97f8658b50b6" category="paragraph"><block ref="3d0738f5cbc3079aa42d97f8658b50b6" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="3839295e41817070de1685ad173173e3" category="paragraph">对于生产规模的数据库，您可以像上一个示例中使用的配置文件一样创建自定义 AQO 配置文件，也可以使用默认性能 AQO 策略。下表显示了性能 AQO 策略的设置。</block>
-  <block id="de560b4aa51741aaf70431dd132eec9a" category="cell">75 TB</block>
-  <block id="cee631121c2ec9232f3a2f028ad5c89b" category="cell">500</block>
-  <block id="c9e919815777627095c51eda50c5713a" category="cell">1,000</block>
-  <block id="20191cac600c0c3cb3137c4cf87bbe12" category="cell">2,000</block>
-  <block id="ae99bf0f349727e90b79977da4df3950" category="paragraph">下图显示了默认性能 AQO 策略中的已用空间随时间增长而增长时如何计算下限和上限 IOPS 。</block>
-  <block id="9513f35d0d2e1dae99fce4bab3db1d27" category="paragraph"><block ref="9513f35d0d2e1dae99fce4bab3db1d27" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="3225a10b07f1580f10dee4abc3779e6c" category="section-title">Parameters</block>
-  <block id="8ce3f5af4db4a9bf4a1857a6b236c5bb" category="list-text">以下参数指定自适应策略组的名称：</block>
-  <block id="d317b6690109f7c7cd94eddd22f4d111" category="paragraph">自适应策略组名称必须唯一，并且限制为 127 个字母数字字符，包括下划线 "_" 和连字符 "-" 。自适应策略组名称必须以字母数字字符开头。使用 `qos adaptive-policy-group rename` 命令更改自适应策略组名称。</block>
-  <block id="7912855635aeac570aee1a5730b647d5" category="list-text">以下参数指定此自适应策略组所属的数据 SVM （在命令行中称为 Vserver ）。</block>
-  <block id="c8cacdce8c767ff5493fb7e46ba6c9bb" category="paragraph">您只能将此自适应策略组应用于指定 SVM 中包含的存储对象。如果系统只有一个 SVM ，则该命令默认使用该 SVM 。</block>
-  <block id="f4e30fdff321d94a2e26847386407c34" category="list-text">以下参数指定根据存储对象分配的大小分配的最小预期 IOPS/TB 或 IOPS/GB 。</block>
-  <block id="46b916f14be5bbe8bd689ed84741a4ab" category="list-text">以下参数根据存储对象的已分配大小或存储对象的已用大小指定可能分配的最大 IOPS/TB 或 IOPS/GB 。</block>
-  <block id="670e25b37d51d8400f31f5d96a2fb556" category="list-text">以下参数指定在预期 IOPS 小于此值时用作覆盖的绝对最小 IOPS 。</block>
-  <block id="f7528253f30faa748e631559c6872737" category="paragraph">默认值计算如下：</block>
-  <block id="0ef74de93067656dc8b8849c585481f6" category="paragraph">LUN 中的数据是使用 Epic `Dgen.pl` 脚本生成的。该脚本用于创建类似于 Epic 数据库中的数据。</block>
-  <block id="c04f2edc2955f85fb7771e75c2fc2cdf" category="paragraph">在所有三个 RHEL VM 上运行了以下 dgen 命令：</block>
-  <block id="8306b0e6f2677aaa75c1377a3e7c5e01" category="paragraph">测试了三台服务器。两个以 75 ， 000 次恒定 IOPS 运行，代表一个非常大的 Epic 环境。第三台服务器被设置为抢占资源的服务器，将 IOPS 从 75 ， 000 次增加到 150 ， 000 次。所有这三项测试都同时运行。</block>
-  <block id="5f5c3bac5b6d1be8e8b92bf6bf98b9b1" category="section-title">服务器 epio_rhel1 Genio 测试</block>
-  <block id="23c9b94fc5f76d5866edfeb71ab77772" category="paragraph">运行以下命令为每个卷分配 EpicProd AQO 设置：</block>
-  <block id="52174463399be0a45eb975e20184a336" category="paragraph">从服务器 epio-rhel1 运行了以下 Genio 命令：</block>
-  <block id="8c4322b63764a7c2ee74f30a48c7d7bc" category="section-title">服务器 epio_rhel2 Genio 测试</block>
-  <block id="e6b0b9afc76df60d3586953345003027" category="paragraph">从服务器 epio-rhel2 运行了以下 Genio 命令：</block>
-  <block id="2a95364ef0cd702ef123e763eb2b3891" category="section-title">服务器 epio_rhel3 Genio 测试（抢占资源）</block>
-  <block id="9ab9a90f87e4303aef9b1affb049438e" category="paragraph">以下命令不会为每个卷分配任何 AQO 策略：</block>
-  <block id="6e29ef275cd9594b4df47813d7159559" category="paragraph">从服务器 epio-rhel3 运行了以下 Genio 命令：</block>
-  <block id="bef75565e7cb3547d22d6ac16d709047" category="section-title">AQO 测试结果</block>
-  <block id="b22246de55c181d77d493574d988cb32" category="paragraph">以下各节中的表包含每个并发 Genio 测试中 summary.csv 文件的输出。要通过测试，最长写入周期必须低于 45 秒。有效写入延迟必须低于 1 毫秒。</block>
-  <block id="cad03f16a4dd01d3977f4f6184e61bc1" category="section-title">服务器 epio_rhel1 Genio 结果</block>
-  <block id="b17794fce50933163729b4224b6a6177" category="paragraph">下表显示了 AQO 服务器 epio_rhel1 的 Genio 结果。</block>
-  <block id="c5301693c4e792bcd5a479ef38fb8f8d" category="cell">运行</block>
-  <block id="86cfa2758dc24270f86861fe92aedae4" category="cell">读取 IOPS</block>
-  <block id="06dfefa7d295854682c6a6f2f613ca2d" category="cell">写入 IOPS</block>
-  <block id="9c31318fd616fab347dd8f689e8e6be1" category="cell">55655</block>
-  <block id="460d2456c49e58dbb01c6723f6a3a560" category="cell">18176.</block>
-  <block id="be5abab81bae109e1a01ea0ac2f6dde7" category="cell">73832</block>
-  <block id="5d869a02b689532bccd89660142d444a" category="cell">32.66</block>
-  <block id="b1659515b9d1a59ebbc790e01084a8f0" category="cell">0.12</block>
-  <block id="6512bd43d9caa6e02c990b0a82652dca" category="cell">11.</block>
-  <block id="3d37445d31b65d4ec0e2539a769273da" category="cell">55653</block>
-  <block id="6ab7fa24224ddd2c8cf2f573e68f8b13" category="cell">18114</block>
-  <block id="bf0552607a32015c010c166f9771efe9" category="cell">73768</block>
-  <block id="67de30a1ce381e819644b6d09650c96c" category="cell">34.66</block>
-  <block id="cb5ae17636e975f9bf71ddf5bc542075" category="cell">0.1</block>
-  <block id="efb1a00af0eb90f71cb142729b47dcb5" category="cell">55623</block>
-  <block id="c4896e2b7f31bdb285363d1ef8ce327e" category="cell">18099</block>
-  <block id="c65a46c16b70bf886e62e791cd4a80b3" category="cell">73722</block>
-  <block id="fa5ecfda8d920e44c6486545154331d6" category="cell">35.17</block>
-  <block id="c51ce410c124a10e0db5e4b97fc2af39" category="cell">13</block>
-  <block id="7eeb15d6027a367ea82bc7c5e9f25abd" category="cell">55646</block>
-  <block id="4bdef5fb6ba59b1bfe0db68275c452ab" category="cell">18093</block>
-  <block id="6c5f850767ec606ecf7ddcab72ad8b6e" category="cell">73740</block>
-  <block id="b604a37867f67206be0559fb1add75f0" category="cell">35.16</block>
-  <block id="aab3238922bcc25a6f606eb525ffdc56" category="cell">14</block>
-  <block id="889c522de6762367fdbcd152e4c381c7" category="cell">55643</block>
-  <block id="ad5db5924e3e97ed8a387a499efa9fa0" category="cell">18082</block>
-  <block id="21fe20409703d8de3b0005d87e3e01ca" category="cell">73726</block>
-  <block id="923ba08a5c804041f8c55140bc90cee9" category="cell">35.66</block>
-  <block id="a80b0d78801cbc324e13fa9e0df7e4b5" category="cell">55634</block>
-  <block id="2509e9380eb3623ef61046dcd190275d" category="cell">18156.</block>
-  <block id="61a9f87a3003b93c1f64904bfe305414" category="cell">73791</block>
-  <block id="f4353cdb61d6d4d199b8834ecbee79a0" category="cell">32.54</block>
   <block id="c74d97b01eae257e44aa9d5bade97baf" category="cell">16.</block>
-  <block id="89da5fbf7c4df3fad9fba0cb7e4e57ee" category="cell">55629</block>
-  <block id="440be16e6577fac91de2fbfee4b91503" category="cell">18138.</block>
-  <block id="39f351988d304b68b3bac5bdc5cd955e" category="cell">73767</block>
-  <block id="6e89f8537dc3cf6978c0e41283d0fd23" category="cell">34.74</block>
-  <block id="27e795eb0f314edf0479737480ab0f2a" category="cell">0.11</block>
-  <block id="2635749c5721bb3d5021ce2144ca0146" category="cell">18131.</block>
-  <block id="9775efcc70ff0918ad952cc9c48a511a" category="cell">73777</block>
-  <block id="b6a24579469bd50190497b941fd04c6b" category="cell">35.81</block>
   <block id="6f4922f45568161a8cdf4ad2299f6d23" category="cell">18</block>
-  <block id="14a6038d23924c4761ebfa9f6fc7d89f" category="cell">55639</block>
-  <block id="a2b58f07313388cd23868784a6759b64" category="cell">18136.</block>
-  <block id="22ec872ee633043cc5aece5adb261367" category="cell">73775</block>
-  <block id="6dd6c2720fb41f0152e796554e023767" category="cell">35.48</block>
-  <block id="1f0e3dad99908345f7439f8ffabdffc4" category="cell">19</block>
-  <block id="bc24d2f78cc508b3bf9156f59a4ff060" category="cell">55597</block>
-  <block id="2302d39c909793e04e6b01806c3bd60d" category="cell">18141.</block>
-  <block id="521de458cb610efb7947719bd8f7b801" category="cell">73739</block>
-  <block id="b367f5cc0b5eebe9e4a595c0ecdff85f" category="cell">35.42</block>
-  <block id="2e23e58d16ab62220d13131acaadeba8" category="section-title">服务器 epio_rhel2 Genio 结果</block>
-  <block id="081154faf8e18ce373113e50532d069f" category="paragraph">下表显示了 AQO 服务器 epio_rhel2 的 Genio 结果。</block>
-  <block id="fb4d518989bdeae9784d99c398f86f1f" category="cell">18081.</block>
-  <block id="eb0700925102789f92551f4e03740e02" category="cell">73711</block>
-  <block id="9bdf62cf400dca55bd413a97d86d89b0" category="cell">33.96</block>
-  <block id="6f27749bf039dfb3e4c4200d81bcf4c8" category="cell">55635</block>
-  <block id="cea82cba7b2d06851ba0448f43b1fdc1" category="cell">18152.</block>
-  <block id="79d42eab00a128a46e98b8b109001eb9" category="cell">73788</block>
-  <block id="49c9fba3337d8209ac0b442e76cb93fc" category="cell">28.59</block>
-  <block id="081b26a8bdc5222518e51ecdbcc2021c" category="cell">55606</block>
-  <block id="d3481ae553dc4bb6b970b151fbc0ec59" category="cell">18154.</block>
-  <block id="f960ece51976c3196e8347f8fa6d09c9" category="cell">73761</block>
-  <block id="4eee988a0fe5823bd3b836fead3216f2" category="cell">30.44</block>
-  <block id="4602b477ded0c16df6befcd8447cea0d" category="cell">18148</block>
-  <block id="9191e0c0fc4f0ff1d9e4bae7e118944e" category="cell">73787</block>
-  <block id="188f3dd812186119c45e1d534b908741" category="cell">30.37</block>
-  <block id="74df7f44a49a4ceaee2a955bd1e9d705" category="cell">18145.</block>
-  <block id="52ec3baefcf93a558d994e1bcd3b5c3d" category="cell">73774</block>
-  <block id="66a59c2f4a516b791ac3feff56468a9e" category="cell">30.13</block>
-  <block id="53401e69b53e492be14d7a532c521e3c" category="cell">55619</block>
-  <block id="f2853e5de732df8a70c4ca081fc81119" category="cell">18125 年</block>
-  <block id="823d21584d1c5fe5ea643bc15d17251f" category="cell">73745</block>
-  <block id="60e6381569658ff877f5793afbca9ab5" category="cell">30.03 个</block>
-  <block id="41e01f746ab5fcf05ed8be1d738bd405" category="cell">55640</block>
-  <block id="5c80428f70abbc7e1df381f00eeddf74" category="cell">73796</block>
-  <block id="bb73ba626d19989f0c57576e71039b4b" category="cell">33.48</block>
-  <block id="6fb6646fd754ad4b8a6f0a88f7801f9a" category="cell">55613</block>
-  <block id="8288eb462e80418e70a393d245a984ce" category="cell">18177 年</block>
-  <block id="295616927f6d6477e7e8e507b3dca993" category="cell">73790</block>
-  <block id="28f04d65f08c9a19b6f1577294ed1f87" category="cell">33.32</block>
-  <block id="4a176dc4d5182a4c465e1a043aaa0a10" category="cell">55605</block>
-  <block id="9ebd41e6cbc1e14780805f6fc0d65867" category="cell">18173.</block>
-  <block id="2c790f933dcb0c7a747741780c6b435d" category="cell">73779</block>
-  <block id="0182c31c443c1e50d85b1d98680c7f3e" category="cell">32.11</block>
-  <block id="821e779cfa8e08b266028c1955cf8ab7" category="cell">18178</block>
-  <block id="f985f43b4ba330d5282dfd9be8003e62" category="cell">73785</block>
-  <block id="5109f9ef60bd297bd14810cd81083f35" category="cell">33.19</block>
-  <block id="22525b7ac93c38dc7be1512e25c6b9b7" category="section-title">服务器 epio_rhel3 Genio 结果（抢占资源）</block>
-  <block id="d089e2bfe2c922f61e2c11c35d7aa41d" category="paragraph">下表显示了 AQO 服务器 epio_rhel3 的 Genio 结果。</block>
-  <block id="e19e97de451de87ed914b775b9b68071" category="cell">最长 WIJ 时间（秒）</block>
-  <block id="12d5c8d75feca181c3522ab2a59b1be7" category="cell">最长写入周期（秒）</block>
-  <block id="984fabd247157d62d64d3179969e3bbc" category="cell">有效写入延迟（毫秒）</block>
-  <block id="81517079882bbb04ab3b2c1fb244f336" category="cell">19980</block>
-  <block id="cdcd8f28ccc4334ee689906332eb2d65" category="cell">81207.</block>
-  <block id="80cea8e3ea0c775628280d850f32f102" category="cell">21.48</block>
-  <block id="81b037f345c625d505ec5e3986052869" category="cell">40.05</block>
-  <block id="ec3dd4dc9a1084b24b736a18994e0bd6" category="cell">21835</block>
-  <block id="d3648b20cef64c86522d371f253cf92d" category="cell">88610</block>
-  <block id="cb8ef8a7d3c03b26ea9f8ef6e2d3255c" category="cell">17.57</block>
-  <block id="bb89b94b92abca46a3b7d6cafe52eb04" category="cell">46.32</block>
-  <block id="6c73721a871329829847f6285edeb2e9" category="cell">23657</block>
-  <block id="5ff2953731e1b4d8d781ebf09ce29ac0" category="cell">95955</block>
-  <block id="198e02534510fa4ae5473cdaf4102a47" category="cell">19.77</block>
-  <block id="00fb6cced08872c4d156801e3a97a4e9" category="cell">53.03</block>
-  <block id="8eedf769a83524a00a200373ce900374" category="cell">25493</block>
-  <block id="4bebc22c0573635129e2323839cc33c3" category="cell">103387</block>
-  <block id="cf0e01a8a97821d36f8c170b20289726" category="cell">21.93</block>
-  <block id="d5b0943aa7a87e6288250503f7aad282" category="cell">57.53</block>
-  <block id="387634a1c9e6dad2026967f0a0f844f6" category="cell">27331</block>
-  <block id="bb6be86ee5fee71b737ca41c334165ea" category="cell">110766</block>
-  <block id="d2dcd216e803a98cd11dde2140ef671b" category="cell">23.17</block>
-  <block id="18d417b730f24d8122a80395406ae4dc" category="cell">60.57</block>
-  <block id="6e0b4ddb9f9bea023d5e1074b1d1ca82" category="cell">28893</block>
-  <block id="7959d20b8565c7f4884b94d26696d679" category="cell">117906</block>
-  <block id="3e6b79242d9303d058e0d35c09bebdb0" category="cell">26.93</block>
-  <block id="0e4ddc72c2332969db783d67ce46ff42" category="cell">56.56</block>
-  <block id="95d40515d78b92d75f485224d51a7ea6" category="cell">30704</block>
-  <block id="5caffa74376b9bdced4aaa3758cae536" category="cell">125233</block>
-  <block id="d6766dd4dbd5a43a3144bc5ff58b3016" category="cell">28.05</block>
-  <block id="486830d795c4c3d7791ec3ba2171e0c7" category="cell">60.5</block>
-  <block id="e8660ee8b41231074f2d9f16adb2ea71" category="cell">32521</block>
-  <block id="2e5f4f4f432203ace38b1c9a02704735" category="cell">132585</block>
-  <block id="d6d1fd4c301c4424f8af2b1cebb08a66" category="cell">28.43</block>
-  <block id="1712bd0645d4aa7cd73731b568693528" category="cell">64.38</block>
-  <block id="76116a8b8f5da981ab90769dcf68a207" category="cell">34335</block>
-  <block id="34ce626fba0340195e7873e84bf6681a" category="cell">139881</block>
-  <block id="34173cb38f07f89ddbebc2ac9128303f" category="cell">30 个</block>
-  <block id="84ac1b6e8ecc8341529d86f0ec449929" category="cell">70.38</block>
-  <block id="a8c3f9e540b2045222eca45155f96053" category="cell">3636361.</block>
-  <block id="80a047c2f6ad45caf870c95560ae2a13" category="cell">147633</block>
-  <block id="86f140cdafb73e7c2baaa83527025da8" category="cell">22.78</block>
-  <block id="0340c4db7aa9b6c3a8253c258fe99ab2" category="cell">73.66</block>
-  <block id="679f47e946645e35bc0d606f07a1217e" category="cell">0.13</block>
-  <block id="d29ad3e3b6d768a1134650e20ee582d1" category="section-title">AQO 测试结果分析</block>
-  <block id="5d8c29403ee15d50ff909af33bb3ec1a" category="paragraph">上一节的结果表明，服务器 epo_rhel1 和 epo_rhel2 的性能不受 epo_rhel3 上抢占资源的工作负载的影响。epio_rhel3 可将 IOPS 提高到 150 ， 000 次，并因其达到控制器的限制而开始使 Genio 测试失败。epo_rhel1 和 epo_rhel2 上的写入周期和延迟保持不变，而抢占资源的服务器则失控。</block>
-  <block id="ca161e7d7134426ad178799950a992f9" category="paragraph">这说明了 AQO 最低策略如何有效地将工作负载与抢占资源的工作负载隔离并保证最低性能级别。</block>
-  <block id="5660563c7def80409a573963d73add7e" category="paragraph">AQO 具有多种优势：</block>
-  <block id="ff61bfd075d9ab96089c6b4fd5a4e717" category="list-text">它支持更加灵活和简化的架构。关键工作负载不再需要孤立，可以与非关键工作负载共存。所有容量和性能均可通过软件进行管理和分配，而不是通过物理隔离来实现。</block>
-  <block id="c1c582a3278792e95a5c5a7a8b3c6525" category="list-text">它可以节省在 ONTAP 集群上运行 Epic 所需的磁盘和控制器数量。</block>
-  <block id="a5aea0074c99c378551d8147b8521687" category="list-text">它可以根据性能策略简化工作负载的配置，从而确保性能稳定一致。</block>
-  <block id="220d706ac32390e8b79bab1f5fde772e" category="list-text">您也可以选择实施 NetApp Service Level Manager 来执行以下任务：</block>
-  <block id="799faf6335bd8741a53a6d1237c985f1" category="list-text">创建服务目录以简化存储配置。</block>
-  <block id="18fe9de433e4ae5f2661ea8a4ec7c155" category="list-text">提供可预测的服务级别，使您能够始终如一地实现利用率目标。</block>
-  <block id="c402e13b67393b57eb8f605f27babf8a" category="list-text">定义服务级别目标。</block>
-  <block id="ab30d7ae48ab4b6431352e29acb8487f" category="list-text">NetApp FlexPod 设计区域</block>
-  <block id="5d140892abb19870dbdb16a66ce30e73" category="inline-link"><block ref="5d140892abb19870dbdb16a66ce30e73" category="inline-link-rx"></block></block>
-  <block id="d855195c180c14facde524c007fee672" category="paragraph"><block ref="d855195c180c14facde524c007fee672" category="inline-link-rx"></block></block>
-  <block id="3648de5424ada8e3867e3fc60630450d" category="list-text">TR-4707 ：《 FlexPod for Epic Directional Sizing Guide 》</block>
-  <block id="ce071e08b47212b6998fe10d8eaa0395" category="inline-link"><block ref="ce071e08b47212b6998fe10d8eaa0395" category="inline-link-rx"></block></block>
-  <block id="a23fdd07c4cca8f8ced58a7aa49840aa" category="paragraph"><block ref="a23fdd07c4cca8f8ced58a7aa49840aa" category="inline-link-rx"></block></block>
-  <block id="124d27b716e656beadd45c90884189ca" category="paragraph"><block ref="124d27b716e656beadd45c90884189ca" category="inline-link-rx"></block></block>
-  <block id="bba24a5cc560ec63acfd6a431784d76d" category="paragraph"><block ref="bba24a5cc560ec63acfd6a431784d76d" category="inline-link-rx"></block></block>
-  <block id="ac925a8d7365a2b0789a1d5fb516f454" category="inline-link"><block ref="ac925a8d7365a2b0789a1d5fb516f454" category="inline-link-rx"></block></block>
-  <block id="56970dd50312ea1a2c998ab42ac7cebb" category="paragraph"><block ref="56970dd50312ea1a2c998ab42ac7cebb" category="inline-link-rx"></block></block>
-  <block id="a264f2b46191cd47156d840e69784452" category="inline-link"><block ref="a264f2b46191cd47156d840e69784452" category="inline-link-rx"></block></block>
-  <block id="43a30e14bdc6cddfd9137e0b7a81e058" category="paragraph"><block ref="43a30e14bdc6cddfd9137e0b7a81e058" category="inline-link-rx"></block></block>
-  <block id="fee815755bdf964574066d8b5fa90186" category="inline-link"><block ref="fee815755bdf964574066d8b5fa90186" category="inline-link-rx"></block></block>
-  <block id="b026789a1232b01911aa3deade359937" category="paragraph"><block ref="b026789a1232b01911aa3deade359937" category="inline-link-rx"></block></block>
   <block id="02aed7d7f25878a636d26b696ed151bb" category="list-text">NetApp 产品文档</block>
-  <block id="43bf53828bdbe4c3ac04baf46b878311" category="summary">本技术报告面向计划在 FlexPod 系统上部署 Epic 的客户。其中简要概述了适用于 Epic 的 FlexPod 架构，并介绍了用于部署适用于医疗保健的 Epic 的 FlexPod 的设置和安装。</block>
-  <block id="e29116bce52fd5c40d792c36797e61cd" category="paragraph">Brian O ’ Mahony ， NetApp Ganesh Kamath ， NetApp Mike Brennan ， Cisco</block>
-  <block id="c40476186bd8ae6e874aca9a74b64280" category="paragraph">部署用于托管 Epic 超空间， InterSystems Cach é 数据库， Cogito clarity 分析和报告套件以及托管 Epic 应用程序层的服务服务器的 FlexPod 系统为可快速部署的可靠高性能基础架构提供了一个集成平台。FlexPod 集成平台由经验丰富的 FlexPod 渠道合作伙伴部署，并由 Cisco 和 NetApp 技术支持中心提供支持。</block>
-  <block id="c68ac1bc070a95a769515f856d562d9d" category="paragraph">通过在 FlexPod 架构基础上运行 Epic 环境，医疗保健组织有望提高员工工作效率，降低资本支出和运营支出。采用 Epic 的 FlexPod 数据中心可为医疗保健行业带来以下优势：</block>
-  <block id="00f44ac52a8aeefbd72039b335d8ee64" category="list-text">* 安全多租户。 * 此优势可满足虚拟化服务器和存储共享基础架构日益增长的需求，从而可以安全地多租户特定于设施的信息，尤其是托管多个数据库和软件实例时。</block>
-  <block id="b5f225edacc7188ca9dd554853e5cb82" category="list-text">* 池化资源优化。 * 此优势有助于减少物理服务器和存储控制器数量，负载平衡工作负载需求，并在提高性能的同时提高利用率。</block>
-  <block id="101b309fe308a64804e3eef696251faf" category="list-text">* 存储效率。 * 借助 NetApp 7 ： 1 存储效率担保降低存储成本。</block>
-  <block id="d8713500fe5d265eb10fafb88e4bd0e1" category="list-text">* 工作效率。 * 快速部署和扩展此解决方案，以获得最佳临床医生最终用户体验。</block>
-  <block id="52e2c25d79896d6b65913390a5d9abc1" category="list-text">* Data Fabric 。 * NetApp Data Fabric 架构可以跨站点，跨物理边界和跨应用程序将数据集于一体。NetApp Data Fabric 专为以数据为中心的世界中的数据驱动型企业而构建。数据在多个位置创建和使用，通常需要利用并与其他位置，应用程序和基础架构共享。客户希望能够以一致且集成的方式管理数据。它提供了一种管理数据的方式，可以控制数据并简化日益增加的 IT 复杂性。</block>
-  <block id="39befed38c190d431ecbddd701e984f1" category="section-title">Epic EHR 基础架构的新方法</block>
-  <block id="a906e7083fe469000f9cbe778e1265e8" category="paragraph">医疗保健提供商组织仍然面临着最大的压力，无法从对行业领先的 Epic 电子健康记录（ Electronic Health records ， EHRs ）的大量投资中获得最大收益。对于任务关键型应用程序，客户在为 Epic 解决方案设计数据中心时，通常会为其数据中心架构确定以下目标：</block>
-  <block id="4826c8dd474833f7d8d6cbb797d909ad" category="list-text">Epic 应用程序的高可用性</block>
-  <block id="75b80abab9cf9091659f77ac4f9e0adb" category="list-text">在数据中心轻松实施 Epic</block>
-  <block id="09ca18498bb944f7c7b6c3bb9a66bb09" category="list-text">敏捷性和可扩展性，支持新 Epic 版本或应用程序的增长</block>
   <block id="74a37ca3fc803ac7184526cec2956f18" category="list-text">成本效益</block>
-  <block id="5ac7ba2385a615c2e7f580add16d3f0b" category="list-text">与 Epic 指南和目标平台保持一致</block>
   <block id="7cc87e587436554fb34e0b0439e40a1b" category="list-text">易管理性，稳定性和易支持性</block>
   <block id="4edb8c45f4cbd29586b5571a2de557eb" category="list-text">强大的数据保护，备份，恢复和业务连续性</block>
-  <block id="bc1dd2385c6aa71581176f1ca8efae3d" category="paragraph">随着 Epic 用户不断发展壮大，他们的组织将成为负责的医疗保健组织，并根据捆绑式更严格的报销模式进行调整，我们面临的挑战是如何以更高效，更灵活的 IT 交付模式提供所需的 Epic 基础架构。</block>
-  <block id="a524bf8b764b772ef564315321e0f2d0" category="paragraph">在过去十年中， Epic 基础架构通常由基于专有的基于 RISC 处理器的服务器组成，这些服务器运行专有版本的 UNIX 和传统 SAN 存储阵列。这些服务器和存储平台几乎无法通过虚拟化实现，而且由于 IT 预算限制日益增加，可能会导致高昂的资本和运营成本。</block>
-  <block id="55537fdea3bec0c7ec4fd0f735fcd17c" category="paragraph">Epic 现在支持一个生产目标平台，该平台由一个采用 Intel Xeon 处理器的 Cisco Unified Computing System （ Cisco UCS ）组成，该系统使用 VMware ESXi 进行虚拟化，并运行 Red Hat Enterprise Linux （ RHEL ）。随着 Epic 在运行 ONTAP 的 NetApp 存储方面的高舒适性级别排名， Epic 数据中心优化的新时代已经开始。</block>
   <block id="688e83d48398765ecdeafdc1b67aad0d" category="section-title">经过预先验证的融合基础架构的价值</block>
-  <block id="09079ffa3a254fc9a7f3a536747ce1e2" category="paragraph">Epic 对客户的硬件要求具有规范性，因为它对提供可预测的低延迟系统性能和高可用性具有重要要求。</block>
-  <block id="0d18b40acca184b948b7b28fc167283d" category="paragraph">FlexPod 是 Cisco 和 NetApp 战略合作伙伴关系中经过严格测试的预先验证的融合基础架构，专为提供可预测的低延迟系统性能和高可用性而设计和设计。这种方法可以为 Epic 提供高舒适性，并最终为 Epic EHR 系统的用户提供最佳响应时间。</block>
-  <block id="3938104c29424ad864fe3552094afda6" category="paragraph">Cisco 和 NetApp 的 FlexPod 解决方案通过高性能，模块化，预先验证，融合，虚拟化， 高效，可扩展且经济高效的平台。它提供：</block>
-  <block id="9a54c55c51aab750f56bc0985f691468" category="list-text">* 加速应用程序部署。 * 经过预先验证的架构可缩短实施集成时间并降低风险，以加快 Epic 项目计划的进度。适用于 Epic 的 NetApp OnCommand Workforce Automation （ OnCommand WFA ）工作流可自动执行 Epic 备份和刷新，并且不再需要自定义不受支持的脚本。无论解决方案是用于首次推出 Epic ，硬件更新还是扩展，都可以将更多资源转移到项目的业务价值上。</block>
-  <block id="784374b7a748eba9a2c7a65e0621729a" category="list-text">* 融合堆栈各级均采用行业领先的技术。 * Cisco ， NetApp ， VMware 和 Red Hat 在服务器，网络，存储和开放式系统 Linux 等类别中均被行业分析师评为第一或第二。</block>
   <block id="9218e5d248bc5f6bee747b524fa747c7" category="list-text">* 利用标准化，灵活的 IT 保护投资。 * FlexPod 参考架构可预测新产品版本和更新，并持续进行严格的互操作性测试，以适应未来技术的推出。</block>
-  <block id="bd468a9302806cd6dedfe289263a2b54" category="list-text">* 在广泛的环境中进行了成熟的部署。 * FlexPod 已经过预先测试，并通过常见虚拟机管理程序，操作系统，应用程序和基础架构软件的联合验证，已在 Epic 的一些最大客户组织中安装。</block>
   <block id="a3453c43e6bbaeaca31aea0d1865e1b8" category="section-title">经验证的 FlexPod 架构和合作支持</block>
-  <block id="a24055664798c941b3982771ab1bf3f9" category="paragraph">FlexPod 是一款经验证的数据中心解决方案，可提供灵活的共享基础架构，可轻松扩展以满足不断增长的工作负载需求，而不会影响性能。通过利用 FlexPod 架构，此解决方案可提供 FlexPod 的全部优势，包括：</block>
-  <block id="5ea8e849dd409d1f3e23fe688eced0fb" category="list-text">* 性能可满足 Epic 工作负载要求。 * 根据参考工作负载要求（小型，中型，大型），可以部署不同的 ONTAP 平台来满足所需的 I/O 配置文件。</block>
   <block id="7f67a0b8dcd150e2511111003e2cf729" category="list-text">* 可扩展性可轻松适应临床数据增长。 * 可按需动态扩展虚拟机（ VM ），服务器和存储容量，而不受传统限制。</block>
-  <block id="2176db8ead6687a69881b8451c84640f" category="list-text">* 提高了效率。 * 借助融合虚拟化基础架构，可以更轻松地管理和存储数据，同时提高 Epic 软件的性能，从而缩短管理时间并降低 TCO 。NetApp OnCommand WFA 自动化可简化解决方案，将测试环境刷新时间从数小时或数天缩短为几分钟。</block>
-  <block id="99856f22753a025907ac1e04758fb14e" category="list-text">* 降低风险。 * 利用基于定义的架构构建的经过预先验证的平台，最大限度地减少业务中断，消除部署猜测并适应持续的工作负载优化。</block>
-  <block id="ede982fe45905b15aa0106c99e3ff3a0" category="list-text">* FlexPod 合作支持。 * NetApp 和 Cisco 建立了合作支持，这是一种强大，可扩展且灵活的支持模式，可满足 FlexPod 融合基础架构的独特支持要求。此模式结合了 NetApp 和 Cisco 的经验，资源和技术支持专业知识，可简化识别和解决客户的 FlexPod 支持问题描述的流程，而不管问题位于何处。FlexPod 合作支持模式有助于确保您的 FlexPod 系统高效运行并受益于最新技术，同时提供经验丰富的团队来帮助解决集成问题。</block>
-  <block id="978814af8d8264e2045a63e7181b8e85" category="paragraph">对于在 FlexPod 融合基础架构上运行诸如 Epic 等业务关键型应用程序的医疗保健组织来说， FlexPod 合作支持尤其重要。</block>
-  <block id="debc016d047e61c65c77d50c9d6a43d0" category="paragraph">下图显示了 FlexPod 合作支持模式。</block>
-  <block id="c0d7cee6c778f72edf4be945c3c2087b" category="paragraph"><block ref="c0d7cee6c778f72edf4be945c3c2087b" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="3eac479c2edf57846d3ba8ed7a2da7f0" category="paragraph">除了这些优势之外，采用 Epic 解决方案的 FlexPod 数据中心堆栈的每个组件还为 Epic EHR 工作流提供了特定优势。</block>
-  <block id="0ed8114c034a2c90f609e87de481bcd1" category="paragraph">Cisco UCS 是一个自我集成的自我感知系统，由一个与统一 I/O 基础架构互连的管理域组成。适用于 Epic 环境的 Cisco UCS 已与 Epic 基础架构建议和最佳实践保持一致，以帮助确保基础架构能够以最大可用性提供关键患者信息。</block>
-  <block id="3c61a6f6fd03e5e7fce1512cecc133f2" category="paragraph">Epic 基于 Cisco UCS 架构的基础是 Cisco UCS 技术，它具有集成的系统管理， Intel Xeon 处理器和服务器虚拟化功能。这些集成技术可以解决数据中心的难题，并帮助客户实现他们为 Epic 设计数据中心的目标。Cisco UCS 将 LAN ， SAN 和系统管理统一为一个简化的链路，用于机架式服务器，刀片式服务器和 VM 。Cisco UCS 是一种端到端 I/O 架构，它采用 Cisco 统一网络结构和 Cisco Fabric Extender （ FEX ）技术，可将 Cisco UCS 中的每个组件连接到一个网络结构和一个网络层。</block>
-  <block id="cadfbe46bf1fe4dd4d32f9466421d154" category="paragraph">该系统设计为一个虚拟刀片式服务器机箱，可在多个刀片式服务器机箱，机架服务器和机架之间整合和扩展。该系统实施了一个彻底简化的架构，消除了填充传统刀片式服务器机箱的多个冗余设备，并产生了多个复杂层：以太网和 FC 交换机以及机箱管理模块。Cisco UCS 由一对冗余的 Cisco 互联阵列（ Fabric interc互 连， CLI ）组成，可为所有 I/O 流量提供单点管理和单点控制。</block>
-  <block id="a0273b7305e707ced5077a10c343cd11" category="paragraph">Cisco UCS 使用服务配置文件来帮助确保 Cisco UCS 基础架构中的虚拟服务器配置正确。服务配置文件包括有关服务器标识的关键服务器信息，例如 LAN 和 SAN 寻址， I/O 配置，固件版本，启动顺序，网络 VLAN ， 物理端口和 QoS 策略。可以在几分钟内动态创建服务配置文件并将其与系统中的任何物理服务器关联，而无需花费数小时或数天时间。将服务配置文件与物理服务器关联起来只需执行一项简单的操作，即可在环境中的服务器之间迁移身份，而无需更改任何物理配置。它有助于快速裸机配置故障服务器的更换件。</block>
-  <block id="cc205a0cb9722d83adbac436f1ca9734" category="paragraph">使用服务配置文件有助于确保在整个企业内一致地配置服务器。使用多个 Cisco UCS 管理域时， Cisco UCS Central 可以使用全局服务配置文件在域之间同步配置和策略信息。如果需要在一个域中执行维护，则可以将虚拟基础架构迁移到另一个域。这种方法有助于确保即使单个域脱机，应用程序也能继续以高可用性运行。</block>
-  <block id="2f9839a8abb5cb9b245ab9677526fd9e" category="paragraph">Cisco UCS 已在一段多年的时间内与 Epic 进行了广泛测试，以证明它符合服务器配置要求。Cisco UCS 是受支持的服务器平台，如客户的《 Epic 硬件配置指南》中所述。</block>
   <block id="48def1be7a1b40b720ff1892a761e8c8" category="section-title">Cisco Nexus</block>
-  <block id="9009fbf1615a3645d0a0e44cb6b27dc8" category="paragraph">Cisco Nexus 交换机和 MDS 多层控制器可提供企业级连接和 SAN 整合。Cisco 多协议存储网络通过提供以下灵活性和选项降低业务风险： FC ，光纤连接（ Fibre Connection ， Ficon ），以太网 FC （ FCoE ）， IP 上 SCSI （ iSCSI ）和 IP 上 FC （ FCIP ）。</block>
-  <block id="fc15f820579a060cececb55b255916fc" category="paragraph">Cisco Nexus 交换机可在一个平台中提供最全面的数据中心网络功能集之一。它们可以为数据中心和园区核心提供高性能和高密度。此外，它们还为数据中心聚合，行尾和数据中心互连部署提供了一整套功能，可在一个具有高度弹性的模块化平台中实现。</block>
-  <block id="67058156d9e591d2cc589b06602110ba" category="paragraph">Cisco UCS 可将计算资源与 Cisco Nexus 交换机和统一 I/O 网络结构集成在一起，用于识别和处理不同类型的网络流量，包括存储 I/O ，流式桌面流量，管理以及对临床和业务应用程序的访问：</block>
-  <block id="011803b1939bd3fc74528f0e5adf798f" category="paragraph">Cisco UCS 与 Cisco Nexus 交换机和 MDS 多层控制器相结合，可为 Epic 提供计算，网络和 SAN 连接解决方案。</block>
-  <block id="fc260e8e25efb9689440f79a555f170d" category="paragraph">运行 ONTAP 软件的 NetApp 存储可降低整体存储成本，同时提供 Epic 工作负载所需的低延迟读写响应时间和 IOPS 。ONTAP 支持全闪存和混合存储配置，可创建最佳存储平台以满足 Epic 要求。NetApp 闪存加速系统获得了 Epic 高舒适级别评级，为 Epic 客户提供了性能和响应能力，这是延迟敏感型 Epic 操作的关键。NetApp 还可以通过在一个集群中创建多个故障域，将生产与非生产隔离开来。NetApp 通过使用 ONTAP 最低 QoS 保证工作负载的最低性能级别来减少性能问题。</block>
-  <block id="fe30d4f693426c00a97a0d7741b86107" category="paragraph">ONTAP 软件的横向扩展架构可以灵活地适应各种 I/O 工作负载。为了在提供模块化横向扩展架构的同时提供临床应用程序所需的吞吐量和低延迟，全闪存配置通常用于 ONTAP 架构。到 2020 年， Epic 将需要全闪存阵列，目前 Epic 需要全球 500 多万客户使用全闪存阵列。AFF 节点可以与混合（ HDD 和闪存）存储节点组合在同一个横向扩展集群中，适合存储高吞吐量的大型数据集。客户可以将 Epic 环境（从昂贵的 SSD 存储）克隆，复制和备份到其他节点上更经济的 HDD 存储，从而满足或超出基于 SAN 的克隆和生产磁盘池备份 Epic 准则。借助支持 NetApp 云的存储和 Data Fabric ，您可以备份到内部或云中的对象存储。</block>
-  <block id="60b9029657fcb7de360f30df535fff73" category="paragraph">ONTAP 提供了在 Epic 环境中极其有用的功能，可简化管理，提高可用性和自动化，并减少所需的总存储量：</block>
-  <block id="d819b4b8101f3ea1a80676aa29865309" category="list-text">* 卓越的性能。 * NetApp AFF 解决方案与 FAS 产品系列中的其他产品系列共享相同的统一存储架构， ONTAP 软件，管理接口，丰富的数据服务和高级功能集。全闪存介质与 ONTAP 的这种创新组合，可通过行业领先的 ONTAP 软件为全闪存存储提供稳定一致的低延迟和高 IOPS 。</block>
-  <block id="1d4b2bbbffd4c91a0530ed2dce306f90" category="list-text">* 存储效率。 * 利用重复数据删除， NetApp FlexClone ，实时压缩，实时数据缩减，精简复制， 精简配置和聚合重复数据删除。</block>
-  <block id="8f93cf96e2bc2091004568831b0fac00" category="paragraph">NetApp 重复数据删除可在 FlexVol 卷或数据成分卷中提供块级重复数据删除。从本质上说，重复数据删除会删除重复的块，从而仅在 FlexVol 卷或数据成分卷中存储唯一的块。</block>
-  <block id="e9f8347242ee1a5a2c19276bc863894d" category="paragraph">重复数据删除的粒度较高，并且在 FlexVol 卷或数据成分卷的活动文件系统上运行。它是应用程序透明的，因此可用于对使用 NetApp 系统的任何应用程序生成的数据进行重复数据删除。卷重复数据删除可以作为实时进程（从 Data ONTAP 8.3.2 开始）和 / 或后台进程运行，可以配置为通过命令行界面， NetApp System Manager 或 NetApp OnCommand Unified Manager 自动运行，计划运行或手动运行。</block>
   <block id="8ddb2bf3b62633b9268ac2f3c0af0b29" category="paragraph">下图显示了 NetApp 重复数据删除在最高级别的工作原理。</block>
-  <block id="1f9aa7577c690f8139def1f10bab0c6a" category="paragraph"><block ref="1f9aa7577c690f8139def1f10bab0c6a" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="b884ff3c2fe17ac15cec364e2127c954" category="list-text">* 节省空间的克隆。 * 借助 FlexClone 功能，您几乎可以即时创建克隆以支持备份和测试环境刷新。只有在进行更改后，这些克隆才会占用额外的存储空间。</block>
-  <block id="5fd59004edeeb97440d4b3d301220738" category="list-text">* 集成数据保护。 * 完整的数据保护和灾难恢复功能可帮助客户保护关键数据资产并提供灾难恢复。</block>
-  <block id="9978927cbc0df18c38f95e6bdc0deaf7" category="list-text">* 无中断运行。 * 可以执行升级和维护，而无需使数据脱机。</block>
-  <block id="28ff5ec66a48f6813900671c0bbff553" category="list-text">* Epic 工作流自动化。 * NetApp 设计了 OnCommand WFA 工作流，用于自动执行和简化 Epic 备份解决方案以及更新高级， REL 和 REL VAL 等测试环境。这种方法无需使用任何自定义不受支持的脚本，从而减少了 NetApp 和 Epic 最佳实践所需的部署时间，操作时间和磁盘容量。</block>
-  <block id="40b9cc218d358cc132988c9ba8b7606c" category="list-text">通过 * QoS 。 * 存储 QoS ，您可以限制潜在的抢占资源的工作负载。更重要的是， QoS 可以保证 Epic 生产等关键工作负载的最低性能。NetApp QoS 可以通过限制争用来减少与性能相关的问题。</block>
-  <block id="8e60c88a06a6e6b1c74bf0b7972f628c" category="list-text">* OnCommand Insight Epic 信息板。 * Epic Pulse 工具可以识别应用程序问题描述及其对最终用户的影响。OnCommand Insight Epic 信息板有助于确定问题描述的根发生原因，并全面了解整个基础架构堆栈。</block>
-  <block id="869b8904724fe1bfb88f2e820abd9209" category="list-text">* Data Fabric 。 * NetApp Data Fabric 可简化并集成云端和内部环境中的数据管理，加快数字化转型的步伐。它提供一致且集成的数据管理服务和应用程序，以提高数据可见性和洞察力，实现数据访问和控制以及数据保护和安全性。NetApp 与 AWS ， Azure ， Google 公有 Cloud 和 IBM Cloud Cloud Cloud 相集成，为客户提供了广泛的选择。</block>
-  <block id="88e634ad320d502c0645ac4290e04b29" category="paragraph">下图显示了适用于 Epic 工作负载的 FlexPod 。</block>
-  <block id="b2973a57a413e667139c6b40823375fb" category="paragraph"><block ref="b2973a57a413e667139c6b40823375fb" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="ac8b2ec48bf6ceb3bd3d310028c3f2c4" category="section-title">Epic 概述</block>
   <block id="3b878279a04dc47d60932cb294d96259" category="section-title">概述</block>
-  <block id="d6d213124f9f1b5cb0bc5ed74dcbde0e" category="paragraph">Epic 是一家软件公司，总部位于威斯康星州维罗纳。以下摘录自该公司网站，介绍了 Epic 软件支持的功能范围：</block>
-  <block id="181a32cdf9126904cdb2b30536a99585" category="paragraph">Epic 为大中型医疗团体，医院和综合医疗保健组织提供软件，与社区医院，学术机构，儿童组织，安全网络提供商和多医院系统等客户合作。我们的集成软件涵盖临床，访问和收入功能，并扩展到家庭。"</block>
-  <block id="b9a6be60f524d866b888203831ca366e" category="paragraph">涵盖 Epic 软件所支持的广泛功能超出了本文档的讨论范围。但是，从存储系统的角度来看，对于每个部署，所有 Epic 软件都共享一个以患者为中心的数据库。EPIC 使用 InterSystems Cach é 数据库，该数据库可用于各种操作系统，包括 IBM AIX 和 Linux 。</block>
-  <block id="ba4cfbcbef993fbdff1e76ddc9df7954" category="paragraph">本文档的主要重点是，使 FlexPod 堆栈（服务器和存储）能够满足 Epic 软件环境中使用的 InterSystems Cache 数据库的性能驱动型要求。通常，为生产数据库提供专用存储资源，而影子数据库实例则与其他 Epic 软件相关组件（例如，清晰度报告工具）共享二级存储资源。其他软件环境存储（例如用于应用程序和系统文件的存储）也由二级存储资源提供。</block>
-  <block id="5ead9d34cdee1665bf8705cd9f95bd34" category="section-title">专为特定 Epic 工作负载而设计</block>
-  <block id="189691b0fa500e83be6980e263496e2e" category="paragraph">尽管 Epic 不转售服务器，网络或存储硬件，虚拟机管理程序或操作系统， 该公司对基础架构堆栈的每个组件都有特定的要求。因此， Cisco 和 NetApp 携手测试并支持 FlexPod 数据中心的成功配置，部署和支持，以满足客户的 Epic 生产环境要求。通过这一测试，技术文档以及越来越多的成功客户， Epic 对 FlexPod 数据中心满足 Epic 客户需求的能力表现出了越来越高的舒适性。请参见《 Epic 存储产品和技术状态》文档和《 Epic 硬件配置指南》。"</block>
-  <block id="3aab99964928cf7f5ed9c1e54ed3ed47" category="paragraph">端到端 Epic 参考架构不是整体式的，而是模块化的。下图概述了五个不同的模块，每个模块都具有独特的工作负载特征。</block>
-  <block id="e30bef9903befbfb56c1ef943cb5a1bc" category="paragraph"><block ref="e30bef9903befbfb56c1ef943cb5a1bc" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="716aaa64e393aad9ac614dfb28bf3254" category="paragraph">这些互连但截然不同的模块往往导致 Epic 客户不得不购买和管理存储和服务器的专用孤岛。这些平台可能包括一个供应商的传统第 1 层 SAN 平台；一个不同的 NAS 文件服务平台；特定于 FC ， FCoE ， iSCSI ， NFS 和 SMB/CIFS 协议要求的平台； 单独的闪存存储平台；以及尝试将这些孤岛作为虚拟存储池进行管理的设备和工具。</block>
-  <block id="78866daecbc5879136f4eda046e955fe" category="paragraph">借助通过 ONTAP 连接的 FlexPod ，您可以实施针对每个目标工作负载优化的专用节点，从而实现规模经济，并简化一致计算，网络和存储数据中心的运营管理。</block>
-  <block id="7c5498fdf469564f0f1b3d32d9def057" category="section-title">Cache 生产数据库</block>
-  <block id="0681c20fe39339c9fab458f86f9938ce" category="paragraph">Cache 由 InterSystems 制造，是构建 Epic 的数据库系统。Epic 中的所有患者数据都存储在 Cach é 数据库中。</block>
-  <block id="8c6b45a838122b60aa2806a5c2cc37cc" category="paragraph">在 InterSystems Cache 数据库中，数据服务器是持久存储数据的访问点。应用程序服务器为数据库提供服务，并向数据服务器发出数据请求。对于大多数 Epic 软件环境，在一个数据库服务器中使用对称多处理器架构足以满足 Epic 应用程序的数据库请求。在大型部署中，使用 InterSystems 的 Enterprise Cach é 协议可以支持分布式数据库模型。</block>
-  <block id="56ef02445940926b99bdd9319d368322" category="paragraph">通过使用支持故障转移的集群硬件，备用数据服务器可以访问与主数据服务器相同的磁盘（即存储），并在发生硬件故障时接管处理职责。</block>
-  <block id="40dfd73de0256664675abd959ffa618f" category="paragraph">系统间还提供了一些技术来满足影子，灾难恢复和高可用性（ HA ）要求。系统间的影子技术可用于将 Cach é 数据库从主数据服务器异步复制到一个或多个二级数据服务器。</block>
-  <block id="fa54535a9a58caee3acde3f426c724d4" category="section-title">清晰明了</block>
-  <block id="f556ae3298a4ca16524b0ef157d07743" category="paragraph">Cogito clarity 是 Epic 的集成分析和报告套件。Cogito clarity 作为 Cach é 生产数据库的副本，可提供有助于改善患者护理，分析临床表现，管理收入和衡量合规性的信息。在 OLAP 环境中， Cogito clarity 会利用 Microsoft SQL Server 或 Oracle RDBMS 。由于此环境与 Cach é 生产数据库环境不同，因此，请务必按照 Cisco 和 NetApp 发布的适用于 SQL Server 和 Oracle 环境的经验证的设计指南，构建一个 FlexPod 平台，以满足 Cogitto clarity 要求。</block>
-  <block id="ee37749cf8cecc94b1aabb67acaad6f3" category="section-title">EPIC 超空间桌面服务</block>
-  <block id="15e9403300fe58cb587c43b16ab81a5f" category="paragraph">超空间是 Epic 套件的表示组件。它从 Cach e 数据库读取和写入数据，并将其提供给用户。大多数医院和诊所员工都使用超空间应用程序与 Epic 进行交互。</block>
-  <block id="cfd761e26074ddf9adf0288ecf170177" category="paragraph">尽管 Hyperspace 可以直接安装在客户端工作站上，但许多医疗保健组织都通过 Citrix XenApp 场或虚拟桌面基础架构 (VDI) 使用应用程序虚拟化向用户提供应用程序。支持使用 ESXi 虚拟化 XenApp 服务器场。有关配置和实施准则，请参见 " 参考 " 一节中的适用于 ESXi 的 FlexPod 的经验证设计。</block>
-  <block id="6001cfe916681e30c54eed9f9aaaa403" category="paragraph">对于有意部署完整 VDI Citrix XenDesktop 或 VMware Horizon View 系统的客户，必须格外注意以获得最佳临床工作流体验。获得精确配置的基本步骤是，清楚地了解并记录项目范围，包括详细映射用户配置文件。许多用户配置文件都可以访问 Epic 以外的应用程序。配置文件中的变量包括：</block>
-  <block id="b47c241320997cdd2488d69f297da5e1" category="list-text">身份验证，尤其是适用于游访临床医生用户的 Imprivata 或类似的点击即用单点登录（ Tap- and-Go Single Sign-On ， SSO ）</block>
-  <block id="6648dc22fb0c910f205ea56ea1611f8d" category="list-text">PACS 图像查看器</block>
-  <block id="12dabe73360bf8bfd1432eacb99f0c60" category="list-text">口授软件和设备，例如，《龙的自然传人》</block>
-  <block id="528e73e793b8231555d88af87ae29a6f" category="list-text">文档管理，例如 Hyland OnBase 或 Perceptive Software 集成</block>
-  <block id="eff384e7dfc858eb95ecbcf7eea4a1de" category="list-text">部门应用程序，例如来自 3M Health Care 或 OptumHealth 的运行状况信息管理编码</block>
-  <block id="abcc300423dae92c81490905507e3186" category="list-text">Epic 之前的传统 EMR 或收入周期应用程序，客户可能仍会使用这些应用程序</block>
-  <block id="1dfc11c7c89fac0c8f549e80d7314044" category="list-text">视频会议功能，可能需要在服务器中使用视频加速卡</block>
-  <block id="9250dc49c6509cf47654469cd70b292e" category="paragraph">您的认证 FlexPod 经销商将与您的 Cisco 和 NetApp Epic 解决方案架构师和专业服务提供商合作，根据您的特定 VDI 要求对解决方案进行范围界定和构建。</block>
-  <block id="21c6827b7fbb6b25ac7961e3ee545cec" category="section-title">灾难恢复和卷影副本</block>
-  <block id="cd3c32908bb7de091120e4d4f4846dc3" category="paragraph">* 正在发展为双主动数据中心 *</block>
-  <block id="2b0e087fa8e9cfe5fbf23b145caea4e2" category="paragraph">在 Epic 软件环境中，会部署一个以患者为中心的数据库。Epic 的硬件要求是指托管主 Cach é 数据服务器的物理服务器作为生产数据库服务器。此服务器需要为属于主数据库实例的文件提供专用的高性能存储。对于 HA ， Epic 支持使用可访问相同文件的故障转移数据库服务器。</block>
-  <block id="c201d49abbe14d9ea120aaa6392972d9" category="paragraph">通常会部署报告影子数据库服务器，以便对生产数据进行只读访问。它托管一个配置为生产 Cach é 数据服务器备份影子的 Cach é 数据服务器。此数据库服务器与生产数据库服务器具有相同的存储容量要求。从性能角度来看，此存储的大小不同，因为报告的工作负载特征不同。</block>
-  <block id="89235c5030a0b39f6122a6ceec9fe1d6" category="paragraph">此外，还可以部署影子数据库服务器来支持 Epic 的只读（ Read-Only ， SRO ）功能，在该功能中，系统会以只读模式访问生产副本。出于业务连续性原因，可以将此类数据库服务器切换到读写模式。</block>
-  <block id="e37c2560b27f5fecd9c7df9cf212bd34" category="paragraph">为了满足业务连续性和灾难恢复（ DR ）目标，灾难恢复影子数据库服务器通常部署在与生产和 / 或报告影子数据库服务器地理位置不同的站点上。灾难恢复影子数据库服务器还托管一个配置为生产 Cache 数据服务器的备份影子的 Cache 数据服务器。可以将其配置为在生产站点长时间不可用时充当卷影读写实例。与报告影子数据库服务器一样，其数据库文件的存储与生产数据库服务器具有相同的容量要求。相比之下，出于业务连续性的原因，此存储的规模从性能角度来看与生产规模相同。</block>
-  <block id="51d6715f99aa185584b091c8521d70b1" category="paragraph">对于需要 Epic 持续正常运行并拥有多个数据中心的医疗保健组织，可以使用 FlexPod 为 Epic 部署构建主动 - 主动设计。在主动 - 主动情况下， FlexPod 硬件安装在第二个数据中心中，用于为 Epic 提供持续可用性和快速故障转移或灾难恢复解决方案。为客户提供的《 Epic 硬件配置指南》应与 Cisco 和 NetApp 共享，以便于设计符合 Epic 准则的主动 - 主动架构。</block>
-  <block id="fbe3afc17014945c02c3ae95aa19ab45" category="section-title">许可 Cach</block>
-  <block id="1219611db266c91d3f9a6b45e72d1e92" category="paragraph">NetApp 和 Cisco 在按照 Epic 的平台迁移最佳实践将原有 Epic 安装迁移到 FlexPod 系统方面经验丰富。如果需要进行平台迁移，他们可以处理任何详细信息。</block>
-  <block id="3ba72244f03917c4313edb766d3dfb8a" category="paragraph">对于迁移到 Epic 的新客户或评估硬件和软件更新的现有客户，需要考虑的一个因素是 Cach e 数据库的许可。系统间 Cache 可以随平台专用许可证（仅限单个硬件操作系统架构）或与平台无关的许可证一起购买。独立于平台的许可证允许将 Cach é 数据库从一个架构迁移到另一个架构，但成本高于平台专用许可证。</block>
-  <block id="a33d8a9d235134a6335afb455e71ea9b" category="admonition">拥有平台专用许可的客户可能需要为交换机平台的额外许可成本进行预算。</block>
-  <block id="beb611d717a7561129649533fe64dc30" category="section-title">EPIC 存储注意事项</block>
-  <block id="b64b49888a07fd0af469decd85c72954" category="paragraph">* RAID 性能和保护 *</block>
-  <block id="0d417bf6ff172c1a47e0fd3bc8149bb9" category="paragraph">Epic 认可 NetApp RAID DP ， RAID-TEC 和 WAFL 技术在实现符合 Epic 定义要求的数据保护和性能级别方面的价值。此外，借助 NetApp 效率技术， NetApp 存储系统可以提供 Epic 环境所需的整体读取性能，而使用的磁盘驱动器更少。</block>
-  <block id="7d847633a02e48082018c6bbdb62b93c" category="paragraph">Epic 要求使用 NetApp 规模估算方法正确调整 NetApp 存储系统的大小，以便在 Epic 环境中使用。有关详细信息，请参见 TR-3930i ：《 NetApp Epic 规模估算准则》。要查看本文档，需要访问 NetApp Field Portal 。</block>
-  <block id="074da3d80baffd3534ef152e8f577300" category="paragraph">* 生产磁盘组的隔离 *</block>
-  <block id="f36c392bd6e5c9717c450108fa8c2c9c" category="paragraph">有关全闪存阵列上存储布局的详细信息，请参见 Epic 全闪存参考架构战略手册。总之，磁盘池 1 （生产）必须存储在与磁盘池 2 不同的存储故障域中。同一集群中的 ONTAP 节点是一个故障域。</block>
-  <block id="dd1f7508a9af8398ab43ca7cd9a89b0a" category="paragraph">Epic 建议对所有完整大小的操作数据库使用闪存，而不仅仅是生产操作数据库。目前，这种方法只是一种建议；但是，到 2020 年，所有客户都需要采用这种方法。</block>
-  <block id="646fae7d1c8a60f4b81d4cf6d5697ad5" category="paragraph">对于生产 OLTP 数据库预计每秒超过 500 万个全局引用的大型站点，应将 Cogito 工作负载放置在第三个阵列上，以最大限度地降低对生产 OLTP 数据库性能的影响。本文档中使用的测试台配置为全闪存阵列。</block>
-  <block id="0ba685fe4b1388577f1c457133b2a4a0" category="paragraph">* 高可用性和冗余 *</block>
-  <block id="134830020c52d265ed5ef070c8d987d1" category="paragraph">Epic 建议使用 HA 存储系统来缓解硬件组件故障。此建议从冗余电源等基本硬件扩展到多路径网络等网络连接。</block>
-  <block id="6b42de8d6ff295787b74a8e20fd7ab30" category="paragraph">在存储节点级别， Epic 重点介绍了如何使用冗余来实现无中断升级和无中断存储扩展。</block>
-  <block id="499789cabf28c1c7125c2af787ce53e4" category="paragraph">出于上述性能隔离原因，池 1 存储必须位于与池 2 存储不同的磁盘上， NetApp 存储阵列默认提供即装即用。这种隔离还可以为磁盘级故障提供数据级冗余。</block>
-  <block id="60cd81eda1b1374d75e618c212fd2ae8" category="paragraph">* 存储监控 *</block>
-  <block id="4824d2e225ffbfdc59aaa90520eaff55" category="paragraph">Epic 建议使用有效的监控工具来识别或预测任何存储系统瓶颈。</block>
-  <block id="beb1270d8fdffff592809d54fb127fe4" category="paragraph">NetApp OnCommand Unified Manager 与 ONTAP 捆绑在一起，可用于监控容量，性能和性能余量。对于使用 OnCommand Insight 的客户，我们为 Epic 开发了一个 Insight 信息板，可以全面了解存储，网络和计算，而不仅仅是 Epic Pulse 监控工具提供的功能。虽然 Pulse 可以检测到问题描述，但 Insight 可以在问题描述产生影响之前尽早识别它。</block>
-  <block id="813d9e39126919acb264b77664a1fc4d" category="paragraph">* Snapshot 技术 *</block>
-  <block id="880bb7da7ba7320c99fe6c685ad45258" category="paragraph">Epic 认识到，与基于文件的传统备份相比，基于存储节点的 NetApp Snapshot 技术可以最大限度地降低对生产工作负载的性能影响。如果要将 Snapshot 备份用作生产数据库的恢复源，则在实施备份方法时必须牢记数据库一致性。</block>
-  <block id="36fe5c7cee31a3e492ec2ce3ac8b697a" category="paragraph">* 存储扩展 *</block>
-  <block id="dc7c88628cf2a5d2eeedb16e60bc2b6f" category="paragraph">避免在不考虑存储热点的情况下扩展存储时发出史诗般的警告。例如，如果频繁以小幅增量添加存储，则在数据不会在磁盘之间均匀分布的情况下，存储热点可能会出现。</block>
   <block id="33bfa28f826a0e5090569298da0ca5b0" category="section-title">全面的管理工具和自动化功能</block>
-  <block id="d1c9f4f24871bde2d6a91d1e5bc2fbbc" category="section-title">采用 Cisco UCS Manager 的 Cisco Unified Computing System</block>
-  <block id="19bb33a07f99aec785611e076ed48291" category="paragraph">Cisco 重点关注三个关键要素，以提供最佳数据中心基础架构：简化，安全性和可扩展性。Cisco UCS Manager 软件与平台模块化相结合，可提供一个简化，安全且可扩展的桌面虚拟化平台。</block>
-  <block id="53d7c5a468521e1b8b5a97a6632a9385" category="list-text">* 简化。 * Cisco UCS 提供了一种全新的行业标准计算方法，并为所有工作负载提供了数据中心基础架构的核心。Cisco UCS 的众多功能和优势包括减少所需服务器数量，减少每台服务器使用的缆线数量，以及通过 Cisco UCS 服务配置文件快速部署或重新配置服务器的能力。由于需要管理的服务器和缆线更少，并且服务器和应用程序工作负载配置更简化，因此操作得到了显著简化。使用 Cisco UCS Manager 服务配置文件，可以在几分钟内配置多个刀片式服务器和机架式服务器。Cisco UCS 服务配置文件消除了服务器集成运行手册并消除了配置偏差。这种方法可以加快最终用户的工作效率，提高业务灵活性，并允许将 IT 资源分配给其他任务。</block>
-  <block id="6752c28d88100674dbcf7647c82303da" category="paragraph">Cisco UCS Manager （ UCSM ）可自动执行许多常见且容易出错的数据中心操作，例如配置和配置服务器，网络和存储访问基础架构。此外， Cisco UCS B 系列刀片式服务器和 C 系列机架式服务器占用大量内存，可以提高应用程序用户密度，从而有助于降低服务器基础架构要求。</block>
-  <block id="0bb4e6c3b49c1f2b4a09f7e92c080877" category="paragraph">通过简化，可以更快，更成功地部署 Epic 基础架构。Cisco 及其技术合作伙伴（如 VMware 和 Citrix ）以及存储合作伙伴 IBM ， NetApp 和 Pure Storage 开发了经过验证的集成架构，包括预定义的融合架构基础架构软件包（如 FlexPod ）。Cisco 虚拟化解决方案已通过 VMware vSphere ， Linux ， Citrix XenDesktop 和 XenApp 的测试。</block>
-  <block id="f5ec6fd02101f543263e117c694bd74d" category="list-text">* 安全。 * 虽然虚拟机本身比物理前代产品更安全，但它们带来了新的安全挑战。使用虚拟桌面等通用基础架构的任务关键型 Web 和应用程序服务器现在面临的安全威胁风险更高。现在，虚拟机间流量已成为 IT 经理需要解决的一个重要安全问题，尤其是在 VM 使用 VMware vMotion 在服务器基础架构中移动的动态环境中。</block>
-  <block id="e1f6ce8583b4b1be0fbe1f088276c238" category="paragraph">因此，虚拟化极大地提高了虚拟机级别对策略和安全性的感知能力，尤其是考虑到虚拟机在扩展计算基础架构中的移动性具有动态性和流动性。新虚拟桌面的快速普及进一步增强了虚拟化感知型网络和安全基础架构的重要性。适用于桌面虚拟化的 Cisco 数据中心基础架构（ Cisco UCS ， Cisco MDS 和 Cisco Nexus 系列解决方案）可提供强大的数据中心，网络和桌面安全性，并提供从桌面到虚拟机管理程序的全面安全性。通过对虚拟桌面进行分段，虚拟机感知型策略和管理以及 LAN 和 WAN 基础架构中的网络安全性，安全性得到了增强。</block>
-  <block id="92ceeadd0f25bc4af33309d01c6c475e" category="list-text">* 可扩展。 * 虚拟化解决方案的增长是不可避免的，因此解决方案必须能够随着这种增长进行扩展和可预测的扩展。Cisco 虚拟化解决方案支持较高的虚拟机密度（每台服务器具有 VM ），而其他服务器则可通过近乎线性的性能进行扩展。Cisco 数据中心基础架构提供了一个灵活的平台来实现增长并提高业务灵活性。Cisco UCS Manager 服务配置文件允许按需配置主机，并使部署数十台主机与部署数百台主机一样简单。</block>
-  <block id="46a5ea381a8ea5b5506ccff12a575f06" category="paragraph">Cisco UCS 服务器可提供近乎线性的性能和可扩展性。Cisco UCS 实施了获得专利的 Cisco 扩展内存技术，可通过更少的插槽提供较大的内存占用空间（通过双插槽和四插槽服务器可扩展到高达 1 TB 的内存）。使用统一网络结构技术作为组件， Cisco UCS 服务器聚合带宽可扩展到每台服务器高达 80 Gbps ，北向 Cisco UCS 互联阵列可按线路速率输出 2Tbps ，有助于防止桌面虚拟化 I/O 和内存瓶颈。Cisco UCS 采用基于网络结构的高性能，低延迟统一网络架构，可支持大量虚拟桌面流量，包括高分辨率视频和通信流量。此外，作为 Cisco 虚拟化解决方案的一部分， Cisco 存储合作伙伴 NetApp 还可以在启动和登录风暴期间帮助保持数据可用性和最佳性能。</block>
-  <block id="2b09c337ee1733d639895b04c5196a99" category="paragraph">Cisco UCS ， Cisco MDS 和 Cisco Nexus 数据中心基础架构设计提供了一个出色的增长平台，可通过透明扩展服务器，网络和存储资源来支持桌面虚拟化，数据中心应用程序和云计算。</block>
-  <block id="5421e83bdef8abf4103a2c2e454b0850" category="paragraph">VMware vCenter Server 提供了一个集中式平台来管理 Epic 环境，因此医疗保健组织可以放心地自动化和交付虚拟基础架构：</block>
-  <block id="b7cedb3b3f8d017b8091600199ba81d5" category="list-text">* 部署简单。 * 使用虚拟设备快速轻松地部署 vCenter Server 。</block>
   <block id="a12d886950a0804b79b6aafa30630b76" category="list-text">* 主动式优化。 * 分配和优化资源以实现最高效率。</block>
-  <block id="0d47669b296fab05dc77e184cb7603f6" category="list-text">* 管理。 * 使用功能强大的插件和工具简化管理并扩展控制。</block>
   <block id="8bee8a4fc5b5bcf0c54218c00ea1ffae" category="section-title">适用于 VMware vSphere 的 Virtual Storage Console</block>
-  <block id="4f8e9fb182fb01a90de85bd9bea101b9" category="paragraph">NetApp 适用于 VMware vSphere 的 Virtual Storage Console （ VSC ）， VASA Provider 和 Storage Replication Adapter （ SRA ）是一个虚拟设备。此产品套件包含 VSC ， VASA Provider 和 SRA 的功能。此产品套件包括 SRA 和 VASA Provider ，作为 vCenter Server 的插件，可使用 NetApp 存储系统为 VMware 环境中的 VM 提供端到端生命周期管理。</block>
-  <block id="1b247b8d34912850b3abb5713e3505a6" category="paragraph">VSC ， VASA Provider 和 SRA 虚拟设备可与 VMware vSphere Web Client 平稳集成，并支持您使用 SSO 服务。在具有多个 vCenter Server 实例的环境中，要管理的每个 vCenter Server 实例都必须有自己注册的 VSC 实例。通过 VSC 信息板页面，您可以快速检查数据存储库和 VM 的整体状态。</block>
   <block id="5555b713522d1619f6f4f6538b1733d1" category="paragraph">通过部署 VSC ， VASA Provider 和 SRA 虚拟设备，您可以执行以下任务：</block>
-  <block id="e09e2a026437a9d520e032040adb1a88" category="list-text">* 使用 VSC 部署和管理存储以及配置 ESXi 主机。 * 您可以使用 VSC 为 VMware 环境中的存储控制器添加凭据，删除凭据，分配凭据以及设置权限。此外，您还可以管理连接到 NetApp 存储系统的 ESXi 服务器。您可以通过单击几下鼠标为所有主机设置主机超时， NAS 和多路径的建议最佳实践值。您还可以查看存储详细信息并收集诊断信息。</block>
-  <block id="49b0472122182b397e1f90d18047582e" category="list-text">* 使用 VASA Provider 创建存储功能配置文件并设置警报。 * 启用 VASA Provider 扩展后，适用于 ONTAP 的 VASA Provider 将立即注册到 VSC 中。您可以创建和使用存储功能配置文件和虚拟数据存储库。您还可以设置警报，以便在卷和聚合的阈值接近全满时向您发出警报。您可以监控虚拟机磁盘（ VMDK ）和在虚拟数据存储库上创建的 VM 的性能。</block>
-  <block id="c92bb7ace633a95c41f69b4f6972e118" category="list-text">* 使用 SRA 进行灾难恢复。 * 您可以使用 SRA 在环境中配置受保护站点和恢复站点，以便在发生故障时进行灾难恢复。</block>
   <block id="8d9ea1d14ceacbc9f14eae283c25248d" category="section-title">NetApp OnCommand Insight 和 ONTAP</block>
-  <block id="740bb41b7a1e6f43e69987e96965b855" category="paragraph">NetApp OnCommand Insight 将基础架构管理集成到 Epic 服务交付链中。这种方法可以使医疗保健组织更好地控制，自动化和分析存储，网络和计算基础架构。它可以优化当前基础架构，以获得最大收益，同时简化确定购买内容和购买时间的过程。它还可以降低与复杂技术迁移相关的风险。由于不需要代理，因此安装简单，无中断。系统会持续发现已安装的存储和 SAN 设备，并收集详细信息以全面了解整个存储环境。您可以快速识别使用不当，错位，未充分利用或孤立的资产，并回收这些资产以推动未来扩展：</block>
-  <block id="7bee8c319cbc5c175b53942140afd985" category="list-text">* 优化现有资源。 * 使用已建立的最佳实践确定使用不当，未充分利用或孤立的资产，以避免出现问题并满足服务级别要求。</block>
-  <block id="6caa2b3fb3ab6f741b4a287166a760a1" category="list-text">* 做出更明智的决策。 * 实时数据有助于更快地解决容量问题，以便准确规划未来的购买，避免超支和推迟资本支出。</block>
-  <block id="965e8f632079449042763aaeec951d60" category="list-text">* 加速 IT 计划。 * 更好地了解虚拟环境以管理风险，最大限度地减少停机时间并加快云部署速度。</block>
-  <block id="9fbe6944d6545020be3aa4362813616a" category="list-text">* OnCommand Insight 信息板。 * 此 Epic 信息板是由 NetApp 为 Epic 开发的，可全面查看整个基础架构堆栈，并超越了 Pulse 监控。OnCommand Insight 可以主动识别计算，网络和存储中的争用问题。</block>
-  <block id="b7483173771cad0916150aa3ed7f3c8d" category="section-title">NetApp OnCommand Workflow Automation</block>
-  <block id="6c3d6e7503d9351fa4c607ece2ef3ed8" category="paragraph">OnCommand WFA 是一款免费软件解决方案，可帮助您自动执行存储管理任务，例如配置，迁移，停用，数据保护配置， 和克隆存储。您可以使用 OnCommand WFA 构建工作流来完成流程指定的任务。</block>
-  <block id="20358f21053298c9371ed9a1e31140a4" category="paragraph">工作流是一项重复性的程序性任务，由多个步骤组成，其中包括以下类型的任务：</block>
-  <block id="03dd9057ac39ccc8f271eac4578a799b" category="list-text">为数据库或文件系统配置，迁移或停用存储</block>
-  <block id="99456eb3256df14bd77314762d92fb62" category="list-text">设置新的虚拟化环境，包括存储交换机和数据存储库</block>
-  <block id="0a552e96d71236176d7c44df529ee3eb" category="list-text">在端到端业务流程中为应用程序设置存储</block>
-  <block id="8a2365df00f165b1c1ce2bcad0c372ea" category="paragraph">可以构建工作流，以便根据 Epic 工作负载的建议最佳实践快速设置和配置 NetApp 存储。适用于 Epic 的 OnCommand WFA 工作流取代了 Epic 工作流自动备份和测试环境刷新所需的所有客户不支持的脚本。</block>
-  <block id="3146263136d2d4a328ac9e85acf2ca04" category="paragraph">SnapCenter 是一个统一的可扩展平台，可用于数据保护。SnapCenter 可提供集中控制和监管，使用户能够管理应用程序一致的数据库一致的 Snapshot 副本。SnapCenter 支持从主目标和二级目标（ SnapMirror 和 SnapVault ）备份，还原，克隆和备份虚拟机（ VM ）并对其进行验证。借助 SnapCenter ，数据库，存储和虚拟化管理员只需一个工具即可管理各种应用程序，数据库和 VM 的备份，还原和克隆操作。</block>
-  <block id="48550833c74903581ac72850032156aa" category="paragraph">通过使用资源组和策略管理（包括计划和保留设置）， SnapCenter 可以实现集中式应用程序资源管理并轻松执行数据保护作业。SnapCenter 通过使用信息板，多个报告选项，作业监控以及日志和事件查看器提供统一报告。</block>
-  <block id="bce74566682fe721e67bce25b7172292" category="paragraph">SnapCenter 可以备份 VMware ， RHEL ， SQL ， Oracle 和 CIFS 。结合 Epic WFA 备份工作流集成， NetApp 可为任何 Epic 环境提供备份解决方案。</block>
-  <block id="b240db17f82e985f3d0d364567a003be" category="doc">参考架构</block>
   <block id="650a665cd26629cb9bf5396560f70149" category="summary">创建 LUN 时会为 MEDITECH 主机建立 LUN 映射。</block>
   <block id="389e3e53ccb44e580ad6f383cc487612" category="doc">LUN 映射</block>
-  <block id="9c8a67a52a9329822ce75fb83143f687" category="summary">为了展示 NetApp 全闪存 FAS 平台的存储效率和性能， NetApp 开展了一项研究，对 AFF A300 和 AFF A700 系统上的 Epic EHR 性能进行了测量。</block>
-  <block id="a573d92b77d430af7e424879baf78e94" category="doc">内容提要</block>
-  <block id="202a7d546070fb5bec7b69ea820f2079" category="paragraph">为了展示 NetApp 全闪存 FAS 平台的存储效率和性能， NetApp 开展了一项研究，对 AFF A300 和 AFF A700 系统上的 Epic EHR 性能进行了测量。NetApp 测量了运行 ONTAP 9.5 的 AFF A300 和运行 ONTAP 9.4 的 AFF A700 存储控制器的数据吞吐量，峰值 IOPS 和平均延迟，每个控制器都运行 Epic EHR 工作负载。与 SPC-3 测试类似，所有实时存储效率功能均已启用。</block>
-  <block id="80c69342f719b9038e22c5e9c61d0aef" category="paragraph">我们在总共包含 24 个 3.8 TB SSD 的 AFF A300 集群和总共包含 48 个 3.8 TB SSD 的 AFF A700 集群上运行 Epic Genio 工作负载生成器。我们在一系列负载点测试了集群，这些负载点会将存储驱动到 CPU 利用率峰值。在每个负载点，我们会收集有关存储 IOPS 和延迟的信息。</block>
-  <block id="54f21be599f10fee37d9245b1697cc2e" category="paragraph">NetApp 在每次软件升级时都将性能提高了 40-50% 。随着工作负载和协议的不同，性能增强的创新也会有所不同。</block>
-  <block id="82ff7acde89b40c487a0147dba789d83" category="paragraph">Epic 性能测试表明， AFF A300 集群 IOPS 从小于 1 毫秒时的 75 ， 000 次 IOPS 增加到小于 1 毫秒时的峰值性能 188 ， 929 次 IOPS 。对于 IOPS 等于或低于 200 ， 000 次的所有负载点，我们可以保持稳定的存储延迟不超过 1 毫秒。此外， Epic 性能测试还表明， AFF A700 集群 IOPS 从小于 1 毫秒的 75 ， 000 次 IOPS 增加到小于 1 毫秒的峰值性能为 319 ， 000 次 IOPS 。对于 IOPS 低于 320 ， 000 次的所有负载点，我们可以保持稳定的存储延迟不超过 1 毫秒。</block>
-  <block id="69712b6fbbf0a39f4fda956baee2bf8f" category="summary">到 2020 年，所有 Epic 客户都必须使用闪存存储。NetApp ONTAP 是首款获得 Epic 高舒适性评级的全闪存阵列，并列在企业存储阵列下。所有运行 GA 版 ONTAP 的 NetApp 平台都非常舒适。</block>
-  <block id="dd96446f0a898f25c48349ae8a0375e4" category="paragraph">EPIC 要求在称为池的存储分配上以物理方式分隔生产，报告和清晰度等关键工作负载。NetApp 在一个集群中为每个节点提供多个存储池，并为整个 Epic 解决方案提供简化的单个集群和单个操作系统。ONTAP 支持 NAS 和 SAN 的所有协议，并为 SSD ， HDD 和云提供混合存储层。</block>
-  <block id="3f2686bd88b14ab02bd064c144c00847" category="paragraph">ONTAP 9.3 引入了自适应 QoS ， ONTAP 9.4 进行了大量增强，因此无需物理隔离即可使用软件创建存储池。此功能可显著简化架构开发，允许整合节点和磁盘，并可通过在节点间分布来提高生产等关键工作负载的性能。此外，它还可以消除因抢占资源而导致的存储性能问题，并确保在工作负载的整个生命周期内保持性能稳定。</block>
   <block id="0afbeb6bb86d48b82dcde168a1951bb5" category="summary">以下人员为本指南的创建做出了贡献。</block>
-  <block id="5653fcb2d71901e62d5410b93af27aaa" category="paragraph">以下人员为本指南的创建做出了贡献：</block>
   <block id="4b7c82b30e98ad9f06ef3dc1e15418ea" category="list-text">NetApp 技术营销工程师布兰登 · 阿吉</block>
-  <block id="c76a95bce3acdcd391af7612d881c878" category="list-text">NetApp 医疗保健公司解决方案架构师 Brian O ’ Marhony</block>
   <block id="76b9b3bb37a85d7545736e7b002893e4" category="list-text">Cisco Systems ， Inc 技术解决方案架构师 Jon Ebmeier</block>
   <block id="37b608112185e7e41b5def8663df7fe4" category="list-text">Cisco Systems ， Inc 产品经理 Mike Brennan</block>
   <block id="7d6806c3b84802991762a6bdef7b61c9" category="summary">通过在 FlexPod 架构基础上运行 MEDITECH 环境，您的医疗保健组织有望提高员工工作效率，并减少资本和运营支出。</block>
@@ -3528,55 +2768,18 @@
   <block id="fd63a5bc856e3af4599c0b25aef080d9" category="list-text">* 优化现有资源。 * 利用已建立的最佳实践来识别滥用，未充分利用或孤立的资产，以避免出现问题并满足服务级别要求。</block>
   <block id="c8e69d82d5cd2122117174c8565d2350" category="list-text">* 做出更明智的决策。 * 实时数据有助于更快地解决容量问题，从而准确规划未来的购买，避免超支并推迟资本支出。</block>
   <block id="1fa18e3cb4dc1215944e4785398261ea" category="list-text">* 加速 IT 计划。 * 更好地了解您的虚拟环境，帮助您管理风险，最大限度地减少停机时间并加快云部署速度。</block>
-  <block id="793ef4029cd136a285cbbb6d77b06ec2" category="summary">Cisco MDS 9100 系列 FC 交换机可在 NetApp AFF A700 控制器和 Cisco UCS 计算网络结构之间提供 16 Gb 冗余 FC 连接。</block>
-  <block id="e8b558edd748d830251d39a2eef0ee6c" category="doc">Cisco MDS 9148S 配置</block>
-  <block id="64cc8a75dc7fd0ee038ee777e9b2c577" category="inline-link-macro">" 布线图 " 。</block>
-  <block id="5d678f8047210722cfd77e201923a557" category="paragraph">Cisco MDS 9100 系列 FC 交换机可在 NetApp AFF A700 控制器和 Cisco UCS 计算网络结构之间提供 16 Gb 冗余 FC 连接。应按照一节中所述连接这些缆线 <block ref="b94eb338bd34852457376dcfaeb5cdd2" category="inline-link-macro-rx"></block></block>
-  <block id="d7b73255a41fb7f79e9d809d58e00ed7" category="list-text">从每个 MDS 交换机上的交换机控制台运行以下命令，为解决方案启用所需功能：</block>
   <block id="490495544d3b2d2d1eda150303b4dc57" category="inline-link">采用 FC Cisco 验证设计的 FlexPod 数据中心</block>
-  <block id="9175a0be73c9067310a164d8052be5ce" category="list-text">根据中的 FlexPod Cisco MDS 交换机配置部分配置各个端口，端口通道和说明<block ref="8c408f7508059ba7cdfe1e4eb9ba9051" category="inline-link-rx"></block>。</block>
-  <block id="28491a781fcedeea763f5fed2bfb0326" category="list-text">要为 Epic 解决方案创建必要的 VSAN ，请在全局配置模式下完成以下步骤：</block>
-  <block id="b39b6557cad826d9db43d253bfd25d88" category="list-text">对于网络结构 A MDS 交换机：</block>
-  <block id="f5f807a14d69ce9f2943b922cccec661" category="paragraph">命令最后两行中的端口通道编号是在使用参考文档配置各个端口，端口通道和说明时创建的。</block>
-  <block id="a8022d5297c9e64fd8113db534421075" category="list-text">对于光纤 B MDS 交换机：</block>
-  <block id="b1189778c113d180f7ba76dab999773d" category="list-text">对于每个 FC 交换机，请使用参考文档中的详细信息创建设备别名，以便在当前操作中直观地识别每个设备。</block>
-  <block id="ea64b73d71366df31b2380b1bf0afd17" category="list-text">最后，使用上一步为每个 MDS 交换机创建的设备别名创建 FC 分区，如下所示：</block>
   <block id="dca669a924575921f1c2e9e3cf8bb4da" category="section-title">Cisco UCS 配置指南</block>
-  <block id="5dd940be282dc52b541c98b8360d9b5a" category="paragraph">借助 Cisco UCS ， Epic 客户可以利用其网络，存储和计算领域的主题专家来创建策略和模板，以便根据其特定需求定制环境。创建后，可以将这些策略和模板组合到服务配置文件中，以便为 Cisco 刀片式服务器和机架式服务器提供一致，可重复，可靠且快速的部署。</block>
-  <block id="0a2f7f87e5c8424e5e4fbe39f7ca8a8e" category="paragraph">Cisco UCS 提供了三种管理 Cisco UCS 系统（称为域）的方法：</block>
-  <block id="9389641a1c24f2930fb4411b40c45c6f" category="list-text">Cisco UCS Manager HTML 5 图形用户界面</block>
   <block id="d218986bb2247c38b40f20dd68e24c12" category="list-text">Cisco UCS 命令行界面</block>
   <block id="05287109d3dc7b5d0023d8c242acf862" category="list-text">适用于多域环境的 Cisco UCS Central</block>
   <block id="e6837a90c0b393f65be16b4d0ecb6782" category="paragraph">下图显示了 Cisco UCS Manager 中 SAN 节点的屏幕截图示例。</block>
-  <block id="fa9ee02a18b42911fbb16029cd6bc05d" category="paragraph"><block ref="fa9ee02a18b42911fbb16029cd6bc05d" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="25c3964d79e50cd7b54972d4d8453407" category="paragraph">在大型部署中，可以构建独立的 Cisco UCS 域，以便在主要 Epic 功能组件级别提供额外的容错能力。</block>
-  <block id="79f51702daf493ff9633c9a950e12f19" category="paragraph">在具有两个或更多数据中心的高度容错设计中， Cisco UCS Manager 在设置全局策略和全局服务配置文件以确保整个企业内主机之间的一致性方面发挥着关键作用。</block>
-  <block id="0b4c60e894555f81fc037a58080905e7" category="paragraph">要设置 Cisco UCS 计算平台，请完成以下过程。在 Cisco UCS 5108AC 刀片式服务器机箱中安装 Cisco UCS B200 M5 刀片式服务器后，请执行以下步骤。此外，必须按照一节中所述完成布线要求 <block ref="b94eb338bd34852457376dcfaeb5cdd2" category="inline-link-macro-rx"></block></block>
   <block id="e17b2865671fa00385a07a7538a2971e" category="list-text">将 Cisco UCS Manager 固件升级到 3.2 （ 2f ）或更高版本。</block>
-  <block id="90723a4cc25b6e768a8ef27069b57db3" category="list-text">配置域的报告，自动通报功能和 NTP 设置。</block>
-  <block id="f791182198f6fb703e7f8428f66db0c2" category="list-text">在每个互联阵列上配置服务器和上行链路端口。</block>
   <block id="8859045b1163a725636b1545ad945d05" category="list-text">编辑机箱发现策略。</block>
-  <block id="a5cd0bba9b0212316f9efe0ecd12f280" category="list-text">创建用于带外管理的地址池， UUID ， MAC 地址，服务器， WWNN ， 和 WWPN 。</block>
   <block id="c7f10dd0c78eba5485a096c3f502cb13" category="list-text">创建以太网和 FC 上行链路端口通道和 VSAN 。</block>
   <block id="0168a016a3ae1b275741733df46fea0b" category="list-text">为 SAN 连接，网络控制，服务器池资格认定，电源控制，服务器 BIOS 创建策略 和默认维护。</block>
   <block id="9fe508bee4aac2b77dbd817f3aa9afe5" category="list-text">创建 vNIC 和 vHBA 模板。</block>
   <block id="85c0d82db4b58086bb360c5ec755dd40" category="list-text">创建 vMedia 和 FC 启动策略。</block>
-  <block id="63cc05deb41c5c9e9d7e565dd8b82313" category="list-text">为每个 Epic 平台元素创建服务配置文件模板和服务配置文件。</block>
   <block id="06ce9b3053e89576060a04a60214d1ed" category="list-text">将服务配置文件与相应的刀片式服务器相关联。</block>
-  <block id="46e11de479244160952629cbc231bf87" category="paragraph">有关为 FlexPod 配置 Cisco UCS 服务配置文件中每个关键要素的详细步骤，请参见<block ref="8c408f7508059ba7cdfe1e4eb9ba9051" category="inline-link-rx"></block> 文档</block>
-  <block id="f22e2462184283f1e5255b3c25ad8479" category="paragraph">对于 Epic 部署， Cisco 根据要部署的 Epic 元素，建议使用一系列服务配置文件类型。通过使用服务器池和服务器池资格认定，客户可以确定服务配置文件并自动将其部署到特定主机角色。以下是服务配置文件的示例列表：</block>
-  <block id="98a98660200ac9fa0b640063a7d03268" category="list-text">对于 Epic Cricle Cach é 数据库主机：</block>
-  <block id="0ca13d90361140e6d0ea70c4ca3ca8f6" category="list-text">生产主机服务配置文件</block>
-  <block id="9d453b2f852010294ac6ccff10e4b8da" category="list-text">报告服务主机配置文件</block>
-  <block id="57bd69c4ea04f826bfc5c704f14c36b0" category="list-text">灾难恢复主机服务配置文件</block>
-  <block id="d11615a79a34df2dd500a68084d496c6" category="list-text">热备用主机服务配置文件</block>
-  <block id="04f87d6896f4d516b8db6ceecd8ff401" category="list-text">对于 Epic 超空间主机：</block>
-  <block id="4fad9abbba6aa57ed6c00f8164500df6" category="list-text">VDI 主机服务配置文件</block>
-  <block id="f0525d9ba0b330ec1162811e17da6293" category="list-text">Citrix XenApp 主机服务配置文件</block>
-  <block id="4603d0c7225ed561fbeb94ea6c21718c" category="list-text">对于 Epic Cogito 和 clarity 数据库主机：</block>
-  <block id="362892ab12531b2900f173fed3cd9e42" category="list-text">数据库主机服务配置文件（ clarity RDBMS 和业务对象）</block>
-  <block id="74b7d2003c27e0d17ea2ccd41cad8765" category="list-text">对于 Epic Services 主机：</block>
-  <block id="3bbb4324e12d3e1daaef20a8c8f9d3cc" category="list-text">应用程序主机配置文件（打印格式和中继，通信， Web BLOB 等）</block>
   <block id="3efd43d603f98d46d6707c05552b037a" category="summary">FlexPod 架构旨在在整个计算，网络和存储堆栈中的组件或链路发生故障时提供高可用性。多个用于客户端访问和存储访问的网络路径可实现负载平衡并优化资源利用率。</block>
   <block id="220e76f33c6565f8361231d3fbea063c" category="paragraph">下图显示了用于医疗成像系统解决方案部署的 16 Gb FC/40 Gb 以太网（ 40GbE ）拓扑结构。</block>
   <block id="0313b0221759818538e9506f841bd57a" category="paragraph"><block ref="0313b0221759818538e9506f841bd57a" category="inline-image-macro-rx" type="image"></block></block>
@@ -3740,215 +2943,12 @@
   <block id="168ae7330efb3bb5034df14e05285c38" category="cell">业务智能备份</block>
   <block id="0651aaa42fb9bbf2868735e100e06d6e" category="cell">互操作性服务器</block>
   <block id="0188209c75f4c41400984937d1e53419" category="cell">互操作性数据库服务器</block>
-  <block id="fa049eae3af0790a555b1c6e2bc15241" category="doc">小型，中型和大型架构的技术规格</block>
-  <block id="aa47672f5332b2f711e012431874e559" category="paragraph">FlexPod 设计可提供一个灵活的基础架构，其中包含许多不同的组件和软件版本。使用 ...<block ref="047a979ac548254afa5d2af995fe2a74" category="inline-link-rx"></block> 作为构建或组合有效 FlexPod 配置的指南。详细介绍的配置只是 FlexPod 的最低要求，它们只是一个示例。可以根据不同环境和使用情形的需要在所含产品系列中扩展这些功能。</block>
-  <block id="61bee74ae45b09e1b54331a983a386fb" category="paragraph">下表列出了 Epic 生产数据库工作负载的容量配置。列出的总容量可满足所有 Epic 组件的需求。</block>
-  <block id="f7c765fbd5dd5c7d9c0756f5448d596c" category="cell">一个 AFF A300 HA 对</block>
-  <block id="89bf4f5fd8b7269f2e3505ab5563b5f6" category="cell">24 个 3.8 TB</block>
-  <block id="6b2140fc1dcd2afed73c9186c2aee6fb" category="cell">48 个 3.8 TB</block>
-  <block id="3ddbbdcbee4f8ccde7aea7744506a9f2" category="cell">96 个 3.8 TB</block>
-  <block id="d0c3a98983430277bff907f98dbd96db" category="cell">Epic 数据库大小</block>
-  <block id="a5304f0225cc16fca490baf76c6bb3d3" category="cell">3 到 20 TB</block>
-  <block id="25c3e3ffdae4115068e764701bc97824" category="cell">20 TB-40 TB</block>
-  <block id="bd6b97bfe4274a368daf2b00e4aff2a1" category="cell">&gt;40 TB</block>
-  <block id="5e57e0e8038db6acbc9c344ac07250b3" category="cell">22,000</block>
-  <block id="33c3b779b1d887dce94efb73cd8b57b7" category="cell">50,000</block>
-  <block id="3de995d2a6f5f1bf999bc06dfb191880" category="cell">125,000</block>
-  <block id="fdf5856a9d6580cec08b1a3f795e9343" category="cell">92.16 TB</block>
-  <block id="69c78229800a5af89a034407bc995989" category="cell">184.32 TB</block>
-  <block id="721772d86e1bd32161b0e7adcdb191e9" category="cell">368.64 TB</block>
-  <block id="5a192217c211d31e589e6db99bb79817" category="cell">55.02 TiB</block>
-  <block id="761bda44205803a23bece4d56094a432" category="cell">134.36 TiB</block>
-  <block id="6d06b771c6f325bff7ab4be38e221938" category="cell">269.51 TiB</block>
-  <block id="9bad93a2f79c626de997adbe212ca67d" category="cell">130.04 TiB</block>
-  <block id="e2a162936fa4df93ca4a4b816ac80892" category="cell">268.71 TiB</block>
-  <block id="ebfb94112573e011313167541e1fa477" category="cell">539.03 TiB</block>
-  <block id="ff2df3d4f0e3d38816ccec887f5661a8" category="paragraph">单个 AFF A300 HA 对可以轻松满足 Epic 生产工作负载的需求。AFF A300 HA 对可以向上推 200 ， 000 IOPS ，从而满足大型 Epic 部署的需求，并为更多共享工作负载提供空间。</block>
-  <block id="40672a5a155e61657d62065a148576d3" category="paragraph">某些客户环境可能会同时运行多个 Epic 生产工作负载，或者它们可能只是具有更高的 IOP 要求。在这种情况下，请与 NetApp 客户团队合作，根据所需的 IOPS 和容量估算存储系统的规模，并找到合适的平台来为工作负载提供服务。有些客户在一个 AFF A700 HA 对上运行多个 Epic 环境。</block>
-  <block id="17b68068f1cefd748eb5c2f45b681db4" category="paragraph">下表列出了小型，中型和大型配置所需的标准软件。</block>
-  <block id="13816363e2eaa66d7be294be0dbaef8c" category="cell">数据 ONTAP</block>
-  <block id="58637bbaad7c04e0642e48d41397709e" category="cell">Cisco UCS-FI</block>
-  <block id="43844b06c2d7e436941f5b70a7238324" category="cell">Cisco UCS Manager 3.2 （ 2f ）</block>
-  <block id="d205e102d957276451a2724f3c77c24c" category="cell">3.2 （ 2f ）或更高版本</block>
-  <block id="2aa2f2e60af88894dfa2bbc7959164c5" category="paragraph">下表列出了小型配置基础架构组件。</block>
-  <block id="aada29daee1d64ed0fe907043855cb7e" category="cell">两个</block>
-  <block id="b9c87098c12954b3a7641410d986c852" category="cell">根据支持用户所需的刀片式服务器数量</block>
-  <block id="8d0270a666914cce444a65e1abaef5e6" category="cell">每个模块具有 2 个 18 核， 2.7 GHz 和 384 GB BIOS 3.2 （ 2f ）</block>
-  <block id="3492b43fd4dccad4b1487d71329f0bbf" category="cell">VMware ESXi fNIC FC 驱动程序： 1.6.0.34 VMware ESXi eNIC 以太网驱动程序： 1.0.6.0 （请参见表）</block>
-  <block id="a0d64926d0a8afbbcf7b137ffa0e26e7" category="cell">使用 Cisco UCS Manager 3.2 的 6332-16UP （ 2f ）</block>
-  <block id="4f32d9278a293f4715635f2ecdeeaecc" category="cell">2 个 Cisco Nexus 93180YC-FX</block>
-  <block id="1b1d211580238a7299efd0b703feaee6" category="cell">用于 BLOB 存储的 IP 网络 N9k</block>
-  <block id="220f5842a211b1e36fe8f6d56ccf8bf8" category="cell">1 个 HA 对</block>
-  <block id="54053aa02639cf4bf61d56b2224bd956" category="cell">1 个 DS224C 磁盘架（满载 24 个驱动器）</block>
-  <block id="ad0c718c969d8af0a09ee727138089a0" category="cell">一个完全填充的磁盘架</block>
-  <block id="c7c05a8d482a98c4e95caf1d63e6f6ba" category="paragraph">对于大多数小型 Epic 客户部署，一个 3.8 TB SSD 驱动器的磁盘架就足以满足要求。但是，对于共享工作负载，可能需要更多磁盘容量。您必须根据自己的容量进行相应的规模估算。</block>
-  <block id="c41d42406196cf807c73fba09eb3975e" category="paragraph">下表列出了中型配置基础架构组件。</block>
-  <block id="981b8fcee42e1e726a67a2b9a98ea6e9" category="cell">四个</block>
-  <block id="c14ae6472df41f4acb49cef6fd563a2d" category="cell">每个模块具有 2 个 18 核， 2.7 GHz/3.0 GHz 和 384 GB 4 插槽，用于缓存数据库 BIOS 3.2 （ 2f ）</block>
-  <block id="e1b85fc064f10f5eb5f25dce70dc69a2" category="cell">使用 Cisco UCS Manager 3.2 （ 2f ）的 6332-16UP</block>
-  <block id="d50714a1cc958032c55bd4d4aab858e6" category="cell">IP 网络：用于 BLOB 存储的 Cisco N9k</block>
-  <block id="69b129f0d0230eea572ce9d12ffa7ce4" category="cell">FI 和 Cisco UCS 机箱</block>
-  <block id="5a61ecc2e20ccb9ca8c41017f9d9cb6f" category="cell">2 个 HA 对</block>
-  <block id="968c5306910e54c0af7b755ec2b2a2dd" category="cell">2 个双节点集群，适用于所有 Epic 工作负载（生产，报告，清晰度， VMware ， Citrix ， CIFS 等）</block>
-  <block id="eab8a8e9ee4e0daf662016ee1b2cb444" category="cell">2 个 DS224C 磁盘架</block>
-  <block id="471c0da75da1a8d73852a62c77b19515" category="cell">2 个完全填充的磁盘架</block>
-  <block id="d6d974ddfff90969a58b79bc192c4824" category="paragraph">对于几乎所有中型 Epic 客户部署，四个磁盘架（含 3.8 TB SSD 驱动器）都足以满足要求。但是，请根据所需容量相应地评估您的磁盘容量要求和大小。</block>
-  <block id="bb6d0a00ddc5c0410e11edfd282e006c" category="paragraph">下表列出了大型配置基础架构组件。</block>
-  <block id="95f49ae402da75dedd4f57c274da6407" category="cell">每个模块具有 2 个 24 核， 2.7 GHz 和 576 GB BIOS 3.2 （ 2f ）</block>
-  <block id="e3a16ffc5ecdf8b033933b47520703d8" category="cell">FC ： Cisco MDS 9706</block>
-  <block id="5a5e91cddb2e8ecf07cf3186345ea2bd" category="cell">两台 Cisco 9706 交换机</block>
-  <block id="dcbc19e6a32fcf68e9f3d4f68a284384" category="cell">3 个 HA 对</block>
-  <block id="fa52a9a9ffb98cb64b7a5735aa941c0f" category="cell">3 个双节点集群，用于 Epic 工作负载（生产，报告，澄清， VMware ， Citrix ， CIFS 等）</block>
-  <block id="e93e30bba375ede1fa713c3cdb475616" category="cell">4 个 DS224C 磁盘架</block>
-  <block id="1ade7c73d6f80ad624a2a21b429cc508" category="cell">4 个完全填充的磁盘架</block>
-  <block id="55491e751309a2a84bf2c75714c26767" category="paragraph">某些客户环境可能会同时运行多个 Epic 生产工作负载，或者它们的 IOPS 要求可能更高。在这种情况下，请与 NetApp 客户团队合作，根据所需的 IOPS 和容量估算存储系统的规模，并确定适合处理工作负载的平台。有些客户在一个 AFF A700 HA 对上运行多个 Epic 环境。</block>
-  <block id="b95a6f491bfe74d5e4139d578c808830" category="summary">Epic 使用 GenerationIO 工具（ Genio ）来验证存储是否已做好生产准备。此测试侧重于性能，方法是将存储推向极限，并通过提升存储控制器的性能余量，直到需求失败为止。</block>
-  <block id="1b807fa125a5d0c2b2525f07e4d27e1f" category="doc">测试方法</block>
   <block id="b3e6ac4f3c523ea5a90f4f79ca3e585d" category="section-title">测试计划</block>
-  <block id="82b440d35eaa96bac8069fcd6dc86104" category="paragraph">此处执行的测试侧重于确定性能余量以及使用自适应服务质量（ AQoS ）保护关键 Epic 工作负载。在 AFF A300 测试中，使用两个服务器并加载了 Genio ，以驱动存储控制器上的 I/O 。三台服务器上均加载了 Genio ，用于驱动 AFF A700 存储控制器上的 I/O 。由于服务器性能限制，需要使用三台服务器，而 AFF A700 需要三台服务器。</block>
   <block id="c8a1fb794dede8cb2e7c2893248b1d43" category="section-title">测试环境</block>
   <block id="4aedd7feb44df1595d3db438ed0cb551" category="section-title">硬件和软件：</block>
-  <block id="e77d3379bd092491f960018b039f19fe" category="paragraph">在此项研究中，我们在 Cisco UCS B200-M5 上运行的 VMware ESXi 6.5 上配置了三个 Red Hat Linux 虚拟机（ VM ）。我们使用 Cisco MDS 系列交换机将 ESXi 主机连接到 AFF 存储控制器节点，方法是在服务器端使用 16 Gb FC ，在存储端使用 16 Gb FC 。AFF A700 节点已按照 NetApp 布线最佳实践连接到一个具有 3.8 TB SSD 的 DS2446 磁盘架。</block>
-  <block id="abdf6ef1895ffc7b462df5467fcb02dd" category="paragraph">下表列出了我们在 Epic 性能测试配置中使用的硬件和软件组件。</block>
-  <block id="9366c7b2b5ef1897672c32070ed93820" category="paragraph">下表列出了 Epic Test 硬件和软件组件。</block>
-  <block id="34d0b9b49aa480630e91a3619ba7ffb2" category="cell">硬件和软件组件</block>
-  <block id="fd4aa9127e2fcd210d399382085d6028" category="cell">VM 的操作系统</block>
-  <block id="efc3a1c529bd08775ec30e286ebe6beb" category="cell">RHEL 7.4 虚拟机</block>
-  <block id="4da2cec3a9e4cb28ee984d60c41bcce7" category="cell">刀片式服务器上的操作系统</block>
-  <block id="433abae658dcc70d5d3761c8600f7b1f" category="cell">VMware ESXi 6.5</block>
-  <block id="e042e676706d93b3b14ce12e4d00a002" category="cell">物理服务器</block>
-  <block id="bdca94d672fd7d92ff8ea4ac0c08a195" category="cell">Cisco UCS B200 M5 x 3</block>
-  <block id="0b429223fa40bae1f57484fc7a23db8a" category="cell">每个服务器的处理器数</block>
-  <block id="6ebf62ce6fe729a0658f60247091310d" category="cell">两个 20 核 Intel Xeon Gold 6148 2.4 GHz</block>
-  <block id="1031916fe3cb32cc33c3500d2653094a" category="cell">每台服务器的物理内存</block>
-  <block id="4a2c071fa681cde76a2155cd103cffda" category="cell">768 GB</block>
-  <block id="f740a217496c1f42a51b7a745f62930e" category="cell">FC 网络</block>
-  <block id="cbf5e4815ad4588059cc54f6a631770c" category="cell">16 Gb FC ，具有多路径功能</block>
-  <block id="1e37c6e5f678759b5c30da90f48dd91c" category="cell">FC HBA</block>
-  <block id="c49f5b9cd1a8a302ce352b367ffb88c3" category="cell">Cisco UCS VIC 1340 上的 FC vHBA</block>
-  <block id="74f8711b479ad7ed378b52210486c7dc" category="cell">用于集群管理的专用公有 1GbE 端口</block>
-  <block id="57dc2744d338611dbd8deda89a8e4d5f" category="cell">两个 Intel 1350GbE 端口</block>
-  <block id="849a69a42b5d8622d554e546f9bb4d51" category="cell">16 Gb FC 交换机</block>
-  <block id="49527a523536cb0a8ea26291547535b5" category="cell">Cisco MDS 9148s</block>
-  <block id="b718eba2f6ad2badf1092f3fb89cd073" category="cell">40GbE 交换机</block>
-  <block id="03817c398c0f79eb77d91647e2b656c7" category="cell">Cisco Nexus 9332 交换机</block>
-  <block id="27daa34130b7ead42e3e2e7811794480" category="paragraph">下表列出了 NetApp AFF A700 和 AFF A300 存储系统硬件和软件。</block>
-  <block id="b3d29613beffd4378eee7c1fcd5b7595" category="cell">AFF A700 详细信息</block>
-  <block id="3c532f9d06b8fedad2420494344f60c4" category="cell">AFF A300 详细信息</block>
-  <block id="f31303ddb8ada38aed08c2bb8f9d8e6c" category="cell">存储系统</block>
-  <block id="cd764074597079773f9d3d3b2be8497b" category="cell">配置为高可用性（ HA ）主动 - 主动对的 AFF A700 控制器</block>
-  <block id="576d9c10df4639d786ecab4e158b5a96" category="cell">配置为高可用性（ HA ）主动 - 主动对的 AFF A300 控制器</block>
-  <block id="3b2a75ebc087c7f3c4fa9ac0e2a92ebe" category="cell">ONTAP 版本</block>
   <block id="b68de8f1f938e0330acdf64c63b08b9a" category="cell">9.4</block>
   <block id="eab7e959c5707439b9e2c1fe3e86d60c" category="cell">9.5</block>
-  <block id="73247cedd25dd5f7e6612727d04c119a" category="cell">驱动器总数</block>
-  <block id="19ca14e7ea6328a42e0eb13d585e4c22" category="cell">36</block>
-  <block id="ec8691da9bf60fda22f12e08033d054b" category="cell">驱动器大小</block>
-  <block id="e0ec5ed632381f5afbd737a7ca158cdb" category="cell">3.8 TB</block>
-  <block id="ce1dc110e77caccbe12e51dce2d1c9b7" category="cell">驱动器类型</block>
-  <block id="3537e7e929ac4e1b43be2c99dca1d815" category="cell">FC 目标端口</block>
-  <block id="1a716b5b1c9ccbfe576b749f6340e14d" category="cell">八个 16 Gb 端口（每个节点四个）</block>
-  <block id="34b8a9807da64737f07ac9e419c9f546" category="cell">以太网端口</block>
-  <block id="79cc45a3f3d8a71b0bbffdd503bcb706" category="cell">四个 10 Gb 端口（每个节点两个）</block>
-  <block id="419acd6d6759fae803ce64f3591a3dde" category="cell">Storage Virtual Machine （ SVM ）</block>
-  <block id="e1f245dc8402eeb2e43a7c3626a66be9" category="cell">在两个节点聚合中使用一个 SVM</block>
-  <block id="3a128f76a5613434328fcdc31032f031" category="cell">以太网逻辑接口（ LIF ）</block>
-  <block id="76fa5b9a3d0b8a9565e1537c801af996" category="cell">四个 1 Gb 管理 LIF （连接到单独专用 VLAN 的每个节点两个）</block>
-  <block id="652659ceac3184b0f744b1aa4a39543a" category="cell">FC LIF</block>
-  <block id="07e51ffc1dbdfc64634b825c8aab756c" category="cell">四个 16 Gb 数据 LIF</block>
-  <block id="ce4ea4ad46a1595e950c671ad1eee5ce" category="paragraph">下表列出了 NetApp AFF A700 和 AFF A300 存储系统布局。</block>
-  <block id="0b7e67b6cdcf0432b624d53588d520fb" category="cell">SVM</block>
-  <block id="a19f05342fef37d1a30df931b17b95f9" category="cell">用于 Epic 应用程序数据库的单个 SVM</block>
   <block id="d5350d8759b1ec84607e47908809058e" category="cell">聚合</block>
-  <block id="22c13b5cc0908ae2ee315e49fe99819e" category="cell">每个 20 TB</block>
-  <block id="64ab1b9a51657ca07cbefed0200a042c" category="cell">每个 30 TB</block>
-  <block id="d62affd6dcf3554cea8b76c641887f5d" category="cell">用于生产的卷</block>
-  <block id="260c7c0c2649d054f4d4a6e3f56a805c" category="cell">每个 RHEL VM 16 个 342GB 卷</block>
-  <block id="c9589d53bc576411ed281326e757c7b2" category="cell">每个 RHEL VM 16 个 512 GB 卷</block>
-  <block id="0c2714b6ee34d1b452ce9c6f0b2011d8" category="cell">用于生产的 LUN</block>
-  <block id="ba06f132c62446a81a215bfeca5afe4e" category="cell">十六个 307 GB LUN ，每个卷一个</block>
-  <block id="00d499cad7c0fcdeda411c29cd0d7e6f" category="cell">十六个 460 GB LUN ，每个卷一个</block>
-  <block id="09f91fee92ba44d295781867a9551c95" category="cell">日志的卷</block>
-  <block id="ae5b20da27d7b72e84e96aef3a96e756" category="cell">每个 RHEL VM 两个 95 Gb 卷</block>
-  <block id="678651e9ea0f72c1e1b9d2bfac3728d6" category="cell">每个 RHEL VM 两个 240 GB 卷</block>
-  <block id="d70042023215d90f6c127b03eab30514" category="cell">日志的 LUN</block>
-  <block id="b558a4d6257d53b14b7e3ffd5e4505f0" category="cell">两个 75 Gb LUN ，每个卷一个</block>
-  <block id="02a35661c5ea82e9af227689cc8799e1" category="cell">两个 190 Gb LUN ，每个卷一个</block>
-  <block id="0bf1d83e3faa65c3de511963a14646f5" category="summary">为 Epic 软件环境部署的 NetApp 存储使用高可用性（ HA ）对配置中的存储控制器。需要通过 FC 协议（ FCP ）将存储从两个控制器提供给 Epic 数据库服务器。</block>
-  <block id="9ccd4c993c20544cd46c9baa22201922" category="paragraph">为 Epic 软件环境部署的 NetApp 存储使用高可用性（ HA ）对配置中的存储控制器。需要通过 FC 协议（ FCP ）将存储从两个控制器提供给 Epic 数据库服务器。此配置可提供两个控制器的存储，以便在正常操作期间均匀平衡应用程序负载。</block>
-  <block id="8d3cca3c99346dc1082ed3c488cd9d5e" category="paragraph">Epic 全闪存参考架构战略手册详细介绍了将生产工作负载划分为故障域调用池的史诗般要求。请先阅读本文档的详细信息，然后再继续。请注意， ONTAP 节点可以视为一个单独的存储池。</block>
-  <block id="4cf252b993a77142d6afdc91b816b74d" category="paragraph">本节介绍使用相关 ONTAP 命令的部署和配置过程示例。重点是展示如何配置存储以实施 NetApp 建议的存储布局， NetApp 建议使用 HA 控制器对。ONTAP 的主要优势之一是能够在不影响现有 HA 对的情况下进行横向扩展。</block>
-  <block id="c26c1f4f67d56898a432a8f7c5b4863c" category="paragraph">EPIC 为每个客户提供详细的存储性能要求和布局指导，包括存储呈现方式和主机端存储布局。Epic 将提供以下自定义文档：</block>
-  <block id="4272d60d3a4efe91aa281dc7a0aed05e" category="list-text">《 Epic 硬件配置指南》，用于售前规模估算。</block>
-  <block id="91a562802963a098a7bd1ac724c3b5fd" category="list-text">部署期间用于 LUN 和卷布局的 Epic 数据库存储布局建议。</block>
-  <block id="2bf1e681501e3b1fb86bdd2478794be7" category="paragraph">必须参考 Epic 数据库存储布局建议来开发满足这些要求的客户专用存储系统布局和配置。</block>
-  <block id="c07c67768c78a6847cd3b05890349a9b" category="paragraph">以下示例介绍了如何部署支持 10 TB 数据库的 AFF A700 存储系统。下表显示了在示例部署中用于支持生产数据库的存储的配置参数。</block>
-  <block id="8d1fc7e767a7204d770eb56c7989e03b" category="cell">控制器 1</block>
-  <block id="48ed192757d1bc6d4a36d16a10893f48" category="cell">控制器 2</block>
-  <block id="dac455ed495998f5ec194c45d3bc82c6" category="cell">控制器主机名</block>
-  <block id="63ec7deb4958d42496d3231e53e05a90" category="cell">产品 1-01</block>
-  <block id="10c9f9bda9e7d88b03bc641aff1c57cc" category="cell">产品 1-02</block>
-  <block id="a2cc183e9caf4a70afe494cd728b25ba" category="cell">聚合 ONTAP</block>
-  <block id="b23ac62090504500ceeb46ae45d44bf5" category="cell">aggr0_prod1-01 （ ADP 11 个分区）</block>
-  <block id="18b226124e17bacf73b1226df38204e2" category="cell">aggr0_prod1-02 （ ADP 11 个分区）</block>
-  <block id="9123326ed0309cac8e047e46a2468006" category="cell">聚合数据</block>
-  <block id="cfd8fdd14f5e9b075ddd9f17de1fad0a" category="cell">产品 1-01_aggr1 （ 22 个分区）</block>
-  <block id="a45055094a4f7af89c29004d32bd25ca" category="cell">Prod1-02_aggr1 （ 22 个分区）</block>
-  <block id="2aae051506a0a6ce78d97d64d25ea057" category="cell">卷（大小）</block>
-  <block id="d39e7e8c8a4edafea4ad25f8c69a9e48" category="cell">epiod_prod_db1 （ 2 TB ） epiod_prod_db2 TB （ 2 TB ） epio_prod_db3 （ 2 TB ） epiod_prod_db4 （ 2 TB ） epiod_prod_db6 （ 2 TB ） epio_prod_db7 （ 2 TB ） epiod_prod_db8 （ 2 TB ） epiod_njgb （ 1 GB ）（ 1 GB ）</block>
-  <block id="e500a5a99e2c7f3b4830a17698cf2f1e" category="cell">epio_report_db1 （ 2 TB ） epio_report_db3 （ 2 TB ） epio_report_db4 （ 2 TB ） epio_report_db5 （ 2 TB ） epio_report_db6 （ 2 TB ） epio_report_db7 （ 2 TB ） epio_report_db8 （ 2 TB ） epio_report_db4 （ 1 TB ） epiod_report_jgb （ 1 GB ）</block>
-  <block id="395f1ed28a1483bf4574bb041938afec" category="cell">LUN 路径（大小）</block>
-  <block id="01c625ec930c176340219a858a231754" category="cell">/d_prod_db1/vd_prod_db1 （ 1.4TB ） /epo_prod_db2/epic （ 1.4TB ） /epic prod_db3/epic prod_db3 （ 1.4TB ） /epic prod_db4/4 TB （ 1.4TB ） /epic db4 （ 1.4 TB ） /epic ） /nd_projic （ 1.g_d/nepic ） /nst/nepic ）</block>
-  <block id="ebbece496a52d850eaa5bd7054f78515" category="cell">/r_d_db1/4TB_report_db1 （ 1.4TB ） /epo_prod_db2/epic report_db2 （ 1.4TB ） /epic prod_db3/epic report_db3 （ 1.4TB ） /epic prod_4/epic report_db4 （ 1.4TB ） /epic ） /epic prod_dbd_db4 （ 1.gb ） /ng_report_epic （ 1.7_epic ） /epic ） /epic 报告</block>
-  <block id="8b6f93f33bce541c7f50f8aff637e2e1" category="cell">RHEL</block>
-  <block id="11c76853affe30341b8a8626ce44e513" category="cell">LUN 类型</block>
-  <block id="3d559d0cb7f5915e044c45b5c0a9a8bd" category="cell">Linux （由使用 FC 的 RHEL VM 直接挂载为 RDM ）</block>
-  <block id="41db713fc1031de1cfdfd30f34cc0b79" category="cell">FCP 启动程序组（ igroup ）名称</block>
-  <block id="8b6023648d2e984adf8b63f996438d6d" category="cell">IG_Epic prod （ Linux ）</block>
-  <block id="41748205006ee0d16ceb81488556a31b" category="cell">IG_Epic 报告（ Linux ）</block>
-  <block id="1af248136829615eac4fb39a00df1558" category="cell">主机操作系统</block>
-  <block id="56079badd056a19303cc26e6a4fcc7e0" category="cell">VMware</block>
-  <block id="2578749dce9595845ad35dec04f91f42" category="cell">Epic 数据库服务器主机名</block>
-  <block id="d4e150c08f5eea0b659e0f8f0210cd19" category="cell">Epic 产品</block>
-  <block id="11d036ad9b1abf6a6c1fa47325ce0020" category="cell">Epic 报告</block>
-  <block id="96853bd655b87a18c58211a883bb1382" category="cell">SVM_prod.</block>
-  <block id="ae2535a4525e64750824225f8c17bb79" category="cell">SVM_ps （生产服务） SVM_CIFS</block>
-  <block id="f8e0fad434075062a1bf437657ab2f65" category="paragraph">设置存储控制器后，应用许可证以启用 NetApp 建议的 ONTAP 功能。Epic 工作负载所需的许可证包括 FC ， CIFS ， Snapshot ， SnapRestore ， FlexClone ， 和 SnapMirror 。</block>
-  <block id="0d5ef9eab45b80a882bae65e0fb25d85" category="paragraph">要应用这些许可证，请打开 NetApp System Manager ，然后转到 " 配置 - 许可证 " 并添加相应的许可证。或者，也可以使用命令行界面运行以下命令来添加许可证：</block>
-  <block id="67a20fe12a868943818549440c3d047e" category="paragraph">AutoSupport 工具会通过 HTTPS 向 NetApp 发送摘要支持信息。要配置 AutoSupport ，请运行以下 ONTAP 命令：</block>
-  <block id="7b493f6e7181f5d0bf764806a48563ca" category="paragraph">在每个节点上，启用硬件辅助接管，以最大程度地减少在控制器发生不太可能的故障后启动接管所需的时间。要配置硬件辅助接管，请完成以下步骤：</block>
-  <block id="0bf598bd2ec26b99f70794caa0551078" category="list-text">运行以下 ONTAP 命令。将 prod1-01 的配对地址选项设置为管理端口的 IP 地址。</block>
-  <block id="626effe0e6bb794a3f97af6874cae1fe" category="list-text">运行以下 ONTAP 命令。将配对地址选项设置为 cluster1-02 的管理端口的 IP 地址。</block>
-  <block id="9a0e81bee2ada1121392310e9765de1e" category="list-text">运行以下 ONTAP 命令，在 prod1-01 和 prod1-02 HA 控制器对上启用硬件辅助接管：</block>
-  <block id="d422f38ef432f92f355639173fc3e400" category="section-title">ONTAP 存储配置</block>
-  <block id="97ffdf918c35b13dd5fca7d5bb32c776" category="paragraph">存储配置工作流如下：</block>
-  <block id="05ee867622d35f075b5a6daaf0135427" category="list-text">创建聚合。</block>
-  <block id="a1c2ba0380a69e7c7cb7bb29efec2f8f" category="list-text">创建 Storage Virtual Machine （ SVM ）。</block>
-  <block id="e788b5bb3774a128112d93c01d16c119" category="paragraph">创建聚合后，下一步是创建 SVM 。在 ONTAP 中，存储以 SVM 的形式进行虚拟化。主机和客户端不再访问物理存储硬件。使用 System Manager 图形用户界面或命令行界面创建 SVM 。</block>
-  <block id="55a783e186591b50fd6e53a7cdf21d35" category="list-text">创建 FC LIF 。</block>
-  <block id="1321f692afba4fcf069f20bd350812c6" category="paragraph">端口和存储在 SVM 上进行配置，并通过称为逻辑接口（ Logical Interface ， LIF ）的虚拟端口提供给主机和客户端。</block>
-  <block id="f36ae4240dccf157851581d2c0cd8c70" category="paragraph">您可以使用所有协议在一个 SVM 中运行所有工作负载。对于 Epic ， NetApp 建议为生产 FC 配置一个 SVM ，为 CIFS 配置一个 SVM 。</block>
-  <block id="85f3337d61da3f223cdde49bbe7b1fb1" category="list-text">在 System Manager 图形用户界面中启用并启动 SVM 设置中的 FC 。</block>
-  <block id="4e2f36fc439d7074350ab6d2adece6a7" category="list-text">将 FC LIF 添加到 SVM 。根据每个 LUN 构建的路径数，在每个存储节点上配置多个 FC LIF 。</block>
-  <block id="16a00f3ed39cb5694c41ac7da47d6372" category="list-text">创建启动程序组（ igroup ）。</block>
-  <block id="3d6ad2202400dc3593373dfcb0b6d9b0" category="paragraph">igroup 是由 FC 协议主机 WWPN 或 iSCSI 主机节点名称组成的表，用于定义哪些 LUN 可供主机使用。例如，如果您有一个主机集群，则可以使用 igroup 来确保特定 LUN 只对集群中的一个主机可见，或者对集群中的所有主机可见。您可以定义多个 igroup 并将其映射到 LUN ，以控制哪些启动程序可以访问 LUN 。</block>
-  <block id="20f5df0e81e7cf4fc5bc47caa4ad5b10" category="paragraph">使用 System Manager 图形用户界面或 CLI 创建类型为 vmware 的 FC igroup 。</block>
-  <block id="bca8a803a22079061b1cd5e62c8b6e98" category="list-text">在 FC 交换机上创建分区。</block>
-  <block id="327b321bead70f42f07be4c5919022c9" category="paragraph">FC 或 FCoE 分区是指网络结构中一个或多个端口的逻辑分组。要使设备能够彼此查看，连接，创建彼此的会话并进行通信，两个端口都需要具有公共区域成员资格。建议使用单个启动程序分区。</block>
-  <block id="69a59be02887a86bc7c77d7017effe4e" category="list-text">在交换机上创建分区，然后在分区中添加 NetApp 目标和 Cisco UCS 刀片启动程序。</block>
-  <block id="c7acb4770a3532b53a3d5ce5aeaf1ed2" category="paragraph">NetApp 最佳实践是单个启动程序分区。每个分区仅包含一个启动程序和控制器上的目标 WWPN 。分区使用端口名称，而不是节点名称。</block>
-  <block id="6eb8b7a8dd3046302df74a9a62580921" category="list-text">创建卷和 LUN 。</block>
-  <block id="456e1d7a6a264545ffbfffc44f2cae69" category="list-text">使用 System Manager 图形用户界面（或命令行界面）创建用于托管 LUN 的卷。默认情况下，卷上会设置所有存储效率设置和数据保护。您可以选择使用 `vol modify` 命令打开卷上的卷加密和 QoS 策略。请注意，卷的大小必须足以容纳 LUN 和 Snapshot 副本。要保护卷免受容量问题的影响，请启用 `autosize` 和 `autodelete` 选项。创建卷后，创建将托管 Epic 工作负载的 LUN 。</block>
-  <block id="af85fb3f0cdd0f4f6f0476ab81ee5492" category="list-text">使用 System Manager 图形用户界面（或 CLI ）创建类型为 `VMware` 的 FC LUN ，以托管 Epic 工作负载。NetApp 在 System Manager 中通过一个非常易于遵循的向导简化了 LUN 创建过程。</block>
-  <block id="a0045ac437fee857d8c601db860fee79" category="inline-link">《适用于 ESX 的 FC 配置快速指南》</block>
-  <block id="b5f051f3ad3764574c8025514af90f78" category="paragraph">您还可以使用 VSC 配置卷和 LUN 。请参见<block ref="d3db6153351bd614c061efa85839c93a" category="inline-link-rx"></block>。</block>
-  <block id="3bd893704a4c67ccbb9015719d6fca7c" category="inline-link">《 SAN 管理和 SAN 配置指南》</block>
-  <block id="c0c8ef8da484a98063d746c7ecd33d56" category="paragraph">请参见<block ref="c66f1b4b1a2d765434224b96acd40f27" category="inline-link-rx"></block> 如果未使用 VSC 。</block>
-  <block id="05ee172aaf8499916e393fb120670a4c" category="list-text">将 LUN 映射到 igroup 。</block>
-  <block id="562c308bc7935bb083e5f95554e55c64" category="paragraph">创建 LUN 和 igroup 后，将 LUN 映射到相关的 igroup ，以便为所需主机提供对 LUN 的访问权限。</block>
-  <block id="bdf9467d87b040b8ab1613328b695a7f" category="paragraph">现在，可以发现这些 LUN 并将其映射到 ESXi 服务器。刷新 ESXi 主机上的存储并添加新发现的 LUN 。</block>
-  <block id="a73f7cd81e3b4403baa49dbfb96aa619" category="inline-link-macro">接下来： Genio 工具。</block>
-  <block id="20beb3ab79553264af9b61d84ad35892" category="paragraph"><block ref="20beb3ab79553264af9b61d84ad35892" category="inline-link-macro-rx"></block></block>
   <block id="84ffd62e595c9d0122e136c3b255f4df" category="doc">致谢</block>
   <block id="11ce79f812406bc51fe9b7234783e48b" category="list-text">NetApp 高级产品经理 Ketan Mota</block>
   <block id="1da328dab34341112c5ea191bbdc87ff" category="list-text">NetApp 医疗保健解决方案架构师 John Duignan</block>
@@ -3956,21 +2956,6 @@
   <block id="d3cd6fb5e055b6cf26840a09d580c8b1" category="list-text">Cisco 公司 Mike Brennan</block>
   <block id="83e7705bd84427a330d9d7e0fa059be5" category="summary">以下人员为本指南的编写和创建做出了贡献。</block>
   <block id="ff911ddf6eef032578e398f364581a85" category="list-text">NetApp 医疗保健部门解决方案架构师 John Duignan</block>
-  <block id="77e3c327136eda568a914537f3139b20" category="summary">在部署 Epic 方面， Cisco 设计的 Cisco UCS 参考架构直接符合 Epic 的最佳实践。Cisco UCS 提供紧密集成的解决方案，可提供高性能，高可用性，可靠性和可扩展性，支持医生诊疗以及配备数千张床位的医院系统。</block>
-  <block id="93eb1e5941aef3ddf20c5feaed2113d4" category="doc">适用于 Epic 的 Cisco UCS 参考架构</block>
-  <block id="f8344cfc1c01dd336814d24efcb747ea" category="paragraph">基于 FlexPod 的 Epic 架构既基于 Epic ， Cisco 和 NetApp 的指导，也基于与各种规模的 Epic 客户合作的合作伙伴经验。该架构具有适应性，并会根据客户的数据中心战略应用 Epic 的最佳实践，无论是小型还是大型，还是集中式，分布式还是多租户。</block>
-  <block id="e4368785cc0ee0fbfca62bc53f7f25b4" category="section-title">适用于小型实施的基本设计</block>
-  <block id="8c20045fd466cf85286d0087a7989f22" category="paragraph">与扩展设计相比，基于 Cisco UCS 的 Epic 的基本设计范围更广。基本设计用例的一个示例可能是医生的门诊实践。这样的组织可能很少使用 Epic 应用程序，或者可能不需要 Epic 的所有组件。例如，医生的诊疗组可能不需要使用 Epic Willow Pharmacy 应用程序或 Epic Monitor 进行住院监控。基本设计所需的虚拟主机和物理服务器更少。此外，它的 SAN 需求可能也会减少，并且与二级数据中心的 WAN 连接可能会通过基本路由和 TCP/IP 来处理。</block>
-  <block id="5a0518af5fd7fb75af9cea1d57262f8f" category="paragraph">下图显示了一个基本小型 Epic 配置示例。</block>
-  <block id="bff47ff0dcaecdbd897f68a0ac3b3b31" category="paragraph"><block ref="bff47ff0dcaecdbd897f68a0ac3b3b31" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="8cab13de93538609085b176c847ef342" category="section-title">扩展了设计，适用于更大规模的实施</block>
-  <block id="ccf618b78b453c63be5fffb2f44ecccf" category="paragraph">基于 Cisco UCS 的 Epic 扩展设计遵循与基本设计相同的最佳实践。主要区别在于扩展设计的规模。随着规模的扩大， Cach é 数据库的核心交换， SAN 和处理器要求通常需要更高的性能。大型实施通常具有更多超空间用户，并且需要更多适用于超空间的 XenApp 或其他虚拟应用程序服务器。此外，由于需要更高的处理能力，因此将采用 Intel Skylake 处理器的 Cisco UCS 四插槽服务器用于 Cronicles Cach é 数据库以及相关的生产，报告和灾难恢复 Cach é 服务器。</block>
-  <block id="088c96bd47a250b06a352a3b7f3ce478" category="paragraph">下图展示了一个扩展的 Epic 设计示例。</block>
-  <block id="4c95d3edc135af1d466d526bbe919423" category="paragraph"><block ref="4c95d3edc135af1d466d526bbe919423" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="1a1c3f45bfe7d1e83f2908135c8d29af" category="section-title">超空间主动 - 主动实施</block>
-  <block id="18e5a49e782bcc045a53b661a36f4b25" category="paragraph">在二级数据中心，为了避免未使用的硬件资源和软件成本，客户可能会对 Epic Hyperspace 使用主动 - 主动设计。此设计可通过从主数据中心和二级数据中心提供超空间来优化计算投资。</block>
-  <block id="dc14e7069633b54113aa945b83d1b3ff" category="paragraph">超空间主动 - 主动设计（如下图所示）进一步扩展了设计，并将 XenApp for Hyperspace 或其他超空间虚拟应用程序服务器置于二级数据中心的完全运行状态。</block>
-  <block id="efcd07676a7568d9c21e17529e3e5d71" category="paragraph"><block ref="efcd07676a7568d9c21e17529e3e5d71" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f5ef3ee444a74806df8feb4d18f0d5f2" category="summary">本节介绍 NetApp FlexPod 快速存储集群设计的最佳实践。</block>
   <block id="c2ffe02d76c4f089648f1647b43e4ee5" category="doc">最佳实践</block>
   <block id="b429096255906489a518c5c505e642b9" category="section-title">存储最佳实践</block>
@@ -4210,20 +3195,6 @@
   <block id="587a2e7b7bde90ffa88b19d7f62bbca4" category="paragraph">请始终使用<block ref="e24f898abe90ef46a13b3eea3ae2cf9c" category="inline-link-rx"></block> 验证是否支持所有版本的软件和固件。第节中的表 <block ref="2b2f01cc46ef9918ef530ffc5737755a" category="inline-link-macro-rx"></block> 列出了解决方案测试中使用的基础架构硬件和软件组件。</block>
   <block id="e67b1a97e37071df880d20b6fc4a7615" category="inline-link-macro">接下来：基础架构配置。</block>
   <block id="7978eaf583a156d01cc8ddf89b1da50c" category="paragraph"><block ref="7978eaf583a156d01cc8ddf89b1da50c" category="inline-link-macro-rx"></block></block>
-  <block id="8902e8b32624093255cb9cc535e85080" category="summary">本文档中提供的 NetApp Storage FlexPod 部署指南仅涵盖使用 ONTAP 的环境以及使用 Cisco UCS 刀片式服务器和机架式服务器的环境。此页面还详细介绍了 Epic 部署的 16 Gb FC/40GbE 拓扑图。</block>
-  <block id="3253497e2f7e073445bde16c8524ab3d" category="paragraph">本文档中提供的 NetApp Storage FlexPod 部署指南包括：</block>
-  <block id="fbeedbdc3519af88e8305f5bd7c8b3f7" category="list-text">详细部署 FlexPod 数据中心环境。请参见<block ref="8c408f7508059ba7cdfe1e4eb9ba9051" category="inline-link-rx"></block>。</block>
-  <block id="8cf2c98afc5dc23377d669bc398b3fba" category="list-text">Epic 软件环境概述，参考架构和集成最佳实践指南。请参见 NetApp<block ref="cefbbd0059404555fc6d1abe3d71efc5" category="inline-link-rx"></block>。</block>
-  <block id="24cc981b75ebc16258b546ae17420780" category="inline-link">TR-3930 ：《 NetApp Epic 规模估算准则》</block>
-  <block id="4ccf88a42aa5621b51b6fbe170ecdb2a" category="list-text">量化性能要求和规模估算指南。请参见 NetApp<block ref="6fe1d0295ba7ac0c2848d5946ee4f07b" category="inline-link-rx"></block>。</block>
-  <block id="455c7b80ed6ef1e6a8bd554f5161d2dc" category="list-text">Epic 数据库备份和恢复，包括 SnapCenter 。</block>
-  <block id="d19368d82a35deea419c0cd3b524af26" category="inline-link">TR-4590 ：《采用 ONTAP 的 Microsoft SQL Server 最佳实践指南》</block>
-  <block id="c740c35794daf5b802e80a0e04c155a6" category="list-text">有关清晰报告环境的部署指南。请参见 NetApp<block ref="81be91ccd6f889886ee4bd727ecf284e" category="inline-link-rx"></block>。</block>
-  <block id="00fb954e4a5daa2dfa929eaa157c3a54" category="paragraph">本节介绍了采用基础架构部署最佳实践的实验室环境设置。Genio 工具用于模拟 Epic EHR 应用程序工作负载。本节列出了各种基础架构硬件和软件组件以及使用的版本。</block>
-  <block id="d48a5a1fa0880c688849d7ff7924eee5" category="paragraph">下图显示了 Epic 部署的 16 Gb FC/40GbE 拓扑图。</block>
-  <block id="cd05fd30d0b0165579707171bbd7d015" category="paragraph"><block ref="cd05fd30d0b0165579707171bbd7d015" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="a87a671194c3158c7c728100af4b06cf" category="inline-link-macro">接下来：基础架构硬件和软件组件。</block>
-  <block id="abba977f8cb402884611df4042262015" category="paragraph"><block ref="abba977f8cb402884611df4042262015" category="inline-link-macro-rx"></block></block>
   <block id="b7e68d0352de1c804e28d4c0e7d260b7" category="summary">本文档提供了有关为 MEDITECH 软件配置 FlexPod 环境的高级指导。在本节中，我们将简要介绍一些步骤以及一些示例，以准备 FlexPod 配置中的 Cisco UCS 计算平台要素。</block>
   <block id="5e8501c202ce099e8c6b9559c865d723" category="doc">Cisco UCS 刀片式服务器和交换机配置</block>
   <block id="52c26526758e2879666f3330f706c9f9" category="paragraph">适用于 MEDITECH 的 FlexPod 软件在各个级别均具有容错功能。系统中没有单点故障。为了获得最佳性能， Cisco 建议使用热备用刀片式服务器。</block>
@@ -4259,15 +3230,6 @@
   <block id="94e6e1d1c0c67d591be44cd2237b2819" category="paragraph">有关为 FlexPod 配置 Cisco UCS 服务配置文件中每个关键要素的详细步骤，请参见<block ref="8f1525ab792e1982d64749d7e834252e" category="inline-link-rx"></block>CVD 文档。</block>
   <block id="1c0111c256303c789d10465f32e35c9f" category="inline-link-macro">下一步： ESXi 配置最佳实践。</block>
   <block id="a12882e5c41826585dd001aacca59d17" category="paragraph"><block ref="a12882e5c41826585dd001aacca59d17" category="inline-link-macro-rx"></block></block>
-  <block id="9a56b21b88da0f210b25219e325b77b4" category="list-text">采用 FC Cisco 验证设计的 FlexPod 数据中心。详细部署 FlexPod 数据中心环境。</block>
-  <block id="e76641d8befb6a11e137ca668bac47fe" category="list-text">TR-3928 ：《 NetApp Epic 最佳实践》。Epic 软件环境概述，参考架构和集成最佳实践指南。</block>
-  <block id="5265fb5dcd13ca59044c346fd3902d3c" category="list-text">TR-3930i ：《 NetApp Epic 规模估算指南》（需要访问 Field Portal 才能查看本文档）</block>
-  <block id="c47f154aba0d602967873e9c8cdcc74e" category="inline-link"><block ref="c47f154aba0d602967873e9c8cdcc74e" category="inline-link-rx"></block></block>
-  <block id="40c72ceaf0315c3a7a385c03b61b7940" category="paragraph"><block ref="40c72ceaf0315c3a7a385c03b61b7940" category="inline-link-rx"></block></block>
-  <block id="622fc0b6147b951a4b5771611e4b862a" category="list-text">Episco_on_cisco_UCS_tech_brief 。基于 Cisco UCS 的 Epic 的 Cisco 最佳实践。</block>
-  <block id="c74d12559c29186abcfe3243c05c2412" category="list-text">NetApp<block ref="34984e226a94e236933ba9c1f658118e" category="inline-link-rx"></block> 设计区域</block>
-  <block id="4c174d67b3e4b216aa8b15b8c9696633" category="list-text">采用光纤通道存储（ MDS 交换机）的 FlexPod DC ，使用 NetApp AFF ， vSphere 6.5U1 和 Cisco UCS Manager</block>
-  <block id="a2bfe3d83bb277a2b9c9fca09fd8e732" category="summary">以下链接和指南与本文档和 FlexPod 部署相关。</block>
   <block id="ace6bc814af688c812d44b9270c7e069" category="summary">专用于 MEDITECH 主机的 Meditech 卷可以采用厚配置或精简配置，并可使用 Snapshot 副本进行访问。您还可以使用卷级别重新分配来优化磁盘上的数据布局，以提高写入延迟和顺序读取访问。</block>
   <block id="be1b9ef68f31ecee991e2282c1f24f0f" category="section-title">卷配置</block>
   <block id="c8884acd62d57a748f8be9efe002d659" category="paragraph">专用于 MEDITECH 主机的 Meditech 卷可以采用厚配置或精简配置。</block>
@@ -4285,15 +3247,6 @@
   <block id="9d8be877e207c9d81536923f45975efb" category="paragraph">有关为生产数据库存储确定适当的卷重新分配计划的详细信息，请参见中的第 3.12 节<block ref="70de5c2a4b00f75ad58d149f3ef37476" category="inline-link-rx"></block>。该节还将指导您如何为繁忙站点创建每周重新分配计划。</block>
   <block id="046000dc6863f618d4223f4cff2fdff5" category="inline-link-macro">下一步： LUN 配置。</block>
   <block id="971da7c141a22f2fb0cc7c604e50f436" category="paragraph"><block ref="971da7c141a22f2fb0cc7c604e50f436" category="inline-link-macro-rx"></block></block>
-  <block id="bd8cbb4e94a54f2142470034b507ae97" category="summary">FlexPod for Epic 软件在设计时在各个级别都具有容错能力。系统中没有单点故障。本文档旨在提供有关 Epic 软件的 FlexPod 环境基本配置的高级指导。</block>
-  <block id="c55c60a8e53e3269bf7cc495c0a9e75d" category="paragraph">FlexPod for Epic 软件在设计时在各个级别都具有容错能力。系统中没有单点故障。我们建议使用热备用刀片式服务器以获得最佳性能。</block>
-  <block id="6f37ac1faac4b71604e5820c7ef0932d" category="paragraph">本文档旨在提供有关 Epic 软件的 FlexPod 环境基本配置的高级指导。在本节中，我们将简要介绍一些步骤以及一些示例，以准备 FlexPod 配置中的 Cisco UCS 计算平台要素。本指南的前提条件是， FlexPod 配置已按照使用 FC 存储的 FlexPod 数据中心中的说明进行机架安装，供电和布线。</block>
-  <block id="35b7b4e3b83ab3d40a32675aa51f5f5c" category="paragraph">为解决方案部署了一对容错 Cisco Nexus 9300 系列以太网交换机。这些交换机应按照一节中所述进行布线 <block ref="b94eb338bd34852457376dcfaeb5cdd2" category="inline-link-macro-rx"></block> Cisco Nexus 配置可确保为 Epic 应用程序优化以太网流量。</block>
-  <block id="4cb34a88e2c2ac55724230a566b6d903" category="list-text">完成初始设置和许可后，运行以下命令在两台交换机上设置全局配置参数：</block>
-  <block id="8dbe072f8d0530b5c5e4c4c681681a3e" category="list-text">使用全局配置模式在每个交换机上为解决方案创建 VLAN ：</block>
-  <block id="cdbdb107aafddda77440515331eb7278" category="list-text">根据创建用于故障排除的 NTP 分发接口，端口通道，端口通道参数和端口说明<block ref="8c408f7508059ba7cdfe1e4eb9ba9051" category="inline-link-rx"></block>。</block>
-  <block id="080ce9a877d1b2a63bb788504fc0c4ea" category="inline-link-macro">下一步： ESXi 配置最佳实践</block>
-  <block id="e81ce44721adaf93b40044b200d4eeaa" category="paragraph"><block ref="e81ce44721adaf93b40044b200d4eeaa" category="inline-link-macro-rx"></block></block>
   <block id="883be5383eb8e601c6e739e7d239831d" category="summary">使用 FC 作为数据网络协议时，请在每个存储控制器上创建两个启动程序组（ igroup ）。第一个 igroup 包含托管 MEDITECH 主机 VM 的 VMware ESXi 服务器上 FC 主机接口卡的 WWPN （对于 MEDITECH 为 igroup ）。</block>
   <block id="dce719a9aac895b223304c1967dcde5c" category="doc">启动程序组配置</block>
   <block id="0d2dd5c6941ece8eb16ab9e78d25270a" category="paragraph">您必须根据环境设置设置 MEDITECH igroup 操作系统类型。例如：</block>
@@ -7316,11 +6269,7 @@
   <block id="11eed465080ae72a7cd51e9e0d769a36" category="sidebar">采用 Citrix XenDesktop/XenApp 7.15 和 VMware vSphere 6.5 Update 1 的 FlexPod Datacenter ，可容纳 6000 个席位</block>
   <block id="d6c9d3f77fc86d19e9d1e8e0460783c8" category="sidebar">采用 VMware Horizon View 7.3 的 FlexPod Datacenter 和采用 Cisco UCS Manager 3.2 的 VMware vSphere 6.5 Update 1 ，可容纳 5000 个席位</block>
   <block id="4ee2a6c7bb7c40af94c5a15dbf7eb673" category="sidebar">医疗保健</block>
-  <block id="0c8981e0a16bb1be37894bb2868f7b65" category="sidebar">《 FlexPod 数据中心 Epic 定向规模估算指南》</block>
-  <block id="caec40541fe760d4311744cfa03df82b" category="sidebar">小型，中型和大型架构的技术规格</block>
   <block id="f4bb968e88fa8aec8a3ffd847dc271cd" category="sidebar">《适用于 Epic EHR 的 FlexPod 数据中心部署指南》</block>
-  <block id="ac19a25d1e08bf6a07d68e990e2d4592" category="sidebar">用于 Epic 性能测试的 FlexPod</block>
-  <block id="7919e821dc18f3e88c0201e01bf6a240" category="sidebar">内容提要</block>
   <block id="a82a8aeb527fe34165f76582a421e44d" category="sidebar">《适用于 MEDITECH 的 FlexPod 方向性规模估算指南》</block>
   <block id="e526ac3f58d71b824400abfda793a171" category="sidebar">《适用于 MEDITECH 的 FlexPod 数据中心部署指南》</block>
   <block id="d44c9646e3d10988230c569ec4cb40d8" category="sidebar">适用于医疗成像的 FlexPod</block>
@@ -7635,8 +6584,6 @@
   <block id="decd3565dd007f2452830c3f826ff704" category="inline-link"><block ref="decd3565dd007f2452830c3f826ff704" category="inline-link-rx"></block></block>
   <block id="3d1da8fafa0a86efa99f98d720b7f205" category="paragraph"><block ref="3d1da8fafa0a86efa99f98d720b7f205" category="inline-link-rx"></block></block>
   <block id="1ae6b2f7f1fad59fc238abf083ff0117" category="list-text">史诗般的荣誉卷</block>
-  <block id="7d44274174c3d4f450aa686fa446d669" category="inline-link"><block ref="7d44274174c3d4f450aa686fa446d669" category="inline-link-rx"></block></block>
-  <block id="bf53074ecbd16fa4c8bb41af82ad5d90" category="paragraph"><block ref="bf53074ecbd16fa4c8bb41af82ad5d90" category="inline-link-rx"></block></block>
   <block id="7817e57b6ff0d2856eead20c15935bc7" category="list-text">敏捷高效— FlexPod 如何推动数据中心现代化</block>
   <block id="f7926fcf44693494ebd39d451b62f973" category="inline-link"><block ref="f7926fcf44693494ebd39d451b62f973" category="inline-link-rx"></block></block>
   <block id="5846e1714fe6b3a59fbf92fb13144912" category="paragraph"><block ref="5846e1714fe6b3a59fbf92fb13144912" category="inline-link-rx"></block></block>
@@ -8964,4 +7911,5 @@
   <block id="182b99dd6e6e03bd87c6e4742f0efe61" category="inline-link-macro">先前版本：解决方案 验证 - 网络。</block>
   <block id="b039f508b07fa442d12ced167cdee4ab" category="paragraph"><block ref="b039f508b07fa442d12ced167cdee4ab" category="inline-link-macro-rx"></block></block>
   <block id="a400e1c221e8c3e8b80a81f5085a481d" category="paragraph"><block ref="a400e1c221e8c3e8b80a81f5085a481d" category="inline-link-macro-rx"></block></block>
+  <block id="77adde3767ae2cc82097445aa8b15e86" category="list-text">采用冗余配置的两个10 Gbps标准以太网交换机(建议使用Cisco Nexus 31108、并支持Cisco Nexus 3000和9000型号)</block>
 </blocks>
