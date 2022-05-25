@@ -17,7 +17,6 @@ FlexPod 平台有三种：
 
 * * FlexPod Datacenter 。 * 此平台是一个可大规模扩展的虚拟数据中心基础架构，适合工作负载企业级应用程序，虚拟化， VDI 以及公有和私有云。FlexPod 数据中心具有自己的规格，如中所述 https://docs.netapp.com/us-en/flexpod/fp-def/dc-tech-spec_solution_overview.html["TR-4036 ： FlexPod 数据中心技术规格"^]。
 * * FlexPod Express* 。此平台是一个紧凑型融合基础架构，面向远程办公室和边缘使用情形。
-* * FlexPod Select* 。此平台是专为高性能应用程序构建的架构，例如 http://www.netapp.com/us/media/nva-0012-design.pdf["适用于高性能 Oracle RAC 的 FlexPod Select 。"^]
 
 
 本文档提供了 FlexPod 快速平台的技术规格。
