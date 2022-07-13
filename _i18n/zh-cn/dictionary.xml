@@ -366,8 +366,6 @@
   <block id="7501c5e58e67ce758d854a0f76243785" category="doc">FlexPod 平台</block>
   <block id="929267c420e3d3c55cf94c77cb6278ff" category="paragraph">FlexPod 平台有三种：</block>
   <block id="ec80c81f43eaed2db319aaaddeb1b47c" category="list-text">* FlexPod Express* 。此平台是一个紧凑型融合基础架构，面向远程办公室和边缘使用情形。</block>
-  <block id="82da3c7bdf42770183f1b2651ae3ac0a" category="inline-link">适用于高性能 Oracle RAC 的 FlexPod Select 。</block>
-  <block id="ea29f1a94a5cc0b3c2459d7f61b47043" category="list-text">* FlexPod Select* 。此平台是专为高性能应用程序构建的架构，例如<block ref="6aad01ba0b9744c0d680fcb06a4741ad" category="inline-link-rx"></block></block>
   <block id="fdcc3f708755fca6b29fa368ab162e64" category="summary">本节介绍 FlexPod 快速的可选功能。</block>
   <block id="3fbddd58f80c4f4429699e25eb1b4a26" category="doc">可选功能</block>
   <block id="710a236c4f9d25ef81dee7911c0555af" category="section-title">iSCSI 启动选项</block>
@@ -1182,7 +1180,6 @@
   <block id="7b3308b95aec192d46bc92dd7fb02cb2" category="inline-link">适用于 FlexPod 的 Cisco Intersight 托管模式</block>
   <block id="2155a8941fd728202c18dade730100d6" category="paragraph"><block ref="2155a8941fd728202c18dade730100d6" category="inline-link-rx"></block></block>
   <block id="0580772620331f949057ed6afbb098ea" category="inline-link">Cisco Intersight 入门概述</block>
-  <block id="c126a38a1e6af9c2dcbdc8fc12037c4b" category="paragraph"><block ref="c126a38a1e6af9c2dcbdc8fc12037c4b" category="inline-link-rx"></block></block>
   <block id="4d49c14c4afe96eb88aaef6d6588599b" category="inline-link">《 Intersight 设备安装和升级指南》</block>
   <block id="5cce77ecfcdbd5857d67110262f7b5a9" category="paragraph"><block ref="5cce77ecfcdbd5857d67110262f7b5a9" category="inline-link-rx"></block></block>
   <block id="125b1abfe1e20b5d3d6794b8dcc47618" category="summary">开始之前，请安装或升级 AIQ UM ，创建 Cisco Intersight 帐户并安装 Intersight Assist 。</block>
@@ -1212,15 +1209,10 @@
   <block id="88ade68952e1a8d9f1c49b5ed85b5af5" category="list-text">部署后 Intersight Assist 设备。</block>
   <block id="dba06e35ee25a3095d873c4534514037" category="list-text">导航到<block ref="f9e0ea639036dbfc655ff5cf553db753" category="inline-link-rx"></block> 完成设备的安装后设置。</block>
   <block id="bca0d681ab79310b7d18a7976928af12" category="paragraph">安装过程将自动开始。安装可能需要长达一小时，具体取决于 Intersight.com 的带宽。在虚拟机启动后，安全站点也可能需要几秒钟的时间才能正常运行。</block>
-  <block id="275571fec9813ba1f9a0316d6c6f2fb6" category="list-text">在部署后过程中，选择要安装的内容：</block>
-  <block id="c00e17d94315de3169768bef7aab5657" category="list-text">* 站点间连接的虚拟设备。 * 此部署需要连接回 Cisco 和站点间服务，以便更新和访问所需服务，从而使 Intersight.com 能够全面运行。</block>
-  <block id="393c0ea686ccae41560844de6267272c" category="list-text">* Intersight Private Virtual Appliance* 。此部署适用于在断开连接（空隙）模式下运行数据中心的环境。</block>
   <block id="3920eddb38a93c54b93b962bbdea7c26" category="list-text">* Intersight Assist 。 * 通过此部署， SaaS 模式可以连接到 Cisco Intersight 。</block>
-  <block id="1453aed754bf50218b4f4d0151fdacf0" category="admonition">如果选择 Intersight Assist ，请在继续操作之前记下设备 ID 和款项申请代码。</block>
   <block id="32f55ec9f00aee8539ca16e146d53713" category="inline-image-macro">Intersight 部署选项的屏幕截图</block>
   <block id="df2ced2f2ca7e12619f0e054224c6230" category="paragraph"><block ref="df2ced2f2ca7e12619f0e054224c6230" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2f88e5cbd35ab951b0bce5a96b06bb36" category="list-text">单击 * 继续 * 。</block>
-  <block id="1943b315b7a1e50917c318abee014486" category="list-text">如果您选择了 * 中间视图协助 * ，请完成以下步骤：</block>
   <block id="6f6002ff113b47d720b948fdbd799d5c" category="inline-link"><block ref="6f6002ff113b47d720b948fdbd799d5c" category="inline-link-rx"></block></block>
   <block id="3aa4c250877220ced11dd5118f05b73c" category="list-text">导航到您的 SaaS Intersight 帐户，网址为<block ref="b140963de237118a210eda3a58c6a981" category="inline-link-rx"></block>。</block>
   <block id="66b6809a917e6f7acac28f8accbdedc3" category="list-text">单击 * 目标 * ， * Cisco Intersight Assist * ，然后单击 * 启动 * 。</block>
@@ -7278,21 +7270,11 @@
   <block id="6b2cd9fd5e6df687c3d2d950a0504cb2" category="list-text">已为 CDP 邻居添加对象</block>
   <block id="1b178e202b7d2a2988fd16b3b67c6a9b" category="list-text">在 Cisco Intersight 中添加了 NetApp 工作流存储任务。请参见 <block ref="026b254cc8ff2f5d36709bcf93418a5f" category="inline-link-macro-rx"></block> 有关 NetApp 存储任务的完整列表。</block>
   <block id="054ea9c656473e275b7ae5b69269cc81" category="list-text">将存储导出策略添加到卷</block>
-  <block id="005bfd913eb29ed0d97dbcf92a1dc44b" category="list-text">将启动程序连接到存储主机（ igroup ）</block>
   <block id="aa4edcb7e57123151162ef878a3a3bb4" category="list-text">展开存储 LUN</block>
   <block id="cb036c70939fadc3637cbeb990d0a969" category="list-text">展开存储卷</block>
   <block id="01b698a596504162b7fcdf910e9175db" category="list-text">查找 NetApp igroup LUN 映射</block>
   <block id="9e5d320b5556f2516f70b24e91d5f757" category="list-text">按 ID 查找存储 LUN</block>
   <block id="783d5727a583df3d75bb078907ef7716" category="list-text">按 ID 查找存储卷</block>
-  <block id="2e98a15a497ccdd705c1aacbc2565767" category="list-text">新的存储光纤通道接口</block>
-  <block id="a2e112440799116f544e38030177ebc7" category="list-text">新的存储 IP 接口</block>
-  <block id="97ac0e10ec1653fdd6d33b534b4fb581" category="list-text">新存储 LUN</block>
-  <block id="194f7608b74b74a368090a870f7d5fcb" category="list-text">新的存储 LUN ID</block>
-  <block id="8984b5a23cc2d3327a7853fd1f99478b" category="list-text">新存储卷</block>
-  <block id="306682b00b95423c3808ed174d82d2b5" category="list-text">删除存储导出策略</block>
-  <block id="51509d7e2140913e263274d44c95a454" category="list-text">删除存储主机</block>
-  <block id="e85a681fd3a43de819202fa65bd57afb" category="list-text">删除存储 LUN</block>
-  <block id="4b80c44802bcd924cae1f359acfed1d8" category="list-text">删除存储 LUN ID</block>
   <block id="f44bd35636cd69c25b2f240a770ab0a5" category="list-text">删除存储卷</block>
   <block id="5cb81d48ffabbd08e273eb1371ff2113" category="list-text">新建存储 Snapshot 策略</block>
   <block id="46c325550313b45bd974662a8ba5d5c5" category="list-text">新建存储 Snapshot 策略计划</block>
@@ -7311,9 +7293,6 @@
   <block id="0027d78119d537368b4fd4055fdfdd69" category="list-text">删除存储 IP 接口</block>
   <block id="2205b729cc3612050bfabb80d4d267a0" category="list-text">删除 Storage Virtual Machine</block>
   <block id="091e9fb66636892d6015097e15c3353a" category="list-text">编辑 Storage Virtual Machine 的聚合</block>
-  <block id="c124f401989eb56f128d81a49069b568" category="list-text">新建存储 NAS 智能卷</block>
-  <block id="961513c69619cf93fef1cda04ea9a298" category="list-text">新的 Storage Smart LUN</block>
-  <block id="207134fdf4cc60a2571bb638077b925c" category="list-text">删除 Storage Smart LUN</block>
   <block id="fc763aee087e01aba254202f6cfd6ba9" category="admonition">新存储 NAS 智能卷和新存储智能 LUN 任务仅适用于 ONTAP 9.8 及更高版本。ONTAP 9.7P1 当前为支持的最低版本。</block>
   <block id="d3723866fd8ed566ec4269ff8a1cde80" category="inline-link-macro">NetApp Active IQ Unified Manager 文档</block>
   <block id="3537e24e4745c06b41a151532f5f0cd1" category="paragraph">如果尚未安装或升级到 Active IQ Unified Manager （建议使用最新版本，当前为 9.10P1 ），请安装或升级到此版本。有关说明，请转至 <block ref="b713007c96ed5cceca9ab6b5776ab58a" category="inline-link-macro-rx"></block>。</block>
@@ -7912,4 +7891,35 @@
   <block id="b039f508b07fa442d12ced167cdee4ab" category="paragraph"><block ref="b039f508b07fa442d12ced167cdee4ab" category="inline-link-macro-rx"></block></block>
   <block id="a400e1c221e8c3e8b80a81f5085a481d" category="paragraph"><block ref="a400e1c221e8c3e8b80a81f5085a481d" category="inline-link-macro-rx"></block></block>
   <block id="77adde3767ae2cc82097445aa8b15e86" category="list-text">采用冗余配置的两个10 Gbps标准以太网交换机(建议使用Cisco Nexus 31108、并支持Cisco Nexus 3000和9000型号)</block>
+  <block id="40ad3b682c80f313282c440b74ef7360" category="paragraph"><block ref="40ad3b682c80f313282c440b74ef7360" category="inline-link-rx"></block></block>
+  <block id="d1cdbd3c8324f3afbc5b420ce471feff" category="section-title">2022年7月</block>
+  <block id="f4b185ec676b1beb34726576b20e3951" category="list-text">容量小工具中现在提供了改进的集群数据精简率视觉效果</block>
+  <block id="451cf77b3f516b53f84c38860a146687" category="list-text">已将FC接口选项卡添加到网络接口页面</block>
+  <block id="5a2fc567d92a62161d2b6939225dc099" category="list-text">现在、使用通用的"新存储卷"任务创建新卷会将卷空间保证设置为none、并将Snapshot预留百分比设置为0%</block>
+  <block id="f4735a0179c438df4f0652a2213627a4" category="list-text">现在、编辑Snapshot策略任务下的注释字段为可选字段、不再是必需字段</block>
+  <block id="8666295a1715993c51aadd871206b296" category="list-text">提高了UI清单和流程编排的一致性</block>
+  <block id="c913ce3283ef4e82118b70e853725332" category="list-text">集群容量下的可见容量信息现在与System Manager一致</block>
+  <block id="351ddfe27ca97ad456ea7b228dc67218" category="list-text">已在新建Storage Virtual Machine任务下添加复选框、用于在创建新管理界面时显示所有参数以提高可用性</block>
+  <block id="ab652f6ea9944d5915c3894a6de4a64f" category="list-text">移动的协议与客户端以下的协议匹配、现在与System Manager保持一致</block>
+  <block id="f4e3ab18e9c0fc16b6bf62f0f2357c60" category="list-text">导出策略常规页面现在显示访问协议</block>
+  <block id="f44e0c940713ce3079a40ba9bc222f07" category="list-text">现在、已有条件地记录igroup删除</block>
+  <block id="fa4af406aa8e6bea78d3f4f656f199fe" category="list-text">在新存储NAS数据接口和新存储iSCSI数据接口下为NAS添加了"故障转移策略"和"自动恢复"参数</block>
+  <block id="5f5cca73b8e0b0dcf13ae37abd1b30a6" category="list-text">现在、如果未连接任何其他卷、"回滚新存储NAS智能卷"任务将删除导出策略</block>
+  <block id="85c1767724516ce4c530e386f6a8e04e" category="list-text">对智能卷和智能LUN任务进行了增强</block>
+  <block id="0de3d10d428301dc752a4aea634acb40" category="list-text">将启动程序连接到存储主机</block>
+  <block id="9fc1d1408b035b5f699e246b36f2e395" category="list-text">全新的NetApp存储光纤通道接口</block>
+  <block id="a5df94fc588067cf92394a3554329601" category="list-text">新的存储IP接口</block>
+  <block id="d7e057b4be4f5aec2f39a363e6970a26" category="list-text">新建存储LUN</block>
+  <block id="4c807515ded4b2b7b3cea9068a98c67c" category="list-text">新的存储LUN ID</block>
+  <block id="c6751b7723c681fbbc53d1ece3f78e57" category="list-text">新的NetApp存储NAS智能卷</block>
+  <block id="8221f154a0cd2642f264529279893b96" category="list-text">新的NetApp Storage Smart LUN</block>
+  <block id="e86a1c0d2603c82b6b81f234dae454af" category="list-text">新存储卷</block>
+  <block id="40f53794e58186747b2ca794fc115708" category="list-text">删除存储导出策略</block>
+  <block id="92deb106459eb050b785db2fe57cce48" category="list-text">删除存储主机</block>
+  <block id="bd400b36b257aae8e728e6440fee9fe6" category="list-text">删除存储LUN</block>
+  <block id="020226a8130f1d7d0a9df708c3d7b600" category="list-text">删除存储LUN ID</block>
+  <block id="93eafe4433d296a1dd07b95ce951c9a7" category="list-text">删除NetApp Storage Smart LUN</block>
+  <block id="b8a3a6101b5ada36c1e5927fd398157d" category="list-text">在部署后过程中、选择以下选项：</block>
+  <block id="05b3bc98db36aa487224a23de09ab3be" category="admonition">选择Intersight Assist时、请记下设备ID和款项申请代码、然后再继续操作。</block>
+  <block id="fd7b91f0228fe4adf25f7fca76314e8d" category="list-text">选择*中间视辅助*并完成以下步骤：</block>
 </blocks>

@@ -61,14 +61,12 @@ image:ci-qsg_image4.png["错误：缺少图形映像"]
 +
 安装过程将自动开始。安装可能需要长达一小时，具体取决于 Intersight.com 的带宽。在虚拟机启动后，安全站点也可能需要几秒钟的时间才能正常运行。
 
-.. 在部署后过程中，选择要安装的内容：
+.. 在部署后过程中、选择以下选项：
 +
-*** * 站点间连接的虚拟设备。 * 此部署需要连接回 Cisco 和站点间服务，以便更新和访问所需服务，从而使 Intersight.com 能够全面运行。
-*** * Intersight Private Virtual Appliance* 。此部署适用于在断开连接（空隙）模式下运行数据中心的环境。
 *** * Intersight Assist 。 * 通过此部署， SaaS 模式可以连接到 Cisco Intersight 。
 +
 
-NOTE: 如果选择 Intersight Assist ，请在继续操作之前记下设备 ID 和款项申请代码。
+NOTE: 选择Intersight Assist时、请记下设备ID和款项申请代码、然后再继续操作。
 
 +
 image:ci-qsg_image5.png["Intersight 部署选项的屏幕截图"]
@@ -76,7 +74,7 @@ image:ci-qsg_image5.png["Intersight 部署选项的屏幕截图"]
 
 
 .. 单击 * 继续 * 。
-.. 如果您选择了 * 中间视图协助 * ，请完成以下步骤：
+.. 选择*中间视辅助*并完成以下步骤：
 +
 ... 导航到您的 SaaS Intersight 帐户，网址为 https://intersight.com["https://intersight.com"^]。
 ... 单击 * 目标 * ， * Cisco Intersight Assist * ，然后单击 * 启动 * 。
