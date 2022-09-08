@@ -4,7 +4,7 @@ permalink: ontap-connector-for-intersight/index.html
 keywords: netapp, cisco, ontap, intersight, flexpod, infrastructure, solution, storage, compute, VMware, virtualization, monitor, orchestrate, automate 
 summary: NetApp 和 Cisco 合作提供 Cisco Intersight ，这是 FlexPod 生态系统的单一窗格视图。 
 ---
-= Cisco Intersight 与 NetApp ONTAP 存储：快速入门指南
+= 《Cisco Intersight与NetApp存储快速入门指南》
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -12,8 +12,6 @@ summary: NetApp 和 Cisco 合作提供 Cisco Intersight ，这是 FlexPod 生态
 :linkattrs: 
 :imagesdir: ./../media/
 
-
-NetApp 公司 Rachel Lithman 和 Jyh-Shing Chen
 
 与以下合作伙伴：image:cisco logo.png["错误：缺少图形映像"]
 

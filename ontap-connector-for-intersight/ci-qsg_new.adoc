@@ -17,6 +17,23 @@ summary: Cisco Intersight 推出了新版本，可为您提供新功能，增强
 
 
 
+== 2022年8月
+
+
+NOTE: 要确保与最新版本的兼容性和完整功能、需要升级到NetApp Active IQ Unified Manager 9.11 GA。有关与此版本相关的已知问题列表、请参见 <<Known Issues>>。
+
+* 已更新集群可用容量计算以匹配System Manager
+* 已更新集群常规页面、以隐藏性能指标摘要、直到填充性能数据为止
+* 修复了偶尔导致页面挂起的集群常规页面UI问题描述
+* 已将CIFS共享、CIFS服务、qtree和SVM SnapMirror策略添加到后端清单。
+* 已将共享和qtree添加到逻辑清单部分下的UI导航菜单中
+* 已从选定Storage VM中将共享添加为选项卡
+* 如果Storage VM已启用CIFS、则会在Storage VM的常规选项卡上添加CIFS服务信息
+* 添加了一个集群检查页面、可用于使用户验证NetApp存储系统的配置是否符合最佳实践
+
+
+
+
 == 2022年7月
 
 * 容量小工具中现在提供了改进的集群数据精简率视觉效果
@@ -88,4 +105,13 @@ NOTE: 为了确保与未来版本兼容并提供完整的功能，建议您将 N
 
 NOTE: 以上性能指标仅适用于通过 NetApp Active IQ Unified Manager 9.9 或更高版本监控的存储阵列。
 
+
+
+
+
+= 已知问题
+
+* 为了确保在数据收集过程中不会影响可忽略存储清单数据、必须从Active IQ Unified Manager (AIQUM)中删除任何不受支持的ONTAP 集群(即ONTAP 9.7P1)。
+* 要成功完成FlexPod 集成系统互操作性查询、所有声称的目标要求AIQUM的最低版本为9.11。
+* 如果使用FQDN将ONTAP 集群添加到AIQ-UM、则不会填充"存储清单检查"页面。用户必须使用IP地址将ONTAP 集群添加到AIQ-UM。
 

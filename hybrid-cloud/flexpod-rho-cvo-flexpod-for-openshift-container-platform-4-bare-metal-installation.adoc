@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/flexpod-rho-cvo-flexpod-for-openshift-container-platform-4-bare-metal-installation.html 
+keywords: platform 4, openshift, bare-metal, vmware, installation 
+summary: 本页介绍适用于OpenShift容器平台4的FlexPod 裸机的逻辑拓扑和安装。 
+---
+= 适用于OpenShift容器平台4的FlexPod 裸机安装
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-rho-cvo-solution-components.html["先前版本：解决方案 组件。"]
+
+要了解适用于OpenShift容器平台4的FlexPod 裸机设计、部署详细信息以及NetApp Astra Trident安装和配置、请参见 https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_iac_redhat_openshift.html["采用OpenShift的FlexPod Cisco经验证的设计和部署指南(CVD)"^]。此CVD涵盖使用Ansible的FlexPod 和OpenShift容器平台部署。CVD还提供了有关准备工作节点、Astra Trident安装、存储后端和存储类配置的详细信息、这些配置是部署和配置Astra控制中心的几个前提条件。
+
+下图显示了FlexPod 上的OpenShift容器平台4裸机。
+
+image:flexpod-rho-cvo-image8.png["错误：缺少图形映像"]
+
+
+
+== VMware安装上的适用于OpenShift容器平台4的FlexPod
+
+有关在运行VMware vSphere的FlexPod 上部署Red Hat OpenShift容器平台4的详细信息、请参见 https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_openshift_platform_4.html["适用于OpenShift容器平台的FlexPod 数据中心4."^]。
+
+下图显示了vSphere上适用于OpenShift容器平台4的FlexPod。
+
+image:flexpod-rho-cvo-image9.png["错误：缺少图形映像"]
+
+link:flexpod-rho-cvo-red-hat-openshift-on-aws.html["接下来：在AWS上运行Red Hat OpenShift。"]

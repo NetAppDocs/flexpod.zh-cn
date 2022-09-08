@@ -19,7 +19,7 @@ summary: 安装 Cisco Intersight Assist 后，您可以申请 NetApp 存储和�
 
 NOTE: 确保已启用 NetApp Active IQ Unified Manager （ AIQ UM ） API 网关。
 
-导航到 * 设置 > 常规 > 功能设置 * 。
+在NetApp IQ Unified Manager中、导航到*设置>常规>功能设置*。
 
 image:ci-qsg_image7.png["已启用 NetApp AIQ UM API 网关的屏幕截图"]
 

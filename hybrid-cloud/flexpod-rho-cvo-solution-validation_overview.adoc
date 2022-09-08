@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/flexpod-rho-cvo-solution-validation_overview.html 
+keywords: validation, overview, restoring, application mobility, 
+summary: 在本节中、我们将回顾解决方案 以及各种经验证的使用情形。 
+---
+= 概述
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-rho-cvo-astra-control-center-installation-on-openshift-container-platform.html["先前版本：在OpenShift容器平台上安装Astra Control Center。"]
+
+在本节中、我们将回顾解决方案 以及一些使用情形：
+
+* 将有状态应用程序从远程备份还原到云中运行的另一个OpenShift集群。
+* 将有状态应用程序还原到OpenShift集群中的同一命名空间。
+* 通过从一个FlexPod 系统(OpenShift容器平台裸机)克隆到另一个FlexPod 系统(VMware上的OpenShift容器平台)来实现应用程序移动性。
+
+
+值得注意的是、此解决方案 仅验证了少数使用情形。此验证并不代表Astra控制中心的全部功能。
+
+link:flexpod-rho-cvo-application-recovery-with-remote-backups.html["接下来：使用远程备份恢复应用程序。"]

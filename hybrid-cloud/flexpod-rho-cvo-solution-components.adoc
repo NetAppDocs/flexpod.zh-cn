@@ -1,0 +1,294 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/flexpod-rho-cvo-solution-components.html 
+keywords: astra control, trident, storage backend, cloud central, cloud manager, Active IQ Unified Manager 
+summary: 本节介绍为此解决方案 提供支持的各种组件。 
+---
+= 解决方案组件
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-rho-cvo-solution-overview.html["上一步：解决方案概述。"]
+
+
+
+== FlexPod
+
+FlexPod 是一组定义的硬件和软件，可为虚拟化和非虚拟化解决方案奠定集成基础。FlexPod 包括NetApp ONTAP 存储、Cisco Nexus网络、Cisco MDS存储网络、Cisco统一计算系统(Cisco UCS)。该设计非常灵活、可以将网络、计算和存储安装到一个数据中心机架中、也可以根据客户的数据中心设计进行部署。端口密度允许网络组件容纳多种配置。
+
+
+
+== Astra Control
+
+Astra Control为公有 云和内部环境中托管的云原生应用程序提供应用程序感知型数据保护服务。Astra Control可为在Kubernetes上运行的容器化应用程序提供数据保护、灾难恢复和迁移功能。
+
+
+
+=== 功能
+
+Astra Control 为 Kubernetes 应用程序数据生命周期管理提供了关键功能：
+
+* 自动管理永久性存储
+* 创建应用程序一致的按需快照和备份
+* 自动执行策略驱动的快照和备份操作
+* 在混合云环境中将应用程序和关联数据从一个Kubernetes集群迁移到另一个集群
+* 将应用程序克隆到同一个K8s集群或另一个K8s集群
+* 直观显示应用程序保护状态
+* 提供图形用户界面和完整的REST API列表、用于利用现有内部工具实施所有保护工作流。
+
+
+Astra Control为容器化应用程序提供了一个单一的管理平台可视化视图、其中包括对在Kubernetes集群上创建的相关资源的深入了解。您可以使用一个门户查看所有云或所有数据中心中的所有集群、所有应用程序。您可以在所有环境(内部或公有 云)中使用Astra Control API来实施数据管理工作流。
+
+下图显示了Astra Control功能。
+
+image:flexpod-rho-cvo-image4.png["错误：缺少图形映像"]
+
+
+
+=== Astra Control消费模式
+
+Astra Control有两种消费模式：
+
+* * Astra Control Service。* NetApp托管的一项完全托管服务、可在Google Kubernetes Engine (GKEE) Azure Kubernetes Service (AKS)中为Kubernetes集群提供应用程序感知型数据管理。
+* * Astra Control Center。*自管理软件、可为内部和混合云环境中运行的Kubernetes集群提供应用程序感知型数据管理。
+
+
+本技术报告利用Astra控制中心管理Kubernetes上运行的云原生应用程序。
+
+下图显示了Astra Control架构。
+
+image:flexpod-rho-cvo-image5.png["错误：缺少图形映像"]
+
+
+
+== Astra Trident
+
+Astra Trident是一款完全受支持的开源存储编排程序、适用于容器和Kubernetes分发版。它从一开始就经过精心设计、可帮助您使用行业标准界面(如)满足容器化应用程序的持久性需求 https://kubernetes-csi.github.io/docs/introduction.html["容器存储接口(CSI)"^]。借助Astra Trident、微服务和容器化应用程序可以利用NetApp存储系统产品组合提供的企业级存储服务。
+
+Astra Trident作为Pod部署在Kubernetes集群上、并为您的Kubernetes工作负载提供动态存储编排服务。它可以帮助您的容器化应用程序快速轻松地使用NetApp广泛的产品组合中的永久性存储、其中包括NetApp ONTAP (NetApp AFF 、NetApp FAS 、NetApp ONTAP Select 、云、 和适用于NetApp ONTAP 的Amazon FSx)、NetApp Element 软件(NetApp SolidFire)以及Azure NetApp Files 服务、Google Cloud上的云卷服务和AWS上的云卷服务。在FlexPod 环境中、Astra Trident用于为容器动态配置和管理永久性卷、这些容器由NetApp FlexVol 卷和ONTAP 存储平台(例如NetApp AFF 和FAS 系统以及Cloud Volumes ONTAP)上托管的LUN提供支持。Trident在实施Astra Control提供的应用程序保护方案方面也发挥着关键作用。有关Astra Trident的详细信息、请参见 https://docs.netapp.com/us-en/trident/index.html["Astra Trident文档。"^]
+
+
+
+== 存储后端
+
+要使用Astra Trident、您需要受支持的存储后端。Trident后端定义了Trident与存储系统之间的关系。它会告诉Trident如何与该存储系统通信、以及Trident如何从该存储系统配置卷。Trident将自动从后端提供符合存储类定义的要求的存储池。
+
+* ONTAP AFF 和 FAS 存储后端。作为存储软件和硬件平台、ONTAP 可提供核心存储服务、支持多个存储访问协议以及存储管理功能、例如NetApp Snapshot副本和镜像。
+* Cloud Volumes ONTAP 存储后端
+* https://docs.netapp.com/us-en/astra-data-store/index.html["Astra 数据存储"^] 存储后端
+
+
+
+
+== NetApp Cloud Volumes ONTAP
+
+NetApp Cloud Volumes ONTAP 是一款软件定义的存储产品、可为文件和块工作负载提供高级数据管理。借助Cloud Volumes ONTAP 、您可以优化云存储成本并提高应用程序性能、同时增强数据保护、安全性和合规性。
+
+主要优势包括：
+
+* 利用内置的重复数据删除，数据压缩，精简配置和克隆功能最大限度地降低存储成本。
+* 在云环境发生故障时，确保企业级可靠性和持续运行。
+* Cloud Volumes ONTAP 利用NetApp行业领先的复制技术SnapMirror将内部数据复制到云中、因此可以轻松地为多种使用情形提供二级副本。
+* Cloud Volumes ONTAP 还与 Cloud Backup Service 集成，提供备份和还原功能，以保护云数据并对其进行长期归档。
+* 按需在高性能和低性能存储池之间切换，而无需使应用程序脱机。
+* 使用NetApp SnapCenter 确保Snapshot副本的一致性。
+* Cloud Volumes ONTAP 支持数据加密，并提供防病毒和勒索软件保护。
+* 与 Cloud Data sense 集成有助于您了解数据环境并识别敏感数据。
+
+
+
+
+== Cloud Central
+
+Cloud Central提供了一个中央位置、用于访问和管理NetApp云数据服务。通过这些服务、您可以在云中运行关键应用程序、创建自动化灾难恢复站点、备份数据以及跨多个云有效迁移和控制数据。有关详细信息，请参见 https://docs.netapp.com/us-en/occm35/concept_cloud_central.html["Cloud Central。"^]
+
+
+
+== Cloud Manager
+
+Cloud Manager是一款基于SaaS的企业级管理平台、IT专家和云架构师可以利用NetApp的云解决方案集中管理其混合多云基础架构。它提供了一个集中式系统、用于查看和管理内部和云存储、支持混合、多个云提供商和客户。有关详细信息，请参见 https://docs.netapp.com/us-en/occm/index.html["Cloud Manager"^]。
+
+
+
+== 连接器
+
+Connector是一个实例、可使Cloud Manager管理公有 云环境中的资源和流程。要使用Cloud Manager提供的许多功能、需要使用Connector。连接器可以部署在云或内部网络中。
+
+连接器在以下位置受支持：
+
+* AWS
+* Microsoft Azure
+* Google Cloud
+* 在您的内部环境中
+
+
+要了解有关Connector的更多信息、请参见 https://docs.netapp.com/us-en/occm/concept_connectors.html["此链接。"^]
+
+
+
+== NetApp Cloud Insights
+
+Cloud Insights 是一款NetApp云基础架构监控工具、可用于监控由Astra控制中心管理的Kubernetes集群的性能和利用率。Cloud Insights 将存储使用量与工作负载相关联。在 Astra 控制中心中启用 Cloud Insights 连接后，遥测信息将显示在 Astra 控制中心 UI 页面中。
+
+
+
+== NetApp Active IQ Unified Manager
+
+借助NetApp Active IQ Unified Manager 、您可以通过一个经过重新设计的直观界面监控ONTAP 存储集群、该界面可通过社区智慧和AI分析提供智能。它可以全面洞察存储环境及其运行的虚拟机(VM)的运行状况、性能和主动式能力。当存储基础架构发生问题描述 时、Unified Manager可以通知您问题描述 的详细信息、以帮助您确定根发生原因。通过VM信息板、您可以查看VM的性能统计信息、以便调查从VMware vSphere主机到网络最后再到存储的整个I/O路径。某些事件还提供了可用于更正问题描述 的补救措施。您可以为事件配置自定义警报、以便在发生问题时、通过电子邮件和SNMP陷阱通知您。Active IQ Unified Manager 可以预测容量和使用趋势、以便在出现问题之前主动采取行动、从而防止做出长期可能导致其他问题的被动短期决策、从而为用户的存储需求进行规划。
+
+
+
+== Cisco Intersight
+
+Cisco Intersight是一个SaaS平台、可为传统和云原生应用程序和基础架构提供智能自动化、可观察性和优化功能。该平台可帮助IT团队推动变革、并提供专为混合云设计的运营模式。
+
+Cisco Intersight具有以下优势：
+
+* *交付速度更快。*由于采用基于敏捷性的软件开发模式、可从云或客户数据中心以服务的形式交付、并经常进行更新和持续创新。这样、客户就可以专注于加快业务部门的交付速度。
+* *简化操作。*通过使用一个安全的SaaS交付工具以及通用清单、身份验证和API在整个堆栈和所有位置之间运行、简化操作、消除团队之间的孤岛。从内部管理物理服务器和虚拟机管理程序到虚拟机、K8s、无服务器、自动化、 在内部和公有 云之间实现优化和成本控制。
+* *持续优化。*利用Cisco Intersight在每一层提供的智能以及Cisco TAC持续优化您的环境。这种智能功能可转换为建议的可自动操作、因此您可以实时适应每个变化：从移动工作负载和监控物理服务器的运行状况到自动调整K8s集群大小、再到您所使用的公有 云的成本降低建议。
+
+
+Cisco Intersight支持两种管理操作模式：UCSM受管模式(Umm)和Intersight受管模式(IMM)。在首次设置互联阵列期间、您可以为光纤连接的Cisco UCS系统选择原生 Umm或IMM。在此解决方案 中、使用原生 Umm。
+
+下图显示了Cisco Intersight信息板。
+
+image:flexpod-rho-cvo-image6.png["错误：缺少图形映像"]
+
+
+
+== Red Hat OpenShift 容器平台
+
+Red Hat OpenShift容器平台是一个容器应用程序平台、它将CRI-O和Kubernetes汇集在一起、并提供一个API和Web界面来管理这些服务。CRI-O是Kubernetes容器运行时接口(CRI)的实施、可使用与Open Container Initiative (OCI)兼容的运行时。它是使用Docker作为Kubernetes运行时的轻型替代方案。
+
+OpenShift容器平台允许客户创建和管理容器。容器是独立的进程、在其自身环境中运行、独立于操作系统和底层基础架构。OpenShift容器平台有助于开发、部署和管理基于容器的应用程序。它提供了一个自助服务平台、可按需创建、修改和部署应用程序、从而加快开发和发布生命周期。OpenShift容器平台具有一个基于微服务的架构、该架构包含可协同工作的小型分离单元。它在Kubernetes集群上运行、其中包含有关对象的数据存储在etcd中、etcd是一个可靠的集群模式密钥值存储。
+
+下图概述了Red Hat OpenShift容器平台。
+
+image:flexpod-rho-cvo-image7.png["错误：缺少图形映像"]
+
+
+
+=== Kubernetes基础架构
+
+在OpenShift容器平台中、Kubernetes跨一组CRI-O运行时主机管理容器化应用程序、并提供部署、维护和应用程序扩展机制。CRI-O服务软件包、实例化和运行容器化应用程序。
+
+Kubernetes集群由一个或多个主节点和一组工作节点组成。此解决方案 设计包括硬件和软件堆栈中的高可用性(HA)功能。Kubernetes集群设计为在HA模式下运行、其中包含三个主节点和至少两个辅助节点、以帮助确保集群不会出现单点故障。
+
+
+
+=== Red Hat核心操作系统
+
+OpenShift容器平台使用Red Hat Enterprise Linux CoreOS (RHCOS)、这是一种面向容器的操作系统、它结合了CoreOS和Red Hat Atomic Host操作系统的一些最佳特性和功能。RHCOS专门为从OpenShift容器平台运行容器化应用程序而设计、可与新工具配合使用、以实现快速安装、基于操作员的管理和简化的升级。
+
+RHCOS包括以下功能：
+
+* IGNITION、OpenShift容器平台将其用作首次启动系统配置、用于首次启动和配置计算机。
+* CRI-O是一种Kubernetes原生 容器运行时实施、它与操作系统紧密集成、可提供高效且优化的Kubernetes体验。CRI-O可提供运行、停止和重新启动容器的功能。它完全取代了OpenShift容器平台3中使用的Docker容器引擎。
+* Kubernetes的主节点代理Kubelet负责启动和监控容器。
+
+
+
+
+== VMware vSphere 7.0
+
+VMware vSphere是一个虚拟化平台、可将大量基础架构(包括CPU、存储和网络等资源)作为一个无缝、多功能且动态的操作环境进行全面管理。与管理单个计算机的传统操作系统不同、VMware vSphere可将整个数据中心的基础架构聚合在一起、从而创建一个具有资源的动力中心、这些资源可以快速动态地分配给任何需要的应用程序。
+
+有关详细信息，请参见 https://www.vmware.com/products/vsphere.html["VMware vSphere"^]。
+
+
+
+=== VMware vSphere vCenter
+
+VMware vCenter Server可通过一个控制台统一管理所有主机和VM、并对集群、主机和VM进行聚合性能监控。通过VMware vCenter Server、管理员可以深入了解计算集群、主机、虚拟机、存储、子操作系统、 虚拟基础架构的其他关键组件。VMware vCenter可管理VMware vSphere环境中提供的丰富功能。
+
+
+
+== 硬件和软件版本
+
+可以将此解决方案 扩展到运行中定义的受支持软件、固件和硬件版本的任何FlexPod 环境 http://support.netapp.com/matrix/["NetApp 互操作性表工具"^] 和 https://www.cisco.com/web/techdoc/ucs/interoperability/matrix/matrix.html["Cisco UCS硬件兼容性列表。"^] OpenShift集群以裸机方式安装在FlexPod 和VMware vSphere上。
+
+要管理多个OpenShift (K8s)集群、只需要一个Astra控制中心实例、而每个OpenShift集群上都安装了Trident CSI。Astra控制中心可以安装在其中任何一个OpenShift集群上。在此解决方案 中、Astra控制中心安装在OpenShift裸机集群上。
+
+下表列出了OpenShift的FlexPod 硬件和软件版本。
+
+|===
+| 组件 | 产品 | version 
+
+
+| 计算 | Cisco UCS互联阵列6454 | 4.1 (3c) 
+
+
+|  | Cisco UCS B200 M5服务器 | 4.1 (3c) 
+
+
+| 网络 | Cisco Nexus 9336C-x2 NX-OS | 9.3 (8) 
+
+
+| 存储 | NetApp AFF A700 | 9.11.1 
+
+
+|  | NetApp Astra 控制中心 | 22.04.0 
+
+
+|  | NetApp Astra Trident CSI插件 | 22.04.0 
+
+
+|  | NetApp Active IQ Unified Manager | 9.11 
+
+
+| 软件 | VMware ESXi nenic 以太网驱动程序 | 1.0.35.0 
+
+
+|  | vSphere ESXi | 7.0 (U2) 
+
+
+|  | VMware vCenter设备 | 7.0 U2b 
+
+
+|  | Cisco Intersight Assist虚拟设备 | 1.0.9-342 
+
+
+|  | OpenShift容器平台 | 4.9. 
+
+
+|  | OpenShift容器平台主节点 | RHCOS 4.9 
+
+
+|  | OpenShift容器平台工作节点 | RHCOS 4.9 
+|===
+下表列出了AWS上OpenShift的软件版本。
+
+|===
+| 组件 | 产品 | version 
+
+
+| 计算 | 主实例类型：m5.xlarge | 不适用 
+
+
+|  | 员工实例类型：m5.large | 不适用 
+
+
+| 网络 | 虚拟私有云传输网关 | 不适用 
+
+
+| 存储 | NetApp Cloud Volumes ONTAP | 9.11.1 
+
+
+|  | NetApp Astra Trident CSI插件 | 22.04.0 
+
+
+| 软件 | OpenShift容器平台 | 4.9. 
+
+
+|  | OpenShift容器平台主节点 | RHCOS 4.9 
+
+
+|  | OpenShift容器平台工作节点 | RHCOS 4.9 
+|===
+link:flexpod-rho-cvo-flexpod-for-openshift-container-platform-4-bare-metal-installation.html["接下来：适用于OpenShift容器平台4的FlexPod 裸机安装。"]

@@ -1,0 +1,404 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/flexpod-rho-cvo-astra-control-center-installation-on-openshift-container-platform.html 
+keywords: environment requirements, Application management, licensing, Namespaces, StorageClass, Kubernetes resources 
+summary: 您可以将Astra控制中心安装在FlexPod 上运行的OpenShift集群上、也可以安装在具有Cloud Volumes ONTAP 存储后端的AWS上。在此解决方案 中、Astra控制中心部署在OpenShift裸机集群上。 
+---
+= 在OpenShift容器平台上安装Astra Control Center
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-rho-cvo-netapp-cloud-volumes-ontap.html["先前版本：NetApp Cloud Volumes ONTAP。"]
+
+您可以将Astra控制中心安装在FlexPod 上运行的OpenShift集群上、也可以安装在具有Cloud Volumes ONTAP 存储后端的AWS上。在此解决方案 中、Astra控制中心部署在OpenShift裸机集群上。
+
+可以使用所述的标准过程安装Astra控制中心 https://docs.netapp.com/us-en/astra-control-center/get-started/install_acc.html["此处"^] 或从Red Hat OpenShift OperatorHub获取。Astra控制操作员是Red Hat认证的操作员。在此解决方案 中、使用Red Hat OperatorHub安装Astra控制中心。
+
+
+
+== 环境要求
+
+* Astra控制中心支持多个Kubernetes分发版；对于Red Hat OpenShift、支持的版本包括Red Hat OpenShift容器平台4.8或4.9。
+* 除了环境和最终用户的应用程序资源要求之外、Astra控制中心还需要以下资源：
+
+
+|===
+| 组件 | 要求 
+
+
+| 存储后端容量 | 至少500 GB可用 
+
+
+| 工作节点 | 至少3个辅助节点、每个节点具有4个CPU核心和12 GB RAM 
+
+
+| 完全限定域名(FQDN)地址 | Astra 控制中心的 FQDN 地址 
+
+
+| Astra Trident | 已安装并配置 Astra Trident 21.04 或更高版本 
+
+
+| 入口控制器或负载平衡器 | 配置入口控制器以使用URL或负载平衡器公开Astra控制中心、以提供IP地址、并将其解析为FQDN 
+|===
+* 您必须具有可将Astra Control Center构建映像推送到的现有私有映像注册表。您需要提供用于上传映像的映像注册表的URL。
+
+
+
+NOTE: 执行某些工作流时会提取某些映像、并在必要时创建和销毁容器。
+
+* Astra 控制中心要求创建一个存储类并将其设置为默认存储类。Astra 控制中心支持由 Astra Trident 提供的以下 ONTAP 驱动程序：
++
+** ontap-NAS
+** ontap-nas-flexgroup
+** ontap-san
+** ontap-san-economy.
+
+
+
+
+
+NOTE: 我们假设已部署的OpenShift集群安装了Astra Trident并配置了ONTAP 后端、同时还定义了默认存储类。
+
+* 对于OpenShift环境中的应用程序克隆、Astra Control Center需要允许OpenShift挂载卷并更改文件所有权。要修改ONTAP 导出策略以允许执行这些操作、请运行以下命令：
+
+
+....
+export-policy rule modify -vserver <storage virtual machine name> -policyname <policy name> -ruleindex 1 -superuser sys
+export-policy rule modify -vserver <storage virtual machine name> -policyname <policy name> -ruleindex 1 -anon 65534
+....
+
+NOTE: 要将第二个OpenShift操作环境添加为托管计算资源、请确保已启用Astra Trident卷快照功能。要使用Astra Trident启用和测试卷快照、请参见官方信息 https://docs.netapp.com/us-en/trident/trident-use/vol-snapshots.html["Astra Trident说明"^]。
+
+* 答 https://docs.netapp.com/us-en/trident/trident-use/vol-snapshots.html["VolumeSnapClass"^] 应在管理应用程序的所有Kubernetes集群上进行配置。这也可能包括安装了Astra控制中心的K8s集群。Astra控制中心可以管理运行该控制中心的K8s集群上的应用程序。
+
+
+
+
+=== 应用程序管理要求
+
+* *许可。*要使用Astra控制中心管理应用程序、您需要获得Astra控制中心许可证。
+* *命名空间。*命名空间是可由Astra控制中心作为应用程序进行管理的最大实体。您可以选择根据现有命名空间中的应用程序标签和自定义标签筛选出组件、并将部分资源作为应用程序进行管理。
+* *存储类。*如果您安装的应用程序明确设置了StorageClass、并且需要克隆该应用程序、则克隆操作的目标集群必须具有最初指定的StorageClass。将显式设置了StorageClass的应用程序克隆到不具有相同StorageClass的集群失败。
+* * Kubernetes Resources。*使用非Astra Control捕获的Kubernetes资源的应用程序可能无法提供完整的应用程序数据管理功能。Astra Control可以捕获以下Kubernetes资源：
+
+
+|===
+| Kubernetes资源 |  |  
+
+
+| ClusterRole | ClusterRoleBinding. | 配置映射 
+
+
+| 自定义资源定义 | 自定义资源 | cronjob 
+
+
+| DemonSet | HorizontalPodAutoscaler | 传入 
+
+
+| DeploymentConfig | MutatingWebhook | PersistentVolumeClaim 
+
+
+| POD | PodDisruptionBuget | 播客模板 
+
+
+| 网络策略 | ReplicaSet | Role 
+
+
+| RoleBinding. | 路由 | 机密 
+
+
+| 验证 Webhook |  |  
+|===
+
+
+== 使用 OpenShift OperatorHub 安装 Astra 控制中心
+
+以下操作步骤 将使用Red Hat OperatorHub安装Astra控制中心。在此解决方案 中、Astra控制中心安装在运行于FlexPod 上的裸机OpenShift集群上。
+
+. 从下载 Astra 控制中心捆绑包（`Astra-control-center-[version].tar.gz` ） https://mysupport.netapp.com/site/products/all/details/astra-control-center/downloads-tab["NetApp 支持站点"^]。
+. 从下载Astra控制中心证书和密钥的.zip文件 https://mysupport.netapp.com/site/products/all/details/astra-control-center/downloads-tab["NetApp 支持站点"^]。
+. 验证捆绑包的签名。
++
+....
+openssl dgst -sha256 -verify astra-control-center[version].pub -signature <astra-control-center[version].sig astra-control-center[version].tar.gz
+....
+. 提取Astra映像。
++
+....
+tar -vxzf astra-control-center-[version].tar.gz
+....
+. 更改为 Astra 目录。
++
+....
+cd astra-control-center-[version]
+....
+. 将映像添加到本地注册表。
++
+....
+For Docker:
+docker login [your_registry_path]OR
+For Podman:
+podman login [your_registry_path]
+....
+. 使用相应的脚本加载映像、标记映像并将其推送到本地注册表。
++
+对于 Docker ：
+
++
+....
+export REGISTRY=[Docker_registry_path]
+for astraImageFile in $(ls images/*.tar) ; do
+  # Load to local cache. And store the name of the loaded image trimming the 'Loaded images: '
+  astraImage=$(docker load --input ${astraImageFile} | sed 's/Loaded image: //')
+  astraImage=$(echo ${astraImage} | sed 's!localhost/!!')
+  # Tag with local image repo.
+  docker tag ${astraImage} ${REGISTRY}/${astraImage}
+  # Push to the local repo.
+  docker push ${REGISTRY}/${astraImage}
+done
+....
++
+对于 Podman ：
+
++
+....
+export REGISTRY=[Registry_path]
+for astraImageFile in $(ls images/*.tar) ; do
+  # Load to local cache. And store the name of the loaded image trimming the 'Loaded images: '
+  astraImage=$(podman load --input ${astraImageFile} | sed 's/Loaded image(s): //')
+  astraImage=$(echo ${astraImage} | sed 's!localhost/!!')
+  # Tag with local image repo.
+  podman tag ${astraImage} ${REGISTRY}/${astraImage}
+  # Push to the local repo.
+  podman push ${REGISTRY}/${astraImage}
+done
+....
+. 登录到裸机OpenShift集群Web控制台。从侧面菜单中、选择Operators > OperatorHub。输入`Astra`以列出`NetApp-Acc-operator`。
++
+image:flexpod-rho-cvo-image11.png["错误：缺少图形映像"]
+
++
+
+NOTE: `NetApp-Acc-operator`是一个经过认证的Red Hat OpenShift操作员、并列在OperatorHub目录下。
+
+. 选择`NetApp-Acc-operator`、然后单击安装。
++
+image:flexpod-rho-cvo-image12.png["错误：缺少图形映像"]
+
+. 选择相应的选项、然后单击安装。
++
+image:flexpod-rho-cvo-image13.png["错误：缺少图形映像"]
+
+. 批准安装并等待操作员安装。
++
+image:flexpod-rho-cvo-image14.png["错误：缺少图形映像"]
+
+. 在此阶段、操作员已成功安装并准备就绪、可以使用。单击View Operator开始安装Astra Control Center。
++
+image:flexpod-rho-cvo-image15.png["错误：缺少图形映像"]
+
+. 在安装Astra控制中心之前、请创建Pull密钥、以便从先前推送的Docker注册表下载Astra映像。
++
+image:flexpod-rho-cvo-image16.png["错误：缺少图形映像"]
+
+. 要从Docker私有repod中提取Astra控制中心映像、请在`NetApp-Acc-operator`命名空间中创建一个密钥。此机密名称将在Astra控制中心YAML清单中稍后提供。
++
+image:flexpod-rho-cvo-image17.png["错误：缺少图形映像"]
+
+. 从侧面菜单中、选择Operators > Installed Operators、然后单击提供的API部分下的Create Instance。
++
+image:flexpod-rho-cvo-image18.png["错误：缺少图形映像"]
+
+. 填写创建AstraControlCenter表单。提供名称、Astra地址和Astra版本。
++
+image:flexpod-rho-cvo-image19.png["错误：缺少图形映像"]
+
++
+
+NOTE: 在Astra Address下、提供Astra控制中心的FQDN地址。此地址用于访问Astra控制中心Web控制台。FQDN还应解析为可访问的IP网络、并应在DNS中进行配置。
+
+. 输入帐户名称、电子邮件地址、管理员姓氏、并保留默认卷回收策略。如果使用的是负载平衡器、请将"传入类型"设置为`AccTraefik`。否则、请为`In防护.Controller`选择Generic。在映像注册表下、输入容器映像注册表路径和密钥。
++
+image:flexpod-rho-cvo-image20.png["错误：缺少图形映像"]
+
++
+
+NOTE: 在此解决方案 中、使用了金属负载平衡器。因此、入口类型为AccTraefik。这会将Astra控制中心traefik网关公开为loadbalancer类型的Kubernetes服务。
+
+. 输入管理员的名字、配置资源扩展并提供存储类。单击创建。
++
+image:flexpod-rho-cvo-image21.png["错误：缺少图形映像"]
+
++
+Astra控制中心实例的状态应从"Deploying (部署)"更改为"Ready (就绪)"。
+
++
+image:flexpod-rho-cvo-image22.png["错误：缺少图形映像"]
+
+. 确认所有系统组件均已成功安装、并且所有Pod均已运行。
++
+....
+root@abhinav-ansible# oc get pods -n netapp-acc-operator
+NAME                                               READY   STATUS    RESTARTS   AGE
+acc-helm-repo-77745b49b5-7zg2v                     1/1     Running   0          10m
+acc-operator-controller-manager-5c656c44c6-tqnmn   2/2     Running   0          13m
+activity-589c6d59f4-x2sfs                          1/1     Running   0          6m4s
+api-token-authentication-4q5lj                     1/1     Running   0          5m26s
+api-token-authentication-pzptd                     1/1     Running   0          5m27s
+api-token-authentication-tbtg6                     1/1     Running   0          5m27s
+asup-669df8d49-qps54                               1/1     Running   0          5m26s
+authentication-5867c5f56f-dnpp2                    1/1     Running   0          3m54s
+bucketservice-85495bc475-5zcc5                     1/1     Running   0          5m55s
+cert-manager-67f486bbc6-txhh6                      1/1     Running   0          9m5s
+cert-manager-cainjector-75959db744-4l5p5           1/1     Running   0          9m6s
+cert-manager-webhook-765556b869-g6wdf              1/1     Running   0          9m6s
+cloud-extension-5d595f85f-txrfl                    1/1     Running   0          5m27s
+cloud-insights-service-674649567b-5s4wd            1/1     Running   0          5m49s
+composite-compute-6b58d48c69-46vhc                 1/1     Running   0          6m11s
+composite-volume-6d447fd959-chnrt                  1/1     Running   0          5m27s
+credentials-66668f8ddd-8qc5b                       1/1     Running   0          7m20s
+entitlement-fd6fc5c58-wxnmh                        1/1     Running   0          6m20s
+features-756bbb7c7c-rgcrm                          1/1     Running   0          5m26s
+fluent-bit-ds-278pg                                1/1     Running   0          3m35s
+fluent-bit-ds-5pqc6                                1/1     Running   0          3m35s
+fluent-bit-ds-8l7cq                                1/1     Running   0          3m35s
+fluent-bit-ds-9qbft                                1/1     Running   0          3m35s
+fluent-bit-ds-nj475                                1/1     Running   0          3m35s
+fluent-bit-ds-x9pd8                                1/1     Running   0          3m35s
+graphql-server-698d6f4bf-kftwc                     1/1     Running   0          3m20s
+identity-5d4f4c87c9-wjz6c                          1/1     Running   0          6m27s
+influxdb2-0                                        1/1     Running   0          9m33s
+krakend-657d44bf54-8cb56                           1/1     Running   0          3m21s
+license-594bbdc-rghdg                              1/1     Running   0          6m28s
+login-ui-6c65fbbbd4-jg8wz                          1/1     Running   0          3m17s
+loki-0                                             1/1     Running   0          9m30s
+metrics-facade-75575f69d7-hnlk6                    1/1     Running   0          6m10s
+monitoring-operator-65dff79cfb-z78vk               2/2     Running   0          3m47s
+nats-0                                             1/1     Running   0          10m
+nats-1                                             1/1     Running   0          9m43s
+nats-2                                             1/1     Running   0          9m23s
+nautilus-7bb469f857-4hlc6                          1/1     Running   0          6m3s
+nautilus-7bb469f857-vz94m                          1/1     Running   0          4m42s
+openapi-8586db4bcd-gwwvf                           1/1     Running   0          5m41s
+packages-6bdb949cfb-nrq8l                          1/1     Running   0          6m35s
+polaris-consul-consul-server-0                     1/1     Running   0          9m22s
+polaris-consul-consul-server-1                     1/1     Running   0          9m22s
+polaris-consul-consul-server-2                     1/1     Running   0          9m22s
+polaris-mongodb-0                                  2/2     Running   0          9m22s
+polaris-mongodb-1                                  2/2     Running   0          8m58s
+polaris-mongodb-2                                  2/2     Running   0          8m34s
+polaris-ui-5df7687dbd-trcnf                        1/1     Running   0          3m18s
+polaris-vault-0                                    1/1     Running   0          9m18s
+polaris-vault-1                                    1/1     Running   0          9m18s
+polaris-vault-2                                    1/1     Running   0          9m18s
+public-metrics-7b96476f64-j88bw                    1/1     Running   0          5m48s
+storage-backend-metrics-5fd6d7cd9c-vcb4j           1/1     Running   0          5m59s
+storage-provider-bb85ff965-m7qrq                   1/1     Running   0          5m25s
+telegraf-ds-4zqgz                                  1/1     Running   0          3m36s
+telegraf-ds-cp9x4                                  1/1     Running   0          3m36s
+telegraf-ds-h4n59                                  1/1     Running   0          3m36s
+telegraf-ds-jnp2q                                  1/1     Running   0          3m36s
+telegraf-ds-pdz5j                                  1/1     Running   0          3m36s
+telegraf-ds-znqtp                                  1/1     Running   0          3m36s
+telegraf-rs-rt64j                                  1/1     Running   0          3m36s
+telemetry-service-7dd9c74bfc-sfkzt                 1/1     Running   0          6m19s
+tenancy-d878b7fb6-wf8x9                            1/1     Running   0          6m37s
+traefik-6548496576-5v2g6                           1/1     Running   0          98s
+traefik-6548496576-g82pq                           1/1     Running   0          3m8s
+traefik-6548496576-psn49                           1/1     Running   0          38s
+traefik-6548496576-qrkfd                           1/1     Running   0          2m53s
+traefik-6548496576-srs6r                           1/1     Running   0          98s
+trident-svc-679856c67-78kbt                        1/1     Running   0          5m27s
+vault-controller-747d664964-xmn6c                  1/1     Running   0          7m37s
+....
++
+
+NOTE: 每个POD的状态应为"runned"。部署系统Pod可能需要几分钟的时间。
+
+. 所有Pod运行时、运行以下命令以检索一次性密码。在输出的YAML版本中、检查`status.deploymentState`字段中的已部署值、然后复制`status.uuid`值。密码为`Acc-`、后跟UUID值。(Acc-UUID)。
++
+....
+root@abhinav-ansible# oc get acc -o yaml -n netapp-acc-operator
+....
+. 在浏览器中、使用您提供的FQDN导航到URL。
+. 使用默认用户名(即安装期间提供的电子邮件地址)和一次性密码Acc-UUID登录。
++
+image:flexpod-rho-cvo-image23.png["错误：缺少图形映像"]
+
++
+
+NOTE: 如果您输入的密码三次不正确、则管理员帐户将锁定15分钟。
+
+. 更改密码并继续。
++
+image:flexpod-rho-cvo-image24.png["错误：缺少图形映像"]
+
+
+
+有关Astra控制中心安装的详细信息、请参见 https://docs.netapp.com/us-en/astra-control-center/get-started/install_overview.html["Astra控制中心安装概述"^] 页面。
+
+
+
+== 设置 Astra 控制中心
+
+安装Astra控制中心后、登录到用户界面、上传许可证、添加集群、管理存储以及添加存储分段。
+
+. 在主页上的Account下、转到License选项卡并选择Add License以上传Astra许可证。
++
+image:flexpod-rho-cvo-image25.png["错误：缺少图形映像"]
+
+. 在添加OpenShift集群之前、请从OpenShift Web控制台创建Astra Trident卷快照类。卷快照类配置了`csi.trident.netapp.io`驱动程序。
++
+image:flexpod-rho-cvo-image26.png["错误：缺少图形映像"]
+
+. 要添加Kubernetes集群、请转到主页上的Clusters、然后单击Add Kubernetes Cluster。然后上传集群的`kubeconfig`文件并提供凭据名称。单击下一步。
++
+image:flexpod-rho-cvo-image27.png["错误：缺少图形映像"]
+
+. 系统会自动发现现有存储类。选择默认存储类、单击下一步、然后单击添加集群。
++
+image:flexpod-rho-cvo-image28.png["错误：缺少图形映像"]
+
+. 只需几分钟即可添加集群。要添加其他OpenShift容器平台集群、请重复步骤1–4。
++
+
+NOTE: 要将其他OpenShift操作环境添加为托管计算资源、请确保使用Astra Trident https://netapp-trident.readthedocs.io/en/latest/kubernetes/concepts/objects.html?highlight=VolumeSnapshotClass["VolumeSnapshotClass对象"^] 已定义。
+
+. 要管理存储、请转至后端、单击"Actions against the backend that you would like to manage"下的三个点。单击Manage。
++
+image:flexpod-rho-cvo-image29.png["错误：缺少图形映像"]
+
+. 提供ONTAP 凭据、然后单击下一步。查看相关信息、然后单击受管。后端应类似于以下示例。
++
+image:flexpod-rho-cvo-image30.png["错误：缺少图形映像"]
+
+. 要将存储分段添加到Astra Control、请选择Bucket并单击Add。
++
+image:flexpod-rho-cvo-image31.png["错误：缺少图形映像"]
+
+. 选择存储分段类型并提供存储分段名称、S3服务器名称或IP地址和S3凭据。单击更新。
++
+image:flexpod-rho-cvo-image32.png["错误：缺少图形映像"]
+
++
+
+NOTE: 在此解决方案 中、AWS S3和ONTAP S3存储分段均已使用。您也可以使用StorageGRID。
+
++
+存储分段状态应为运行状况良好。
+
++
+image:flexpod-rho-cvo-image33.png["错误：缺少图形映像"]
+
+
+
+作为向Astra控制中心注册Kubernetes集群以实现应用程序感知型数据管理的一部分、Astra Control会自动创建角色绑定和NetApp监控命名空间、以便从应用程序Pod和工作节点收集指标和日志。将一个受支持的基于ONTAP的存储类设置为默认值。
+
+你先请 https://docs.netapp.com/us-en/astra-control-center/get-started/setup_overview.html["将集群添加到 Astra Control 管理中"^]、您可以在集群上安装应用程序(在Astra Control之外)、然后转到Astra Control中的应用程序页面来管理这些应用程序及其资源。有关使用Astra管理应用程序的详细信息、请参见 https://docs.netapp.com/us-en/astra-control-center/use/manage-apps.html["应用程序管理要求"^]。
+
+link:flexpod-rho-cvo-solution-validation_overview.html["接下来：解决方案 验证概述。"]

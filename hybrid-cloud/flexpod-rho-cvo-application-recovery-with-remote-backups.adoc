@@ -1,0 +1,277 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/flexpod-rho-cvo-application-recovery-with-remote-backups.html 
+keywords: application-consistent backup, recovery, use case, remote, backup, operatorhub 
+summary: 借助Astra、您可以进行完整的应用程序一致的备份、用于将应用程序及其数据还原到在内部数据中心或公有 云中运行的不同Kubernetes集群。要验证应用程序恢复是否成功、请模拟FlexPod 系统上运行的应用程序的内部故障、并使用远程备份将应用程序还原到云中运行的K8s集群。 
+---
+= 通过远程备份恢复应用程序
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-rho-cvo-solution-validation_overview.html["上一步：解决方案 验证概述。"]
+
+借助Astra、您可以进行完整的应用程序一致的备份、用于将应用程序及其数据还原到在内部数据中心或公有 云中运行的不同Kubernetes集群。
+
+要验证应用程序恢复是否成功、请模拟FlexPod 系统上运行的应用程序的内部故障、并使用远程备份将应用程序还原到云中运行的K8s集群。
+
+此示例应用程序是一个使用MySQL作为数据库的价目表应用程序。为了实现部署自动化、我们使用了 https://argo-cd.readthedocs.io/en/stable/["Argo CD"^] 工具。Argo CD是一款适用于Kubernetes的声明性GitOps持续交付工具。
+
+. 登录到内部OpenShift集群并创建一个名为`argocd`的新项目。
++
+image:flexpod-rho-cvo-image34.png["错误：缺少图形映像"]
+
+. 在OperatorHub中、搜索`argocd`并选择Argo CD operator。
++
+image:flexpod-rho-cvo-image35.png["错误：缺少图形映像"]
+
+. 在`argocd`命名空间中安装操作符。
++
+image:flexpod-rho-cvo-image36.png["错误：缺少图形映像"]
+
+. 转到运算符并单击创建ArgoCD。
++
+image:flexpod-rho-cvo-image37.png["错误：缺少图形映像"]
+
+. 要在`argocd`项目中部署Argo CD实例、请提供一个名称、然后单击创建。
++
+image:flexpod-rho-cvo-image38.png["错误：缺少图形映像"]
+
+. 要登录到Argo CD、默认用户为admin、密码位于名为`argocd-netapp-cluster`的机密文件中。
++
+image:flexpod-rho-cvo-image39.png["错误：缺少图形映像"]
+
+. 从侧面菜单中、选择路由>位置、然后单击`argocd` routes的URL。输入用户名和密码。
++
+image:flexpod-rho-cvo-image40.png["错误：缺少图形映像"]
+
+. 通过CLI将内部OpenShift集群添加到Argo CD。
++
+....
+####Login to Argo CD####
+abhinav3@abhinav-ansible$ argocd-linux-amd64 login argocd-netapp-server-argocd.apps.ocp.flexpod.netapp.com --insecure
+Username: admin
+Password:
+'admin:login' logged in successfully
+Context'argocd-netapp-server-argocd.apps.ocp.flexpod.netapp.com' updated
+####List the On-Premises OpenShift cluster####
+abhinav3@abhinav-ansible$ argocd-linux-amd64 cluster add
+ERRO[0000] Choose a context name from:
+CURRENT  NAME                                                          CLUSTER              SERVER
+*        default/api-ocp-flexpod-netapp-com:6443/abhinav3              api-ocp-flexpod-netapp-com:6443   https://api.ocp.flexpod.netapp.com:6443
+         default/api-ocp1-flexpod-netapp-com:6443/abhinav3             api-ocp1-flexpod-netapp-com:6443  https://api.ocp1.flexpod.netapp.com:6443
+####Add On-Premises OpenShift cluster###
+abhinav3@abhinav-ansible$ argocd-linux-amd64 cluster add default/api-ocp1-flexpod-netapp-com:6443/abhinav3
+WARNING: This will create a service account `argocd-manager` on the cluster referenced by context `default/api-ocp1-flexpod-netapp-com:6443/abhinav3` with full cluster level admin privileges. Do you want to continue [y/N]? y
+INFO[0002] ServiceAccount "argocd-manager" already exists in namespace "kube-system"
+INFO[0002] ClusterRole "argocd-manager-role" updated
+INFO[0002] ClusterRoleBinding "argocd-manager-role-binding" updated
+Cluster 'https://api.ocp1.flexpod.netapp.com:6443' added
+....
+. 在ArgoCD UI中、单击新应用程序并输入有关应用程序名称和代码存储库的详细信息。
++
+image:flexpod-rho-cvo-image41.png["错误：缺少图形映像"]
+
+. 输入要随命名空间一起部署应用程序的OpenShift集群。
++
+image:flexpod-rho-cvo-image42.png["错误：缺少图形映像"]
+
+. 要在内部OpenShift集群上部署此应用、请单击同步。
++
+image:flexpod-rho-cvo-image43.png["错误：缺少图形映像"]
+
+. 在OpenShift容器平台控制台中、转至项目价目表、然后在存储下验证PVC的名称和大小。
++
+image:flexpod-rho-cvo-image44.png["错误：缺少图形映像"]
+
+. 登录到System Manager并验证PVC。
++
+image:flexpod-rho-cvo-image45.png["错误：缺少图形映像"]
+
+. Pod运行后、从侧面菜单中选择Networking > routes、然后单击Location下的URL。
++
+image:flexpod-rho-cvo-image46.png["错误：缺少图形映像"]
+
+. 此时将显示Pricelist应用程序主页。
++
+image:flexpod-rho-cvo-image47.png["错误：缺少图形映像"]
+
+. 在网页上创建一些记录。
++
+image:flexpod-rho-cvo-image48.png["错误：缺少图形映像"]
+
+. 此应用程序会在Astra控制中心中发现。要管理此应用程序、请转到"应用程序">"已发现"、选择"价目表"应用程序、然后单击"操作"下的"管理应用程序"。
++
+image:flexpod-rho-cvo-image49.png["错误：缺少图形映像"]
+
+. 单击Pricelist应用程序、然后选择Data Protection。此时、不应存在快照或备份。单击Create Snapshot以创建按需快照。
++
+image:flexpod-rho-cvo-image50.png["错误：缺少图形映像"]
+
++
+
+NOTE: NetApp Astra控制中心既支持按需快照、也支持计划快照和备份。
+
+. 创建快照并使其运行状况良好后、使用该快照创建远程备份。此备份存储在S3存储分段中。
++
+image:flexpod-rho-cvo-image51.png["错误：缺少图形映像"]
+
+. 选择AWS S3存储分段并启动备份操作。
++
+image:flexpod-rho-cvo-image52.png["错误：缺少图形映像"]
+
+. 备份操作应在AWS S3存储分段中创建一个包含多个对象的文件夹。
++
+image:flexpod-rho-cvo-image53.png["错误：缺少图形映像"]
+
+. 远程备份完成后、通过停止托管PV后备卷的Storage Virtual Machine (SVM)来模拟内部灾难。
++
+image:flexpod-rho-cvo-image54.png["错误：缺少图形映像"]
+
+. 刷新网页以确认中断。此网页不可用。
++
+image:flexpod-rho-cvo-image55.png["错误：缺少图形映像"]
+
++
+正如预期、网站已关闭、因此、让我们使用Astra快速从远程备份恢复应用程序、并将其恢复到AWS中运行的OpenShift集群。
+
+. 在Astra Control Center中、单击Pricelist应用程序、然后选择Data Protection > Backups。选择备份、然后单击操作下的还原应用程序。
++
+image:flexpod-rho-cvo-image56.png["错误：缺少图形映像"]
+
+. 选择`OCP-AWS`作为目标集群、并为命名空间提供一个名称。单击按需备份、下一步、然后单击还原。
++
+image:flexpod-rho-cvo-image57.png["错误：缺少图形映像"]
+
+. 在AWS中运行的OpenShift集群上会显示一个名为`pricelist-app`的新应用程序。
++
+image:flexpod-rho-cvo-image58.png["错误：缺少图形映像"]
+
+. 在OpenShift Web控制台中验证相同的。
++
+image:flexpod-rho-cvo-image59.png["错误：缺少图形映像"]
+
+. 运行`pricelist-AWS`项目下的所有Pod后、转到routes并单击URL以启动网页。
++
+image:flexpod-rho-cvo-image60.png["错误：缺少图形映像"]
+
+
+
+此过程将验证价格表应用程序是否已成功还原、以及在Astra控制中心的帮助下、在AWS上无缝运行的OpenShift集群上是否保持了数据完整性。
+
+
+
+== 利用Snapshot副本和DevTest应用程序移动性保护数据
+
+此用例由两部分组成、如下各节所述。
+
+
+
+=== 第1部分
+
+借助Astra控制中心、您可以创建应用程序感知型快照以实现本地数据保护。如果意外删除或损坏数据、您可以使用先前记录的快照将应用程序和关联数据还原到已知正常状态。
+
+在这种情况下、开发和测试(DevTest)团队部署了一个示例有状态应用程序(博客站点)、该应用程序是一个Ghost博客应用程序、并添加了一些内容、然后将该应用程序升级到最新版本。Ghost应用程序对数据库使用SQLite。在升级应用程序之前、可以使用Astra控制中心创建一个快照(按需)来进行数据保护。详细步骤如下：
+
+. 部署示例博客应用程序并从ArgoCD进行同步。
++
+image:flexpod-rho-cvo-image61.png["错误：缺少图形映像"]
+
+. 登录到第一个OpenShift集群、转到Project、然后在搜索栏中输入Bllog。
++
+image:flexpod-rho-cvo-image62.png["错误：缺少图形映像"]
+
+. 从侧面菜单中、选择网络>路由、然后单击URL。
++
+image:flexpod-rho-cvo-image63.png["错误：缺少图形映像"]
+
+. 此时将显示博客主页。向博客站点添加一些内容并发布。
++
+image:flexpod-rho-cvo-image64.png["错误：缺少图形映像"]
+
+. 转到Astra控制中心。首先从"已发现"选项卡管理应用程序、然后创建Snapshot副本。
++
+image:flexpod-rho-cvo-image65.png["错误：缺少图形映像"]
+
++
+
+NOTE: 您还可以通过按定义的计划创建快照、备份或同时创建这两者来保护应用程序。有关详细信息，请参见 https://docs.netapp.com/us-en/astra-control-center/use/protect-apps.html["通过快照和备份保护应用程序"^]。
+
+. 成功创建按需快照后、将应用程序升级到最新版本。当前映像版本为`Ghost：3.6-alpine`、目标版本为`Ghost：Latest`。要升级此应用程序、请直接更改Git存储库并将其同步到Argo CD。
++
+image:flexpod-rho-cvo-image66.png["错误：缺少图形映像"]
+
+. 您可以看到、由于博客站点关闭以及整个应用程序损坏、不支持直接升级到最新版本。
++
+image:flexpod-rho-cvo-image67.png["错误：缺少图形映像"]
+
+. 要确认博客站点不可用、请刷新URL。
++
+image:flexpod-rho-cvo-image68.png["错误：缺少图形映像"]
+
+. 从快照还原应用程序。
++
+image:flexpod-rho-cvo-image69.png["错误：缺少图形映像"]
+
+. 此应用程序将在同一个OpenShift集群上还原。
++
+image:flexpod-rho-cvo-image70.png["错误：缺少图形映像"]
+
+. 应用程序还原过程将立即启动。
++
+image:flexpod-rho-cvo-image71.png["错误：缺少图形映像"]
+
+. 只需几分钟、即可从可用快照成功还原应用程序。
++
+image:flexpod-rho-cvo-image72.png["错误：缺少图形映像"]
+
+. 要查看此网页是否可用、请刷新此URL。
++
+image:flexpod-rho-cvo-image73.png["错误：缺少图形映像"]
+
+
+
+在Astra控制中心的帮助下、DevTest团队可以使用快照成功恢复博客站点应用程序及其关联数据。
+
+
+
+=== 第2部分
+
+借助Astra控制中心、您可以将整个应用程序及其数据从一个Kubernetes集群移动到另一个集群、无论这些集群位于何处(内部或云中)。
+
+. DevTest团队最初会先将应用程序升级到受支持的版本(`ghost-4.6. alpine`)、然后再升级到最终版本(`ghost-latest`)以使其可投入生产。然后、他们会将克隆的应用程序升级到在其他FlexPod 系统上运行的生产OpenShift集群。
+. 此时、该应用程序将升级到最新版本、并可克隆到生产集群。
++
+image:flexpod-rho-cvo-image74.png["错误：缺少图形映像"]
+
+. 要验证新主题、请刷新博客站点。
++
+image:flexpod-rho-cvo-image75.png["错误：缺少图形映像"]
+
+. 从Astra控制中心、将应用程序克隆到在VMware vSphere上运行的另一个生产OpenShift集群。
++
+image:flexpod-rho-cvo-image76.png["错误：缺少图形映像"]
+
++
+现在、生产OpenShift集群中会配置一个新的应用程序克隆。
+
++
+image:flexpod-rho-cvo-image77.png["错误：缺少图形映像"]
+
+. 登录到生产OpenShift集群并搜索项目博客。
++
+image:flexpod-rho-cvo-image78.png["错误：缺少图形映像"]
+
+. 从侧面菜单中、选择Networking > routes、然后单击Location下的URL。此时将显示与此内容相同的主页。
++
+image:flexpod-rho-cvo-image79.png["错误：缺少图形映像"]
+
+
+
+Astra控制中心解决方案 验证到此结束。现在、无论Kubernetes集群位于何处、您都可以将整个应用程序及其数据从一个Kubernetes集群克隆到另一个Kubernetes集群。
+
+link:flexpod-rho-cvo-conclusion.html["接下来：总结。"]

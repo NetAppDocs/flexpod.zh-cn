@@ -1,6 +1,6 @@
 ---
 section: ontap-connector-for-intersight
-title: "《 Cisco Intersight 与 NetApp ONTAP 存储快速入门指南》"
+title: Cisco Intersight与NetApp ONTAP 存储
 entries:
 - title: 简介
   url: "/ontap-connector-for-intersight/index.html"
