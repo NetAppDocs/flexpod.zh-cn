@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/gcp-ncvo-configure-public-cloud-service-provider.html 
+keywords: netapp cloud manager, connector 
+summary: 此页面介绍如何访问NetApp Cloud Manager以及如何部署Connector。 
+---
+= 配置公有 云服务提供商
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:gcp-ncvo-terraform-cloud-integration-with-ico-prerequisite.html["先前版本：Terraform Cloud Integration with ICO前提条件。"]
+
+
+
+== 操作步骤 1：访问NetApp Cloud Manager
+
+要访问NetApp Cloud Manager和其他云服务、您需要注册 https://cloud.netapp.com/["NetApp Cloud Central"^]。
+
+
+NOTE: 要在Cloud Central帐户中设置工作空间和用户、请单击 https://docs.netapp.com/us-en/occm/task_setting_up_cloud_central_accounts.html["此处"^]。
+
+
+
+== 操作步骤 2：部署连接器
+
+要在Google Cloud中部署Connector、请参见此内容 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-gcp.html#creating-a-connector-in-google-cloud["链接。"^]。
+
+link:gcp-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html["接下来：自动部署混合云NetApp存储。"]

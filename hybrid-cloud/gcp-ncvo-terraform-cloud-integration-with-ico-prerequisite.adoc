@@ -1,0 +1,99 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/gcp-ncvo-terraform-cloud-integration-with-ico-prerequisite.html 
+keywords: user token, terraform cloud target, agents, api 
+summary: 此页面介绍如何连接Cisco Intersight和Terraform Cloud、如何生成用户令牌、如何声明Terraform云目标以及如何添加Terraform Cloud代理。 
+---
+= Terraform Cloud Integration with ICO前提条件
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:gcp-ncvo-cisco-intersight-configuration.html["先前版本：Cisco Intersight配置。"]
+
+
+
+== 操作步骤 1：连接Cisco Intersight和Terraform Cloud
+
+. 通过提供相关的Terraform Cloud帐户详细信息来声明或创建Terraform云目标。
+. 为私有云创建Terraform Cloud Agent目标、以便客户可以在数据中心安装代理并与Terraform Cloud进行通信。
++
+有关详细信息、请参见 https://intersight.com/help/saas/features/terraform_cloud/admin["此链接。"^]。
+
+
+
+
+
+== 操作步骤 2：生成用户令牌
+
+在为Terraform Cloud添加目标时、您必须从Terraform Cloud设置页面提供用户名和API令牌。
+
+. 登录到Terraform Cloud并转到*用户令牌*： https://app.terraform.io/app/settings/tokens["https://app.terraform.io/app/settings/tokens"^]。
+. 单击*创建新的API令牌*。
+. 分配一个要记住的名称并将令牌保存在安全位置。
+
+
+
+
+== 操作步骤 3：声明Terraform云目标
+
+. 使用帐户管理员、设备管理员或设备技术人员权限登录到Intersight。
+. 导航到*管理>目标>申请新目标*。
+. 在*类别*中、单击*云*。
+. 单击* Terraform Cloud*并单击*开始*。
++
+image:gcp-ncvo-image3.png["在Cisco Intersight中选择目标类型的屏幕截图。"]
+
+. 输入目标的名称、Terraform Cloud的用户名、API令牌以及Terraform Cloud中的默认组织、如下图所示。
+. 在*默认受管主机*字段中、确保添加以下链接以及其他受管主机：
++
+** github.com
+** github-releases.githubusercontent.com
++
+image:gcp-ncvo-image4.png["默认受管主机字段的屏幕截图。"]
+
+
+
+
+
+如果输入的所有内容均正确无误、您将在* Intersight Targets*部分中看到Terraform Cloud目标。
+
+
+
+== 操作步骤 4：添加Terraform云代理
+
+前提条件
+
+* Terraform Cloud目标。
+* 在部署Terraform Cloud Agent之前、向Intersight申请了Intersight协助。
+
+
+
+NOTE: 每次协助只能申请五名代理。
+
+
+NOTE: 创建与Terraform的连接后、必须启动Terraform代理才能执行Terraform代码。
+
+. 从Terraform Cloud目标的下拉列表中单击*声明Terraform Cloud Agent*。
+. 输入Terraform Cloud代理的详细信息。以下屏幕截图显示了Terraform代理的配置详细信息。
++
+image:gcp-ncvo-image5.png["显示Terraform代理的配置详细信息的屏幕截图。"]
+
+
+
+
+NOTE: 您可以更新任何Terraform Agent属性。如果目标处于*未连接*状态且从未处于*已连接*状态、则尚未为Terraform代理生成令牌。
+
+在代理验证成功并生成代理令牌后、您无法重新配置组织和/或代理池。Terraform代理的成功部署状态为*已连接*。
+
+启用并申请Terraform Cloud集成后、您可以在Cisco Intersight Assist中部署一个或多个Terraform Cloud代理。Terraform Cloud代理将建模为Terraform Cloud目标的子目标。申请代理目标时、您会看到一条消息、指示目标申请正在进行中。
+
+几秒钟后、目标将移至*已连接*状态、Intersight平台会将HTTPS数据包从代理路由到Terraform Cloud网关。
+
+您的Terraform代理应正确声明、并应在目标下显示为*已连接*。
+
+link:gcp-ncvo-configure-public-cloud-service-provider.html["下一步：配置公有 云服务提供商。"]

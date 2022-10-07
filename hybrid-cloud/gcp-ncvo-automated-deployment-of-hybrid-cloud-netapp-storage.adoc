@@ -1,0 +1,190 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/gcp-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html 
+keywords: google cloud, Cloud Volumes ONTAP, google cloud, environmental prerequisites, github repository, NetApp Cloud Manager API 
+summary: 本节介绍混合云NetApp存储的自动化部署。 
+---
+= 自动部署混合云NetApp存储
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:gcp-ncvo-configure-public-cloud-service-provider.html["先前版本：配置公有 云服务提供商。"]
+
+
+
+== Google Cloud
+
+您必须先启用API并创建一个服务帐户、以便为Cloud Manager提供部署和管理与Connector位于同一项目或不同项目中的Cloud Volumes ONTAP 系统的权限。
+
+在Google Cloud项目中部署连接器之前、请确保此连接器未在内部或其他云提供商中运行。
+
+在直接从 Cloud Manager 部署 Connector 之前，必须具有两组权限：
+
+* 您需要使用有权从Cloud Manager启动Connector VM实例的Google帐户部署Connector。
+* 部署Connector时、系统会提示您选择VM实例。Cloud Manager 可从服务帐户中获得代表您创建和管理 Cloud Volumes ONTAP 系统的权限。权限可通过向服务帐户附加自定义角色来提供。您需要设置两个YAML文件、这些文件包含用户和服务帐户所需的权限。了解如何使用 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-gcp.html["用于设置权限的YAML文件"^] 此处。
+
+
+请参见 https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f3d0368b-7165-4d43-a76e-ae01011853d6["此详细视频"^] 所有必需的前提条件。
+
+
+
+=== Cloud Volumes ONTAP 部署模式和架构
+
+Cloud Volumes ONTAP 可作为单节点系统和高可用性(HA)节点对在Google Cloud中使用。根据要求、我们可以选择Cloud Volumes ONTAP 部署模式。不支持将单节点系统升级到 HA 对。如果要在单节点系统和HA对之间切换、则必须部署新系统并将现有系统中的数据复制到新系统。
+
+
+
+=== Google Cloud中的高可用性Cloud Volumes ONTAP
+
+Google Cloud支持跨多个地理区域和一个区域内的多个区域部署资源。HA部署由两个ONTAP 节点组成、这两个节点使用Google Cloud中提供的功能强大的n1标准或n2标准计算机类型。数据会在两个Cloud Volumes ONTAP 节点之间同步复制、以便在发生故障时提供可用性。Cloud Volumes ONTAP 的高可用性部署要求每个VPC具有四个VPC和一个专用子网。四个vPC中的子网应配置非重叠的CIDR范围。
+
+这四个VPC用于以下用途：
+
+* VPC 0支持与数据和Cloud Volumes ONTAP 节点的入站通信。
+* VPC 1可在Cloud Volumes ONTAP 节点之间提供集群连接。
+* VPC 2支持在节点之间进行非易失性RAM (NVRAM)复制。
+* VPC 3用于连接到HA调解器实例、以及用于节点重建的磁盘复制流量。
+
+
+下图显示了Goggle Cloud中的高可用性Cloud Volumes ONTAP。
+
+image:gcp-ncvo-image6.png["此图显示了Goggle Cloud中的高可用性Cloud Volumes ONTAP。"]
+
+有关详细信息，请参见 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-gcp.html["此链接。"^]。
+
+有关Google Cloud中Cloud Volumes ONTAP 的网络连接要求、请参见 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/reference-networking-gcp.html["此链接。"^]。
+
+有关数据分层的详细信息、请参见 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["此链接。"^]。
+
+
+
+=== 设置环境前提条件
+
+可以使用Terraform配置自动创建Cloud Volumes ONTAP 集群、在内部卷和云卷之间配置SnapMirror、创建云卷等。这些Terraform配置托管在Terraform Cloud for Business帐户上。使用Intersight Cloud Orchestrator、您可以编排任务、例如在Terraform Cloud for Business帐户中创建工作空间、将所有必需的变量添加到工作空间、执行Terraform计划等。
+
+对于这些自动化和业务流程任务、需要满足一些要求并提供一些数据、如以下各节所述。
+
+
+
+=== GitHub 存储库
+
+您需要一个GitHub帐户来托管Terraform代码。Intersight Orchestrator在Terraform Cloud for Business帐户中创建新的工作空间。此工作空间配置了版本控制工作流。为此、您需要将Terraform配置保留在GitHub存储库中、并在创建工作空间时将其作为输入提供。
+
+https://github.com/NetApp-Automation/FlexPod-hybrid-cloud-for-GCP-with-Intersight-and-CVO["此GitHub链接"^] 使用各种资源提供Terraform配置。您可以通过派生此存储库并在GitHub帐户中创建副本。
+
+在此存储库中、`provider.tf`定义了所需的Terraform提供程序。使用适用于NetApp Cloud Manager的Terraform提供程序。
+
+`variables.tf`具有所有变量声明。这些变量的值将作为Intersight Cloud Orchestrator的工作流输入进行输入。这样可以方便地将值传递到工作空间并执行Terraform配置。
+
+`resources.tf`定义了向工作环境添加内部ONTAP 、在Google Cloud上创建单节点Cloud Volumes ONTAP 集群、在内部和Cloud Volumes ONTAP 之间建立SnapMirror关系、在Cloud Volumes ONTAP 上创建云卷等所需的各种资源。
+
+在此存储库中：
+
+* `provider.tf`将NetApp Cloud Manager定义为所需的Terraform提供程序。
+* `variables.tf`具有可变声明、这些声明可用作Intersight Cloud Orchestrator工作流的输入。这样可以方便地将值传递到工作空间并执行Terraform配置。
+* `resources.tf`定义各种资源、用于向工作环境添加内部ONTAP 、在Google Cloud上创建单节点Cloud Volumes ONTAP 集群、在内部和Cloud Volumes ONTAP 之间建立SnapMirror关系、在Cloud Volumes ONTAP 上创建云卷等。
+
+
+您可以添加一个额外的资源块来在Cloud Volumes ONTAP 上创建多个卷、也可以使用count或`for_each` Terraform构造。
+
+要将Terraform工作空间、模块和策略集连接到包含Terraform配置的git存储库、Terraform Cloud需要访问GitHub repo.
+
+添加客户端、客户端的OAuth令牌ID将用作Intersight Cloud Orchestrator的工作流输入之一。
+
+. 登录到Terraform Cloud for Business帐户。导航到*设置>提供程序*。
+. 单击*添加VCS提供程序*。
+. 选择您的版本。
+. 按照*设置提供程序*下的步骤进行操作。
+. 您可以在* VCS Provider*中看到已添加的客户端。记下OAuth令牌ID。
+
+
+
+
+=== 刷新NetApp Cloud Manager API操作的令牌
+
+除了 Web 浏览器界面之外， Cloud Manager 还具有一个 REST API ，可使软件开发人员通过 SaaS 界面直接访问 Cloud Manager 功能。Cloud Manager 服务由多个不同的组件组成，这些组件共同构成一个可扩展的开发平台。通过刷新令牌、您可以生成要添加到每个API调用的授权标头中的访问令牌。
+
+在不直接调用API的情况下、NetApp-cloudmanager提供程序会使用刷新令牌并将Terraform资源转换为相应的API调用。您需要从为NetApp Cloud Manager API操作生成刷新令牌 https://services.cloud.netapp.com/refresh-token["NetApp Cloud Central"^]。
+
+要在Cloud Manager上创建资源、例如创建Cloud Volumes ONTAP 集群、配置SnapMirror等、您需要Cloud Manager Connector的客户端ID。
+
+. 登录到Cloud Manager： https://cloudmanager.netapp.com/["https://cloudmanager.netapp.com/"^]。
+. 单击 * 连接器 * 。
+. 单击 * 管理连接器 * 。
+. 单击省略号并复制连接器ID。
+
+
+
+
+== 开发Cisco Intersight Cloud Orchestrator工作流
+
+在以下情况下、Cisco Intersight可提供Cisco Intersight Cloud Orchestrator：
+
+* 您已安装Intersight Premier许可证。
+* 您可以是帐户管理员、存储管理员、虚拟化管理员或服务器管理员、并且至少已为您分配一台服务器。
+
+
+
+
+=== 工作流设计器
+
+工作流设计器可帮助您创建新工作流(以及任务和数据类型)并编辑现有工作流、以管理Cisco Intersight中的目标。
+
+要启动工作流设计器、请转到*流程编排>工作流*。信息板会在*我的工作流*、*示例工作流*和*所有工作流*选项卡下显示以下详细信息：
+
+* 验证状态
+* 上次执行状态
+* 按执行计数显示的前几个工作流
+* 工作流类别排名靠前
+* 系统定义的工作流数量
+* 按目标划分的前几个工作流
+
+
+您可以使用信息板创建、编辑、克隆或删除选项卡。要创建自己的自定义视图选项卡、请单击*+*并指定名称、然后选择需要显示在列、标记列和小工具中的参数。如果某个选项卡没有*锁定*图标、则可以重命名该选项卡。
+
+信息板下是一个工作流表格列表、其中显示了以下信息：
+
+* 显示名称
+* Description
+* 系统定义
+* 默认版本
+* 执行
+* 上次执行状态
+* 验证状态
+* 上次更新时间
+* 组织
+
+
+"Actions"列可用于执行以下操作：
+
+* *执行。*执行工作流。
+* *历史记录。*显示工作流执行历史记录。
+* *管理版本。*创建和管理工作流的版本。
+* *删除。*删除工作流。
+* *重试。*重试失败的工作流。
+
+
+
+
+=== 工作流
+
+创建包含以下步骤的工作流：
+
+* *定义工作流。*指定显示名称、问题描述 和其他重要属性。
+* *定义工作流输入和工作流输出。*指定执行工作流必须使用哪些输入参数、以及成功执行时生成的输出
+* *添加工作流任务。*在工作流设计器中添加工作流执行其功能所需的一个或多个工作流任务。
+* *验证工作流。*验证工作流以确保在连接任务输入和输出时没有错误。
+
+
+
+
+=== 为内部FlexPod 存储创建工作流
+
+要为内部FlexPod 存储配置工作流、请参见 https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_cvo_ico_ntap.html["此链接。"^]。
+
+link:gcp-ncvo-dr-workflow.html["接下来：灾难恢复工作流。"]

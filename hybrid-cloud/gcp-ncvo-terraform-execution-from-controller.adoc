@@ -1,0 +1,58 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/gcp-ncvo-terraform-execution-from-controller.html 
+keywords: prerequisites, clone github repo, terraform execution, init, plan, apply, destroy 
+summary: 我们可以使用控制器执行Terraform计划。如果您已经使用ICO工作流执行了Terraform计划、则可以跳过本节。 
+---
+= 从控制器执行Terraform
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:gcp-ncvo-dr-workflow.html["上一步：灾难恢复工作流。"]
+
+我们可以使用控制器执行Terraform计划。如果您已经使用ICO工作流执行了Terraform计划、则可以跳过本节。
+
+
+
+== 前提条件
+
+解决方案 的设置首先从可访问Internet的管理工作站开始、然后再从可正常运行的Terraform安装开始。
+
+有关安装Terraform的指南、请参见 https://learn.hashicorp.com/tutorials/terraform/install-cli["此处"^]。
+
+
+
+== 克隆GitHub repo
+
+此过程的第一步是将GitHub repoo克隆到管理工作站上的新空文件夹中。要克隆GitHub存储库、请完成以下步骤：
+
+. 在管理工作站上、为项目创建一个新文件夹。在此文件夹中创建一个名为`/root/snapmirror-CVO`的新文件夹、并将GitHub repo.
+. 在管理工作站上打开命令行或控制台界面、然后将目录更改为刚刚创建的新文件夹。
+. 使用以下命令克隆GitHub集合：
+
+
+....
+Git clone https://github.com/NetApp-Automation/FlexPod-hybrid-cloud-for-GCP-with-Intersight-and-CVO
+....
+. 将目录更改为名为`snapmirror-CVO`的新文件夹。
+
+
+* Terraform执行*
+
+image:gcp-ncvo-image77.png["Terraform执行原理图。"]
+
+* *初始化。*初始化(本地) Terraform环境。通常、每个会话仅执行一次。
+* *计划。*将Terraform状态与云中的"正常运行"状态进行比较、然后构建并显示执行计划。这不会更改部署(只读)。
+* *应用。*从计划阶段应用计划。这可能会更改部署(读取和写入)。
+* *销毁。*受此特定Terraform环境管理的所有资源。
++
+有关详细信息，请参见 https://www.terraform.io/cli/commands["此处"^]。
+
+
+
+link:gcp-ncvo-solution-validation.html["接下来：解决方案验证。"]

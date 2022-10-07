@@ -1,0 +1,227 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/gcp-ncvo-solution-components.html 
+keywords: flexpod, cisco intersight, licensing, Terraform Cloud Integration, ICO, NetApp Cloud Volumes ONTAP, Cloud Central, Connector, Active IQ Unified Manager, Hardware, software 
+summary: 本节介绍实施此解决方案 所需的所有解决方案 组件。 
+---
+= 解决方案组件
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:gcp-ncvo-solution-overview.html["上一步：解决方案概述。"]
+
+
+
+== FlexPod
+
+FlexPod 是一组定义的硬件和软件、可为虚拟化和非虚拟化解决方案奠定集成基础。FlexPod 包括NetApp ONTAP 存储、Cisco Nexus网络、Cisco MDS存储网络和Cisco统一计算系统(Cisco UCS)。该设计非常灵活、可以将网络、计算和存储安装到一个数据中心机架中、也可以根据客户的数据中心设计进行部署。端口密度允许网络组件容纳多种配置。
+
+
+
+== Cisco Intersight
+
+Cisco Intersight是一个SaaS平台、可为传统和云原生应用程序和基础架构提供智能自动化、可观察性和优化功能。该平台有助于推动IT团队的变革、并提供专为混合云设计的运营模式。Cisco Intersight具有以下优势：
+
+* *交付速度更快。*由于采用基于敏捷性的软件开发模式、可从云或客户数据中心以服务的形式交付、并经常进行更新和持续创新。这样、客户就可以专注于加快业务部门的交付速度。
+* *简化操作。*通过使用一个安全的SaaS交付工具以及通用清单、身份验证和API在整个堆栈和所有位置运行、简化操作、消除团队之间的孤岛。从内部管理物理服务器和虚拟机管理程序到虚拟机、K8s、无服务器、自动化、 在内部和公有 云之间实现优化和成本控制。
+* *持续优化。*利用Cisco Intersight在每一层提供的智能以及Cisco TAC持续优化您的环境。这种智能功能可转换为建议的可自动操作、因此您可以实时适应每个变化：从移动工作负载和监控物理服务器的运行状况到您使用的公有 云的成本降低建议。
+
+
+Cisco Intersight支持两种管理操作模式：UCSM受管模式(Umm)和Intersight受管模式(IMM)。在初始设置互联阵列期间、您可以为光纤连接的Cisco UCS系统选择原生 Umm或IMM。在此解决方案 中、使用原生 IMM。
+
+
+
+=== Cisco Intersight许可
+
+Cisco Intersight使用基于订阅的许可证、该许可证包含多个层。
+
+Cisco Intersight许可证层如下：
+
+* * Cisco Intersight Essentials。*包括所有基本功能以及以下功能：
++
+** Cisco UCS Central
+** Cisco IMC Supervisor授权
+** 使用服务器配置文件进行基于策略的配置
+** 固件管理
+** 与硬件兼容性列表(Hardware Compatibility List、HCL)的兼容性评估
+
+
+* * Cisco Intersight Advantage。*包括Essentials层的特性和功能以及以下功能：
++
+** 在物理计算、网络、存储、VMware虚拟化和AWS公有 云之间使用小工具、清单、容量、利用率功能以及跨域清单关联。
+** Cisco安全咨询服务、客户可以在此服务中收到有关受影响端点设备的重要安全警报和现场通知。
+
+
+* * Cisco Intersight Premier。*除了在高级版中提供的功能之外、Cisco Intersight Premier还提供以下功能：
++
+** 适用于Cisco和第三方计算、网络、存储、集成系统、虚拟化、 容器和公共云平台
+** Cisco UCS Director的完整订阅授权、无需额外费用。
+
+
+
+
+有关Intersight许可以及每个许可支持的功能的详细信息、请参见 https://intersight.com/help/saas/getting_started/licensing_requirements["此处"^]。
+
+
+NOTE: 在本解决方案 中、我们使用适用于HashiCorp Terraform的Intersight Cloud Orchestrator和Intersight服务。具有Intersight Premier许可证的用户可以使用这些功能、因此必须启用此许可层。
+
+
+
+=== Terraform Cloud与ICO集成
+
+您可以使用Cisco Intersight Cloud Orchestrator (ICO)创建和执行调用Terraform Cloud (TFC) API的工作流。调用Web API请求任务支持将Terraform Cloud作为目标、并且可以使用HTTP方法为其配置Terraform Cloud API。因此、工作流可以组合使用多个任务、这些任务使用通用API任务和其他操作调用多个Terraform Cloud API。要使用ICO功能、您需要获得Premier许可证。
+
+
+
+=== Cisco Intersight Assist
+
+Cisco Intersight Assist可帮助您将端点设备添加到Cisco Intersight。一个数据中心可能包含多个不直接与Cisco Intersight连接的设备。Cisco Intersight支持但不直接连接到的任何设备都需要连接机制。Cisco Intersight Assist可提供此连接机制、并帮助您将设备添加到Cisco Intersight中。
+
+Cisco Intersight Virtual Appliance中提供了Cisco Intersight Assist、该设备以Open Virtual Appliance (OVA)文件格式包含的可部署虚拟机的形式进行分发。您可以在ESXi服务器上安装此设备。有关详细信息，请参见 https://www.cisco.com/c/en/us/support/servers-unified-computing/intersight/products-installation-guides-list.html["《Cisco Intersight Virtual Appliance入门指南》"^]。
+
+将Intersight Assist申请到Intersight后、您可以使用通过Intersight Assist选项申请端点设备。有关详细信息，请参见 https://intersight.com/help/getting_started["入门"^]。
+
+
+
+== NetApp Cloud Volumes ONTAP
+
+* 利用内置的重复数据删除、数据压缩、精简配置和克隆功能最大限度地降低存储成本。
+* 在云环境发生故障时提供企业级可靠性和持续运营。
+* Cloud Volumes ONTAP 使用行业领先的复制技术NetApp SnapMirror将内部数据复制到云中、因此可以轻松地为多种使用情形提供二级副本。
+* Cloud Volumes ONTAP 还与Cloud Backup Service 集成、提供备份和还原功能、以保护和长期归档云数据。
+* 按需在高性能和低性能存储池之间切换、而无需使应用程序脱机。
+* 使用NetApp SnapCenter 提供Snapshot副本的一致性。
+* Cloud Volumes ONTAP 支持数据加密，并提供防病毒和勒索软件保护。
+* 与 Cloud Data sense 集成有助于您了解数据环境并识别敏感数据。
+
+
+
+
+== Cloud Central
+
+Cloud Central提供了一个中央位置、用于访问和管理NetApp云数据服务。这些服务使您能够在云中运行关键应用程序、创建自动化灾难恢复站点、备份 SaaS 数据、并在多个云中有效地迁移和控制数据。有关详细信息，请参见 https://docs.netapp.com/us-en/occm35/concept_cloud_central.html["Cloud Central"^]。
+
+
+
+== Cloud Manager
+
+Cloud Manager是一款基于SaaS的企业级管理平台、IT专家和云架构师可以利用NetApp云解决方案集中管理其混合多云基础架构。它提供了一个集中式系统、用于查看和管理内部和云存储、以支持多个混合云提供商和客户。有关详细信息，请参见 https://docs.netapp.com/us-en/occm/index.html["Cloud Manager"^]。
+
+
+
+== 连接器
+
+借助Connector、Cloud Manager可以管理公有 云环境中的资源和流程。要使用Cloud Manager提供的许多功能、需要使用Connector实例、并且可以部署在云或内部网络中。连接器在以下位置受支持：
+
+* AWS
+* Microsoft Azure
+* Google Cloud
+* 内部部署
+
+
+
+
+== NetApp Active IQ Unified Manager
+
+借助NetApp Active IQ Unified Manager 、您可以通过一个经过重新设计的直观界面监控ONTAP 存储集群、该界面可利用社区智慧和AI分析提供智能信息。它可以全面洞察存储环境及其运行的虚拟机的运行情况、性能和主动式情况。当存储基础架构发生问题描述 时、Unified Manager可以通知您问题描述 的详细信息、以帮助识别根发生原因。通过虚拟机信息板、您可以查看虚拟机的性能统计信息、以便调查从vSphere主机向下经过网络并最终到达存储的整个I/O路径。
+
+某些事件还提供了更正问题描述 所需的补救措施。您可以为事件配置自定义警报、以便在发生问题时、通过电子邮件和SNMP陷阱通知您。Active IQ Unified Manager 可以预测容量和使用趋势、以便在出现问题之前主动采取行动、从而防止做出长期可能导致其他问题的被动短期决策、从而为用户的存储需求进行规划。
+
+
+
+== VMware vSphere
+
+VMware vSphere是一个虚拟化平台、可将大量基础架构(包括CPU、存储和网络等资源)作为一个无缝、多功能且动态的操作环境进行全面管理。与管理单个计算机的传统操作系统不同、VMware vSphere可将整个数据中心的基础架构聚合在一起、从而创建一个具有资源的动力中心、这些资源可以快速动态地分配给任何需要的应用程序。
+
+有关VMware vSphere的详细信息、请参见 https://www.vmware.com/products/vsphere.html["此链接。"^]。
+
+
+
+== VMware vSphere vCenter
+
+VMware vCenter Server可通过一个控制台统一管理所有主机和VM、并对集群、主机和VM进行聚合性能监控。通过VMware vCenter Server、管理员可以深入了解计算集群、主机、虚拟机、存储、子操作系统、 虚拟基础架构的其他关键组件。VMware vCenter可管理VMware vSphere环境中提供的丰富功能。
+
+
+
+== 硬件和软件版本
+
+此混合云解决方案 可以扩展到运行NetApp互操作性表工具和Cisco UCS硬件兼容性列表中定义的受支持软件、固件和硬件版本的任何FlexPod 环境。
+
+在我们的内部环境中用作基线平台的FlexPod 解决方案 是根据所述准则和规格进行部署的 https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_xseries_vmware_7u2.html["此处"^]。
+
+此环境中的网络基于ACI。有关详细信息，请参见 https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi65u1_n9k_aci.html["此处"^]。
+
+* 有关详细信息、请参见以下链接：
+* http://support.netapp.com/matrix/["NetApp 互操作性表工具"^]
+* http://www.vmware.com/resources/compatibility/search.php["VMware 兼容性指南"^]
+* https://www.cisco.com/web/techdoc/ucs/interoperability/matrix/matrix.html["Cisco UCS 硬件和软件互操作性工具"^]
+
+
+下表显示了FlexPod 硬件和软件版本。
+
+|===
+| 组件 | 产品 | version 
+
+
+| 计算 | Cisco UCS X210C-M6 | 5.0 (1b) 
+
+
+|  | Cisco UCS互联阵列6454 | 4.2 (2a) 
+
+
+| 网络 | Cisco Nexus 9332C (Spine) | 14.2 (7秒) 
+
+
+|  | Cisco Nexus 9336C-x2 (叶) | 14.2 (7秒) 
+
+
+|  | Cisco ACI | 4.2 (7秒) 
+
+
+| 存储 | NetApp AFF A220 | 9.11.1 
+
+
+|  | 适用于 VMware vSphere 的 NetApp ONTAP 工具 | 9.10. 
+
+
+|  | 适用于VMware VAAI的NetApp NFS插件 | 2.0-15 
+
+
+|  | Active IQ Unified Manager | 9.11 
+
+
+| 软件 | vSphere ESXi | 7.0 (U3) 
+
+
+|  | VMware vCenter设备 | 7.0.3 
+
+
+|  | Cisco Intersight Assist虚拟设备 | 1.0.11-306 
+|===
+Terraform配置在Terraform Cloud for Business帐户上执行。Terraform配置使用适用于NetApp Cloud Manager的Terraform提供程序。
+
+下表列出了供应商、产品和版本。
+
+|===
+| 组件 | 产品 | version 
+
+
+| HashiCorp | Terraform | 1.2.7. 
+|===
+下表显示了Cloud Manager和Cloud Volumes ONTAP 的版本。
+
+|===
+| 组件 | 产品 | version 
+
+
+| NetApp | Cloud Volumes ONTAP | 9.11 
+
+
+|  | Cloud Manager | 3.9.21 
+|===
+link:gcp-ncvo-deploy-flexpod.html["接下来：安装和配置—部署FlexPod。"]
