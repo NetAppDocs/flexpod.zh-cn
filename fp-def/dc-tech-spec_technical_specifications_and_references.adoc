@@ -437,16 +437,16 @@ NetApp 磁盘架的技术规格包括外形规格大小，每个机箱的驱动�
 | 组件 | NetApp FAS/AFF 磁盘架文档 
 
 
-| NetApp DS212C 磁盘架 | http://docs.netapp.com/platstor/topic/com.netapp.nav.sas3/home.html["DS212C 磁盘架文档"] 
+| NetApp DS212C 磁盘架 | https://www.netapp.com/data-storage/disk-shelves-storage-media/["DS212C 磁盘架文档"] 
 
 
-| NetApp DS224C 磁盘架 | http://docs.netapp.com/platstor/topic/com.netapp.nav.sas3/home.html["DS224C 磁盘架文档"] 
+| NetApp DS224C 磁盘架 | https://www.netapp.com/data-storage/disk-shelves-storage-media/["DS224C 磁盘架文档"] 
 
 
-| NetApp DS460C 磁盘架 | http://docs.netapp.com/platstor/topic/com.netapp.nav.sas3/home.html["DS460C 磁盘架文档"] 
+| NetApp DS460C 磁盘架 | https://www.netapp.com/data-storage/disk-shelves-storage-media/["DS460C 磁盘架文档"] 
 
 
-| NetApp NS224 NVMe-SSD 磁盘架 | https://docs.netapp.com/platstor/index.jsp?topic=%2Fcom.netapp.doc.hw-ds-nvme-shelfid%2FGUID-2C057CF4-8897-4270-BF57-CA90333FBCF4.html&lang=en["NS224 磁盘架文档"] 
+| NetApp NS224 NVMe-SSD 磁盘架 | https://www.netapp.com/data-storage/disk-shelves-storage-media/["NS224 磁盘架文档"] 
 |===
 
 

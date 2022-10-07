@@ -1,0 +1,68 @@
+---
+sidebar: sidebar 
+permalink: ontap-connector-for-intersight/ci-qsg_aiqum_imt_proxy_config.html 
+keywords: cisco, intersight, intersight assist, netapp, ontap, connector, configuration, active iq unified manager, proxy, imt, deployment, interoperability, ai qm, ova, cli 
+summary: 具有代理服务器配置的AIQ UM需要通过命令行界面进行设置才能使用IMT 服务。 
+---
+= 为IMT 服务配置AIQ UM代理服务器
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+如果您使用的代理服务器具有适用于Cisco Intersight的AIQ UM和NetApp ONTAP 存储、则必须通过命令行界面(CLI)配置此设置、以利用互操作性表工具服务(IMT)。您必须使用Active IQ Unified Manager 虚拟机(OVA)诊断Shell配置AIQ UM代理服务器设置。
+
+
+NOTE: 有关如何访问AIQ UM Diag Shell的信息、请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/Active_IQ_Unified_Manager/How_to_access_Active_IQ_Unified_Manager_Virtual_Machine_OVA_DIAG_shell["如何访问Active IQ Unified Manager 虚拟机(OVA) DIAG Shell"]
+
+* 步骤 *
+
+. 登录到AIQ UM终端并运行以下命令以登录到um。
++
+[listing]
+----
+um cli login -u <um maintenance user name>
+----
++
+* 示例 *
+
++
+[listing]
+----
+um cli login -u admin
+----
+. 运行以下命令、设置`IMT_proxy_host`和`IMT_proxy_port`。
++
+
+NOTE: IMT 代理是一种与AutoSupport (ASUP)代理配置不同的配置。
+
++
+[listing]
+----
+um option set imt.https.proxy.host=<IMT_PROXY_HOST>
+um option set imt.https.proxy.port=<IMT_PROXY_PORT>
+----
++
+* 示例 *
+
++
+[listing]
+----
+um option set imt.https.proxy.host=example-proxy.cls.eng.com
+um option set imt.https.proxy.port=8200
+----
++
+
+NOTE: IMT 代理服务器配置不支持身份验证。
+
+. 通过以下命令查看IMT 代理详细信息以验证`proxy_host`和`proxy_port`设置。
++
+[listing]
+----
+um option list |grep imt
+----
+
