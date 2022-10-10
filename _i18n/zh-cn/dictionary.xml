@@ -2983,17 +2983,6 @@
   <block id="d6805acb6dfc9c9a27c05441e138d49d" category="list-text">所有映像数据都托管在 FC LUN 中。在分布在不同存储控制器节点所拥有的聚合中的 FlexVol 卷中创建这些 LUN 。</block>
   <block id="9b33e5a688f125caa6d59dcbad14cda6" category="paragraph">要在存储卷中放置 LUN ，请遵循下一节中的准则。</block>
   <block id="22e802f805cc0ae139fc4fa75879cc1f" category="section-title">存储卷</block>
-  <block id="ede0f58b02d65e48674f43605d4ddff5" category="paragraph">为了获得最佳性能，管理和备份操作， NetApp 建议采用以下卷设计最佳实践：</block>
-  <block id="056e750e41892102ae79348e2b9e2f49" category="list-text">在不同的卷中隔离具有 I/O 密集型查询的数据库，并最终拥有单独的作业来备份这些数据库。</block>
-  <block id="e975458608b303ba58462de41dcd441e" category="list-text">为了加快恢复速度，请将恢复时间目标（ RTO ）最短的大型数据库和数据库放置在单独的卷中。</block>
-  <block id="4cf129d5843e23dd548bc4d82794c729" category="list-text">将不太重要或 I/O 要求较低的中小型数据库整合到一个卷中。备份同一卷中的大量数据库时，需要维护的 Snapshot 副本更少。NetApp 还建议整合 Oracle 数据库服务器实例，以便使用相同的卷来控制创建的备份 Snapshot 副本的数量。</block>
-  <block id="cbf0715d629bf29c459420acadf976bc" category="list-text">对于数据库副本，请将副本的数据和日志文件置于所有节点上相同的文件夹结构中。</block>
-  <block id="188e02487d0c64c88aae3664cf14ed70" category="list-text">将数据库文件放在一个 FlexVol 中；不要将其分布在各个 FlexVol 中。</block>
-  <block id="9c92316e1a390dff04d96ebb8cabc9b9" category="list-text">根据需要配置卷自动调整大小策略，以帮助防止出现空间不足的情况。</block>
-  <block id="2e88f8f20e70c0cb2747195410e3f806" category="list-text">如果数据库 I/O 配置文件主要包含大型顺序读取，例如决策支持系统工作负载，则可以在卷上启用读取重新分配。读取重新分配可优化块以提高性能。</block>
-  <block id="6d0d353edf8beab592842c085ad129ec" category="list-text">为了便于从操作角度进行监控，请将卷中的 Snapshot 副本预留值设置为零。</block>
-  <block id="e4692669d2ba2cd6e132b6c3ca5da116" category="list-text">禁用存储 Snapshot 副本计划和保留策略。而是使用适用于 Oracle 数据库的 NetApp SnapCenter 插件来协调 Oracle 数据卷的 Snapshot 副本。</block>
-  <block id="67d07174c442dd1a0a47543b9fc3abc8" category="list-text">将用户数据文件和日志文件放在单独的 FlexVol 上，以便为相应的 FlexVol 配置适当的 QoS ，并创建不同的备份计划。</block>
   <block id="e9c694050e93c601dd70234fb234d8cd" category="paragraph">聚合是 NetApp 存储配置的主存储容器，包含一个或多个 RAID 组，这些 RAID 组同时包含数据磁盘和奇偶校验磁盘。</block>
   <block id="f631f7430ddf641b7a19f499b140c88c" category="paragraph">NetApp 使用共享聚合和专用聚合执行各种 I/O 工作负载特征测试，这些聚合的数据文件和事务日志文件是分开的。测试显示，一个包含更多 RAID 组和驱动器（ HDD 或 SSD ）的大型聚合可优化和提高存储性能，并且更便于管理员管理，原因有两个：</block>
   <block id="1e5a70f617e1a9de603a024906761108" category="list-text">一个大型聚合可使所有驱动器的 I/O 功能对所有文件可用。</block>
@@ -3038,7 +3027,6 @@
   <block id="318245cf077eb2f36c50adf4aa79740e" category="list-text">与医疗映像系统供应商合作，确定准备 VM 模板以快速部署和维护的最佳方法。</block>
   <block id="b122cbb51e08e5873db5c423182f46a5" category="list-text">管理，存储和生产网络需要对数据库进行 LAN 隔离，并为 VMware vMotion 提供隔离的 VLAN 。</block>
   <block id="794cb725c5631ad99b5b7c000307f0df" category="inline-link">SnapMirror</block>
-  <block id="4cdde416153c6d117181383b93534ec1" category="list-text">使用名为的基于存储阵列的 NetApp 复制技术<block ref="133ca7709616c45e80024be2d7da217e" category="inline-link-rx"></block> 而不是基于 vSphere 的复制。</block>
   <block id="e3679fa0631ab408c36d8aed9abdf535" category="list-text">使用利用 VMware API 的备份技术；备份时间应在正常生产时间之外。</block>
   <block id="cfb5002996819a05fe90d726fd35abef" category="list-text">《采用 Cisco UCS 480 ML 的 FlexPod Datacenter for AI/ML 深度学习设计指南》</block>
   <block id="d8db37def441e613da56054e80444482" category="inline-link"><block ref="d8db37def441e613da56054e80444482" category="inline-link-rx"></block></block>
@@ -9203,4 +9191,11 @@
   <block id="f205de40b1d0e559049d3fcc494e1df9" category="cell"><block ref="f205de40b1d0e559049d3fcc494e1df9" category="inline-link-rx"></block></block>
   <block id="a7925e750bfc040002383b6d7dc9f5ac" category="cell"><block ref="a7925e750bfc040002383b6d7dc9f5ac" category="inline-link-rx"></block></block>
   <block id="eaa8da373e73883b20c172d7d760cc68" category="cell"><block ref="eaa8da373e73883b20c172d7d760cc68" category="inline-link-rx"></block></block>
+  <block id="ae2687dae8f23f6af065bc15c7d3826e" category="paragraph">为了获得最佳性能和管理、NetApp建议采用以下卷设计最佳实践：</block>
+  <block id="33af7418734d2a05ae9f18eb5524c449" category="list-text">在单独的存储卷上隔离具有I/O密集型查询的数据库。</block>
+  <block id="7bf8d318ffb4b6475f643ef9cfbbcfee" category="list-text">数据文件可以放置在一个LUN或一个卷上、但为了提高吞吐量、建议使用多个卷/LUN。</block>
+  <block id="abf2a187f8a2f19880402e4c694785a4" category="list-text">使用多个LUN时、可以通过使用任何受支持的文件系统来实现I/O并行。</block>
+  <block id="7ab9ea8d60880f13606485669ddd6049" category="list-text">将数据库文件和事务日志放在不同的卷上、以提高恢复粒度。</block>
+  <block id="8219ca1a94f009ddb8447bb619fb79ce" category="list-text">请考虑使用自动调整大小、Snapshot预留、QoS等卷属性。</block>
+  <block id="7048837fdc10598b502f6bed64d8ef66" category="list-text">使用名为的基于存储阵列的 NetApp 复制技术<block ref="133ca7709616c45e80024be2d7da217e" category="inline-link-rx"></block> 而不是基于vSphere的复制。</block>
 </blocks>
