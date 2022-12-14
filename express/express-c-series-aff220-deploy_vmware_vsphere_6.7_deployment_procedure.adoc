@@ -118,9 +118,9 @@ image:express-c-series-aff220-deploy_image23.png["错误：缺少图形映像"]
 . 使用空格键取消选择启用 IPv6 （需要重新启动）选项以禁用 IPv6 。按 Enter 键。
 . 进入菜单配置 DNS 设置。
 . 由于 IP 地址是手动分配的，因此还必须手动输入 DNS 信息。
-. 输入主 DNS 服务器的 IP 地址 `` 。
+. 输入主 DNS 服务器的 IP 地址 `<<nameserver_ip>>` 。
 . （可选）输入辅 DNS 服务器的 IP 地址。
-. 输入 VMware ESXi 主机名的 FQDN ： `` 。
+. 输入 VMware ESXi 主机名的 FQDN ： `<<esxi_host_fqdn>>` 。
 . 按 Enter 接受对 DNS 配置所做的更改。
 . 按 Esc 退出配置管理网络子菜单。
 . 按 Y 确认更改并重新启动服务器。
