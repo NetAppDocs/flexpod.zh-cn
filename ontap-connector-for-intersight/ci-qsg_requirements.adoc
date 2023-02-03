@@ -29,7 +29,7 @@ summary: 检查您是否满足 NetApp ONTAP 存储与 Cisco Intersight 集成的
 | NetApp ONTAP | ONTAP 9.7P1 及更高版本 
 
 
-| NetApp Active IQ Unified Manager | 需要最新版本的NetApp Active IQ Unified Manager (当前为9.11 GA) 
+| NetApp Active IQ Unified Manager | 需要最新版本的NetApp Active IQ Unified Manager (当前为9.12 GA) 
 
 
 | NetApp 存储阵列 | ONTAP 9.7P1 及更高版本支持所有 ONTAP ASA ， AFF 和 FAS 存储阵列 

@@ -17,6 +17,17 @@ summary: Cisco Intersight 推出了新版本，可为您提供新功能，增强
 
 
 
+== 2023年1月
+
+
+NOTE: 要确保与最新版本的兼容性和完整功能、需要升级到NetApp Active IQ Unified Manager 9.12 GA。有关与此版本相关的已知问题列表、请参见 <<已知问题>>。
+
+* 现在、在执行兼容性检查时、可以通过目视互操作性检查来区分UCSM和IMM固件模式。
+* 对于ONTAP 9.7、保护关系不会显示在Intersight中。此问题描述 已在ONTAP 9.8RC1中修复。
+
+
+
+
 == 2022年8月
 
 
@@ -109,9 +120,11 @@ NOTE: 以上性能指标仅适用于通过 NetApp Active IQ Unified Manager 9.9 
 
 
 
-= 已知问题
+== 已知问题
 
-* 为了确保在数据收集过程中不会影响可忽略存储清单数据、必须从Active IQ Unified Manager (AIQUM)中删除任何不受支持的ONTAP 集群(即ONTAP 9.7P1)。
+* 如果您使用的是AIQUM 9.11或更早版本、则存储列表页面上显示的值与存储常规页面上的容量条形图之间会出现差异。要解决此问题描述 、请升级到AIQUM 9.12或更高版本、以确保显示的容量值的准确性。
+* 如果您使用的是AIQUM 9.11或更早版本、则通过"集成系统"页面下的"互操作性"选项卡执行的任何检查都无法准确区分IMM和UCSM Cisco组件。要解决此问题描述 问题、请升级到AIQUM 9.12以确保正确识别所有组件。
+* 为了确保在数据收集过程中不会影响可忽略存储清单数据、必须从Active IQ Unified Manager (AIQUM)中删除任何不受支持的ONTAP 集群(即ONTAP 9.7P1以下的版本)。
 * 要成功完成FlexPod 集成系统互操作性查询、所有声称的目标要求AIQUM的最低版本为9.11。
 * 如果使用FQDN将ONTAP 集群添加到AIQ-UM、则不会填充"存储清单检查"页面。用户必须使用IP地址将ONTAP 集群添加到AIQ-UM。
 

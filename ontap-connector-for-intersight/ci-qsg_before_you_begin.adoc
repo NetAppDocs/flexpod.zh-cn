@@ -20,7 +20,7 @@ summary: 开始之前，请安装或升级 AIQ UM ，创建 Cisco Intersight 帐
 
 == 安装或升级 NetApp Active IQ Unified Manager
 
-如果尚未安装或升级到Active IQ Unified Manager (需要最新版本、当前为9.11 GA)、请安装或升级到此版本。有关说明，请转至 link:https://docs.netapp.com/us-en/active-iq-unified-manager/["NetApp Active IQ Unified Manager 文档"]。
+如果尚未安装或升级到Active IQ Unified Manager (需要最新版本、当前为9.12 GA)、请安装或升级到此版本。有关说明，请转至 link:https://docs.netapp.com/us-en/active-iq-unified-manager/["NetApp Active IQ Unified Manager 文档"]。
 
 
 
@@ -36,21 +36,21 @@ summary: 开始之前，请安装或升级 AIQ UM ，创建 Cisco Intersight 帐
 +
 .. 在部署 OVA 之前，使用 A/PTR 和 CNAME 别名记录配置 DNS 。请参见以下示例。
 +
-image:ci-qsg_image1.png["用于 A/PTR 记录的主机名示例"]
+image::ci-qsg_image1.png[用于 A/PTR 记录的主机名示例]
 
 .. 根据您对 Intersight Virtual Appliance 的 OVA 部署要求，选择适当的配置大小（小型，小型或中型）。
 +
 * 提示： * 对于包含大量存储对象的双节点 ONTAP 集群， NetApp 建议您使用小型（ 16 个 vCPU ， 32 Gi RAM ）选项。
 
 +
-image:ci-qsg_image2.png["Deploy OVF 模板步骤 5 配置的屏幕截图"]
+image::ci-qsg_image2.png[Deploy OVF 模板步骤 5 配置的屏幕截图]
 
 .. 在 * 自定义模板 * 页面上，自定义 OVF 模板的部署属性。本地用户使用管理员密码： admin （`WebUI/CLI/ssh` ）。
 +
-image:ci-qsg_image3.png["错误：缺少图形映像"]
+image::ci-qsg_image3.png[错误：缺少图形映像]
 
 +
-image:ci-qsg_image4.png["错误：缺少图形映像"]
+image::ci-qsg_image4.png[错误：缺少图形映像]
 
 .. 单击 * 下一步 * 。
 
@@ -69,7 +69,7 @@ image:ci-qsg_image4.png["错误：缺少图形映像"]
 NOTE: 选择Intersight Assist时、请记下设备ID和款项申请代码、然后再继续操作。
 
 +
-image:ci-qsg_image5.png["Intersight 部署选项的屏幕截图"]
+image::ci-qsg_image5.png[Intersight 部署选项的屏幕截图]
 
 
 
@@ -80,7 +80,7 @@ image:ci-qsg_image5.png["Intersight 部署选项的屏幕截图"]
 ... 单击 * 目标 * ， * Cisco Intersight Assist * ，然后单击 * 启动 * 。
 ... 通过从新部署的 Intersight Assist 虚拟设备复制并粘贴设备 ID 和声明代码，申请 * Cisco Intersight assist* 设备。
 +
-image:ci-qsg_image6.png["突出显示 Cisco Intersight Assist 的 Select Target Type 屏幕截图"]
+image::ci-qsg_image6.png[突出显示 Cisco Intersight Assist 的 Select Target Type 屏幕截图]
 
 ... 返回到 * Cisco Intersight assist* 设备，然后单击 * 继续。 * 您可能需要刷新浏览器。
 +

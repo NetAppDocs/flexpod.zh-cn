@@ -1193,28 +1193,22 @@
   <block id="2b70343738f7a785cf3d0064f0a39b32" category="list-text">部署 OVA 。部署 OVA 需要使用 DNS 和 NTP 。</block>
   <block id="b46368b8756e258c478ad0209aafb836" category="list-text">在部署 OVA 之前，使用 A/PTR 和 CNAME 别名记录配置 DNS 。请参见以下示例。</block>
   <block id="9d6318b0d30a534802e63b46fbc2f7c1" category="inline-image-macro">用于 A/PTR 记录的主机名示例</block>
-  <block id="045ce1f853ba95eeb06d41946cbbe014" category="paragraph"><block ref="045ce1f853ba95eeb06d41946cbbe014" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c1d2c46420fb0fb59479d35168ae1900" category="list-text">根据您对 Intersight Virtual Appliance 的 OVA 部署要求，选择适当的配置大小（小型，小型或中型）。</block>
   <block id="4d612f1b1c407dc59d8ad3e83f7b76ea" category="paragraph">* 提示： * 对于包含大量存储对象的双节点 ONTAP 集群， NetApp 建议您使用小型（ 16 个 vCPU ， 32 Gi RAM ）选项。</block>
   <block id="6a63e53ddbe218be4bb2034c0305e630" category="inline-image-macro">Deploy OVF 模板步骤 5 配置的屏幕截图</block>
-  <block id="163d67d440d02b8ef7547f4bfe8166de" category="paragraph"><block ref="163d67d440d02b8ef7547f4bfe8166de" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3ee38327895dc648b6f1f999e57babca" category="list-text">在 * 自定义模板 * 页面上，自定义 OVF 模板的部署属性。本地用户使用管理员密码： admin （`WebUI/CLI/ssh` ）。</block>
-  <block id="318871c35022cd02bcd1bd5839f0d3a8" category="paragraph"><block ref="318871c35022cd02bcd1bd5839f0d3a8" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="f52c8224a9f4defa0e18839412fe673b" category="paragraph"><block ref="f52c8224a9f4defa0e18839412fe673b" category="inline-image-macro-rx" type="image"></block></block>
   <block id="5a378b18f7bf0c4cabc6c655cd2f535e" category="list-text">单击 * 下一步 * 。</block>
   <block id="88ade68952e1a8d9f1c49b5ed85b5af5" category="list-text">部署后 Intersight Assist 设备。</block>
   <block id="dba06e35ee25a3095d873c4534514037" category="list-text">导航到<block ref="f9e0ea639036dbfc655ff5cf553db753" category="inline-link-rx"></block> 完成设备的安装后设置。</block>
   <block id="bca0d681ab79310b7d18a7976928af12" category="paragraph">安装过程将自动开始。安装可能需要长达一小时，具体取决于 Intersight.com 的带宽。在虚拟机启动后，安全站点也可能需要几秒钟的时间才能正常运行。</block>
   <block id="3920eddb38a93c54b93b962bbdea7c26" category="list-text">* Intersight Assist 。 * 通过此部署， SaaS 模式可以连接到 Cisco Intersight 。</block>
   <block id="32f55ec9f00aee8539ca16e146d53713" category="inline-image-macro">Intersight 部署选项的屏幕截图</block>
-  <block id="df2ced2f2ca7e12619f0e054224c6230" category="paragraph"><block ref="df2ced2f2ca7e12619f0e054224c6230" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2f88e5cbd35ab951b0bce5a96b06bb36" category="list-text">单击 * 继续 * 。</block>
   <block id="6f6002ff113b47d720b948fdbd799d5c" category="inline-link"><block ref="6f6002ff113b47d720b948fdbd799d5c" category="inline-link-rx"></block></block>
   <block id="3aa4c250877220ced11dd5118f05b73c" category="list-text">导航到您的 SaaS Intersight 帐户，网址为<block ref="b140963de237118a210eda3a58c6a981" category="inline-link-rx"></block>。</block>
   <block id="66b6809a917e6f7acac28f8accbdedc3" category="list-text">单击 * 目标 * ， * Cisco Intersight Assist * ，然后单击 * 启动 * 。</block>
   <block id="53e0ae9e421ccd8017c4eeb818859f12" category="list-text">通过从新部署的 Intersight Assist 虚拟设备复制并粘贴设备 ID 和声明代码，申请 * Cisco Intersight assist* 设备。</block>
   <block id="aa934cad8ef62fbb6a89fb41491c988e" category="inline-image-macro">突出显示 Cisco Intersight Assist 的 Select Target Type 屏幕截图</block>
-  <block id="e7934022378c77a43b6c1f0ba4528fa0" category="paragraph"><block ref="e7934022378c77a43b6c1f0ba4528fa0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b4fc4b024772b963c5f5f7aac44f2918" category="list-text">返回到 * Cisco Intersight assist* 设备，然后单击 * 继续。 * 您可能需要刷新浏览器。</block>
   <block id="ebd1193b80c5bb1e5a3c2f4ca7d1ad9f" category="paragraph">下载和安装过程将开始。二进制文件将从 Intersight Cloud 传输到您的内部设备。完成时间因您访问 Intersight Cloud 的带宽而异。</block>
   <block id="dbc336f1f1eca69b9dcbc997457166bc" category="summary">NetApp 和 Cisco 合作提供 Cisco Intersight ，这是 FlexPod 生态系统的单一窗格视图。</block>
@@ -7897,7 +7891,6 @@
   <block id="b8a3a6101b5ada36c1e5927fd398157d" category="list-text">在部署后过程中、选择以下选项：</block>
   <block id="05b3bc98db36aa487224a23de09ab3be" category="admonition">选择Intersight Assist时、请记下设备ID和款项申请代码、然后再继续操作。</block>
   <block id="fd7b91f0228fe4adf25f7fca76314e8d" category="list-text">选择*中间视辅助*并完成以下步骤：</block>
-  <block id="8c8498202f001fd26ea4173271ec8a24" category="paragraph">如果尚未安装或升级到Active IQ Unified Manager (需要最新版本、当前为9.11 GA)、请安装或升级到此版本。有关说明，请转至 <block ref="b713007c96ed5cceca9ab6b5776ab58a" category="inline-link-macro-rx"></block>。</block>
   <block id="8bab215794a736f6f876eac0eeb23923" category="section-title">2022年8月</block>
   <block id="d8f8a4fb7ebbb1310ca5d01f756e92d0" category="admonition">要确保与最新版本的兼容性和完整功能、需要升级到NetApp Active IQ Unified Manager 9.11 GA。有关与此版本相关的已知问题列表、请参见 <block ref="1e93e2dfe5ecbece98249e8c1a59713c" category="inline-xref-macro-rx"></block>。</block>
   <block id="42bd0f13ec20ddd3964630f6646c2136" category="list-text">已更新集群可用容量计算以匹配System Manager</block>
@@ -7909,11 +7902,9 @@
   <block id="9cdaae7b657bf23b6c320b1cd28c4c36" category="list-text">如果Storage VM已启用CIFS、则会在Storage VM的常规选项卡上添加CIFS服务信息</block>
   <block id="bd6cfb91907acb62b03084843321ec2a" category="list-text">添加了一个集群检查页面、可用于使用户验证NetApp存储系统的配置是否符合最佳实践</block>
   <block id="558ab0bef1894a7a726109d36632d09d" category="section-title">已知问题</block>
-  <block id="fe9b57b6a58a76519ec48d5a08f3c9b0" category="list-text">为了确保在数据收集过程中不会影响可忽略存储清单数据、必须从Active IQ Unified Manager (AIQUM)中删除任何不受支持的ONTAP 集群(即ONTAP 9.7P1)。</block>
   <block id="e8c4ec43528d3a582dd7b32616a88eb9" category="list-text">要成功完成FlexPod 集成系统互操作性查询、所有声称的目标要求AIQUM的最低版本为9.11。</block>
   <block id="b1b25033ea7463aca79f95ef822af033" category="list-text">如果使用FQDN将ONTAP 集群添加到AIQ-UM、则不会填充"存储清单检查"页面。用户必须使用IP地址将ONTAP 集群添加到AIQ-UM。</block>
   <block id="914be32cb08524e05323b3adb9bc0c3f" category="paragraph">在NetApp IQ Unified Manager中、导航到*设置&gt;常规&gt;功能设置*。</block>
-  <block id="ad180dc1b01f328b8c0230d111d11d5d" category="cell">需要最新版本的NetApp Active IQ Unified Manager (当前为9.11 GA)</block>
   <block id="1f0c1e64448622e1d184d478ed9ef6d1" category="doc">《Cisco Intersight与NetApp存储快速入门指南》</block>
   <block id="e47450d255414e1f34605a681b2919e6" category="summary">本节介绍为此解决方案 提供支持的各种组件。</block>
   <block id="32e0d2b797e6706a73e8146d103572c7" category="inline-link-macro">上一步：解决方案概述。</block>
@@ -9175,7 +9166,6 @@
   <block id="549e147409126d885754994939d9cb6c" category="sidebar">适用于Google云平台的FlexPod 混合云与NetApp Cloud Volumes ONTAP 和Cisco Intersight</block>
   <block id="b77014effa68d8bd1b8a5868123a2a63" category="summary">具有代理服务器配置的AIQ UM需要通过命令行界面进行设置才能使用IMT 服务。</block>
   <block id="e814e5396b09bd235085ad390f6ea986" category="doc">为IMT 服务配置AIQ UM代理服务器</block>
-  <block id="5a66f19b0ec8be9c2e0a7c58787ea9b1" category="paragraph">如果您使用的代理服务器具有适用于Cisco Intersight的AIQ UM和NetApp ONTAP 存储、则必须通过命令行界面(CLI)配置此设置、以利用互操作性表工具服务(IMT)。您必须使用Active IQ Unified Manager 虚拟机(OVA)诊断Shell配置AIQ UM代理服务器设置。</block>
   <block id="80b32c2ac8f5fd5845a3ccaf583c8c8b" category="inline-link">如何访问Active IQ Unified Manager 虚拟机(OVA) DIAG Shell</block>
   <block id="baf8ab71191c15b45a74e4bc93f0b0cf" category="admonition">有关如何访问AIQ UM Diag Shell的信息、请参见<block ref="6b434b6393786ea1d3dba8a708c6486d" category="inline-link-rx"></block></block>
   <block id="22b912c9ddb3da961206d948f4472107" category="list-text">登录到AIQ UM终端并运行以下命令以登录到um。</block>
@@ -9198,4 +9188,14 @@
   <block id="ce93121f4d7265c3a12c10d3efa2733d" category="inline-link-macro">previous：使用&lt;block ref="c04f464a529d08398ebf630bf9c932 ed" prefix="category="inline-code"/"脚本执行GATK的输出。</block>
   <block id="1b04071fa32de2cc62ba81ce722a80de" category="inline-link-macro">使用&lt;block ref="c04f464a529d08398ebf630bf9c932ed" prefix="category="inline-code"/"脚本执行GATK的输出。</block>
   <block id="919bcacd06d9ba9c758783027661478b" category="inline-link-macro">下一步：使用&lt;block ref="c04f464a529d08398ebf630bf9c932 ed" prefix="category="inline-code"/"脚本执行GATK的输出。</block>
+  <block id="4174da9caea2fe6cfb47e03b760a26b4" category="cell">需要最新版本的NetApp Active IQ Unified Manager (当前为9.12 GA)</block>
+  <block id="1ad9d53c3fc2062cfb8cd9f962f46df0" category="paragraph">如果尚未安装或升级到Active IQ Unified Manager (需要最新版本、当前为9.12 GA)、请安装或升级到此版本。有关说明，请转至 <block ref="b713007c96ed5cceca9ab6b5776ab58a" category="inline-link-macro-rx"></block>。</block>
+  <block id="30afe0cd8c37f4391553d8fb227f8dd4" category="paragraph">如果您使用的代理服务器具有适用于Cisco Intersight的AIQ UM和NetApp ONTAP 存储、则必须通过命令行界面(CLI)配置此设置、以利用互操作性表工具服务(IMT)。IMT 服务位于*集成系统*页面的*互操作性*选项卡下。您必须使用Active IQ Unified Manager 虚拟机(OVA)诊断Shell配置AIQ UM代理服务器设置。</block>
+  <block id="abb14d21829ba186172f6e1d0b64b55b" category="section-title">2023年1月</block>
+  <block id="f58686065d77527c1d5e19130ba1ee62" category="admonition">要确保与最新版本的兼容性和完整功能、需要升级到NetApp Active IQ Unified Manager 9.12 GA。有关与此版本相关的已知问题列表、请参见 <block ref="1e93e2dfe5ecbece98249e8c1a59713c" category="inline-xref-macro-rx"></block>。</block>
+  <block id="bcd1997c23df8e33e5754b435a84db65" category="list-text">现在、在执行兼容性检查时、可以通过目视互操作性检查来区分UCSM和IMM固件模式。</block>
+  <block id="6479629d372a87dcf6f7058a3b415313" category="list-text">对于ONTAP 9.7、保护关系不会显示在Intersight中。此问题描述 已在ONTAP 9.8RC1中修复。</block>
+  <block id="481eaf6f556ec962ffcf3a6e3c11049d" category="list-text">如果您使用的是AIQUM 9.11或更早版本、则存储列表页面上显示的值与存储常规页面上的容量条形图之间会出现差异。要解决此问题描述 、请升级到AIQUM 9.12或更高版本、以确保显示的容量值的准确性。</block>
+  <block id="dd6bef8a9fbb7862bfad4c41ccf7f03d" category="list-text">如果您使用的是AIQUM 9.11或更早版本、则通过"集成系统"页面下的"互操作性"选项卡执行的任何检查都无法准确区分IMM和UCSM Cisco组件。要解决此问题描述 问题、请升级到AIQUM 9.12以确保正确识别所有组件。</block>
+  <block id="215f19e5d79256f2e6c09a431d1ee7d7" category="list-text">为了确保在数据收集过程中不会影响可忽略存储清单数据、必须从Active IQ Unified Manager (AIQUM)中删除任何不受支持的ONTAP 集群(即ONTAP 9.7P1以下的版本)。</block>
 </blocks>

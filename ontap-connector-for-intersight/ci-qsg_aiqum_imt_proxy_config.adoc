@@ -14,7 +14,7 @@ summary: 具有代理服务器配置的AIQ UM需要通过命令行界面进行�
 
 
 [role="lead"]
-如果您使用的代理服务器具有适用于Cisco Intersight的AIQ UM和NetApp ONTAP 存储、则必须通过命令行界面(CLI)配置此设置、以利用互操作性表工具服务(IMT)。您必须使用Active IQ Unified Manager 虚拟机(OVA)诊断Shell配置AIQ UM代理服务器设置。
+如果您使用的代理服务器具有适用于Cisco Intersight的AIQ UM和NetApp ONTAP 存储、则必须通过命令行界面(CLI)配置此设置、以利用互操作性表工具服务(IMT)。IMT 服务位于*集成系统*页面的*互操作性*选项卡下。您必须使用Active IQ Unified Manager 虚拟机(OVA)诊断Shell配置AIQ UM代理服务器设置。
 
 
 NOTE: 有关如何访问AIQ UM Diag Shell的信息、请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/Active_IQ_Unified_Manager/How_to_access_Active_IQ_Unified_Manager_Virtual_Machine_OVA_DIAG_shell["如何访问Active IQ Unified Manager 虚拟机(OVA) DIAG Shell"]
