@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/fhc-cvoe-conclusion.html 
+keywords: conclusion 
+summary: 构建混合云是大多数医疗保健组织随时提供数据可用性的目标。在此解决方案 中、我们实施了采用Cloud Volumes ONTAP 的FlexPod 混合云解决方案 、利用NetApp SnapMirror复制技术验证了一些用于备份和恢复医疗保健应用程序和工作负载的用例。 
+---
+= 结论
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:fhc-cvoe-solution-validation.html["先前版本：解决方案 验证。"]
+
+[role="lead"]
+构建混合云是大多数医疗保健组织随时提供数据可用性的目标。在此解决方案 中、我们实施了采用Cloud Volumes ONTAP 的FlexPod 混合云解决方案 、利用NetApp SnapMirror复制技术验证了一些用于备份和恢复医疗保健应用程序和工作负载的用例。
+
+FlexPod 是Cisco和NetApp战略合作伙伴关系中经过严格测试和预先验证的融合基础架构、旨在提供可预测的低延迟系统性能和高可用性。这种方法可为EHR系统用户带来较高的舒适程度、并最终获得最佳响应时间。
+
+借助NetApp、您可以像在内部数据中心运行NetApp存储功能一样、在云中运行EHR生产、灾难恢复、备份或分层。借助NetApp Cloud Volumes ONTAP 、NetApp可提供在云中有效运行EHR所需的企业级功能和性能。NetApp云选项可提供基于iSCSI的块和基于NFS或SMB的文件。
+
+此解决方案 可满足医疗保健组织的需求、并使其能够朝着数字化转型迈出一步。它还可以帮助他们高效地管理应用程序和工作负载。
+
+link:fhc-cvoe-where-to-find-additional-information.html["下一步：从何处查找追加信息。"]

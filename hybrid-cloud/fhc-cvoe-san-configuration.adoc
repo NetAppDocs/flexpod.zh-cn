@@ -1,0 +1,309 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/fhc-cvoe-san-configuration.html 
+keywords: san, configuration, host utility kit, discover storage, multipathing, physical volume, group, logical volume, file system, snapmirror 
+summary: 本节介绍EHR为使软件与NetApp存储实现最佳集成而需要的主机端配置。在此部分中、我们将专门讨论Linux操作系统的主机集成。 
+---
+= SAN 配置
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:fhc-cvoe-installation-and-configuration.html["先前版本：安装和配置。"]
+
+[role="lead"]
+本节介绍EHR为使软件与NetApp存储实现最佳集成而需要的主机端配置。在此部分中、我们将专门讨论Linux操作系统的主机集成。使用 https://imt.netapp.com/matrix/["NetApp 互操作性表工具（ IMT ）"^] 验证所有版本的软件和固件。
+
+
+NOTE: 以下配置步骤特定于此解决方案 中使用的CentOS 8主机。
+
+
+
+== NetApp主机实用程序套件
+
+NetApp建议在连接到和访问NetApp存储系统的主机的操作系统上安装NetApp Host Utility Kit (Host Utilities)。支持本机Microsoft多路径I/O (MPIO)。操作系统必须支持多路径的非对称逻辑单元访问(ALUA)。安装Host Utilities可为NetApp存储配置主机总线适配器(HBA)设置。
+
+可以下载NetApp Host Utilities https://mysupport.netapp.com/site/products/all/details/hostutilities/downloads-tab["此处"^]。在此解决方案 中、我们已在主机上安装Linux Host Utilities 7.1。
+
+....
+[root@hc-cloud-secure-1 ~]# rpm -ivh netapp_linux_unified_host_utilities-7-1.x86_64.rpm
+....
+
+
+== 发现ONTAP 存储
+
+确保iSCSI服务在应进行登录时正在运行。要为目标上的特定门户或目标上的所有门户设置登录模式、请使用 `iscsiadm` 命令：
+
+....
+[root@hc-cloud-secure-1 ~]# rescan-scsi-bus.sh
+[root@hc-cloud-secure-1 ~]# iscsiadm -m discovery -t sendtargets -p <iscsi-lif-ip>
+[root@hc-cloud-secure-1 ~]# iscsiadm -m node -L all
+....
+现在、您可以使用 `sanlun` 显示有关连接到主机的LUN的信息。确保以root身份登录到主机。
+
+....
+[root@hc-cloud-secure-1 ~]# sanlun lun show
+controller(7mode/E-Series)/
+                                    device    host             lun
+vserver(cDOT/FlashRay) lun-pathname filename  adapter protocol size   product
+-----------------------------------------------------------------------------
+Healthcare_SVM                       /dev/sdb host33  iSCSI    200g    cDOT
+                       /vol/hc_iscsi_vol/iscsi_lun1
+
+Healthcare_SVM                       /dev/sdc host34  iSCSI    200g    cDOT
+                       /vol/hc_iscsi_vol/iscsi_lun1
+....
+
+
+== 配置多路径
+
+设备映射程序多路径(DM-Multipath)是Linux中的本机多路径实用程序。它可用于实现冗余并提高性能。它可以聚合或组合服务器和存储之间的多个I/O路径、从而在操作系统级别创建一个设备。
+
+. 在系统上设置DM-Multipath之前、请确保您的系统已更新并包含 `device-mapper-multipath` 软件包。
++
+....
+[root@hc-cloud-secure-1 ~]# rpm -qa|grep multipath
+device-mapper-multipath-libs-0.8.4-31.el8.x86_64
+device-mapper-multipath-0.8.4-31.el8.x86_64
+....
+. 配置文件为 `/etc/multipath.conf` 文件按如下所示更新配置文件。
++
+....
+[root@hc-cloud-secure-1 ~]# cat /etc/multipath.conf
+defaults {
+   path_checker      readsector0
+   no_path_retry      fail
+}
+devices {
+   device {
+      vendor         "NETAPP  "
+      product         "LUN.*"
+      no_path_retry     queue
+      path_checker      tur
+   }
+}
+....
+. 启用并启动多路径服务。
++
+....
+[root@hc-cloud-secure-1 ~]# systemctl enable multipathd.service
+[root@hc-cloud-secure-1 ~]# systemctl start  multipathd.service
+....
+. 添加可加载的内核模块 `dm-multipath` 并重新启动多路径服务。最后、检查多路径状态。
++
+....
+[root@hc-cloud-secure-1 ~]# modprobe -v dm-multipath
+insmod /lib/modules/4.18.0-408.el8.x86_64/kernel/drivers/md/dm-multipath.ko.xz
+
+[root@hc-cloud-secure-1 ~]# systemctl restart multipathd.service
+
+[root@hc-cloud-secure-1 ~]# multipath -ll
+3600a09803831494c372b545a4d786278 dm-2 NETAPP,LUN C-Mode
+size=200G features='3 queue_if_no_path pg_init_retries 50' hwhandler='1 alua' wp=rw
+|-+- policy='service-time 0' prio=50 status=active
+| `- 33:0:0:0 sdb 8:16 active ready running
+`-+- policy='service-time 0' prio=10 status=enabled
+`- 34:0:0:0 sdc 8:32 active ready running
+....
+
+
+
+NOTE: 有关这些步骤的详细信息、请参见 https://docs.netapp.com/us-en/ontap-sanhost/hu_centos_80.html["此处"^]。
+
+
+
+== 创建物理卷
+
+使用 `pvcreate` 用于初始化块设备以用作物理卷的命令。初始化类似于格式化文件系统。
+
+....
+[root@hc-cloud-secure-1 ~]# pvcreate /dev/sdb
+Physical volume "/dev/sdb" successfully created.
+....
+
+
+== 创建卷组
+
+要从一个或多个物理卷创建卷组、请使用 `vgcreate` 命令：此命令将按名称创建一个新卷组、并至少向其中添加一个物理卷。
+
+....
+[root@hc-cloud-secure-1 ~]# vgcreate datavg /dev/sdb
+Volume group "datavg" successfully created.
+....
+。 `vgdisplay` 命令可用于以固定形式显示卷组属性(例如大小、块区、物理卷数量等)。
+
+....
+[root@hc-cloud-secure-1 ~]# vgdisplay datavg
+  --- Volume group ---
+  VG Name               datavg
+  System ID
+  Format                lvm2
+  Metadata Areas        1
+  Metadata Sequence No  1
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                0
+  Cur LV                0
+  Open LV               0
+  Max PV                0
+  Cur PV                1
+  Act PV                1
+  VG Size               <200.00 GiB
+  PE Size               4.00 MiB
+  Total PE              51199
+  Alloc PE / Size       0 / 0
+  Free  PE / Size       51199 / <200.00 GiB
+  VG UUID               C7jmI0-J0SS-Cq91-t6b4-A9xw-nTfi-RXcy28
+....
+
+
+== 创建逻辑卷
+
+创建逻辑卷时、系统会使用卷组中的物理卷上的可用块区从卷组中划分逻辑卷。
+
+....
+[root@hc-cloud-secure-1 ~]# lvcreate - l 100%FREE -n datalv datavg
+Logical volume "datalv" created.
+....
+此命令将创建一个名为的逻辑卷 `datalv` 这将使用卷组中的所有未分配空间 `datavg`。
+
+
+
+== 创建文件系统
+
+....
+[root@hc-cloud-secure-1 ~]# mkfs.xfs -K /dev/datavg/datalv
+meta-data=/dev/datavg/datalv     isize=512    agcount=4, agsize=13106944 blks
+         =                       sectsz=4096  attr=2, projid32bit=1
+         =                       crc=1        finobt=1, sparse=1, rmapbt=0
+         =                       reflink=1    bigtime=0 inobtcount=0
+data     =                       bsize=4096   blocks=52427776, imaxpct=25
+         =                       sunit=0      swidth=0 blks
+naming   =version 2              bsize=4096   ascii-ci=0, ftype=1
+log      =internal log           bsize=4096   blocks=25599, version=2
+         =                       sectsz=4096  sunit=1 blks, lazy-count=1
+realtime =none                   extsz=4096   blocks=0, rtextents=0
+....
+
+
+== 创建要挂载的文件夹
+
+....
+[root@hc-cloud-secure-1 ~]# mkdir /file1
+....
+
+
+== 挂载文件系统
+
+....
+[root@hc-cloud-secure-1 ~]# mount -t xfs /dev/datavg/datalv /file1
+
+[root@hc-cloud-secure-1 ~]# df -k
+Filesystem                1K-blocks    Used Available Use% Mounted on
+devtmpfs                    8072804       0   8072804   0% /dev
+tmpfs                       8103272       0   8103272   0% /dev/shm
+tmpfs                       8103272    9404   8093868   1% /run
+tmpfs                       8103272       0   8103272   0% /sys/fs/cgroup
+/dev/mapper/cs-root        45496624 5642104  39854520  13% /
+/dev/sda2                   1038336  258712    779624  25% /boot
+/dev/sda1                    613184    7416    605768   2% /boot/efi
+tmpfs                       1620652      12   1620640   1% /run/user/42
+tmpfs                       1620652       0   1620652   0% /run/user/0
+/dev/mapper/datavg-datalv 209608708 1494520 208114188   1% /file1
+....
+有关这些任务的详细信息、请参见页面 link:https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/5/html/logical_volume_manager_administration/lvm_cli["使用CLI命令管理LVM"]。
+
+
+
+== 数据生成
+
+ `Dgen.pl` 是EHR I/O模拟器(GenerateIO)的perl脚本数据生成器。LUN中的数据是使用EHR生成的 `Dgen.pl` 脚本。此脚本用于创建类似于EHR数据库中的数据。
+
+....
+[root@hc-cloud-secure-1 ~]# cd GenerateIO-1.17.3/
+
+[root@hc-cloud-secure-1 GenerateIO-1.17.3]# ./dgen.pl --directory /file1 --jobs 80
+
+[root@hc-cloud-secure-1 ~]# cd /file1/
+[root@hc-cloud-secure-1 file1]# ls
+dir01  dir05  dir09  dir13  dir17  dir21  dir25  dir29  dir33  dir37  dir41  dir45  dir49  dir53  dir57  dir61  dir65  dir69  dir73  dir77  dir02  dir06  dir10  dir14  dir18  dir22  dir26  dir30  dir34  dir38  dir42  dir46  dir50  dir54  dir58  dir62  dir66  dir70  dir74  dir78  dir03  dir07  dir11  dir15  dir19  dir23  dir27  dir31  dir35  dir39  dir43  dir47  dir51  dir55  dir59  dir63  dir67  dir71  dir75  dir79  dir04  dir08  dir12  dir16  dir20  dir24  dir28  dir32  dir36  dir40  dir44  dir48  dir52  dir56  dir60  dir64  dir68  dir72  dir76  dir80
+
+[root@hc-cloud-secure-1 file1]# df -k .
+Filesystem                 1K-blocks  Used       Available  Use%  Mounted on
+/dev/mapper/datavg-datalv  209608708  178167156  31441552   85%   /file1
+....
+运行时、 `Dgen.pl` 默认情况下、脚本使用文件系统的85%来生成数据。
+
+
+
+== 在内部ONTAP 和Cloud Volumes ONTAP 之间配置SnapMirror复制
+
+NetApp SnapMirror 可通过 LAN 或 WAN 高速复制数据，从而在虚拟和传统环境中实现高数据可用性和快速数据复制。在将数据复制到 NetApp 存储系统并持续更新二级数据时，您的数据将保持最新，并在需要时保持可用。不需要外部复制服务器。
+
+完成以下步骤以在内部ONTAP 系统和CVO之间配置SnapMirror复制。
+
+. 从导航菜单中、选择*存储*>*画布*。
+. 在Canvas中、选择包含源卷的工作环境、将其拖动到要将该卷复制到的工作环境中、然后选择*复制*。
++
+image:fhc-cvoe-image8.jpeg["此屏幕截图显示了在内部ONTAP 实例的下拉列表中选择了复制的\"BlueXP画布\"屏幕。"]
+
++
+其余步骤将介绍如何在Cloud Volumes ONTAP 和内部ONTAP 集群之间创建同步关系。
+
+. *源和目标对等设置。*如果显示此页面、请为集群对等关系选择所有集群间LIF。
++
+image:fhc-cvoe-image9.png["此屏幕截图显示了\"BlueXP源对等设置\"屏幕。"]
+
+. *源卷选择。*选择要复制的卷。
++
+image:fhc-cvoe-image10.jpeg["此屏幕截图显示了BlueXP源卷选择屏幕、其中显示了一个卷、共14个。"]
+
+. *目标磁盘类型和分层。*如果目标是Cloud Volumes ONTAP 系统、请选择目标磁盘类型、然后选择是否要启用数据分层。
++
+image:fhc-cvoe-image11.jpeg["此屏幕截图显示了选择了通用SSD的BlueXP目标磁盘类型屏幕。"]
+
+. *目标卷名称：*指定目标卷名称并选择目标聚合。如果目标是 ONTAP 集群，则还必须指定目标 Storage VM 。
++
+image:fhc-cvoe-image12.jpeg["此屏幕截图显示了BlueXP目标卷名称屏幕以及输入的相关信息。"]
+
+. *最大传输速率。*指定可传输数据的最大速率(以MB/秒为单位)。
++
+image:fhc-cvoe-image13.jpeg["此屏幕截图显示了输入了100 MB/秒的BlueXP最大传输速率屏幕。"]
+
+. *复制策略。*选择一个默认策略或单击*其他策略*、然后选择一个高级策略。如需帮助， https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication-policies.html["了解复制策略"^]。
++
+image:fhc-cvoe-image14.jpeg["此屏幕截图显示了\"BlueXP复制策略\"页面、其中显示了\"镜像\"或\"镜像和备份\"的默认策略。"]
+
+. *计划。*选择一次性副本或重复计划。有多个默认计划可用。如果您需要其他计划、则必须在上创建新计划 `destination cluster` 使用 System Manager 。
++
+image:fhc-cvoe-image15.jpeg["此屏幕截图显示了BlueXP复制设置计划屏幕、其中显示了多个计时选项。"]
+
+. *查看。*查看您选择的内容、然后单击*执行*。
++
+image:fhc-cvoe-image16.jpeg["此屏幕截图显示了\"BlueXP复制设置审核和批准\"屏幕。"]
+
+
+
+有关这些配置步骤的详细信息、请参见 https://docs.netapp.com/us-en/cloud-manager-replication/task-replicating-data.html["此处"^]。
+
+BlueXP将启动数据复制过程。现在、您可以看到在内部ONTAP 系统和Cloud Volumes ONTAP 之间建立的*复制*服务。
+
+image:fhc-cvoe-image17.jpeg["此屏幕截图显示了BlueXP的\"画布\"屏幕、其中复制服务显示为CVO实例与内部ONTAP 实例之间的一行。"]
+
+在Cloud Volumes ONTAP 集群中、您可以看到新创建的卷。
+
+image:fhc-cvoe-image18.png["此屏幕截图显示了BlueXP卷选项卡、其中显示了新卷。"]
+
+您还可以验证是否已在内部卷和云卷之间建立SnapMirror关系。
+
+image:fhc-cvoe-image19.jpeg["此屏幕截图显示了\"BlueXP复制\"选项卡、其中包含有关刚刚创建的复制关系的信息。"]
+
+有关复制任务的详细信息、请参见*复制*选项卡。
+
+image:fhc-cvoe-image20.png["此屏幕截图显示了\"复制\"选项卡下的扩展信息。"]
+
+link:fhc-cvoe-solution-validation.html["接下来：解决方案验证。"]

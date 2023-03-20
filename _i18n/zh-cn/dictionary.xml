@@ -9198,4 +9198,340 @@
   <block id="481eaf6f556ec962ffcf3a6e3c11049d" category="list-text">如果您使用的是AIQUM 9.11或更早版本、则存储列表页面上显示的值与存储常规页面上的容量条形图之间会出现差异。要解决此问题描述 、请升级到AIQUM 9.12或更高版本、以确保显示的容量值的准确性。</block>
   <block id="dd6bef8a9fbb7862bfad4c41ccf7f03d" category="list-text">如果您使用的是AIQUM 9.11或更早版本、则通过"集成系统"页面下的"互操作性"选项卡执行的任何检查都无法准确区分IMM和UCSM Cisco组件。要解决此问题描述 问题、请升级到AIQUM 9.12以确保正确识别所有组件。</block>
   <block id="215f19e5d79256f2e6c09a431d1ee7d7" category="list-text">为了确保在数据收集过程中不会影响可忽略存储清单数据、必须从Active IQ Unified Manager (AIQUM)中删除任何不受支持的ONTAP 集群(即ONTAP 9.7P1以下的版本)。</block>
+  <block id="2104829028fdfe1e2104a9042ddd3623" category="summary">本节概述了此解决方案 所需的各种组件。</block>
+  <block id="47806551234ccbe3c3122530893dbfe8" category="inline-link-macro">先前版本：解决方案 概述。</block>
+  <block id="21957b8e55d511db84b94f5aec1caa90" category="paragraph"><block ref="21957b8e55d511db84b94f5aec1caa90" category="inline-link-macro-rx"></block></block>
+  <block id="e9fe51b384f7590aa3737b41422266e4" category="paragraph">FlexPod 是一组定义的硬件和软件、可为虚拟化和非虚拟化解决方案奠定集成基础。FlexPod 包括NetApp ONTAP 存储、Cisco Nexus网络、Cisco MDS存储网络和Cisco统一计算系统(Cisco UCS)。</block>
+  <block id="bbb0e8b049901476fd84cf9e0fc356e5" category="paragraph">医疗保健组织正在寻找解决方案 、以简化数字化转型并改善患者体验和结果。借助FlexPod 、您可以获得一个安全、可扩展的平台、该平台可提高效率、并使员工能够更快地做出更明智的决策、从而为患者提供更好的护理。</block>
+  <block id="0fc2d663c6fc701cdf3f85463ec3fcec" category="paragraph">FlexPod 是满足医疗保健工作负载需求的理想平台、因为它具有以下优势：</block>
+  <block id="20554b7070a41f183c39f879d9542b90" category="list-text">优化操作、更快地获得洞察力并获得更好的患者结果。</block>
+  <block id="47b7068ff550075db8c23110dd3c06b0" category="list-text">利用可扩展且可靠的基础架构简化映像应用程序。</block>
+  <block id="082dcbe360c49ca4c12f46f0b9c45717" category="list-text">借助经验证的方法快速高效地部署特定于医疗保健的应用程序、例如EHR。</block>
+  <block id="e3f530e977d74053c6d70eb84886e756" category="section-title">Epic</block>
+  <block id="5487d5465f5bef86877c53f4bee269b7" category="paragraph">Epic Electronic Health Records (EHRs)为大中型医疗团队、医院和综合医疗保健组织提供软件。客户还包括社区医院、学术机构、儿童组织、安全网络提供商和多医院系统。EHR集成软件涵盖临床、访问和收入功能、并扩展到家庭。</block>
+  <block id="61e92578533bbca384b0827757c3828b" category="paragraph">医疗保健提供商组织仍然面临着最大程度地发挥其在行业领先的EHRs上的巨大投资优势的压力。客户在为EHR解决方案和任务关键型应用程序设计数据中心时、通常会为其数据中心架构确定以下目标：</block>
+  <block id="3e77b8f2742f9c6c9e5431bb6a507cc0" category="list-text">EHR应用程序的高可用性</block>
+  <block id="0bf306b1478661b1ec659d3d45732ce6" category="list-text">在数据中心轻松实施EHR</block>
+  <block id="2104af181edd8195e9eacb28f07d9434" category="list-text">灵活性和可扩展性、支持通过新的EHR版本或应用程序实现增长</block>
+  <block id="266186fab1495f829a1954e04558db4b" category="paragraph">FlexPod 已通过EHR认证、支持一个平台、其中包含采用Intel Xeon处理器的Cisco UCS、Red Hat Enterprise Linux (RHEL)以及采用VMware ESXi的虚拟化。此平台加上EHR在运行ONTAP 的NetApp存储方面的高舒适性级别排名、让客户有信心通过FlexPod 在完全托管的私有云中运行其医疗保健应用程序、该私有云也可以连接到任何公共云提供商。</block>
+  <block id="1273c8a63109161e6fd1f18d6998523f" category="section-title">NetApp BlueXP</block>
+  <block id="9b9477e579c3b44dd623d5a6e1ea8d78" category="inline-link">BlueXP</block>
+  <block id="86706cdade6ef7fa7ccfbed73633a085" category="paragraph">BlueXP (原NetApp Cloud Manager)是一款基于SaaS的企业级管理平台、IT专家和云架构师可以利用NetApp云解决方案集中管理混合多云基础架构。它提供了一个集中式系统、用于查看和管理内部和云存储、支持混合、多个云提供商和客户。有关详细信息，请参见<block ref="c49cacac9cbe82dcff36ada88ba62aa3" category="inline-link-rx"></block>。</block>
+  <block id="4a57221499144728a51c7c142151ff99" category="paragraph">借助Connector实例、BlueXP可以管理公共云环境中的资源和流程。BlueXP提供的许多功能都需要连接器、并且可以部署在云或内部网络中。</block>
+  <block id="6beccc67ff905f7da0b29dece26b0485" category="list-text">Amazon Web Services</block>
+  <block id="2b67002d6ae85695255d5b11d87ad4f9" category="inline-link">连接器页面</block>
+  <block id="16ebdde355ef4d26be04b26ee6d7fa0b" category="paragraph">要了解有关Connector的更多信息、请参见<block ref="e42e7c023a6426e00bdab88e3da61750" category="inline-link-rx"></block>。</block>
+  <block id="c60f68ec44b35a0517cbafe7674533a5" category="paragraph">NetApp Cloud Volumes ONTAP 是一款软件定义的存储产品、可在云中运行ONTAP 数据管理软件、为文件和块工作负载提供高级数据管理。借助Cloud Volumes ONTAP 、您可以优化云存储成本并提高应用程序性能、同时增强数据保护、安全性和合规性。</block>
+  <block id="4609b2ec221cd53f6393d4cb39d72e44" category="paragraph">主要优势包括：</block>
+  <block id="e23903dbee02d0245e9e2a9925c0de7e" category="list-text">*存储效率。*利用内置的重复数据删除、数据压缩、精简配置和即时克隆功能最大限度地降低存储成本。</block>
+  <block id="d34b538b7e8137da1978773b7da36825" category="list-text">*高可用性。*在云环境发生故障时提供企业级可靠性和持续运营。</block>
+  <block id="715a2996dff556c82e8a5417a1ceb30f" category="list-text">*数据保护。* Cloud Volumes ONTAP 使用行业领先的NetApp复制技术SnapMirror将内部数据复制到云、以便可以轻松地为多种使用情形提供二级副本。Cloud Volumes ONTAP 还与云备份相集成、提供备份和还原功能、以保护云数据并对其进行长期归档。</block>
+  <block id="f088ddd7dbfd61c9ed5cdfd58f30b1f3" category="list-text">*数据分层。*按需在高性能和低性能存储池之间切换、而无需使应用程序脱机。</block>
+  <block id="a5e354c191fac9e25f3c021fc8c26f95" category="list-text">*应用程序一致性。*使用NetApp SnapCenter 技术提供NetApp Snapshot副本的一致性。</block>
+  <block id="49ba707e38fab31302d74ed6035b7b6a" category="list-text">*数据安全。* Cloud Volumes ONTAP 支持数据加密、并提供防病毒和勒索软件保护。</block>
+  <block id="fb7530359018c603d255f4166fac0989" category="list-text">*隐私合规性控制。*与Cloud Data sense集成有助于您了解数据环境并识别敏感数据。</block>
+  <block id="7e99e6f3cec58f33634ade4a045940dd" category="paragraph">有关更多详细信息，请参见<block ref="033ab3fc8f9702cf5575035400051f3c" category="inline-link-rx"></block>。</block>
+  <block id="d651c4691a6e4f3142e3285cf428be56" category="paragraph">借助NetApp Active IQ Unified Manager 、您可以通过一个经过重新设计的直观界面监控ONTAP 存储集群、从而利用社区智慧和AI分析提供智能。它可以全面洞察存储环境及其运行的虚拟机的运行状况、性能和主动性。当存储基础架构发生问题描述 时、Unified Manager可以通知您问题描述 的详细信息、以帮助识别根发生原因。通过虚拟机信息板、您可以查看虚拟机的性能统计信息、以便调查从vSphere主机向下经过网络并最终到达存储的整个I/O路径。</block>
+  <block id="3ec67a89c8d9bb619e61b959e0545b87" category="paragraph">某些事件还提供了可用于更正问题描述 的补救措施。您可以为事件配置自定义警报、以便在发生问题时、通过电子邮件和SNMP陷阱通知您。通过Active IQ Unified Manager 、您可以通过预测容量和使用趋势来规划用户的存储需求、以便在出现问题之前采取行动、防止做出长期可能导致其他问题的被动短期决策。</block>
+  <block id="741c1d29b00ec68cceea4339c66bdb0c" category="paragraph">有关详细信息，请参见<block ref="5ed6ecd932db92d4be0f0df08b269167" category="inline-link-rx"></block>。</block>
+  <block id="5a981475ccbda636d6a9cb7217af26c6" category="list-text">*更快的交付速度。* Intersight通过基于敏捷性的软件开发模式、以云或客户数据中心的服务形式提供、并经常进行更新和持续创新。这样、客户就可以专注于满足关键业务需求。</block>
+  <block id="e1b057d476283a101d41159976595d9b" category="list-text">*简化操作。* Intersight使用一个安全的SaaS交付工具、该工具具有通用清单、身份验证和API、可在整个堆栈和所有位置运行、从而简化操作、消除团队之间的孤岛。这样、您就可以管理内部、VM、K8s、无服务器、自动化、 在内部和公共云中实现优化并控制成本。</block>
+  <block id="77b358ad4e140d740fa2599c8a7f62fa" category="list-text">*持续优化。*您可以利用Cisco Intersight在每一层提供的智能以及Cisco TAC提供的智能来持续优化您的环境。这种智能将转换为建议的可自动化操作、以便您可以实时适应任何变化：从移动工作负载和监控物理服务器的运行状况到为您使用的公共云提供成本降低建议。</block>
+  <block id="b694fc825cfb7a5646ff2186169ef63f" category="paragraph">Cisco Intersight支持两种管理操作模式：UCSM受管模式(Umm)和Intersight受管模式(IMM)。在初始设置互联阵列期间、您可以为光纤连接的Cisco UCS系统选择本机UCSM受管模式(Umm)或视间受管模式(IMM)。在此解决方案 中、使用原生 IMM。下图显示了Cisco Intersight信息板。</block>
+  <block id="a1e238eb5133f8ba9ef943d0ca1f4386" category="inline-image-macro">此屏幕截图显示了Cisco Intersight信息板的Servers页面。</block>
+  <block id="232db9801da9dbffd7813bb0d1da4932" category="paragraph"><block ref="232db9801da9dbffd7813bb0d1da4932" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4d29934deaff2fa7ad8706b3bd343fc8" category="paragraph">VMware vSphere是一个虚拟化平台、可将大量基础架构(包括CPU、存储和网络)作为一个无缝、多功能且动态的操作环境进行全面管理。与管理单个计算机的传统操作系统不同、VMware vSphere可将整个数据中心的基础架构聚合在一起、从而创建一个具有资源的动力中心、这些资源可以快速动态地分配给任何需要的应用程序。</block>
+  <block id="14dd1fa2215e85083149ed9dbcaac36f" category="paragraph">有关VMware vSphere及其组件的详细信息、请参见<block ref="132550c60ca513f9467cdf8b8e5be374" category="inline-link-rx"></block>。</block>
+  <block id="8177a4c659f3243b88184f64fdcf336f" category="paragraph">有关详细信息、请参见<block ref="c89de84f757c8786a48c9aa0b968e518" category="inline-link-rx"></block>。</block>
+  <block id="8e49c91bd6e083400edaa7e4c4cbe004" category="inline-link">UCS硬件和软件兼容性</block>
+  <block id="4a21f9217be897575a9189e84bd0e081" category="paragraph">此混合云解决方案 可扩展到运行中定义的受支持软件、固件和硬件版本的任何FlexPod 环境<block ref="f0e87d28a2a99025f9c80d8d1bdd0531" category="inline-link-rx"></block>，<block ref="d5e89872bc8a01087e3135e29553f803" category="inline-link-rx"></block>，和<block ref="45bfb35eaade6b56e4f31adaaa8e4220" category="inline-link-rx"></block>。</block>
+  <block id="60a5da8ed4056c86f5aeb022fb68eba0" category="paragraph">下表显示了内部FlexPod 硬件和软件版本。</block>
+  <block id="31c28e6832955fd4c45744375ac4359a" category="cell">9.3 (9)</block>
+  <block id="3beeed950a1dfde9ba566c9c665a6ced" category="cell">ONTAP 9.11.1P2</block>
+  <block id="d139f97e5732d34a7e780cb587235560" category="cell">9.11P1</block>
+  <block id="9f4f07012506ae075214903c0f90d7ac" category="paragraph">下表显示了NetApp BlueXP和Cloud Volumes ONTAP 版本。</block>
+  <block id="ec9ceefe0c19f4c029008c23e3c947b7" category="cell">供应商</block>
+  <block id="378cba5c9b9583240c8818c6b5e8d353" category="cell">3.9.24</block>
+  <block id="a7e58f7cec27a367b87b7b14facc4770" category="cell">ONTAP 9.11</block>
+  <block id="3297b2d6f7954aaf186dde01d3bfaf89" category="inline-link-macro">下一步：安装和配置。</block>
+  <block id="2e855e8818bf9715d28c73608e612bb3" category="paragraph"><block ref="2e855e8818bf9715d28c73608e612bb3" category="inline-link-macro-rx"></block></block>
+  <block id="82bbf014db8c4200075a18b78d3e8157" category="summary">本节介绍如何安装和配置Cloud Volumes ONTAP 、FlexPod 、ONTAP 存储和BlueXP。</block>
+  <block id="3ae884df8a4c051e3c5bc2bfd2abb958" category="paragraph"><block ref="3ae884df8a4c051e3c5bc2bfd2abb958" category="inline-link-macro-rx"></block></block>
+  <block id="5bab49ebc7307b18250d34ab49ad7d56" category="section-title">NetApp Cloud Volumes ONTAP 部署</block>
+  <block id="c51f64e47355713b19b4b070f06cd89c" category="paragraph">完成以下步骤以配置Cloud Volumes ONTAP 实例：</block>
+  <block id="ae97698c04524ec745102e4e0baa3bb2" category="list-text">准备公共云服务提供商环境。</block>
+  <block id="e2d7265c104a3d2a653a9599f73803e5" category="paragraph">您必须捕获解决方案 配置的公共云服务提供商的环境详细信息。例如、对于Amazon Web Services (AWS)环境准备、您需要AWS访问密钥、AWS机密密钥以及区域、VPC、子网等其他网络详细信息。</block>
+  <block id="b9b6f6047d12fc6eb5861a04c3391329" category="list-text">配置VPC端点网关。</block>
+  <block id="9739c55ac13fd999cc773776ec6daccd" category="paragraph">要启用VPC与AWS S3服务之间的连接、需要使用VPC端点网关。此操作用于在CVO上启用备份、CVO是网关类型的端点。</block>
+  <block id="40e6332017647e19469becbeecd11965" category="list-text">访问NetApp BlueXP。</block>
+  <block id="bf685716d4823f2fa095e70ecb925d80" category="paragraph">要访问NetApp BlueXP和其他云服务、您需要注册<block ref="cb1fef2883a60666ba1c342fa03fa642" category="inline-link-rx"></block>。要在BlueXP帐户中设置工作空间和用户、请单击<block ref="4dcc9f157c326d4ba2daf9bed2a2d103" category="inline-link-rx"></block>。您需要一个有权直接从BlueXP在云提供商中部署Connector的帐户。您可以从下载BlueXP策略<block ref="eaf63e684016dad3d469ad538eb69a99" category="inline-link-rx"></block>。</block>
+  <block id="768248474884633840844012e1eb1297" category="list-text">部署Connector。</block>
+  <block id="1a9262c286befb116396b1a42a77d07a" category="paragraph">在添加Cloud Volume ONTAP 工作环境之前、您必须先部署Connector。如果您尝试在没有连接器的情况下创建首个Cloud Volumes ONTAP 工作环境、BlueXP将提示您。要从BlueXP在AWS中部署Connector、请参见此内容<block ref="2304b6526983a781df64b1f7373e5ed0" category="inline-link-rx"></block>。</block>
+  <block id="fd70542ca3772813a4c7191cedbbfa1f" category="list-text">在AWS中启动Cloud Volumes ONTAP。</block>
+  <block id="16a03230ebe4950ee9356150a20d672a" category="inline-link">阅读分步说明</block>
+  <block id="3a4d750f50017d54614cf5d495abb92d" category="paragraph">您可以在单系统配置中或在 AWS 中作为 HA 对启动 Cloud Volumes ONTAP 。<block ref="5a6f6aea79f64db108e3d43d324900fc" category="inline-link-rx"></block>。</block>
+  <block id="30c327439c4965f96cde1b8ad90d4fba" category="inline-link">AWS中的Cloud Volumes ONTAP 快速入门指南</block>
+  <block id="83f216cc939bebc8b874bff64532526b" category="paragraph">有关这些步骤的详细信息、请参见<block ref="2001919d2275365d169803e8763b2360" category="inline-link-rx"></block>。</block>
+  <block id="e4ec9e71bec0a95630591cb6f88d13d1" category="paragraph">在此解决方案 中、我们在AWS中部署了单节点Cloud Volumes ONTAP 系统。下图展示了具有单节点CVO实例的NetApp BlueXP信息板。</block>
+  <block id="b85833a46f6ccfc54ea1b46747ff9bda" category="inline-image-macro">此屏幕截图显示了NetApp BlueXP的"画布"屏幕、其中显示了"我的工作环境"。</block>
+  <block id="e8a534ab37b00c97801c062906fa1909" category="paragraph"><block ref="e8a534ab37b00c97801c062906fa1909" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6494739090e31c91779d5b1ae056881c" category="section-title">内部FlexPod 部署</block>
+  <block id="73a3588eac7abd3bbe0602fc71d7322a" category="paragraph">要了解采用UCS X系列的FlexPod 、VMware和NetApp ONTAP 的设计详细信息、请参见<block ref="35e9ae622703e5e9f707c46a163e0a74" category="inline-link-rx"></block> 设计指南。本文档提供了在FlexPod 数据中心基础架构中整合Cisco Intersight-managed UCS X系列平台的设计指导。</block>
+  <block id="af2e955267eb0fc88e73f50acfba1bb8" category="inline-link">本部署指南</block>
+  <block id="323eb6e2b16a1d67b853a4abb140333a" category="paragraph">有关部署内部FlexPod 实例的信息、请参见<block ref="97bc661be69e16506c7b7d98e48c6bf7" category="inline-link-rx"></block>。</block>
+  <block id="21002c93598b066c39c08e307cebb549" category="paragraph">本文档提供了在FlexPod 数据中心基础架构中整合Cisco Intersight-managed UCS X系列平台的部署指导。本文档介绍了成功部署的配置和最佳实践。</block>
+  <block id="21b6d1b90774505daa15a9be831436a9" category="inline-link">设计指南</block>
+  <block id="9c47a213311911c0334417506858d557" category="inline-link">部署指南</block>
+  <block id="288a658a9286b0e7dac3e5913be37ef2" category="paragraph">FlexPod 既可以部署在UCS托管模式下、也可以部署在Cisco Intersight托管模式(IMM)下。如果要在UCS托管模式下部署FlexPod 、请参见此内容<block ref="dd892b8caf21886c5698ee51e33d69ca" category="inline-link-rx"></block> 这是<block ref="b1d40202c26fd3067100571670025301" category="inline-link-rx"></block>。</block>
+  <block id="881b2e872c42d3f529806a4ae4768dea" category="paragraph">使用Ansible可以通过基础架构作为代码自动部署FlexPod。下面是用于端到端FlexPod 部署的GitHub存储库的链接：</block>
+  <block id="43e0c7ba65d96ff7c89c018ab1ca5a4c" category="list-text">可以看到在UCS托管模式、NetApp ONTAP 和VMware vSphere下使用Cisco UCS的FlexPod 的可识别配置<block ref="4cb114b2a26789ca2aeca778f06d5002" category="inline-link-rx"></block>。</block>
+  <block id="43cb93a29744552c54e6e8821cbf70da" category="list-text">可以看到在IMM、NetApp ONTAP 和VMware vSphere中使用Cisco UCS的FlexPod 的可识别配置<block ref="73f2262cf52f1153cd9eccd0bd2177fb" category="inline-link-rx"></block>。</block>
+  <block id="0104ed567446cbc08cdaaa9a6f32c700" category="section-title">内部ONTAP 存储配置</block>
+  <block id="6099c58f92c797694a48248975a6f6ab" category="paragraph">本节介绍特定于此解决方案 的一些重要ONTAP 配置步骤。</block>
+  <block id="92490a87d3889426b0d75c6b27cb2015" category="list-text">在运行iSCSI服务的情况下配置SVM。</block>
+  <block id="ac20183dd37cd1dc0d055078383db1a2" category="paragraph">如果在集群配置期间未安装iSCSI许可证、请确保在创建iSCSI服务之前安装此许可证。</block>
+  <block id="ca70b1057634dec682642d4ef783abc8" category="list-text">创建FlexVol 卷。</block>
+  <block id="2f7bba7e06abd20a5a11271544d07b4c" category="list-text">添加用于iSCSI访问的接口。</block>
+  <block id="3edbceccad173e64dc7c740506a8738c" category="paragraph">在此解决方案 中、我们创建了四个iSCSI逻辑接口(LIF)、每个节点上两个。</block>
+  <block id="144ea0a88c92c121a9adc12c7c624e28" category="paragraph">在部署了vCenter并向其添加了所有ESXi主机的情况下启动并运行FlexPod 实例后、我们需要部署一个Linux VM、该VM充当连接和访问NetApp ONTAP 存储的服务器。在此解决方案 中、我们已在vCenter中安装CentOS 8实例。</block>
+  <block id="12d0a18780d6de0b74234653544fecee" category="list-text">创建LUN。</block>
+  <block id="ba5bcd469ab78c2e85c9cac49b3735a0" category="paragraph">对于EHR操作数据库(ODB)、日志和应用程序工作负载、EHR建议将存储作为iSCSI LUN提供给服务器。如果您的AIX和RHEL操作系统版本支持、则NetApp还支持使用FCP和NVMe/FC、从而提高性能。FCP和NVMe/FC可以同时位于同一个网络结构中。</block>
+  <block id="ed28ab3e84850a9c5c8d45ed17c9cfce" category="list-text">创建igroup。</block>
+  <block id="220a876b8e20111ad0a651acc95a55e6" category="paragraph">igroup用于允许服务器访问LUN。对于Linux主机、可以在文件中找到服务器IQN<block ref="22565a44e8f73044eb2029acbb069639" prefix=" " category="inline-code"></block>。</block>
+  <block id="d88adf3556471c5417cf8c83c9e875cf" category="list-text">将 LUN 映射到 igroup 。</block>
+  <block id="185798efdc1b4079a60887e047bc6a23" category="section-title">将内部FlexPod 存储添加到BlueXP</block>
+  <block id="d10cc49484a078f7867c17c226f12db5" category="paragraph">要使用NetApp BlueXP将FlexPod 存储添加到工作环境、请完成以下步骤。</block>
+  <block id="242bcf24d0329e5d7dd2468b648d12e3" category="list-text">从导航菜单中、选择*存储*&gt;*画布*。</block>
+  <block id="7d613f340824eb9c65d2bc768aa43577" category="list-text">在"画布"页面上、单击*添加工作环境*并选择*内部部署*。</block>
+  <block id="c1ecb58d124bd18daa47a09a05244c42" category="list-text">选择*内部部署ONTAP *。单击 * 下一步 * 。</block>
+  <block id="2e58a9a8cdc9651ecad74d2f2bfdaf5c" category="inline-image-macro">此屏幕截图显示了选择了内部部署ONTAP 的BlueXP添加工作组页面。</block>
+  <block id="6db4053e4bd84f28389116c8290b3d49" category="paragraph"><block ref="6db4053e4bd84f28389116c8290b3d49" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b4b8e0998a4e5151e2188c1d096326d0" category="list-text">在 "ONTAP 集群详细信息 " 页面上，输入管理员用户帐户的集群管理 IP 地址和密码。然后单击*添加*。</block>
+  <block id="335b8d730a2f0487e442f91ea9c84906" category="inline-image-macro">此屏幕截图显示了"BlueXP发现ONTAP 集群"页面以及ONTAP 集群详细信息条目。</block>
+  <block id="97c18388177f0f05359f2b12abccde9d" category="paragraph"><block ref="97c18388177f0f05359f2b12abccde9d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3e7cf4927d323dbc38b104e2c251cb3b" category="list-text">在详细信息和凭据页面上、输入工作环境的名称和问题描述 、然后单击*执行*。</block>
+  <block id="8ffad5c27dd53aaf492789494bb00774" category="paragraph">BlueXP会发现ONTAP 集群并将其添加为Canvas上的工作环境。</block>
+  <block id="5279c23924f3332fe1d8119a66f0140b" category="inline-image-macro">此屏幕截图显示了BlueXP的"画布"页面、其中右侧显示了最近添加的工作环境。</block>
+  <block id="e52fd2ebaf723448aaf9cbb1749fb0b0" category="paragraph"><block ref="e52fd2ebaf723448aaf9cbb1749fb0b0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c5fbee6586294d81141f8dd158707985" category="inline-link">发现内部ONTAP 集群</block>
+  <block id="c0a677dd25d6582ecb21203c7091df2c" category="paragraph">有关详细信息、请参见页面<block ref="6585a34a169ce9e8b8f4633a3f458722" category="inline-link-rx"></block>。</block>
+  <block id="c8188720796c445c231833759dc4c4df" category="inline-link-macro">下一步：SAN配置。</block>
+  <block id="522b56fc8167f6a3bcae6bfa94947dba" category="paragraph"><block ref="522b56fc8167f6a3bcae6bfa94947dba" category="inline-link-macro-rx"></block></block>
+  <block id="5a7ddcff1371a5805a0d8c0d3efac44f" category="summary">本节介绍如何使用多种使用情形验证解决方案。</block>
+  <block id="533601d927bf6db70ca1c68d053b9817" category="inline-link-macro">先前版本：SAN配置。</block>
+  <block id="9ceb49887d369d884e89d8ceaece2ec5" category="paragraph"><block ref="9ceb49887d369d884e89d8ceaece2ec5" category="inline-link-macro-rx"></block></block>
+  <block id="547e2ce3b3797b4e33f9ba20dbcdcef2" category="paragraph">在本节中、我们将介绍一些解决方案 使用情形。</block>
+  <block id="8b5003a60dc275a43fbe26de5579a648" category="list-text">SnapMirror的主要使用情形之一是数据备份。通过将数据复制到同一集群或远程目标、可以将SnapMirror用作主备份工具。</block>
+  <block id="8a26cbc68f5ec965050306b8fde9be14" category="list-text">使用灾难恢复环境运行应用程序开发测试(开发/测试)。</block>
+  <block id="0b3d2338e0e006c0c161326044a6d635" category="list-text">灾难恢复。</block>
+  <block id="55488ff0a95dcacd006c3aabbadd9e9d" category="list-text">数据分发和远程数据访问。</block>
+  <block id="5c3ff3b8045d050debb19d1c860d0aee" category="paragraph">值得注意的是、此解决方案 中验证的相对较少的使用情形并不代表SnapMirror复制的整个功能。</block>
+  <block id="04c1f0319ace2265babc335f05b9ec40" category="section-title">应用程序开发和测试(开发/测试)</block>
+  <block id="92399169acc3315f0dabca9186617877" category="paragraph">为了加快应用程序开发速度、您可以在灾难恢复站点快速克隆复制的数据并将其用于开发/测试应用程序。灾难恢复和开发/测试环境的主机代管可以显著提高备份或灾难恢复设施的利用率、并且按需开发/测试克隆可以根据需要提供尽可能多的数据副本、以便更快地投入生产。</block>
+  <block id="3452cf8586adae25716371049a42de73" category="paragraph">NetApp FlexClone技术可用于快速创建SnapMirror目标FlexVol 卷的读写副本、以便您可以对二级副本进行读写访问、以确认所有生产数据是否可用。</block>
+  <block id="b801d916d3837d8f7ce5c4de63537373" category="paragraph">要使用灾难恢复环境执行应用程序开发/测试、请完成以下步骤：</block>
+  <block id="7c4ab0061c4f1b065cf30e1f9b8a7b15" category="list-text">创建生产数据的副本。为此、请为内部卷执行应用程序快照。应用程序快照创建包括三个步骤：<block ref="b485167c5b0e59d47009a16f90fe2659" prefix=" " category="inline-code"></block>，<block ref="9ad09a90c3dbf80bdf18cf666f9d323e" prefix=" " category="inline-code"></block>，和<block ref="7e7123b0d269ad5d9ec8d12c52a8ed8a" prefix=" " category="inline-code"></block>。</block>
+  <block id="855f59a57847b0b1b2541d365a4dcf8c" category="list-text">暂停文件系统、以便暂停I/O并保持应用程序一致性。在步骤C中发出unquiesce命令之前、任何写入文件系统的应用程序都会保持等待状态步骤a、b和c通过透明的流程或工作流执行、不会影响应用程序SLA。</block>
+  <block id="5201dd40663c1abf327a14909e35cd76" category="paragraph">此选项请求在进行新修改时冻结指定的文件系统。任何尝试写入冻结文件系统的进程都会被阻止、直到文件系统被解除冻结为止。</block>
+  <block id="c987039df280ade10726e4b2f7bab946" category="list-text">为内部卷创建快照。</block>
+  <block id="6c48c280d5340a57e73347288ac26df8" category="list-text">取消暂停文件系统以重新启动I/O</block>
+  <block id="ad6c7399ef512bb120b90c0e854635b1" category="paragraph">此选项用于取消冻结文件系统并允许操作继续。冻结阻止的任何文件系统修改均不会被阻止、并允许完成。</block>
+  <block id="f2ddfe11dbb395a190d1396ae5aafb10" category="paragraph">此外、还可以使用NetApp SnapCenter 执行应用程序一致的快照、NetApp在SnapCenter 中对上述工作流进行了完整的编排。有关详细信息、请参见<block ref="9a5e2070b6e96d49a5b2b2037cad6de1" category="inline-link-rx"></block>。</block>
+  <block id="e856e073c795e5296f084eb44fe5ec0b" category="list-text">执行SnapMirror更新操作以使生产系统和灾难恢复系统保持同步。</block>
+  <block id="323bc6842dd43908b96304e186c466c4" category="paragraph">也可以通过BlueXP图形用户界面的*复制*选项卡执行SnapMirror更新。</block>
+  <block id="f84f8db19826515d042a16c1c41844f3" category="list-text">根据先前创建的应用程序快照创建FlexClone实例。</block>
+  <block id="d29c32719375e3ddeb3a0fd915e4824e" category="paragraph">对于上一项任务、也可以创建新的快照、但您必须按照上述相同步骤来确保应用程序一致性。</block>
+  <block id="024831ed0625c177829f55af8469b7c6" category="list-text">激活FlexClone卷以在云中启动EHR实例。</block>
+  <block id="76ec693f3f4a339bf89fde6aaa9c010d" category="list-text">在云中的EHR实例上执行以下命令以访问数据或文件系统。</block>
+  <block id="c59ac8a3dfecf5e47abf49bf834ab6fa" category="list-text">发现ONTAP 存储。检查多路径状态。</block>
+  <block id="077cfcc3691925198f5ef3fb27f19da2" category="list-text">激活卷组。</block>
+  <block id="748b4afff3d647d0254a3b601d65d6ca" category="list-text">挂载文件系统并显示文件系统信息的摘要。</block>
+  <block id="914d802da0c0d4925de8cc0dfd0e3ed7" category="paragraph">这证明您可以使用灾难恢复环境进行应用程序开发/测试。通过在灾难恢复存储上执行应用程序开发/测试、您可以更多地利用资源、否则这些资源可能会在大部分时间处于闲置状态。</block>
+  <block id="645a84975202e30700b572b49a5ee29d" category="section-title">灾难恢复</block>
+  <block id="dbaf81d35f7526cbf92053d5591f597c" category="paragraph">SnapMirror技术也用作灾难恢复计划的一部分。如果将关键数据复制到其他物理位置、则发生严重灾难时、不必对业务关键型应用程序的数据长时间不可用进行发生原因 处理。客户端可以通过网络访问复制的数据、直到生产站点从损坏、意外删除、自然灾难等中恢复为止。</block>
+  <block id="63845a2275bc1866156adf2e3e8cf9cb" category="paragraph">如果要故障恢复到主站点、SnapMirror可提供一种高效的方法来重新同步灾难恢复站点与主站点、只需反转SnapMirror关系、即可仅将更改过的数据或新数据从灾难恢复站点传输回主站点。主生产站点恢复正常应用程序操作后、SnapMirror将继续向灾难恢复站点传输数据、而无需再进行基线传输。</block>
+  <block id="39352f6a4002960406427d6daba91388" category="paragraph">要验证成功的灾难恢复方案、请完成以下步骤：</block>
+  <block id="4d58db0e27ef26883a149a5c5ccf0996" category="list-text">通过停止托管内部ONTAP 卷的SVM在源(生产)端模拟灾难 <block ref="d0f08a44974997af7b6852c24d0e3397" prefix="(" category="inline-code"></block>）。</block>
+  <block id="ea33c9d3c2f7386981446c49afecf7fd" category="inline-image-macro">此屏幕截图显示了Storage VM下拉列表中的停止选项。</block>
+  <block id="afa53371621859e17a9eef316a9dadc2" category="paragraph"><block ref="afa53371621859e17a9eef316a9dadc2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f55dfdff995ff8e99fbcf080cbdab8b3" category="paragraph">确保已在FlexPod 实例中的内部ONTAP 和AWS中的Cloud Volumes ONTAP 之间设置SnapMirror复制、以便您可以频繁创建应用程序快照。</block>
+  <block id="d001e5a48ff9eda2ff6ebe5a8f4ce599" category="paragraph">停止SVM后、将显示<block ref="d0f08a44974997af7b6852c24d0e3397" prefix=" " category="inline-code"></block> 卷在BlueXP中不可见。</block>
+  <block id="f689c908b10788bf6784367f1c1cdaa7" category="inline-image-macro">此时、此卷将显示在卷摘要屏幕中。</block>
+  <block id="644f592a21f22f1f8c1970739b40a3fb" category="paragraph"><block ref="644f592a21f22f1f8c1970739b40a3fb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cf076cd6cea48d6b14ef787dcb383803" category="list-text">在CVO中激活灾难恢复。</block>
+  <block id="934ddf12f1f595715bb64e253baf0e1c" category="list-text">中断本地ONTAP 和Cloud Volumes ONTAP 之间的SnapMirror复制关系、并提升CVO目标卷 <block ref="51756a7cd46039c313c68e20e7a0b665" prefix="(" category="inline-code"></block>)到生产环境。</block>
+  <block id="766193daf219e3b8b36da8fef00be705" category="inline-image-macro">此时将显示中断关系选项屏幕。</block>
+  <block id="d862b36512bb7760c45cdbac86a29142" category="paragraph"><block ref="d862b36512bb7760c45cdbac86a29142" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d6d13bccc90b9d45570ea809fb5bb73e" category="paragraph">断开SnapMirror关系后、目标卷类型将从数据保护(DP)更改为读/写(RW)。</block>
+  <block id="f70740da9dc5ca03b70be6657203c689" category="list-text">激活Cloud Volumes ONTAP 中的目标卷以在云中的EC2实例上启动EHR实例。</block>
+  <block id="b6fda559fae5076177688bc6a37bd296" category="list-text">要访问云中EHR实例上的数据和文件系统、请首先发现ONTAP 存储并验证多路径状态。</block>
+  <block id="507e86edaa114a96daae2102b209c2de" category="list-text">然后激活卷组。</block>
+  <block id="7eee0206d656107aaa9bf7ef120e3a6a" category="list-text">最后、挂载文件系统并显示文件系统信息。</block>
+  <block id="44082e3b46953d4812f448608d99c165" category="paragraph">此输出显示、用户可以通过网络访问复制的数据、直到生产站点从灾难中恢复为止。</block>
+  <block id="5eb76e69410671397b51abb1486b04c5" category="list-text">反转SnapMirror关系。此操作将反转源卷和目标卷的角色。</block>
+  <block id="70de9e5727789fc80f8c267cee97857b" category="inline-image-macro">此屏幕截图显示了反向关系选项框。</block>
+  <block id="c34c0a97ee9ae9befa95cac2eccbfce6" category="paragraph"><block ref="c34c0a97ee9ae9befa95cac2eccbfce6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="36a647ac73bb4bdfebf7a153741b2776" category="paragraph">执行此操作时、原始源卷中的内容将被目标卷的内容覆盖。当您要重新激活脱机的源卷时，这非常有用。</block>
+  <block id="63974febe7228f8947e403575b8a5be9" category="paragraph">现在是CVO卷 <block ref="51756a7cd46039c313c68e20e7a0b665" prefix="(" category="inline-code"></block>)将成为源卷、内部卷也将成为源卷 <block ref="d0f08a44974997af7b6852c24d0e3397" prefix="(" category="inline-code"></block>)将成为目标卷。</block>
+  <block id="0b96f7e6a117dd76b8402d0d6f5ab1e3" category="inline-image-macro">此屏幕截图显示了在BlueXP中创建的卷复制关系。</block>
+  <block id="023e534a4542a35221ad8bdfd50410f8" category="paragraph"><block ref="023e534a4542a35221ad8bdfd50410f8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="eed0aa95ddb1d5b18d3345619165fa48" category="paragraph">在上次数据复制和源卷禁用之间写入到原始源卷的任何数据都不会保留。</block>
+  <block id="c733edd0a3b856f20a3450e503872404" category="list-text">要验证对CVO卷的写入访问、请在云中的EHR实例上创建一个新文件。</block>
+  <block id="435cfa710838757baa56054c58eaa065" category="paragraph">当生产站点关闭时、客户端仍可访问数据、并对Cloud Volumes ONTAP 卷执行写入操作、该卷现在是源卷。</block>
+  <block id="8653089015841127d711c4889d5e87f1" category="paragraph">本节说明了在生产站点发生灾难时成功解决灾难恢复方案的方法。现在、数据可以安全地由应用程序使用、这些应用程序现在可以在源站点完成还原期间为客户端提供服务。</block>
+  <block id="43ce975c375b6c06be7624a69dc11375" category="section-title">验证生产站点上的数据</block>
+  <block id="58042c5c372d7065a9c6809dd777da1b" category="paragraph">恢复生产站点后、您必须确保还原原始配置、并且客户端能够从源站点访问数据。</block>
+  <block id="88075ecd52a9ad2d923c9c1350c09c7c" category="paragraph">在本节中、我们将讨论启动源站点、恢复内部ONTAP 和Cloud Volumes ONTAP 之间的SnapMirror关系、并最终对源端执行数据完整性检查</block>
+  <block id="b4e67db07c2fd409263901df1fcbef89" category="paragraph">以下操作步骤 可用于验证生产站点上的数据：</block>
+  <block id="b16305dfc75628dffef99e50f1e68f64" category="list-text">确保源站点现在已启动。为此、请启动托管内部ONTAP 卷的SVM <block ref="d0f08a44974997af7b6852c24d0e3397" prefix="(" category="inline-code"></block>）。</block>
+  <block id="fa412d6f3ed1cdce0c9504a29ba1e705" category="inline-image-macro">此屏幕截图显示了如何使用Storage VM页面中的下拉菜单启动特定VM。</block>
+  <block id="6360291b5531c8cea4e3757f24ab6ee6" category="paragraph"><block ref="6360291b5531c8cea4e3757f24ab6ee6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="505be9c431e7e6a3d9ab21aa9836e430" category="list-text">中断Cloud Volumes ONTAP 和内部ONTAP 之间的SnapMirror复制关系、并提升内部卷 <block ref="d0f08a44974997af7b6852c24d0e3397" prefix="(" category="inline-code"></block>)恢复生产。</block>
+  <block id="f8c5c8900560b7f5f88ad1a1b0452323" category="inline-image-macro">此屏幕截图显示了如何中断关系。</block>
+  <block id="60be8181bec8e1c79a51e6a775c1bd19" category="paragraph"><block ref="60be8181bec8e1c79a51e6a775c1bd19" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="dc7bbc0ee640af98c03d036df40f0d54" category="paragraph">断开SnapMirror关系后、内部卷类型将从数据保护(DP)更改为读/写(RW)。</block>
+  <block id="623ebbbee4018b0d7cbdc8d8c6acebe8" category="list-text">反转SnapMirror关系。现在、是内部部署的ONTAP 卷 <block ref="d0f08a44974997af7b6852c24d0e3397" prefix="(" category="inline-code"></block>)将成为源卷和之前的源卷、并成为Cloud Volumes ONTAP 卷 <block ref="51756a7cd46039c313c68e20e7a0b665" prefix="(" category="inline-code"></block>)将成为目标卷。</block>
+  <block id="67125b7d0d392d3e4c04bfe907340005" category="inline-image-macro">此屏幕截图显示了如何反转关系。</block>
+  <block id="275cd7fafe6d9246b8d8f9fd0f7c5096" category="paragraph"><block ref="275cd7fafe6d9246b8d8f9fd0f7c5096" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="43904594c7f37138b8a6a7fbb0821f09" category="paragraph">通过执行以下步骤、我们已成功还原原始配置。</block>
+  <block id="6f7d95f45cae151358074a51f8bda042" category="list-text">重新启动内部EHR实例。挂载文件系统并验证<block ref="a48d2779dabc70e43a053fc28dc9817c" prefix=" " category="inline-code"></block> 在生产中断时、您在云中的EHR实例上创建的数据现在也存在。</block>
+  <block id="9b48b9c9ec9d99fc619c2b4e9c3088e0" category="inline-image-macro">此屏幕截图显示了如何在内部EHR实例上查找新文件。</block>
+  <block id="bff5eebae64e7e6c68a48df671ceb775" category="paragraph"><block ref="bff5eebae64e7e6c68a48df671ceb775" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b76ee8d91e22ce0406c6d1a232adcb1e" category="paragraph">我们可以推断、从源到目标的数据复制已成功完成、并且数据完整性已保持不变。这样就完成了对生产站点上数据的验证。</block>
+  <block id="2ba4058e4dfe4a6693458a5c6a9b7f0d" category="paragraph"><block ref="2ba4058e4dfe4a6693458a5c6a9b7f0d" category="inline-link-macro-rx"></block></block>
+  <block id="480e0ca3f94c79be099288f595215fb8" category="summary">构建混合云是大多数医疗保健组织随时提供数据可用性的目标。在此解决方案 中、我们实施了采用Cloud Volumes ONTAP 的FlexPod 混合云解决方案 、利用NetApp SnapMirror复制技术验证了一些用于备份和恢复医疗保健应用程序和工作负载的用例。</block>
+  <block id="62ed9f1d2a1c9a36c7cfa9bbe694e176" category="paragraph"><block ref="62ed9f1d2a1c9a36c7cfa9bbe694e176" category="inline-link-macro-rx"></block></block>
+  <block id="9542759bb7137e028a870b32cc33ef9b" category="paragraph">FlexPod 是Cisco和NetApp战略合作伙伴关系中经过严格测试和预先验证的融合基础架构、旨在提供可预测的低延迟系统性能和高可用性。这种方法可为EHR系统用户带来较高的舒适程度、并最终获得最佳响应时间。</block>
+  <block id="85c7908c86872a11c67ea74e5020f2d7" category="paragraph">借助NetApp、您可以像在内部数据中心运行NetApp存储功能一样、在云中运行EHR生产、灾难恢复、备份或分层。借助NetApp Cloud Volumes ONTAP 、NetApp可提供在云中有效运行EHR所需的企业级功能和性能。NetApp云选项可提供基于iSCSI的块和基于NFS或SMB的文件。</block>
+  <block id="802d37b03457d0ab5d4fd23a2a30e0f8" category="paragraph">此解决方案 可满足医疗保健组织的需求、并使其能够朝着数字化转型迈出一步。它还可以帮助他们高效地管理应用程序和工作负载。</block>
+  <block id="79e80b0aaa1b91f1312c90bb6e57c028" category="paragraph"><block ref="79e80b0aaa1b91f1312c90bb6e57c028" category="inline-link-macro-rx"></block></block>
+  <block id="f01aedfb58f03b8687dbe8d93f5fe910" category="summary">本节介绍EHR为使软件与NetApp存储实现最佳集成而需要的主机端配置。在此部分中、我们将专门讨论Linux操作系统的主机集成。</block>
+  <block id="4f27a34799ad8580f67b93c57e242ad0" category="doc">SAN 配置</block>
+  <block id="8a61ff76e832005cf64b09ed391d65ed" category="inline-link-macro">先前版本：安装和配置。</block>
+  <block id="2d71b62ed84e57f8f799506f9eeaad09" category="paragraph"><block ref="2d71b62ed84e57f8f799506f9eeaad09" category="inline-link-macro-rx"></block></block>
+  <block id="300c92a91d97cda0bb9c00129881c115" category="paragraph">本节介绍EHR为使软件与NetApp存储实现最佳集成而需要的主机端配置。在此部分中、我们将专门讨论Linux操作系统的主机集成。使用<block ref="f93341e63c1888be05256ff042174623" category="inline-link-rx"></block> 验证所有版本的软件和固件。</block>
+  <block id="6044077fa85a1824585cddf390d2dffd" category="admonition">以下配置步骤特定于此解决方案 中使用的CentOS 8主机。</block>
+  <block id="8385cd682c3f7ffaba993be8cc643aed" category="section-title">NetApp主机实用程序套件</block>
+  <block id="941e9833ce5b056b3d1a2ff8a8400109" category="paragraph">NetApp建议在连接到和访问NetApp存储系统的主机的操作系统上安装NetApp Host Utility Kit (Host Utilities)。支持本机Microsoft多路径I/O (MPIO)。操作系统必须支持多路径的非对称逻辑单元访问(ALUA)。安装Host Utilities可为NetApp存储配置主机总线适配器(HBA)设置。</block>
+  <block id="31da53ce73cee424a1d3a231150434b3" category="paragraph">可以下载NetApp Host Utilities<block ref="1158793e9863ab0201f4d1f8cca4eba4" category="inline-link-rx"></block>。在此解决方案 中、我们已在主机上安装Linux Host Utilities 7.1。</block>
+  <block id="add6f3c739b0ff9eb00aa44180478124" category="section-title">发现ONTAP 存储</block>
+  <block id="7dd154e8ef4f125f77caf3d98d6c6b47" category="paragraph">确保iSCSI服务在应进行登录时正在运行。要为目标上的特定门户或目标上的所有门户设置登录模式、请使用<block ref="f88921f58beaaae5bcb9dffac54bf5ad" prefix=" " category="inline-code"></block> 命令：</block>
+  <block id="424dd04870ffdcc8e3caf2f4872f4c9a" category="paragraph">现在、您可以使用<block ref="3a8e4afa851609127d534b04e7d29c08" prefix=" " category="inline-code"></block> 显示有关连接到主机的LUN的信息。确保以root身份登录到主机。</block>
+  <block id="41df23532b1b2095e93dfed170e3e95a" category="section-title">配置多路径</block>
+  <block id="b970cde28cc800c96a2cdf31eb50d395" category="paragraph">设备映射程序多路径(DM-Multipath)是Linux中的本机多路径实用程序。它可用于实现冗余并提高性能。它可以聚合或组合服务器和存储之间的多个I/O路径、从而在操作系统级别创建一个设备。</block>
+  <block id="d5a6058ad76d94cd554311ee7bc859d2" category="list-text">在系统上设置DM-Multipath之前、请确保您的系统已更新并包含<block ref="a3938eeca32dce6ca3908d2eae163c75" prefix=" " category="inline-code"></block> 软件包。</block>
+  <block id="728267dceca9d16236627b1c4bf6890f" category="list-text">配置文件为<block ref="dd5ff67ba72768d33f75e645aa2b8e56" prefix=" " category="inline-code"></block> 文件按如下所示更新配置文件。</block>
+  <block id="23b0af26e42c4bf2e1c88b7ca853ce2d" category="list-text">启用并启动多路径服务。</block>
+  <block id="1460301c95beffa344714f813a3cb876" category="list-text">添加可加载的内核模块<block ref="3c66321496e85b9ce8f7b49be0316b0a" prefix=" " category="inline-code"></block> 并重新启动多路径服务。最后、检查多路径状态。</block>
+  <block id="64b2e451e3afef5167329cfc7f85532e" category="admonition">有关这些步骤的详细信息、请参见<block ref="ccc6d77f32930c3a03c7736bd5630fae" category="inline-link-rx"></block>。</block>
+  <block id="733f8eb486f8e1bddd955393df9831c7" category="section-title">创建物理卷</block>
+  <block id="236594298d765e67ccdc48bd04554e8e" category="paragraph">使用<block ref="5d40257460f37301e42cdbe694bdb733" prefix=" " category="inline-code"></block> 用于初始化块设备以用作物理卷的命令。初始化类似于格式化文件系统。</block>
+  <block id="ecd5b19e377ea09681cc3033516727ef" category="section-title">创建卷组</block>
+  <block id="4a222e568c6a989e0cc51857d6db8833" category="paragraph">要从一个或多个物理卷创建卷组、请使用<block ref="06932e9d1494a274b55bfe0b58a41da4" prefix=" " category="inline-code"></block> 命令：此命令将按名称创建一个新卷组、并至少向其中添加一个物理卷。</block>
+  <block id="2effec4fe949a578f053f41802f536ed" category="paragraph">。<block ref="30911db31f98f71d9da5c388e6a41b7e" prefix=" " category="inline-code"></block> 命令可用于以固定形式显示卷组属性(例如大小、块区、物理卷数量等)。</block>
+  <block id="799a4a57b50764531d198443f0b64a03" category="section-title">创建逻辑卷</block>
+  <block id="e2473542debabb0e3f70733fb560a4cc" category="paragraph">创建逻辑卷时、系统会使用卷组中的物理卷上的可用块区从卷组中划分逻辑卷。</block>
+  <block id="da4893a22b7e0e6bf8c9b8b2b52da4a5" category="paragraph">此命令将创建一个名为的逻辑卷<block ref="c80f91bf30d31ef91262f330d0f4feac" prefix=" " category="inline-code"></block> 这将使用卷组中的所有未分配空间<block ref="ec2db4422261eae02091227fb9e53c88" prefix=" " category="inline-code"></block>。</block>
+  <block id="77d148bb10790640cfe7639dbc11e075" category="section-title">创建文件系统</block>
+  <block id="10975c445478128fbd3181e026761a40" category="section-title">创建要挂载的文件夹</block>
+  <block id="ef363822d85b4f08aa3f437959e3eae8" category="section-title">挂载文件系统</block>
+  <block id="a60707f257f506c44c1e10144156d5e9" category="inline-link-macro">使用CLI命令管理LVM</block>
+  <block id="d73dc830af99cfb8368789a4c3d84d86" category="paragraph">有关这些任务的详细信息、请参见页面 <block ref="f7acd9c17b6c2b5bf77f636a82f0e1c2" category="inline-link-macro-rx"></block>。</block>
+  <block id="87dc154a226feafc8c0f6636a4ea0662" category="section-title">数据生成</block>
+  <block id="cb5e12adb8d3d69bbc383a99257d07ad" category="paragraph"><block ref="dcab5c9276bd8f6380cf433d2dcedb15" prefix="" category="inline-code"></block> 是EHR I/O模拟器(GenerateIO)的perl脚本数据生成器。LUN中的数据是使用EHR生成的<block ref="dcab5c9276bd8f6380cf433d2dcedb15" prefix=" " category="inline-code"></block> 脚本。此脚本用于创建类似于EHR数据库中的数据。</block>
+  <block id="319a752029e11f63c3140a62a53db058" category="paragraph">运行时、<block ref="dcab5c9276bd8f6380cf433d2dcedb15" prefix=" " category="inline-code"></block> 默认情况下、脚本使用文件系统的85%来生成数据。</block>
+  <block id="461de58baf1ddbd210b1035b18213197" category="section-title">在内部ONTAP 和Cloud Volumes ONTAP 之间配置SnapMirror复制</block>
+  <block id="aeeec0576922eb4490b5fabadc6c4e36" category="paragraph">NetApp SnapMirror 可通过 LAN 或 WAN 高速复制数据，从而在虚拟和传统环境中实现高数据可用性和快速数据复制。在将数据复制到 NetApp 存储系统并持续更新二级数据时，您的数据将保持最新，并在需要时保持可用。不需要外部复制服务器。</block>
+  <block id="43dc5858e7d75f61be0cbcf94cdd063a" category="paragraph">完成以下步骤以在内部ONTAP 系统和CVO之间配置SnapMirror复制。</block>
+  <block id="ed1ae78d9c48d41bec72a9c42dc93ab6" category="list-text">在Canvas中、选择包含源卷的工作环境、将其拖动到要将该卷复制到的工作环境中、然后选择*复制*。</block>
+  <block id="ced6bf0a07ab417ed245905cbb4fffdd" category="inline-image-macro">此屏幕截图显示了在内部ONTAP 实例的下拉列表中选择了复制的"BlueXP画布"屏幕。</block>
+  <block id="8745ff3584d6c922dd10bb2e6e879388" category="paragraph"><block ref="8745ff3584d6c922dd10bb2e6e879388" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f58a624f61e7a0b14fe75113e79b80e4" category="paragraph">其余步骤将介绍如何在Cloud Volumes ONTAP 和内部ONTAP 集群之间创建同步关系。</block>
+  <block id="fb22d62f3618bb54d94521b93977ea24" category="list-text">*源和目标对等设置。*如果显示此页面、请为集群对等关系选择所有集群间LIF。</block>
+  <block id="8ad0d7eecc1850f9b0d7760d733eb445" category="inline-image-macro">此屏幕截图显示了"BlueXP源对等设置"屏幕。</block>
+  <block id="805d4e2b6be4d061cea83ff81e86ce3f" category="paragraph"><block ref="805d4e2b6be4d061cea83ff81e86ce3f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="471316ca4a7c0b900d3e29454976b380" category="list-text">*源卷选择。*选择要复制的卷。</block>
+  <block id="17b42b0578816d664354fe39dd36d9ec" category="inline-image-macro">此屏幕截图显示了BlueXP源卷选择屏幕、其中显示了一个卷、共14个。</block>
+  <block id="fd7e53126c9c2f0d3d521224c240f2bb" category="paragraph"><block ref="fd7e53126c9c2f0d3d521224c240f2bb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="eb3ca3a4bc2c65c65ad46e9da97cfa77" category="list-text">*目标磁盘类型和分层。*如果目标是Cloud Volumes ONTAP 系统、请选择目标磁盘类型、然后选择是否要启用数据分层。</block>
+  <block id="5e6f51795b917e63d0d64c2bbe446057" category="inline-image-macro">此屏幕截图显示了选择了通用SSD的BlueXP目标磁盘类型屏幕。</block>
+  <block id="d7f9eb49d72dd80d22af8195658ae1df" category="paragraph"><block ref="d7f9eb49d72dd80d22af8195658ae1df" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="61e1f5dff1c3c703419d8f9417353c10" category="list-text">*目标卷名称：*指定目标卷名称并选择目标聚合。如果目标是 ONTAP 集群，则还必须指定目标 Storage VM 。</block>
+  <block id="ffd54736aab02566f0aed4f26b6d451e" category="inline-image-macro">此屏幕截图显示了BlueXP目标卷名称屏幕以及输入的相关信息。</block>
+  <block id="2e90fb57705348109b4c21ed96ed2d4d" category="paragraph"><block ref="2e90fb57705348109b4c21ed96ed2d4d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5b939322583091b8a68286d2af517298" category="list-text">*最大传输速率。*指定可传输数据的最大速率(以MB/秒为单位)。</block>
+  <block id="db7a4259027bf60f3551baa3a7796bdd" category="inline-image-macro">此屏幕截图显示了输入了100 MB/秒的BlueXP最大传输速率屏幕。</block>
+  <block id="fec5ed9e5476a19f12514f55bb56df45" category="paragraph"><block ref="fec5ed9e5476a19f12514f55bb56df45" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="43b69288e2e4056e2603dc7b20958252" category="inline-link">了解复制策略</block>
+  <block id="005c5c7ed7587e61292456c462fac4f6" category="list-text">*复制策略。*选择一个默认策略或单击*其他策略*、然后选择一个高级策略。如需帮助，<block ref="9e8cabf6943ebb9704914b1bfc9f0945" category="inline-link-rx"></block>。</block>
+  <block id="5100273ef265c2d8671bda9f1665b34b" category="inline-image-macro">此屏幕截图显示了"BlueXP复制策略"页面、其中显示了"镜像"或"镜像和备份"的默认策略。</block>
+  <block id="61ddf602d164361a34a47fefce91b58d" category="paragraph"><block ref="61ddf602d164361a34a47fefce91b58d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="eb5df7c19fc4406009723468c0e62d1a" category="list-text">*计划。*选择一次性副本或重复计划。有多个默认计划可用。如果您需要其他计划、则必须在上创建新计划<block ref="253a62e31bdaa8ecd365852c9c6f48bf" prefix=" " category="inline-code"></block> 使用 System Manager 。</block>
+  <block id="23df5b4ceef0390eec3d131dbad9de9c" category="inline-image-macro">此屏幕截图显示了BlueXP复制设置计划屏幕、其中显示了多个计时选项。</block>
+  <block id="52c012ee5512a15cbadd9fd508b9883d" category="paragraph"><block ref="52c012ee5512a15cbadd9fd508b9883d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="681b9f7f2e3fb5823a548eaf46772740" category="list-text">*查看。*查看您选择的内容、然后单击*执行*。</block>
+  <block id="bd032e5c50284e702a4cd13a09c21ed2" category="inline-image-macro">此屏幕截图显示了"BlueXP复制设置审核和批准"屏幕。</block>
+  <block id="09b478cd7d21f4268dd1bb3c20cebf08" category="paragraph"><block ref="09b478cd7d21f4268dd1bb3c20cebf08" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8cbeafabda07bd5d65eb9aa0c0d2b357" category="paragraph">有关这些配置步骤的详细信息、请参见<block ref="31b0fd71dd59dff102791c5263ebe9d0" category="inline-link-rx"></block>。</block>
+  <block id="7dfc3e202f3b7ca9ec0050cbaf1e45ec" category="paragraph">BlueXP将启动数据复制过程。现在、您可以看到在内部ONTAP 系统和Cloud Volumes ONTAP 之间建立的*复制*服务。</block>
+  <block id="d070f19e4b4354bb4c58d3987a88160b" category="inline-image-macro">此屏幕截图显示了BlueXP的"画布"屏幕、其中复制服务显示为CVO实例与内部ONTAP 实例之间的一行。</block>
+  <block id="5d5e1a4ee1a6e0ef804f3d348d06921b" category="paragraph"><block ref="5d5e1a4ee1a6e0ef804f3d348d06921b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5ae2434cdcfd33a5c2fe29bf123d2b92" category="paragraph">在Cloud Volumes ONTAP 集群中、您可以看到新创建的卷。</block>
+  <block id="4859f4cdec8e1861cb7a996b3c25d3bd" category="inline-image-macro">此屏幕截图显示了BlueXP卷选项卡、其中显示了新卷。</block>
+  <block id="6aefe6c7a2813c1c3fcf4fbb7a05ccd6" category="paragraph"><block ref="6aefe6c7a2813c1c3fcf4fbb7a05ccd6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2cbdde181a38a501a583654789ddc62c" category="paragraph">您还可以验证是否已在内部卷和云卷之间建立SnapMirror关系。</block>
+  <block id="f41eab09be0f98ef254a74ab0772de58" category="inline-image-macro">此屏幕截图显示了"BlueXP复制"选项卡、其中包含有关刚刚创建的复制关系的信息。</block>
+  <block id="b08a32ae423fad92a0a509c0cccade9f" category="paragraph"><block ref="b08a32ae423fad92a0a509c0cccade9f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e55baf8c5f94e26f12395e9c1bae6505" category="paragraph">有关复制任务的详细信息、请参见*复制*选项卡。</block>
+  <block id="8ac544572f2ee9ec241cf2a7261f841d" category="inline-image-macro">此屏幕截图显示了"复制"选项卡下的扩展信息。</block>
+  <block id="aa7f3d4b43ec32726c63713b983c8b40" category="paragraph"><block ref="aa7f3d4b43ec32726c63713b983c8b40" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="87766c280f27a90ee12d6c50496cd8c4" category="paragraph"><block ref="87766c280f27a90ee12d6c50496cd8c4" category="inline-link-macro-rx"></block></block>
+  <block id="1948f572a268d346b7127bd97bba5c72" category="summary">NetApp为包括医疗保健在内的企业级应用程序提供了一个数据管理解决方案 、我们可以指导医院完成数字化转型之旅。NetApp Cloud Volumes ONTAP 提供了用于医疗保健数据管理的解决方案 、可将数据从FlexPod 数据中心高效复制到AWS等公共云上部署的Cloud Volumes ONTAP。</block>
+  <block id="77ae9bf42d08b53b81e79bcd90939853" category="doc">TR-4960：《FlexPod 混合云与适用于Epic的Cloud Volumes ONTAP 》</block>
+  <block id="af68e316a825558ee6d022520543e084" category="inline-image-macro">Cisco标识</block>
+  <block id="c4abe343b31f30416f0709f0c2e7679f" category="paragraph">与以下合作伙伴：<block ref="641fd7dad1b3b5ea3cacf747ed2c2198" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e89c5827c20c59e127a725ae9501fd42" category="paragraph">NetApp公司Kamini Singh</block>
+  <block id="a3b6911604cfbcfc830e6f2cf66a0a17" category="paragraph">实现数字化转型的关键在于利用数据完成更多工作。医院需要生成大量数据、才能有效地运营组织并为患者提供服务。在治疗患者以及管理员工计划和医疗资源时、系统会收集和处理相关信息。</block>
+  <block id="dfc3ed50b596dadc3c4388ae67127a2a" category="paragraph">医疗保健数据的规模不断扩大、而且这些数据可以提供宝贵的洞察力、这使得医疗保健数据服务和数据保护变得既重要又具有挑战性。首先、医疗保健数据必须可用且受到保护、才能满足数据恢复、医疗业务连续性或合规性要求。</block>
+  <block id="af8188adbc6dc9cd47f71cad4db66e29" category="paragraph">第二、必须随时提供医疗保健数据以供分析。这种分析通常采用基于人工智能(AI)和机器学习(ML)的方法来帮助医疗企业改进其解决方案并创造业务价值。</block>
+  <block id="3acbc4e87cce2979286db4de64b025ad" category="paragraph">第三、随着医疗业务的增长、数据服务基础架构和数据保护方法必须适应医疗保健数据的增长。此外、由于需要将数据从创建数据的边缘移动到核心和云、以便使用数据分析或归档所需的资源、数据移动性变得越来越重要。</block>
+  <block id="cf7bd2b59c3050e4374be5f858edc425" category="paragraph">通过利用经济高效且安全的公共云资源、Cloud Volumes ONTAP 通过高效的数据复制、内置存储效率和简单的灾难恢复测试增强了基于云的灾难恢复(Disaster Recovery、DR)。这些系统采用统一的控制和简单的拖放操作进行管理、可提供经济高效的保护、防止出现任何类型的错误、故障或灾难。Cloud Volumes ONTAP 提供了NetApp SnapMirror技术作为块级数据复制的解决方案 、可通过增量更新使目标保持最新。</block>
+  <block id="7eef1f22b665c30bdf88a559de33ccfb" category="inline-image-macro">Cloud Volumes ONTAP 提供了NetApp SnapMirror技术作为块级数据复制的解决方案 、可通过增量更新使目标保持最新。</block>
+  <block id="c0594fe3cdc374cd79ee1437435dbe1b" category="paragraph"><block ref="c0594fe3cdc374cd79ee1437435dbe1b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a5d3dfcbb6451431e66062351e39896d" category="paragraph">本文档面向NetApp和合作伙伴解决方案工程师(SE)以及专业服务人员。NetApp假定读者具备以下背景知识：</block>
+  <block id="6cfde17644914efa6d0a4d0c21a8f9db" category="list-text">深入了解SAN和NAS概念</block>
+  <block id="69b768b7b39e3be0cc6e4db9debcf155" category="list-text">熟悉NetApp ONTAP 存储系统的技术知识</block>
+  <block id="e879ff8fc4d1c9f2f66107d92401fb9f" category="list-text">熟悉ONTAP 软件的配置和管理技术</block>
+  <block id="aff5e59f5abe86160598233acf83c02c" category="paragraph">与NetApp Cloud Volumes ONTAP 集成的FlexPod 数据中心为医疗保健工作负载提供了以下优势：</block>
+  <block id="7007d499776b2bfa8941c62754598088" category="list-text">*自定义保护。* Cloud Volumes ONTAP 提供从ONTAP 到云的块级数据复制、通过增量更新使目标保持最新。用户可以指定同步计划来确定何时传输源上的更改。这样可以为各种医疗保健数据提供自定义保护。</block>
+  <block id="77bb4fcf677f48b0d8952ec06061ae73" category="list-text">*故障转移和故障恢复。*发生灾难时、存储管理员可以快速为云卷设置故障转移。恢复主站点后、在灾难恢复环境中创建的新数据将同步回源卷、以便重新建立二级数据复制。这样、医疗保健数据便可轻松恢复、而不会造成中断。</block>
+  <block id="dc7918d634ea584c506bbf88e388c7b8" category="list-text">*效率。*二级云副本的存储空间和成本通过数据压缩、精简配置和重复数据删除进行了优化。医疗保健数据以经过压缩和重复数据删除的形式在块级别传输、从而加快传输速度。数据也会自动分层到低成本对象存储、并且只有在访问时才会返回到高性能存储、例如在灾难恢复情形下。这样可以显著降低持续存储成本。</block>
+  <block id="3da933609e167649418f9b96fc190f9b" category="list-text">*勒索软件保护。* NetApp BlueXP勒索软件保护功能可扫描内部环境和云环境中的数据源、检测安全漏洞并提供其当前安全状态和风险评分。然后、它将提供可操作的建议、您可以进一步调查并遵循这些建议进行修复。通过这种方式、您可以保护您的关键医疗保健数据免受勒索软件攻击。</block>
+  <block id="fe31b114e110e2af1fd930bf2da53e7a" category="paragraph">本节介绍解决方案 的逻辑拓扑。下图显示了由FlexPod 内部环境、在Amazon Web Services (AWS)上运行的NetApp Cloud Volumes ONTAP (CVO)和NetApp BlueXP SaaS平台组成的解决方案 拓扑。</block>
+  <block id="f0f63a1e62017f4c7d4b8fc95de5055d" category="inline-image-macro">此图显示了运行ONTAP 的FlexPod 实例与运行在公共云中的NetApp Cloud Volumes ONTAP 之间的SnapMirror复制。</block>
+  <block id="59fdaa90d546a53d932ddc47fc4a4d12" category="paragraph"><block ref="59fdaa90d546a53d932ddc47fc4a4d12" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="96b3193f9bd9b4980fd69f862b8b0791" category="paragraph">控制平面和数据平面会在端点之间清晰地指示。通过利用安全的站点到站点VPN连接、数据平面在FlexPod 的纯闪存FAS 上运行的ONTAP 实例与AWS中的NetApp CVO实例之间运行。将医疗保健工作负载数据从内部FlexPod 数据中心复制到NetApp Cloud Volumes ONTAP 时、会通过NetApp SnapMirror复制来处理。此外、此解决方案 还支持将NetApp CVO实例中的冷数据备份和分层到AWS S3。</block>
+  <block id="69bfd0a80e68c85caea0b9999fc6ba41" category="paragraph"><block ref="69bfd0a80e68c85caea0b9999fc6ba41" category="inline-link-macro-rx"></block></block>
+  <block id="0c308b16788e826f96a07e6a1d6c3629" category="paragraph"><block ref="0c308b16788e826f96a07e6a1d6c3629" category="inline-link-macro-rx"></block></block>
+  <block id="43e0b63bc072ee0888a5c27056246b4c" category="inline-link"><block ref="43e0b63bc072ee0888a5c27056246b4c" category="inline-link-rx"></block></block>
+  <block id="29ba8e8610e036b3f180753a1567b2de" category="paragraph"><block ref="29ba8e8610e036b3f180753a1567b2de" category="inline-link-rx"></block></block>
+  <block id="695439b8fa8598673f34199f94044423" category="inline-link"><block ref="695439b8fa8598673f34199f94044423" category="inline-link-rx"></block></block>
+  <block id="5d8b5cf0cf78cc9a93bb58b4d8b64c3b" category="paragraph"><block ref="5d8b5cf0cf78cc9a93bb58b4d8b64c3b" category="inline-link-rx"></block></block>
+  <block id="486388bbe4cda183a0e74df6ada2a454" category="list-text">在 AWS 中快速启动 Cloud Volumes ONTAP</block>
+  <block id="3bb902edbb2ede0e74aa3286d8c2fc50" category="inline-link"><block ref="3bb902edbb2ede0e74aa3286d8c2fc50" category="inline-link-rx"></block></block>
+  <block id="50b906f72111f2698ddbf4cae34f6977" category="paragraph"><block ref="50b906f72111f2698ddbf4cae34f6977" category="inline-link-rx"></block></block>
+  <block id="097c03e3ba31f579d1760a9d90ea079b" category="list-text">SnapMirror 复制</block>
+  <block id="5d7b0c343e4b15b75f70b6700c47321d" category="inline-link"><block ref="5d7b0c343e4b15b75f70b6700c47321d" category="inline-link-rx"></block></block>
+  <block id="21073a4d69b5b782b0cf6aa2b9adc218" category="paragraph"><block ref="21073a4d69b5b782b0cf6aa2b9adc218" category="inline-link-rx"></block></block>
+  <block id="5128bb0d027b38f6218a48454a1a237e" category="list-text">TR-3928：《NetApp Epic最佳实践》</block>
+  <block id="eb9eaf88569464540b215c4e99e34ec7" category="inline-link"><block ref="eb9eaf88569464540b215c4e99e34ec7" category="inline-link-rx"></block></block>
+  <block id="75d67ff7fa2b524a6937cc0b53f012c7" category="paragraph"><block ref="75d67ff7fa2b524a6937cc0b53f012c7" category="inline-link-rx"></block></block>
+  <block id="ecb1e944e8a3d37434536fd21a2927ae" category="list-text">TR-4693 ：《适用于 Epic EHR 的 FlexPod 数据中心部署指南》</block>
+  <block id="947d5e988e248845b68b0aa208a03aa4" category="paragraph"><block ref="947d5e988e248845b68b0aa208a03aa4" category="inline-link-rx"></block></block>
+  <block id="01fb4b2a1d3f1a83162ef92c61b6a364" category="list-text">适用于Epic的FlexPod</block>
+  <block id="6f39c52d8e07fcce152ddbc2d9cd70d1" category="inline-link"><block ref="6f39c52d8e07fcce152ddbc2d9cd70d1" category="inline-link-rx"></block></block>
+  <block id="db1e7bd3d8ab3b71c919951cb680cbec" category="paragraph"><block ref="db1e7bd3d8ab3b71c919951cb680cbec" category="inline-link-rx"></block></block>
+  <block id="fb4d860c1938626a4cb9b8f66c6eb6f2" category="cell">2023年3月</block>
+  <block id="862ad23f517c987dec375a134fc0d5c0" category="cell">初始版本</block>
+  <block id="c1138e31cf3bd66be11eeb4877babdd1" category="sidebar">采用Cloud Volumes ONTAP for Epic的FlexPod 混合云</block>
 </blocks>

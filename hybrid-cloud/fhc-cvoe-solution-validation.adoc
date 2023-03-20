@@ -1,0 +1,313 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/fhc-cvoe-solution-validation.html 
+keywords: application, development, testing, disaster recovery, dr, verification 
+summary: 本节介绍如何使用多种使用情形验证解决方案。 
+---
+= 解决方案验证
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:fhc-cvoe-san-configuration.html["先前版本：SAN配置。"]
+
+[role="lead"]
+在本节中、我们将介绍一些解决方案 使用情形。
+
+* SnapMirror的主要使用情形之一是数据备份。通过将数据复制到同一集群或远程目标、可以将SnapMirror用作主备份工具。
+* 使用灾难恢复环境运行应用程序开发测试(开发/测试)。
+* 灾难恢复。
+* 数据分发和远程数据访问。
+
+
+值得注意的是、此解决方案 中验证的相对较少的使用情形并不代表SnapMirror复制的整个功能。
+
+
+
+== 应用程序开发和测试(开发/测试)
+
+为了加快应用程序开发速度、您可以在灾难恢复站点快速克隆复制的数据并将其用于开发/测试应用程序。灾难恢复和开发/测试环境的主机代管可以显著提高备份或灾难恢复设施的利用率、并且按需开发/测试克隆可以根据需要提供尽可能多的数据副本、以便更快地投入生产。
+
+NetApp FlexClone技术可用于快速创建SnapMirror目标FlexVol 卷的读写副本、以便您可以对二级副本进行读写访问、以确认所有生产数据是否可用。
+
+要使用灾难恢复环境执行应用程序开发/测试、请完成以下步骤：
+
+. 创建生产数据的副本。为此、请为内部卷执行应用程序快照。应用程序快照创建包括三个步骤： `Lock`， `Snap`，和 `Unlock`。
++
+.. 暂停文件系统、以便暂停I/O并保持应用程序一致性。在步骤C中发出unquiesce命令之前、任何写入文件系统的应用程序都会保持等待状态步骤a、b和c通过透明的流程或工作流执行、不会影响应用程序SLA。
++
+....
+[root@hc-cloud-secure-1 ~]# fsfreeze -f /file1
+....
++
+此选项请求在进行新修改时冻结指定的文件系统。任何尝试写入冻结文件系统的进程都会被阻止、直到文件系统被解除冻结为止。
+
+.. 为内部卷创建快照。
++
+....
+A400-G0312::> snapshot create -vserver Healthcare_SVM -volume hc_iscsi_vol -snapshot kamini
+....
+.. 取消暂停文件系统以重新启动I/O
++
+....
+[root@hc-cloud-secure-1 ~]# fsfreeze -u /file1
+....
++
+此选项用于取消冻结文件系统并允许操作继续。冻结阻止的任何文件系统修改均不会被阻止、并允许完成。
+
++
+此外、还可以使用NetApp SnapCenter 执行应用程序一致的快照、NetApp在SnapCenter 中对上述工作流进行了完整的编排。有关详细信息、请参见 https://docs.netapp.com/us-en/snapcenter/["此处"^]。
+
+
+
+. 执行SnapMirror更新操作以使生产系统和灾难恢复系统保持同步。
++
+....
+singlecvoaws::> snapmirror update -destination-path svm_singlecvoaws:hc_iscsi_vol_copy -source-path Healthcare_SVM:hc_iscsi_vol
+
+Operation is queued: snapmirror update of destination “svm_singlecvoaws:hc_iscsi_vol_copy”.
+....
++
+也可以通过BlueXP图形用户界面的*复制*选项卡执行SnapMirror更新。
+
+. 根据先前创建的应用程序快照创建FlexClone实例。
++
+....
+singlecvoaws::> volume clone create -flexclone kamini_clone -type RW -parent-vserver svm_singlecvoaws -parent-volume hc_iscsi_vol_copy -junction-active true -foreground true -parent-snapshot kamini
+
+[Job 996] Job succeeded: Successful
+....
++
+对于上一项任务、也可以创建新的快照、但您必须按照上述相同步骤来确保应用程序一致性。
+
+. 激活FlexClone卷以在云中启动EHR实例。
++
+....
+singlecvoaws::> lun mapping create –vserver svm_singlecvoaws –path /vol/kamini_clone/iscsi_lun1 -igroup ehr-igroup –lun-id 0
+
+singlecvoaws::> lun mapping show
+Vserver     Path                                  Igroup    LUN ID  Protocol
+---------- -------------- --------------- -----  --------   ------ ---------
+svm_singlecvoaws
+                 /vol/kamini_clone/iscsi_lun1    ehr-igroup   0    iscsi
+....
+. 在云中的EHR实例上执行以下命令以访问数据或文件系统。
++
+.. 发现ONTAP 存储。检查多路径状态。
++
+....
+sudo rescan-scsi-bus.sh
+sudo iscsiadm -m discovery -t sendtargets -p <iscsi-lif-ip>
+sudo iscsiadm -m node -L all
+sudo sanlun lun show
+
+Output:
+controller(7mode/E-Series)/         device    host             lun
+vserver(cDOT/FlashRay) lun-pathname filename  adapter protocol size   product
+-----------------------------------------------------------------------------
+svm_singlecvoaws                    /dev/sda  host2   iSCSI    200g    cDOT
+                    /vol/kamini_clone/iscsi_lun1
+sudo multipath -ll
+
+Output:
+3600a09806631755a452b543041313053 dm-0 NETAPP,LUN C-Mode
+size=200G features='3 queue_if_no_path pg_init_retries 50' hwhandler='1 alua' wp=rw
+`-+- policy='service-time 0' prio=50 status=active
+`- 2:0:0:0 sda 8:0 active ready running
+....
+.. 激活卷组。
++
+....
+sudo vgchange -ay datavg
+Output:
+1 logical volume(s) in volume group "datavg" now active
+....
+.. 挂载文件系统并显示文件系统信息的摘要。
++
+....
+sudo mount -t xfs /dev/datavg/datalv /file1
+
+cd /file1
+df -k .
+Output:
+Filesystem                 1K-blocks  Used     Available  Use%  Mounted on
+/dev/mapper/datavg-datalv  209608708 183987096  25621612  88%    /file1
+....
++
+这证明您可以使用灾难恢复环境进行应用程序开发/测试。通过在灾难恢复存储上执行应用程序开发/测试、您可以更多地利用资源、否则这些资源可能会在大部分时间处于闲置状态。
+
+
+
+
+
+
+
+== 灾难恢复
+
+SnapMirror技术也用作灾难恢复计划的一部分。如果将关键数据复制到其他物理位置、则发生严重灾难时、不必对业务关键型应用程序的数据长时间不可用进行发生原因 处理。客户端可以通过网络访问复制的数据、直到生产站点从损坏、意外删除、自然灾难等中恢复为止。
+
+如果要故障恢复到主站点、SnapMirror可提供一种高效的方法来重新同步灾难恢复站点与主站点、只需反转SnapMirror关系、即可仅将更改过的数据或新数据从灾难恢复站点传输回主站点。主生产站点恢复正常应用程序操作后、SnapMirror将继续向灾难恢复站点传输数据、而无需再进行基线传输。
+
+要验证成功的灾难恢复方案、请完成以下步骤：
+
+. 通过停止托管内部ONTAP 卷的SVM在源(生产)端模拟灾难 (`hc_iscsi_vol`）。
++
+image:fhc-cvoe-image21.png["此屏幕截图显示了Storage VM下拉列表中的停止选项。"]
+
++
+确保已在FlexPod 实例中的内部ONTAP 和AWS中的Cloud Volumes ONTAP 之间设置SnapMirror复制、以便您可以频繁创建应用程序快照。
+
++
+停止SVM后、将显示 `hc_iscsi_vol` 卷在BlueXP中不可见。
+
++
+image:fhc-cvoe-image22.png["此时、此卷将显示在卷摘要屏幕中。"]
+
+. 在CVO中激活灾难恢复。
++
+.. 中断本地ONTAP 和Cloud Volumes ONTAP 之间的SnapMirror复制关系、并提升CVO目标卷 (`hc_iscsi_vol_copy`)到生产环境。
++
+image:fhc-cvoe-image23.png["此时将显示中断关系选项屏幕。"]
+
++
+断开SnapMirror关系后、目标卷类型将从数据保护(DP)更改为读/写(RW)。
+
++
+....
+singlecvoaws::> volume show -volume hc_iscsi_vol_copy -fields typev
+server          volume            type
+---------------- ----------------- ----
+svm_singlecvoaws hc_iscsi_vol_copy RW
+....
+.. 激活Cloud Volumes ONTAP 中的目标卷以在云中的EC2实例上启动EHR实例。
++
+....
+singlecvoaws::> lun mapping create –vserver svm_singlecvoaws –path /vol/hc_iscsi_vol_copy/iscsi_lun1 -igroup ehr-igroup –lun-id 0
+
+singlecvoaws::> lun mapping show
+Vserver     Path                                Igroup   LUN ID  Protocol
+---------- ----------------------------------  --------  ------ ---------
+svm_singlecvoaws
+            /vol/hc_iscsi_vol_copy/iscsi_lun1  ehr-igroup  0    iscsi
+....
+.. 要访问云中EHR实例上的数据和文件系统、请首先发现ONTAP 存储并验证多路径状态。
++
+....
+sudo rescan-scsi-bus.sh
+sudo iscsiadm -m discovery -t sendtargets -p <iscsi-lif-ip>
+sudo iscsiadm -m node -L all
+sudo sanlun lun show
+Output:
+controller(7mode/E-Series)/         device    host             lun
+vserver(cDOT/FlashRay) lun-pathname filename  adapter protocol size   product
+-----------------------------------------------------------------------------
+svm_singlecvoaws                    /dev/sda  host2   iSCSI    200g    cDOT
+                  /vol/hc_iscsi_vol_copy/iscsi_lun1
+sudo multipath -ll
+Output:
+3600a09806631755a452b543041313051 dm-0 NETAPP,LUN C-Mode
+size=200G features='3 queue_if_no_path pg_init_retries 50' hwhandler='1 alua' wp=rw
+`-+- policy='service-time 0' prio=50 status=active
+`- 2:0:0:0 sda 8:0 active ready running
+....
+.. 然后激活卷组。
++
+....
+sudo vgchange -ay datavg
+Output:
+1 logical volume(s) in volume group "datavg" now active
+....
+.. 最后、挂载文件系统并显示文件系统信息。
++
+....
+sudo mount -t xfs /dev/datavg/datalv /file1
+
+cd /file1
+df -k .
+Output:
+Filesystem                 1K-blocks  Used      Available  Use%  Mounted on
+/dev/mapper/datavg-datalv  209608708  183987096  25621612  88%   /file1
+....
++
+此输出显示、用户可以通过网络访问复制的数据、直到生产站点从灾难中恢复为止。
+
+.. 反转SnapMirror关系。此操作将反转源卷和目标卷的角色。
++
+image:fhc-cvoe-image24.png["此屏幕截图显示了反向关系选项框。"]
+
++
+执行此操作时、原始源卷中的内容将被目标卷的内容覆盖。当您要重新激活脱机的源卷时，这非常有用。
+
++
+现在是CVO卷 (`hc_iscsi_vol_copy`)将成为源卷、内部卷也将成为源卷 (`hc_iscsi_vol`)将成为目标卷。
+
++
+image:fhc-cvoe-image25.png["此屏幕截图显示了在BlueXP中创建的卷复制关系。"]
+
++
+在上次数据复制和源卷禁用之间写入到原始源卷的任何数据都不会保留。
+
+.. 要验证对CVO卷的写入访问、请在云中的EHR实例上创建一个新文件。
++
+....
+cd /file1/
+sudo touch newfile
+....
+
+
+
+
+当生产站点关闭时、客户端仍可访问数据、并对Cloud Volumes ONTAP 卷执行写入操作、该卷现在是源卷。
+
+如果要故障恢复到主站点、SnapMirror可提供一种高效的方法来重新同步灾难恢复站点与主站点、只需反转SnapMirror关系、即可仅将更改过的数据或新数据从灾难恢复站点传输回主站点。主生产站点恢复正常应用程序操作后、SnapMirror将继续向灾难恢复站点传输数据、而无需再进行基线传输。
+
+本节说明了在生产站点发生灾难时成功解决灾难恢复方案的方法。现在、数据可以安全地由应用程序使用、这些应用程序现在可以在源站点完成还原期间为客户端提供服务。
+
+
+
+== 验证生产站点上的数据
+
+恢复生产站点后、您必须确保还原原始配置、并且客户端能够从源站点访问数据。
+
+在本节中、我们将讨论启动源站点、恢复内部ONTAP 和Cloud Volumes ONTAP 之间的SnapMirror关系、并最终对源端执行数据完整性检查
+
+以下操作步骤 可用于验证生产站点上的数据：
+
+. 确保源站点现在已启动。为此、请启动托管内部ONTAP 卷的SVM (`hc_iscsi_vol`）。
++
+image:fhc-cvoe-image26.png["此屏幕截图显示了如何使用Storage VM页面中的下拉菜单启动特定VM。"]
+
+. 中断Cloud Volumes ONTAP 和内部ONTAP 之间的SnapMirror复制关系、并提升内部卷 (`hc_iscsi_vol`)恢复生产。
++
+image:fhc-cvoe-image27.png["此屏幕截图显示了如何中断关系。"]
+
++
+断开SnapMirror关系后、内部卷类型将从数据保护(DP)更改为读/写(RW)。
+
++
+....
+A400-G0312::> volume show -volume hc_iscsi_vol -fields type
+vserver        volume       type
+-------------- ------------ ----
+Healthcare_SVM hc_iscsi_vol RW
+....
+. 反转SnapMirror关系。现在、是内部部署的ONTAP 卷 (`hc_iscsi_vol`)将成为源卷和之前的源卷、并成为Cloud Volumes ONTAP 卷 (`hc_iscsi_vol_copy`)将成为目标卷。
++
+image:fhc-cvoe-image28.png["此屏幕截图显示了如何反转关系。"]
+
++
+通过执行以下步骤、我们已成功还原原始配置。
+
+. 重新启动内部EHR实例。挂载文件系统并验证 `newfile` 在生产中断时、您在云中的EHR实例上创建的数据现在也存在。
++
+image:fhc-cvoe-image29.png["此屏幕截图显示了如何在内部EHR实例上查找新文件。"]
+
+
+
+我们可以推断、从源到目标的数据复制已成功完成、并且数据完整性已保持不变。这样就完成了对生产站点上数据的验证。
+
+link:fhc-cvoe-conclusion.html["接下来：总结。"]

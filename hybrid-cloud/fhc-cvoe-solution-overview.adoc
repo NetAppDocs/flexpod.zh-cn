@@ -1,0 +1,68 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/fhc-cvoe-solution-overview.html 
+keywords: tr4960, 4960, introduction, cvo, healthcare, public cloud 
+summary: NetApp为包括医疗保健在内的企业级应用程序提供了一个数据管理解决方案 、我们可以指导医院完成数字化转型之旅。NetApp Cloud Volumes ONTAP 提供了用于医疗保健数据管理的解决方案 、可将数据从FlexPod 数据中心高效复制到AWS等公共云上部署的Cloud Volumes ONTAP。 
+---
+= TR-4960：《FlexPod 混合云与适用于Epic的Cloud Volumes ONTAP 》
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+与以下合作伙伴：image:cisco logo.png["Cisco标识"]
+
+NetApp公司Kamini Singh
+
+[role="lead"]
+实现数字化转型的关键在于利用数据完成更多工作。医院需要生成大量数据、才能有效地运营组织并为患者提供服务。在治疗患者以及管理员工计划和医疗资源时、系统会收集和处理相关信息。
+
+医疗保健数据的规模不断扩大、而且这些数据可以提供宝贵的洞察力、这使得医疗保健数据服务和数据保护变得既重要又具有挑战性。首先、医疗保健数据必须可用且受到保护、才能满足数据恢复、医疗业务连续性或合规性要求。
+
+第二、必须随时提供医疗保健数据以供分析。这种分析通常采用基于人工智能(AI)和机器学习(ML)的方法来帮助医疗企业改进其解决方案并创造业务价值。
+
+第三、随着医疗业务的增长、数据服务基础架构和数据保护方法必须适应医疗保健数据的增长。此外、由于需要将数据从创建数据的边缘移动到核心和云、以便使用数据分析或归档所需的资源、数据移动性变得越来越重要。
+
+NetApp为包括医疗保健在内的企业级应用程序提供了一个数据管理解决方案 、我们可以指导医院完成数字化转型之旅。NetApp Cloud Volumes ONTAP 提供了用于医疗保健数据管理的解决方案 、可将数据从FlexPod 数据中心高效复制到AWS等公共云上部署的Cloud Volumes ONTAP。
+
+通过利用经济高效且安全的公共云资源、Cloud Volumes ONTAP 通过高效的数据复制、内置存储效率和简单的灾难恢复测试增强了基于云的灾难恢复(Disaster Recovery、DR)。这些系统采用统一的控制和简单的拖放操作进行管理、可提供经济高效的保护、防止出现任何类型的错误、故障或灾难。Cloud Volumes ONTAP 提供了NetApp SnapMirror技术作为块级数据复制的解决方案 、可通过增量更新使目标保持最新。
+
+image:fhc-cvoe-image1.jpeg["Cloud Volumes ONTAP 提供了NetApp SnapMirror技术作为块级数据复制的解决方案 、可通过增量更新使目标保持最新。"]
+
+
+
+== audience
+
+本文档面向NetApp和合作伙伴解决方案工程师(SE)以及专业服务人员。NetApp假定读者具备以下背景知识：
+
+* 深入了解SAN和NAS概念
+* 熟悉NetApp ONTAP 存储系统的技术知识
+* 熟悉ONTAP 软件的配置和管理技术
+
+
+
+
+== 解决方案的优势
+
+与NetApp Cloud Volumes ONTAP 集成的FlexPod 数据中心为医疗保健工作负载提供了以下优势：
+
+* *自定义保护。* Cloud Volumes ONTAP 提供从ONTAP 到云的块级数据复制、通过增量更新使目标保持最新。用户可以指定同步计划来确定何时传输源上的更改。这样可以为各种医疗保健数据提供自定义保护。
+* *故障转移和故障恢复。*发生灾难时、存储管理员可以快速为云卷设置故障转移。恢复主站点后、在灾难恢复环境中创建的新数据将同步回源卷、以便重新建立二级数据复制。这样、医疗保健数据便可轻松恢复、而不会造成中断。
+* *效率。*二级云副本的存储空间和成本通过数据压缩、精简配置和重复数据删除进行了优化。医疗保健数据以经过压缩和重复数据删除的形式在块级别传输、从而加快传输速度。数据也会自动分层到低成本对象存储、并且只有在访问时才会返回到高性能存储、例如在灾难恢复情形下。这样可以显著降低持续存储成本。
+* *勒索软件保护。* NetApp BlueXP勒索软件保护功能可扫描内部环境和云环境中的数据源、检测安全漏洞并提供其当前安全状态和风险评分。然后、它将提供可操作的建议、您可以进一步调查并遵循这些建议进行修复。通过这种方式、您可以保护您的关键医疗保健数据免受勒索软件攻击。
+
+
+
+
+== 解决方案 拓扑
+
+本节介绍解决方案 的逻辑拓扑。下图显示了由FlexPod 内部环境、在Amazon Web Services (AWS)上运行的NetApp Cloud Volumes ONTAP (CVO)和NetApp BlueXP SaaS平台组成的解决方案 拓扑。
+
+image:fhc-cvoe-image2.jpeg["此图显示了运行ONTAP 的FlexPod 实例与运行在公共云中的NetApp Cloud Volumes ONTAP 之间的SnapMirror复制。"]
+
+控制平面和数据平面会在端点之间清晰地指示。通过利用安全的站点到站点VPN连接、数据平面在FlexPod 的纯闪存FAS 上运行的ONTAP 实例与AWS中的NetApp CVO实例之间运行。将医疗保健工作负载数据从内部FlexPod 数据中心复制到NetApp Cloud Volumes ONTAP 时、会通过NetApp SnapMirror复制来处理。此外、此解决方案 还支持将NetApp CVO实例中的冷数据备份和分层到AWS S3。
+
+link:fhc-cvoe-solution-components.html["接下来：解决方案 组件。"]

@@ -1,0 +1,80 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/fhc-cvoe-where-to-find-additional-information.html 
+keywords:  
+summary:  
+---
+= 从何处查找追加信息
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:fhc-cvoe-conclusion.html["上一篇：结论。"]
+
+[role="lead"]
+要了解有关本文档中所述信息的更多信息，请查看以下文档和 / 或网站：
+
+* FlexPod 主页
++
+https://www.flexpod.com["https://www.flexpod.com"^]
+
+* 适用于FlexPod 的Cisco验证设计和部署指南
++
+https://www.cisco.com/c/en/us/solutions/design-zone/data-center-design-guides/flexpod-design-guides.html["https://www.cisco.com/c/en/us/solutions/design-zone/data-center-design-guides/flexpod-design-guides.html"^]
+
+* NetApp BlueXP
++
+https://bluexp.netapp.com/["https://bluexp.netapp.com/"^]
+
+* NetApp Cloud Volumes ONTAP
++
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-overview-cvo.html["https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-overview-cvo.html"^]
+
+* 在 AWS 中快速启动 Cloud Volumes ONTAP
++
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-aws.html["https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-aws.html"^]
+
+* SnapMirror 复制
++
+https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication.html["https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication.html"^]
+
+* TR-3928：《NetApp Epic最佳实践》
++
+https://www.netapp.com/pdf.html?item=/media/17137-tr3928pdf.pdf["https://www.netapp.com/pdf.html?item=/media/17137-tr3928pdf.pdf"^]
+
+* TR-4693 ：《适用于 Epic EHR 的 FlexPod 数据中心部署指南》
++
+https://www.netapp.com/media/10658-tr-4693.pdf["https://www.netapp.com/media/10658-tr-4693.pdf"^]
+
+* 适用于Epic的FlexPod
++
+https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_xseries_vmw_epic.html["https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_xseries_vmw_epic.html"^]
+
+* NetApp 互操作性表工具
++
+http://support.netapp.com/matrix/["http://support.netapp.com/matrix/"^]
+
+* Cisco UCS 硬件和软件互操作性工具
++
+http://www.cisco.com/web/techdoc/ucs/interoperability/matrix/matrix.html["http://www.cisco.com/web/techdoc/ucs/interoperability/matrix/matrix.html"^]
+
+* VMware 兼容性指南
++
+http://www.vmware.com/resources/compatibility/search.php["http://www.vmware.com/resources/compatibility/search.php"^]
+
+
+
+
+
+=== 版本历史记录
+
+|===
+| version | Date | 文档版本历史记录 
+
+
+| 版本 1.0 | 2023年3月 | 初始版本 
+|===
