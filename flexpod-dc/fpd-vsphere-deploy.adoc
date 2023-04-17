@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: flexpod-dc/fpd-vsphere-deploy.html 
+keywords: cisco, flexpod, data, center, vmware, vsphere, ontap, deployment 
+summary: '本文档介绍了在NetApp AFF A400全闪存存储系统上使用NetApp ONTAP 9.7的Cisco和NetApp FlexPod Datacenter、采用第二代Intel Xeon可扩展处理器的Cisco UCS Manager统一软件版本4.1 (2)以及VMware vSphere 7.0。' 
+---
+= 采用VMware vSphere 7.0和NetApp ONTAP 9.7的FlexPod Datacenter—部署
+:allow-uri-read: 
+
+
+NetApp公司Cisco Sree Lakshmi Lan的John George
+
+本文档介绍了在NetApp AFF A400全闪存存储系统上使用NetApp ONTAP 9.7的Cisco和NetApp FlexPod Datacenter、采用第二代Intel Xeon可扩展处理器的Cisco UCS Manager统一软件版本4.1 (2)以及VMware vSphere 7.0。Cisco UCS Manager (UCSM) 4.1 (2)提供以下整合支持：
+
+* 所有当前的Cisco UCS互联阵列型号：6200、6300、6324 (Cisco UCS Mini)
+* 6400/16
+* 2200/23400/2400系列IOM
+* Cisco UCS B 系列
+* Cisco UCS C 系列
+
+
+此外、还包括Cisco Intersight和NetApp Active IQ SaaS管理平台。
+
+采用NetApp ONTAP 9.7、Cisco UCS统一软件版本4.1 (2)和VMware vSphere 7.0的FlexPod 数据中心包含一个基于Cisco统一计算系统(Cisco UCS)、Cisco Nexus 9000系列交换机、MDS 9000多层光纤交换机构建的预先设计的最佳实践数据中心架构、 以及运行ONTAP 9.7数据管理软件的NetApp AFF A系列存储阵列。
+
+link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_vmware_vsphere_7_0_ontap_9_7.html["采用VMware vSphere 7.0和NetApp ONTAP 9.7的FlexPod Datacenter—部署"^]

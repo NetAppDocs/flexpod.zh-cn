@@ -27,33 +27,26 @@ entries:
     url: "/flexpod-dc/sm-bcs-conclusion.html"
   - title: 从何处查找追加信息和版本历史记录
     url: "/flexpod-dc/sm-bcs-where-to-find-additional-information-and-version-history.html"
-- title: "《采用 VMware vSphere 7.0 的 FlexPod 数据中心， Cisco VXLAN 单站点网络结构和 NetApp ONTAP
-    9.7 设计指南》"
-  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi70_vxlan_evpn_design.html
-- title: 采用 VMware vSphere 7.0 和 NetApp ONTAP 9.7 的 FlexPod Datacenter
-  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_vmware_vsphere_7_0_ontap_9_7.html
+- title: 采用VMware vSphere 7.0、Cisco VXLAN单站点网络结构和NetApp ONTAP 9.7的FlexPod 数据中心—设计
+  url: "/flexpod-dc/fpd-vxlan-design.html"
+- title: 采用VMware vSphere 7.0和NetApp ONTAP 9.7的FlexPod Datacenter—Deploy
+  url: "/flexpod-dc/fpd-vsphere-deploy.html"
 - title: 采用 NetApp ONTAP 9.7 ， Cisco Intersight 和 VMware vSphere 6.7 U3 的 FlexPod
     Datacenter —设计
-  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_dc_ontap_97_ucs_4_vmw_vs_67_U3_design.html
+  url: "/flexpod-dc/fpd-cisco-vm-vs-design.html"
 - title: 采用 NetApp ONTAP 9.7 ， Cisco Intersight 和 VMware vSphere 6.7 U3 的 FlexPod
     Datacenter — Deploy
-  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_dc_ontap_97_ucs_4_vmw_vs_67_U3.html
-- title: 采用 Cisco Intersight 和 NetApp ONTAP 9.7 的 FlexPod 数据中心设计指南
-  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_dc_ontap_97_ucs_4_vmw_vs_67_U3_design.html
+  url: "/flexpod-dc/fpd-cisco-vm-vs-deploy.html"
+- title: 采用Cisco Intersight和NetApp ONTAP 9.7的FlexPod 数据中心—设计
+  url: "/flexpod-dc/fpd-inter-design.html"
 - title: 采用 NetApp ONTAP 9.6 ， Cisco UCS 第 4 代， VMware vSphere 6.7U2 （ CVD ）的 FlexPod
     数据中心
-  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_vmware_netappaffa_u2.html
-- title: 采用 VMware vSphere 6.7 U1 ， Cisco UCS 第四代和 NetApp AFF A 系列的 FlexPod Datacenter
-    —设计
-  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_vmware_netappaffa_design.html
-- title: 采用 VMware vSphere 6.7 U1 ， Cisco UCS 第四代和 NetApp AFF A 系列的 FlexPod Datacenter
-    — Deploy
-  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_vmware_netappaffa.html
-- title: 推出适用于 FlexPod 的端到端 NVMe
-  url: https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/whitepaper-c11-741907.html
-- title: 采用 Cisco ACI Multi-Pod ， NetApp MetroCluster IP 和 VMware vSphere 6.7 的 FlexPod
-    数据中心设计指南
-  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi67_n9k_aci_metrocluster_design.html
-- title: "《采用 Cisco ACI Multi-Pod ， NetApp MetroCluster IP 和 VMware vSphere 6.7 的
-    FlexPod 数据中心部署指南》"
-  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi67_n9k_aci_metrocluster.html
+  url: "/flexpod-dc/fpd-cisco-vsphere.html"
+- title: 采用VMware vSphere 6.7 U1、Cisco UCS第四代和NetApp AFF A系列的FlexPod Datacenter—设计
+  url: "/flexpod-dc/fpd-cisco-vsphere-design.html"
+- title: 采用VMware vSphere 6.7 U1、Cisco UCS第四代和NetApp AFF A系列的FlexPod Datacenter—Deploy
+  url: "/flexpod-dc/fpd-cisco-vsphere-deploy.html"
+- title: 采用Cisco ACI Multi-Pod、NetApp MetroCluster IP和VMware vSphere 6.7的FlexPod 数据中心—设计
+  url: "/flexpod-dc/fpd-mcc-vsphere-design.html"
+- title: 采用Cisco ACI Multi-Pod、NetApp MetroCluster IP和VMware vSphere 6.7的FlexPod Datacenter—Deploy
+  url: "/flexpod-dc/fpd-mcc-vsphere-deploy.html"

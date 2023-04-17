@@ -1,0 +1,15 @@
+---
+sidebar: sidebar 
+permalink: express/express-nva-1154-deploy.html 
+keywords: flexpod, cisco, express, vmware, vsphere, ucs, aff, fas, deployment, nva 
+summary: 采用Cisco UCS Mini和NetApp AFF/FAS解决方案 的适用于VMware vSphere 7.0的FlexPod Express可利用采用B200 M5刀片式服务器的Cisco UCS Mini、Cisco UCS 6324机箱内互联阵列、Cisco Nexus 31108PC-V交换机或其他合规交换机。 
+---
+= 适用于采用Cisco UCS Mini和NetApp AFF/FAS的VMware vSphere 7.0的FlexPod Express—NVA—部署
+:allow-uri-read: 
+
+
+NetApp 公司 Jyh-shing Chen
+
+采用Cisco UCS Mini和NetApp AFF/FAS解决方案 的适用于VMware vSphere 7.0的FlexPod Express利用具有B200 M5刀片式服务器的Cisco UCS Mini、Cisco UCS 6324机箱内置互联阵列、Cisco Nexus 31108PC-V交换机或其他兼容交换机以及NetApp AFF A220、C190或FAS2700系列控制器HA对、 运行NetApp ONTAP 9.7数据管理软件。本NetApp经验证的架构(NVA)部署文档详细介绍了配置基础架构组件、部署VMware vSphere 7.0以及相关工具以创建基于FlexPod Express的高可靠性和高可用性虚拟基础架构所需的步骤。
+
+link:https://www.netapp.com/pdf.html?item=/media/21938-nva-1154-DEPLOY.pdf["适用于采用Cisco UCS Mini和NetApp AFF/FAS的VMware vSphere 7.0的FlexPod Express—NVA—部署"^]

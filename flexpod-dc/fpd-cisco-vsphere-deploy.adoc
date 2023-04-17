@@ -1,0 +1,15 @@
+---
+sidebar: sidebar 
+permalink: flexpod-dc/fpd-cisco-vsphere-deploy.html 
+keywords: flexpod, cisco, data, center, vmware, vsphere, ucs, ontap 
+summary: '本文档介绍了采用Cisco UCS Manager统一软件版本4.0 (2)和VMware vSphere 6.7 U1的Cisco和NetApp FlexPod Datacenter。' 
+---
+= 采用VMware vSphere 6.7 U1、Cisco UCS第四代网络结构和NetApp AFF A系列的FlexPod 数据中心
+:allow-uri-read: 
+
+
+NetApp公司Cisco Scott kovacs的John George
+
+本文档介绍了采用Cisco UCS Manager统一软件版本4.0 (2)和VMware vSphere 6.7 U1的Cisco和NetApp FlexPod Datacenter。Cisco UCS Manager (UCSM) 4.0 (2)可为所有当前的Cisco UCS互联阵列型号(6200、6300、6324 (Cisco UCS Mini))、6454、2200/2300系列IOM、Cisco UCS B系列和Cisco UCS C系列提供整合支持。采用Cisco UCS统一软件版本4.0 (2)和VMware vSphere 6.7 U1的FlexPod 数据中心是一种预先设计的最佳实践数据中心架构、它基于Cisco统一计算系统(UCS)、Cisco Nexus 9000系列交换机、MDS 9000多层光纤交换机、 以及运行ONTAP 9存储操作系统的NetApp AFF A系列存储阵列。
+
+link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_vmware_netappaffa.html["采用VMware vSphere 6.7 U1、Cisco UCS第四代网络结构和NetApp AFF A系列的FlexPod 数据中心"^]

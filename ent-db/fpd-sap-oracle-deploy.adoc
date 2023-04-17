@@ -1,0 +1,15 @@
+---
+sidebar: sidebar 
+permalink: ent-db/fpd-oracle-deploy.html 
+keywords: flexpod, cisco, design, oracle, rac, data, base, ucs, nvme, fibrechannel, fc 
+summary: 'Cisco验证设计(CVD)由系统和解决方案组成、这些系统和解决方案经过设计、测试和记录、可帮助客户部署并改进部署。' 
+---
+= FlexPod Datacenter在Cisco UCS上使用Oracle 19c RAC数据库、而NetApp AFF 在光纤通道上使用NVMe
+:allow-uri-read: 
+
+
+Cisco Hardakkumar Vyas公司Tushar Patel
+
+Cisco验证设计(CVD)由系统和解决方案组成、这些系统和解决方案经过设计、测试和记录、可帮助客户部署并改进部署。本CVD文档介绍了Cisco和NetApp FlexPod 解决方案 、这是一种经过验证的方法、用于部署高可用性Oracle RAC数据库环境。Cisco和NetApp已针对各种数据库工作负载验证了此参考架构、例如Cisco UCS Datacenter实验室中的OLTP (联机事务处理)和数据仓库。本文档显示了所涉及组件的硬件和软件配置以及各种测试的结果。此外、本文档还提供了一个框架、用于在使用Cisco UCS和NetApp存储系统的NVMe/FC上实施Oracle RAC数据库。
+
+link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_oracle_ucs_m5.html["FlexPod Datacenter在Cisco UCS上使用Oracle 19c RAC数据库、而NetApp AFF 在光纤通道上使用NVMe"^]

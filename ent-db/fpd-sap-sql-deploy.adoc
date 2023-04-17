@@ -1,0 +1,13 @@
+---
+sidebar: sidebar 
+permalink: ent-db/fpd-sap-sql-deploy.html 
+keywords: flexpod, cisco, sap, sql, servers, data, bases 
+summary: FlexPod 是一款经过预先验证和设计的数据中心解决方案 、专为满足IT部门快速变化的需求而设计。 
+---
+= 使用SQL在FlexPod 上部署SAP应用程序服务器
+:allow-uri-read: 
+
+
+FlexPod 是一款经过预先验证和设计的数据中心解决方案 、专为满足IT部门快速变化的需求而设计。Cisco和NetApp合作推出了FlexPod 、它使用同类最佳的计算、网络和存储组件作为各种企业工作负载的基础、包括数据库、企业资源规划(ERP)、客户关系管理(CRM)和Web应用程序。近年来、IT应用程序、尤其是数据库的整合引起了人们的极大关注。过去几年来、Microsoft SQL Server是最广泛采用和部署的数据库平台。SQL Server数据库经常会出现数据库无序增长的情况、从而导致IT面临诸多挑战、例如服务器利用率低下、许可不正确、安全问题、管理问题以及巨大的运营成本。因此、SQL Server数据库很适合整合到一个更强大、更灵活且更具弹性的平台上。本文档讨论了用于部署和整合SQL Server数据库的FlexPod 参考架构。
+
+link:https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/sap-appservers-flexpod-with-sql.pdf["使用SQL在FlexPod 上部署SAP应用程序服务器"^]

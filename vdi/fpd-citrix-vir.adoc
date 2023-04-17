@@ -1,0 +1,15 @@
+---
+sidebar: sidebar 
+permalink: vdi/fpd-citrix-vir.html 
+keywords: flexpod, cisco, data, center, citrix, virtual, apps, vmware, vsphere 
+summary: 本文档介绍了最多可供6000个最终用户计算用户使用的虚拟桌面基础架构的架构和设计。 
+---
+= 采用Citrix虚拟应用程序和桌面1912 LTSR和VMware vSphere 7的FlexPod 数据中心、最多可容纳6000个席位
+:allow-uri-read: 
+
+
+NetApp Dre Jackson、NetApp公司Cisco Suresh ThopPay Jeff Nichols
+
+本文档介绍了最多可供6000个最终用户计算用户使用的虚拟桌面基础架构的架构和设计。解决方案 在第五代Cisco UCS B200 M5刀片式服务器上进行虚拟化、可从AFF A400存储阵列通过FC SAN启动VMware vSphere 7.01 Update 1。虚拟桌面采用Citrix Provisioning Server 1912 LTSR和Citrix RDS/Citrix虚拟应用程序和桌面1912 LTSR提供支持、并混合使用RDS托管的共享桌面(6000)、池化和/或非持久托管的虚拟Windows 10桌面(5000)、 和使用Citrix Machine Creation Services (5000)配置的永久性托管虚拟Windows 10桌面、以支持用户群。本文档在适用情况下提供了有关此解决方案 的客户部署的最佳实践建议和规模估算准则。
+
+link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/cisco_ucs_ctx1912esxi7u1_flexpodV2.html["采用Citrix虚拟应用程序和应用程序的FlexPod Datacenter；桌面1912 LTSR和VMware vSphere 7、最多可容纳6000个席位"^]

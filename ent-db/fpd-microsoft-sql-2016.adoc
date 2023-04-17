@@ -1,0 +1,17 @@
+---
+sidebar: sidebar 
+permalink: ent-db/fpd-microsoft-sql-2016.html 
+keywords: flexpod, microsoft, sql, netapp, cisco, vmware, vsphere 
+summary: 本文档介绍了使用最新硬件和软件产品的FlexPod 参考架构、并提供了在虚拟化环境中部署Microsoft SQL Server数据库的配置建议。 
+---
+= 采用 Microsoft SQL Server 2016 和 VMware vSphere 6.5 的 FlexPod Datacenter
+:allow-uri-read: 
+
+
+NetApp公司Cisco Sanjev Nardurkar、Cisco David Arnette的Gopu Narasimha Reddy
+
+本文档介绍了使用最新硬件和软件产品的FlexPod 参考架构、并提供了在虚拟化环境中部署Microsoft SQL Server数据库的配置建议。
+
+建议的解决方案 架构基于使用统一软件版本的Cisco统一计算系统(Cisco UCS)构建、以支持Cisco UCS硬件平台、包括Cisco UCS B系列刀片式服务器、Cisco UCS 6300互联阵列、Cisco Nexus 9000系列交换机和NetApp全闪存系列存储阵列。此外、此解决方案 还包括VMware vSphere 6.5和vSphere 6.5、可提供许多新功能来优化存储利用率并促进私有云的使用。
+
+link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/mssql2016_flexpod_vmware_cvd.html["采用 Microsoft SQL Server 2016 和 VMware vSphere 6.5 的 FlexPod Datacenter"^]

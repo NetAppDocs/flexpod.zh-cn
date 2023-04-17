@@ -1,0 +1,17 @@
+---
+sidebar: sidebar 
+permalink: ent-db/fpd-microsoft-sql-2017-hyper.html 
+keywords: flexpod, datacenter, microsoft, linux, hyper-v, aff-series, cisco 
+summary: 本文档介绍了使用最新硬件和软件产品的FlexPod 参考架构、并提供了在VMware ESXi和Microsoft Windows Hyper-V虚拟化环境中托管Microsoft SQL Server数据库的部署建议、其中包括Microsoft为SQL Server部署提供的Linux支持。 
+---
+= 在VMware和Hyper-V上运行的Linux VM上运行FlexPod Datacenter和Microsoft SQL Server 2017
+:allow-uri-read: 
+
+
+NetApp公司Cisco Atul Bhalodia的Cisco Sanjeev Nardurkar Gopu Narasimha Reddy
+
+本文档介绍了使用最新硬件和软件产品的FlexPod 参考架构、并提供了在VMware ESXi和Microsoft Windows Hyper-V虚拟化环境中托管Microsoft SQL Server数据库的部署建议、其中包括Microsoft为SQL Server部署提供的Linux支持。
+
+建议的解决方案 架构基于使用统一软件版本4.0.1c的Cisco统一计算系统(Cisco UCS)构建、以支持Cisco UCS硬件平台、包括Cisco UCS B系列刀片式服务器、Cisco UCS 6300互联阵列、Cisco Nexus 9000系列交换机和NetApp AFF 系列存储阵列。
+
+link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/mssql2017_flexpod_linux.html["在VMware和Hyper-V上运行的Linux VM上运行FlexPod Datacenter和Microsoft SQL Server 2017"^]

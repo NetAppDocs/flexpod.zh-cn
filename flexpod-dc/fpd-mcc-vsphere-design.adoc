@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: flexpod-dc/fpd-mcc-vsphere-design.html 
+keywords: flexpod, cisco, data, center, aci, mcc, ip, vmware, vsphere, aci 
+summary: 本文档介绍了如何将Cisco ACI Multi-Pod和NetApp MetroCluster IP解决方案 集成到FlexPod 数据中心中、以提供高度可用的多数据中心解决方案。 
+---
+= 采用Cisco ACI Multi-Pod、NetApp MetroCluster IP和VMware vSphere 6.7的FlexPod 数据中心—设计
+:allow-uri-read: 
+
+
+NetApp公司Cisco Arvind Ramakrishnan的Haseeb Niazi
+
+本文档介绍了如何将Cisco ACI Multi-Pod和NetApp MetroCluster IP解决方案 集成到FlexPod 数据中心中、以提供高度可用的多数据中心解决方案。利用多数据中心架构、可以利用无中断工作负载移动性在两个数据中心之间平衡工作负载、从而无需持续中断即可在站点之间迁移服务。
+
+采用ACI Multi-Pod和NetApp MetroCluster IP解决方案 的FlexPod 具有以下优势：
+
+* 跨数据中心无缝移动工作负载
+* 站点间策略一致
+* 跨地理位置分散的数据中心的第2层扩展
+* 在维护期间更好地避免停机
+* 避免灾难和恢复
+
+
+link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi67_n9k_aci_metrocluster_design.html["采用Cisco ACI Multi-Pod、NetApp MetroCluster IP和VMware vSphere 6.7的FlexPod 数据中心—设计"^]

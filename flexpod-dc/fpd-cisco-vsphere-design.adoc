@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: flexpod-dc/fpd-cisco-vsphere-design.html 
+keywords: flexpod, cisco, data, center, vmware, vsphere, 
+summary: 本文档介绍了Cisco和NetApp FlexPod 解决方案 、这是一种经验证的将Cisco和NetApp技术部署为共享云基础架构的方法。 
+---
+= 采用VMware vSphere 6.7 U1、Cisco UCS第四代网络结构和NetApp AFF A系列的FlexPod Datacenter—设计
+:allow-uri-read: 
+
+
+NetApp公司Cisco Sree Lakshmi Lan的John George
+
+本文档介绍了Cisco和NetApp FlexPod 解决方案 、这是一种经验证的将Cisco和NetApp技术部署为共享云基础架构的方法。这种经过验证的设计为在FlexPod 上部署VMware vSphere提供了一个框架、VMware vSphere是企业级数据中心中最受欢迎的虚拟化平台。
+
+FlexPod 是一款领先的集成基础架构、支持广泛的企业工作负载和用例。借助此解决方案 、客户可以在集成基础架构上快速可靠地部署基于VMware vSphere的私有云。
+
+建议的解决方案 架构基于使用统一软件版本的Cisco统一计算系统(Cisco UCS)构建、以支持Cisco UCS硬件平台、包括Cisco UCS B系列刀片式服务器和C系列机架式服务器、Cisco UCS 6454互联阵列、Cisco Nexus 9000系列交换机、Cisco MDS光纤通道交换机、 和NetApp全闪存系列存储阵列。此外、它还包括VMware vSphere 6.7 Update 1、它提供了许多新功能、用于优化存储利用率和促进私有云。
+
+link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_vmware_netappaffa_design.html["采用VMware vSphere 6.7 U1、Cisco UCS第四代网络结构和NetApp AFF A系列的FlexPod Datacenter—设计"^]

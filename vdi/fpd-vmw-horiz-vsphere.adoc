@@ -1,0 +1,15 @@
+---
+sidebar: sidebar 
+permalink: vdi/fpd-vmw-horiz-vsphere.html 
+keywords: flexpod, cisco, data, center, design, deployment, aff, fas, a300, 
+summary: '本文档提供了一个参考架构、设计指南、以及在采用FlexPod UCS和NetApp全闪存FAS (AFF) A300存储的Datacenter上为多达5000个席位的混合工作负载最终用户计算环境进行的部署。' 
+---
+= 采用VMware Horizon View 7.3的FlexPod Datacenter和采用Cisco UCS Manager 3.2的VMware vSphere 6.5 Update 1、可容纳5000个席位
+:allow-uri-read: 
+
+
+NetApp公司Cisco David Arnette Ramesh Guduru
+
+本文档提供了一个参考架构、设计指南、以及在采用FlexPod UCS和NetApp全闪存FAS (AFF) A300存储的Datacenter上为多达5000个席位的混合工作负载最终用户计算环境进行的部署。解决方案 包括基于VMware Horizon服务器的远程桌面服务器托管会话、VMware Horizon永久性Microsoft Windows 10虚拟桌面以及VMware vSphere 6.5上的VMware Horizon非永久性Microsoft Windows 10即时克隆虚拟桌面。
+
+link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_vmware_horizon_n9k_aff_ucsm32.html["采用VMware Horizon View 7.3的FlexPod Datacenter和采用Cisco UCS Manager 3.2的VMware vSphere 6.5 Update 1、可容纳5000个席位"^]

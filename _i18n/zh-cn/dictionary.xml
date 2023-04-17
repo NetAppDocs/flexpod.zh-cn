@@ -6194,41 +6194,13 @@
   <block id="999bc6b18351bbe817d26f559ba408ae" category="sidebar">SAP</block>
   <block id="0d5735d0af8f90a5cea9ab37c82a92f0" category="sidebar">SAP HANA FC SAN CVD [ 部署 ]</block>
   <block id="5b7944a4a9e2c161aa2e7cce407de39a" category="sidebar">《采用 SQL 的 SAP 非 HANA 白皮书（ WP ）》（设计）</block>
-  <block id="30900c9370759c6d888b93980ad263b4" category="sidebar">采用 Cisco UCS 第三代和 NetApp AFF A 系列的适用于 SAP 解决方案的 FlexPod 数据中心 [ 设计 ]</block>
-  <block id="b8b9b8af025ebb8e8308c61f5b32e36a" category="sidebar">适用于 SAP 解决方案的 FlexPod 数据中心使用采用 Cisco UCS Manager 4.0 和 NetApp ONTAP 9.7 的光纤通道 SAN [ 设计 ]</block>
-  <block id="99ef201c6ea5bd586373d355f7cc7ad7" category="sidebar">在采用 Cisco 容器平台的 FlexPod 上部署 SAP 数据中心（白皮书）</block>
-  <block id="4500486138e547a4b34cd3749c335665" category="sidebar">采用 Cisco ACI ， Cisco UCS Manager 4.0 和 NetApp AFF A 系列的适用于 SAP 解决方案的 FlexPod Datacenter [ 设计 ]</block>
-  <block id="2689beb8ce4956b519760c3c3e553f23" category="sidebar">采用 Cisco ACI ， Cisco UCS Manager 4.0 和 NetApp AFF A 系列的适用于 SAP 解决方案的 FlexPod Datacenter 部署</block>
-  <block id="d2c908faed676eb4914cef7aaa58ff58" category="sidebar">采用 Cisco UCS Manager 4.0 和采用 ONTAP 9.6 （ CVD ）的 NetApp AFF A 的 FlexPod Datacenter for SAP 解决方案 [ 设计 ]</block>
-  <block id="5ef6ffe0b4319f8b814fe37d9d033919" category="sidebar">基于 FlexPod 的 SAP 应用程序服务器与 Oracle 数据库以及 Cisco UCS 和 NetApp AFF （白皮书）</block>
-  <block id="09e48e20608070ce7deec42c02f2109b" category="sidebar">基于 FlexPod 数据中心的虚拟化 SAP HANA —设计注意事项和最佳实践（白皮书）</block>
-  <block id="7784620f07c5ab710ac9fb6ad7d62348" category="sidebar">采用 Cisco UCS Manager 3.2 和 Cisco Application Centric Infrastructure （ ACI ）的适用于 SAP 解决方案的 FlexPod Datacenter [ 设计 ]</block>
   <block id="07cefc8da2aa8f390eb8e0cc85452ab4" category="sidebar">使用 NetApp AFF A 系列和 Cisco UCS Manager 3.2 ，使用基于 IP 的存储的适用于 SAP 解决方案的 FlexPod 数据中心</block>
   <block id="30162ed78b6c10f731411f2fc440c24f" category="sidebar">Oracle</block>
-  <block id="3534951917d0680bce4028c84d2970fa" category="sidebar">在 Cisco UCS 上使用 Oracle 19c RAC 数据库的 FlexPod 数据中心以及采用基于光纤通道的 NVMe 的 NetApp AFF [ 部署 ]</block>
-  <block id="c08a1a39fdd3b68a2d733a1ffb49a997" category="sidebar">在 Cisco UCS 和 NetApp AFF A 系列上使用 Oracle RAC 数据库的 FlexPod Datacenter [ 设计 ]</block>
-  <block id="f84bb785ae73ec514748408f70095976" category="sidebar">在 Oracle Linux 上使用 Oracle RAC 的 FlexPod Datacenter 部署</block>
   <block id="78898e52fcbdc5337204a384f2456d4f" category="sidebar">Microsoft SQL Server</block>
-  <block id="b7f6937afb2ac572e85fafcf50b151fb" category="sidebar">适用于 Microsoft SQL Server 2019 和 VMware vSphere 6.7 的 FlexPod Datacenter [ 设计 ]</block>
   <block id="2835677e55c267b9487bf0cd7ec57d47" category="sidebar">采用 Microsoft SQL Server 2016 和 VMware vSphere 6.5 的 FlexPod Datacenter</block>
-  <block id="5a91246f2391e8586cc13a5ae7cafc47" category="sidebar">在 VMware 和 Hyper-V 上运行的 Linux VM 上使用 FlexPod Datacenter 和 Microsoft SQL Server 2017 的性能 [ 设计 ]</block>
-  <block id="43f525b2ba4507a58d4e269ebf496239" category="sidebar">Microsoft 应用程序</block>
-  <block id="58bac3bd3dd08716b6abf9729763782b" category="sidebar">采用 Microsoft Exchange 2013 ， F5 BIG-IP 和 Cisco ACI 的 FlexPod Datacenter [ 设计 ]</block>
-  <block id="ed609149cd8fcd8e70769839d3ae0d24" category="sidebar">采用 Microsoft Exchange 2013 ， F5 BIG-IP 和 Cisco ACI 的 FlexPod 数据中心 [ 部署 ]</block>
-  <block id="4d4d284300a5ce7e0c86b6da04601be6" category="sidebar">采用 Microsoft SharePoint 2013 和 Cisco ACI 的 FlexPod Datacenter [ 设计 ]</block>
-  <block id="43b3938e53dbec5f09db5f0408a55243" category="sidebar">采用 Microsoft SharePoint 2013 和 Cisco ACI 的 FlexPod Datacenter 部署</block>
   <block id="496e30ba2608320b5f1aab183938e407" category="sidebar">现代应用程序</block>
-  <block id="50dd21a1a586f4d551d754eb0f866108" category="sidebar">采用 Cisco UCS 480 ML 的 FlexPod Datacenter Nvidia T4 vGPU 深度学习 CVD 设计指南 [ 设计 ]</block>
-  <block id="4454bd5dab432a3d72612188be0be0b2" category="sidebar">使用 FlexPod 在 Cisco 容器平台上部署 NetApp Trident CSI 插件【部署】</block>
-  <block id="c2ccffb909102ce9723ef49c42b0359c" category="sidebar">适用于 OpenShift 容器平台 4 的 FlexPod 数据中心（ Deploy ）</block>
-  <block id="c199e3c61c44f5e35c2e1cee0260940d" category="sidebar">采用 Cisco UCS C480 ML 的 FlexPod Datacenter for AI/ML 深度学习设计指南 [ 设计 ]</block>
-  <block id="5897f91fa8b0798020ef4d06691154c1" category="sidebar">采用 Docker 数据中心的 FlexPod 数据中心用于容器管理 [ 设计 ]</block>
   <block id="491a52e3762326792e024193c85165c8" category="sidebar">适用于 FlexPod 的 NetApp Cloud Insights</block>
   <block id="63ebf516abede38684920a5e8114412f" category="sidebar">采用 FabricPool 的 FlexPod —将非活动数据分层到 Amazon AWS S3</block>
-  <block id="300949442b4f75fd32c19f3f22db4396" category="sidebar">FlexPod Datacenter with IBM Cloud Private with Cisco UCS Manager ， NetApp ONTAP 9.3 AFF 和 VMware vSphere 6.5U1 [ 设计 ]</block>
-  <block id="b6cd40885aa5ea80db792474515824a5" category="sidebar">采用 Apprenda 8.2 ， Cisco ACI 3.1 和 Kubernetes 1.9.4 的适用于平台即服务的 FlexPod 数据中心 [ 设计 ]</block>
-  <block id="4d63c3acec228289e16dafd1ff39932f" category="sidebar">采用 Cisco CloudCenter 和 NetApp 私有存储的适用于混合云的 FlexPod 数据中心 [ 设计 ｝</block>
-  <block id="4a523cddca25cc8936e1dcaabfe4bd96" category="sidebar">适用于混合云的 FlexPod 数据中心与 Cisco CloudCenter 和 NetApp 私有存储</block>
   <block id="eaf16f7a69c3f115b88a6d34c8665431" category="sidebar">虚拟桌面基础架构</block>
   <block id="fc6345fff8f57c6444c27562b6290fd8" category="sidebar">采用 Citrix 虚拟应用程序桌面 1912 LTSR 和 VMware vSphere 7 的 FlexPod 数据中心，最多可容纳 6000 个席位</block>
   <block id="6393b3c16eac57f4deeac23f330d9ba6" category="sidebar">采用 NetApp ONTAP 9.6 ， VMware Horizon View 7.10 和 VMware vSphere 6.7 U2 以及 Cisco UCS Manager 4.0 的 FlexPod Datacenter ，最多可容纳 7700 个席位</block>
@@ -6805,29 +6777,13 @@
   <block id="e353dbe42c8654f33588d4da0b517469" category="doc">摘要</block>
   <block id="5c132e38b08825778491f35b81da58ff" category="paragraph">本技术报告简要概述了基于 FlexPod 的 VMware vSphere 7 在光纤通道上的 NVMe （ FC-NVMe ）性能。FlexPod 是部署 FC-NVMe 以为应用程序提供高性能存储访问的最佳共享基础架构基础。</block>
   <block id="25ef19e5b86411048323be68f8ad1ef7" category="sidebar">采用 Cisco UCSM ， VMware vSphere 7.0 和 NetApp ONTAP 9 的适用于 FlexPod 的端到端 NVMe</block>
-  <block id="8107695c6d7deb6f421fdffa4d6e7df7" category="sidebar">适用于采用 Cisco UCS Mini 和 NetApp AFF / FAS （ NVA ）的 VMware vSphere 7.0 的 FlexPod Express</block>
-  <block id="87a971542df3ff14010fa8aae834b5b7" category="sidebar">适用于 SAP 解决方案的 FlexPod 数据中心使用光纤通道 SAN 与 Cisco UCS Mnager 4.0 和 NetApp ONTAP 9.7</block>
   <block id="4977bb12e747bb06984bb21c0f4f3151" category="sidebar">使用 SQL 在 FlexPod 上部署 SAP 应用程序服务器</block>
   <block id="3233ebc457b5203d5068f2f1ebefc465" category="sidebar">采用 Cisco ACI ， Cisco UCS Manager 4.0 和 NetApp AFF A 系列的适用于 SAP 解决方案的 FlexPod Datacenter</block>
-  <block id="f7ddcbada961aed8796552abed289c8d" category="sidebar">在采用 Cisco 容器平台的 FlexPod 上部署 SAP 数据中心</block>
-  <block id="bbb30e43b4cdf72f7ecccf34c7d3daec" category="sidebar">《采用 Cisco ACI 的适用于 SAP 解决方案的 FlexPod Datacenter ， Cisco UCS Manager 4.0 和 NetApp AFF A 系列设计指南》</block>
-  <block id="99f8347a9f811141b792f62f79e237f3" category="sidebar">适用于 SAP 解决方案的 FlexPod 数据中心，采用 Cisco UCS 第三代和 NetApp AFF A 系列</block>
   <block id="50fbdfa5afaeed259fc748fdf086bdcb" category="sidebar">采用 Cisco UCS Manager 4.0 和采用 ONTAP 9.6 的 NetApp AFF A 的 FlexPod Datacenter for SAP 解决方案</block>
   <block id="61ff255146e4fcbd1bda09a8e5d41cf2" category="sidebar">适用于 Microsoft SQL Server 2019 和 VMware vSphere 6.7 的 FlexPod Datacenter</block>
-  <block id="ab2acd3b2765cfe6f6e9c62d59d93690" category="sidebar">在 VMware 和 Hyper-V 上运行的 Linux VM 上运行 FlexPod Datacenter 和 Microsoft SQL Server 2017</block>
-  <block id="d8d9af257f02bffd2d92213b9efa9f5f" category="sidebar">《采用 VMware vSphere 7.0 的 FlexPod 数据中心， Cisco VXLAN 单站点网络结构和 NetApp ONTAP 9.7 设计指南》</block>
   <block id="a48aebb37b56c1a4d26975457d63eeb8" category="sidebar">采用 NetApp ONTAP 9.7 ， Cisco Intersight 和 VMware vSphere 6.7 U3 的 FlexPod Datacenter —设计</block>
   <block id="0c7a516e32b082b31bda03bb6878b53e" category="sidebar">采用 NetApp ONTAP 9.7 ， Cisco Intersight 和 VMware vSphere 6.7 U3 的 FlexPod Datacenter — Deploy</block>
-  <block id="8d2c7acca4025e737c3f4355826ec2de" category="sidebar">采用 Cisco Intersight 和 NetApp ONTAP 9.7 的 FlexPod 数据中心设计指南</block>
   <block id="dfa87e00a076f509a2df0369c3145704" category="sidebar">采用 NetApp ONTAP 9.6 ， Cisco UCS 第 4 代， VMware vSphere 6.7U2 （ CVD ）的 FlexPod 数据中心</block>
-  <block id="2498e142ba642e0f4aa9aa7efe4e70f6" category="sidebar">采用 VMware vSphere 6.7 U1 ， Cisco UCS 第四代和 NetApp AFF A 系列的 FlexPod Datacenter —设计</block>
-  <block id="d4889b00654de2e35312e3117701950b" category="sidebar">采用 VMware vSphere 6.7 U1 ， Cisco UCS 第四代和 NetApp AFF A 系列的 FlexPod Datacenter — Deploy</block>
-  <block id="649e277e513a10420ec478f17109e379" category="sidebar">采用 Cisco ACI Multi-Pod ， NetApp MetroCluster IP 和 VMware vSphere 6.7 的 FlexPod 数据中心设计指南</block>
-  <block id="734e45a14e22d25e99de3abd0d2a1510" category="sidebar">《采用 Cisco ACI Multi-Pod ， NetApp MetroCluster IP 和 VMware vSphere 6.7 的 FlexPod 数据中心部署指南》</block>
-  <block id="ef500a82dc8ad1887fe510a32683569c" category="sidebar">《适用于 OpenShift 容器平台的 FlexPod 数据中心 4 设计指南》</block>
-  <block id="ab9336a5da6f0f0e756cc5f626c1da03" category="sidebar">采用 Cisco UCS 480 ML 的 FlexPod Datacenter Nvidia T4 vGPU 深度学习 CVD 设计指南</block>
-  <block id="6b6a85c2fbd19770e05e227ae9a92029" category="sidebar">采用 Cisco UCS 480 ML 的 FlexPod Datacenter Nvidia T4 vGPU 深度学习 CVD 部署指南</block>
-  <block id="d6205320f3a7011e64b601100518be60" category="sidebar">采用 Cisco UCS C480 ML 的 FlexPod Datacenter for AI/ML 深度学习设计指南</block>
   <block id="26b2da44f63ebbe0d09d512b64685d73" category="sidebar">采用 VMware 和 NVIDIA 的 3D 图形可视化 FlexPod</block>
   <block id="ebf263f6e0d06b26f79aafb2dda2fffe" category="sidebar">FlexPod for 3D Graphics 可视化与 Citrix 和 NVIDIA （白皮书）</block>
   <block id="9367f6dc9792efedc23081b108a5e46e" category="cell">Cisco UCS B200 M6</block>
@@ -9534,4 +9490,286 @@
   <block id="1522a775ace254939b906658e7521ca9" category="section-title">EHR</block>
   <block id="ba8a69a3d262e3d66f6f5cdc83781213" category="paragraph">电子健康记录(Electronic Health Records、EHRs)为大中型医疗团队、医院和综合医疗保健组织提供软件。客户还包括社区医院、学术机构、儿童组织、安全网络提供商和多医院系统。EHR集成软件涵盖临床、访问和收入功能、并扩展到家庭。</block>
   <block id="df788b689025995ee4f69e5d3ecf444d" category="paragraph">FlexPod 已通过EHR验证、支持一个平台、其中包含采用Intel Xeon处理器的Cisco UCS、Red Hat Enterprise Linux (RHEL)以及采用VMware ESXi的虚拟化。此平台加上EHR在运行ONTAP 的NetApp存储方面的高舒适性级别排名、让客户有信心通过FlexPod 在完全托管的私有云中运行其医疗保健应用程序、该私有云也可以连接到任何公共云提供商。</block>
+  <block id="53daffada2671da93073fbf613b0c7f6" category="summary">本文档介绍了使用最新硬件和软件产品的FlexPod 参考架构、并提供了在VMware ESXi虚拟化环境中托管Microsoft SQL Server 2019数据库的部署建议。</block>
+  <block id="ac8ab1f328e99fe87fc6a46ababbad87" category="paragraph">NetApp公司Cisco Atul Bhalodia的Cisco Sanjeev Nardurkar Gopu Narasimha Reddy</block>
+  <block id="a3f5786e88d487e3db751ad3e2f32297" category="paragraph">本文档介绍了使用最新硬件和软件产品的FlexPod 参考架构、并提供了在VMware ESXi虚拟化环境中托管Microsoft SQL Server 2019数据库的部署建议。此解决方案 还使用Cisco工作负载优化管理器(Workload Optimization Manager、CWOM)、该管理器可提供自动化建议、以便为SQL工作负载和基础架构提供最佳且高效的资源利用率。</block>
+  <block id="ed752a3d035c5557335e188de780bbe9" category="paragraph">解决方案 基于Cisco统一计算系统(Cisco UCS)构建、并使用统一软件版本4.1.1 c来支持Cisco UCS硬件平台、包括Cisco UCS B系列刀片式服务器、Cisco UCS 6400互联阵列、Cisco Nexus 9000系列交换机和NetApp AFF 系列存储阵列。</block>
+  <block id="d5026773bb380637ad0163c13350eb40" category="paragraph"><block ref="d5026773bb380637ad0163c13350eb40" category="inline-link-macro-rx"></block></block>
+  <block id="d312ac3e80edf9a7b41d7f19c11b7d1e" category="summary">本文档介绍了使用最新硬件和软件产品的FlexPod 参考架构、并提供了在VMware ESXi虚拟化环境中托管Microsoft SQL Server 2019数据库的部署建议。</block>
+  <block id="5b86ec70652669248ad701a66993ae77" category="paragraph">本文档介绍了使用最新硬件和软件产品的FlexPod 参考架构、并提供了在VMware ESXi虚拟化环境中托管Microsoft SQL Server 2019数据库的部署建议。此解决方案 还使用Cisco工作负载优化管理器(CWOM)、该管理器可自动为这两个SQL工作负载提供最佳和高效的资源利用率建议。</block>
+  <block id="98204eedbbb898752881c3bde96f95ad" category="paragraph">解决方案 基于Cisco统一计算系统(Cisco UCS)构建、并使用统一软件版本4.1.1 c来支持Cisco UCS硬件平台、包括Cisco UCS B系列刀片式服务器、Cisco UCS 6400互联阵列、Cisco Nexus 9000系列交换机和NetApp AFF 系列存储阵列。</block>
+  <block id="60b882430258872224fe258884b5310d" category="summary">本文档介绍了使用最新硬件和软件产品的FlexPod 参考架构、并提供了在VMware ESXi和Microsoft Windows Hyper-V虚拟化环境中托管Microsoft SQL Server数据库的部署建议、其中包括Microsoft为SQL Server部署提供的Linux支持。</block>
+  <block id="8a8e6d3495fa75251d09ff5fddf6a900" category="doc">在VMware和Hyper-V上运行的Linux VM上运行FlexPod Datacenter和Microsoft SQL Server 2017</block>
+  <block id="6658af6eff8ff5923b525044fc7e4a07" category="paragraph">建议的解决方案 架构基于使用统一软件版本4.0.1c的Cisco统一计算系统(Cisco UCS)构建、以支持Cisco UCS硬件平台、包括Cisco UCS B系列刀片式服务器、Cisco UCS 6300互联阵列、Cisco Nexus 9000系列交换机和NetApp AFF 系列存储阵列。</block>
+  <block id="d52c09853029a6477e5fc88543cc9810" category="paragraph"><block ref="d52c09853029a6477e5fc88543cc9810" category="inline-link-macro-rx"></block></block>
+  <block id="c15913c599a1d0bce9017e4a62e58697" category="summary">本文档介绍了在FlexPod 基础架构上使用SAP HANA定制的数据中心集成选项的架构和部署过程。</block>
+  <block id="06d3f967153d2e76be1f96d927154742" category="doc">在采用SLES 12 SP3和RHEL 7.4的Cisco UCS M5服务器上、采用Cisco ACI的FlexPod Datacenter for SAP解决方案</block>
+  <block id="aeb4b16786b741cf44b2af84b9e15dc9" category="paragraph">NetApp公司Cisco Marco Schoen的Pramod Ramamurthy</block>
+  <block id="b5be1a27013bd1b2298647885e5789b1" category="paragraph">本文档介绍了FlexPod 基础架构上的SAP HANA定制数据中心集成选项的架构和部署流程、该选项由Cisco计算和交换产品组成、这些产品利用了行业领先的软件定义网络解决方案 (SDN) Cisco Application Centric Infrastructure (ACI)以及NetApp A系列AFF 阵列。本文档旨在展示设计原则以及SAP HANA部署的详细配置步骤。</block>
+  <block id="fb73abb293c1dd90e1df68d5e5a4f2c8" category="paragraph"><block ref="fb73abb293c1dd90e1df68d5e5a4f2c8" category="inline-link-macro-rx"></block></block>
+  <block id="6a50847776df40875dcf2bc8f89af0f5" category="summary">Cisco验证设计(CVD)由系统和解决方案组成、这些系统和解决方案经过设计、测试和记录、可帮助客户部署并改进部署。</block>
+  <block id="1c67a6a2b12e8c8a50b84832c2230641" category="doc">FlexPod Datacenter在Cisco UCS上使用Oracle 19c RAC数据库、而NetApp AFF 在光纤通道上使用NVMe</block>
+  <block id="8b2759ef81466d68d7d5b2ee3d6f5a02" category="paragraph">Cisco Hardakkumar Vyas公司Tushar Patel</block>
+  <block id="02dd4c449fb64ef1ba8e946f27f2c91e" category="paragraph">Cisco验证设计(CVD)由系统和解决方案组成、这些系统和解决方案经过设计、测试和记录、可帮助客户部署并改进部署。本CVD文档介绍了Cisco和NetApp FlexPod 解决方案 、这是一种经过验证的方法、用于部署高可用性Oracle RAC数据库环境。Cisco和NetApp已针对各种数据库工作负载验证了此参考架构、例如Cisco UCS Datacenter实验室中的OLTP (联机事务处理)和数据仓库。本文档显示了所涉及组件的硬件和软件配置以及各种测试的结果。此外、本文档还提供了一个框架、用于在使用Cisco UCS和NetApp存储系统的NVMe/FC上实施Oracle RAC数据库。</block>
+  <block id="fcd6c40ed6fdc117f0a8d9e209b0d976" category="paragraph"><block ref="fcd6c40ed6fdc117f0a8d9e209b0d976" category="inline-link-macro-rx"></block></block>
+  <block id="4f8a2946c3ce010eff87b0b56373ca97" category="summary">本文档介绍了使用最新硬件和软件产品的FlexPod 参考架构、并提供了在虚拟化环境中部署Microsoft SQL Server数据库的配置建议。</block>
+  <block id="e380be9e29785aa8811be2dac228b042" category="paragraph">NetApp公司Cisco Sanjev Nardurkar、Cisco David Arnette的Gopu Narasimha Reddy</block>
+  <block id="88c8c5d1fb74a4e8ad4ff2470ffa7664" category="paragraph">建议的解决方案 架构基于使用统一软件版本的Cisco统一计算系统(Cisco UCS)构建、以支持Cisco UCS硬件平台、包括Cisco UCS B系列刀片式服务器、Cisco UCS 6300互联阵列、Cisco Nexus 9000系列交换机和NetApp全闪存系列存储阵列。此外、此解决方案 还包括VMware vSphere 6.5和vSphere 6.5、可提供许多新功能来优化存储利用率并促进私有云的使用。</block>
+  <block id="bf1646430f87ddccb8a2ecf81d4829cb" category="paragraph"><block ref="bf1646430f87ddccb8a2ecf81d4829cb" category="inline-link-macro-rx"></block></block>
+  <block id="53e7f83c74cceeefa8da20c59550d784" category="summary">当前的IT行业正在见证数据中心解决方案的重大转型。</block>
+  <block id="aaf7c838eef4f48872210ced527c1a94" category="doc">采用SQL的SAP非HANA白皮书—设计</block>
+  <block id="2ec7585e4d3e819b6ae3e2f36a816a9b" category="paragraph">当前的IT行业正在见证数据中心解决方案的重大转型。近年来、人们对经过预先验证和设计的数据中心解决方案非常感兴趣。在关键领域引入虚拟化技术对这些解决方案的设计原则和架构产生了重大影响。它允许在裸机系统上运行的许多应用程序迁移到新的虚拟化集成解决方案。FlexPod 是一个经过预先验证和精心设计的数据中心解决方案 、旨在满足IT部门快速变化的需求。Cisco和NetApp合作推出了FlexPod 、它使用一流的计算、网络和存储组件作为各种企业工作负载的基础、包括数据库、企业资源规划(ERP)、客户关系管理(CRM)和Web应用程序。</block>
+  <block id="64e6f6caf6fa904208aa08b74e8120a5" category="paragraph">近年来、IT应用程序、尤其是数据库的整合引起了人们的极大关注。过去几年来、Microsoft SQL Server是最广泛采用和部署的数据库平台。SQL Server数据库经常会出现数据库无序增长的情况、从而导致IT面临诸多挑战、例如服务器利用率低下、许可不正确、安全问题、管理问题以及巨大的运营成本。因此、SQL Server数据库很适合整合到一个更强大、更灵活且更具弹性的平台上。本文档讨论了用于部署和整合SQL Server数据库的FlexPod 参考架构。</block>
+  <block id="f3061880b84fa662c70df4047766f06b" category="paragraph"><block ref="f3061880b84fa662c70df4047766f06b" category="inline-link-macro-rx"></block></block>
+  <block id="0e7c3bd95d880f3083afc7751763c924" category="summary">经过Cisco验证的设计包括设计、测试和记录的系统和解决方案、旨在帮助和改进客户部署。</block>
+  <block id="259ac861c698032df9356e9ce01dda67" category="paragraph">Cisco Hardakkumar Vyas公司Tushar Patel</block>
+  <block id="22eeffa871445400738b2ad2ef455f4f" category="paragraph">经过Cisco验证的设计包括设计、测试和记录的系统和解决方案、旨在帮助和改进客户部署。这些设计将广泛的技术和产品整合到一个解决方案组合中、这些解决方案是为满足客户的业务需求而开发的。Cisco和NetApp合作推出了FlexPod 、它为各种工作负载奠定了基础、并可根据客户需求进行高效的架构设计。FlexPod 解决方案 是一种经验证的方法、用于将Cisco和NetApp技术部署为共享云基础架构。</block>
+  <block id="02fca85385e878e6c194af4f07b5f3cc" category="paragraph">采用NetApp全闪存AFF 系统的FlexPod 数据中心是一个融合基础架构平台、它将Cisco和NetApp的同类最佳技术整合到一个功能强大的企业级应用程序融合平台中。Cisco和NetApp与Oracle密切合作、为当今企业所需的最苛刻的事务处理和响应时间敏感型数据库提供支持。</block>
+  <block id="a676f2af51f4b92ecf002c363363d1fe" category="paragraph">此Cisco验证设计(Cisco Validated Design、CVD)介绍了使用FlexPod UCS和NetApp全闪存AFF 存储部署高可用性Oracle RAC数据库环境的参考数据中心架构。本文档显示了所涉及组件的硬件和软件配置以及各种测试的结果。此外、本文档还提供了使用Cisco UCS计算服务器、Cisco互联阵列交换机、Cisco MDS交换机、Cisco Nexus交换机、NetApp AFF 存储和Oracle RAC数据库的实施和最佳实践指导。</block>
+  <block id="2198ec4575f28544fffac5ea26edcf39" category="paragraph"><block ref="2198ec4575f28544fffac5ea26edcf39" category="inline-link-macro-rx"></block></block>
+  <block id="fdb8ef49f2b5ecfa8d1038c4c0077617" category="summary">本文档介绍了Cisco ACI集成的FlexPod 解决方案 、它是一种经过验证的方法、用于部署SAP HANA定制的数据中心集成(Data Center Integration、TDI)环境。</block>
+  <block id="a21ca02d2b42fb1dd3086c4e5cfad6c9" category="doc">采用Cisco ACI、Cisco UCS Manager 4.0和NetApp AFF A系列的适用于SAP解决方案 的FlexPod Datacenter—设计</block>
+  <block id="faa7926958257905dd8d68aad5a35f9b" category="paragraph">本文档介绍了Cisco ACI集成的FlexPod 解决方案 、它是一种经过验证的方法、用于部署SAP HANA定制的数据中心集成(Data Center Integration、TDI)环境。此经过验证的设计为实施采用Cisco和NetApp最佳实践的SAP HANA提供了准则和框架。</block>
+  <block id="5401ee41871704c518b1ddf1b01b90f4" category="paragraph">建议的解决方案 架构基于使用统一软件版本的Cisco统一计算系统(Cisco UCS)构建、以支持包含以下组件的Cisco UCS硬件平台：</block>
+  <block id="5805da5b4a281d18c550f73e0e590ac4" category="list-text">Cisco UCS B系列刀片式服务器和Cisco UCS C系列机架式服务器、可使用Intel Optane Data Center Persistent Memory Module (DCPMM)选项进行配置</block>
+  <block id="b0fa5188b573a6d40ba2a84b2fa873ad" category="list-text">Cisco UCS 6400系列互联阵列</block>
+  <block id="6c1ea4318c90a4df84721c740b0faf07" category="list-text">Cisco Nexus 9000系列叶式和Spine交换机</block>
+  <block id="a2b47b700f26a371439d73fb5a8b0d76" category="list-text">NetApp全闪存系列存储阵列</block>
+  <block id="fe0ef8dfdbaed24104e77d08e066ccd1" category="paragraph">此外、本文档还对Red Hat Enterprise Linux和适用于SAP HANA的SUSE Linux Enterprise Server进行了验证。</block>
+  <block id="4e79bda4741436d34d8da799a59b8c51" category="paragraph"><block ref="4e79bda4741436d34d8da799a59b8c51" category="inline-link-macro-rx"></block></block>
+  <block id="2861d84d86e71548df7cc6772b9cf63b" category="summary">本文档介绍了在FlexPod 基础架构上使用SAP HANA定制的数据中心集成选项的架构和部署过程。</block>
+  <block id="46665db86dd60b476459e93684152756" category="doc">采用Cisco ACI、Cisco UCS Manager 4.0和NetApp AFF A系列的适用于SAP的FlexPod 数据中心</block>
+  <block id="ac257e191913083bdcb918e047fdf3b4" category="paragraph">本文档介绍了FlexPod 基础架构上SAP HANA定制的数据中心集成选项的架构和部署过程、该选项包括：</block>
+  <block id="db9ff918bba77e1dffed74c4d7313ee2" category="list-text">由第二代Intel Xeon可扩展处理器支持的Cisco UCS计算系统(Cisco UCS)。</block>
+  <block id="663b9d63e6dca84b0b34c0afa953a7d1" category="list-text">利用Cisco Application Centric Infrastructure (ACI)的交换产品。</block>
+  <block id="5e62e09742837a16eb087b0a2cc0eff9" category="list-text">NetApp A系列AFF 阵列。</block>
+  <block id="88e73d91276fdd33cfe3e51748f130d5" category="paragraph"><block ref="88e73d91276fdd33cfe3e51748f130d5" category="inline-link-macro-rx"></block></block>
+  <block id="3546567e34723b952918ce11d5a4fa4f" category="summary">采用NetApp全闪存AFF 系统的FlexPod 数据中心是一个融合基础架构平台、它将Cisco和NetApp的同类最佳技术整合到一个功能强大的企业级应用程序融合平台中。</block>
+  <block id="8da4c3219dfca8e2b44e3a7ee4272f10" category="paragraph">此Cisco验证设计(Cisco Validated Design、CVD)介绍了使用FlexPod UCS和NetApp全闪存AFF 存储部署高可用性Oracle RAC数据库环境的参考数据中心架构。本文档显示了所涉及组件的硬件和软件配置以及各种测试的结果。此外、本文档还提供了使用Cisco UCS计算服务器、Cisco互联阵列交换机、Cisco MDS交换机、Cisco Nexus交换机、NetApp AFF 存储和Oracle RAC数据库的实施和最佳实践指导。</block>
+  <block id="196520c6cd6b58339425a81c30f4fc40" category="summary">本文档介绍了基于第二代Intel Xeon可扩展处理器支持的Cisco UCS计算系统(Cisco UCS)的Cisco和NetApp FlexPod Datacenter for SAP HANA部署方法。</block>
+  <block id="0583b77bb7ae6f9d58f05df1af04b2ac" category="doc">适用于SAP解决方案 的FlexPod 数据中心、采用Cisco UCS第三代网络结构和NetApp AFF A系列</block>
+  <block id="79b08850cdd3b3ed967a08c06a393001" category="paragraph">NetApp公司Cisco Ralf Klahr Cisco Marco Schoen的Shailendra Mruthunjaya</block>
+  <block id="56ee7b2afa0e4c67bf5149dc03553a43" category="paragraph">Cisco UCS Manager (UCSM) 4.0 (4)可为所有当前的Cisco UCS互联阵列型号(6200、6300、6324和6454)、2200/2300系列IOM、Cisco UCS B系列刀片式服务器和Cisco UCS C系列机架式服务器提供整合支持。采用Cisco UCS统一软件版本4.0 (4D)和NetApp ONTAP 9.6的FlexPod 数据中心是一种基于Cisco UCS、Cisco Nexus 9000系列交换机和NetApp AFF A系列存储阵列构建的预先设计的最佳实践数据中心架构。</block>
+  <block id="3e9f5beb4e5185cc459ef7d732eb81e4" category="paragraph"><block ref="3e9f5beb4e5185cc459ef7d732eb81e4" category="inline-link-macro-rx"></block></block>
+  <block id="38dc85f1293acf14ae25ced991461e90" category="summary">本文档介绍了Cisco ACI集成的FlexPod 解决方案 、它是一种经过验证的方法、用于部署SAP HANA定制的数据中心集成(Data Center Integration、TDI)环境。</block>
+  <block id="a02c70a8722e653e9aa4c06dd0622292" category="list-text">Cisco UCS B系列刀片式服务器和Cisco UCS C系列机架式服务器、可使用Intel Optane Data Center Persistent Memory Module (DCPMM)选项进行配置</block>
+  <block id="ccc8229de22d2de19f96c92165174d5f" category="summary">本文档介绍了在NetApp AFF A400存储上使用NetApp ONTAP 9.7的Cisco和NetApp FlexPod Datacenter、以及采用适用于SAP HANA的第二代Intel Xeon可扩展处理器的Cisco UCS Manager统一软件版本4.1 (1)。</block>
+  <block id="2816e73c46bcfe35b89706cb9c0b65ea" category="doc">适用于SAP解决方案 的FlexPod 数据中心使用光纤通道SAN与Cisco UCS Manager 4.0和NetApp ONTAP 9.7</block>
+  <block id="b20ea78629f67a95e00f714852f3be04" category="paragraph">采用NetApp ONTAP 9.7和Cisco UCS统一软件版本4.1 (1)的FlexPod 数据中心是一种预先设计的最佳实践数据中心架构、它基于Cisco统一计算系统(Cisco UCS)、Cisco Nexus 9000系列交换机、MDS 9000多层光纤交换机、 以及运行ONTAP 9.7存储操作系统的NetApp AFF A系列存储阵列。</block>
+  <block id="9e2342a681d8cb09137a122075076fd4" category="paragraph"><block ref="9e2342a681d8cb09137a122075076fd4" category="inline-link-macro-rx"></block></block>
+  <block id="cbc04d9ae76660244128191521f4126b" category="summary">FlexPod 是一款经过预先验证和设计的数据中心解决方案 、专为满足IT部门快速变化的需求而设计。</block>
+  <block id="129c94a84d4d936f1d2ef26a08e52c09" category="doc">使用SQL在FlexPod 上部署SAP应用程序服务器</block>
+  <block id="9559b2f90e3652a2b4aa0a4ce252e067" category="paragraph">FlexPod 是一款经过预先验证和设计的数据中心解决方案 、专为满足IT部门快速变化的需求而设计。Cisco和NetApp合作推出了FlexPod 、它使用同类最佳的计算、网络和存储组件作为各种企业工作负载的基础、包括数据库、企业资源规划(ERP)、客户关系管理(CRM)和Web应用程序。近年来、IT应用程序、尤其是数据库的整合引起了人们的极大关注。过去几年来、Microsoft SQL Server是最广泛采用和部署的数据库平台。SQL Server数据库经常会出现数据库无序增长的情况、从而导致IT面临诸多挑战、例如服务器利用率低下、许可不正确、安全问题、管理问题以及巨大的运营成本。因此、SQL Server数据库很适合整合到一个更强大、更灵活且更具弹性的平台上。本文档讨论了用于部署和整合SQL Server数据库的FlexPod 参考架构。</block>
+  <block id="4ce9fa5bd93b42c722721174984b53e5" category="paragraph"><block ref="4ce9fa5bd93b42c722721174984b53e5" category="inline-link-macro-rx"></block></block>
+  <block id="74181ed3933f54544b777ca8a33bea9d" category="summary">Cisco Unified Computing System (Cisco UCS)是下一代数据中心平台、可将计算、网络、存储访问和虚拟化整合到一个统一的系统中。</block>
+  <block id="aad2a4519bb34d2f14e3244f720f7771" category="paragraph">Tushar Patel、Cisco Niranjan Mohmapatra、Cisco John Elliott、NetApp</block>
+  <block id="222ea733bdc16867c0014d9088128e32" category="paragraph">Cisco Unified Computing System (Cisco UCS)是下一代数据中心平台、可将计算、网络、存储访问和虚拟化整合到一个统一的系统中。Cisco UCS是任务关键型数据库工作负载架构的理想平台。Cisco UCS平台、NetApp存储和Oracle Real Application Cluster (RAC)架构相结合、可以加快部署速度、提高选择灵活性、提高效率并降低风险、从而加快IT转型。此Cisco验证设计(Cisco Validated Design、CVD)重点介绍了一个灵活的多租户高性能、弹性FlexPod 参考架构、该架构采用Oracle 12c RAC数据库。</block>
+  <block id="710da263dfade59fe59fb70c4f4b6ff2" category="paragraph">FlexPod 平台由NetApp和Cisco开发、是一款灵活的集成基础架构解决方案 、可提供经过预先验证的存储、网络和服务器技术。它旨在提高IT对业务需求的响应能力、同时降低整体计算成本。考虑最长正常运行时间和最低风险。FlexPod 组件经过集成和标准化、可帮助您实现及时、可重复、一致的部署。您可以准确地规划每个FlexPod 部署的电源、占地空间、可用容量、性能和成本。</block>
+  <block id="b674d81fb02b11b33dbea0872e38ed06" category="paragraph">FlexPod 采用最新技术、并高效地简化了数据中心工作负载、从而重新定义了它提供价值的方式：</block>
+  <block id="61a7094d7d9e3b97a5eb7a9dc439492d" category="list-text">利用具有Flash Pool闪存的NetApp FAS 混合阵列的功能、可以根据您的特定应用程序或环境将精确比例的闪存部署到旋转介质。</block>
+  <block id="2f87f8f0ad3ec9898ca2e6521c796130" category="list-text">利用经过预先验证的平台最大限度地减少业务中断、提高IT灵活性、并将部署时间从数月缩短到数周。</block>
+  <block id="d5a4e352a9d9f83b256f81f0ab9b5f96" category="list-text">将管理时间和总拥有成本(TCO)削减50%。</block>
+  <block id="30bb9b18e73ccbef74fceb07094081fb" category="list-text">满足或超出不断增长的数据中心工作负载硬件性能需求。</block>
+  <block id="a69be4c70d4fd7355a678c9a643e2592" category="paragraph"><block ref="a69be4c70d4fd7355a678c9a643e2592" category="inline-link-macro-rx"></block></block>
+  <block id="8b6fca5373a408ceeb821ee3c8e74bfa" category="summary">本文档介绍了Cisco和NetApp FlexPod 解决方案 、这是一种经过验证的部署SAP HANA定制数据中心集成(Data Center Integration、TDI)环境的方法。</block>
+  <block id="e5745c6a1a689284e6244b950b3eaecd" category="doc">采用Cisco UCS Manager 4.0和NetApp AFF A系列的适用于SAP解决方案 的FlexPod Datacenter—设计</block>
+  <block id="413340c66ca8bb8032d962664fd8a621" category="paragraph">本文档介绍了Cisco和NetApp FlexPod 解决方案 、这是一种经过验证的部署SAP HANA定制数据中心集成(Data Center Integration、TDI)环境的方法。此经过验证的设计为实施采用Cisco和NetApp最佳实践的SAP HANA提供了准则和框架。</block>
+  <block id="79e34002c2d99c6edccc0d2b4e4e9508" category="paragraph">FlexPod 是一款领先的集成基础架构、可支持广泛的企业工作负载和用例。借助此解决方案 、您可以使用量身定制的数据中心集成模式快速、可靠地部署SAP HANA。</block>
+  <block id="ce396717d80dbeb84aead08d2421b860" category="paragraph"><block ref="ce396717d80dbeb84aead08d2421b860" category="inline-link-macro-rx"></block></block>
+  <block id="ea941d05220a3d374a88eab8d3fc00dd" category="summary">Cisco和NetApp合作推出了一系列FlexPod 解决方案、支持战略数据中心平台。</block>
+  <block id="3817dcc37a6ef419d5ee3e41a7e22ace" category="doc">适用于SAP解决方案 的FlexPod 数据中心使用光纤通道SAN与Cisco UCS Manager 4.0和NetApp ONTAP 9.7—设计</block>
+  <block id="0deb47709f3b2d635ea7ab902863b553" category="paragraph">Cisco和NetApp合作推出了一系列FlexPod 解决方案、支持战略数据中心平台。FlexPod 解决方案 提供了一个集成架构、该架构整合了计算、存储和网络设计最佳实践、通过验证集成架构来确保各个组件之间的兼容性、从而最大程度地降低IT风险。此外、解决方案 还通过提供书面设计指导、部署指导和支持来解决IT难题、这些指导和支持可在部署的各个阶段(规划、设计和实施)中使用。</block>
+  <block id="cc628400ef9d8749cbdf9698ee3906be" category="paragraph"><block ref="cc628400ef9d8749cbdf9698ee3906be" category="inline-link-macro-rx"></block></block>
+  <block id="b03a4fd31ae92fbfa06a356784b06eeb" category="paragraph">建议的解决方案 架构基于使用统一软件版本4.0.1c的Cisco统一计算系统(Cisco UCS)构建、以支持Cisco UCS硬件平台、包括Cisco UCS B系列刀片式服务器、Cisco UCS 6300互联阵列、Cisco Nexus 9000系列交换机和NetApp AFF 系列存储阵列。</block>
+  <block id="f8b38aade759a473e72947d1f8d9a8b7" category="summary">本文档中详细介绍的参考架构重点介绍了基于IP的存储解决方案 的故障恢复能力、成本效益和部署简便性。</block>
+  <block id="f99862b55d674726df3b2778a27d973a" category="doc">适用于SAP解决方案 的FlexPod 数据中心、采用基于IP的存储、并使用NetApp AFF A系列和Cisco UCS Manager 3.2</block>
+  <block id="09a7bb0ca55ff74dc10ce00df316d607" category="paragraph">本文档中详细介绍的参考架构重点介绍了基于IP的存储解决方案 的故障恢复能力、成本效益和部署简便性。一个能够通过一个接口提供多个协议的存储系统可以为客户提供选择和投资保护、因为它确实是一种一次线架构。解决方案 专为托管可扩展的SAP HANA工作负载而设计。</block>
+  <block id="c32f7ca8bc1a52d354a24c1bdc3fe80a" category="paragraph"><block ref="c32f7ca8bc1a52d354a24c1bdc3fe80a" category="inline-link-macro-rx"></block></block>
+  <block id="8244b1ae4faf9eabf7dfac8d8bc87f5f" category="summary">本文档介绍了在NetApp AFF A400存储上使用NetApp ONTAP 9.7的Cisco和NetApp FlexPod Datacenter、以及采用适用于SAP HANA的第二代Intel Xeon可扩展处理器的Cisco UCS Manager统一软件版本4.1 (1)</block>
+  <block id="bbc91260146054c997aa993398848f93" category="doc">采用Cisco UCS Manager 4.0和NetApp AFF A系列的适用于SAP解决方案 的FlexPod Datacenter—设计</block>
+  <block id="9af1772033e1f5ef0c7bfbfa096cf352" category="paragraph">FlexPod 是一款领先的集成基础架构、可支持广泛的企业工作负载和用例。借助此解决方案 、您可以使用量身定制的数据中心集成模式快速、可靠地部署SAP HANA。</block>
+  <block id="d9cf3dc555913a9f6f72d83f27b696b1" category="list-text">Cisco UCS B系列刀片式服务器和Cisco UCS C系列机架式服务器、可使用Intel Optane Data Center Persistent Memory Module (DCPMM)选项进行配置</block>
+  <block id="054586268f6123e5a095cef474e8e6b5" category="list-text">Cisco UCS 6300系列互联阵列</block>
+  <block id="79436f06e0c69889713a99ef7f75e9e6" category="paragraph">此外、本文档还对Red Hat Enterprise Linux和适用于SAP HANA的SUSE Linux Enterprise Server进行了验证。</block>
+  <block id="819bd213c67319762de283d5ddfe91dc" category="paragraph"><block ref="819bd213c67319762de283d5ddfe91dc" category="inline-link-macro-rx"></block></block>
+  <block id="0fcd3440bccc658338908c82867038f6" category="summary">本文档介绍了基于第二代Intel Xeon可扩展处理器支持的Cisco UCS计算系统(Cisco UCS)的Cisco和NetApp FlexPod Datacenter for SAP HANA的部署方法。</block>
+  <block id="b78d209135dbfa8e2cae1a52d1e99911" category="doc">适用于SAP解决方案 的FlexPod 数据中心、采用Cisco UCS第三代网络结构和NetApp AFF A系列</block>
+  <block id="efce10dcafb82ce6d5f7b421c25eae88" category="paragraph">Cisco UCS Manager (UCSM) 4.0 (4)可为所有当前的Cisco UCS互联阵列型号(6200、6300、6324和6454)、2200/2300系列IOM、Cisco UCS B系列刀片式服务器和Cisco UCS C系列机架式服务器提供整合支持。采用Cisco UCS统一软件版本4.0 (4D)和NetApp ONTAP 9.6的FlexPod 数据中心是一种基于Cisco UCS、Cisco Nexus 9000系列交换机和NetApp AFF A系列存储阵列构建的预先设计的最佳实践数据中心架构。</block>
+  <block id="9035c7a3bcd4a68ff7a63ef73fbf2e6f" category="inline-link-macro">适用于SAP解决方案 的FlexPod 数据中心、采用Cisco UCS第三代网络结构和NetApp AFF A系列</block>
+  <block id="05b925bffc09e8b504e86d3470cb1fb9" category="paragraph"><block ref="05b925bffc09e8b504e86d3470cb1fb9" category="inline-link-macro-rx"></block></block>
+  <block id="d4ad5766d09e5f2e8b7797fcc278617d" category="summary">本文档介绍了在FlexPod 基础架构上使用SAP HANA定制的数据中心集成选项的架构和部署过程</block>
+  <block id="e61513acfea4937fce1c0b76f13b814c" category="doc">采用Cisco ACI、Cisco UCS Manager 4.0和NetApp AFF A系列的FlexPod Datacenter for SAP—部署</block>
+  <block id="935622a6b1050d1c9b0d270390dcc57a" category="paragraph">本文档旨在介绍SAP HANA部署的详细配置步骤</block>
+  <block id="402b20297082d353578c7fa853efd431" category="paragraph"><block ref="402b20297082d353578c7fa853efd431" category="inline-link-macro-rx"></block></block>
+  <block id="0e4c3c9577c4f175da53c0268162f495" category="summary">本文档为采用FlexPod UCS、NetApp AFF A300和NetApp ONTAP 数据管理软件的Datacenter上的5000席位到6000席位桌面工作负载最终用户计算环境提供了参考架构和设计指南。</block>
+  <block id="9c1e836eb2e28d30b7dd8ea0ff81fc0a" category="doc">采用VMware Horizon View 7.10、VMware vSphere 6.7 U2、Cisco UCS Manager 4.0和NetApp ONTAP 9.6的FlexPod 数据中心、最多可容纳7700个席位</block>
+  <block id="94050e63982d704386a5bec57edd11e9" category="paragraph">NetApp公司Cisco Suresh ThopPay Vadim Lebedev</block>
+  <block id="cab14a3ce0344ba12e24303ac2b5c2a6" category="paragraph">本文档为采用FlexPod UCS、NetApp AFF A300和NetApp ONTAP 数据管理软件的Datacenter上的5000席位到6000席位桌面工作负载最终用户计算环境提供了参考架构和设计指南。解决方案 包括基于VMware Horizon服务器的RDS Windows Server 2019会话、VMware Horizon永久性、完整克隆的Microsoft Windows 10虚拟桌面以及VMware vSphere 6.7 U2上的VMware Horizon非持久即时克隆Microsoft Windows 10虚拟桌面。</block>
+  <block id="b33b614be9a692d7d7d73a3354cc2e9c" category="paragraph"><block ref="b33b614be9a692d7d7d73a3354cc2e9c" category="inline-link-macro-rx"></block></block>
+  <block id="54e53d3c86e3f86d8e40513c90820391" category="summary">了解在采用SPECviewperf 13的Cisco UCS C240 M5和B200 M5服务器上使用NVIDIA Tesla P4、P6和P40卡的Citrix XenServer上Citrix XenDesktop的性能。</block>
+  <block id="cea1e82ea16b8edfadac5abca42340af" category="doc">使用Citrix和NVIDIA实现3D图形可视化—白皮书</block>
+  <block id="0f55cea5ff71f0aee408c3488f6fc5f2" category="paragraph">本文档介绍了在采用SPECviewperf 13的Cisco UCS C240 M5和B200 M5服务器上使用NVIDIA Tesla P4、P6和P40卡的Citrix XenServer上Citrix XenDesktop的性能。</block>
+  <block id="3523d7fa5f22b9e67bf91be26ef57de8" category="paragraph"><block ref="3523d7fa5f22b9e67bf91be26ef57de8" category="inline-link-macro-rx"></block></block>
+  <block id="e9b1d53e25b111af501a0fcc85c14475" category="summary">本文档提供了一个参考架构、设计指南、以及在采用FlexPod UCS和NetApp全闪存FAS (AFF) A300存储的Datacenter上为多达5000个席位的混合工作负载最终用户计算环境进行的部署。</block>
+  <block id="efbde2e6132daef22addbfc768b042df" category="doc">采用VMware Horizon View 7.3的FlexPod Datacenter和采用Cisco UCS Manager 3.2的VMware vSphere 6.5 Update 1、可容纳5000个席位</block>
+  <block id="67ad5a4957640dd6c9a2fd1821ddeba5" category="paragraph">NetApp公司Cisco David Arnette Ramesh Guduru</block>
+  <block id="b2e24cda7cd0292e9b7f909cae605418" category="paragraph">本文档提供了一个参考架构、设计指南、以及在采用FlexPod UCS和NetApp全闪存FAS (AFF) A300存储的Datacenter上为多达5000个席位的混合工作负载最终用户计算环境进行的部署。解决方案 包括基于VMware Horizon服务器的远程桌面服务器托管会话、VMware Horizon永久性Microsoft Windows 10虚拟桌面以及VMware vSphere 6.5上的VMware Horizon非永久性Microsoft Windows 10即时克隆虚拟桌面。</block>
+  <block id="3da86494c4150ba021f242a95887c875" category="paragraph"><block ref="3da86494c4150ba021f242a95887c875" category="inline-link-macro-rx"></block></block>
+  <block id="284f63450f073db517e955c2ba170aef" category="summary">本文档提供了一个参考架构、用于使用基于Cisco UCS且采用NetApp全闪存FAS (AFF) A300存储和VMware vSphere ESXi 6.5虚拟机管理程序平台的Citrix XenApp/XenDesktop 7.15来设计虚拟桌面和应用程序。</block>
+  <block id="4540619653d62cc858d06ae019fc8c0d" category="doc">采用Citrix XenDesktop/XenApp 7.15和VMware vSphere 6.5 Update 1的FlexPod Datacenter、可容纳6000个席位</block>
+  <block id="02009f3b2ecb65478f10af17bab4d57d" category="paragraph">NetApp公司Cisco Chris Rodrigueev的Vadim Lebedev</block>
+  <block id="f7173e7af5bcf05a42c6e994d6735fd8" category="paragraph">桌面和应用程序虚拟化的格局正在不断变化。全新的M5高性能Cisco UCS刀片式服务器和Cisco UCS统一网络结构作为FlexPod 成熟的基础架构的一部分、与最新一代的NetApp AFF 存储相结合、形成了一个更紧凑、更强大、更可靠、更高效的平台。</block>
+  <block id="55cd6d601dd9dc053b446a587c742082" category="paragraph"><block ref="55cd6d601dd9dc053b446a587c742082" category="inline-link-macro-rx"></block></block>
+  <block id="8b41e8c6aaf1e06d4ad1aa07b839f59f" category="summary">本文档介绍了最多可供6000个最终用户计算用户使用的虚拟桌面基础架构的架构和设计。</block>
+  <block id="9da52c2c4788206d59bb506e17e0de60" category="doc">采用Citrix虚拟应用程序和桌面1912 LTSR和VMware vSphere 7的FlexPod 数据中心、最多可容纳6000个席位</block>
+  <block id="f3568094720b797bcf94d383f8d3e30c" category="paragraph">NetApp Dre Jackson、NetApp公司Cisco Suresh ThopPay Jeff Nichols</block>
+  <block id="27d39c23597dc02a1af62b0f1e268da7" category="paragraph">本文档介绍了最多可供6000个最终用户计算用户使用的虚拟桌面基础架构的架构和设计。解决方案 在第五代Cisco UCS B200 M5刀片式服务器上进行虚拟化、可从AFF A400存储阵列通过FC SAN启动VMware vSphere 7.01 Update 1。虚拟桌面采用Citrix Provisioning Server 1912 LTSR和Citrix RDS/Citrix虚拟应用程序和桌面1912 LTSR提供支持、并混合使用RDS托管的共享桌面(6000)、池化和/或非持久托管的虚拟Windows 10桌面(5000)、 和使用Citrix Machine Creation Services (5000)配置的永久性托管虚拟Windows 10桌面、以支持用户群。本文档在适用情况下提供了有关此解决方案 的客户部署的最佳实践建议和规模估算准则。</block>
+  <block id="78aa068efb16048b9046434122bc4040" category="inline-link-macro">采用Citrix虚拟应用程序和应用程序的FlexPod Datacenter；桌面1912 LTSR和VMware vSphere 7、最多可容纳6000个席位</block>
+  <block id="5e76f6c4eefa215c6b06b30c71c2c317" category="paragraph"><block ref="25c3839f73d7e2ec6a9306eb712dfb36" category="inline-link-macro-rx"></block></block>
+  <block id="5883ae7861b2f3543c8353c6edc69721" category="summary">本文档提供了一个参考架构和设计指南、用于在FlexPod Datacenter上使用Cisco UCS和NetApp AFF A300以及NetApp ONTAP 数据管理软件的5000席位到6000席位桌面工作负载和最终用户计算环境。</block>
+  <block id="b4df6c886c344f736102dd610277eb70" category="paragraph">本文档提供了一个参考架构和设计指南、用于在FlexPod Datacenter上使用Cisco UCS和NetApp AFF A300以及NetApp ONTAP 数据管理软件的5000席位到6000席位桌面工作负载和最终用户计算环境。解决方案 包括基于VMware Horizon服务器的RDS Windows Server 2019会话、VMware Horizon永久性完整克隆Microsoft Windows 10虚拟桌面以及VMware vSphere 6.7U2上的VMware Horizon非永久性即时克隆Microsoft Windows 10虚拟桌面</block>
+  <block id="3fb2912e67f056e767a5c9bcc9799378" category="summary">采用Cisco UCS Mini和NetApp AFF/FAS解决方案 的适用于VMware vSphere 7.0的FlexPod Express可利用采用B200 M5刀片式服务器的Cisco UCS Mini、Cisco UCS 6324机箱内互联阵列、Cisco Nexus 31108PC-V交换机或其他合规交换机。</block>
+  <block id="0e6c480e9b46118dd6a480f68c463289" category="doc">适用于采用Cisco UCS Mini和NetApp AFF/FAS的VMware vSphere 7.0的FlexPod Express—NVA—部署</block>
+  <block id="509d1914a183ce913a87d8d83702c6e8" category="paragraph">采用Cisco UCS Mini和NetApp AFF/FAS解决方案 的适用于VMware vSphere 7.0的FlexPod Express利用具有B200 M5刀片式服务器的Cisco UCS Mini、Cisco UCS 6324机箱内置互联阵列、Cisco Nexus 31108PC-V交换机或其他兼容交换机以及NetApp AFF A220、C190或FAS2700系列控制器HA对、 运行NetApp ONTAP 9.7数据管理软件。本NetApp经验证的架构(NVA)部署文档详细介绍了配置基础架构组件、部署VMware vSphere 7.0以及相关工具以创建基于FlexPod Express的高可靠性和高可用性虚拟基础架构所需的步骤。</block>
+  <block id="6a0a153cc541bf332aa256b4c45586da" category="paragraph"><block ref="6a0a153cc541bf332aa256b4c45586da" category="inline-link-macro-rx"></block></block>
+  <block id="cf4492e4eed8b30ba397550624a82bae" category="summary">Red Hat OpenShift是一款企业级Kubernetes容器平台、用于管理混合云和多云部署。</block>
+  <block id="e8c6a4c58fa5c365ed411c15ef2f20d3" category="doc">适用于OpenShift容器平台的FlexPod 数据中心4—部署</block>
+  <block id="336392735c47cd95fab39bd36255bd5b" category="paragraph">NetApp公司Cisco Alan Cowles的Haseeb Niazi</block>
+  <block id="1c7afa7ba660d4f3a67241f4b1ca5304" category="paragraph">Red Hat OpenShift是一款企业级Kubernetes容器平台、用于管理混合云和多云部署。Red Hat OpenShift容器平台提供了混合云、企业容器以及Kubernetes开发和部署所需的一切。它包括企业级Linux操作系统、容器运行时、网络连接、监控、容器注册表、 身份验证和授权解决方案。</block>
+  <block id="2f393dfcea03c55da2a2f8d85c68afba" category="paragraph">将Red Hat OpenShift与FlexPod Datacenter解决方案 相结合、可以简化容器基础架构的部署和管理。客户可以从提高效率、改善数据保护、降低风险以及灵活扩展这种高可用性企业级基础架构堆栈以满足新业务需求中受益。经过预先验证的融合解决方案 方法可帮助企业实现所有应用程序现代化和数字化转型计划所需的速度、灵活性和扩展性。</block>
+  <block id="bdd259dec468cf64793a48ba20b44ebf" category="paragraph"><block ref="bdd259dec468cf64793a48ba20b44ebf" category="inline-link-macro-rx"></block></block>
+  <block id="acd65af4fcabf5d3bc05cc60bc3205fc" category="summary">本文档详细介绍了如何将Cisco UCS C480 ML M5平台集成到FlexPod 数据中心解决方案 中、从而在融合基础架构中提供统一的AI和ML功能。</block>
+  <block id="e2eb27df45d4618aa7654ab9d6c1c92a" category="doc">FlexPod 数据中心、用于将人工智能和机器学习与Cisco UCS 480 ML相结合、用于深度学习—设计</block>
+  <block id="00bac171a5b7cae6a283a18596754e68" category="paragraph">NetApp公司Cisco Arvind Ramakrishnan的Haseeb Niazi</block>
+  <block id="c249b0937bef3dfde5963f1a39ee7cd2" category="paragraph">本文档详细介绍了如何将Cisco UCS C480 ML M5平台集成到FlexPod 数据中心解决方案 中、从而在融合基础架构中提供统一的AI和ML功能。通过为客户提供将人工智能和机器学习功能与用于管理传统FlexPod 系统的熟悉工具相结合的服务器管理能力、可以大幅降低部署深度学习平台的管理开销和成本。此CVD中提供的设计还包括其他Cisco UCS平台、例如、具有两个NVIDIA T4 GPU的C220 M5服务器和配有两个NVIDIA V100 32 Gb PCIe卡的C240 M5服务器、作为并发AI和ML工作负载的附加选项。</block>
+  <block id="4d27a1d32d24908caf7334d118d2cf66" category="paragraph"><block ref="4d27a1d32d24908caf7334d118d2cf66" category="inline-link-macro-rx"></block></block>
+  <block id="5a706e0f11b18f4cab5e920b64663e4c" category="summary">Docker是全球领先的软件容器平台、可供开发人员和IT运营人员随时随地构建、交付和运行分布式应用程序。</block>
+  <block id="bdec17669d4a1c79ac322c11e357fd92" category="doc">采用适用于容器管理的Docker企业版的FlexPod 数据中心</block>
+  <block id="729ac23e34a0c4c38e614aa7b070f2c8" category="paragraph">来自NetApp Uday Shetty、Docker的Cisco Amit Borulkar、Cisco John George的Muhammad Afzal</block>
+  <block id="a5914159b890e1688d4a43bc23725131" category="paragraph">Docker是全球领先的软件容器平台、可供开发人员和IT运营人员随时随地构建、交付和运行分布式应用程序。随着微服务架构塑造下一代IT、对整体式应用程序进行大量投资的企业正在寻找方法、将Docker作为一种策略、用于实现应用程序架构现代化并保持企业竞争力和成本效益。容器化可提供开发人员和IT运营在任何基础架构中构建和部署应用程序所需的灵活性、控制力和可移动性。通过Docker平台、分布式应用程序可以轻松地组成一个轻型应用程序容器、该容器可以动态更改、但不会造成中断。此功能可使应用程序在本地物理机或虚拟机上、数据中心内以及不同云服务提供商的网络上运行的开发、测试和生产环境中均可移植。</block>
+  <block id="ed723eb8e2b67dda0ba1c79346cc4d73" category="paragraph"><block ref="ed723eb8e2b67dda0ba1c79346cc4d73" category="inline-link-macro-rx"></block></block>
+  <block id="57b7b4807a894a842092cd43dadd3caf" category="doc">适用于OpenShift容器平台4的FlexPod 数据中心—设计</block>
+  <block id="4dd14948d1185421e31a80c205292ab0" category="paragraph">Cisco和NetApp合作推出了一系列FlexPod 解决方案、支持战略数据中心平台。FlexPod 解决方案 提供了一个集成架构、其中整合了计算、存储和网络设计的最佳实践、通过验证集成架构以确保各个组件之间的兼容性、从而最大程度地降低IT风险。此外、解决方案 还通过提供书面设计指导、部署指导和支持来解决IT难题、这些指导和支持可在部署的各个阶段(规划、设计和实施)中使用。</block>
+  <block id="f25f097dfc90b83b6c0c0981509bad56" category="paragraph"><block ref="f25f097dfc90b83b6c0c0981509bad56" category="inline-link-macro-rx"></block></block>
+  <block id="3c52a72d3b477f26f4f5d9d3a3fac16c" category="doc">在Cisco UCS上使用VMware和NVIDIA实现3D图形可视化—白皮书</block>
+  <block id="2ff68af51d58baab35bba502a8c6b92b" category="paragraph">本文档介绍了在Cisco UCS C240 M5机架式服务器和B200 M5刀片式服务器上使用NVIDIA Tesla P4、P6和P40解决方案 的VMware ESXi虚拟机管理程序和VMware Horizon的性能。</block>
+  <block id="650fe0fc56fe6bb7813edd521139048f" category="paragraph"><block ref="650fe0fc56fe6bb7813edd521139048f" category="inline-link-macro-rx"></block></block>
+  <block id="5e74ee403608eaf262f5fe2fad5cd45d" category="summary">本文档提供了在FlexPod 解决方案 中的Cisco容器平台Kubernetes租户集群上部署NetApp Trident容器存储接口(CSI)插件的分步过程。</block>
+  <block id="6455e7439a3f9a1f86df603849a3bcf2" category="doc">使用FlexPod 在Cisco容器平台上部署NetApp Trident CSI插件</block>
+  <block id="94d757f03efe4176f1dd718d7dd687c2" category="paragraph"><block ref="94d757f03efe4176f1dd718d7dd687c2" category="inline-link-macro-rx"></block></block>
+  <block id="ee4ec8f8ad496d62af19f932d273fd6e" category="summary">本文档提供了有关将Cisco UCS C480 ML M5平台集成到FlexPod 数据中心解决方案 中的部署详细信息和指导、以便在融合基础架构中提供统一的AI和ML功能。</block>
+  <block id="51712205007d7e3b56fb42dd6d0ab64a" category="doc">FlexPod 数据中心、用于将AI和ML与Cisco UCS 480 ML相结合、用于深度学习—部署</block>
+  <block id="0864932acc0306b831b9b6d06bd03988" category="inline-link-macro">FlexPod 数据中心、用于将人工智能和机器学习与Cisco UCS 480 ML相结合、用于深度学习设计</block>
+  <block id="5260743f63f66f308d49388afb846bd9" category="paragraph">本文档提供了有关将Cisco UCS C480 ML M5平台集成到FlexPod 数据中心解决方案 中的部署详细信息和指导、以便在融合基础架构中提供统一的AI和ML功能。本文档还介绍了Cisco UCS C220和C240平台上的NVIDIA GPU配置。有关此解决方案 中使用的平台和技术的详细设计讨论、请参见 <block ref="3f9db80af0fcf30cd49f43d7e8392495" category="inline-link-macro-rx"></block>。</block>
+  <block id="5c597e77337eb7a9f56a2e411462026e" category="paragraph"><block ref="5c597e77337eb7a9f56a2e411462026e" category="inline-link-macro-rx"></block></block>
+  <block id="ba57600ee0880eeb4a6733e4ffdb746c" category="summary">本文档详细介绍了如何将Cisco UCS C480 ML M5平台集成到FlexPod Datacenter解决方案 中、以便在融合基础架构中提供统一的AI和ML功能。</block>
+  <block id="54c81e9ff4b87e7057996f3d7f7e1ef9" category="paragraph">本文档详细介绍了如何将Cisco UCS C480 ML M5平台集成到FlexPod Datacenter解决方案 中、以便在融合基础架构中提供统一的AI和ML功能。通过让客户能够使用人工智能和机器学习功能以及用于管理传统FlexPod 系统的熟悉工具来管理服务器、大大降低了部署深度学习平台的管理开销和成本。此CVD中提供的设计还包括其他Cisco UCS平台、例如具有两个NVIDIA T4 GPU的C220 M5服务器以及配有两个NVIDIA V100 32 Gb PCIe卡的C240 M5服务器、作为处理并发AI和ML工作负载的附加选项。</block>
+  <block id="8b18888e3656f164c4bf24a7a21e4b87" category="inline-link-macro">FlexPod 数据中心、用于将人工智能和机器学习与Cisco UCS 480 ML相结合、用于深度学习—设计</block>
+  <block id="1e4b645d8f9a75e6c46cf9488d22933c" category="paragraph"><block ref="1e4b645d8f9a75e6c46cf9488d22933c" category="inline-link-macro-rx"></block></block>
+  <block id="a62f414e5bdaf0b7beeb9fd03ff2d3a3" category="summary">本文档介绍了如何将Cisco ACI Multi-Pod和NetApp MetroCluster IP解决方案 集成到FlexPod 数据中心中、以提供高度可用的多数据中心解决方案。</block>
+  <block id="4533c1ee4ca77108af5228fd5e146578" category="doc">采用Cisco ACI Multi-Pod、NetApp MetroCluster IP和VMware vSphere 6.7的FlexPod 数据中心—设计</block>
+  <block id="bac896dca07603856efe39b592882a4d" category="paragraph">本文档介绍了如何将Cisco ACI Multi-Pod和NetApp MetroCluster IP解决方案 集成到FlexPod 数据中心中、以提供高度可用的多数据中心解决方案。利用多数据中心架构、可以利用无中断工作负载移动性在两个数据中心之间平衡工作负载、从而无需持续中断即可在站点之间迁移服务。</block>
+  <block id="396097f6474c97407aec8c3f83566148" category="paragraph">采用ACI Multi-Pod和NetApp MetroCluster IP解决方案 的FlexPod 具有以下优势：</block>
+  <block id="8ea7e19245afff8146e7b7f4706af268" category="list-text">跨数据中心无缝移动工作负载</block>
+  <block id="b5db0d72ecca42c632d20ea5e2a72f12" category="list-text">站点间策略一致</block>
+  <block id="5ee63cf9cd94faa91e2925ac8288326f" category="list-text">跨地理位置分散的数据中心的第2层扩展</block>
+  <block id="5f64667d7f44b770461d64b2b221eb39" category="list-text">在维护期间更好地避免停机</block>
+  <block id="29efaf2d09a4585a2e7ba821bad0f11b" category="list-text">避免灾难和恢复</block>
+  <block id="bab00058ed742cb291a251e5f9e7b30f" category="paragraph"><block ref="bab00058ed742cb291a251e5f9e7b30f" category="inline-link-macro-rx"></block></block>
+  <block id="8923081adece49fd866389b2c04dd2ac" category="summary">本文档介绍了Cisco和NetApp FlexPod 解决方案 、这是一种经验证的将Cisco和NetApp技术部署为共享云基础架构的方法。</block>
+  <block id="d5a4fdb0db4cd91719c72ab980bef18b" category="doc">采用VMware vSphere 6.7 U1、Cisco UCS第四代网络结构和NetApp AFF A系列的FlexPod Datacenter—设计</block>
+  <block id="3ae5517a903ddc25873ff430c01b70e1" category="paragraph">NetApp公司Cisco Sree Lakshmi Lan的John George</block>
+  <block id="0d05f81e65fa9527e2d336dc270a1ce1" category="paragraph">本文档介绍了Cisco和NetApp FlexPod 解决方案 、这是一种经验证的将Cisco和NetApp技术部署为共享云基础架构的方法。这种经过验证的设计为在FlexPod 上部署VMware vSphere提供了一个框架、VMware vSphere是企业级数据中心中最受欢迎的虚拟化平台。</block>
+  <block id="53920671609f2df4d2fe6d5a2376e618" category="paragraph">FlexPod 是一款领先的集成基础架构、支持广泛的企业工作负载和用例。借助此解决方案 、客户可以在集成基础架构上快速可靠地部署基于VMware vSphere的私有云。</block>
+  <block id="c793eeda4ab1f5251859d38f5678c658" category="paragraph">建议的解决方案 架构基于使用统一软件版本的Cisco统一计算系统(Cisco UCS)构建、以支持Cisco UCS硬件平台、包括Cisco UCS B系列刀片式服务器和C系列机架式服务器、Cisco UCS 6454互联阵列、Cisco Nexus 9000系列交换机、Cisco MDS光纤通道交换机、 和NetApp全闪存系列存储阵列。此外、它还包括VMware vSphere 6.7 Update 1、它提供了许多新功能、用于优化存储利用率和促进私有云。</block>
+  <block id="70c887eebdde19eeed80b603302d419f" category="paragraph"><block ref="70c887eebdde19eeed80b603302d419f" category="inline-link-macro-rx"></block></block>
+  <block id="94cf0845fdc1ba7f64fdcdfb928e88a3" category="summary">当前数据中心设计的行业趋势是共享基础架构。</block>
+  <block id="f817e5b18ebf0bca1e136aecf913a70f" category="doc">采用Cisco Intersight和NetApp ONTAP 9.7的FlexPod Datacenter—部署</block>
+  <block id="8c3a8df6e2b16c43d0a5a5e3855e366b" category="paragraph">NetApp公司Cisco Scott kovacs的John George</block>
+  <block id="9eedcae8dc28b72c3b19b79208781ce9" category="paragraph">当前数据中心设计的行业趋势是共享基础架构。通过将虚拟化与经过预先验证的IT平台结合使用、企业客户已经踏上了云之旅、从应用程序孤岛向可快速部署的共享基础架构过渡、从而提高了灵活性并降低了成本。Cisco和NetApp携手推出了FlexPod 、该产品使用同类最佳的存储、服务器和网络组件作为各种工作负载的基础、能够快速、自信地部署高效的架构设计。</block>
+  <block id="3ab8c4ec6879b8f44c76c384eefa1373" category="paragraph"><block ref="3ab8c4ec6879b8f44c76c384eefa1373" category="inline-link-macro-rx"></block></block>
+  <block id="1aa2637b629f71c5a08a90225152b38e" category="summary">本文档介绍了采用Cisco UCS Manager统一软件版本4.0 (2)和VMware vSphere 6.7 U1的Cisco和NetApp FlexPod Datacenter。</block>
+  <block id="76b51b9b0de839ca8697ab4d616e309f" category="doc">采用VMware vSphere 6.7 U1、Cisco UCS第四代网络结构和NetApp AFF A系列的FlexPod 数据中心</block>
+  <block id="50948feed9b1839e6112e5af3d44e565" category="paragraph">本文档介绍了采用Cisco UCS Manager统一软件版本4.0 (2)和VMware vSphere 6.7 U1的Cisco和NetApp FlexPod Datacenter。Cisco UCS Manager (UCSM) 4.0 (2)可为所有当前的Cisco UCS互联阵列型号(6200、6300、6324 (Cisco UCS Mini))、6454、2200/2300系列IOM、Cisco UCS B系列和Cisco UCS C系列提供整合支持。采用Cisco UCS统一软件版本4.0 (2)和VMware vSphere 6.7 U1的FlexPod 数据中心是一种预先设计的最佳实践数据中心架构、它基于Cisco统一计算系统(UCS)、Cisco Nexus 9000系列交换机、MDS 9000多层光纤交换机、 以及运行ONTAP 9存储操作系统的NetApp AFF A系列存储阵列。</block>
+  <block id="d89407da6440715f919fb661c1db56ad" category="paragraph"><block ref="d89407da6440715f919fb661c1db56ad" category="inline-link-macro-rx"></block></block>
+  <block id="dc230ff87f10e76f7db16560417d3d09" category="summary">本文档介绍采用NetApp ONTAP 9.6的Cisco和NetApp FlexPod Datacenter、采用第二代Intel Xeon可扩展处理器的Cisco UCS Manager统一软件版本4.0 (4)以及VMware vSphere 6.7 U2。</block>
+  <block id="c589128169fcd76bf43bdc8e7836db14" category="doc">采用VMware vSphere 6.7 U2、Cisco UCS fout-generation Fabric和NetApp ONTAP 9.6的FlexPod Datacenter</block>
+  <block id="75db1c67a4e6fb4489bad90abffc2973" category="paragraph">本文档介绍采用NetApp ONTAP 9.6的Cisco和NetApp FlexPod Datacenter、采用第二代Intel Xeon可扩展处理器的Cisco UCS Manager统一软件版本4.0 (4)以及VMware vSphere 6.7 U2。Cisco UCS Manager (UCSM) 4.0 (4)提供以下整合支持：</block>
+  <block id="4c5c7eb84d17db6e1e2f8cfde9ddf127" category="list-text">所有当前的Cisco UCS互联阵列型号：6200、6300、6324 (Cisco UCS Mini)</block>
+  <block id="595373f017b659cb7743291e920a8857" category="list-text">6454</block>
+  <block id="009c5c61046729c831e87b39cfa52ffa" category="list-text">2200/23400/2400系列IOM</block>
+  <block id="e24e66e287730fb6497d9ced42b88baf" category="list-text">Cisco UCS C系列。</block>
+  <block id="0f08bb9181c1917bc75d7e304304e8eb" category="paragraph">采用NetApp ONTAP 9.6、Cisco UCS统一软件4.0 (4)版和VMware vSphere 6.7 U2的FlexPod Datacenter是一种基于Cisco统一计算系统(Cisco UCS)、Cisco Nexus 9000系列交换机、MDS 9000多层光纤交换机构建的预先设计的最佳实践数据中心架构。 以及运行ONTAP 9的NetApp AFF A系列存储阵列。</block>
+  <block id="94f10159b68ae44ccecad3f721a3cebc" category="inline-link-macro">采用VMware vSphere 6.7 U2、Cisco UCS第四代网络结构和NetApp ONTAP 9.6的FlexPod 数据中心</block>
+  <block id="120bb92d57df3f6f21a19a6bbe3eb664" category="paragraph"><block ref="120bb92d57df3f6f21a19a6bbe3eb664" category="inline-link-macro-rx"></block></block>
+  <block id="57ff7cd01c3f1535d3164455a88b06ae" category="summary">本文档介绍了一个经过验证的解决方案 、用于将Cisco和NetApp技术部署为共享云基础架构。</block>
+  <block id="35e94493ad37b748b6bb28c398d520e7" category="doc">采用Cisco Intersight和NetApp ONTAP 9.7的FlexPod 数据中心—设计</block>
+  <block id="855ce22fe7bb9b1edf17f6d07ffffebb" category="paragraph">本文档介绍了一个经过验证的解决方案 、用于将Cisco和NetApp技术部署为共享云基础架构。这种经过验证的设计为在FlexPod 上部署VMware vSphere提供了一个框架、VMware vSphere是企业级数据中心中最受欢迎的虚拟化平台。</block>
+  <block id="e7899fdd577c2c975664736616db9b0c" category="paragraph">FlexPod 是一款领先的集成基础架构、支持广泛的企业工作负载和用例。借助此解决方案 、客户可以在集成基础架构上快速可靠地部署基于VMware vSphere的私有云。</block>
+  <block id="6532d199304e143bd5ea90959be46ba7" category="paragraph"><block ref="6532d199304e143bd5ea90959be46ba7" category="inline-link-macro-rx"></block></block>
+  <block id="da6cbb5504eacaa507e15b47abc03213" category="summary">Cisco经验证的设计(CVD)包括为便于和改进客户部署而设计、测试和记录的系统和解决方案。</block>
+  <block id="cef5864efba03eedc43c768b58b3c3c0" category="paragraph">Cisco经验证的设计(CVD)包括为便于和改进客户部署而设计、测试和记录的系统和解决方案。这些设计将广泛的技术和产品整合到一个解决方案组合中、这些解决方案是为满足客户的业务需求而开发的。Cisco和NetApp合作推出了FlexPod®、它为各种工作负载奠定了基础、并可根据客户需求进行高效的架构设计。FlexPod 解决方案 是一种经验证的方法、用于将Cisco和NetApp技术部署为共享云基础架构。</block>
+  <block id="528670eeaea5b317144c54fe07fa5790" category="paragraph"><block ref="528670eeaea5b317144c54fe07fa5790" category="inline-link-macro-rx"></block></block>
+  <block id="1d4bf3963c3a0ae4c8693d0c46c683d8" category="summary">本文档介绍了在NetApp AFF A400全闪存存储系统上使用NetApp ONTAP 9.7的Cisco和NetApp FlexPod Datacenter、采用第二代Intel Xeon可扩展处理器的Cisco UCS Manager统一软件版本4.1 (2)以及VMware vSphere 7.0。</block>
+  <block id="1dcbad5d423da849e8f66519df494fdb" category="doc">采用VMware vSphere 7.0和NetApp ONTAP 9.7的FlexPod Datacenter—部署</block>
+  <block id="e189018b4a9c50b4dfcc733338b47cca" category="paragraph">本文档介绍了在NetApp AFF A400全闪存存储系统上使用NetApp ONTAP 9.7的Cisco和NetApp FlexPod Datacenter、采用第二代Intel Xeon可扩展处理器的Cisco UCS Manager统一软件版本4.1 (2)以及VMware vSphere 7.0。Cisco UCS Manager (UCSM) 4.1 (2)提供以下整合支持：</block>
+  <block id="d6dabcc412981d56c8733b52586a9d44" category="list-text">6400/16</block>
+  <block id="662e5743ac1382dcec38e5ac47977dea" category="paragraph">此外、还包括Cisco Intersight和NetApp Active IQ SaaS管理平台。</block>
+  <block id="8d13d5c9dc873594d23bfdb1b98ed1c5" category="paragraph">采用NetApp ONTAP 9.7、Cisco UCS统一软件版本4.1 (2)和VMware vSphere 7.0的FlexPod 数据中心包含一个基于Cisco统一计算系统(Cisco UCS)、Cisco Nexus 9000系列交换机、MDS 9000多层光纤交换机构建的预先设计的最佳实践数据中心架构、 以及运行ONTAP 9.7数据管理软件的NetApp AFF A系列存储阵列。</block>
+  <block id="031b39606746f45b85f18879680f7f39" category="paragraph"><block ref="031b39606746f45b85f18879680f7f39" category="inline-link-macro-rx"></block></block>
+  <block id="9f13f30a280fbef822de24486ccbbc0a" category="doc">采用VMware vSphere 7.0、Cisco VXLAN单站点网络结构和NetApp ONTAP 9.7的FlexPod 数据中心—设计</block>
+  <block id="44245f56be0b0aeab8cfc9dcec12d873" category="paragraph">NetApp公司Cisco Abhinav Singh Ramesh Isaac</block>
+  <block id="299e06e895f8915d0886816855a2bb87" category="paragraph">Cisco验证设计(CVD)由系统和解决方案组成、这些系统和解决方案经过设计、测试和记录、可帮助客户部署并改进部署。这些设计将广泛的技术和产品整合到一个解决方案组合中、这些解决方案是为满足客户的业务需求而开发的。Cisco和NetApp合作推出了FlexPod 、作为各种工作负载的基础、并提供了强大、高效且可扩展的架构设计、以满足客户需求。FlexPod 解决方案 是一种经过验证的方法、用于部署Cisco和NetApp技术和产品以构建共享私有云和公共云基础架构。</block>
+  <block id="81f24121c6cbae929d499c6e14adcc6f" category="paragraph"><block ref="81f24121c6cbae929d499c6e14adcc6f" category="inline-link-macro-rx"></block></block>
+  <block id="1fe5ba0c23251f03ded8202a4a98c9fa" category="doc">采用Cisco ACI Multi-Pod的FlexPod 数据中心、采用NetApp MetroCluster IP和VMware vSphere 6.7—部署</block>
+  <block id="8ab6d88062b6d23d4bfc9b25d4f3dc35" category="paragraph">Haseeb Niazi、Cisco Ramesh Issac、Cisco Arvind Ramakrishnan、NetApp</block>
+  <block id="cc4729406ece0e682f70a183dbefb689" category="paragraph">Cisco和NetApp合作推出了一系列FlexPod 解决方案、支持战略数据中心平台。FlexPod 解决方案 提供了一个集成的架构、该架构整合了计算、存储和网络的最佳设计实践、通过验证集成架构以确保各个组件之间的兼容性、从而最大程度地降低IT风险。此外、解决方案 还通过提供书面设计指导、部署指导和支持来解决IT难题、这些指导和支持可在部署的各个阶段(规划、设计和实施)中使用。</block>
+  <block id="e78972a453f8d563512cfdc579b4a5cf" category="paragraph"><block ref="e78972a453f8d563512cfdc579b4a5cf" category="inline-link-macro-rx"></block></block>
+  <block id="b66205427978c3e5781dcb2c7e1978ac" category="paragraph">本文档介绍了Cisco和NetApp FlexPod 解决方案 、这是一种经验证的将Cisco和NetApp技术部署为共享云基础架构的方法。这种经过验证的设计为在FlexPod 上部署VMware vSphere提供了一个框架、VMware vSphere是企业级数据中心中最受欢迎的虚拟化平台。</block>
+  <block id="f4a4c8cab47cb8b471fe7d4150e80978" category="summary">本文档提供了有关为混合云设置FlexPod 数据中心的深入配置和实施准则</block>
+  <block id="c685b67bc70b71ccea4468401604686e" category="doc">适用于多云的FlexPod 数据中心与Cisco CloudCenter和NetApp Data Fabric</block>
+  <block id="5db5da43f655c0072d6d841b3ca6edfe" category="paragraph">NetApp公司Cisco David Arnette Haseeb Niazi</block>
+  <block id="589f841071ea34ed39a46db5dd2bba5e" category="paragraph">本文档提供了有关为混合云设置FlexPod 数据中心的深入配置和实施准则。以下设计要素将此版本的FlexPod 与先前的型号区分开来：</block>
+  <block id="9bc6cd34b9247961b639042bb4b03bca" category="list-text">将Cisco CloudCenter与FlexPod Datacenter集成、并将ACI作为私有云</block>
+  <block id="105a83ea080724c5644dd34cf30507e5" category="list-text">将Cisco CloudCenter与Amazon Web Services (AWS)和Microsoft Azure Resource Manager (MS Azure RM)公共云集成</block>
+  <block id="67d073e64dbbb6ff511f43ace39b116d" category="list-text">在FlexPod 数据中心和公共云之间提供安全连接、以确保虚拟机(VM)之间的流量安全</block>
+  <block id="2547f946ab781f0e26dd1bf0937cbd26" category="list-text">在FlexPod 数据中心和NetApp私有存储(NPS)之间提供安全连接、以传输数据复制流量</block>
+  <block id="6b081eeb6d4c92bb2727fdfc0bffdb57" category="list-text">能够在公共云或私有云中部署应用程序实例、并通过Cisco CloudCenter驱动的流程编排为这些实例提供最新的应用程序数据</block>
+  <block id="45704e92bea3715994156a70f205cf34" category="list-text">在此新的混合云模式下设置、验证和突出显示开发和测试环境的操作方面。</block>
+  <block id="8a4f903b1fac170f9a26c987b4775486" category="paragraph"><block ref="8a4f903b1fac170f9a26c987b4775486" category="inline-link-macro-rx"></block></block>
+  <block id="6153f946715e7aa1a99afea6a18ee2f0" category="summary">Cisco Validated Design (CVD)提供经过设计、测试和记录的系统和解决方案、以促进和改进客户部署。</block>
+  <block id="9b011f56aa715e5bb0fb6cd416b7516a" category="doc">适用于混合云的FlexPod 数据中心与Cisco CloudCenter和NetApp私有存储—设计</block>
+  <block id="1ddef491b641af742dcf8d4633ca7f8d" category="paragraph">Cisco Validated Design (CVD)提供经过设计、测试和记录的系统和解决方案、以促进和改进客户部署。这些设计将广泛的技术和产品融入到了一系列解决方案中、这些解决方案是为满足客户的业务需求而开发的、并为客户从设计到部署提供指导。</block>
+  <block id="d169aae3b890cc84eaee2d45d9bde794" category="paragraph"><block ref="d169aae3b890cc84eaee2d45d9bde794" category="inline-link-macro-rx"></block></block>
+  <block id="cf1c88d1431d832f40440b547fcf1b8f" category="summary">IBM Cloud Private (ICP)是一个内部平台、用于开发和管理适用于云原生和应用程序现代化用例的容器化应用程序</block>
+  <block id="1a2ca38edf6c2b89d0ccfc1c767d53cc" category="doc">采用IBM Cloud Private的FlexPod 数据中心</block>
+  <block id="b7bcbeee80b2f4194969d668553807ef" category="paragraph">Sreenivasa Edula、Cisco Thanachit Wichianchai、IBM Jacky Ben-Bassat、IBM全球联盟、NetApp</block>
+  <block id="bc14dc3e09f70bee2362c600fb4c5ec4" category="paragraph">IBM Cloud Private (ICP)是一个内部平台、用于开发和管理适用于云原生和应用程序现代化用例的容器化应用程序。它是一个基于Kubernetes作为容器编排构建的集成环境、包括一个适用于Docker容器的私有映像存储库、一个管理控制台、一个监控框架、许多基于开源和IBM容器化的应用程序等。将ICP与Cisco和NetApp的融合基础架构FlexPod 相结合、可以简化基础架构的部署和管理。您还可以从提高存储效率、改善数据保护、降低风险以及灵活扩展这种高度可用的企业级基础架构堆栈中受益、以适应新的业务需求以及随时间推移发生的其他变化。</block>
+  <block id="6a14e38a9d5372172558430bef150a45" category="paragraph"><block ref="6a14e38a9d5372172558430bef150a45" category="inline-link-macro-rx"></block></block>
+  <block id="30e82da90f5fcee53ea9d0379bba0ad5" category="sidebar">适用于SAP解决方案 的FlexPod Datacenter与Cisco UCS第三代和NetApp AFF A系列—Deploy结合使用</block>
+  <block id="dd0da1cffaf548ca3cc0fa82d16a442f" category="sidebar">适用于SAP解决方案 的FlexPod 数据中心使用光纤通道SAN与Cisco UCS Manager 4.0和NetApp ONTAP 9.7—设计</block>
+  <block id="1ecc2408e3f0fe09706e40c890aa6717" category="sidebar">采用Cisco ACI、Cisco UCS Manager 4.0和NetApp AFF A系列的适用于SAP解决方案 的FlexPod Datacenter—设计</block>
+  <block id="61c10526fe7403e71d91d53b11709780" category="sidebar">采用Cisco ACI、Cisco UCS Manager 4.0和NetApp AFF A系列的FlexPod Datacenter for SAP解决方案 —Deploy</block>
+  <block id="1b85b8db652d9f63225b38c8ffd60008" category="sidebar">采用Cisco UCS Manager 4.0和采用ONTAP 9.6的NetApp AFF A (CVD)的FlexPod Datacenter for SAP解决方案 —设计</block>
+  <block id="4bb88e4336b3a2ebdf3822d9b1a67b1f" category="sidebar">适用于SAP解决方案 的FlexPod 数据中心使用光纤通道SAN与Cisco UCS Manager 4.0和NetApp ONTAP 9.7</block>
+  <block id="84fdb57e0db45f720a0aaf1a1b445cf3" category="sidebar">适用于SAP解决方案 的FlexPod 数据中心、采用Cisco UCS第三代和NetApp AFF A系列</block>
+  <block id="2b933ce43b7e8b99c04a2f7f88662641" category="sidebar">基于Cisco UCS的Oracle 19c RAC数据库的FlexPod Datacenter和基于光纤通道的NVMe的NetApp AFF —Deploy</block>
+  <block id="f8c27637d4dbd8b2ef866cbfaecc7862" category="sidebar">基于Cisco UCS和NetApp AFF A系列使用Oracle RAC数据库的FlexPod 数据中心—设计</block>
+  <block id="6b2a4cf5057ab44148848b118e80dc23" category="sidebar">FlexPod Datacenter with Oracle RAC on Oracle Linux—Deploy</block>
+  <block id="6a264b20bd890fb794e4600ad592eccc" category="sidebar">适用于Microsoft SQL Server 2019和VMware vSphere 6.7的FlexPod 数据中心—设计</block>
+  <block id="720f172087e1a62efa86dba339dc6f4f" category="sidebar">FlexPod Datacenter with Microsoft SQL Server 2017 on Linux VM running on VMware and Hyper-V—设计</block>
+  <block id="916fefe6ff9279b6602effdfb24b141a" category="sidebar">FlexPod Datacenter with Microsoft SQL Server 2017 on Linux VM running on VMware and Hyper-V—Deploy</block>
+  <block id="f7a49a474eb04f946b50c35e75df9df4" category="sidebar">适用于采用Cisco UCS Mini和NetApp AFF/FAS (NVA)的VMware vSphere 7.0的FlexPod Express</block>
+  <block id="e8be6b01889a5550f41daad097199819" category="sidebar">FlexPod 数据中心、用于将人工智能和机器学习与Cisco UCS 480 ML以及Nvidia T4和vGPU相结合、用于深度学习CVD—设计</block>
+  <block id="2b79086a46b1a3ed8f1642fcf53a76a5" category="sidebar">在采用FlexPod 的Cisco容器平台上部署NetApp Trident CSI插件—Deploy</block>
+  <block id="1c8c4787edc0be322471abd2897c2a2f" category="sidebar">适用于OpenShift容器平台4的FlexPod 数据中心—部署</block>
+  <block id="05fed16ebad17b1dd405f3fe6893ceb7" category="sidebar">采用Docker Datacenter进行容器管理的FlexPod 数据中心—设计</block>
+  <block id="308afef745ababb762628d1d20ba263a" category="sidebar">FlexPod 数据中心、用于将AI和ML与Cisco UCS 480 ML以及NVIDIA T4和vGPU相结合、用于深度学习CVD—Deploy</block>
+  <block id="02cb487d4990729e893f739d1769dbf3" category="sidebar">采用VMware vSphere 7.0和NetApp ONTAP 9.7的FlexPod Datacenter—Deploy</block>
+  <block id="d6f6d3c5018533931c3600a10e657b63" category="sidebar">采用VMware vSphere 6.7 U1、Cisco UCS第四代和NetApp AFF A系列的FlexPod Datacenter—设计</block>
+  <block id="340fa1f87f63e070c848c0a3971065d1" category="sidebar">采用VMware vSphere 6.7 U1、Cisco UCS第四代和NetApp AFF A系列的FlexPod Datacenter—Deploy</block>
+  <block id="547f2b068920d0dde11bc754c475c7e1" category="sidebar">采用Cisco ACI Multi-Pod、NetApp MetroCluster IP和VMware vSphere 6.7的FlexPod Datacenter—Deploy</block>
+  <block id="b3e0099b048c24efc807f9dd8dad5387" category="sidebar">FlexPod Datacenter with IBM Cloud Private with Cisco UCS Manager、NetApp ONTAP 9.3 AFF 和VMware vSphere 6.5U1—设计</block>
+  <block id="2834c2489e66234d739bc68190c533f8" category="sidebar">适用于混合云的FlexPod 数据中心与Cisco CloudCenter和NetApp私有存储—设计</block>
+  <block id="0a60298d1cecc2b46fc00c3b49fad269" category="sidebar">适用于混合云的FlexPod 数据中心与Cisco CloudCenter和NetApp私有存储—Deploy</block>
 </blocks>

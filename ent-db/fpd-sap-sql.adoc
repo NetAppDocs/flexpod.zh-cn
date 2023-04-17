@@ -1,0 +1,15 @@
+---
+sidebar: sidebar 
+permalink: ent-db/fpd-sap-sql.html 
+keywords: flexpod, cisco, white, paper,sap, non-hana, sql 
+summary: 当前的IT行业正在见证数据中心解决方案的重大转型。 
+---
+= 采用SQL的SAP非HANA白皮书—设计
+:allow-uri-read: 
+
+
+当前的IT行业正在见证数据中心解决方案的重大转型。近年来、人们对经过预先验证和设计的数据中心解决方案非常感兴趣。在关键领域引入虚拟化技术对这些解决方案的设计原则和架构产生了重大影响。它允许在裸机系统上运行的许多应用程序迁移到新的虚拟化集成解决方案。FlexPod 是一个经过预先验证和精心设计的数据中心解决方案 、旨在满足IT部门快速变化的需求。Cisco和NetApp合作推出了FlexPod 、它使用一流的计算、网络和存储组件作为各种企业工作负载的基础、包括数据库、企业资源规划(ERP)、客户关系管理(CRM)和Web应用程序。
+
+近年来、IT应用程序、尤其是数据库的整合引起了人们的极大关注。过去几年来、Microsoft SQL Server是最广泛采用和部署的数据库平台。SQL Server数据库经常会出现数据库无序增长的情况、从而导致IT面临诸多挑战、例如服务器利用率低下、许可不正确、安全问题、管理问题以及巨大的运营成本。因此、SQL Server数据库很适合整合到一个更强大、更灵活且更具弹性的平台上。本文档讨论了用于部署和整合SQL Server数据库的FlexPod 参考架构。
+
+link:https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/sap-appservers-flexpod-with-sql.pdf["采用SQL的SAP非HANA白皮书—设计"^]

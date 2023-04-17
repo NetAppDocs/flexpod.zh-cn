@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: ent-db/fpd-sap-ucs-aff.html 
+keywords: flexpod, cisco, data, center, sap, ucs, aff, a-series, tdi, tailored, design 
+summary: '本文档介绍了Cisco和NetApp FlexPod 解决方案 、这是一种经过验证的部署SAP HANA定制数据中心集成(Data Center Integration、TDI)环境的方法。' 
+---
+= 采用Cisco UCS Manager 4.0和NetApp AFF A系列的适用于SAP解决方案 的FlexPod Datacenter—设计
+:allow-uri-read: 
+
+
+NetApp公司Cisco Marco Schoen的Pramod Ramamurthy
+
+本文档介绍了Cisco和NetApp FlexPod 解决方案 、这是一种经过验证的部署SAP HANA定制数据中心集成(Data Center Integration、TDI)环境的方法。此经过验证的设计为实施采用Cisco和NetApp最佳实践的SAP HANA提供了准则和框架。
+
+FlexPod 是一款领先的集成基础架构、可支持广泛的企业工作负载和用例。借助此解决方案 、您可以使用量身定制的数据中心集成模式快速、可靠地部署SAP HANA。
+
+建议的解决方案 架构基于使用统一软件版本的Cisco统一计算系统(Cisco UCS)构建、以支持包含以下组件的Cisco UCS硬件平台：
+
+* Cisco UCS B系列刀片式服务器和Cisco UCS C系列机架式服务器、可使用Intel Optane Data Center Persistent Memory Module (DCPMM)选项进行配置
+* Cisco UCS 6300系列互联阵列
+* Cisco Nexus 9000 系列交换机
+* NetApp全闪存系列存储阵列
+
+
+此外、本文档还对Red Hat Enterprise Linux和适用于SAP HANA的SUSE Linux Enterprise Server进行了验证。
+
+link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_sap_netappaffa_design.html["采用Cisco UCS Manager 4.0和NetApp AFF A系列的适用于SAP解决方案 的FlexPod Datacenter—设计"^]

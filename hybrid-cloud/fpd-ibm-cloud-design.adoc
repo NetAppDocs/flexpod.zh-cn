@@ -1,0 +1,15 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/fpd-ibn-cloud-design.html 
+keywords: cisco, flexpod, ibm, data, center, cloud, private, storage 
+summary: 'IBM Cloud Private (ICP)是一个内部平台、用于开发和管理适用于云原生和应用程序现代化用例的容器化应用程序' 
+---
+= 采用IBM Cloud Private的FlexPod 数据中心
+:allow-uri-read: 
+
+
+Sreenivasa Edula、Cisco Thanachit Wichianchai、IBM Jacky Ben-Bassat、IBM全球联盟、NetApp
+
+IBM Cloud Private (ICP)是一个内部平台、用于开发和管理适用于云原生和应用程序现代化用例的容器化应用程序。它是一个基于Kubernetes作为容器编排构建的集成环境、包括一个适用于Docker容器的私有映像存储库、一个管理控制台、一个监控框架、许多基于开源和IBM容器化的应用程序等。将ICP与Cisco和NetApp的融合基础架构FlexPod 相结合、可以简化基础架构的部署和管理。您还可以从提高存储效率、改善数据保护、降低风险以及灵活扩展这种高度可用的企业级基础架构堆栈中受益、以适应新的业务需求以及随时间推移发生的其他变化。
+
+link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_icp_ucsm32.html["采用IBM Cloud Private的FlexPod 数据中心"^]

@@ -1,0 +1,20 @@
+---
+sidebar: sidebar 
+permalink: ent-db/fpd-sap-aci-ucs.html 
+keywords: flexpod, datacenter, cisco, aci, ucs, aff, a-series 
+summary: 本文档介绍了在FlexPod 基础架构上使用SAP HANA定制的数据中心集成选项的架构和部署过程。 
+---
+= 采用Cisco ACI、Cisco UCS Manager 4.0和NetApp AFF A系列的适用于SAP的FlexPod 数据中心
+:allow-uri-read: 
+
+
+NetApp公司Cisco Marco Schoen的Pramod Ramamurthy
+
+本文档介绍了FlexPod 基础架构上SAP HANA定制的数据中心集成选项的架构和部署过程、该选项包括：
+
+* 由第二代Intel Xeon可扩展处理器支持的Cisco UCS计算系统(Cisco UCS)。
+* 利用Cisco Application Centric Infrastructure (ACI)的交换产品。
+* NetApp A系列AFF 阵列。
+
+
+link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_ACI_sap_netappaffa.html["采用Cisco ACI、Cisco UCS Manager 4.0和NetApp AFF A系列的适用于SAP的FlexPod 数据中心"^]

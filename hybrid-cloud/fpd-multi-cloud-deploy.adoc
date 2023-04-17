@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/multi-cloud-deploy.html 
+keywords: flexpod, cisco, data, fabric, cloudcenter, hybrid, cloud, 
+summary: 本文档提供了有关为混合云设置FlexPod 数据中心的深入配置和实施准则 
+---
+= 适用于多云的FlexPod 数据中心与Cisco CloudCenter和NetApp Data Fabric
+:allow-uri-read: 
+
+
+NetApp公司Cisco David Arnette Haseeb Niazi
+
+本文档提供了有关为混合云设置FlexPod 数据中心的深入配置和实施准则。以下设计要素将此版本的FlexPod 与先前的型号区分开来：
+
+* 将Cisco CloudCenter与FlexPod Datacenter集成、并将ACI作为私有云
+* 将Cisco CloudCenter与Amazon Web Services (AWS)和Microsoft Azure Resource Manager (MS Azure RM)公共云集成
+* 在FlexPod 数据中心和公共云之间提供安全连接、以确保虚拟机(VM)之间的流量安全
+* 在FlexPod 数据中心和NetApp私有存储(NPS)之间提供安全连接、以传输数据复制流量
+* 能够在公共云或私有云中部署应用程序实例、并通过Cisco CloudCenter驱动的流程编排为这些实例提供最新的应用程序数据
+* 在此新的混合云模式下设置、验证和突出显示开发和测试环境的操作方面。
+
+
+link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_hybridcloud.html["适用于多云的FlexPod 数据中心与Cisco CloudCenter和NetApp Data Fabric"^]
