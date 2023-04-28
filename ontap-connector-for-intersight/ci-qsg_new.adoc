@@ -18,6 +18,18 @@ summary: Cisco Intersight 推出了新版本，可为您提供新功能，增强
 
 
 
+== 2023年4月
+
+* 在用户界面的"Inventory"部分的"Policies"页面下添加了"Protection Policies"(SnapMirror)和"Snapshot Policies"选项卡。
+* 已在用户界面的"Inventory"部分下添加NFS客户端页面。
+* 在用户界面的"Storage VMs"页面的"Inventory"部分下添加了"Protected "列。
+* 修改了数据精简信息的报告和显示方式。
+* 在用户界面的"Inventory"部分的"Tier"页面下添加了"Local Tier"和"Cloud Tier"选项卡。
+* 现在、节点列会显示在用户界面的"Inventory"部分的"Ports"页面下的"Name"列后面。
+
+
+
+
 == 2023年1月
 
 
@@ -127,5 +139,5 @@ NOTE: 以上性能指标仅适用于通过 NetApp Active IQ Unified Manager 9.9 
 * 如果您使用的是AIQUM 9.11或更早版本、则通过"集成系统"页面下的"互操作性"选项卡执行的任何检查都无法准确区分IMM和UCSM Cisco组件。要解决此问题描述 问题、请升级到AIQUM 9.12以确保正确识别所有组件。
 * 为了确保在数据收集过程中不会影响可忽略存储清单数据、必须从Active IQ Unified Manager (AIQUM)中删除任何不受支持的ONTAP 集群(即ONTAP 9.7P1以下的版本)。
 * 要成功完成FlexPod 集成系统互操作性查询、所有声称的目标要求AIQUM的最低版本为9.11。
-* 如果使用FQDN将ONTAP 集群添加到AIQ-UM、则不会填充"存储清单检查"页面。用户必须使用IP地址将ONTAP 集群添加到AIQ-UM。
+* 如果使用FQDN将ONTAP 集群添加到AIQUM、则不会填充"存储清单检查"页面。用户必须使用IP地址将ONTAP 集群添加到AIQUM。
 

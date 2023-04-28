@@ -9770,6 +9770,13 @@
   <block id="b3e0099b048c24efc807f9dd8dad5387" category="sidebar">FlexPod Datacenter with IBM Cloud Private with Cisco UCS Manager、NetApp ONTAP 9.3 AFF 和VMware vSphere 6.5U1—设计</block>
   <block id="2834c2489e66234d739bc68190c533f8" category="sidebar">适用于混合云的FlexPod 数据中心与Cisco CloudCenter和NetApp私有存储—设计</block>
   <block id="0a60298d1cecc2b46fc00c3b49fad269" category="sidebar">适用于混合云的FlexPod 数据中心与Cisco CloudCenter和NetApp私有存储—Deploy</block>
-  <block id="b1b25033ea7463aca79f95ef822af033" category="list-text">如果使用FQDN将ONTAP 集群添加到AIQ-UM、则不会填充"存储清单检查"页面。用户必须使用IP地址将ONTAP 集群添加到AIQ-UM。</block>
   <block id="3684bd581345640f9a259d9a0657db7e" category="list-text">NVA-1131-Deploy：采用VMware vSphere 6.7UI的FlexPod Express和采用基于IP的直连存储的NetApp AFF A220 NVA Deploy</block>
+  <block id="904837c9cf9bc52a96ce17d051fddec9" category="section-title">2023年4月</block>
+  <block id="4616e97717152ad6ebe9ea5b5148926e" category="list-text">在用户界面的"Inventory"部分的"Policies"页面下添加了"Protection Policies"(SnapMirror)和"Snapshot Policies"选项卡。</block>
+  <block id="70d106565a3a540dfd0f8bab83e76a38" category="list-text">已在用户界面的"Inventory"部分下添加NFS客户端页面。</block>
+  <block id="8e0535294f5f33af426f147791172241" category="list-text">在用户界面的"Storage VMs"页面的"Inventory"部分下添加了"Protected "列。</block>
+  <block id="bde3fb96ef210104acac308d66ce1c9a" category="list-text">修改了数据精简信息的报告和显示方式。</block>
+  <block id="33f06c93ff0e249c6d028973d21932bc" category="list-text">在用户界面的"Inventory"部分的"Tier"页面下添加了"Local Tier"和"Cloud Tier"选项卡。</block>
+  <block id="cebb5bee9f2c3fd7a29eb3a7ad7f1530" category="list-text">现在、节点列会显示在用户界面的"Inventory"部分的"Ports"页面下的"Name"列后面。</block>
+  <block id="59829409d4681e66c64ba39915db7b13" category="list-text">如果使用FQDN将ONTAP 集群添加到AIQUM、则不会填充"存储清单检查"页面。用户必须使用IP地址将ONTAP 集群添加到AIQUM。</block>
 </blocks>
