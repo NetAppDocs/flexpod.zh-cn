@@ -15,6 +15,7 @@ summary: FlexPod SM-BC 解决方案 的网络配置遵循每个站点的典型 F
 
 link:sm-bcs-compute.html["先前版本：解决方案 验证—计算。"]
 
+[role="lead"]
 FlexPod SM-BC 解决方案 的网络配置遵循每个站点的典型 FlexPod 解决方案 最佳实践。对于站点间连接，解决方案 验证配置会将两个站点上的 FlexPod Nexus 交换机连接在一起，以提供站点间连接，从而扩展两个站点之间的 VLAN 。以下各节重点介绍了用于验证的一些连接和配置。
 
 

@@ -10,6 +10,7 @@ summary: 本文档详细介绍了如何将Cisco UCS C480 ML M5平台集成到Fle
 
 NetApp公司Cisco Arvind Ramakrishnan的Haseeb Niazi
 
+[role="lead"]
 本文档详细介绍了如何将Cisco UCS C480 ML M5平台集成到FlexPod Datacenter解决方案 中、以便在融合基础架构中提供统一的AI和ML功能。通过让客户能够使用人工智能和机器学习功能以及用于管理传统FlexPod 系统的熟悉工具来管理服务器、大大降低了部署深度学习平台的管理开销和成本。此CVD中提供的设计还包括其他Cisco UCS平台、例如具有两个NVIDIA T4 GPU的C220 M5服务器以及配有两个NVIDIA V100 32 Gb PCIe卡的C240 M5服务器、作为处理并发AI和ML工作负载的附加选项。
 
 link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_c480m5l_aiml_design.html["FlexPod 数据中心、用于将人工智能和机器学习与Cisco UCS 480 ML相结合、用于深度学习—设计"^]

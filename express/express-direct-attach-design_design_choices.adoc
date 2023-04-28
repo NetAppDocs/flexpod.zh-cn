@@ -8,6 +8,7 @@ summary: 此页面上列出的技术是在设计此设计的架构过程中选�
 :allow-uri-read: 
 
 
+[role="lead"]
 在设计此设计的架构过程中，我们选择了以下技术。每个技术在 FlexPod Express 基础架构解决方案中都有一个特定用途。
 
 

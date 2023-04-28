@@ -15,6 +15,7 @@ summary: FlexPod 架构可以使用符合 FIPS 140-2 的 Cisco UCS 服务器进�
 
 link:flexpod-fips-control-plane-versus-data-plane.html["上一步：控制平面与数据平面。"]
 
+[role="lead"]
 FlexPod 架构可以使用符合 FIPS 140-2 的 Cisco UCS 服务器进行设计。根据美国SNIST ， Cisco UCS 服务器可以在 FIPS 140-2 1 级合规模式下运行。有关符合 FIPS 的 Cisco 组件的完整列表，请参见 https://www.cisco.com/c/en/us/solutions/industries/government/global-government-certifications/fips-140.html?flt0_general-table0=UCSM["Cisco 的 FIPS 140 页面"^]。Cisco UCS Manager 已通过 FIPS 140-2 验证。
 
 

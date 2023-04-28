@@ -15,6 +15,7 @@ summary: 本节显示了使用 Cromwell 引擎执行 GATK 后的输出。
 
 link:flexpod-genomics-appendix-b.html["11fffe01d469840980d9b9a5f45bf9ed"]
 
+[role="lead"]
 使用 Cromwell 引擎执行 GATK 后，生成了以下示例输出。
 
 ....

@@ -10,6 +10,7 @@ summary: 本文档提供了有关为混合云设置FlexPod 数据中心的深入
 
 NetApp公司Cisco David Arnette Haseeb Niazi
 
+[role="lead"]
 本文档提供了有关为混合云设置FlexPod 数据中心的深入配置和实施准则。以下设计要素将此版本的FlexPod 与先前的型号区分开来：
 
 * 将Cisco CloudCenter与FlexPod Datacenter集成、并将ACI作为私有云

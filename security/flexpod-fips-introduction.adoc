@@ -15,6 +15,7 @@ summary: 本文档对基于 Cisco Unified Computing System （ Cisco UCS ）， 
 
 NetApp Cisco 公司 John McAbel 的 JayaKishore Esanakula
 
+[role="lead"]
 《经济和临床健康健康信息技术法案》（ HITECH ）要求对经联邦信息处理标准（ FIPS ） 140-2 验证的电子受保护健康信息（ ePHI ）进行加密。要获得 " 提升互操作性计划 " （以前称为 " 有意义的使用奖励计划 " ）认证，运行状况信息技术（ HIT ）应用程序和软件必须符合 FIPS 140-2 的要求。符合条件的提供商和医院必须使用符合 FIPS 140-2 （ 1 级）标准的命中率来获得医疗保健和医疗辅助奖励，并避免从医疗保健和医疗辅助中心（ CMS ）获得报销处罚。FIPS 140-2 认证加密算法符合作为技术保障的要求 https://www.hhs.gov/hipaa/for-professionals/security/laws-regulations/index.html["安全规则"^] 《健康信息可移植性和责任法案》（ HIPAA ）。
 
 FIPS 140-2 属于美国为硬件，软件和固件中的加密模块设置安全要求以保护敏感信息的政府标准。美国要求遵守本标准政府机构， IT 也经常用于金融服务和医疗保健等受监管行业。本技术报告有助于读者深入了解 FIPS 140-2 安全标准。它还有助于受众了解医疗保健组织面临的各种威胁。最后，该技术报告有助于了解在 FlexPod 融合基础架构上部署符合 FIPS 140-2 标准的 FlexPod 系统如何帮助保护医疗保健资产的安全。

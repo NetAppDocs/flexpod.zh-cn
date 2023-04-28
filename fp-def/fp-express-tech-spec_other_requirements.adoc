@@ -13,6 +13,7 @@ summary: 下面列出了 FlexPod Express 的其他要求。
 :imagesdir: ./../media/
 
 
+[role="lead"]
 FlexPod Express 的其他要求包括：
 
 * 所有设备都需要有效的支持合同，包括：

@@ -15,6 +15,7 @@ summary: 全球许多医疗保健组织都将 FlexPod 作为一个通用平台�
 
 link:flexpod-genomics-appendix-d-gpu-setup.html["上一步： GPU 设置。"]
 
+[role="lead"]
 全球许多医疗保健组织都将 FlexPod 作为一个通用平台进行了标准化。借助 FlexPod ，您可以放心地部署医疗保健功能。采用 NetApp ONTAP 的 FlexPod 标配，能够即装即用地实施一组行业领先的协议。无论对给定患者运行基因组学的请求来自何处， FlexPod 平台都标配了互操作性，可访问性，可用性和可扩展性。在 FlexPod 平台上实现标准化后，创新文化将具有传染性。
 
 

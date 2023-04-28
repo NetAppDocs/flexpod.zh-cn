@@ -13,6 +13,7 @@ summary: 本节介绍每个 FlexPod 快速组件的其他重要技术规格。
 :imagesdir: ./../media/
 
 
+[role="lead"]
 本节介绍每个 FlexPod 快速组件的其他重要技术规格。
 
 

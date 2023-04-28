@@ -13,6 +13,7 @@ summary: 本节介绍 NetApp ONTAP 数据管理软件以及适用于 Cisco UCS �
 :imagesdir: ./../media/
 
 
+[role="lead"]
 本节介绍 NetApp ONTAP 数据管理软件以及适用于 Cisco UCS 和 Cisco Nexus 的工具的主要功能，您可以使用这些功能有效地保护和抵御勒索软件攻击。
 
 

@@ -15,6 +15,7 @@ summary: 在此解决方案 中、我们使用NetApp Astra产品组合为在Flex
 
 link:flexpod-rho-cvo-application-recovery-with-remote-backups.html["先前：使用远程备份恢复应用程序。"]
 
+[role="lead"]
 在此解决方案 中、我们使用NetApp Astra产品组合为在FlexPod 和AWS上运行的容器化应用程序实施了保护计划。NetApp Astra控制中心和Astra Trident以及Cloud Volumes ONTAP 、Red Hat OpenShift和FlexPod 基础架构构成了此解决方案 的核心组件。
 
 我们展示了通过捕获快照保护应用程序的能力、并执行完整备份来在云和内部环境中运行的不同K8s集群之间还原应用程序。

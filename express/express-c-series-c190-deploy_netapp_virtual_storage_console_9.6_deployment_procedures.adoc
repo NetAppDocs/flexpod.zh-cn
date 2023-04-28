@@ -13,6 +13,7 @@ summary: 本节介绍 NetApp 虚拟存储控制台（ VSC ）的部署过程。
 :imagesdir: ./../media/
 
 
+[role="lead"]
 本节介绍 NetApp 虚拟存储控制台（ VSC ）的部署过程。
 
 

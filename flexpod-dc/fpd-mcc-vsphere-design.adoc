@@ -10,6 +10,7 @@ summary: 本文档介绍了如何将Cisco ACI Multi-Pod和NetApp MetroCluster IP
 
 NetApp公司Cisco Arvind Ramakrishnan的Haseeb Niazi
 
+[role="lead"]
 本文档介绍了如何将Cisco ACI Multi-Pod和NetApp MetroCluster IP解决方案 集成到FlexPod 数据中心中、以提供高度可用的多数据中心解决方案。利用多数据中心架构、可以利用无中断工作负载移动性在两个数据中心之间平衡工作负载、从而无需持续中断即可在站点之间迁移服务。
 
 采用ACI Multi-Pod和NetApp MetroCluster IP解决方案 的FlexPod 具有以下优势：

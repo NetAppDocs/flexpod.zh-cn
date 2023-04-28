@@ -15,6 +15,7 @@ summary: 我们可以使用控制器执行Terraform计划。如果您已经使�
 
 link:gcp-ncvo-dr-workflow.html["上一步：灾难恢复工作流。"]
 
+[role="lead"]
 我们可以使用控制器执行Terraform计划。如果您已经使用ICO工作流执行了Terraform计划、则可以跳过本节。
 
 

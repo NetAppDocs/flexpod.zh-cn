@@ -10,6 +10,7 @@ summary: 本文档介绍了在FlexPod 基础架构上使用SAP HANA定制的数�
 
 NetApp公司Cisco Marco Schoen的Pramod Ramamurthy
 
+[role="lead"]
 本文档介绍了FlexPod 基础架构上的SAP HANA定制数据中心集成选项的架构和部署流程、该选项由Cisco计算和交换产品组成、这些产品利用了行业领先的软件定义网络解决方案 (SDN) Cisco Application Centric Infrastructure (ACI)以及NetApp A系列AFF 阵列。本文档旨在展示设计原则以及SAP HANA部署的详细配置步骤。
 
 link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_saphana_aci_UCSM32.html["在采用SLES 12 SP3和RHEL 7.4的Cisco UCS M5服务器上、采用Cisco ACI的FlexPod Datacenter for SAP解决方案"^]

@@ -13,6 +13,7 @@ summary: FlexPod 数据中心配置具有最低硬件要求，包括但不限于
 :imagesdir: ./../media/
 
 
+[role="lead"]
 FlexPod 数据中心配置具有最低硬件要求，包括但不限于交换机，互联阵列，服务器和 NetApp 存储控制器。
 
 您必须使用 Cisco UCS 服务器。C 系列和 B 系列服务器均已在经过验证的设计中使用。Cisco Nexus 阵列扩展器（ FEX ）是 C 系列服务器的可选配置。

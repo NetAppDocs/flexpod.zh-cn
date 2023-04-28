@@ -13,6 +13,7 @@ summary: 使用 FC 作为数据网络协议时，请在每个存储控制器上�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 使用 FC 作为数据网络协议时，请在每个存储控制器上创建两个启动程序组（ igroup ）。第一个 igroup 包含托管 MEDITECH 主机 VM 的 VMware ESXi 服务器上 FC 主机接口卡的 WWPN （对于 MEDITECH 为 igroup ）。
 
 您必须根据环境设置设置 MEDITECH igroup 操作系统类型。例如：

@@ -10,6 +10,7 @@ summary: '本文档介绍了在NetApp AFF A400存储上使用NetApp ONTAP 9.7的
 
 NetApp公司Cisco Marco Schoen的Pramod Ramamurthy
 
+[role="lead"]
 本文档介绍了在NetApp AFF A400存储上使用NetApp ONTAP 9.7的Cisco和NetApp FlexPod Datacenter、以及采用适用于SAP HANA的第二代Intel Xeon可扩展处理器的Cisco UCS Manager统一软件版本4.1 (1)。
 
 采用NetApp ONTAP 9.7和Cisco UCS统一软件版本4.1 (1)的FlexPod 数据中心是一种预先设计的最佳实践数据中心架构、它基于Cisco统一计算系统(Cisco UCS)、Cisco Nexus 9000系列交换机、MDS 9000多层光纤交换机、 以及运行ONTAP 9.7存储操作系统的NetApp AFF A系列存储阵列。

@@ -15,6 +15,7 @@ summary: 借助Astra、您可以进行完整的应用程序一致的备份、用
 
 link:flexpod-rho-cvo-solution-validation_overview.html["上一步：解决方案 验证概述。"]
 
+[role="lead"]
 借助Astra、您可以进行完整的应用程序一致的备份、用于将应用程序及其数据还原到在内部数据中心或公有 云中运行的不同Kubernetes集群。
 
 要验证应用程序恢复是否成功、请模拟FlexPod 系统上运行的应用程序的内部故障、并使用远程备份将应用程序还原到云中运行的K8s集群。

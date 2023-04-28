@@ -17,6 +17,7 @@ NetApp 公司 Alan Cowles
 
 与以下合作伙伴：image:cisco logo.png["错误：缺少图形映像"]
 
+[role="lead"]
 本技术报告详细介绍的解决方案是 NetApp Cloud Insights 服务的配置，用于监控运行 NetApp ONTAP 的 NetApp AFF A800 存储系统，该存储系统是作为 FlexPod Datacenter 解决方案的一部分部署的。
 
 

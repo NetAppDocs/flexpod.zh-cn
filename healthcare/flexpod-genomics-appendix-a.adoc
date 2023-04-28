@@ -15,6 +15,7 @@ summary: 本节介绍 GATK 的 JAR 文件输出。
 
 link:flexpod-genomics-genomics---gatk-setup-and-execution.html["上一篇：基因组学— GATK 设置和执行。"]
 
+[role="lead"]
 使用 Jar 文件执行 GATK 会生成以下示例输出。
 
 ....

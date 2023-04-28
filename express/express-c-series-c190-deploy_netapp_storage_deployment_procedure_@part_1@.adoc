@@ -13,6 +13,7 @@ summary: 本节介绍 NetApp AFF 存储部署操作步骤。
 :imagesdir: ./../media/
 
 
+[role="lead"]
 本节介绍 NetApp AFF 存储部署操作步骤。
 
 

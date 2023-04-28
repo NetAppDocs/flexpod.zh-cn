@@ -13,6 +13,7 @@ summary: FlexPod 快速平台支持本节中列出的存储操作系统。
 :imagesdir: ./../media/
 
 
+[role="lead"]
 FlexPod Express 支持运行 NetApp ONTAP 或 SANtricity 操作系统的存储系统。
 
 

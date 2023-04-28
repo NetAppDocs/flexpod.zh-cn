@@ -15,6 +15,7 @@ summary: AWS上会部署一个单独的自管理OpenShift容器平台4集群作�
 
 link:flexpod-rho-cvo-flexpod-for-openshift-container-platform-4-bare-metal-installation.html["先前版本：适用于OpenShift容器平台4的FlexPod 裸机安装。"]
 
+[role="lead"]
 AWS上会部署一个单独的自管理OpenShift容器平台4集群作为灾难恢复站点。主节点和工作节点跨越三个可用性区域、以实现高可用性。
 
 image:flexpod-rho-cvo-image10.png["错误：缺少图形映像"]

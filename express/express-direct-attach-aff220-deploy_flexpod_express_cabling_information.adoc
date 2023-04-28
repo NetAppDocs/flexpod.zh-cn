@@ -13,6 +13,7 @@ summary: 下表介绍了参考验证布线。
 :imagesdir: ./../media/
 
 
+[role="lead"]
 下表介绍了参考验证布线。
 
 下表列出了 Cisco Nexus 交换机 31108PCV A 的布线信息

@@ -13,6 +13,7 @@ summary: 本节介绍在 MEDITECH 环境中可能会发现的计算和存储工�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 本节介绍在 MEDITECH 环境中可能会发现的计算和存储工作负载类型。
 
 

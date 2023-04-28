@@ -13,6 +13,7 @@ summary: 本节详细介绍了在 FlexPod 快速配置中安装 VMware ESXi 6.7 
 :imagesdir: ./../media/
 
 
+[role="lead"]
 本节详细介绍了在 FlexPod 快速配置中安装 VMware ESXi 6.7 的过程。下面的部署过程已进行自定义，以包括前面几节所述的环境变量。
 
 在此类环境中安装 VMware ESXi 的方法有多种。此操作步骤使用适用于 Cisco UCS C 系列服务器的 CIMC 界面的虚拟 KVM 控制台和虚拟介质功能，将远程安装介质映射到每个服务器。

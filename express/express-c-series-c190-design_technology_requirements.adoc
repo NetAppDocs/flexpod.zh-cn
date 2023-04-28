@@ -8,6 +8,7 @@ summary: FlexPod Express 需要硬件和软件组件的组合，具体取决于�
 :allow-uri-read: 
 
 
+[role="lead"]
 FlexPod Express 需要硬件和软件组件的组合，具体取决于所选虚拟机管理程序和网络速度。此外， FlexPod Express 还以两个单元的形式列出了向系统添加虚拟机管理程序节点所需的硬件组件。
 
 

@@ -8,6 +8,7 @@ summary: 本节中列出的技术是在架构设计阶段选择的。每个技�
 :allow-uri-read: 
 
 
+[role="lead"]
 本节中列出的技术是在架构设计阶段选择的。每个技术在 FlexPod Express 基础架构解决方案中都有一个特定用途。
 
 

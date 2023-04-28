@@ -15,6 +15,7 @@ summary: FlexPod SM-BC 解决方案 的设计和实施详细信息取决于具�
 
 link:sm-bcs-flexpod-sm-bc-solution.html["先前版本： FlexPod SM-BC 解决方案 。"]
 
+[role="lead"]
 FlexPod SM-BC 解决方案 的设计和实施详细信息取决于具体的 FlexPod 情况配置和解决方案 目标。在定义了一般业务连续性要求之后，可以通过以下方式创建 FlexPod SM-BC 解决方案 ：使用两个新的 FlexPod 系统实施全新的解决方案 ，在另一个站点添加新的 FlexPod 以与现有 FlexPod 配对，或者将两个现有 FlexPod 系统配对在一起。
 
 由于 FlexPod 解决方案在配置方面具有灵活性，因此可以使用所有受支持的 FlexPod 配置和组件。本节其余部分将提供有关对基于 VMware 的虚拟基础架构解决方案 执行实施验证的信息。除了与 SM-BC 相关的方面之外，此实施遵循标准 FlexPod 部署流程。请查看适用于您的特定配置的可用 FlexPod CVD 和 NVA ，了解一般 FlexPod 实施详细信息。

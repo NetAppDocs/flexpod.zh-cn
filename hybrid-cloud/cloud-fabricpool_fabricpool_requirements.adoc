@@ -13,6 +13,7 @@ summary: FabricPool 要求使用 ONTAP 9.2 或更高版本，并在本节列出�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 FabricPool 要求使用 ONTAP 9.2 或更高版本，并在本节列出的任何平台上使用 SSD 聚合。其他 FabricPool 要求取决于所附加的云层。对于容量固定且相对较小的入门级 AFF 平台，例如 NetApp AFF C190 ， FabricPool 可以非常高效地将非活动数据移至云层。
 
 

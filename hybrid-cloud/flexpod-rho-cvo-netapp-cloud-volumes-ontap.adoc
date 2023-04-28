@@ -15,6 +15,7 @@ summary: 本节介绍如何在AWS上部署Cloud Volumes ONTAP 和Astra Trident�
 
 link:flexpod-rho-cvo-red-hat-openshift-on-aws.html["先前版本：AWS上的Red Hat OpenShift。"]
 
+[role="lead"]
 NetApp Cloud Volumes ONTAP 实例部署在AWS上、并用作Astra Trident的后端存储。在添加Cloud Volumes ONTAP 工作环境之前、必须先部署连接器。如果您尝试在没有连接器的情况下创建首个Cloud Volumes ONTAP 工作环境、Cloud Manager将提示您。要在AWS中部署Connector、请参见 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html["创建连接器"^]。
 
 要在AWS上部署Cloud Volumes ONTAP 、请参见 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-aws.html["AWS快速入门"^]。

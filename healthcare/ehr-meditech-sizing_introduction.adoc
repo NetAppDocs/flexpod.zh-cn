@@ -17,6 +17,7 @@ Branon Agee ， John Duignan ， NetApp Mike Brennan ， Jon Ebmeir ， Cisco
 
 与以下合作伙伴：image:cisco logo.png["错误：缺少图形映像"]
 
+[role="lead"]
 本报告为 MEDITECH EHR 应用程序软件环境的 FlexPod 规模估算提供了指导。
 
 

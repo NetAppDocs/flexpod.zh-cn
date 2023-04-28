@@ -15,6 +15,7 @@ summary: 借助 FlexPod ， Cisco 和 NetApp 创建了一个灵活且可扩展�
 
 link:nvme-vsphere-test-results.html["上一步：测试结果。"]
 
+[role="lead"]
 对于延迟不到 1 毫秒的顺序读取工作负载，此解决方案的观察吞吐量为 14 GBps 和 220 K IOPS 。对于随机读取工作负载，吞吐量达到了 9.5 GBps 和 1.25 万次 IOPS 。FlexPod 通过 FC-NVMe 提供这种性能的能力可以满足任何任务关键型应用程序的需求。
 
 采用 VMware vSphere 7.0 U2 的 FlexPod 数据中心是为各种 IT 工作负载部署 FC-NVMe 的最佳共享基础架构基础，可为需要此功能的应用程序提供高性能存储访问。随着 FC-NVMe 不断发展，包括高可用性，多路径和额外的操作系统支持， FlexPod 非常适合作为首选平台，可提供支持这些功能所需的可扩展性和可靠性。

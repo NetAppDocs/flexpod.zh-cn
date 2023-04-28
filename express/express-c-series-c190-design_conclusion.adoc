@@ -8,6 +8,7 @@ summary: 经过 FlexPod 快速验证的设计是一种简单而有效的解决�
 :allow-uri-read: 
 
 
+[role="lead"]
 经过 FlexPod 快速验证的设计是一种简单而有效的解决方案，它使用行业领先的组件。通过扩展虚拟机管理程序平台并为其提供选项， FlexPod Express 可以根据特定业务需求进行定制。FlexPod Express 专为中小型企业，远程办公室和分支机构以及其他需要专用解决方案的企业而设计。
 
 link:express-c-series-c190-design_where_to_find_additional_information.html["下一步：从何处查找追加信息。"]

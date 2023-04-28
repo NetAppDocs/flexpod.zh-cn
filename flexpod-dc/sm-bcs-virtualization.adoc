@@ -15,6 +15,7 @@ summary: 在多站点 FlexPod SM-BC 解决方案 中，一个 VMware vCenter 可
 
 link:sm-bcs-storage.html["先前版本：解决方案 验证—存储。"]
 
+[role="lead"]
 在多站点 FlexPod SM-BC 解决方案 中，一个 VMware vCenter 可管理整个解决方案 的虚拟基础架构资源。两个数据中心中的主机都属于一个 VMware HA 集群，该集群跨越两个数据中心。主机可以访问 NetApp SM-BC 解决方案 ，在此可以从两个站点访问具有定义的 SM-BC 关系的存储。
 
 SM-BC 解决方案 存储符合 VMware vSphere Metro Storage Cluster （ VMSC ）功能中的统一访问模式，可避免灾难和停机。为了获得最佳虚拟机性能，虚拟机磁盘应托管在本地 NetApp AFF A250 系统上，以便在正常操作下最大限度地减少 WAN 链路之间的延迟和流量。

@@ -13,6 +13,7 @@ summary: 您可以观看使用 NetApp Cloud Insights 的视频演示。
 :imagesdir: ./../media/
 
 
+[role="lead"]
 您可以观看有关使用 NetApp Cloud Insights 评估内部环境中资源的视频演示 https://netapp.hubs.vidyard.com/watch/1ycNWx4hzFsaV1dQHFyxY2?["此处"^]。
 
 您可以观看使用 NetApp Cloud Insights 监控基础架构并为基础架构设置警报阈值的视频演示 https://netapp.hubs.vidyard.com/watch/DgUxcxES3Ujdqe1JhhkfAW["此处"^]。

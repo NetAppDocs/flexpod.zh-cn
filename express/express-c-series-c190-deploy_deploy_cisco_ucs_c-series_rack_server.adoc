@@ -13,6 +13,7 @@ summary: 本节详细介绍了用于配置 Cisco UCS C 系列独立机架服务�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 本节详细介绍了用于配置 Cisco UCS C 系列独立机架服务器以在 FlexPod 快速配置中使用的操作步骤。
 
 

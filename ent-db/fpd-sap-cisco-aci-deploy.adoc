@@ -10,6 +10,7 @@ summary: 本文档介绍了在FlexPod 基础架构上使用SAP HANA定制的数�
 
 NetApp公司Cisco Marco Schoen的Pramod Ramamurthy
 
+[role="lead"]
 本文档介绍了FlexPod 基础架构上SAP HANA定制的数据中心集成选项的架构和部署过程、该选项包括：
 
 * 由第二代Intel Xeon可扩展处理器支持的Cisco UCS计算系统(Cisco UCS)。

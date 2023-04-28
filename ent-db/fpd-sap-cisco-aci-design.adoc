@@ -10,6 +10,7 @@ summary: '本文档介绍了Cisco ACI集成的FlexPod 解决方案 、它是一�
 
 NetApp公司Cisco Marco Schoen的Pramod Ramamurthy
 
+[role="lead"]
 本文档介绍了Cisco ACI集成的FlexPod 解决方案 、它是一种经过验证的方法、用于部署SAP HANA定制的数据中心集成(Data Center Integration、TDI)环境。此经过验证的设计为实施采用Cisco和NetApp最佳实践的SAP HANA提供了准则和框架。
 
 建议的解决方案 架构基于使用统一软件版本的Cisco统一计算系统(Cisco UCS)构建、以支持包含以下组件的Cisco UCS硬件平台：

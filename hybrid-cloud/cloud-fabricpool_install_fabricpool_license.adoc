@@ -13,6 +13,7 @@ summary: 获取 NetApp 许可证文件后，您可以使用 OnCommand System Man
 :imagesdir: ./../media/
 
 
+[role="lead"]
 获取 NetApp 许可证文件后，您可以使用 OnCommand System Manager 进行安装。要安装许可证文件，请完成以下步骤：
 
 . 单击配置。

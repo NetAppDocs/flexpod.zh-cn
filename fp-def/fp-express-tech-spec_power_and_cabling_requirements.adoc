@@ -13,6 +13,7 @@ summary: 本节介绍 FlexPod 快速设计的电源和最低布线要求。
 :imagesdir: ./../media/
 
 
+[role="lead"]
 本节介绍 FlexPod 快速设计的电源和最低布线要求。
 
 

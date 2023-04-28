@@ -13,6 +13,7 @@ summary: 要部署 Cloud Insights for FlexPod ，必须完成以下任务。
 :imagesdir: ./../media/
 
 
+[role="lead"]
 要部署解决方案，您必须完成以下任务：
 
 . 注册 Cloud Insights 服务

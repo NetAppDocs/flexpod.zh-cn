@@ -13,6 +13,7 @@ summary:
 :imagesdir: ./../media/
 
 
+[role="lead"]
 默认情况下，卷使用无卷分层策略。创建卷后，可以使用 OnCommand 系统管理器或 ONTAP 命令行界面更改卷分层策略。
 
 在与 FlexPod 结合使用时， FabricPool 提供了三种卷分层策略：自动，仅 Snapshot 和无。

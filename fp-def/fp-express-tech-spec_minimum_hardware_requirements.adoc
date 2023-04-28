@@ -13,6 +13,7 @@ summary: 本节介绍不同版本的 FlexPod Express 的最低硬件要求。
 :imagesdir: ./../media/
 
 
+[role="lead"]
 本节介绍不同版本的 FlexPod Express 的最低硬件要求。
 
 

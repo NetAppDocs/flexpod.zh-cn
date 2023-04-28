@@ -13,6 +13,7 @@ summary: 要配置 VMware vCenter Server 6.7 和 vSphere 集群，请完成此�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 要配置 VMware vCenter Server 6.7 和 vSphere 集群，请完成以下步骤：
 
 . 导航到 ` https://\<<FQDN 或 vCenter 的 IP >/vsphere-client/` 。

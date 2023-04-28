@@ -8,6 +8,7 @@ summary: FlexPod 参考架构以经过 Cisco 验证的设计或经过 NetApp 验
 :allow-uri-read: 
 
 
+[role="lead"]
 此 FlexPod Express 解决方案是 FlexPod 融合基础架构计划的一部分。
 
 

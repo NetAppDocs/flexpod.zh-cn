@@ -13,6 +13,7 @@ summary: 本节介绍在 ONTAP 8.3 及更高版本上部署的相关信息。
 :imagesdir: ./../media/
 
 
+[role="lead"]
 本节介绍在 ONTAP 8.3 及更高版本上部署的相关信息。
 
 

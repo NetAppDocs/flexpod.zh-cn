@@ -13,6 +13,7 @@ summary: 对于 ESXi 主机端配置，请像运行任何企业数据库工作�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 对于 ESXi 主机端配置，按照运行任何企业数据库工作负载的方式配置 VMware 主机：
 
 * 适用于 VMware vSphere 的 VSC 会检查并设置最适合 NetApp 存储系统的 ESXi 主机多路径设置和 HBA 超时设置。VSC 设置的值基于 NetApp 的严格内部测试。

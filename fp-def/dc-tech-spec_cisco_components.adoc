@@ -13,6 +13,7 @@ summary: Cisco 为 FlexPod 的设计和架构做出了重大贡献，涵盖了�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Cisco 为 FlexPod 的设计和架构做出了重大贡献，涵盖了解决方案的计算层和网络层。本节介绍可用于 FlexPod 的 Cisco UCS 和 Cisco Nexus 选项。FlexPod 既支持 Cisco UCS B 系列服务器，也支持 C 系列服务器。
 
 

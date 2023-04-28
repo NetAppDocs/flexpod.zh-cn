@@ -13,6 +13,7 @@ summary: 以下人员为本指南的创建做出了贡献。
 :imagesdir: ./../media/
 
 
+[role="lead"]
 以下人员为本指南的创建做出了贡献。
 
 * NetApp 技术营销工程师布兰登 · 阿吉

@@ -15,6 +15,7 @@ summary: 采用 SM-BC 的 FlexPod 数据中心采用主动 - 主动数据中心�
 
 link:sm-bcs-validated-scenarios.html["先前版本：解决方案 验证—经验证的场景。"]
 
+[role="lead"]
 采用 SM-BC 的 FlexPod 数据中心采用主动 - 主动数据中心设计，为业务关键型工作负载提供业务连续性和灾难恢复。解决方案 通常会将部署在不同地理位置分散的城域中的两个数据中心互连在一起。NetApp SM-BC 解决方案 使用同步复制来保护业务关键型数据服务免受站点故障的影响。解决方案 要求两个 FlexPod 部署站点的往返网络延迟低于 10 毫秒。
 
 部署在第三个站点上的 NetApp ONTAP 调解器可监控 SM-BC 解决方案 ，并在检测到站点灾难时实现自动故障转移。采用 VMware HA 和延伸型 VMware vSphere Metro Storage Cluster 的 VMware vCenter 配置可与 NetApp SM-BC 无缝结合使用，从而使解决方案 能够满足所需的零 RPO 和接近零 RTO 目标。

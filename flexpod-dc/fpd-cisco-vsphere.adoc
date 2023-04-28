@@ -10,6 +10,7 @@ summary: '本文档介绍采用NetApp ONTAP 9.6的Cisco和NetApp FlexPod Datacen
 
 NetApp公司Cisco Sree Lakshmi Lan的John George
 
+[role="lead"]
 本文档介绍采用NetApp ONTAP 9.6的Cisco和NetApp FlexPod Datacenter、采用第二代Intel Xeon可扩展处理器的Cisco UCS Manager统一软件版本4.0 (4)以及VMware vSphere 6.7 U2。Cisco UCS Manager (UCSM) 4.0 (4)提供以下整合支持：
 
 * 所有当前的Cisco UCS互联阵列型号：6200、6300、6324 (Cisco UCS Mini)

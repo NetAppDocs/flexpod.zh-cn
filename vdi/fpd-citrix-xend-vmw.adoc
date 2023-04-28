@@ -10,6 +10,7 @@ summary: '本文档提供了一个参考架构、用于使用基于Cisco UCS且�
 
 NetApp公司Cisco Chris Rodrigueev的Vadim Lebedev
 
+[role="lead"]
 本文档提供了一个参考架构、用于使用基于Cisco UCS且采用NetApp全闪存FAS (AFF) A300存储和VMware vSphere ESXi 6.5虚拟机管理程序平台的Citrix XenApp/XenDesktop 7.15来设计虚拟桌面和应用程序。
 
 桌面和应用程序虚拟化的格局正在不断变化。全新的M5高性能Cisco UCS刀片式服务器和Cisco UCS统一网络结构作为FlexPod 成熟的基础架构的一部分、与最新一代的NetApp AFF 存储相结合、形成了一个更紧凑、更强大、更可靠、更高效的平台。

@@ -15,6 +15,7 @@ summary:
 
 link:nvme-vsphere-testing-approach.html["上一篇：测试方法。"]
 
+[role="lead"]
 测试包括运行 FIO 工作负载，以测量 FC-NVMe 在 IOPS 和延迟方面的性能。
 
 下图显示了我们在使用 8 KB 块大小运行 100% 随机读取工作负载时的结果。

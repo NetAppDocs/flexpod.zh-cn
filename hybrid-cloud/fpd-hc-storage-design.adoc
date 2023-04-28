@@ -10,6 +10,7 @@ summary: 'Cisco Validated Design (CVD)提供经过设计、测试和记录的系
 
 NetApp公司Cisco David Arnette Haseeb Niazi
 
+[role="lead"]
 Cisco Validated Design (CVD)提供经过设计、测试和记录的系统和解决方案、以促进和改进客户部署。这些设计将广泛的技术和产品融入到了一系列解决方案中、这些解决方案是为满足客户的业务需求而开发的、并为客户从设计到部署提供指导。
 
 link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_hybridcloud_design.html["适用于混合云的FlexPod 数据中心与Cisco CloudCenter和NetApp私有存储—设计"^]

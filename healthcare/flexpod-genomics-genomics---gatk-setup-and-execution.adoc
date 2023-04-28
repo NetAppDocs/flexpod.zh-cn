@@ -15,6 +15,7 @@ summary: 本节介绍如何设置 FlexPod 和 GATK 以及如何使用 Cromwell �
 
 link:flexpod-genomics-solution-infrastructure-hardware-and-software-components.html["先前版本：解决方案基础架构硬件和软件组件。"]
 
+[role="lead"]
 根据国家人类基因组研究所（ https://www.genome.gov/about-genomics/fact-sheets/A-Brief-Guide-to-Genomics["NHGRI"^]）， " 基因组学是对一个人的所有基因（基因组）的研究，包括这些基因相互作用以及与人的环境相互作用。"
 
 根据 https://www.genome.gov/about-genomics/fact-sheets/A-Brief-Guide-to-Genomics["NHGRI"^]" 去氧碳核克利酸（ Deoxyribonucleic acid ， DNA/ 脱氧核素）是一种化合物，其中包含开发和指导几乎所有生物体活动所需的说明。DNA 分子由两个绞合成对的线组成，通常称为双螺旋。 " " 一个生物体的一整套基因称为其基因组。 "

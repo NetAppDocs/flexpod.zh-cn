@@ -13,4 +13,5 @@ summary: FabricPool 经济计算器可通过独立 IT 分析机构 Evaluator Gro
 :imagesdir: ./../media/
 
 
+[role="lead"]
 。 https://www.evaluatorgroup.com/FabricPool/["FabricPool 经济计算器"^] 可通过独立 IT 分析机构 Evaluator Group 获得，帮助预测内部和云之间在冷数据存储方面的成本节省。该计算器提供了一个简单的界面，用于确定在性能层上存储不常访问的数据的成本，而不是在数据生命周期的剩余时间将其发送到云层。根据 5 年的计算结果，我们会利用源容量，数据增长，快照容量和冷数据百分比这四个关键因素来确定该时间段内的存储成本。

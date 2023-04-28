@@ -13,6 +13,7 @@ summary: 环境中的 MEDITECH 主机数量决定了在 NetApp FAS 或 AFF 系�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 环境中的 MEDITECH 主机数量决定了在 NetApp FAS 或 AFF 系统中创建的 LUN 数量。硬件配置建议用于指定每个 LUN 的大小。
 
 

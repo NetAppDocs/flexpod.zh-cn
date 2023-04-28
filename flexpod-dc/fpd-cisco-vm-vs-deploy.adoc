@@ -10,6 +10,7 @@ summary: 当前数据中心设计的行业趋势是共享基础架构。
 
 NetApp公司Cisco Scott kovacs的John George
 
+[role="lead"]
 当前数据中心设计的行业趋势是共享基础架构。通过将虚拟化与经过预先验证的IT平台结合使用、企业客户已经踏上了云之旅、从应用程序孤岛向可快速部署的共享基础架构过渡、从而提高了灵活性并降低了成本。Cisco和NetApp携手推出了FlexPod 、该产品使用同类最佳的存储、服务器和网络组件作为各种工作负载的基础、能够快速、自信地部署高效的架构设计。
 
 link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_dc_ontap_97_ucs_4_vmw_vs_67_U3.html["采用Cisco Intersight和NetApp ONTAP 9.7的FlexPod Datacenter—部署"^]

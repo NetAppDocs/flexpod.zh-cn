@@ -13,6 +13,7 @@ summary: Cisco 为 FlexPod 快速设计和架构做出了重大贡献；它为�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Cisco 为 FlexPod 快速设计和架构做出了重大贡献；它为解决方案的计算和网络层做出了贡献。本节介绍可用于 FlexPod Express 的 Cisco UCS 和 Cisco Nexus 组件。
 
 

@@ -15,6 +15,7 @@ summary: FlexPod 基础架构是一个模块化，融合，可选择虚拟化，
 
 link:flexpod-fips-solution-benefits-of-flexpod-converged-infrastructure.html["上一篇： FlexPod 融合基础架构的解决方案 优势。"]
 
+[role="lead"]
 FlexPod 基础架构是一个模块化，融合，可选择虚拟化，可扩展（横向扩展和纵向扩展）以及经济高效的平台。借助 FlexPod 平台，您可以独立横向扩展计算，网络和存储，加快应用程序部署速度。模块化架构支持无中断运行，即使在系统横向扩展和升级活动期间也是如此。
 
 HIT 系统的不同组件要求将数据存储在 SMB/CIFS ， NFS ， ext4 和 NTFS 文件系统中。这一要求意味着基础架构必须通过 NFS ， CIFS 和 SAN 协议提供数据访问。一个 NetApp 存储系统可以支持所有这些协议，因此不再需要采用传统的协议专用存储系统。此外，一个 NetApp 存储系统还可以支持多个命中工作负载，例如 EHRs ， PACS 或 VNA ，基因组学， VDI 等。 具有有保障且可配置的性能级别。

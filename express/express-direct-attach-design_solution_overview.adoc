@@ -8,6 +8,7 @@ summary: FlexPod Express 专为运行混合虚拟化工作负载而设计。它�
 :allow-uri-read: 
 
 
+[role="lead"]
 FlexPod Express 专为运行混合虚拟化工作负载而设计。它面向远程办公室和分支机构以及中小型企业。它也是希望专用解决方案的大型企业的最佳选择。新的 FlexPod Express 解决方案的主要驱动因素是，将 ONTAP 9.5 ， FAS27xx/AFF220 ， VMware vSphere 6.7U1 等新技术添加到 FlexPod Express 中。
 
 下图显示了 FlexPod Express 解决方案中包含的硬件组件。

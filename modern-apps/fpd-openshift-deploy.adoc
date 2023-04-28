@@ -10,6 +10,7 @@ summary: Red Hat OpenShift是一款企业级Kubernetes容器平台、用于管�
 
 NetApp公司Cisco Alan Cowles的Haseeb Niazi
 
+[role="lead"]
 Red Hat OpenShift是一款企业级Kubernetes容器平台、用于管理混合云和多云部署。Red Hat OpenShift容器平台提供了混合云、企业容器以及Kubernetes开发和部署所需的一切。它包括企业级Linux操作系统、容器运行时、网络连接、监控、容器注册表、 身份验证和授权解决方案。
 
 将Red Hat OpenShift与FlexPod Datacenter解决方案 相结合、可以简化容器基础架构的部署和管理。客户可以从提高效率、改善数据保护、降低风险以及灵活扩展这种高可用性企业级基础架构堆栈以满足新业务需求中受益。经过预先验证的融合解决方案 方法可帮助企业实现所有应用程序现代化和数字化转型计划所需的速度、灵活性和扩展性。

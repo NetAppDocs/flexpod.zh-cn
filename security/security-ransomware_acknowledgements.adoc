@@ -13,6 +13,7 @@ summary: 作者谨感谢以下人员为本指南的制定做出的贡献。
 :imagesdir: ./../media/
 
 
+[role="lead"]
 作者谨感谢以下人员为编写本文档提供的支持：
 
 * NetApp 公司的 JORGE Gomez Navarrete

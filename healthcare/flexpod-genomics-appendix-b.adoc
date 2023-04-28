@@ -15,6 +15,7 @@ summary: 本节介绍 ./gatk 输出的执行情况。
 
 link:flexpod-genomics-appendix-a.html["previous ：使用 JAR 文件执行 GATK 的输出。"]
 
+[role="lead"]
 使用 ` 。 /gatk` 脚本执行 GATK 后，生成了以下示例输出。
 
 ....

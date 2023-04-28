@@ -13,6 +13,7 @@ summary: 此 FlexPod Express 解决方案是 FlexPod 融合基础架构计划的
 :imagesdir: ./../media/
 
 
+[role="lead"]
 此 FlexPod Express 解决方案是 FlexPod 融合基础架构计划的一部分。
 
 

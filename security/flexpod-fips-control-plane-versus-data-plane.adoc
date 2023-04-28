@@ -15,6 +15,7 @@ summary: 在实施 FIPS 140-2 策略时，了解要保护的内容非常重要�
 
 link:flexpod-fips-overview-of-fips-140-2.html["先前版本： FIPS 140-2 概述。"]
 
+[role="lead"]
 在实施 FIPS 140-2 策略时，了解要保护的内容非常重要。这可以轻松细分为两个区域：控制平面和数据平面。控制面板是指影响 FlexPod 系统中组件的控制和操作的方面：例如，对 NetApp 存储控制器， Cisco Nexus 交换机和 Cisco UCS 服务器的管理访问。通过限制管理员可用于连接到设备和进行更改的协议和加密网络算法，可以在这一层提供保护。数据平面是指 FlexPod 系统中的实际信息，例如 PHI 。通过对空闲数据进行加密以及对 FIPS 再次进行加密来保护此数据，从而确保使用的加密模块符合标准。
 
 link:flexpod-fips-flexpod-cisco-ucs-compute-and-fips-140-2.html["接下来： FlexPod Cisco UCS 计算和 FIPS 140-2 。"]

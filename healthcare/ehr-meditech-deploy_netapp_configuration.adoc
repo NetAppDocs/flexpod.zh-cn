@@ -13,6 +13,7 @@ summary: 为 MEDITECH 软件环境部署的 NetApp 存储将采用高可用性�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 为 MEDITECH 软件环境部署的 NetApp 存储使用高可用性对配置中的存储控制器。必须通过 FC 协议将存储从两个控制器提供给 MEDITECH 数据库服务器。此配置可提供两个控制器的存储，以便在正常操作期间均匀平衡应用程序负载。
 
 

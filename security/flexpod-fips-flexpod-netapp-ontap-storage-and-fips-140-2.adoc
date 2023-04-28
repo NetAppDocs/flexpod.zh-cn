@@ -15,6 +15,7 @@ summary: NetApp 提供各种硬件，软件和服务，其中可以包括根据�
 
 link:flexpod-fips-flexpod-cisco-networking-and-fips-140-2.html["先前版本： FlexPod Cisco 网络和 FIPS 140-2 。"]
 
+[role="lead"]
 NetApp 提供各种硬件，软件和服务，其中可以包括根据标准验证的加密模块的各种组件。因此， NetApp 使用多种方法在控制平面和数据平面上实现 FIPS 140-2 合规性：
 
 * NetApp 提供的加密模块已通过传输中数据加密和空闲数据加密的 1 级验证。

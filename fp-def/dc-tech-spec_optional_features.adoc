@@ -13,6 +13,7 @@ summary: NetApp 支持多个可选组件，可进一步增强 FlexPod 数据中�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 NetApp 支持多个可选组件，可进一步增强 FlexPod 数据中心架构。以下各小节概述了可选组件。
 
 

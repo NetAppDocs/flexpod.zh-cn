@@ -13,6 +13,7 @@ summary: 本节详细介绍了在 FlexPod 快速配置中安装 VMware vCenter S
 :imagesdir: ./../media/
 
 
+[role="lead"]
 本节详细介绍了在 FlexPod 快速配置中安装 VMware vCenter Server 6.7 的过程。
 
 

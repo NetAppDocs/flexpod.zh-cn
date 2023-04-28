@@ -13,6 +13,7 @@ summary: 本文档提供了有关为 MEDITECH 软件配置 FlexPod 环境的高�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 适用于 MEDITECH 的 FlexPod 软件在各个级别均具有容错功能。系统中没有单点故障。为了获得最佳性能， Cisco 建议使用热备用刀片式服务器。
 
 本文档提供了有关为 MEDITECH 软件配置 FlexPod 环境的高级指导。在本节中，我们将简要介绍一些步骤以及一些示例，以准备 FlexPod 配置中的 Cisco UCS 计算平台要素。本指南的前提条件是，按照中的说明对 FlexPod 配置进行机架安装，供电和布线 https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi65u1_n9fc.html["使用 VMware vSphere 6.5 Update 1 ， NetApp AFF A 系列和 Cisco UCS Manager 3.2 的采用光纤通道存储的 FlexPod 数据中心"^]CVD 。

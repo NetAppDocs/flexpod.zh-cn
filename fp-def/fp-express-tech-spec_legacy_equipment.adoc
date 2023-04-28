@@ -13,6 +13,7 @@ summary: 本节列出了 NetApp 原有磁盘架， FAS 控制器和存储控制�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 下表列出了 NetApp 原有存储控制器选项。
 
 |===

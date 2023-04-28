@@ -15,6 +15,7 @@ summary: 在此解决方案 中、我们使用了NetApp云数据服务、Cloud V
 
 link:gcp-ncvo-solution-validation.html["先前版本：解决方案 验证。"]
 
+[role="lead"]
 在此解决方案 中、我们使用了NetApp云数据服务、Cloud Volumes ONTAP 和FlexPod 数据中心基础架构、使用由Cisco Intersight Cloud Orchestrator提供支持的公有 云构建灾难恢复解决方案。FlexPod 解决方案 不断发展、可帮助客户实现应用程序和业务交付流程的现代化。借助此解决方案 、您可以使用公有 云作为瞬时或全时灾难恢复计划的首选位置来构建BCDr计划、同时保持较低的灾难恢复解决方案 成本。
 
 内部FlexPod 和NetApp Cloud Volumes ONTAP 之间的数据复制由成熟的SnapMirror技术处理、但您也可以选择其他NetApp数据传输和同步工具、如Cloud Sync 、以满足您的数据移动性需求。基于TLS/AES的内置加密技术可确保传输中数据的安全性。

@@ -13,6 +13,7 @@ summary: 下表分别列出了医疗成像系统的 FlexPod 基础架构的硬�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 下表分别列出了医疗成像系统的 FlexPod 基础架构的硬件和软件组件。
 
 |===

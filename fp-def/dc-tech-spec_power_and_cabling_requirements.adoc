@@ -13,6 +13,7 @@ summary: FlexPod 设计对电源和布线具有最低要求。
 :imagesdir: ./../media/
 
 
+[role="lead"]
 FlexPod 设计对电源和布线具有最低要求。
 
 

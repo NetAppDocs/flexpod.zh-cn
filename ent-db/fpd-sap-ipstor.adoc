@@ -10,6 +10,7 @@ summary: 本文档中详细介绍的参考架构重点介绍了基于IP的存储
 
 NetApp公司Cisco Ralf Klahr Cisco Marco Schoen的Shailendra Mruthunjaya
 
+[role="lead"]
 本文档中详细介绍的参考架构重点介绍了基于IP的存储解决方案 的故障恢复能力、成本效益和部署简便性。一个能够通过一个接口提供多个协议的存储系统可以为客户提供选择和投资保护、因为它确实是一种一次线架构。解决方案 专为托管可扩展的SAP HANA工作负载而设计。
 
 link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_saphana_n9k_aff_ucsm.html["适用于SAP解决方案 的FlexPod 数据中心、采用基于IP的存储、并使用NetApp AFF A系列和Cisco UCS Manager 3.2"^]

@@ -13,6 +13,7 @@ summary: 本节详细介绍了在使用 ONTAP 或 Cisco UCS 刀片式服务器�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 本文档中提供的适用于 FlexPod 部署的 NetApp 存储指南包括：
 
 * 使用 ONTAP 的环境

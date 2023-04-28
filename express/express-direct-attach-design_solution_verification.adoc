@@ -8,6 +8,7 @@ summary: 根据 FlexPod 计划的基本原则， FlexPod 快速架构已通过 C
 :allow-uri-read: 
 
 
+[role="lead"]
 Cisco 和 NetApp 设计并构建了 FlexPod Express ，作为客户的首要基础架构平台。由于 FlexPod Express 是使用行业领先的组件设计的，因此客户可以信赖它作为基础架构的基础。根据 FlexPod 计划的基本原则， FlexPod 快速架构已通过 Cisco 和 NetApp 数据中心架构师和工程师的全面测试。从冗余和可用性到每项功能，整个 FlexPod 快速架构都经过验证，可以为客户树立信心，并在设计过程中建立信任。
 
 VMware vSphere 6.7U1 虚拟机管理程序已在 FlexPod Express 基础架构组件上进行了验证。此验证包括使用 10GbE 连接选项的 iSCSI Direct Connect SAN Boot 连接和 NFS Direct Connect 数据存储库。

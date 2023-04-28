@@ -13,6 +13,7 @@ summary: 作者希望感谢某些个人对这一设计的支持和贡献。
 :imagesdir: ./../media/
 
 
+[role="lead"]
 作者谨向以下人员表示感谢，感谢他们对这一设计的支持和贡献：
 
 * Paul Onosfretti Onostracy

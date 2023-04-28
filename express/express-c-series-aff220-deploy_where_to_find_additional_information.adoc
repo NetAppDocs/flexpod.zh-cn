@@ -13,6 +13,7 @@ summary: 有关本文档中的信息，请参见 NetApp 网站以及《采用 VM
 :imagesdir: ./../media/
 
 
+[role="lead"]
 要了解有关本文档中所述信息的更多信息，请参见以下文档和 / 或网站：
 
 * NetApp 产品文档

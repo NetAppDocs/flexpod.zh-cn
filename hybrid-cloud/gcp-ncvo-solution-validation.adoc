@@ -15,6 +15,7 @@ summary: 在此页面上、我们将回顾解决方案 的示例数据复制工�
 
 link:gcp-ncvo-terraform-execution-from-controller.html["先前：从控制器执行Terraform。"]
 
+[role="lead"]
 在本节中、我们将通过一个示例数据复制工作流回顾解决方案 、并采取一些衡量指标来验证从FlexPod 中运行的NetApp ONTAP 实例到Google Cloud上运行的NetApp Cloud Volumes ONTAP 的数据复制完整性。
 
 我们在此解决方案 中使用了Cisco Intersight工作流编排程序、并将继续在我们的用例中使用此流程编排程序。

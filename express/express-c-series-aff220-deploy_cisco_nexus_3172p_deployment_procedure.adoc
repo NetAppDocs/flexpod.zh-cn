@@ -13,6 +13,7 @@ summary: 以下部分详细介绍了 FlexPod Express 环境中使用的 Cisco Ne
 :imagesdir: ./../media/
 
 
+[role="lead"]
 以下部分详细介绍了 FlexPod Express 环境中使用的 Cisco Nexus 3172P 交换机配置。
 
 

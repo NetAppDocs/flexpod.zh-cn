@@ -15,6 +15,7 @@ summary: 借助 FlexPod ，您可以从一个平台获得一个支持 FC ， FCo
 
 NetApp 公司 Jaya Kishore Esanakula 和 Atul Bhalodia
 
+[role="lead"]
 医疗成像占医疗保健组织生成的所有数据的 70% 。随着数字模式的不断发展以及新模式的出现，数据量将继续增加。例如，从模拟病理学向数字病理学的过渡将大幅增加图像大小，这将挑战当前实施的任何数据管理策略。
 
 COVID-19 显然重塑了数字化转型；据最近的一项调查显示 https://www.cfo.com/the-cloud/2020/06/three-ways-covid-19-is-accelerating-digital-transformation-in-professional-services/["report"^]， COVID-19 将数字商务加速了 5 年。问题解决者推动的技术创新正在从根本上改变我们的日常生活方式。这一技术驱动的变革将彻底改变我们生活中的许多关键方面，包括医疗保健。

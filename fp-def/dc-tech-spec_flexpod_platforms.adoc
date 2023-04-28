@@ -13,6 +13,7 @@ summary:
 :imagesdir: ./../media/
 
 
+[role="lead"]
 FlexPod 平台有两种：
 
 * * FlexPod Datacenter 。 * 此平台是一个可大规模扩展的虚拟数据中心基础架构，适合工作负载企业级应用程序，虚拟化，虚拟桌面基础架构 (VDI) 以及私有云和混合云工作负载公有。

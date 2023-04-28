@@ -13,6 +13,7 @@ summary: 在将对象存储添加到 ONTAP 并由其标识后，必须将其附�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 在将对象存储添加到 ONTAP 并由其标识后，必须将其附加到聚合才能创建 FabricPool 。可以使用 OnCommand 系统管理器或 ONTAP 命令行界面完成此任务。
 
 可以将多种类型的对象存储连接到一个集群，但每个聚合只能附加一种类型的对象存储。例如，一个聚合可以使用 Google Cloud ，另一个聚合可以使用 Amazon S3 ，但一个聚合无法同时附加到这两个聚合。

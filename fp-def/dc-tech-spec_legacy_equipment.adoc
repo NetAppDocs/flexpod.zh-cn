@@ -13,6 +13,7 @@ summary: FlexPod 是一款灵活的解决方案，可让您使用当前由 Cisco
 :imagesdir: ./../media/
 
 
+[role="lead"]
 FlexPod 是一款灵活的解决方案，可让您使用当前由 Cisco 和 NetApp 销售的现有设备和新设备。有时， Cisco 和 NetApp 的某些型号设备会被指定为寿命终结（ EOL ）。
 
 即使这些设备型号已不再可用，但如果您在可用性终止（ EOA ）日期之前购买了其中一种型号，则可以在 FlexPod 配置中使用该设备。有关 FlexPod 中支持的不再销售的原有设备型号的完整列表，请参见 https://mysupport.netapp.com/info/eoa/index.html["NetApp 服务和支持产品计划的可用性终止索引"^]。

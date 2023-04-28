@@ -13,6 +13,7 @@ summary: NetApp 存储控制器在 FlexPod 架构中为启动和应用程序数�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 NetApp 存储控制器在 FlexPod 架构中为启动和应用程序数据存储提供了存储基础。NetApp 组件包括存储控制器，集群互连交换机，驱动器和磁盘架以及许可选项。
 
 

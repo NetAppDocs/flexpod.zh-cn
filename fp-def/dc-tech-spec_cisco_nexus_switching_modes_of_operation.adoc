@@ -13,6 +13,7 @@ summary: 在给定 FlexPod 部署中，可以使用多种 Cisco Nexus 产品作�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 在给定 FlexPod 部署中，可以使用多种 Cisco Nexus 产品作为交换组件。其中大多数选项都使用传统的 Cisco Nexus OS 或 NX-OS 软件。Cisco Nexus 系列交换机在其产品系列中提供了不同的功能。本文档稍后将详细介绍这些功能。
 
 Cisco 在软件定义的网络空间中提供的产品称为应用程序中心基础架构（ Application Centric Infrastructure ， ACI ）。支持 ACI 模式（也称为光纤模式）的 Cisco Nexus 产品系列是 Cisco Nexus 9300 系列。这些交换机也可以部署在 NX-OS 或独立模式下。

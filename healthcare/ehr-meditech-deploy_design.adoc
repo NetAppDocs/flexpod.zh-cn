@@ -13,6 +13,7 @@ summary: 适用于 MEDITECH 的 FlexPod 架构基于 MEDITECH ， Cisco 和 NetA
 :imagesdir: ./../media/
 
 
+[role="lead"]
 适用于 MEDITECH 的 FlexPod 架构基于 MEDITECH ， Cisco 和 NetApp 的指导以及合作伙伴与各种规模的 MEDITECH 客户合作的经验。该架构具有适应性，并会根据您的数据中心战略，组织规模以及您的系统是集中式系统，分布式系统还是多租户系统，应用 MEDITECH 的最佳实践。
 
 正确的存储架构可通过总 IOPS 大小来确定。性能本身并不是唯一的因素，您可能会根据其他客户需求决定使用更大的节点数。使用 NetApp 存储的优势在于，您可以根据需求的变化轻松无中断地扩展集群。您也可以从集群中无中断删除节点，以重新利用设备或在设备更新期间使用。

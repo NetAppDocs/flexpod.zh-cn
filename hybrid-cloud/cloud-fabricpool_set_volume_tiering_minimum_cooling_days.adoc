@@ -13,6 +13,7 @@ summary: 分层最小冷却天数设置确定使用自动或仅 Snapshot 策略�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 `tiering-minimum-cooling-days` 设置可确定在使用自动或仅 Snapshot 策略的卷中的非活动数据被视为冷数据并符合分层条件之前必须经过多少天。
 
 

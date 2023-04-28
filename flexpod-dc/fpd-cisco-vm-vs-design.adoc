@@ -10,6 +10,7 @@ summary: 本文档介绍了Cisco和NetApp FlexPod 解决方案 、这是一种�
 
 NetApp公司Cisco Scott kovacs的John George
 
+[role="lead"]
 本文档介绍了Cisco和NetApp FlexPod 解决方案 、这是一种经验证的将Cisco和NetApp技术部署为共享云基础架构的方法。这种经过验证的设计为在FlexPod 上部署VMware vSphere提供了一个框架、VMware vSphere是企业级数据中心中最受欢迎的虚拟化平台。
 
 link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_dc_ontap_97_ucs_4_vmw_vs_67_U3_design.html["采用Cisco Intersight和NetApp ONTAP 9.7的FlexPod 数据中心—设计"^]

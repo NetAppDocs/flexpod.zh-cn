@@ -10,6 +10,7 @@ summary: 'Cisco经验证的设计(CVD)包括为便于和改进客户部署而设
 
 NetApp公司Cisco Sree Lakshmi Lan的John George
 
+[role="lead"]
 Cisco经验证的设计(CVD)包括为便于和改进客户部署而设计、测试和记录的系统和解决方案。这些设计将广泛的技术和产品整合到一个解决方案组合中、这些解决方案是为满足客户的业务需求而开发的。Cisco和NetApp合作推出了FlexPod®、它为各种工作负载奠定了基础、并可根据客户需求进行高效的架构设计。FlexPod 解决方案 是一种经验证的方法、用于将Cisco和NetApp技术部署为共享云基础架构。
 
 link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_vmware_vsphere_7_0_ontap_9_7.html["https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_vmware_vsphere_7_0_ontap_9_7.html"^]

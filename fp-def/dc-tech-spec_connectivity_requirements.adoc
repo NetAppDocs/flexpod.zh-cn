@@ -13,6 +13,7 @@ summary: 下面列出了 FlexPod 配置的连接要求。
 :imagesdir: ./../media/
 
 
+[role="lead"]
 FlexPod 配置具有以下连接要求：
 
 * 所有组件都需要一个单独的 100 Mbps 以太网 /1 Gb 以太网带外管理网络。

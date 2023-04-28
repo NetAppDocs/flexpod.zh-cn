@@ -15,6 +15,7 @@ summary: 截至发布时， GATK 工具不支持在内部执行基于 GPU 的原
 
 link:flexpod-genomics-appendix-c.html["previous ：使用 Cromwell 引擎执行 GATK 的输出。"]
 
+[role="lead"]
 截至发布时， GATK 工具不支持在内部执行基于 GPU 的原生。我们提供了以下设置和指导，帮助读者了解使用 GATK PCIe 夹层卡在后部安装的 NVIDIA Tesla P6 GPU 上使用 FlexPod 的简单程度。
 
 我们使用以下 Cisco 验证设计（ Cisco Validated Design ， CVD ）作为参考架构和最佳实践指南来设置 FlexPod 环境，以便可以运行使用 GPU 的应用程序。

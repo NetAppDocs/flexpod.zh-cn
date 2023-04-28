@@ -15,6 +15,7 @@ summary: 本节介绍此解决方案中使用的解决方案基础架构和软�
 
 link:flexpod-genomics-benefits-of-deploying-genomic-workloads-on-flexpod.html["先前版本：在 FlexPod 上部署基因组工作负载的优势。"]
 
+[role="lead"]
 下图显示了用于 GATK 设置和验证的 FlexPod 系统。我们使用了 https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_vmware_vsphere_7_0_ontap_9_7.html["采用 VMware vSphere 7.0 和 NetApp ONTAP 9.7 的 FlexPod Datacenter Cisco 验证设计（ CVD ）"^] 在设置过程中。
 
 image:flexpod-genomics-image6.png["错误：缺少图形映像"]

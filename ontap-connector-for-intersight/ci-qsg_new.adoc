@@ -13,6 +13,7 @@ summary: Cisco Intersight 推出了新版本，可为您提供新功能，增强
 :imagesdir: ./../media/
 
 
+[role="lead"]
 本节列出了 Cisco Intersight 与 NetApp ONTAP 存储的新增特性和功能。
 
 

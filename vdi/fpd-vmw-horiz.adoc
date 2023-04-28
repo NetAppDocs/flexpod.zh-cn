@@ -10,6 +10,7 @@ summary: 本文档提供了一个参考架构和设计指南、用于在FlexPod 
 
 NetApp公司Cisco Suresh ThopPay Vadim Lebedev
 
+[role="lead"]
 本文档提供了一个参考架构和设计指南、用于在FlexPod Datacenter上使用Cisco UCS和NetApp AFF A300以及NetApp ONTAP 数据管理软件的5000席位到6000席位桌面工作负载和最终用户计算环境。解决方案 包括基于VMware Horizon服务器的RDS Windows Server 2019会话、VMware Horizon永久性完整克隆Microsoft Windows 10虚拟桌面以及VMware vSphere 6.7U2上的VMware Horizon非永久性即时克隆Microsoft Windows 10虚拟桌面
 
 link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_ontap96_vmware710_67_u2_ucs_40_6700_seats.html["采用VMware Horizon View 7.10、VMware vSphere 6.7 U2、Cisco UCS Manager 4.0和NetApp ONTAP 9.6的FlexPod 数据中心、最多可容纳7700个席位"^]

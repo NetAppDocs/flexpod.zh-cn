@@ -13,6 +13,7 @@ summary: MEDITECH 应用程序涵盖多个模块和组件。
 :imagesdir: ./../media/
 
 
+[role="lead"]
 MEDITECH 应用程序涵盖多个模块和组件。下表列出了这些模块所涵盖的功能。有关追加信息设置和部署这些模块的信息，请参见 MEDITECH 文档。
 
 |===

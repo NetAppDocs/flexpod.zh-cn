@@ -13,6 +13,7 @@ summary: 技术规格提供了有关 FlexPod 解决方案中硬件组件的详�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 技术规格提供了有关 FlexPod 解决方案中硬件组件的详细信息，例如机箱， FEX ，服务器，交换机， 和存储控制器。
 
 

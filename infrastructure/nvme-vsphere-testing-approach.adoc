@@ -15,6 +15,7 @@ summary: 本节简要概述了 FC-NVMe on FlexPod 验证测试。其中包括测
 
 link:nvme-vsphere-introduction.html["上一页：简介。"]
 
+[role="lead"]
 本节简要概述了 FC-NVMe on FlexPod 验证测试。其中包括测试环境 / 配置以及针对使用 VMware vSphere 7 的 FlexPod 的 FC-NVMe 执行工作负载测试所采用的测试计划。
 
 

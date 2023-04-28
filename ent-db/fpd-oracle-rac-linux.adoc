@@ -10,6 +10,7 @@ summary: 'Cisco Unified Computing System (Cisco UCS)是下一代数据中心平�
 
 Tushar Patel、Cisco Niranjan Mohmapatra、Cisco John Elliott、NetApp
 
+[role="lead"]
 Cisco Unified Computing System (Cisco UCS)是下一代数据中心平台、可将计算、网络、存储访问和虚拟化整合到一个统一的系统中。Cisco UCS是任务关键型数据库工作负载架构的理想平台。Cisco UCS平台、NetApp存储和Oracle Real Application Cluster (RAC)架构相结合、可以加快部署速度、提高选择灵活性、提高效率并降低风险、从而加快IT转型。此Cisco验证设计(Cisco Validated Design、CVD)重点介绍了一个灵活的多租户高性能、弹性FlexPod 参考架构、该架构采用Oracle 12c RAC数据库。
 
 FlexPod 平台由NetApp和Cisco开发、是一款灵活的集成基础架构解决方案 、可提供经过预先验证的存储、网络和服务器技术。它旨在提高IT对业务需求的响应能力、同时降低整体计算成本。考虑最长正常运行时间和最低风险。FlexPod 组件经过集成和标准化、可帮助您实现及时、可重复、一致的部署。您可以准确地规划每个FlexPod 部署的电源、占地空间、可用容量、性能和成本。

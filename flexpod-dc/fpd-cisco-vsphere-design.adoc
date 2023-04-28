@@ -10,6 +10,7 @@ summary: 本文档介绍了Cisco和NetApp FlexPod 解决方案 、这是一种�
 
 NetApp公司Cisco Sree Lakshmi Lan的John George
 
+[role="lead"]
 本文档介绍了Cisco和NetApp FlexPod 解决方案 、这是一种经验证的将Cisco和NetApp技术部署为共享云基础架构的方法。这种经过验证的设计为在FlexPod 上部署VMware vSphere提供了一个框架、VMware vSphere是企业级数据中心中最受欢迎的虚拟化平台。
 
 FlexPod 是一款领先的集成基础架构、支持广泛的企业工作负载和用例。借助此解决方案 、客户可以在集成基础架构上快速可靠地部署基于VMware vSphere的私有云。

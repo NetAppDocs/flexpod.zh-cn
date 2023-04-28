@@ -15,6 +15,7 @@ summary: FlexPod Express 是一种预先设计的最佳实践架构，基于 Cis
 
 NetApp 公司 Sree Lakshmi Lan
 
+[role="lead"]
 行业趋势表明，数据中心正在向共享基础架构和云计算转型。此外，企业还寻求为远程办公室和分支机构提供简单有效的解决方案，并利用他们在数据中心中熟悉的技术。
 
 FlexPod Express 是一种预先设计的最佳实践架构，基于 Cisco 统一计算系统（ Cisco UCS ）， Cisco Nexus 系列交换机和 NetApp 存储技术构建。FlexPod 快速系统中的组件与 FlexPod 数据中心的对应组件一样，可以在较小规模的整个 IT 基础架构环境中实现管理协作。FlexPod 数据中心和 FlexPod Express 是虚拟化以及裸机操作系统和企业工作负载的最佳平台。

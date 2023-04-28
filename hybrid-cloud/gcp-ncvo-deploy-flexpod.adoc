@@ -15,6 +15,7 @@ summary: 此页面列出了部署FlexPod 实例所需的资源。
 
 link:gcp-ncvo-solution-components.html["先前版本：解决方案 组件。"]
 
+[role="lead"]
 要了解FlexPod 设计和部署详细信息、包括各种设计要素的配置以及相关最佳实践、请参见 https://www.cisco.com/c/en/us/solutions/design-zone/data-center-design-guides/flexpod-design-guides.html["经过Cisco验证的FlexPod 设计"^]。
 
 FlexPod 既可以部署在UCS托管模式下、也可以部署在Cisco Intersight托管模式下。如果您要在UCS托管模式下部署FlexPod 、可以找到最新的Cisco验证设计 https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_m6_esxi7u2_design.html["此处"^]。

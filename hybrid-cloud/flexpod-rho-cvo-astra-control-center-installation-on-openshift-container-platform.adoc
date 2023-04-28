@@ -15,6 +15,7 @@ summary: 您可以将Astra控制中心安装在FlexPod 上运行的OpenShift集�
 
 link:flexpod-rho-cvo-netapp-cloud-volumes-ontap.html["先前版本：NetApp Cloud Volumes ONTAP。"]
 
+[role="lead"]
 您可以将Astra控制中心安装在FlexPod 上运行的OpenShift集群上、也可以安装在具有Cloud Volumes ONTAP 存储后端的AWS上。在此解决方案 中、Astra控制中心部署在OpenShift裸机集群上。
 
 可以使用所述的标准过程安装Astra控制中心 https://docs.netapp.com/us-en/astra-control-center/get-started/install_acc.html["此处"^] 或从Red Hat OpenShift OperatorHub获取。Astra控制操作员是Red Hat认证的操作员。在此解决方案 中、使用Red Hat OperatorHub安装Astra控制中心。

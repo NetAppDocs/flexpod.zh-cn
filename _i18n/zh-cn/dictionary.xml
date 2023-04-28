@@ -5925,7 +5925,6 @@
   <block id="56eb1d06de3dc848cd5deb341ffb09cb" category="paragraph"><block ref="56eb1d06de3dc848cd5deb341ffb09cb" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2a6def9cea619ed05c8a19762cb1f386" category="inline-link-macro">接下来： VMware vCenter Server 6.7U2 安装操作步骤</block>
   <block id="3bfa8686431d666d40aa9d9633a22f8e" category="paragraph"><block ref="3bfa8686431d666d40aa9d9633a22f8e" category="inline-link-macro-rx"></block></block>
-  <block id="1d763cf78cf2374fec79652106e9badd" category="list-text">NVA- 1131-Deploy ：采用 VMware vSphere 6.7UI 的 FlexPod Express 以及采用基于 IP 的直连存储 NVA 的 NetApp AFF A220 部署</block>
   <block id="fccf6882b91cb961a97a9187a8a54a3b" category="inline-link"><block ref="fccf6882b91cb961a97a9187a8a54a3b" category="inline-link-rx"></block></block>
   <block id="0856e6e8bd0cec5a876a3a0f2ae0e15e" category="paragraph"><block ref="0856e6e8bd0cec5a876a3a0f2ae0e15e" category="inline-link-rx"></block></block>
   <block id="29b8316a6a8c7730ddbf9b2199d89a13" category="list-text">AFF 和 FAS 系统文档中心</block>
@@ -9772,4 +9771,5 @@
   <block id="2834c2489e66234d739bc68190c533f8" category="sidebar">适用于混合云的FlexPod 数据中心与Cisco CloudCenter和NetApp私有存储—设计</block>
   <block id="0a60298d1cecc2b46fc00c3b49fad269" category="sidebar">适用于混合云的FlexPod 数据中心与Cisco CloudCenter和NetApp私有存储—Deploy</block>
   <block id="b1b25033ea7463aca79f95ef822af033" category="list-text">如果使用FQDN将ONTAP 集群添加到AIQ-UM、则不会填充"存储清单检查"页面。用户必须使用IP地址将ONTAP 集群添加到AIQ-UM。</block>
+  <block id="3684bd581345640f9a259d9a0657db7e" category="list-text">NVA-1131-Deploy：采用VMware vSphere 6.7UI的FlexPod Express和采用基于IP的直连存储的NetApp AFF A220 NVA Deploy</block>
 </blocks>

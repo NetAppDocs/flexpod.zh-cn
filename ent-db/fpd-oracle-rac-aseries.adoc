@@ -10,6 +10,7 @@ summary: 采用NetApp全闪存AFF 系统的FlexPod 数据中心是一个融合�
 
 Cisco Hardakkumar Vyas公司Tushar Patel
 
+[role="lead"]
 采用NetApp全闪存AFF 系统的FlexPod 数据中心是一个融合基础架构平台、它将Cisco和NetApp的同类最佳技术整合到一个功能强大的企业级应用程序融合平台中。Cisco和NetApp与Oracle密切合作、为当今企业所需的最苛刻的事务处理和响应时间敏感型数据库提供支持。
 
 此Cisco验证设计(Cisco Validated Design、CVD)介绍了使用FlexPod UCS和NetApp全闪存AFF 存储部署高可用性Oracle RAC数据库环境的参考数据中心架构。本文档显示了所涉及组件的硬件和软件配置以及各种测试的结果。此外、本文档还提供了使用Cisco UCS计算服务器、Cisco互联阵列交换机、Cisco MDS交换机、Cisco Nexus交换机、NetApp AFF 存储和Oracle RAC数据库的实施和最佳实践指导。

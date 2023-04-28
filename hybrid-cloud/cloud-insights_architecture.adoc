@@ -13,6 +13,7 @@ summary: 在本节中，我们将回顾 FlexPod 数据中心融合基础架构�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 在本节中，我们将回顾 FlexPod 数据中心融合基础架构的架构，包括由 Cloud Insights 监控的 NetApp AFF A800 系统。
 
 

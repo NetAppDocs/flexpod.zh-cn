@@ -13,6 +13,7 @@ summary: 通过设置并配置 Cloud Insights 来监控您的 FlexPod Datacenter
 :imagesdir: ./../media/
 
 
+[role="lead"]
 通过设置并配置 Cloud Insights 来监控您的 FlexPod Datacenter 解决方案，我们可以在信息板上探索一些可执行的任务，以评估和监控您的环境。在本节中，我们重点介绍了 Cloud Insights 的五个主要用例：
 
 * Active IQ 集成

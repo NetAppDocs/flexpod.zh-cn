@@ -10,6 +10,7 @@ summary: 经过Cisco验证的设计包括设计、测试和记录的系统和解
 
 Cisco Hardakkumar Vyas公司Tushar Patel
 
+[role="lead"]
 经过Cisco验证的设计包括设计、测试和记录的系统和解决方案、旨在帮助和改进客户部署。这些设计将广泛的技术和产品整合到一个解决方案组合中、这些解决方案是为满足客户的业务需求而开发的。Cisco和NetApp合作推出了FlexPod 、它为各种工作负载奠定了基础、并可根据客户需求进行高效的架构设计。FlexPod 解决方案 是一种经验证的方法、用于将Cisco和NetApp技术部署为共享云基础架构。
 
 采用NetApp全闪存AFF 系统的FlexPod 数据中心是一个融合基础架构平台、它将Cisco和NetApp的同类最佳技术整合到一个功能强大的企业级应用程序融合平台中。Cisco和NetApp与Oracle密切合作、为当今企业所需的最苛刻的事务处理和响应时间敏感型数据库提供支持。

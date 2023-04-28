@@ -13,4 +13,5 @@ summary: 创建 LUN 时会为 MEDITECH 主机建立 LUN 映射。
 :imagesdir: ./../media/
 
 
+[role="lead"]
 创建 LUN 时会为 MEDITECH 主机建立 LUN 映射。
