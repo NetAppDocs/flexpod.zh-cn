@@ -226,7 +226,7 @@ SupportEdge Premium 许可证是必需的，这些许可证的部件号因 FlexP
 | NetApp 支持许可 | 部件号 | 技术规格 
 
 
-| SupportEdge 高级版 4 小时现场服务；月数： 36 | CS-O2-4 小时 | link:www.netapp.com/us/support/supportedge.html["http://www.netapp.com/us/support/supportedge.html"] 
+| SupportEdge 高级版 4 小时现场服务；月数： 36 | CS-O2-4 小时 | link:https://www.netapp.com/pdf.html?item=/media/19784-ds-3873.pdf["https://www.netapp.com/pdf.html?item=/media/19784-ds-3873.pdf"] 
 |===
 
 
@@ -238,7 +238,7 @@ SupportEdge Premium 许可证是必需的，这些许可证的部件号因 FlexP
 | NetApp 支持许可 | 部件号 | 技术规格 
 
 
-| 硬件支持高级版 4 小时现场支持；月数： 36 | SVC — O2-4M-E .3+| link:www.netapp.com/us/support/supportedge.html["http://www.netapp.com/us/support/supportedge.html"] 
+| 硬件支持高级版 4 小时现场支持；月数： 36 | SVC — O2-4M-E .3+| link:https://www.netapp.com/pdf.html?item=/media/19784-ds-3873.pdf["https://www.netapp.com/pdf.html?item=/media/19784-ds-3873.pdf"] 
 
 
 | 软件支持 | SW-SSP-O2-4W-E 

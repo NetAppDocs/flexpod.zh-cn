@@ -134,4 +134,4 @@ FabricPool 许可证以永久或按期限（ 1 年或 3 年）形式提供。
 只能从不包含 FabricPool 聚合的集群中删除 FabricPool 许可证。
 
 
-NOTE: FabricPool 许可证在集群范围内。购买许可证时，您应具有可用的 UUID （`cluster identify show` ）。有关其他许可信息，请参见 https://kb.netapp.com/support/s/article/ka21A0000008qb3QAA/ONTAP-FabricPool-FP-Licensing-Overview["NetApp 知识库"^]。
+NOTE: FabricPool 许可证在集群范围内有效。购买许可证时、您应具有UUID (`cluster identify show`）。有关其他许可信息，请参见 https://kb.netapp.com/onprem/ontap/dm/FabricPool/ONTAP_FabricPool_(FP)_Licensing_Overview["NetApp 知识库"^]。

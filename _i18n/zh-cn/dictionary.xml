@@ -313,8 +313,6 @@
   <block id="1d6cb8d880e983c90f1b5fe9f10dec29" category="paragraph">下表列出了 NetApp FAS 的 NetApp 支持许可选项。</block>
   <block id="c453f553d73c506df5a01e3bd8ff03e0" category="cell">NetApp 支持许可</block>
   <block id="13163c7b776f46d35bcf8a753d9e4c1b" category="cell">SupportEdge 高级版 4 小时现场服务；月数： 36</block>
-  <block id="571bbc28568c2b00c6975b19fb5dd53b" category="inline-link-macro"><block ref="571bbc28568c2b00c6975b19fb5dd53b" category="inline-link-rx"></block></block>
-  <block id="09a6eadb4b8f87bcdef9f46ac5b0a651" category="cell"><block ref="09a6eadb4b8f87bcdef9f46ac5b0a651" category="inline-link-macro-rx"></block></block>
   <block id="813e53e7bb54b15e72348ce9fe93dbdc" category="paragraph">下表列出了适用于 E 系列存储的 NetApp 支持许可选项。</block>
   <block id="ef63debe35aa2ea907cf5d6ba93bbca3" category="cell">硬件支持高级版 4 小时现场支持；月数： 36</block>
   <block id="3700267a6a1c84c57290ba35d60b6065" category="cell">SVC — O2-4M-E</block>
@@ -1714,7 +1712,6 @@
   <block id="dd0abb5bf55fbf07bd4b6cbe25c9528e" category="paragraph">购买任何新的 ONTAP 9.5 或更高版本的集群时都会附带一个 10 TB 容量的基于期限的免费 FabricPool 许可证，但可能会产生额外的支持成本。可以以 1 TB 为增量购买 FabricPool 许可证（包括现有许可证的额外容量）。</block>
   <block id="8105972a850e9e688b4486ea7d2ed719" category="paragraph">只能从不包含 FabricPool 聚合的集群中删除 FabricPool 许可证。</block>
   <block id="55d00560611b7ac6ad1fbc07da675be3" category="inline-link">NetApp 知识库</block>
-  <block id="99ad76c1f19beedce25d63008b6beed4" category="admonition">FabricPool 许可证在集群范围内。购买许可证时，您应具有可用的 UUID （`cluster identify show` ）。有关其他许可信息，请参见<block ref="4a7942f67fe49d92d9fe4bec3f7e3903" category="inline-link-rx"></block>。</block>
   <block id="ec21ef39fb6060194db80831f391c610" category="summary">分层最小冷却天数设置确定使用自动或仅 Snapshot 策略的卷中的非活动数据被视为冷数据并符合分层条件之前必须经过多少天。</block>
   <block id="488ec979d09344139650babc7a3f10e5" category="doc">设置卷分层最小冷却天数</block>
   <block id="71214fd2459729d014b0c750bb210c68" category="paragraph">`tiering-minimum-cooling-days` 设置可确定在使用自动或仅 Snapshot 策略的卷中的非活动数据被视为冷数据并符合分层条件之前必须经过多少天。</block>
@@ -4043,8 +4040,6 @@
   <block id="9f2d14e6a1e3a8e76a5e5c913a338616" category="list-text">对 eth1 重复步骤 3 和 4 ，验证 eth1 的上行链路端口是否设置为 1 。</block>
   <block id="59cf5e87e60bc8dac3259a7e875cc396" category="paragraph"><block ref="59cf5e87e60bc8dac3259a7e875cc396" category="inline-image-macro-rx" type="image"></block></block>
   <block id="89fc9ed38d4fd4f87870644db30e1dce" category="admonition">必须对添加到环境中的每个初始 Cisco UCS 服务器节点和每个额外的 Cisco UCS 服务器节点重复此操作步骤。</block>
-  <block id="4274bde26272a75e2e5256091306e24c" category="inline-link-macro">接下来： NetApp AFF 存储部署操作步骤（第 2 部分）</block>
-  <block id="ef72a944184a2b0d5e5c18a1925f9f82" category="paragraph"><block ref="ef72a944184a2b0d5e5c18a1925f9f82" category="inline-link-macro-rx"></block></block>
   <block id="99ea43c773133a96b0d062cee6418bce" category="paragraph">无论选择何种虚拟机管理程序，所有 FlexPod 快速配置都使用相同的硬件。因此，即使业务需求发生变化，任何虚拟机管理程序都可以在同一个 FlexPod Express 硬件上运行。</block>
   <block id="a9dbd072d83cb337b01c311943422edf" category="paragraph">下表列出了所有 FlexPod 快速配置所需的硬件组件。</block>
   <block id="552af9e8da6a9815280b66afc66e9a40" category="cell">AFF A220 HA 对</block>
@@ -4133,8 +4128,6 @@
   <block id="6b643406b1f5d5f8c203b27fe6e2440e" category="paragraph"><block ref="6b643406b1f5d5f8c203b27fe6e2440e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e6447ee2303eb27076059f12f3ae2506" category="admonition">对于添加到 FlexPod Express 中的任何其他主机，必须完成此过程。</block>
   <block id="9456898bc9e0e275a5115029a91fe08b" category="admonition">此验证中的 `IP_address_of_core_dump_collector` 是 vCenter IP 。</block>
-  <block id="b8aceddd74a5705bde51f5d406654c25" category="inline-link-macro">接下来： NetApp Virtual Storage Console 9.6 部署过程</block>
-  <block id="d996b7ec2bff23ae65c92ee64cb5289d" category="paragraph"><block ref="d996b7ec2bff23ae65c92ee64cb5289d" category="inline-link-macro-rx"></block></block>
   <block id="d593e9456b5b5cc924ea54481697ee69" category="summary">此参考验证已按照下图和表所示进行布线。</block>
   <block id="fce5f960774fb71c0e5e23b53da5e4c7" category="doc">FlexPod 快速布线信息</block>
   <block id="cabafb2dc6e19e4411e2375059862606" category="paragraph">此图显示了参考验证布线。</block>
@@ -4465,8 +4458,6 @@
   <block id="b02716886961f592f3b40eb5ee24f3a7" category="admonition">要通过添加更多 Cisco UCS 服务器来扩展解决方案，请使用交换机 A 和 B 上新添加的服务器所插入的交换机端口运行上述命令</block>
   <block id="ccafafe48cdce6143d7b8a0010cb0fca" category="section-title">通过上行链路连接到现有网络基础架构</block>
   <block id="2745234fb1e856e55967112d4b955056" category="paragraph">根据可用的网络基础架构，可以使用多种方法和功能来上行链路连接 FlexPod 环境。如果存在现有的 Cisco Nexus 环境， NetApp 建议使用 vPC 通过上行链路将 FlexPod 环境中的 Cisco Nexus 31108 交换机连接到基础架构中。对于 10GbE 基础架构解决方案，上行链路可以是 10GbE 上行链路，如果需要，上行链路可以是 1GbE 基础架构解决方案。可以使用上述过程创建到现有环境的上行链路 vPC 。配置完成后，请务必运行 copy start 在每个交换机上保存配置。</block>
-  <block id="247059a0bddaa322f546623f7644064e" category="inline-link-macro">接下来： NetApp 存储部署操作步骤（第 1 部分）</block>
-  <block id="386f19251e645f33bc526e1a77e86b2a" category="paragraph"><block ref="386f19251e645f33bc526e1a77e86b2a" category="inline-link-macro-rx"></block></block>
   <block id="e45645eef6ccec7b7c30243e58df6f21" category="summary">FlexPod Express 专为运行混合虚拟化工作负载而设计。它面向远程办公室和分支机构以及中小型企业。它也是希望专用解决方案的大型企业的最佳选择。新的 FlexPod Express 解决方案的主要驱动因素是，将 ONTAP 9.5 ， FAS27xx 和 AFF220 ， VMware vSphere 6.7U1 等新技术添加到 FlexPod Express 中。</block>
   <block id="52698dab5b8a1edc0e7edc6555a7c349" category="paragraph">FlexPod Express 专为运行混合虚拟化工作负载而设计。它面向远程办公室和分支机构以及中小型企业。它也是希望专用解决方案的大型企业的最佳选择。新的 FlexPod Express 解决方案的主要驱动因素是，将 ONTAP 9.5 ， FAS27xx/AFF220 ， VMware vSphere 6.7U1 等新技术添加到 FlexPod Express 中。</block>
   <block id="8ca297509b2df5f9cdffacc6f1b874d9" category="paragraph"><block ref="8ca297509b2df5f9cdffacc6f1b874d9" category="inline-image-macro-rx" type="image"></block></block>
@@ -4485,8 +4476,6 @@
   <block id="c21e81c3aab0aab4acd336440fc7e817" category="doc">NetApp AFF 存储部署操作步骤（第 2 部分）</block>
   <block id="3f7e69d024465486273ba92b509f7277" category="section-title">设置 ONTAP SAN 启动存储</block>
   <block id="3ae16a42048bad6c5b188bae7827a446" category="paragraph">要创建 igroup ，请从集群管理节点 SSH 连接运行以下命令。要查看此步骤中创建的三个 igroup ，请运行 `igroup show` 命令。</block>
-  <block id="bec21043b4f499ec8a85c4cfd7ed39e9" category="inline-link-macro">接下来： VMware vSphere 6.7U2 部署操作步骤</block>
-  <block id="2906e22aba2f3403519d99d40550af4f" category="paragraph"><block ref="2906e22aba2f3403519d99d40550af4f" category="inline-link-macro-rx"></block></block>
   <block id="1b302e164cc42bd6107ca6042d03cc6a" category="summary">本节中列出的技术是在架构设计阶段选择的。每个技术在 FlexPod Express 基础架构解决方案中都有一个特定用途。</block>
   <block id="1cb9d956e2cf5fcb066ad4125d13cd40" category="section-title">采用 ONTAP 9.6 的 NetApp AFF C190 系列</block>
   <block id="12bf8ceb59e0ad0e07097bbd3b65c9d5" category="paragraph">此解决方案利用了两种最新的 NetApp 产品： NetApp AFF C190 系统和 ONTAP 9.6 软件。</block>
@@ -5721,8 +5710,6 @@
   <block id="a0e23446a66b1f3b62c87542b03c4a0c" category="admonition">添加额外的 Cisco UCS C 系列服务器时，必须创建额外的启动 LUN 。</block>
   <block id="b61ec8a6584e8053e237f93973f50289" category="section-title">添加基础架构 SVM 管理员</block>
   <block id="61035b7df4ae78c3b522047b643dc8f1" category="paragraph">下表列出了添加 SVM 管理员所需的信息。</block>
-  <block id="544704a08fc56ac416305629315b2dfb" category="inline-link-macro">接下来：部署 Cisco UCS C 系列机架式服务器</block>
-  <block id="b2ccf3d51a0d36659f4cb4a6524fe4d2" category="paragraph"><block ref="b2ccf3d51a0d36659f4cb4a6524fe4d2" category="inline-link-macro-rx"></block></block>
   <block id="761ee624e67c1e4b0660ef1bf9c63f17" category="summary">下表介绍了参考验证布线。</block>
   <block id="25ee1cbafd0f423ce204cbf237275cc5" category="doc">FlexPod 快速布线信息</block>
   <block id="2bf52ce7c810ad0c8eced5e1e378d88f" category="paragraph">下表列出了 Cisco Nexus 交换机 31108PCV A 的布线信息</block>
@@ -5783,8 +5770,6 @@
   <block id="bbb817b43cc97db2f84d05c59aab30f7" category="paragraph"><block ref="bbb817b43cc97db2f84d05c59aab30f7" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c9eaceb67ff025ec33df198962a47e5c" category="paragraph"><block ref="c9eaceb67ff025ec33df198962a47e5c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c1ec08e67ce2ac0aaa8acbb806bdcb87" category="paragraph"><block ref="c1ec08e67ce2ac0aaa8acbb806bdcb87" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="84ccd33f0cf8671c91d0b35966cd4bfc" category="inline-link-macro">接下来： VMware vCenter Server 6.7U2 和 vSphere 集群配置</block>
-  <block id="b8267a82f6eba51e14c28c7809060c29" category="paragraph"><block ref="b8267a82f6eba51e14c28c7809060c29" category="inline-link-macro-rx"></block></block>
   <block id="f87ec1529e188aeb7b20b19b8dc2b7af" category="paragraph">下表列出了此 FlexPod 快速配置以及实施此解决方案所需的硬件组件。在任何解决方案实施中使用的硬件组件可能会因客户要求而异。</block>
   <block id="4daa44c0b5a1deba40cad94db95dff90" category="cell">AFF C190 双节点集群</block>
   <block id="a7c5f01e700bb3eb76f99ffe61ecbd8f" category="cell">Cisco UCS C220 M5 服务器</block>
@@ -5923,8 +5908,6 @@
   <block id="1652c10523b89eeb824221f2ff92550c" category="paragraph">以下步骤提供了有关移动 VM 交换文件位置的详细信息。</block>
   <block id="b6abbf0226ef43662dc3ba8758477628" category="paragraph"><block ref="b6abbf0226ef43662dc3ba8758477628" category="inline-image-macro-rx" type="image"></block></block>
   <block id="56eb1d06de3dc848cd5deb341ffb09cb" category="paragraph"><block ref="56eb1d06de3dc848cd5deb341ffb09cb" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="2a6def9cea619ed05c8a19762cb1f386" category="inline-link-macro">接下来： VMware vCenter Server 6.7U2 安装操作步骤</block>
-  <block id="3bfa8686431d666d40aa9d9633a22f8e" category="paragraph"><block ref="3bfa8686431d666d40aa9d9633a22f8e" category="inline-link-macro-rx"></block></block>
   <block id="fccf6882b91cb961a97a9187a8a54a3b" category="inline-link"><block ref="fccf6882b91cb961a97a9187a8a54a3b" category="inline-link-rx"></block></block>
   <block id="0856e6e8bd0cec5a876a3a0f2ae0e15e" category="paragraph"><block ref="0856e6e8bd0cec5a876a3a0f2ae0e15e" category="inline-link-rx"></block></block>
   <block id="29b8316a6a8c7730ddbf9b2199d89a13" category="list-text">AFF 和 FAS 系统文档中心</block>
@@ -6593,7 +6576,6 @@
   <block id="3939f796e36703e9db327c9570a95260" category="paragraph">利用 Intersight 管理和 FlexPod 易于扩展的架构，企业可以在一个 FlexPod 平台上运行多个基因组工作负载，从而提高利用率并降低总拥有成本（ TCO ）。FlexPod 可以灵活地进行规模估算，从小型 FlexPod 快速计划开始，并可扩展到大型 FlexPod 数据中心实施。借助 Cisco Intersight 内置的基于角色的访问控制功能，医疗保健组织可以实施强大的访问控制机制，从而避免需要单独的基础架构堆栈。医疗保健组织内的多个业务部门可以将基因组作为一项关键核心能力。</block>
   <block id="625631f3e07150b8b24d4b8387119edd" category="paragraph">最终， FlexPod 有助于简化 IT 运营并降低运营成本， IT 基础架构管理员可以将精力集中在帮助临床医生创新的任务上，而不是仅仅为了让他们保持正常运行。</block>
   <block id="6706db4316a6632cb20d560fc933ceb1" category="list-text">经过验证的设计和有保障的结果。 * FlexPod 设计和部署指南经过验证，可以重复使用，其中涵盖了放心部署 FlexPod 所需的全面配置详细信息和行业最佳实践。Cisco 和 NetApp 经验证的设计指南，部署指南和架构可帮助您的医疗保健或生命科学组织从一开始就消除实施经验证且值得信赖的平台时的猜测。借助 FlexPod ，您可以加快部署速度，降低成本，复杂性和风险。FlexPod 经验证的设计和部署指南将 FlexPod 确立为各种基因组工作负载的理想平台。</block>
-  <block id="f59c589a8a56328d42c01fe4907799db" category="list-text">* 创新与敏捷性。 * FlexPod 是 Epic ， Cerner ， Meditech 等 EHR 公司以及 Agfa ， GE ，飞利浦等成像系统的理想平台。有关的详细信息，请参见<block ref="29fbfe5255d192aa57455db81ba41a3d" category="inline-link-rx"></block> 和目标平台架构，请参见 Epic 用户 Web 。运行基因组学<block ref="24f2c347deb06bba4de59a5266702e7d" category="inline-link-rx"></block> 让医疗保健组织能够灵活地继续其创新之旅。借助 FlexPod ，实施组织变革自然成为必然。当企业在 FlexPod 平台上实现标准化时，医疗保健 IT 专家可以为创新配置时间，精力和资源，从而实现生态系统所需的灵活性。</block>
   <block id="c7e8b95fdeca6082100682f1b89e8b20" category="list-text">* 数据解放。 * 借助 FlexPod 融合基础架构平台和 NetApp ONTAP 存储系统，可以通过一个平台上的各种规模协议提供和访问基因组数据。采用 NetApp ONTAP 的 FlexPod 提供了一个简单，直观且功能强大的混合云平台。由 NetApp ONTAP 提供支持的 Data Fabric 可跨站点，跨物理边界和跨应用程序将数据集于一体。您的 Data Fabric 专为以数据为中心的环境中的数据驱动型企业而构建。数据在多个位置创建和使用，通常需要利用并与其他位置，应用程序和基础架构共享。因此，您需要采用一致且集成的方式来管理它。FlexPod 可以让您的 IT 团队掌控一切，并简化日益增加的 IT 复杂性。</block>
   <block id="7fcbd234b81a57e30b18381191dd1e46" category="list-text">* 安全多租户。 * FlexPod 使用符合 FIPS 140-2 的加密模块，因此，企业可以将安全性作为基本要素来实施，而不是事后考虑。无论平台大小如何， FlexPod 都支持企业从一个融合基础架构平台实施安全多租户。采用安全多租户和 QoS 的 FlexPod 有助于分离工作负载并最大程度地提高利用率。这有助于避免资本被锁定到可能未充分利用且需要专业技能集进行管理的专用平台中。</block>
   <block id="0e5a582d6f9c304c0a0fc9615b2a0860" category="list-text">* 存储效率。 * 基因组学要求底层存储具有行业领先的存储效率功能。您可以利用 NetApp 存储效率功能降低存储成本，例如重复数据删除（实时和按需），数据压缩和数据缩减（<block ref="2511e8b77417e5fdbc8e7e20b5b8e078" category="inline-link-rx"></block>）。NetApp 重复数据删除可在 FlexVol 卷中提供块级重复数据删除。从本质上说，重复数据删除会删除重复的块，从而仅在 FlexVol 卷中存储唯一的块。重复数据删除的粒度较高，并在 FlexVol 卷的活动文件系统上运行。下图简要显示了 NetApp 重复数据删除的工作原理。重复数据删除是应用程序透明的。因此，可以使用它对使用 NetApp 系统的任何应用程序生成的数据进行重复数据删除。您可以将卷重复数据删除作为实时进程和后台进程运行。您可以将其配置为自动运行，计划运行或通过命令行界面， NetApp ONTAP System Manager 或 NetApp Active IQ Unified Manager 手动运行。</block>
@@ -6857,7 +6839,6 @@
   <block id="b88aeccf539f84628e5459c2a7e1d725" category="cell">UCSC-C245M6</block>
   <block id="643ccfec845d77bd902162df9edcdcbf" category="paragraph">下表列出了可用于 FlexPod 架构的 Nexus 集群互连交换机。此外， FlexPod 还支持所有 ONTAP 支持的集群交换机，包括非 Cisco 交换机，但前提是它们与要部署的 ONTAP 版本兼容。请参见<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block> 有关特定交换机型号的其他兼容性详细信息。</block>
   <block id="0bc97a80630d922e5e5de8dd8689bcaa" category="inline-link">NetApp 文档： Cisco Nexus 9336C-x2 交换机</block>
-  <block id="1842d50bda8c8607d91b97316b2186a2" category="cell"><block ref="1842d50bda8c8607d91b97316b2186a2" category="inline-link-rx"></block></block>
   <block id="b9365bb9132d1eb8770275a763fc5d69" category="section-title">2022 年 1 月</block>
   <block id="c3c52ee83b368023b0bc4d56084cc12c" category="list-text">为 NetApp Active IQ Unified Manager 9.10 或更高版本添加了基于事件的 Intersight 警报。</block>
   <block id="3dd3b14e38a8724b67d519dfefeec2a4" category="admonition">为了确保与未来版本兼容并提供完整的功能，建议您将 NetApp Active IQ Unified Manager 升级到 9.10 版。</block>
@@ -6978,8 +6959,6 @@
   <block id="2d817d24735f352fea82322ab2c9e621" category="paragraph"><block ref="2d817d24735f352fea82322ab2c9e621" category="inline-link-rx"></block></block>
   <block id="6770ff13f95abd8619a19519877aedf9" category="list-text">NetApp 加密安全模块</block>
   <block id="02817beae9581784d8cd2f39ddda543b" category="paragraph"><block ref="02817beae9581784d8cd2f39ddda543b" category="inline-link-rx"></block></block>
-  <block id="846bf2df66c90e0dd774c49f7106f381" category="list-text">医疗保健行业网络安全实践：管理威胁和保护患者</block>
-  <block id="2902b923b2807abc94a366d08ff1bda6" category="paragraph"><block ref="2902b923b2807abc94a366d08ff1bda6" category="inline-link-rx"></block></block>
   <block id="bf7fa6fb49dfa01515f774f7a86c6270" category="list-text">适用于大中型医疗保健组织的网络安全实践</block>
   <block id="d1bf3cb27e5807caa3600fcdce477355" category="paragraph"><block ref="d1bf3cb27e5807caa3600fcdce477355" category="inline-link-rx"></block></block>
   <block id="3f6b1e7f286b82aada2164eae419754f" category="list-text">Cisco 和加密模块验证计划（ CMVP ）</block>
@@ -8972,8 +8951,6 @@
   <block id="3c28f1f86cce7b9f6cccd84c353320aa" category="paragraph"><block ref="3c28f1f86cce7b9f6cccd84c353320aa" category="inline-image-macro-rx" type="image"></block></block>
   <block id="baf8ff06d7e7509dbb1525fc95dee350" category="list-text">提供以下GitHub存储库详细信息：</block>
   <block id="f00cb64c44901d8b140ee5334ba42392" category="inline-link-macro">"设置环境前提条件"</block>
-  <block id="4a470f461c007e22030142a71b593456" category="list-text">在*存储库名称*中、输入一节中详细介绍的存储库名称 <block ref="3bd0a1108a23c22c460b332b6044d46b" category="inline-link-macro-rx"></block>。</block>
-  <block id="7ad0c2df34976d7bd8b12ea9e4d942f5" category="list-text">按照一节中的详细说明提供OAuth令牌ID <block ref="3bd0a1108a23c22c460b332b6044d46b" category="inline-link-macro-rx"></block>。</block>
   <block id="cc52ae3c0b42500f9340757e4535abe9" category="list-text">选择*自动运行触发*选项。</block>
   <block id="7dc4834a62425cc62d13478addab1f09" category="paragraph"><block ref="7dc4834a62425cc62d13478addab1f09" category="inline-image-macro-rx" type="image"></block></block>
   <block id="51b0e138743de6b27eb2983b1e789a5d" category="paragraph">这将完成在Terraform Cloud for Business帐户中创建工作空间的任务。</block>
@@ -9060,7 +9037,6 @@
   <block id="e97bbbb4aa99cae4a317dc1978ea02ce" category="list-text">*值。*输入NetApp Cloud Manager API操作的刷新令牌。</block>
   <block id="c0635c122427dfcc192d6c29ee84e3fb" category="list-text">*。问题描述。*刷新令牌。</block>
   <block id="253f26b8ee128a839e34d1b24a799e82" category="inline-link-macro">"设置环境前提条件。"</block>
-  <block id="0873f157a13b94ec2c2cb69ff4d2f25d" category="admonition">有关为NetApp Cloud Manager API操作获取刷新令牌的详细信息、请参见一节 <block ref="e494838bdd9d1128badc766b5008a232" category="inline-link-macro-rx"></block></block>
   <block id="d05613edc0c7136089b620dec8c8d9de" category="paragraph"><block ref="d05613edc0c7136089b620dec8c8d9de" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ca0fb47f75ab6fca4e951b8cbe658bdd" category="list-text">添加下表所示的所有Terraform敏感变量。您还可以提供默认值。</block>
   <block id="eb8e560b05e9ad296a7e85c8465ee698" category="cell">Terraform敏感变量名称</block>
@@ -9779,4 +9755,26 @@
   <block id="33f06c93ff0e249c6d028973d21932bc" category="list-text">在用户界面的"Inventory"部分的"Tier"页面下添加了"Local Tier"和"Cloud Tier"选项卡。</block>
   <block id="cebb5bee9f2c3fd7a29eb3a7ad7f1530" category="list-text">现在、节点列会显示在用户界面的"Inventory"部分的"Ports"页面下的"Name"列后面。</block>
   <block id="59829409d4681e66c64ba39915db7b13" category="list-text">如果使用FQDN将ONTAP 集群添加到AIQUM、则不会填充"存储清单检查"页面。用户必须使用IP地址将ONTAP 集群添加到AIQUM。</block>
+  <block id="d94305499731d4ac990a20b7cb6a6b4a" category="inline-link-macro">下一步：NetApp存储部署操作步骤 (第1部分)。</block>
+  <block id="dd36bf94d255fd9e55d53f5078ad6906" category="paragraph"><block ref="dd36bf94d255fd9e55d53f5078ad6906" category="inline-link-macro-rx"></block></block>
+  <block id="3a968620de3cd9fc31efff82d9d2dd0d" category="inline-link-macro">下一步：VMware vCenter Server 6.7U2安装操作步骤。</block>
+  <block id="91b9e7776b52469178a5fcad4f7049d4" category="paragraph"><block ref="91b9e7776b52469178a5fcad4f7049d4" category="inline-link-macro-rx"></block></block>
+  <block id="c31eb7dd2056b91419c41baff0842aaf" category="inline-link-macro">接下来：部署Cisco UCS C系列机架式服务器。</block>
+  <block id="2a98494dbd4dedcebbd5a3476a698b17" category="paragraph"><block ref="2a98494dbd4dedcebbd5a3476a698b17" category="inline-link-macro-rx"></block></block>
+  <block id="45e53425d2653d2fd2ae777132d44bc3" category="inline-link-macro">下一步：VMware vCenter Server 6.7U2和vSphere集群配置。</block>
+  <block id="88dee804fe15990dd6758ede5645d123" category="paragraph"><block ref="88dee804fe15990dd6758ede5645d123" category="inline-link-macro-rx"></block></block>
+  <block id="2cbbb0371173c8b4294155288d3624cb" category="inline-link-macro">下一步：VMware vSphere 6.7U2部署操作步骤。</block>
+  <block id="b464058fe2eea54a63e15e6ffa6535a9" category="paragraph"><block ref="b464058fe2eea54a63e15e6ffa6535a9" category="inline-link-macro-rx"></block></block>
+  <block id="3c5de8afb134500847c2d82befc7f7fc" category="inline-link-macro">下一步：NetApp AFF 存储部署操作步骤 (第2部分)。</block>
+  <block id="df5c4529e338fe5628fc632a67bcf0b3" category="paragraph"><block ref="df5c4529e338fe5628fc632a67bcf0b3" category="inline-link-macro-rx"></block></block>
+  <block id="a604e2599b5650f99b6243a6cb88caad" category="inline-link-macro">下一步：NetApp Virtual Storage Console 9.6部署过程。</block>
+  <block id="77ea3e0cb183c71de77cbce4440e970f" category="paragraph"><block ref="77ea3e0cb183c71de77cbce4440e970f" category="inline-link-macro-rx"></block></block>
+  <block id="79be172bb4d7292680bc827a6a2ed941" category="admonition">FabricPool 许可证在集群范围内有效。购买许可证时、您应具有UUID <block ref="97c6b1d9f961d2fb9b8a976962d5c444" prefix="(" category="inline-code"></block>）。有关其他许可信息，请参见<block ref="e79e2253f35b48ecc5164c2e28ca127e" category="inline-link-rx"></block>。</block>
+  <block id="6a2bfb8b978ae1e7f363e2c5bc9a3ac5" category="list-text">在*存储库名称*中、输入一节中详细介绍的存储库名称 <block ref="e4d59a400fe59f0e4cb4fc1d6c22c1f7" category="inline-link-macro-rx"></block>。</block>
+  <block id="f55293d2d6bdc95bcc1d0f10029daa94" category="list-text">按照一节中的详细说明提供OAuth令牌ID <block ref="e4d59a400fe59f0e4cb4fc1d6c22c1f7" category="inline-link-macro-rx"></block>。</block>
+  <block id="a998205fac8a4b4c95fce6d91339404d" category="admonition">有关为NetApp Cloud Manager API操作获取刷新令牌的详细信息、请参见一节 <block ref="35d1f0e345aa61afd6d94e7e18e21e57" category="inline-link-macro-rx"></block></block>
+  <block id="7349a4a610dc5667a30d21a51a3ab405" category="inline-link-macro"><block ref="7349a4a610dc5667a30d21a51a3ab405" category="inline-link-rx"></block></block>
+  <block id="c5278a5ee46f3950c6449cea7119ca37" category="cell"><block ref="c5278a5ee46f3950c6449cea7119ca37" category="inline-link-macro-rx"></block></block>
+  <block id="040d804b2c70516766d21ab594bc39bb" category="cell"><block ref="040d804b2c70516766d21ab594bc39bb" category="inline-link-rx"></block></block>
+  <block id="0d9b0b32a4432dbeaa0425b3a43bf813" category="list-text">* 创新与敏捷性。 * FlexPod 是 Epic ， Cerner ， Meditech 等 EHR 公司以及 Agfa ， GE ，飞利浦等成像系统的理想平台。有关的详细信息，请参见<block ref="e3215a4a4d4097ca1d3d2b989f46a542" category="inline-link-rx"></block> 和目标平台架构，请参见 Epic 用户 Web 。运行基因组学<block ref="24f2c347deb06bba4de59a5266702e7d" category="inline-link-rx"></block> 让医疗保健组织能够灵活地继续其创新之旅。借助 FlexPod ，实施组织变革自然成为必然。当企业在 FlexPod 平台上实现标准化时，医疗保健 IT 专家可以为创新配置时间，精力和资源，从而实现生态系统所需的灵活性。</block>
 </blocks>

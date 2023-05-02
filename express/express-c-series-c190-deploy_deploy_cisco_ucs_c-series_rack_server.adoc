@@ -399,4 +399,4 @@ NOTE: 必须对添加到环境中的每个初始 Cisco UCS 服务器节点和每
 
 
 
-link:express-c-series-c190-design_netapp_aff_storage_deployment_procedure_@part_2@.html["接下来： NetApp AFF 存储部署操作步骤（第 2 部分）"]
+link:express-c-series-c190-deploy_netapp_aff_storage_deployment_procedure_@part_2@.html["下一步：NetApp AFF 存储部署操作步骤 (第2部分)。"]

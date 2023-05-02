@@ -110,4 +110,4 @@ image:express-c-series-c190-deploy_image44.png["错误：缺少图形映像"]
 . 安装程序提供的用于访问 vCenter Server 的链接可单击。
 
 
-link:express-c-series-c190-design_vmware_vcenter_server_6.7u2_and_vsphere_clustering_configuration.html["接下来： VMware vCenter Server 6.7U2 和 vSphere 集群配置"]
+link:express-c-series-c190-deploy_vmware_vcenter_server_6.7u2_and_vsphere_clustering_configuration.html["下一步：VMware vCenter Server 6.7U2和vSphere集群配置。"]

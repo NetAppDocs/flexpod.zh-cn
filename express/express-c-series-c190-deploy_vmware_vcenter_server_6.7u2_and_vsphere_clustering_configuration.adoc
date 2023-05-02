@@ -105,4 +105,4 @@ NOTE: 此验证中的 `IP_address_of_core_dump_collector` 是 vCenter IP 。
 
 
 
-link:express-c-series-c190-design_netapp_virtual_storage_console_9.6_deployment_procedures.html["接下来： NetApp Virtual Storage Console 9.6 部署过程"]
+link:express-c-series-c190-deploy_netapp_virtual_storage_console_9.6_deployment_procedures.html["下一步：NetApp Virtual Storage Console 9.6部署过程。"]

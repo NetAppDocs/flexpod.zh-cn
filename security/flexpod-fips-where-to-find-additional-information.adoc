@@ -66,10 +66,6 @@ https://www.cisco.com/c/en/us/solutions/industries/government/global-government-
 +
 https://csrc.nist.gov/csrc/media/projects/cryptographic-module-validation-program/documents/security-policies/140sp2648.pdf[]
 
-* 医疗保健行业网络安全实践：管理威胁和保护患者
-+
-https://www.phe.gov/Preparedness/planning/405d/Pages/hic-practices.aspx[]
-
 * 适用于大中型医疗保健组织的网络安全实践
 +
 https://www.phe.gov/Preparedness/planning/405d/Documents/tech-vol2-508.pdf[]

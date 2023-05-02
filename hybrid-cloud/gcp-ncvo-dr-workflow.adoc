@@ -443,8 +443,8 @@ image:gcp-ncvo-image56.png["屏幕截图"]
 
 . 提供以下GitHub存储库详细信息：
 +
-.. 在*存储库名称*中、输入一节中详细介绍的存储库名称 link:p-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html#google-cloud#set-up-environment-prerequisites[""设置环境前提条件""]。
-.. 按照一节中的详细说明提供OAuth令牌ID link:p-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html#google-cloud#set-up-environment-prerequisites[""设置环境前提条件""]。
+.. 在*存储库名称*中、输入一节中详细介绍的存储库名称 link:gcp-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html#google-cloud#set-up-environment-prerequisites[""设置环境前提条件""]。
+.. 按照一节中的详细说明提供OAuth令牌ID link:gcp-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html#google-cloud#set-up-environment-prerequisites[""设置环境前提条件""]。
 .. 选择*自动运行触发*选项。
 +
 image:gcp-ncvo-image57.png["屏幕截图"]
@@ -624,7 +624,7 @@ image:gcp-ncvo-image66.png["屏幕截图"]
 ** *。问题描述。*刷新令牌。
 +
 
-NOTE: 有关为NetApp Cloud Manager API操作获取刷新令牌的详细信息、请参见一节 link:p-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html#google-cloud#set-up-environment-prerequisites[""设置环境前提条件。""]
+NOTE: 有关为NetApp Cloud Manager API操作获取刷新令牌的详细信息、请参见一节 link:gcp-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html#google-cloud#set-up-environment-prerequisites[""设置环境前提条件。""]
 
 +
 image:gcp-ncvo-image67.png["屏幕截图"]
