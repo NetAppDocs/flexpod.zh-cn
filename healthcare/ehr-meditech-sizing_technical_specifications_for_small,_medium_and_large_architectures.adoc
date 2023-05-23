@@ -104,7 +104,7 @@ NOTE: 某些客户环境可能会同时运行多个 MEDITECH 生产工作负载�
 | Cisco UCS 刀片式服务器 | 4 个 B200 M5 | 每个系统具有 2 个 14 核， 2.6 GHz 或更高时钟速度以及 384 GB BIOS 3.2 （ 3# ） 
 
 
-| Cisco UCS 虚拟接口卡 | 4 个 UCS 1440 | VMware ESXi fNIC FC 驱动程序： 1.6.0.47 VMware ESXi eNIC 以太网驱动程序： 1.0.27.0 （请参见互操作性表： https://ucshcltool.cloudapps.cisco.com/public/)[] 
+| Cisco UCS 虚拟接口卡 | 4 个 UCS 1440 | VMware ESXi fNIC FC 驱动程序： 1.6.0.47 VMware ESXi eNIC 以太网驱动程序： 1.0.27.0 （请参见互操作性表： 
 
 
 | 2 个 Cisco UCS 互联阵列（ FI ） | 2 个 UCS 6454 FI | 第四代互联阵列，支持 10/25/100GB 以太网和 32 Gb FC 
@@ -180,7 +180,7 @@ NOTE: 某些客户环境可能会同时运行多个 MEDITECH 生产工作负载�
 | Cisco UCS 刀片式服务器 | 8 个 B200 M5 | 每个模块具有 2 个 24 核， 2.7 GHz 和 768 GB BIOS 3.2 （ 3# ） 
 
 
-| Cisco UCS 虚拟接口卡（ VIC ） | 8 个 UCS 1440 VIC | VMware ESXi fNIC FC 驱动程序： 1.6.0.47 VMware ESXi eNIC 以太网驱动程序： 1.0.27.0 （请查看互操作性表： https://ucshcltool.cloudapps.cisco.com/public/)[] 
+| Cisco UCS 虚拟接口卡（ VIC ） | 8 个 UCS 1440 VIC | VMware ESXi fNIC FC 驱动程序： 1.6.0.47 VMware ESXi eNIC 以太网驱动程序： 1.0.27.0 （请查看互操作性表： 
 
 
 | 2 个 Cisco UCS 互联阵列（ FI ） | 2 个 UCS 6454 FI | 第四代互联阵列，支持 10 GB/25 GB/100 GB 以太网和 32 Gb FC 
