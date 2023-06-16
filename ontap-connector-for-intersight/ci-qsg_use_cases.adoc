@@ -79,52 +79,51 @@ summary: 以下是从 Cisco Intersight 监控和编排 NetApp 存储的几个用
 以下是 Cisco Intersight 提供的 NetApp 存储任务：
 
 +
-** 将存储导出策略添加到卷
-** 将启动程序连接到存储主机
-** 断开存储导出策略与卷的连接
-** 编辑 Storage Virtual Machine 的聚合
-** 编辑存储导出策略规则
-** 编辑存储 Snapshot 策略
-** 编辑存储 Snapshot 策略计划
-** 展开存储 LUN
-** 展开存储卷
-** 查找 NetApp igroup LUN 映射
-** 按 ID 查找存储 LUN
-** 按 ID 查找存储卷
-** 新建存储导出策略
-** 新建存储导出策略规则
-** 全新的NetApp存储光纤通道接口
-** 新建存储主机
-** 新的存储IP接口
-** 新建存储LUN
-** 新的存储LUN ID
-** 新的NetApp存储NAS智能卷
-** 新的NetApp Storage Smart LUN
-** 新建存储 Snapshot 策略
-** 新建存储 Snapshot 策略计划
-** 新建 Storage Virtual Machine
-** 新存储卷
-** 新建存储卷快照
-** 删除存储导出策略
-** 删除存储导出策略规则
-** 删除存储 FC 接口
-** 删除存储主机
-** 删除存储 IP 接口
-** 删除存储LUN
-** 删除存储LUN ID
-** 删除NetApp Storage Smart LUN
-** 删除存储 Snapshot 策略
-** 删除存储 Snapshot 策略计划
-** 删除 Storage Virtual Machine
-** 删除存储卷
-** 删除存储卷 Snapshot
-** 重命名存储卷 Snapshot
+** 将导出策略添加到NetApp卷
+** 将启动程序添加到NetApp启动程序组
+** 将规则添加到NetApp导出策略
+** 将计划添加到NetApp快照策略
+** 编辑Storage Virtual Machine的NetApp聚合
+** 编辑NetApp导出策略规则
+** 编辑NetApp快照策略
+** 编辑NetApp快照策略计划
+** 展开NetApp LUN
+** 查找NetApp启动程序组LUN映射
+** 按ID查找NetApp LUN
+** 按ID查找NetApp卷
+** 新建NetApp导出策略
+** 新的NetApp FC数据接口
+** 新建NetApp启动程序组
+** 新的NetApp iSCSI数据接口
+** 新建NetApp LUN
+** 新建NetApp LUN映射
+** 新的NetApp NAS数据接口
+** 新建NetApp NAS智能卷
+** 新建NetApp智能LUN
+** 新建NetApp快照策略
+** 新建NetApp Storage Virtual Machine
+** 新建NetApp卷
+** 新建NetApp卷快照
+** 从NetApp卷中删除导出策略
+** 删除NetApp导出策略
+** 删除NetApp FC数据接口
+** 删除NetApp启动程序组
+** 删除NetApp IP接口
+** 删除NetApp LUN
+** 删除NetApp LUN映射
+** 删除NetApp NAS智能卷
+** 删除NetApp智能LUN
+** 删除NetApp快照策略
+** 删除NetApp Storage Virtual Machine
+** 删除NetApp卷
+** 删除NetApp卷快照
+** 从NetApp导出策略中删除规则
+** 从NetApp快照策略中删除计划
+** 重命名NetApp卷快照
+** 更新NetApp卷容量
 +
-
-NOTE: 新存储 NAS 智能卷和新存储智能 LUN 任务仅适用于 ONTAP 9.8 及更高版本。ONTAP 9.7P1 当前为支持的最低版本。
-
-
-
-
-
 要了解有关使用 NetApp 存储和虚拟化任务自定义工作流的更多信息，请观看视频 https://tv.netapp.com/detail/video/6228095945001["Cisco Intersight 中的 NetApp ONTAP 存储编排"^]。
+
+
+
+

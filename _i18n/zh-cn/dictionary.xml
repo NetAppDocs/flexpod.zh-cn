@@ -6602,7 +6602,6 @@
   <block id="33e4e289cefe243134e8d14e37181dd1" category="sidebar">适用于基因组学的 FlexPod</block>
   <block id="b913c1c1cde143cea45cb35af2f91d75" category="sidebar">使用 ./gatk 脚本执行 GATK 的输出</block>
   <block id="c47b18a4d429299b996de436c91a4416" category="inline-link-macro">使用案例 3 使用无设计人员表单的自定义工作流</block>
-  <block id="7fd44dc2c5fafe252191e6ef332a6773" category="list-text">更新了 Cisco Intersight 中可用的 NetApp 存储任务列表。请参见 <block ref="026b254cc8ff2f5d36709bcf93418a5f" category="inline-link-macro-rx"></block> 有关 NetApp 存储任务的完整列表。</block>
   <block id="4b6fb03e9a4a802c4ef171e5df2f924b" category="list-text">添加了一个新的传感器选项卡，其中包含 Storage Virtual Machine 的常规页面。</block>
   <block id="3274a50ba9f0d3c0adefdfa11c5094be" category="doc">测试结果</block>
   <block id="782ca8c3b3f6b85a20e7774ff589f789" category="inline-link-macro">上一篇：测试方法。</block>
@@ -7173,32 +7172,6 @@
   <block id="b314d9c735aadb448d69a15f8a64d5dc" category="list-text">已将 AutoSupport 添加到集群清单</block>
   <block id="b184dfcc61c7724494e910c3ecf1995d" category="list-text">已将 `cdpd.enable` 选项添加到节点</block>
   <block id="6b2cd9fd5e6df687c3d2d950a0504cb2" category="list-text">已为 CDP 邻居添加对象</block>
-  <block id="1b178e202b7d2a2988fd16b3b67c6a9b" category="list-text">在 Cisco Intersight 中添加了 NetApp 工作流存储任务。请参见 <block ref="026b254cc8ff2f5d36709bcf93418a5f" category="inline-link-macro-rx"></block> 有关 NetApp 存储任务的完整列表。</block>
-  <block id="054ea9c656473e275b7ae5b69269cc81" category="list-text">将存储导出策略添加到卷</block>
-  <block id="aa4edcb7e57123151162ef878a3a3bb4" category="list-text">展开存储 LUN</block>
-  <block id="cb036c70939fadc3637cbeb990d0a969" category="list-text">展开存储卷</block>
-  <block id="01b698a596504162b7fcdf910e9175db" category="list-text">查找 NetApp igroup LUN 映射</block>
-  <block id="9e5d320b5556f2516f70b24e91d5f757" category="list-text">按 ID 查找存储 LUN</block>
-  <block id="783d5727a583df3d75bb078907ef7716" category="list-text">按 ID 查找存储卷</block>
-  <block id="f44bd35636cd69c25b2f240a770ab0a5" category="list-text">删除存储卷</block>
-  <block id="5cb81d48ffabbd08e273eb1371ff2113" category="list-text">新建存储 Snapshot 策略</block>
-  <block id="46c325550313b45bd974662a8ba5d5c5" category="list-text">新建存储 Snapshot 策略计划</block>
-  <block id="9b9d199f57b9023464de44d3dca11130" category="list-text">删除存储 Snapshot 策略</block>
-  <block id="7a1c4f4a4587adf0b4172f03a5a10160" category="list-text">删除存储 Snapshot 策略计划</block>
-  <block id="a61be198effbf7f1dc853d340112e634" category="list-text">编辑存储 Snapshot 策略</block>
-  <block id="8078f3fdaf127a36179526d045fad2cc" category="list-text">编辑存储 Snapshot 策略计划</block>
-  <block id="469a3f87c703625ad34e802940619510" category="list-text">新建存储卷快照</block>
-  <block id="979a9d34e9735d1cf374866a119573d2" category="list-text">删除存储卷 Snapshot</block>
-  <block id="474a3e1f12f91f621ea325e1f70cc8e3" category="list-text">重命名存储卷 Snapshot</block>
-  <block id="3fa3b03210322aa88ea23ab989f0bd00" category="list-text">新建存储导出策略规则</block>
-  <block id="2133699c47edcf42d3f21fca79b3cbc4" category="list-text">编辑存储导出策略规则</block>
-  <block id="aebccc1ede7dceb6a8cb87a8f8ff76e7" category="list-text">删除存储导出策略规则</block>
-  <block id="4ff4c642392f4f69f68614bbc7a2a203" category="list-text">断开存储导出策略与卷的连接</block>
-  <block id="c6bda77442a097d5afa5bfaa2aa4e765" category="list-text">删除存储 FC 接口</block>
-  <block id="0027d78119d537368b4fd4055fdfdd69" category="list-text">删除存储 IP 接口</block>
-  <block id="2205b729cc3612050bfabb80d4d267a0" category="list-text">删除 Storage Virtual Machine</block>
-  <block id="091e9fb66636892d6015097e15c3353a" category="list-text">编辑 Storage Virtual Machine 的聚合</block>
-  <block id="fc763aee087e01aba254202f6cfd6ba9" category="admonition">新存储 NAS 智能卷和新存储智能 LUN 任务仅适用于 ONTAP 9.8 及更高版本。ONTAP 9.7P1 当前为支持的最低版本。</block>
   <block id="d3723866fd8ed566ec4269ff8a1cde80" category="inline-link-macro">NetApp Active IQ Unified Manager 文档</block>
   <block id="f2fe8cac791595f71f03311fed4e6b2f" category="admonition">声明 NetApp AIQ UM 目标时，由 Active IQ Unified Manager 管理的所有集群都会自动添加到 Intersight 中。</block>
   <block id="07360078de4b958f771427531bf4153f" category="summary">采用 SM-BC 的 FlexPod 数据中心采用主动 - 主动数据中心设计，为业务关键型工作负载提供业务连续性和灾难恢复。解决方案 通常会将部署在不同地理位置分散的城域中的两个数据中心互连在一起。NetApp SM-BC 解决方案 使用同步复制来保护业务关键型数据服务免受站点故障的影响。解决方案 要求两个 FlexPod 部署站点的往返网络延迟低于 10 毫秒。</block>
@@ -7809,19 +7782,6 @@
   <block id="fa4af406aa8e6bea78d3f4f656f199fe" category="list-text">在新存储NAS数据接口和新存储iSCSI数据接口下为NAS添加了"故障转移策略"和"自动恢复"参数</block>
   <block id="5f5cca73b8e0b0dcf13ae37abd1b30a6" category="list-text">现在、如果未连接任何其他卷、"回滚新存储NAS智能卷"任务将删除导出策略</block>
   <block id="85c1767724516ce4c530e386f6a8e04e" category="list-text">对智能卷和智能LUN任务进行了增强</block>
-  <block id="0de3d10d428301dc752a4aea634acb40" category="list-text">将启动程序连接到存储主机</block>
-  <block id="9fc1d1408b035b5f699e246b36f2e395" category="list-text">全新的NetApp存储光纤通道接口</block>
-  <block id="a5df94fc588067cf92394a3554329601" category="list-text">新的存储IP接口</block>
-  <block id="d7e057b4be4f5aec2f39a363e6970a26" category="list-text">新建存储LUN</block>
-  <block id="4c807515ded4b2b7b3cea9068a98c67c" category="list-text">新的存储LUN ID</block>
-  <block id="c6751b7723c681fbbc53d1ece3f78e57" category="list-text">新的NetApp存储NAS智能卷</block>
-  <block id="8221f154a0cd2642f264529279893b96" category="list-text">新的NetApp Storage Smart LUN</block>
-  <block id="e86a1c0d2603c82b6b81f234dae454af" category="list-text">新存储卷</block>
-  <block id="40f53794e58186747b2ca794fc115708" category="list-text">删除存储导出策略</block>
-  <block id="92deb106459eb050b785db2fe57cce48" category="list-text">删除存储主机</block>
-  <block id="bd400b36b257aae8e728e6440fee9fe6" category="list-text">删除存储LUN</block>
-  <block id="020226a8130f1d7d0a9df708c3d7b600" category="list-text">删除存储LUN ID</block>
-  <block id="93eafe4433d296a1dd07b95ce951c9a7" category="list-text">删除NetApp Storage Smart LUN</block>
   <block id="b8a3a6101b5ada36c1e5927fd398157d" category="list-text">在部署后过程中、选择以下选项：</block>
   <block id="05b3bc98db36aa487224a23de09ab3be" category="admonition">选择Intersight Assist时、请记下设备ID和款项申请代码、然后再继续操作。</block>
   <block id="fd7b91f0228fe4adf25f7fca76314e8d" category="list-text">选择*中间视辅助*并完成以下步骤：</block>
@@ -9118,8 +9078,6 @@
   <block id="ce93121f4d7265c3a12c10d3efa2733d" category="inline-link-macro">previous：使用&lt;block ref="c04f464a529d08398ebf630bf9c932 ed" prefix="category="inline-code"/"脚本执行GATK的输出。</block>
   <block id="1b04071fa32de2cc62ba81ce722a80de" category="inline-link-macro">使用&lt;block ref="c04f464a529d08398ebf630bf9c932ed" prefix="category="inline-code"/"脚本执行GATK的输出。</block>
   <block id="919bcacd06d9ba9c758783027661478b" category="inline-link-macro">下一步：使用&lt;block ref="c04f464a529d08398ebf630bf9c932 ed" prefix="category="inline-code"/"脚本执行GATK的输出。</block>
-  <block id="4174da9caea2fe6cfb47e03b760a26b4" category="cell">需要最新版本的NetApp Active IQ Unified Manager (当前为9.12 GA)</block>
-  <block id="1ad9d53c3fc2062cfb8cd9f962f46df0" category="paragraph">如果尚未安装或升级到Active IQ Unified Manager (需要最新版本、当前为9.12 GA)、请安装或升级到此版本。有关说明，请转至 <block ref="b713007c96ed5cceca9ab6b5776ab58a" category="inline-link-macro-rx"></block>。</block>
   <block id="30afe0cd8c37f4391553d8fb227f8dd4" category="paragraph">如果您使用的代理服务器具有适用于Cisco Intersight的AIQ UM和NetApp ONTAP 存储、则必须通过命令行界面(CLI)配置此设置、以利用互操作性表工具服务(IMT)。IMT 服务位于*集成系统*页面的*互操作性*选项卡下。您必须使用Active IQ Unified Manager 虚拟机(OVA)诊断Shell配置AIQ UM代理服务器设置。</block>
   <block id="abb14d21829ba186172f6e1d0b64b55b" category="section-title">2023年1月</block>
   <block id="f58686065d77527c1d5e19130ba1ee62" category="admonition">要确保与最新版本的兼容性和完整功能、需要升级到NetApp Active IQ Unified Manager 9.12 GA。有关与此版本相关的已知问题列表、请参见 <block ref="1e93e2dfe5ecbece98249e8c1a59713c" category="inline-xref-macro-rx"></block>。</block>
@@ -9777,4 +9735,53 @@
   <block id="c5278a5ee46f3950c6449cea7119ca37" category="cell"><block ref="c5278a5ee46f3950c6449cea7119ca37" category="inline-link-macro-rx"></block></block>
   <block id="040d804b2c70516766d21ab594bc39bb" category="cell"><block ref="040d804b2c70516766d21ab594bc39bb" category="inline-link-rx"></block></block>
   <block id="0d9b0b32a4432dbeaa0425b3a43bf813" category="list-text">* 创新与敏捷性。 * FlexPod 是 Epic ， Cerner ， Meditech 等 EHR 公司以及 Agfa ， GE ，飞利浦等成像系统的理想平台。有关的详细信息，请参见<block ref="e3215a4a4d4097ca1d3d2b989f46a542" category="inline-link-rx"></block> 和目标平台架构，请参见 Epic 用户 Web 。运行基因组学<block ref="24f2c347deb06bba4de59a5266702e7d" category="inline-link-rx"></block> 让医疗保健组织能够灵活地继续其创新之旅。借助 FlexPod ，实施组织变革自然成为必然。当企业在 FlexPod 平台上实现标准化时，医疗保健 IT 专家可以为创新配置时间，精力和资源，从而实现生态系统所需的灵活性。</block>
+  <block id="32c88669445a60f20d5c4768cafb4635" category="paragraph">安装或升级到Active IQ Unified Manager (需要最新版本、当前为9.13RC1)(如果尚未执行此操作)。有关说明，请转至 <block ref="b713007c96ed5cceca9ab6b5776ab58a" category="inline-link-macro-rx"></block>。</block>
+  <block id="9944591da8cbd48d8dd6e6366955da50" category="list-text">将导出策略添加到NetApp卷</block>
+  <block id="39fcfcb06d577fe28a1681ec59bd8813" category="list-text">将启动程序添加到NetApp启动程序组</block>
+  <block id="316ae23c10623d9e2fd5c26d0162e4e1" category="list-text">将规则添加到NetApp导出策略</block>
+  <block id="c1e75562a1ee05d4eb3bdd4ce416c7fe" category="list-text">将计划添加到NetApp快照策略</block>
+  <block id="dcbe38495fab1770c2244fae824e4567" category="list-text">编辑Storage Virtual Machine的NetApp聚合</block>
+  <block id="a3e01372be0fd350672ec9026d00bfd1" category="list-text">编辑NetApp导出策略规则</block>
+  <block id="b2909ba12d7d2bd66cbc580aafe6b228" category="list-text">编辑NetApp快照策略</block>
+  <block id="5fa98424f4171475b37db60b2dc77260" category="list-text">编辑NetApp快照策略计划</block>
+  <block id="390a620db962909d07928ed78ef53204" category="list-text">展开NetApp LUN</block>
+  <block id="3183eade83f0193ab35b8970f2c68664" category="list-text">查找NetApp启动程序组LUN映射</block>
+  <block id="1b746e0205a5cc7f2d0108c9ea93762d" category="list-text">按ID查找NetApp LUN</block>
+  <block id="8a80e56d5db5a1442049e0f62400b9ca" category="list-text">按ID查找NetApp卷</block>
+  <block id="e949897c1607f632d83cf0938dee40a7" category="list-text">新建NetApp导出策略</block>
+  <block id="f990c67abc9fb266464d487c346d3612" category="list-text">新的NetApp FC数据接口</block>
+  <block id="61f173414a4053b33c1cfee676b76b4b" category="list-text">新建NetApp启动程序组</block>
+  <block id="63e40433e460c62f2accc6e3a45c06fb" category="list-text">新的NetApp iSCSI数据接口</block>
+  <block id="fa78246b0e8c6de1cd52645f02831c86" category="list-text">新建NetApp LUN</block>
+  <block id="087a2a891ca2a561f44d5917021c6689" category="list-text">新建NetApp LUN映射</block>
+  <block id="d73757020a56b91ae816c18a56f9c49d" category="list-text">新的NetApp NAS数据接口</block>
+  <block id="31cd130de62753275b838e4c22c01d0e" category="list-text">新建NetApp NAS智能卷</block>
+  <block id="6cf2feff2e371abb80aba7e5aaea379a" category="list-text">新建NetApp智能LUN</block>
+  <block id="8b9572adccfac5fa05a86f00dbb8eab2" category="list-text">新建NetApp快照策略</block>
+  <block id="d0de55422275f1183147b3b00bf46341" category="list-text">新建NetApp Storage Virtual Machine</block>
+  <block id="7205da2b815c287ae127a2a0759e3dc8" category="list-text">新建NetApp卷</block>
+  <block id="c88e88f622d355fa885cd07b661181fa" category="list-text">新建NetApp卷快照</block>
+  <block id="c77322d3208fc6cc1fcbf66f2cff2064" category="list-text">从NetApp卷中删除导出策略</block>
+  <block id="08b4ef99dd90f65a917162dae5001a9b" category="list-text">删除NetApp导出策略</block>
+  <block id="f1c19806910ec96f1866a311f4e2c040" category="list-text">删除NetApp FC数据接口</block>
+  <block id="de9b0e25e74ef14a03e62f3d048bee50" category="list-text">删除NetApp启动程序组</block>
+  <block id="a6ba73691dd59717e2dd9c330b72c2ec" category="list-text">删除NetApp IP接口</block>
+  <block id="291f295b31590fc97f1bc8ba5251c2f8" category="list-text">删除NetApp LUN</block>
+  <block id="0fb99f556df156305cff85e0176d63ce" category="list-text">删除NetApp LUN映射</block>
+  <block id="0694de58ab2e822e387b823e51e54841" category="list-text">删除NetApp NAS智能卷</block>
+  <block id="a131b61917fb652a85f68945d920f91f" category="list-text">删除NetApp智能LUN</block>
+  <block id="f227d28aa4a5d8fad82d2fed00d7aee1" category="list-text">删除NetApp快照策略</block>
+  <block id="9f85cc47bf61f32b9cd68d5ff30afd1f" category="list-text">删除NetApp Storage Virtual Machine</block>
+  <block id="bbc2e677fd4417e3186aad3353a3f4a8" category="list-text">删除NetApp卷</block>
+  <block id="90e86a915d7d7728d267251ca74d65aa" category="list-text">删除NetApp卷快照</block>
+  <block id="f31b13d8f87aef5c7ef5df3f708aa577" category="list-text">从NetApp导出策略中删除规则</block>
+  <block id="7d9b1145d4ddecd2b63b6017eb559a79" category="list-text">从NetApp快照策略中删除计划</block>
+  <block id="fcfa83f92e088a38cb0b8b964782a825" category="list-text">重命名NetApp卷快照</block>
+  <block id="cf1b3d281850307ef3dfced3bacedd94" category="list-text">更新NetApp卷容量</block>
+  <block id="76d2b8dc750167185cbc6e1c83deac4f" category="cell">需要最新版本的NetApp Active IQ Unified Manager (当前为9.13RC1)</block>
+  <block id="411d690288852abddc39378b2989bfda" category="section-title">2023年6月</block>
+  <block id="b4099ff97cb0b64945972224373faec4" category="admonition">需要升级到NetApp Active IQ Unified Manager 9.13RC1、以确保与最新版本的兼容性和完整功能。</block>
+  <block id="4afd182647adde3ae53ba9636f8ecd85" category="list-text">已更新NetApp存储任务的名称。请参见 <block ref="7cee7c950e5c408827f960772194d4bb" category="inline-link-macro-rx"></block> 有关已重命名任务的完整列表。</block>
+  <block id="2d24bfd4ad96e334ad70f500b56563c3" category="list-text">在 Cisco Intersight 中添加了 NetApp 工作流存储任务。请参见 <block ref="7cee7c950e5c408827f960772194d4bb" category="inline-link-macro-rx"></block> 有关 NetApp 存储任务的完整列表。</block>
+  <block id="c0d6fe9e8f745815653bfbc202c74e93" category="list-text">更新了 Cisco Intersight 中可用的 NetApp 存储任务列表。请参见 <block ref="7cee7c950e5c408827f960772194d4bb" category="inline-link-macro-rx"></block> 有关 NetApp 存储任务的完整列表。</block>
 </blocks>

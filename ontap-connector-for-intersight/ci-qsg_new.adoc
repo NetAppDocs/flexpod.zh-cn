@@ -18,6 +18,16 @@ summary: Cisco Intersight 推出了新版本，可为您提供新功能，增强
 
 
 
+== 2023年6月
+
+
+NOTE: 需要升级到NetApp Active IQ Unified Manager 9.13RC1、以确保与最新版本的兼容性和完整功能。
+
+* 已更新NetApp存储任务的名称。请参见 link:ci-qsg_use_cases.html["使用案例 3 使用无设计人员表单的自定义工作流"^] 有关已重命名任务的完整列表。
+
+
+
+
 == 2023年4月
 
 * 在用户界面的"Inventory"部分的"Policies"页面下添加了"Protection Policies"(SnapMirror)和"Snapshot Policies"选项卡。
@@ -90,7 +100,7 @@ NOTE: 为了确保与未来版本兼容并提供完整的功能，建议您将 N
 * 已将 AutoSupport 添加到集群清单
 * 已将 `cdpd.enable` 选项添加到节点
 * 已为 CDP 邻居添加对象
-* 在 Cisco Intersight 中添加了 NetApp 工作流存储任务。请参见 link:ci-qsg_use_cases.html["使用案例 3 使用无设计人员表单的自定义工作流"] 有关 NetApp 存储任务的完整列表。
+* 在 Cisco Intersight 中添加了 NetApp 工作流存储任务。请参见 link:ci-qsg_use_cases.html["使用案例 3 使用无设计人员表单的自定义工作流"^] 有关 NetApp 存储任务的完整列表。
 
 
 
@@ -117,7 +127,7 @@ NOTE: 为了确保与未来版本兼容并提供完整的功能，建议您将 N
 
 == 2021年10月
 
-* 更新了 Cisco Intersight 中可用的 NetApp 存储任务列表。请参见 link:ci-qsg_use_cases.html["使用案例 3 使用无设计人员表单的自定义工作流"] 有关 NetApp 存储任务的完整列表。
+* 更新了 Cisco Intersight 中可用的 NetApp 存储任务列表。请参见 link:ci-qsg_use_cases.html["使用案例 3 使用无设计人员表单的自定义工作流"^] 有关 NetApp 存储任务的完整列表。
 * 已在集群列表页面下添加运行状况列。
 * 现在，已在选定集群的 " 常规 " 页面下提供扩展的详细信息。
 * 现在可以通过导航窗格访问 NTP 服务器表。
