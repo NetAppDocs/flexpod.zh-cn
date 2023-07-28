@@ -9735,7 +9735,6 @@
   <block id="c5278a5ee46f3950c6449cea7119ca37" category="cell"><block ref="c5278a5ee46f3950c6449cea7119ca37" category="inline-link-macro-rx"></block></block>
   <block id="040d804b2c70516766d21ab594bc39bb" category="cell"><block ref="040d804b2c70516766d21ab594bc39bb" category="inline-link-rx"></block></block>
   <block id="0d9b0b32a4432dbeaa0425b3a43bf813" category="list-text">* 创新与敏捷性。 * FlexPod 是 Epic ， Cerner ， Meditech 等 EHR 公司以及 Agfa ， GE ，飞利浦等成像系统的理想平台。有关的详细信息，请参见<block ref="e3215a4a4d4097ca1d3d2b989f46a542" category="inline-link-rx"></block> 和目标平台架构，请参见 Epic 用户 Web 。运行基因组学<block ref="24f2c347deb06bba4de59a5266702e7d" category="inline-link-rx"></block> 让医疗保健组织能够灵活地继续其创新之旅。借助 FlexPod ，实施组织变革自然成为必然。当企业在 FlexPod 平台上实现标准化时，医疗保健 IT 专家可以为创新配置时间，精力和资源，从而实现生态系统所需的灵活性。</block>
-  <block id="32c88669445a60f20d5c4768cafb4635" category="paragraph">安装或升级到Active IQ Unified Manager (需要最新版本、当前为9.13RC1)(如果尚未执行此操作)。有关说明，请转至 <block ref="b713007c96ed5cceca9ab6b5776ab58a" category="inline-link-macro-rx"></block>。</block>
   <block id="9944591da8cbd48d8dd6e6366955da50" category="list-text">将导出策略添加到NetApp卷</block>
   <block id="39fcfcb06d577fe28a1681ec59bd8813" category="list-text">将启动程序添加到NetApp启动程序组</block>
   <block id="316ae23c10623d9e2fd5c26d0162e4e1" category="list-text">将规则添加到NetApp导出策略</block>
@@ -9778,10 +9777,50 @@
   <block id="7d9b1145d4ddecd2b63b6017eb559a79" category="list-text">从NetApp快照策略中删除计划</block>
   <block id="fcfa83f92e088a38cb0b8b964782a825" category="list-text">重命名NetApp卷快照</block>
   <block id="cf1b3d281850307ef3dfced3bacedd94" category="list-text">更新NetApp卷容量</block>
-  <block id="76d2b8dc750167185cbc6e1c83deac4f" category="cell">需要最新版本的NetApp Active IQ Unified Manager (当前为9.13RC1)</block>
   <block id="411d690288852abddc39378b2989bfda" category="section-title">2023年6月</block>
   <block id="b4099ff97cb0b64945972224373faec4" category="admonition">需要升级到NetApp Active IQ Unified Manager 9.13RC1、以确保与最新版本的兼容性和完整功能。</block>
   <block id="4afd182647adde3ae53ba9636f8ecd85" category="list-text">已更新NetApp存储任务的名称。请参见 <block ref="7cee7c950e5c408827f960772194d4bb" category="inline-link-macro-rx"></block> 有关已重命名任务的完整列表。</block>
   <block id="2d24bfd4ad96e334ad70f500b56563c3" category="list-text">在 Cisco Intersight 中添加了 NetApp 工作流存储任务。请参见 <block ref="7cee7c950e5c408827f960772194d4bb" category="inline-link-macro-rx"></block> 有关 NetApp 存储任务的完整列表。</block>
   <block id="c0d6fe9e8f745815653bfbc202c74e93" category="list-text">更新了 Cisco Intersight 中可用的 NetApp 存储任务列表。请参见 <block ref="7cee7c950e5c408827f960772194d4bb" category="inline-link-macro-rx"></block> 有关 NetApp 存储任务的完整列表。</block>
+  <block id="cef4011c89ea914920838c57c1277b96" category="cell">需要最新版本的NetApp Active IQ Unified Manager (当前为9.13GA)</block>
+  <block id="fb5978407d362c06c4a1c8ab72f464f1" category="section-title">2023年7月</block>
+  <block id="f6134ed465dbb55c3531c607933bd957" category="admonition">需要升级到NetApp Active IQ Unified Manager 9.13GA、以确保与最新版本的兼容性和完整功能。</block>
+  <block id="4a743225a883b79a064e0fe794bed4bc" category="list-text">已更新NetApp存储任务的名称。有关重命名任务的完整列表、请参见用例3使用无设计器表单的自定义工作流。</block>
+  <block id="ee3ed84cc0530093ff0cafb58fa20c87" category="list-text">已将NFS接口IP地址添加为"新建NetApp NAS智能卷"任务的输出。</block>
+  <block id="9dda9b1a19688571959dbba112145ceb" category="list-text">检查选项卡中添加了ASUP传输是否为HTTPS的检查。</block>
+  <block id="71d5edf744a368462afa22987d57ce39" category="list-text">现在、所有层的正确层类型都将正确显示在层用户界面下。</block>
+  <block id="254d491c7abffdd56f4bbf1a450d16bd" category="list-text">现在、所有合规许可证都将正确显示在许可证页面下。</block>
+  <block id="1ac60a3870a02f53c35001a558aa411b" category="list-text">现在、不带或不带主目录的CIFS共享的准确值将显示在共享页面上。</block>
+  <block id="db6a99019304bf55663227604fa38d88" category="list-text">现在、已为LUN页面上的已映射列启用排序和筛选。</block>
+  <block id="bf8347272101ad3e5a1f5a7d4a1e1c3d" category="list-text">现在、通过排序和筛选、可以在NTP服务器页面上启用已启用身份验证列。</block>
+  <block id="dd7a106f5abebdf1130d273be23edf53" category="list-text">向"检查"选项卡添加了新检查以及以下相应类别。</block>
+  <block id="e6593966d8e9ac936d00c88ec980ca67" category="list-text">防反防兰森</block>
+  <block id="faeaec9eda6bc4c8cb6e1a9156a858be" category="list-text">可用性</block>
+  <block id="6311ae17c1ee52b36e68aaf4ad066387" category="list-text">其他</block>
+  <block id="ccc2c146b1c8e887b8cb561649b51add" category="list-text">在"Inventory (清单)"详细信息视图下、报告"Now Used (现在已用)"容量、而不是"Physical Used</block>
+  <block id="a45b01faef5c490c90c647f2428032f0" category="paragraph">如果尚未安装或升级到Active IQ Unified Manager (需要最新版本、当前版本为9.13GA)、请执行此操作。有关说明，请转至 <block ref="b713007c96ed5cceca9ab6b5776ab58a" category="inline-link-macro-rx"></block>。</block>
+  <block id="d3b7d0dfd7a4c0712106720b7a263dcc" category="list-text">将ACL添加到NetApp CIFS共享</block>
+  <block id="e38df0ad25eaed709eb4fc30b431f674" category="list-text">将客户端匹配项添加到NetApp导出策略规则</block>
+  <block id="c8750c2c8ef4365e348e3f2d6f7e0a60" category="list-text">确认NetApp许可证状态</block>
+  <block id="ce2e9853e33335f3e809f3c2fbd4e78e" category="list-text">确认NetApp Storage Virtual Machine FCP协议状态</block>
+  <block id="d3e8f4c6bd53e8eacce2b51f384bcbd5" category="list-text">编辑NetApp异步SnapMirror策略</block>
+  <block id="c1aa3662728ce7708fedccdcb4affbf7" category="list-text">编辑NetApp CIFS共享ACL权限</block>
+  <block id="24d1f1e8d23b508ab9bf5d7afcf636f7" category="list-text">编辑NetApp卷安全模式</block>
+  <block id="614b87abecdd3f70114678982ebbbb9f" category="list-text">编辑NetApp卷快照策略</block>
+  <block id="c6898dbc38b65e6a09c4b5997d317aeb" category="list-text">启用NetApp CIFS服务</block>
+  <block id="50b2cba14f218a621d87273c301bbde0" category="list-text">新增NetApp异步SnapMirror策略</block>
+  <block id="35e279bd6fe2769eca059a8faedc6f43" category="list-text">新的NetApp CIFS服务器</block>
+  <block id="d1d30c3a3d93e98e502928eaaca114bc" category="list-text">新建NetApp CIFS共享</block>
+  <block id="bda45d06eebbcdeab16a923fd8fdd01d" category="list-text">为SVM根卷提供了新的NetApp负载共享镜像</block>
+  <block id="6fc90f6f641bcbf5f0e70c9bba86b0a9" category="list-text">为卷创建了新的NetApp SnapMirror关系</block>
+  <block id="28c1a1abaac15f55ead6b402d02df1c8" category="list-text">为NetApp Storage Virtual Machine注册DNS</block>
+  <block id="8ad01dcf4f5fb308079c8c54b8393fac" category="list-text">从NetApp CIFS共享中删除ACL</block>
+  <block id="f58fa9ccd1ffe4112c82ac2f86a775bc" category="list-text">从NetApp导出策略规则中删除客户端匹配项</block>
+  <block id="baed5857e762ed3ffc693f7c65215f5c" category="list-text">从NetApp启动程序组中删除启动程序</block>
+  <block id="7fd0848e19c01ad760f8c9f13445e04a" category="list-text">删除NetApp CIFS服务器</block>
+  <block id="ab79cf9b18a0947935193e49992783ea" category="list-text">删除NetApp CIFS共享</block>
+  <block id="4a61f0238ebd321bf19f499a028504d8" category="list-text">删除SVM根卷的NetApp负载共享镜像</block>
+  <block id="6436adc56d37fa0f43192638e893196c" category="list-text">删除卷的NetApp SnapMirror关系</block>
+  <block id="26d4a176845d0e66ac5ee3e91c2d833e" category="list-text">删除NetApp SnapMirror策略</block>
+  <block id="55b6a7c6b2794c0f9cf3d79716818187" category="list-text">更新SVM根卷的NetApp负载共享镜像</block>
 </blocks>
