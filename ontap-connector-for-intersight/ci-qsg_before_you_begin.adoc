@@ -20,7 +20,7 @@ summary: 开始之前，请安装或升级 AIQ UM ，创建 Cisco Intersight 帐
 
 == 安装或升级 NetApp Active IQ Unified Manager
 
-如果尚未安装或升级到Active IQ Unified Manager (需要最新版本、当前版本为9.13GA)、请执行此操作。有关说明，请转至 link:https://docs.netapp.com/us-en/active-iq-unified-manager/["NetApp Active IQ Unified Manager 文档"]。
+安装或升级到Active IQ Unified Manager (需要最新版本、当前为9.14RC1)(如果尚未安装或升级)。有关说明，请转至 link:https://docs.netapp.com/us-en/active-iq-unified-manager/["NetApp Active IQ Unified Manager 文档"]。
 
 
 
@@ -47,10 +47,10 @@ image::ci-qsg_image2.png[Deploy OVF 模板步骤 5 配置的屏幕截图]
 
 .. 在 * 自定义模板 * 页面上，自定义 OVF 模板的部署属性。本地用户使用管理员密码： admin （`WebUI/CLI/ssh` ）。
 +
-image::ci-qsg_image3.png[错误：缺少图形映像]
+image::ci-qsg_image3.png["部署OVF模板"屏幕的屏幕截图]
 
 +
-image::ci-qsg_image4.png[错误：缺少图形映像]
+image::ci-qsg_image4.png["部署OVF模板"屏幕的屏幕截图]
 
 .. 单击 * 下一步 * 。
 

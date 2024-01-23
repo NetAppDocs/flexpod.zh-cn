@@ -6059,14 +6059,7 @@
   <block id="e403653c249a7152da4a6d350c70119e" category="paragraph">可以设置 Snapshot 副本计划以满足所需的恢复点目标（ RPO ）。基于 Snapshot 副本的还原操作非常快速；因此，可以实现极低的恢复时间目标（ RTO ）。</block>
   <block id="42765cfe10acfa745a983718ecb772a2" category="paragraph">最重要的是，您不必因攻击而支付任何勒索，您可以快速恢复正常运营。</block>
   <block id="17cfc2f2b50e58c93aaf0a477ff54037" category="sidebar">FlexPod 解决方案文档</block>
-  <block id="af0963a66759af7047416c9d85f32efe" category="sidebar">FlexPod —从此处开始</block>
-  <block id="17c3771ed0b6c1ae15740eff715e9922" category="sidebar">视频和演示</block>
-  <block id="d6b9ea32b921a9f56de32062ba4b94f3" category="sidebar">博客</block>
-  <block id="cfa345d8fdba7b2e9598cce9c0e3c744" category="sidebar">借助 FlexPod 实现人工智能和现代数据分析</block>
-  <block id="91770f038cd944a1d3b9b347edeb2b10" category="sidebar">新增功能</block>
   <block id="e61ead4102c89a9758572df81301a1d2" category="sidebar">混合云</block>
-  <block id="7cb27dbb321a2dda7b1a59417ac87d24" category="sidebar">适用于 VDI 的 FlexPod</block>
-  <block id="e24bc29daa40702c050f7f3b61476c6f" category="sidebar">借助 FlexPod 实现医疗保健</block>
   <block id="b1b5d8cebde8af104d3749c7d984f391" category="sidebar">FlexPod 定义</block>
   <block id="1f1a6514305e31e63aa9ce9e1338aa48" category="sidebar">FlexPod 快速技术规格</block>
   <block id="985a4a270fc5521f74f971f639acb4ba" category="sidebar">FlexPod 平台</block>
@@ -6114,8 +6107,6 @@
   <block id="a803c2a0103e234c57f3136b6ceb15bf" category="sidebar">勒索软件保护措施</block>
   <block id="57a36291f8c4c9ad21e7abcbc792caf5" category="sidebar">保护和恢复 FlexPod 上的数据</block>
   <block id="309d921b4e477874006fde9b0223cc7c" category="sidebar">继续开展业务运营，无需支付任何费用</block>
-  <block id="7d15915b1c0d83b2d07ba91bb371d99c" category="sidebar">FlexPod 业务应用程序和企业数据库</block>
-  <block id="9651c3a3b7cbc999c2c50c39dbf61c04" category="sidebar">采用 FlexPod 的混合云</block>
   <block id="0466740965e7956f8fc2a734a83f5686" category="sidebar">FabricPool 软件版本</block>
   <block id="6cb34c048fceb40f7d64efc563d407f9" category="sidebar">什么是勒索软件？</block>
   <block id="fbebe2a055b4dcf362a0493004ef468f" category="paragraph">在 FlexPod 架构中需要使用冗余 NetApp FAS ， AFF 或 AFF ASA 控制器。这些控制器运行 ONTAP 软件。订购存储控制器后，可以在这些控制器上预加载首选软件版本。对于 ONTAP ，系统会订购一个完整的集群。整个集群包括一对存储控制器和一个集群互连（交换机或无交换机）。</block>
@@ -9688,7 +9679,6 @@
   <block id="4afd182647adde3ae53ba9636f8ecd85" category="list-text">已更新NetApp存储任务的名称。请参见 <block ref="7cee7c950e5c408827f960772194d4bb" category="inline-link-macro-rx"></block> 有关已重命名任务的完整列表。</block>
   <block id="2d24bfd4ad96e334ad70f500b56563c3" category="list-text">在 Cisco Intersight 中添加了 NetApp 工作流存储任务。请参见 <block ref="7cee7c950e5c408827f960772194d4bb" category="inline-link-macro-rx"></block> 有关 NetApp 存储任务的完整列表。</block>
   <block id="c0d6fe9e8f745815653bfbc202c74e93" category="list-text">更新了 Cisco Intersight 中可用的 NetApp 存储任务列表。请参见 <block ref="7cee7c950e5c408827f960772194d4bb" category="inline-link-macro-rx"></block> 有关 NetApp 存储任务的完整列表。</block>
-  <block id="cef4011c89ea914920838c57c1277b96" category="cell">需要最新版本的NetApp Active IQ Unified Manager (当前为9.13GA)</block>
   <block id="fb5978407d362c06c4a1c8ab72f464f1" category="section-title">2023年7月</block>
   <block id="f6134ed465dbb55c3531c607933bd957" category="admonition">需要升级到NetApp Active IQ Unified Manager 9.13GA、以确保与最新版本的兼容性和完整功能。</block>
   <block id="4a743225a883b79a064e0fe794bed4bc" category="list-text">已更新NetApp存储任务的名称。有关重命名任务的完整列表、请参见用例3使用无设计器表单的自定义工作流。</block>
@@ -9704,7 +9694,6 @@
   <block id="faeaec9eda6bc4c8cb6e1a9156a858be" category="list-text">可用性</block>
   <block id="6311ae17c1ee52b36e68aaf4ad066387" category="list-text">其他</block>
   <block id="ccc2c146b1c8e887b8cb561649b51add" category="list-text">在"Inventory (清单)"详细信息视图下、报告"Now Used (现在已用)"容量、而不是"Physical Used</block>
-  <block id="a45b01faef5c490c90c647f2428032f0" category="paragraph">如果尚未安装或升级到Active IQ Unified Manager (需要最新版本、当前版本为9.13GA)、请执行此操作。有关说明，请转至 <block ref="b713007c96ed5cceca9ab6b5776ab58a" category="inline-link-macro-rx"></block>。</block>
   <block id="d3b7d0dfd7a4c0712106720b7a263dcc" category="list-text">将ACL添加到NetApp CIFS共享</block>
   <block id="e38df0ad25eaed709eb4fc30b431f674" category="list-text">将客户端匹配项添加到NetApp导出策略规则</block>
   <block id="c8750c2c8ef4365e348e3f2d6f7e0a60" category="list-text">确认NetApp许可证状态</block>
@@ -9733,4 +9722,10 @@
   <block id="ee1a60bf8afd48f5c57ef8a62da497e2" category="list-text">改进了"新建NetApp智能LUN "任务、以明确指示可用于创建新启动程序组或选择现有启动程序组的选择选项。现在、当用户选中用于创建新启动程序组的框时、用于选择现有启动程序组的参数不再可用。如果用户取消选中此框以创建新启动程序组、则现有启动程序组参数将变为可用。</block>
   <block id="1223b61ead710c697d121bc4c8df6a60" category="list-text">增强了"New NetApp LUN Map"(新建LUN映射)和"Remove NetApp LUN Map"(删除LUN映射)任务。此时、LUN和启动程序组之间的新关系已更新。执行任务时、LUN和启动程序组的UI清单会立即更新。</block>
   <block id="cda91d963199f150b4c27541606d0790" category="list-text">现在、"Checks"页面将在用户首次登录时正确加载、不再需要刷新。</block>
+  <block id="b58b1adee5f08a2f37b40ee17c3097e8" category="cell">需要最新版本的NetApp Active IQ Unified Manager (当前为9.14RC1)</block>
+  <block id="b225002f4ba131c321e0dc8d89d5a8ad" category="paragraph">安装或升级到Active IQ Unified Manager (需要最新版本、当前为9.14RC1)(如果尚未安装或升级)。有关说明，请转至 <block ref="b713007c96ed5cceca9ab6b5776ab58a" category="inline-link-macro-rx"></block>。</block>
+  <block id="e245b121672965eb5c120373beb6ebe2" category="image-alt">"部署OVF模板"屏幕的屏幕截图</block>
+  <block id="fb784db76f57bc935639ba5340089d77" category="section-title">2023年11月</block>
+  <block id="0860efb25683aa716ffcd95186cf7353" category="admonition">需要升级到NetApp Active IQ Unified Manager 9.14RC1、以确保与最新版本的兼容性和完整功能。</block>
+  <block id="5c49c1696b71ecb277e29a00e385c986" category="list-text">已在用户界面的"Inventory"部分下添加NVMe命名区页面。</block>
 </blocks>

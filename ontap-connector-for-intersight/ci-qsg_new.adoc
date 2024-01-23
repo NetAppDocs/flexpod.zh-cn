@@ -18,6 +18,16 @@ summary: Cisco Intersight 推出了新版本，可为您提供新功能，增强
 
 
 
+== 2023年11月
+
+
+NOTE: 需要升级到NetApp Active IQ Unified Manager 9.14RC1、以确保与最新版本的兼容性和完整功能。
+
+* 已在用户界面的"Inventory"部分下添加NVMe命名区页面。
+
+
+
+
 == 2023年8月
 
 
