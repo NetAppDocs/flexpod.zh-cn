@@ -33,34 +33,45 @@ summary: 以下是从 Cisco Intersight 监控和编排 NetApp 存储的几个用
 
 
 
-== 用例 2 ：使用参考工作流编排 NetApp 存储
+== 用例2：使用参考工作流的NetApp存储流程编排
 
-在 Cisco Intersight 中提供 NetApp 存储和 vCenter 环境后，您可以执行开箱即用的端到端参考工作流，其中包括存储和虚拟化任务。
+如果NetApp存储和vCenter环境可在Cisco Intersight中使用、则可以通过使用GitHub中提供的端到端参考工作流 https://github.com/ucs-compute-solutions/FlexPod-Intersight-Workflow["FlexPod Intersight工作流存储库"^]。
+
+参考工作流包括存储和虚拟化任务。存储库的README文件提供了执行工作流所需的前提条件、指向有用资源(包括有关如何导入工作流的文档)的链接以及每个参考工作流的文档链接。
+
+每个工作流在存储库中都有一个文件夹、其中包含两个文件：
+
+* 要下载并导入Intersight的JSON文件、
+* 一个文档文件、提供工作流中的任务视图、工作流输入以及工作流执行示例。
+
+
+执行以下操作以导入和使用参考工作流：
 
 . 部署 Intersight Assist OVA （ vCenter 环境中的 OnPrem 任务）。
 . 在 Intersight Assist 中添加 NetApp AIQ UM 设备。
 . 通过 Intersight Assist 将 vCenter 目标添加到 Intersight 。
-. 执行开箱即用的参考工作流。
-+
-以下是参考工作流列表：
-
-+
-** 新建 NAS 数据存储库
-** 新建存储导出策略
-** 新建存储主机
-** 新的存储接口
-** 新建 Storage Virtual Machine
-** 新建虚拟机
-** 新建 VMFS 数据存储库
-** 删除 NAS 数据存储库
-** 删除存储导出策略
-** 删除存储主机
-** 删除 VMFS 数据存储库
-** 更新 NAS 数据存储库
-** 更新存储主机
-** 更新 VMFS 数据存储库
+. 从FlexPod-Intersight工作流存储库下载参考工作流的JSON文件。
+. 将工作流导入Intersight、然后执行工作流。
 
 
+下面是GitHub FlexPod-Intersight工作流存储库中提供的工作流列表：
+
+* 将启动程序添加到NetApp启动程序组
+* NetApp卷的新导出策略
+* 使用NetApp智能卷新建NAS数据存储库
+* 新的NetApp FC数据接口
+* 新建NetApp启动程序组
+* 新的NetApp iSCSI数据接口
+* 新的NetApp NAS数据接口
+* 新建NetApp Storage Virtual Machine
+* 使用NetApp智能LUN的新VMFS数据存储库
+* 从NetApp启动程序组中删除启动程序
+* 使用NetApp智能卷删除NAS数据存储库
+* 删除NetApp导出策略
+* 删除NetApp启动程序组
+* 使用NetApp智能LUN删除VMFS数据存储库
+* 使用NetApp智能卷更新NAS数据存储库
+* 使用NetApp智能LUN更新VMFS数据存储库
 
 
 
