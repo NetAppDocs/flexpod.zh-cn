@@ -14,7 +14,7 @@ summary: 检查您是否满足 NetApp ONTAP 存储与 Cisco Intersight 集成的
 
 
 [role="lead"]
-检查您是否满足 NetApp ONTAP 存储与 Cisco Intersight 集成的硬件，软件和许可要求。
+验证您是否满足NetApp ONTAP存储与Cisco Intersight集成的硬件、软件和许可要求。
 
 
 
@@ -32,25 +32,25 @@ summary: 检查您是否满足 NetApp ONTAP 存储与 Cisco Intersight 集成的
 | NetApp Active IQ Unified Manager | 需要最新版本的NetApp Active IQ Unified Manager (当前为9.14RC1) 
 
 
-| NetApp 存储阵列 | ONTAP 9.7P1 及更高版本支持所有 ONTAP ASA ， AFF 和 FAS 存储阵列 
+| NetApp 存储阵列 | ONTAP 9.7P1及更高版本支持所有ONTAP ASA、AFF和FAS存储阵列 
 
 
-| 虚拟化虚拟机管理程序 | vSphere 6.7 及更高版本 
+| 虚拟化虚拟机管理程序 | vSphere 7.0及更高版本 
 |===
 
-NOTE: 请参见 https://www.cisco.com/c/en/us/solutions/collateral/data-center-virtualization/flexpod/cisco-imm-for-flexpod.html["适用于 FlexPod 的 Cisco Intersight 托管模式"^] 以满足 Cisco UCS 计算组件和 UCSM 版本的最低要求。
+NOTE: 请参见 https://intersight.com/help/saas/supported_systems["Cisco Intersight支持的系统"^] 以满足 Cisco UCS 计算组件和 UCSM 版本的最低要求。
 
 
 
 == Cisco Intersight 许可要求
 
-Cisco Intersight 以订阅方式获得许可，并可选择多个许可证版本。功能会随着不同许可证类型的增加而增加。您可以购买一年，三年或五年的订阅期限，并为选定的订阅期限选择所需的 Cisco UCS Server 卷层。访问 Cisco Intersight 门户并申请设备时，每个 Cisco 端点都会自动包含一个 Cisco Intersight Base ，无需额外付费。
+思科Intersight提供基础架构服务和Cloud Orchestrator服务等服务、用于管理、自动化和优化物理存储(NetApp存储)。您可以使用这些服务来管理Cisco UCS服务器和Cisco HyperFlex系统。基础架构服务和Cloud Orchestrator服务采用基于订阅的许可模式、并具有多个层。您可以为选定订阅期限选择所需的Cisco UCS Server卷层。
 
-您可以使用 Cisco 订购工具购买以下任何更高级别的 Intersight 许可证：
+.许可模式
+Cisco Intersight基础架构服务许可模式已得到简化，现在提供以下两层：
 
-* * Cisco Intersight Essentials 。 * Essentials 包括基础层的所有功能以及其他功能，包括 Cisco UCS Central 和 Cisco IMC Supervisor 授权，基于策略的服务配置，固件管理以及与硬件兼容性列表（ Hardware Compatibility List ， HCL ）的兼容性评估。
-* * Cisco Intersight Advantage 。 * Advantage 提供基础层和基础层的所有特性和功能。它包括存储小工具，存储清单，存储容量和存储利用率，以及物理计算，物理存储和虚拟环境（ VMware ESXi ）之间的跨域清单关联。
-* * Cisco Intersight Premier 。 * 除了在优势层提供的功能之外， Cisco Intersight Premier 还在 Cisco UCS 和第三方系统（包括虚拟机（ VM ）（ VMware vCenter ）和物理存储（ NetApp 存储）之间提供私有云基础架构即服务（ IaaS ）业务流程。
+* *Cisco Intersight Infrastructure Services Essentials *- Essentials许可证层提供服务器管理，包括全局运行状况监控功能、清单、通过Cisco TAC-集成提供主动式支持、多因素身份验证，以及提供SDK和API访问。
+* *Cisco Intersight基础架构服务优势*-优势许可证层提供高级服务器管理，具有扩展的可见性、生态系统集成、Cisco和第三方硬件和软件的自动化以及多域解决方案。
 
 
-有关各个许可层所涵盖功能的详细信息，请访问 https://intersight.com/help/getting_started#intersight_licensing["Cisco 许可"]。
+有关各个许可层所涵盖功能的详细信息，请访问 https://intersight.com/help/saas/getting_started/licensing_requirements/lic_infra#licensing_model["基础架构服务许可证"^]。

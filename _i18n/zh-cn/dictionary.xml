@@ -1166,13 +1166,10 @@
   <block id="a13cc5afeaa62ed39840c636da4e69a8" category="list-text"><block ref="a13cc5afeaa62ed39840c636da4e69a8" category="inline-link-rx"></block></block>
   <block id="c38f85f1f24f1064b7379d7e2dcc56e1" category="inline-link">Cisco NX-OS 软件</block>
   <block id="7bf3f23054089d5e369cd3c3705f1519" category="list-text"><block ref="7bf3f23054089d5e369cd3c3705f1519" category="inline-link-rx"></block></block>
-  <block id="fa776a6d8035e935e3ca744e1a9a7d09" category="summary">要了解更多信息，请参见参考文档和网站。</block>
   <block id="d95867deadfe690e40f42068d6b59df8" category="doc">参考资料</block>
   <block id="937072d3e0f7b646b7f3f24a312489f8" category="paragraph">要了解更多信息，请参见以下文档和网站：</block>
   <block id="3a45f44b03660232082dc152068990fd" category="inline-link">TR 4883 ：采用 ONTAP 9.8 的 FlexPod 数据中心，适用于 Cisco Intersight 的 ONTAP 存储连接器和 Cisco Intersight 托管模式</block>
   <block id="4c797a8e70e93514000fabd2051b5ddb" category="paragraph"><block ref="4c797a8e70e93514000fabd2051b5ddb" category="inline-link-rx"></block></block>
-  <block id="7b3308b95aec192d46bc92dd7fb02cb2" category="inline-link">适用于 FlexPod 的 Cisco Intersight 托管模式</block>
-  <block id="2155a8941fd728202c18dade730100d6" category="paragraph"><block ref="2155a8941fd728202c18dade730100d6" category="inline-link-rx"></block></block>
   <block id="0580772620331f949057ed6afbb098ea" category="inline-link">Cisco Intersight 入门概述</block>
   <block id="4d49c14c4afe96eb88aaef6d6588599b" category="inline-link">《 Intersight 设备安装和升级指南》</block>
   <block id="5cce77ecfcdbd5857d67110262f7b5a9" category="paragraph"><block ref="5cce77ecfcdbd5857d67110262f7b5a9" category="inline-link-rx"></block></block>
@@ -1221,18 +1218,8 @@
   <block id="29d1db03b55072fc401d11d7d0750f61" category="cell">ONTAP 9.7P1 及更高版本</block>
   <block id="45699291c017a65a90e4bb25860f4315" category="cell">NetApp Active IQ Unified Manager</block>
   <block id="5dc8e3707996259deb52abdfee00eac9" category="cell">NetApp 存储阵列</block>
-  <block id="00b515e766e1cba805399ff9eb813a8f" category="cell">ONTAP 9.7P1 及更高版本支持所有 ONTAP ASA ， AFF 和 FAS 存储阵列</block>
   <block id="1f8e8bd6bc1c4895f936485882fbdf9d" category="cell">虚拟化虚拟机管理程序</block>
-  <block id="4ca6768d140e70826f7716d07807dc17" category="cell">vSphere 6.7 及更高版本</block>
-  <block id="72070c9ef3f94bc3718c44ba73d4ccc3" category="admonition">请参见<block ref="2c43cbcc5ede8fefeab295a68acd4cdb" category="inline-link-rx"></block> 以满足 Cisco UCS 计算组件和 UCSM 版本的最低要求。</block>
   <block id="4aa6cd6038c4fecb0c308ca4d3dcdea0" category="section-title">Cisco Intersight 许可要求</block>
-  <block id="679eff4aa4d3a357123f3400b7f819f4" category="paragraph">Cisco Intersight 以订阅方式获得许可，并可选择多个许可证版本。功能会随着不同许可证类型的增加而增加。您可以购买一年，三年或五年的订阅期限，并为选定的订阅期限选择所需的 Cisco UCS Server 卷层。访问 Cisco Intersight 门户并申请设备时，每个 Cisco 端点都会自动包含一个 Cisco Intersight Base ，无需额外付费。</block>
-  <block id="c4c01460eb0fd0e7d30ef65622dc7cb2" category="paragraph">您可以使用 Cisco 订购工具购买以下任何更高级别的 Intersight 许可证：</block>
-  <block id="fbd64fb1c56050f38cf0c2d9441004af" category="list-text">* Cisco Intersight Essentials 。 * Essentials 包括基础层的所有功能以及其他功能，包括 Cisco UCS Central 和 Cisco IMC Supervisor 授权，基于策略的服务配置，固件管理以及与硬件兼容性列表（ Hardware Compatibility List ， HCL ）的兼容性评估。</block>
-  <block id="8a30fe4ae6d8d0310e0d329493bc21c3" category="list-text">* Cisco Intersight Advantage 。 * Advantage 提供基础层和基础层的所有特性和功能。它包括存储小工具，存储清单，存储容量和存储利用率，以及物理计算，物理存储和虚拟环境（ VMware ESXi ）之间的跨域清单关联。</block>
-  <block id="97f9beafe8a267c8b35e2fb7235394ab" category="list-text">* Cisco Intersight Premier 。 * 除了在优势层提供的功能之外， Cisco Intersight Premier 还在 Cisco UCS 和第三方系统（包括虚拟机（ VM ）（ VMware vCenter ）和物理存储（ NetApp 存储）之间提供私有云基础架构即服务（ IaaS ）业务流程。</block>
-  <block id="d4780504a816544f6e2645b57ea78a79" category="inline-link">Cisco 许可</block>
-  <block id="926dfe010cd806b1815f2e2e910d07ee" category="paragraph">有关各个许可层所涵盖功能的详细信息，请访问<block ref="8697cd039441f6238fc2562e0fa792ae" category="inline-link-rx"></block>。</block>
   <block id="f870dce89b1a86f562fc0615d943bfa6" category="paragraph">与以下合作伙伴：<block ref="4d9c1ec1584e887e0af42904bd173b15" category="inline-image-macro-rx" type="image"></block></block>
   <block id="efc7d87f859f5f426ae59b13b26a5e7f" category="summary">声明目标后，如果您拥有优势层许可证，则 NetApp 存储小工具，存储清单和虚拟化选项卡将变为可用。如果您拥有 Premier 层许可证，则可以使用业务流程选项卡。</block>
   <block id="c093ae35c304b80ba64b56e6cd80eccf" category="doc">从 Cisco Intersight 监控 NetApp 存储</block>
@@ -9731,4 +9718,19 @@
   <block id="eade77a2815c8954887e241cc8a7cdbd" category="list-text">使用NetApp智能LUN更新VMFS数据存储库</block>
   <block id="efe846805e5476fec607bbf54e45dc44" category="section-title">2024年1月</block>
   <block id="1dbf0a61b61f004514eb71c762bdda23" category="list-text">使用参考工作流的NetApp存储编排现在可通过在GitHub中下载<block ref="dbef3ce40b045312da2d2a3590390d56" category="inline-link-rx"></block>。有关GitHub中新参考工作流的详细信息、请参见 <block ref="603c2ccdc54cec25fe66c69c148f7dcb" category="inline-link-macro-rx"></block>。</block>
+  <block id="21fdbbe30d03ba60217ad219e4a43475" category="paragraph">验证您是否满足NetApp ONTAP存储与Cisco Intersight集成的硬件、软件和许可要求。</block>
+  <block id="cf37c5cba207938e4c97f3bcf9ffabc9" category="cell">ONTAP 9.7P1及更高版本支持所有ONTAP ASA、AFF和FAS存储阵列</block>
+  <block id="de19bc9421b3493cb471fb68d644f614" category="cell">vSphere 7.0及更高版本</block>
+  <block id="2bab0c7a59bda4a6cf8bb732310f19d1" category="inline-link">Cisco Intersight支持的系统</block>
+  <block id="4583b551e49cf84018c42a34fc90472b" category="admonition">请参见<block ref="c301da257433e3b44d89736f9cb32482" category="inline-link-rx"></block> 以满足 Cisco UCS 计算组件和 UCSM 版本的最低要求。</block>
+  <block id="c6992d015712de0f9935c930f87d1e24" category="paragraph">思科Intersight提供基础架构服务和Cloud Orchestrator服务等服务、用于管理、自动化和优化物理存储(NetApp存储)。您可以使用这些服务来管理Cisco UCS服务器和Cisco HyperFlex系统。基础架构服务和Cloud Orchestrator服务采用基于订阅的许可模式、并具有多个层。您可以为选定订阅期限选择所需的Cisco UCS Server卷层。</block>
+  <block id="73940e6c81db7305c6108d57163a6bd9" category="paragraph-title">许可模式</block>
+  <block id="0eeef496e6954ad0d16a059fafdc5e38" category="paragraph">Cisco Intersight基础架构服务许可模式已得到简化，现在提供以下两层：</block>
+  <block id="cebf91fe773dd5685c20ef3bff0017f3" category="list-text">*Cisco Intersight Infrastructure Services Essentials *- Essentials许可证层提供服务器管理，包括全局运行状况监控功能、清单、通过Cisco TAC-集成提供主动式支持、多因素身份验证，以及提供SDK和API访问。</block>
+  <block id="0ef1beaa09215da1b27e26da9c01b73b" category="list-text">*Cisco Intersight基础架构服务优势*-优势许可证层提供高级服务器管理，具有扩展的可见性、生态系统集成、Cisco和第三方硬件和软件的自动化以及多域解决方案。</block>
+  <block id="f5e1db835ff4b10b4a6531770f9643e9" category="inline-link">基础架构服务许可证</block>
+  <block id="2c355e53fd6c41fd8e75d57ff3e446e3" category="paragraph">有关各个许可层所涵盖功能的详细信息，请访问<block ref="b733a46c0b54e4d9837584b6621e33e9" category="inline-link-rx"></block>。</block>
+  <block id="30f60d67f457bb040dffde52197a54da" category="paragraph-title">相关信息</block>
+  <block id="cb2f26cdcb58be1d59a4186132027351" category="inline-link">Cisco Intersight帮助中心</block>
+  <block id="cbdd42cc134bfbfb08861472ec705bb4" category="paragraph"><block ref="cbdd42cc134bfbfb08861472ec705bb4" category="inline-link-rx"></block></block>
 </blocks>
