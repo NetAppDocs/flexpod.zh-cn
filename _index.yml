@@ -10,7 +10,7 @@ indexpage:
     - title: 新增功能
       url: https://fieldportal.netapp.com/content/1668183
     - title: 视频和演示
-      url: https://tv.netapp.com/search?q=FlexPod
+      url: https://media.netapp.com/search?q=FlexPod
     - title: 博客
       url: https://blog.netapp.com/tag/Flexpod/
   - title: 借助 FlexPod 实现人工智能和现代数据分析
@@ -18,13 +18,11 @@ indexpage:
     - title: 新增功能
       url: https://www.flexpod.com/solutions/use-cases/machine-learning/
     - title: 视频和演示
-      url: https://tv.netapp.com/search?q=FlexPod%20AI
+      url: https://media.netapp.com/search?q=FlexPod%20AI
     - title: 博客
       url: https://blog.netapp.com/tag/Flexpod/
   - title: FlexPod 业务应用程序和企业数据库
     links:
-    - title: 视频和演示
-      url: https://tv.netapp.com/search?q=FlexPod%20SAP
     - title: 博客
       url: https://blog.netapp.com/tag/Flexpod/
   - title: 采用 FlexPod 的混合云
@@ -32,22 +30,18 @@ indexpage:
     - title: 新增功能
       url: https://flexpod.com/solutions/use-cases/hybrid-cloud/
     - title: 视频和演示
-      url: https://tv.netapp.com/search?q=FlexPod%20Hybrid%20Cloud
+      url: https://media.netapp.com/search?q=FlexPod%20Hybrid%20Cloud
     - title: 博客
       url: https://blog.netapp.com/tag/Flexpod/
   - title: 适用于 VDI 的 FlexPod
     links:
     - title: 新增功能
       url: https://www.flexpod.com/solutions/use-cases/virtual-desktop-infrastructure/
-    - title: 视频和演示
-      url: https://tv.netapp.com/search?q=FlexPod%20VDI
     - title: 博客
       url: https://blog.netapp.com/tag/Flexpod/
   - title: 借助 FlexPod 实现医疗保健
     links:
     - title: 新增功能
       url: https://flexpod.com/solutions/verticals/healthcare/
-    - title: 视频和演示
-      url: https://tv.netapp.com/search?q=FlexPod%20Healthcare
     - title: 博客
       url: https://blog.netapp.com/tag/Healthcare/

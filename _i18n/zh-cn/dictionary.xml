@@ -1249,7 +1249,6 @@
   <block id="3565f69c284244db8d5ca84b622ee9f7" category="list-text">转到 * 存储 * 并浏览 NetApp 存储清单。</block>
   <block id="e409ef30600b1f6d6feda5ec5cf2b09a" category="list-text">将适用于 NetApp 存储的 * 小工具 * 添加到 * 监控信息板 * 中。</block>
   <block id="2a304a1348456ccd2234cd71a81bd338" category="inline-link">链接。</block>
-  <block id="c93483174eb31dc7fbbe326f1c100f35" category="paragraph">这是一个<block ref="e0428282d0e7de772227d65a22541ae5" category="inline-link-rx"></block> 观看 Cisco Intersight 提供的 NetApp ONTAP 存储监控功能视频。</block>
   <block id="4eddc275f6028504b4d1bbed1e6ae1cb" category="section-title">用例 2 ：使用参考工作流编排 NetApp 存储</block>
   <block id="ad394a42593fccfc9f89e6e10730a3c0" category="list-text">通过 Intersight Assist 将 vCenter 目标添加到 Intersight 。</block>
   <block id="97e1e380ad6fec970bc1c31e70c64a7a" category="section-title">用例 3 ：使用无设计人员表单的自定义工作流</block>
@@ -1260,12 +1259,8 @@
   <block id="054075501dbbc3039c5d0b5dab12a766" category="list-text">选择 * 创建工作流 * 。</block>
   <block id="17fd08459c8a5f34d6f93f908fc4fc70" category="list-text">将存储和虚拟化任务添加到工作流中。</block>
   <block id="16823263a74001ecb22c9fecdb2d8af2" category="paragraph">以下是 Cisco Intersight 提供的 NetApp 存储任务：</block>
-  <block id="aed9e8ce86d6b67ac26c7d1937461e90" category="inline-link">Cisco Intersight 中的 NetApp ONTAP 存储编排</block>
-  <block id="efd91dc6276bbe52b654d531a05b3658" category="paragraph">要了解有关使用 NetApp 存储和虚拟化任务自定义工作流的更多信息，请观看视频<block ref="9c51a52bc77cfd7dca26d970b0100330" category="inline-link-rx"></block>。</block>
   <block id="f9d402f73c06490b49744c7260f10c18" category="summary">安装 Cisco Intersight Assist 后，您可以申请 NetApp 存储和虚拟化设备。</block>
   <block id="7351a1047aea1d8e523aae1df309c347" category="doc">声明目标</block>
-  <block id="ff2e4aa830d38c99b2010a91bd562775" category="inline-link">通过 Cisco Intersight Assist 申请目标。</block>
-  <block id="6bc0022874ff4b98cf45584e525e1f00" category="paragraph">安装 Cisco Intersight Assist 后，您可以申请 NetApp 存储和虚拟化设备。返回到 "Intersight Targets* " 页面，然后添加 vCenter 和 NetApp Active IQ Unified Manager 目标。有关申请流程的详细信息，请观看视频<block ref="30d5424c5fce71a06fbbaa3ffc76fb0e" category="inline-link-rx"></block></block>
   <block id="c27675fd33dbae852257d83ae0b40ee3" category="admonition">确保已启用 NetApp Active IQ Unified Manager （ AIQ UM ） API 网关。</block>
   <block id="94a25ce3cfde50ac05004124838a8585" category="inline-image-macro">已启用 NetApp AIQ UM API 网关的屏幕截图</block>
   <block id="ad16b87ea1c3124b9265af68c137ab53" category="paragraph"><block ref="ad16b87ea1c3124b9265af68c137ab53" category="inline-image-macro-rx" type="image"></block></block>
@@ -9754,4 +9749,5 @@
   <block id="9651c3a3b7cbc999c2c50c39dbf61c04" category="sidebar">采用 FlexPod 的混合云</block>
   <block id="7cb27dbb321a2dda7b1a59417ac87d24" category="sidebar">适用于 VDI 的 FlexPod</block>
   <block id="e24bc29daa40702c050f7f3b61476c6f" category="sidebar">借助 FlexPod 实现医疗保健</block>
+  <block id="da1ad8cf23727f17cd3ee56b1280c387" category="paragraph">安装 Cisco Intersight Assist 后，您可以申请 NetApp 存储和虚拟化设备。返回到 "Intersight Targets* " 页面，然后添加 vCenter 和 NetApp Active IQ Unified Manager 目标。</block>
 </blocks>

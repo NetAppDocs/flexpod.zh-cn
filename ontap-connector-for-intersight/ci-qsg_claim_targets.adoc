@@ -14,7 +14,7 @@ summary: 安装 Cisco Intersight Assist 后，您可以申请 NetApp 存储和�
 
 
 [role="lead"]
-安装 Cisco Intersight Assist 后，您可以申请 NetApp 存储和虚拟化设备。返回到 "Intersight Targets* " 页面，然后添加 vCenter 和 NetApp Active IQ Unified Manager 目标。有关申请流程的详细信息，请观看视频 https://tv.netapp.com/detail/video/6228080442001["通过 Cisco Intersight Assist 申请目标。"^]
+安装 Cisco Intersight Assist 后，您可以申请 NetApp 存储和虚拟化设备。返回到 "Intersight Targets* " 页面，然后添加 vCenter 和 NetApp Active IQ Unified Manager 目标。
 
 
 NOTE: 确保已启用 NetApp Active IQ Unified Manager （ AIQ UM ） API 网关。

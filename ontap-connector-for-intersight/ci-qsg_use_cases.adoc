@@ -26,9 +26,6 @@ summary: 以下是从 Cisco Intersight 监控和编排 NetApp 存储的几个用
 . 在 Intersight Assist 中添加 NetApp AIQ UM 设备。
 . 转到 * 存储 * 并浏览 NetApp 存储清单。
 . 将适用于 NetApp 存储的 * 小工具 * 添加到 * 监控信息板 * 中。
-+
-这是一个 https://tv.netapp.com/detail/video/6228096841001["链接。"^] 观看 Cisco Intersight 提供的 NetApp ONTAP 存储监控功能视频。
-
 
 
 
@@ -156,9 +153,6 @@ summary: 以下是从 Cisco Intersight 监控和编排 NetApp 存储的几个用
 ** 重命名NetApp卷快照
 ** 更新SVM根卷的NetApp负载共享镜像
 ** 更新NetApp卷容量
-+
-要了解有关使用 NetApp 存储和虚拟化任务自定义工作流的更多信息，请观看视频 https://tv.netapp.com/detail/video/6228095945001["Cisco Intersight 中的 NetApp ONTAP 存储编排"^]。
-
 
 
 
