@@ -108,5 +108,5 @@ FlexPod 架构需要 NetApp SupportEdge Premium 许可证，但这些许可证�
 | NetApp 支持许可 | 部件号 | 技术规格 
 
 
-| SupportEdge Premium 现场 4 小时—月： 36 | CS-O2-4 小时 | https://www.netapp.com/us/media/supportedge-premium-product-description.pdf["NetApp SupportEdge Premium"] 
+| SupportEdge Premium 现场 4 小时—月： 36 | CS-O2-4 小时 | https://www.netapp.com/pdf.html?item=/media/8745-supportedge-premium-product-description.pdf["NetApp SupportEdge Premium"^] 
 |===

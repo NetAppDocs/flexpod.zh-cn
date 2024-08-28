@@ -31,7 +31,7 @@ NetApp 公司的 Brandon Agee ， John Duignan ， Mike Brennan 和 Cisco 公司
 * * 安全多租户。 * 支持日益增长的虚拟化服务器和存储共享基础架构需求，支持对设施特定信息进行安全多租户，尤其是在您的系统托管多个数据库和软件实例时。
 * * 池化资源优化。 * 有助于减少物理服务器和存储控制器数量，负载平衡工作负载需求并提高利用率，同时提高性能。
 * * 服务质量（ QoS ）。 * FlexPod 可在整个堆栈上提供 QoS 。行业领先的 QoS 网络，计算和存储策略可在共享环境中实现不同的服务级别。这些策略可以为工作负载提供最佳性能，并有助于隔离和控制失控的应用程序。
-* * 存储效率。 * 使用降低存储成本 http://www.netapp.com/us/media/netapp-aff-efficiency-guarantee.pdf["NetApp 7 ： 1 存储效率担保"^]。
+* *存储效率*使用降低存储成本 https://www.netapp.com/media/79014-ng-937-Efficiency-Guarantee-Customer-Flyer.pdf["NetApp 7 ： 1 存储效率担保"^]。
 * * 灵活性。 * 借助 FlexPod 系统提供的行业领先的工作流自动化，流程编排和管理工具，您的 IT 团队可以更快速地响应业务请求。这些业务请求包括从 MEDITECH 备份和配置更多测试和培训环境到为人口健康管理计划复制分析数据库等。
 * * 提高了工作效率。 * 快速部署和扩展此解决方案，以获得最佳临床医生最终用户体验。
 * * NetApp Data Fabric 。 * NetApp Data Fabric 架构可以跨站点，跨物理边界和跨应用程序将数据集于一体。NetApp Data Fabric 专为以数据为中心的世界中的数据驱动型企业而构建。数据是在多个位置创建和使用的，通常您需要利用并与其他位置，应用程序和基础架构共享数据。您需要一种一致且集成的数据管理方式。Data Fabric 提供了一种数据管理方式，可以控制数据并简化日益增加的 IT 复杂性。
@@ -220,7 +220,7 @@ Meditech 主机可以是在 Microsoft Windows Server 操作系统上运行的物
 
 MEDITECH expanse 平台产生的工作负载要求最高，因为它的每台主机写入操作和整体 IOPS 百分比最高，其次是 6.x ， C/S 5.x 和魔力平台。
 
-有关 MEDITECH 工作负载说明的更多详细信息，请参见 https://www.netapp.com/us/media/tr-4190.pdf["TR-4190 ：《适用于 MEDITECH 环境的 NetApp 规模估算准则》"^]。
+有关MEDITECH工作负载说明的更多详细信息，请参见 https://www.netapp.com/pdf.html?item=/media/19872-tr-4190.pdf["TR-4190 ：《适用于 MEDITECH 环境的 NetApp 规模估算准则》"^]。
 
 
 

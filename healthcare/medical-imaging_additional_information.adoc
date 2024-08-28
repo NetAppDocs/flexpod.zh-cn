@@ -26,7 +26,7 @@ https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_dat
 
 * 《使用 SnapCenter 解决方案备份 FlexPod 数据中心 Oracle 数据库简介》
 +
-https://www.netapp.com/us/media/sb-3999.pdf["https://www.netapp.com/us/media/sb-3999.pdf"^]
+https://www.netapp.com/pdf.html?item=/media/16973-sb-3999pdf.pdf["https://www.netapp.com/us/media/sb-3999.pdf"^]
 
 * FlexPod 数据中心与基于 Cisco UCS 和 NetApp AFF A 系列的 Oracle RAC 数据库
 +
@@ -50,7 +50,7 @@ https://fieldportal.netapp.com/content/734702["https://fieldportal.netapp.com/co
 
 * TR-4700 ：适用于 Oracle 数据库的 SnapCenter 插件
 +
-https://www.netapp.com/us/media/tr-4700.pdf["https://www.netapp.com/us/media/tr-4700.pdf"^]
+https://www.netapp.com/pdf.html?item=/media/12403-tr4700pdf.pdf["https://www.netapp.com/us/media/tr-4700.pdf"^]
 
 * NetApp 产品文档
 +

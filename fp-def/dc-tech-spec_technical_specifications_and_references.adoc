@@ -366,25 +366,25 @@ NetApp 存储控制器的技术规格包括以下组件：
 | 组件 | FAS 系列控制器平台文档 
 
 
-| FAS9000 系列 | https://www.netapp.com/us/media/ds-3810.pdf["FAS9000 系列产品规格"] 
+| FAS9000 系列 | https://www.netapp.com/pdf.html?item=/media/8939-ds-3810.pdf["FAS9000 系列产品规格"^] 
 
 
-| FAS8700 系列 | https://www.netapp.com/us/media/ds-4020.pdf["FAS8700 系列产品规格"] 
+| FAS8700 系列 | https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf["FAS8700 系列产品规格"^] 
 
 
-| FAS8300 系列 | https://www.netapp.com/us/media/ds-4020.pdf["FAS8300 系列产品规格"] 
+| FAS8300 系列 | https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf["FAS8300 系列产品规格"^] 
 
 
 | FAS500f 系列 | https://docs.netapp.com/us-en/ontap-systems/fas500f/index.html["FAS500f 系列产品规格"] 
 
 
-| FAS2700 系列 | https://www.netapp.com/us/media/ds-3929.pdf["FAS2700 系列产品规格"] 
+| FAS2700 系列 | https://www.netapp.com/pdf.html?item=/media/8937-ds-3929.pdf["FAS2700 系列产品规格"^] 
 |===
 
 
 === AFF A-Series
 
-支持在 FlexPod 中使用所有当前型号的 NetApp AFF A 系列存储控制器。追加信息可在中找到 https://www.netapp.com/us/media/ds-3582.pdf["AFF 技术规格"^] 数据表和中的 https://hwu.netapp.com/["NetApp Hardware Universe"^]。有关特定 AFF 型号的详细信息，请参见下表中列出的平台专用文档。
+支持在 FlexPod 中使用所有当前型号的 NetApp AFF A 系列存储控制器。有关详细信息，请参见 https://www.netapp.com/media/7828-DS-3582-AFF-A-Series.pdf["AFF 技术规格"^]数据表和 https://hwu.netapp.com/["NetApp Hardware Universe"^]。有关特定 AFF 型号的详细信息，请参见下表中列出的平台专用文档。
 
 |===
 | 组件 | AFF A 系列控制器平台文档 

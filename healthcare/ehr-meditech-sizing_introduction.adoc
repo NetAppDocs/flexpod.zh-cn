@@ -78,8 +78,8 @@ Cisco 和 NetApp 的 FlexPod 解决方案通过高性能，模块化，预先验
 
 以下技术报告和其他文档与本技术报告相关，并构成在 FlexPod 基础架构上对 MEDITECH 进行规模估算，设计和部署所需的一整套文档。
 
-* https://www.netapp.com/us/media/tr-4753.pdf["TR-4753 ：《适用于 MEDITECH 的 FlexPod 数据中心部署指南》"^]
-* https://www.netapp.com/us/media/tr-4190.pdf["TR-4190 ：《适用于 MEDITECH 环境的 NetApp 规模估算准则》"^]
+* https://docs.netapp.com/us-en/flexpod/healthcare/ehr-meditech-deploy_overview.html["TR-4753 ：《适用于 MEDITECH 的 FlexPod 数据中心部署指南》"^]
+* https://www.netapp.com/pdf.html?item=/media/19872-tr-4190.pdf["TR-4190 ：《适用于 MEDITECH 环境的 NetApp 规模估算准则》"^]
 * https://fieldportal.netapp.com/content/248456["TR-4319 ：《适用于 MEDITECH 环境的 NetApp 部署准则》"^]
 
 

@@ -42,7 +42,7 @@ https://www.flexpod.com/idc-white-paper/["https://www.flexpod.com/idc-white-pape
 
 * 医疗保健领域的人工智能
 +
-https://www.netapp.com/us/media/na-369.pdf["https://www.netapp.com/us/media/na-369.pdf"^]
+https://www.netapp.com/pdf.html?item=/media/7393-na-369pdf.pdf["https://www.netapp.com/us/media/na-369.pdf"^]
 
 * FlexPod for HealthCare 可帮助您轻松实现转型
 +

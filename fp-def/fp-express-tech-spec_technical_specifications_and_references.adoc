@@ -352,7 +352,7 @@ NetApp 磁盘的技术规格包括外形规格大小，磁盘容量，磁盘 RPM
 | 组件 | 存储控制器产品规格 
 
 
-| E2800 | http://www.netapp.com/us/media/ds-3805.pdf[] 
+| E2800 | https://www.netapp.com/pdf.html?item=/media/7573-ds-3805.pdf[] 
 |===
 
 

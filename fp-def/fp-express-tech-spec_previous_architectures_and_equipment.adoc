@@ -67,11 +67,11 @@ image:fp-express-tech-spec_image6.png["错误：缺少图形映像"]
 
 仍支持先前经过 FlexPod Express 验证的架构。架构和部署文档包括：
 
-* link:http://www.netapp.com/us/media/nva-0016-flexpod-express.pdf["采用 Cisco UCS C 系列和 NetApp FAS2500 系列的 FlexPod Express"]
-* link:http://www.netapp.com/us/media/nva-0020-deploy.pdf["采用 VMware vSphere 6.0 的 FlexPod Express ：小型和中型配置"]
-* link:http://www.netapp.com/us/media/nva-0017-flexpod-express.pdf["采用 VMware vSphere 6.0 的 FlexPod Express ：大型配置"]
-* link:http://www.netapp.com/us/media/nva-0021-deploy.pdf["采用 Microsoft Windows Server 2012 R2 Hyper-V 的 FlexPod Express ：小型和中型配置"]
-* link:http://www.netapp.com/us/media/tr-4350.pdf["采用 Microsoft Windows Server 2012 R2 Hyper-V 的 FlexPod Express ：大型配置"]
+* link:https://www.netapp.com/pdf.html?item=/media/12441-nva-0016-flexpod-express.pdf["采用 Cisco UCS C 系列和 NetApp FAS2500 系列的 FlexPod Express"^]
+* link:https://www.netapp.com/pdf.html?item=/media/12442-nva-0020-deploy.pdf["采用 VMware vSphere 6.0 的 FlexPod Express ：小型和中型配置"^]
+* link:https://www.netapp.com/pdf.html?item=/media/12443-nva-0017-flexpod-express.pdf["采用 VMware vSphere 6.0 的 FlexPod Express ：大型配置"^]
+* link:https://www.netapp.com/pdf.html?item=/media/12444-nva-0021-deploypdf.pdf["采用 Microsoft Windows Server 2012 R2 Hyper-V 的 FlexPod Express ：小型和中型配置"^]
+* link:https://www.netapp.com/pdf.html?item=/media/12445-tr-4350.pdf["采用 Microsoft Windows Server 2012 R2 Hyper-V 的 FlexPod Express ：大型配置"^]
 
 
 

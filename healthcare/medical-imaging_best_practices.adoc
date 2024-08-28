@@ -206,6 +206,6 @@ NetApp 建议采用以下虚拟化最佳实践：
 * 确保 VM OS VMDK 托管在快速第 1 层存储中。
 * 与医疗映像系统供应商合作，确定准备 VM 模板以快速部署和维护的最佳方法。
 * 管理，存储和生产网络需要对数据库进行 LAN 隔离，并为 VMware vMotion 提供隔离的 VLAN 。
-* 使用名为的基于存储阵列的 NetApp 复制技术 https://www.netapp.com/us/media/tr-4015.pdf["SnapMirror"^] 而不是基于vSphere的复制。
+* 使用名为的基于NetApp存储阵列的复制技术、 https://www.netapp.com/pdf.html?item=/media/17229-tr4015pdf.pdf["SnapMirror"^]而不是基于vSphere的复制。
 * 使用利用 VMware API 的备份技术；备份时间应在正常生产时间之外。
 

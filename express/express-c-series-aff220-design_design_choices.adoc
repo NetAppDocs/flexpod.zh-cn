@@ -37,7 +37,7 @@ image:express-c-series-aff220-design_image5.png["错误：缺少图形映像"]
 
 image:express-c-series-aff220-design_image6.png["错误：缺少图形映像"]
 
-这些只是 FlexPod Express 解决方案的几项主要功能。有关 ONTAP 9.4 的其他特性和功能的详细信息，请参见 https://www.netapp.com/us/media/ds-3231.pdf["ONTAP 9 数据管理软件产品规格"^]。另请参见 NetApp http://docs.netapp.com/ontap-9/index.jsp["ONTAP 9 文档中心"^]，已更新为包括 ONTAP 9.4 。
+这些只是 FlexPod Express 解决方案的几项主要功能。有关ONTAP 9 4的其他特性和功能的详细信息，请参见 https://www.netapp.com/pdf.html?item=/media/7413-ds-3231.pdf["ONTAP 9 数据管理软件产品规格"^]。此外，请参见NetApp http://docs.netapp.com/ontap-9/index.jsp["ONTAP 9 文档中心"^]，它已更新为包括ONTAP 9。4.
 
 
 

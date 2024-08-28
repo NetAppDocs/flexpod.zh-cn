@@ -51,4 +51,4 @@ image:fp-express-tech-spec_image2.png["错误：缺少图形映像"]
 
 image:fp-express-tech-spec_image3.png["错误：缺少图形映像"]
 
-有关此配置的详细信息，请参见 https://www.netapp.com/us/media/nva-1131-deploy.pdf["采用 VMware vSphere 6.7U1 的 FlexPod Express 以及采用基于 IP 的直连存储的 NetApp AFF A220"^]。
+有关此配置的详细信息，请参见 https://docs.netapp.com/us-en/flexpod/express/express-direct-attach-aff220-deploy_program_summary.html["采用 VMware vSphere 6.7U1 的 FlexPod Express 以及采用基于 IP 的直连存储的 NetApp AFF A220"^]。

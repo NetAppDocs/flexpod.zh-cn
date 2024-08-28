@@ -49,7 +49,7 @@ image:flexpod-fips-image3.png["错误：缺少图形映像"]
 
 NOTE: NVE 使用经过 FIPS 140-2 1 级验证的软件加密模块。
 
-有关 NVE 的详细信息，请参见 https://www.netapp.com/us/media/ds-3899.pdf["NVE 产品规格"^]。
+有关NVE的详细信息，请参见 https://www.netapp.com/pdf.html?item=/media/17070-ds-3899.pdf["NVE 产品规格"^]。
 
 NVE 可保护云中的数据。Cloud Volumes ONTAP 和 Azure NetApp Files 能够提供 FIPS 140-2 合规的空闲数据加密。
 
@@ -110,7 +110,7 @@ image:flexpod-fips-image4.png["错误：缺少图形映像"]
 
 NOTE: NSE 会在每个驱动器上使用硬件加密，此加密已通过 FIPS 140-2 2 级别 2 验证。
 
-有关 NSE 的详细信息，请参见 https://www.netapp.com/us/media/ds-3213-en.pdf["NSE 产品规格"^]。
+有关NSE的详细信息，请参见 https://www.netapp.com/pdf.html?item=/media/7563-ds-3213-en.pdf["NSE 产品规格"^]。
 
 
 

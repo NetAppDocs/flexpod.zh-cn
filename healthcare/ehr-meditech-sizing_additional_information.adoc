@@ -26,7 +26,7 @@ https://fieldportal.netapp.com/content/248456["https://fieldportal.netapp.com/co
 
 * 《适用于 MEDITECH 环境的 NetApp 规模估算准则》。
 +
-http://www.netapp.com/us/media/tr-4190.pdf["www.netapp.com/us/media/tr-4190.pdf"^]
+https://www.netapp.com/pdf.html?item=/media/19872-tr-4190.pdf["www.netapp.com/us/media/tr-4190.pdf"^]
 
 * 适用于 Epic EHR 部署的 FlexPod 数据中心
 +

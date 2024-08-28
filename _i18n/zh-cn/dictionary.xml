@@ -150,7 +150,6 @@
   <block id="5f408e62c550710129b96eefc5ab1131" category="cell">SupportEdge Premium 现场 4 小时—月： 36</block>
   <block id="34ff3e9936bccd6963e8de9dc3992201" category="cell">CS-O2-4 小时</block>
   <block id="9731e37c3f8c90801e32b462b8a858c7" category="inline-link">NetApp SupportEdge Premium</block>
-  <block id="29a7f83d978ab7a674beef6d385a5a02" category="cell"><block ref="29a7f83d978ab7a674beef6d385a5a02" category="inline-link-rx"></block></block>
   <block id="767945ca8f676ff25ce389fce1df6c41" category="summary">Cisco 为 FlexPod 快速设计和架构做出了重大贡献；它为解决方案的计算和网络层做出了贡献。</block>
   <block id="db9522af2119f167ded30369ddb56248" category="doc">Cisco 组件</block>
   <block id="ae19f05a830d151c2615c3f564dbf6e4" category="paragraph">Cisco 为 FlexPod 快速设计和架构做出了重大贡献；它为解决方案的计算和网络层做出了贡献。本节介绍可用于 FlexPod Express 的 Cisco UCS 和 Cisco Nexus 组件。</block>
@@ -382,7 +381,6 @@
   <block id="04c3e0734f13170a0eec62558afbb537" category="paragraph">下图显示了采用 Cisco UCS 管理的配置的 FlexPod Express 。</block>
   <block id="8006c1f22f86e8ed6e0044a8f4d01f87" category="paragraph"><block ref="8006c1f22f86e8ed6e0044a8f4d01f87" category="inline-image-macro-rx" type="image"></block></block>
   <block id="9a2595013afa6a7dc480a8aafec7df4c" category="inline-link">采用 VMware vSphere 6.7U1 的 FlexPod Express 以及采用基于 IP 的直连存储的 NetApp AFF A220</block>
-  <block id="ec55b1f0ce691ed98d1d4e441aa90715" category="paragraph">有关此配置的详细信息，请参见<block ref="e64091390a3a5b1c7fe75f8013667c1a" category="inline-link-rx"></block>。</block>
   <block id="ace4f258b1158aaecc4956820cff19d9" category="summary">FlexPod 是一款灵活的解决方案，可让您使用当前由 Cisco 和 NetApp 销售的现有设备和新设备。有时， Cisco 和 NetApp 的某些型号设备会被指定为寿命终结（ EOL ）。</block>
   <block id="4a3c82ab9192292131c0c77dfcf82cf8" category="doc">旧设备</block>
   <block id="aaf1713523b3f62782576f85f1b53c67" category="inline-link">NetApp 服务和支持产品计划的可用性终止索引</block>
@@ -551,18 +549,13 @@
   <block id="b441412a52771cc2c951a3c1fd336788" category="list-text">最大 Snapshot 副本数</block>
   <block id="5dbe6318c0e33df82115090386f676a0" category="cell">FAS9000 系列</block>
   <block id="8c732c0d3940f54af569403bb2e77413" category="inline-link">FAS9000 系列产品规格</block>
-  <block id="e152be24a8aee8e7db513eb2b90ae1af" category="cell"><block ref="e152be24a8aee8e7db513eb2b90ae1af" category="inline-link-rx"></block></block>
   <block id="29184268b37f59569228269cc9f66455" category="cell">FAS8700 系列</block>
   <block id="9055cb9debfe6ad605b03b6994bb617b" category="inline-link">FAS8700 系列产品规格</block>
-  <block id="91aca9af248510780f4318769242a537" category="cell"><block ref="91aca9af248510780f4318769242a537" category="inline-link-rx"></block></block>
   <block id="372a67565826a013c3a98f8b425b9b88" category="cell">FAS8300 系列</block>
   <block id="b0f1efc75eac6747a8909dd3edea2685" category="inline-link">FAS8300 系列产品规格</block>
-  <block id="a95a7fe351d63757da9848b11f5aea46" category="cell"><block ref="a95a7fe351d63757da9848b11f5aea46" category="inline-link-rx"></block></block>
   <block id="0ed5b642dc7e3b67019e2e2a7b885a69" category="cell">FAS2700 系列</block>
   <block id="935842d1c7846b72aa6cab118db76153" category="inline-link">FAS2700 系列产品规格</block>
-  <block id="0ebf53e908072d118fb0d58127ae01ee" category="cell"><block ref="0ebf53e908072d118fb0d58127ae01ee" category="inline-link-rx"></block></block>
   <block id="baae0cceb9b7043b8b2dd03e6efa83f8" category="inline-link">AFF 技术规格</block>
-  <block id="8ac85f9d01d023a826d560f7305087e4" category="paragraph">支持在 FlexPod 中使用所有当前型号的 NetApp AFF A 系列存储控制器。追加信息可在中找到<block ref="a5f49933802e993cfd9035e6df8e5dab" category="inline-link-rx"></block> 数据表和中的<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block>。有关特定 AFF 型号的详细信息，请参见下表中列出的平台专用文档。</block>
   <block id="99d338f252ec9d84ad8431a31de3a262" category="cell">AFF A 系列控制器平台文档</block>
   <block id="a6d988e2bc1676553a68b4bd3414e350" category="cell">NetApp AFF A800</block>
   <block id="4d9751fc3b79bdb88b990f65afd7c6d4" category="inline-link">AFF A800 平台文档</block>
@@ -618,7 +611,6 @@
   <block id="056341ce6698d2ac20eb4372437840eb" category="paragraph">FlexPod 平台有两种：</block>
   <block id="636457f24ee3c090c70b60896394af32" category="list-text">* FlexPod Datacenter 。 * 此平台是一个可大规模扩展的虚拟数据中心基础架构，适合工作负载企业级应用程序，虚拟化，虚拟桌面基础架构 (VDI) 以及私有云和混合云工作负载公有。</block>
   <block id="6c045cd5d8130cec6f0d8aeb7cb9798f" category="inline-link">FlexPod 快速技术规格。</block>
-  <block id="d81d16a8974c7889ddff6bd34f94f603" category="list-text">* FlexPod Express* 。此平台是一个紧凑型融合基础架构，面向远程办公室和边缘用例。FlexPod Express 具有自己的规格，这些规格在中进行了说明<block ref="f1a5347a79c5f2995a9e6a4ebfd291d8" category="inline-link-rx"></block></block>
   <block id="363516c7d28783cb5332db685b125e9f" category="paragraph">本文档提供了 FlexPod 数据中心平台的技术规格。</block>
   <block id="9cce7edf5caad6ea5fd1d75c242995bf" category="summary">本节列出了 NetApp 原有磁盘架， FAS 控制器和存储控制器选项。</block>
   <block id="823ce7885ab743f9510de9e06d6ad02b" category="paragraph">下表列出了 NetApp 原有存储控制器选项。</block>
@@ -674,7 +666,6 @@
   <block id="a152d851b543a6ecd1fe98d32802053d" category="inline-link">推出适用于 FlexPod 的端到端 NVMe 白皮书。</block>
   <block id="866ad53e2454a700c7d99a0f7dec80e8" category="paragraph">有关 FlexPod 配置和性能优势的更多详细信息，请参见<block ref="04abdacba4c78c835f0c4c4ee5dcd30c" category="inline-link-rx"></block></block>
   <block id="37baea605e04392e4eb7f7acb8348221" category="inline-link">TR-4684 ：《使用 NVMe 实施和配置现代 SAN 》</block>
-  <block id="aa07e30a0e87447ac8cfb366d981defe" category="paragraph">有关 ONTAP 实施的详细信息，请参见<block ref="402f29c4850931c5f6d44189ae1b3fea" category="inline-link-rx"></block>。</block>
   <block id="8a9588937d6e029ffde48c9037290b7a" category="paragraph"><block ref="8a9588937d6e029ffde48c9037290b7a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="5c951adc7211c25ede0a0809548d1c04" category="section-title">通过 Cisco MDS 启动 FC SAN</block>
   <block id="fb29d3ee85e306f56ff802135b3407c0" category="paragraph">为了通过使用专用 SAN 网络提高可扩展性， FlexPod 通过 Cisco MDS 交换机和 Nexus 交换机支持 FC ，并支持 Cisco Nexus 93108TC-FX 等 FC 。Cisco MDS 中的 FC SAN 启动选项具有以下许可和硬件要求：</block>
@@ -778,15 +769,10 @@
   <block id="11d25cfc5d089c12833d6137a23a8a23" category="section-title">经过 FlexPod Express 验证的早期架构</block>
   <block id="293356139477ade3e9041d6fbdd276ec" category="paragraph">仍支持先前经过 FlexPod Express 验证的架构。架构和部署文档包括：</block>
   <block id="c5a948f45c8ea0a784d32d4647776462" category="inline-link-macro">采用 Cisco UCS C 系列和 NetApp FAS2500 系列的 FlexPod Express</block>
-  <block id="849a7930c8aeeb20d48256ca20631e82" category="list-text"><block ref="849a7930c8aeeb20d48256ca20631e82" category="inline-link-macro-rx"></block></block>
   <block id="99f6284675f23e453fa7c4a417e88ba5" category="inline-link-macro">采用 VMware vSphere 6.0 的 FlexPod Express ：小型和中型配置</block>
-  <block id="421fbfad76cdac5c58fe0535086f1c86" category="list-text"><block ref="421fbfad76cdac5c58fe0535086f1c86" category="inline-link-macro-rx"></block></block>
   <block id="3b5643022c9746348749b846fefc5c24" category="inline-link-macro">采用 VMware vSphere 6.0 的 FlexPod Express ：大型配置</block>
-  <block id="3c72b3544f4121a6c58adc324b26503b" category="list-text"><block ref="3c72b3544f4121a6c58adc324b26503b" category="inline-link-macro-rx"></block></block>
   <block id="167f0d516e8a31e43efef6ef0aecd970" category="inline-link-macro">采用 Microsoft Windows Server 2012 R2 Hyper-V 的 FlexPod Express ：小型和中型配置</block>
-  <block id="797059254daaed45ef718289cf7cddc9" category="list-text"><block ref="797059254daaed45ef718289cf7cddc9" category="inline-link-macro-rx"></block></block>
   <block id="ab9917ceeb78046d8833195d5c5815da" category="inline-link-macro">采用 Microsoft Windows Server 2012 R2 Hyper-V 的 FlexPod Express ：大型配置</block>
-  <block id="6557c8c56cb68a45858806ec15392cf9" category="list-text"><block ref="6557c8c56cb68a45858806ec15392cf9" category="inline-link-macro-rx"></block></block>
   <block id="88f276840a3dfcf14df657f2691c753b" category="section-title">以前的硬件</block>
   <block id="c794f8f57e57b5e750d353d614a9b09e" category="paragraph">下表列出了以前的 FlexPod 快速架构中使用的硬件。</block>
   <block id="8f12752b14042ffbe4a7d072cdef99cf" category="cell">先前架构中使用的硬件</block>
@@ -1139,7 +1125,6 @@
   <block id="10c6f982f208dbef1a87731e55b59a93" category="cell">最大卷数</block>
   <block id="10a7cdd970fe135cf4f7bb55c0e3b59f" category="cell">512</block>
   <block id="700ccdb6fe16f8e96d306753efe63a8b" category="paragraph">下表列出了当前 E 系列存储控制器的产品规格。</block>
-  <block id="661810cad624aad78eb85dc5da5f120a" category="cell"><block ref="661810cad624aad78eb85dc5da5f120a" category="inline-link-rx"></block></block>
   <block id="7d0a0376d04b3a9ca1b65765d539c3a0" category="section-title">E 系列适配器</block>
   <block id="32ef18b556c21779f9f33a1369c2f24b" category="paragraph">下表列出了 E 系列适配器。</block>
   <block id="42ecb2ff0092aeba23e4ab01f3df6195" category="cell">X-56023-0E-C</block>
@@ -1342,10 +1327,8 @@
   <block id="7d5b957cd473f6eaf5ad335a9c63c4ff" category="paragraph">要了解有关本文档中所述信息的更多信息，请查看以下文档和 / 或网站：</block>
   <block id="8d051a62e2d203f6829d7d7282bfaad2" category="list-text">FabricPool 最佳实践</block>
   <block id="9c04b089839cc58f31e0928e4f6828e2" category="inline-link">www.netapp.com/us/media/tr-4598.pdf</block>
-  <block id="8ef1e243521b324619638634cb1a81da" category="paragraph"><block ref="8ef1e243521b324619638634cb1a81da" category="inline-link-rx"></block></block>
   <block id="365ebbe96b44c66c99650ba3962dc94c" category="list-text">TR-4036 ：《 FlexPod 数据中心技术规格》</block>
   <block id="387ed290d7bda1a0a46479242af20df5" category="inline-link"><block ref="387ed290d7bda1a0a46479242af20df5" category="inline-link-rx"></block></block>
-  <block id="a366d439248dac19a88157899bc0bf7c" category="paragraph"><block ref="a366d439248dac19a88157899bc0bf7c" category="inline-link-rx"></block></block>
   <block id="a9ae2f997f14e5e1bbe91d40d451514c" category="summary">通过设置并配置 Cloud Insights 来监控您的 FlexPod Datacenter 解决方案，我们可以在信息板上探索一些可执行的任务，以评估和监控您的环境。在本节中，我们重点介绍了 Cloud Insights 的五个主要用例。</block>
   <block id="0e421682d702861a0cac3e006b03c68d" category="paragraph">通过设置并配置 Cloud Insights 来监控您的 FlexPod Datacenter 解决方案，我们可以在信息板上探索一些可执行的任务，以评估和监控您的环境。在本节中，我们重点介绍了 Cloud Insights 的五个主要用例：</block>
   <block id="888b981e054118f3295989aee635b02a" category="list-text">Active IQ 集成</block>
@@ -2018,7 +2001,6 @@
   <block id="346891831c7ff1b2f151ee3281e55d98" category="paragraph"><block ref="ab28a2321c28e033f7f0eb595e098e7f" category="inline-link-rx"></block> （需要 NetApp 登录）</block>
   <block id="d0779087628a1ab7da9dc653a5757419" category="list-text">《适用于 MEDITECH 环境的 NetApp 规模估算准则》。</block>
   <block id="3438bdbce7dd9729c4a20b406a2c612a" category="inline-link">www.netapp.com/us/media/tr-4190.pdf</block>
-  <block id="e0fc1470a5f06a97d990aa88b49e14bc" category="paragraph"><block ref="e0fc1470a5f06a97d990aa88b49e14bc" category="inline-link-rx"></block></block>
   <block id="b0c4711c76f1217685ef782457a2ff75" category="list-text">适用于 Epic EHR 部署的 FlexPod 数据中心</block>
   <block id="c5b901b54f4b42b734cf626040cdee3b" category="inline-link">www.netapp.com/us/media/tr-4693.pdf</block>
   <block id="e1adeca60ccd1261ff5b0b70e3db3fb9" category="paragraph"><block ref="e1adeca60ccd1261ff5b0b70e3db3fb9" category="inline-link-rx"></block></block>
@@ -2192,7 +2174,6 @@
   <block id="907252d9f6c712cc5f8fcc12251441b1" category="inline-link">NetApp 支持的数据网络结构</block>
   <block id="424085d73e2bf68920f52c0e421ec644" category="list-text">移动设备，例如手持式，无线扫描设备（例如，连接到手机的便携手持式超声波扫描仪），需要一个强大的网络基础架构，在边缘，核心和云端都具有 DoD 级别的安全性，可靠性和延迟。<block ref="3eee67b0b37da60b6460fdf023f854d0" category="inline-link-rx"></block> 为企业大规模提供此功能。</block>
   <block id="2ea6325cbb00626fd010bdc2c9b84882" category="inline-link">性能，可靠性和扩展是基本特征</block>
-  <block id="ac46f547880f2bb630645bf54b0f834e" category="list-text">较新的模式具有指数级存储需求；例如， CT 和 MRI 对于每个模式都需要几百 MB 的容量，但数字病理学图像（包括整个幻灯片成像）的大小可能只有几 GB 。FlexPod 的设计采用<block ref="d16a01e95ddc9dc0087a111aadb5fe77" category="inline-link-rx"></block>。</block>
   <block id="37a955b83843b3a60895704bbaa81329" category="paragraph">精心设计的医疗成像系统平台是创新的核心。FlexPod 架构提供灵活的计算和存储功能以及行业领先的存储效率。</block>
   <block id="b0f6dc9f2ccbbbfab3cb68e673207f49" category="section-title">解决方案的整体优势</block>
   <block id="1ec59953da3ae57022920e20e60729a1" category="paragraph">通过在 FlexPod 架构基础上运行映像应用程序环境，您的医疗保健组织可以看到员工工作效率的提高以及资本和运营支出的降低。FlexPod 提供经过严格测试，预先验证和融合的产品，经过精心设计和设计，可提供可预测的低延迟系统性能和高可用性。这种方法可为医疗成像系统的用户带来较高的舒适程度，并最终实现最佳的响应时间。</block>
@@ -2215,10 +2196,8 @@
   <block id="59f169a4543a5bfbfaf70c0a39c74255" category="list-text">* 工作效率更高。 * 您可以快速部署和扩展此解决方案，以获得最佳临床医生最终用户体验。</block>
   <block id="e6432fe9404fe3cd5c2c6ad380723cc5" category="list-text">* Data Fabric 。 * 由 NetApp 提供支持的 Data Fabric 可以跨站点，跨物理边界和跨应用程序将数据集于一体。NetApp 支持的 Data Fabric 专为以数据为中心的世界中的数据驱动型企业而构建。数据在多个位置创建和使用，通常需要利用并与其他位置，应用程序和基础架构共享。因此，您需要一种一致且集成的方式来管理它。此解决方案提供了一种数据管理方式，可让您的 IT 团队掌控一切，并简化日益增加的 IT 复杂性。</block>
   <block id="9f1f3cb6f73f3a9f663256683024aff2" category="inline-link">采用 FabricPool 的 FlexPod</block>
-  <block id="d6c1602c3b8ed7f1b3efe2aee65fba20" category="list-text">* FabricPool 。 * NetApp ONTAP FabricPool 有助于降低存储成本，而不会影响性能，效率，安全性或保护。FabricPool 对企业级应用程序是透明的，它可以降低存储 TCO ，而无需重新构建应用程序基础架构，从而充分利用云效率。FlexPod 可以从 FabricPool 的存储分层功能中受益，从而更高效地利用 ONTAP 闪存存储。有关完整信息，请参见<block ref="63b79d43061ec72f186174afdddca55f" category="inline-link-rx"></block>。</block>
   <block id="f330ee9d9dd71ed23bbb3068ddb8facd" category="inline-link">解决方案到勒索软件</block>
   <block id="6b99ff51934eec49a1d8e86f764f8f65" category="inline-link">（ FIPS ） 140-2</block>
-  <block id="48f2bcd44bd29a2348b03d274f98a545" category="list-text">* FlexPod 安全性。 * 安全性是 FlexPod 的基础。在过去几年中，勒索软件已成为一种日益严重的威胁。勒索软件是一种基于密码病毒的恶意软件，它使用加密技术构建恶意软件。此恶意软件可以使用对称密钥加密和非对称密钥加密来锁定受影响的数据，并要求勒索以提供密钥来对数据进行解密。要了解 FlexPod 如何帮助缓解勒索软件等威胁，请参见<block ref="e6954ef9cbf3ba4a377e08a556ecb875" category="inline-link-rx"></block>。FlexPod 基础架构组件也是联邦信息处理标准<block ref="d10efeffbc514a1046259d3207394d5d" category="inline-link-rx"></block> 合规。</block>
   <block id="96453e8d3adda287198b436debeea6da" category="list-text">* FlexPod 合作支持。 * NetApp 和 Cisco 建立了 FlexPod 合作支持，这是一种强大，可扩展且灵活的支持模式，可满足 FlexPod 融合基础架构的独特支持要求。此模式结合了 NetApp 和 Cisco 的经验，资源和技术支持专业知识，可简化识别和解决 FlexPod 支持问题描述的流程，而无论问题位于何处。FlexPod 合作支持模式有助于确认您的 FlexPod 系统运行效率高，并受益于最新技术，同时还可以提供经验丰富的团队来帮助解决集成问题。</block>
   <block id="d3d3b8844e59559a4358fc3c1ae6186e" category="paragraph">如果您的医疗保健组织运行业务关键型应用程序， FlexPod 合作支持就显得尤为重要。下图显示了 FlexPod 合作支持模式的概述。</block>
   <block id="a24c32f5c156d6af397e8ecd98bc6db7" category="paragraph"><block ref="a24c32f5c156d6af397e8ecd98bc6db7" category="inline-image-macro-rx" type="image"></block></block>
@@ -2604,7 +2583,6 @@
   <block id="818e6edcb51a4032c2568bd7669ae0b3" category="list-text">* 池化资源优化。 * 有助于减少物理服务器和存储控制器数量，负载平衡工作负载需求并提高利用率，同时提高性能。</block>
   <block id="0ab23991ec3940d2735a9d2099952987" category="list-text">* 服务质量（ QoS ）。 * FlexPod 可在整个堆栈上提供 QoS 。行业领先的 QoS 网络，计算和存储策略可在共享环境中实现不同的服务级别。这些策略可以为工作负载提供最佳性能，并有助于隔离和控制失控的应用程序。</block>
   <block id="924f03ea03dd642aa2434367dbcb2a9d" category="inline-link">NetApp 7 ： 1 存储效率担保</block>
-  <block id="745ea9a4eeac1c4005d2ea515f54515d" category="list-text">* 存储效率。 * 使用降低存储成本<block ref="893152a93f44b356e39fcd68116ddb07" category="inline-link-rx"></block>。</block>
   <block id="b0ca4939c9475ec1b843b6766e4d22ec" category="list-text">* 灵活性。 * 借助 FlexPod 系统提供的行业领先的工作流自动化，流程编排和管理工具，您的 IT 团队可以更快速地响应业务请求。这些业务请求包括从 MEDITECH 备份和配置更多测试和培训环境到为人口健康管理计划复制分析数据库等。</block>
   <block id="e0459c9b3e91b753c98c7cc22480c9c5" category="list-text">* 提高了工作效率。 * 快速部署和扩展此解决方案，以获得最佳临床医生最终用户体验。</block>
   <block id="2731b8dc989b2c3472869f82df998f10" category="list-text">* NetApp Data Fabric 。 * NetApp Data Fabric 架构可以跨站点，跨物理边界和跨应用程序将数据集于一体。NetApp Data Fabric 专为以数据为中心的世界中的数据驱动型企业而构建。数据是在多个位置创建和使用的，通常您需要利用并与其他位置，应用程序和基础架构共享数据。您需要一种一致且集成的数据管理方式。Data Fabric 提供了一种数据管理方式，可以控制数据并简化日益增加的 IT 复杂性。</block>
@@ -2679,7 +2657,6 @@
   <block id="d719230a769a7d5350011c9bf40dca2f" category="section-title">Meditech 主机工作负载 I/O 特征</block>
   <block id="f7f61769c421a73d00a651f139378432" category="paragraph">每个 MEDITECH 主机和整个系统的 I/O 特征取决于您部署的 MEDITECH 平台。所有 MEDITECH 平台（ expanse ， 6.x ， C/S 5.x 和 Magic ）都会生成 100% 随机的工作负载。</block>
   <block id="52c1e99f3fb9a61b9082ce5513830a2b" category="paragraph">MEDITECH expanse 平台产生的工作负载要求最高，因为它的每台主机写入操作和整体 IOPS 百分比最高，其次是 6.x ， C/S 5.x 和魔力平台。</block>
-  <block id="50768125f72516f871a5c080f5ccda62" category="paragraph">有关 MEDITECH 工作负载说明的更多详细信息，请参见<block ref="f0b889683b95bd58b2023b9560bdcada" category="inline-link-rx"></block>。</block>
   <block id="b6b7b57792b033309acb28595082d0f5" category="paragraph">Meditech 要求对 NetApp FAS 或 AFF 系统与所有类别的 MEDITECH 主机之间的数据流量使用 FC 协议。</block>
   <block id="46d4798da2f69b6997f929503cbc938c" category="section-title">MEDITECH 主机的存储表示</block>
   <block id="31af2b58da2172f536a6c46d14e45e26" category="paragraph">每个 MEDITECH 主机都使用两个 Windows 驱动器：</block>
@@ -2738,7 +2715,6 @@
   <block id="0bae447d49a0fe6053380d2618b9f085" category="list-text">仅传输更改的数据块，以减少网络流量。</block>
   <block id="e5ea9855395657dde39b4e38323f26f9" category="list-text">在传输期间，保持主存储的存储效率优势，包括重复数据删除，数据压缩和数据缩减。</block>
   <block id="926fc647ed92987e7c6ee0ed6532f0c6" category="list-text">利用网络压缩提高实时效率。</block>
-  <block id="0cc70a999720e12a49faa66e364c3db9" category="paragraph">有关详细信息，请参见<block ref="e223328ad593baeae2aa958ba284c8e7" category="inline-link-rx"></block>。</block>
   <block id="21e55c040ae8fed2fd2140256f8e5609" category="paragraph">下表列出了典型医疗成像系统在特定延迟和吞吐量性能特征方面所需的每一层。</block>
   <block id="d2c74a0b2370a7994e2c41c03e1f69bf" category="cell">存储层</block>
   <block id="8ad1386a26a01418fbd19eab41dbff5f" category="cell">NetApp 建议</block>
@@ -2841,7 +2817,6 @@
   <block id="d6216978b3b71c1b7b73d8571ae7eb52" category="list-text">社区医生完成诊断，并为患者提供后续步骤。</block>
   <block id="994ca45eede702f2842cd6a71975e69e" category="paragraph">典型的医疗成像系统使用 N 层架构。医疗成像系统的核心组件是一个用于托管各种应用程序组件的应用程序服务器。典型的应用程序服务器基于 Java 运行时或 C# .Net CLR- 。大多数企业级医疗成像解决方案都使用 Oracle 数据库服务器， MS SQL Server 或 Sybase 作为主数据库。此外，某些企业医疗成像系统还使用数据库在一个地理区域内加速和缓存内容。某些企业医疗成像系统还会将 MongoDB ， Redis 等 NoSQL 数据库与企业集成服务器结合使用，以便使用这些数据库作为 Dicom 接口和 / 或 API 。</block>
   <block id="528775ad8d99dce868bc7bea7385e61a" category="paragraph">典型的医疗成像系统可为两组不同的用户提供对图像的访问权限：诊断用户 / 放射科医生或订购该图像的临床医生。</block>
-  <block id="6101c4a7fbd4586c66282ee4e50e3a7c" category="paragraph">放射科医生通常使用支持图形的高端诊断查看器，这些查看器运行在物理或虚拟桌面基础架构中的高端计算和图形工作站上。如果您即将开始虚拟桌面基础架构之旅，可以找到更多信息<block ref="e32a5be8475ce0f3a4a8d534d504c100" category="inline-link-rx"></block>。</block>
   <block id="8ce8a90dfef3b897ed427c107169cb7b" category="paragraph">当卡特里娜飓风毁坏了路易斯安那州两家主要教学医院时，各级领导者们聚集在一起，构建了一个弹性电子健康记录系统，在创纪录的时间内包含 3000 多个虚拟桌面。有关使用情形参考架构和 FlexPod 参考捆绑包的详细信息，请参见<block ref="e11858f65cd0cbe847859e9b217d7292" category="inline-link-rx"></block>。</block>
   <block id="536ae4d7f16e4057756cfca25466ff94" category="paragraph">临床医生主要通过两种方式访问图像：</block>
   <block id="28d9ba7a7f063b96e261b57d43499c99" category="list-text">* 基于 Web 的访问。 * EHR 系统通常使用此功能将 PACS 图像嵌入为上下文感知链接，以链接形式存储到患者的电子病历（ EMR ）中，并可链接到成像工作流，操作步骤工作流，进度注释工作流等。此外，还可以通过基于 Web 的链接通过患者门户访问患者的图像。基于 Web 的访问使用一种称为上下文感知链接的技术模式。上下文感知链接可以是直接指向 Dicom 介质的静态链接 /URI ，也可以是使用自定义宏动态生成的链接 /URI 。</block>
@@ -2849,7 +2824,6 @@
   <block id="b762f29d5919c51dd9fa4a8ac151ab9a" category="paragraph">通过医学影像系统，可以访问一个由医生或加入 CIN 的医生参加的社区。典型的医疗成像系统包括一些组件，这些组件可以使您的医疗保健组织内外的其他医疗 IT 系统实现映像互操作性。社区医生可以通过基于 Web 的应用程序访问映像，也可以利用映像交换平台实现映像互操作性。映像交换平台通常使用 WADO 或 Dicom 作为底层映像交换协议。</block>
   <block id="b6a2b8b9e3c52b935411a3773e14ac66" category="paragraph">医学影像系统还可以支持需要在课堂上使用 PACS 或影像系统的学术医疗中心。为了支持学术活动，典型的医疗成像系统可以在占用空间较小的情况下拥有 PACS 系统的功能，也可以在仅供教学使用的成像环境中提供此功能。典型的供应商中立归档系统和一些企业级医疗成像系统提供了 "DICOM" 图像标记形态功能，可对用于教学目的的图像进行匿名化处理。标签形态使医疗保健组织能够以供应商中立的方式在不同供应商的医疗影像系统之间交换 Dicom 图像。此外，标记形态化还可以使医疗成像系统在企业范围内对医疗影像实施供应商中立的归档功能。</block>
   <block id="997d167631f94cf1d98666c861fca71a" category="inline-link">基于 GPU 的计算功能</block>
-  <block id="c657957143353c8472a9e17c4da2d43c" category="paragraph">医疗成像系统正在开始使用<block ref="711f583b4a3cb3b1c75798e0c31d2cea" category="inline-link-rx"></block> 通过预处理图像来增强人类工作流，从而提高效率。典型的企业级医疗成像系统可利用行业领先的 NetApp 存储效率功能。企业级医疗成像系统通常使用 RMAN 执行备份，恢复和还原活动。为了提高性能并缩短创建备份所需的时间，可以使用 Snapshot 技术进行备份操作，并使用 SnapMirror 技术进行复制。</block>
   <block id="f818fd27f91a7d28ab90b68d30fde20b" category="paragraph">下图显示了分层架构视图中的逻辑应用程序组件。</block>
   <block id="d27db09f2a2dbaf5ad2d4b5c1a2cf54b" category="paragraph"><block ref="d27db09f2a2dbaf5ad2d4b5c1a2cf54b" category="inline-image-macro-rx" type="image"></block></block>
   <block id="4a943883c65931730e17caccdf75beda" category="paragraph">下图显示了物理应用程序组件。</block>
@@ -2991,7 +2965,6 @@
   <block id="05d9c462d2d92f4b8b843ffb3d5cc2d9" category="paragraph"><block ref="05d9c462d2d92f4b8b843ffb3d5cc2d9" category="inline-link-rx"></block></block>
   <block id="c1efc3a813b82683fd82867cadc93894" category="list-text">《使用 SnapCenter 解决方案备份 FlexPod 数据中心 Oracle 数据库简介》</block>
   <block id="7eaa65b694e48ad614d73c5bde253e3a" category="inline-link"><block ref="7eaa65b694e48ad614d73c5bde253e3a" category="inline-link-rx"></block></block>
-  <block id="476a8c573fd4225c0e6cc8d1627f63f7" category="paragraph"><block ref="476a8c573fd4225c0e6cc8d1627f63f7" category="inline-link-rx"></block></block>
   <block id="1320c4b6b79b465e052e8d1cc5e75328" category="list-text">FlexPod 数据中心与基于 Cisco UCS 和 NetApp AFF A 系列的 Oracle RAC 数据库</block>
   <block id="c9f5a7de9319fd88f3852ab111fbe13e" category="inline-link"><block ref="c9f5a7de9319fd88f3852ab111fbe13e" category="inline-link-rx"></block></block>
   <block id="d315da59ec6b2858fdfe7767a8f70ab9" category="paragraph"><block ref="d315da59ec6b2858fdfe7767a8f70ab9" category="inline-link-rx"></block></block>
@@ -3008,7 +2981,6 @@
   <block id="cd1f731b891717ba30c52133b163f1a1" category="paragraph"><block ref="cd1f731b891717ba30c52133b163f1a1" category="inline-link-rx"></block></block>
   <block id="550ff411af842971b5bef45c5d9d1a59" category="list-text">TR-4700 ：适用于 Oracle 数据库的 SnapCenter 插件</block>
   <block id="43522657c8f1a5c2e1329e74dea52592" category="inline-link"><block ref="43522657c8f1a5c2e1329e74dea52592" category="inline-link-rx"></block></block>
-  <block id="9a004bc6ff68ea71252261425ab1bad8" category="paragraph"><block ref="9a004bc6ff68ea71252261425ab1bad8" category="inline-link-rx"></block></block>
   <block id="470e33cee2a0a930ccdebb855f6d92d6" category="list-text">适用于虚拟桌面基础架构的 FlexPod (VDI) 解决方案</block>
   <block id="f6aaafd9f98422c31959e223903e9a71" category="inline-link"><block ref="f6aaafd9f98422c31959e223903e9a71" category="inline-link-rx"></block></block>
   <block id="de18980572f5c8c06c547cf7593dfef1" category="paragraph"><block ref="de18980572f5c8c06c547cf7593dfef1" category="inline-link-rx"></block></block>
@@ -3099,8 +3071,6 @@
   <block id="a53a7701772829b4b015348d7208cd69" category="paragraph">本文档面向 NetApp 和合作伙伴系统工程师以及 NetApp 专业服务人员。NetApp 假定读者已很好地了解计算和存储规模估算概念，并在技术上熟悉 Cisco UCS 和 NetApp 存储系统。</block>
   <block id="5d3a5ef3f60e821b7aef8ffebddc82df" category="section-title">相关文档</block>
   <block id="420fd3463db356cbbdc59eab452a5e88" category="paragraph">以下技术报告和其他文档与本技术报告相关，并构成在 FlexPod 基础架构上对 MEDITECH 进行规模估算，设计和部署所需的一整套文档。</block>
-  <block id="33a5c72e7ac17335ca896ac369ddc513" category="list-text"><block ref="33a5c72e7ac17335ca896ac369ddc513" category="inline-link-rx"></block></block>
-  <block id="1198c32aee460f03d27170df9dd48f8a" category="list-text"><block ref="1198c32aee460f03d27170df9dd48f8a" category="inline-link-rx"></block></block>
   <block id="fbd7ce1208641001952d7cb53d85d26f" category="inline-link">TR-4319 ：《适用于 MEDITECH 环境的 NetApp 部署准则》</block>
   <block id="5a6a0a9aca49c0b558bc6577d3be8f12" category="list-text"><block ref="5a6a0a9aca49c0b558bc6577d3be8f12" category="inline-link-rx"></block></block>
   <block id="9ec635d147bc4a5883a350cc4d3635f3" category="admonition">要访问其中某些报告，需要 NetApp Field Portal 的登录凭据。</block>
@@ -4139,7 +4109,6 @@
   <block id="acd5b36b52a281090403c74112481dc6" category="paragraph"><block ref="acd5b36b52a281090403c74112481dc6" category="inline-link-rx"></block></block>
   <block id="90e64b367a0049d76983f0582241daa8" category="list-text">《采用 VMware vSphere 6.7 的 FlexPod Express 和 NetApp AFF A220 设计指南》</block>
   <block id="5d53477fd58b259c01526e8af49fc63f" category="inline-link"><block ref="5d53477fd58b259c01526e8af49fc63f" category="inline-link-rx"></block></block>
-  <block id="f5a6fe77357d53bb03a0b4bd79842772" category="paragraph"><block ref="f5a6fe77357d53bb03a0b4bd79842772" category="inline-link-rx"></block></block>
   <block id="f1c5588b2ed82d92b129fade19730a23" category="summary">下一节详细介绍了用于配置 Cisco UCS C 系列独立机架服务器以在 FlexPod 快速配置中使用的操作步骤。</block>
   <block id="7fdbcb1d4e94d1fcbef55afa143c2ed9" category="doc">Cisco UCS C 系列机架式服务器部署操作步骤</block>
   <block id="ad6d6510ab3de4d9ce4d6795cb9cc110" category="section-title">对 Cisco 集成管理服务器执行初始 Cisco UCS C 系列独立服务器设置</block>
@@ -4268,7 +4237,6 @@
   <block id="188c6ebc30eac30ebe715d5c4a02bc8b" category="paragraph"><block ref="188c6ebc30eac30ebe715d5c4a02bc8b" category="inline-link-macro-rx"></block></block>
   <block id="77e5ffad27392f3ddf5d4e4f8fc3a54a" category="list-text">《使用 VMware vSphere 6.7 的 FlexPod Express 和 NetApp AFF A220 部署指南》</block>
   <block id="bec8480e44f09ae603216b18012cb269" category="inline-link"><block ref="bec8480e44f09ae603216b18012cb269" category="inline-link-rx"></block></block>
-  <block id="1ed73ab53e78b7093d8e11511c2c0c0b" category="paragraph"><block ref="1ed73ab53e78b7093d8e11511c2c0c0b" category="inline-link-rx"></block></block>
   <block id="ab67bc24870547cd609b945dc3cb84fc" category="summary">您可以通过完成以下步骤来配置 VMware vCenter Server 6.7 和 vSphere 集群。</block>
   <block id="0fd0b01d1e59158f14a2ff5121cbb18c" category="doc">配置 VMware vCenter Server 6.7 和 vSphere 集群</block>
   <block id="28ee32dd013eaab70eb0727c90421e02" category="list-text">导航到 \https://\&lt;&lt;FQDN 或 vCenter 的 IP &gt;/vsphere-client/ 。</block>
@@ -5458,7 +5426,6 @@
   <block id="57092ba28f9b9727a8e6b12e067d52e6" category="paragraph"><block ref="57092ba28f9b9727a8e6b12e067d52e6" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f9cb4e27ae4d5a107a9b1c2f92404f03" category="paragraph">此外，还可以在 AFF A220 系统上利用根数据分区功能。通过此分区，可以在系统中的磁盘之间对根聚合和两个数据聚合进行条带化。因此，双节点 AFF A220 集群中的两个控制器均可利用聚合中所有磁盘的性能。请参见下图。</block>
   <block id="071a5294cc5f93489e6739987819ec46" category="paragraph"><block ref="071a5294cc5f93489e6739987819ec46" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="32c48c0bdd3d453758be23d856545ce5" category="paragraph">这些只是 FlexPod Express 解决方案的几项主要功能。有关 ONTAP 9.4 的其他特性和功能的详细信息，请参见<block ref="77ef5399543fc3a1e70b98d04d6a8530" category="inline-link-rx"></block>。另请参见 NetApp<block ref="acaccc868f6222e64c0f11237becafd9" category="inline-link-rx"></block>，已更新为包括 ONTAP 9.4 。</block>
   <block id="465d13822b2f2e54a46fa68974747e8f" category="paragraph">Cisco Nexus 3172P 是一款功能强大且经济高效的交换机，可提供 1/10/40/100Gbps 的交换。Cisco Nexus 3172PQ 交换机属于统一网络结构系列，是一款紧凑型单机架单元（ 1RU ）交换机，适用于机架顶部数据中心部署。（请参见下图。） 它可在 1RU 中提供多达 72 个 1/10GbE 端口，或在 1RU 中提供 48 个 1/10GbE 端口以及 6 个 40GbE 端口。为了最大程度地提高物理层灵活性，它还支持 1/10/40Gbps 。</block>
   <block id="d479a057a361a413d9be8046c1a2a0d2" category="paragraph">性能规格包括：</block>
   <block id="617061175f33fb3ebac6eef4777c4f1b" category="list-text">所有端口上的线速流量吞吐量（第 2 层和第 3 层）</block>
@@ -5515,7 +5482,6 @@
   <block id="bfa7a16f47eedd5d989ebf2d0428b576" category="paragraph"><block ref="92ecca9733c1884030999a9bb401e205" category="inline-link-rx"></block>。<block ref="50abdc2ca21ff2b3aebf336064078561" category="inline-link-rx"></block>.com</block>
   <block id="e2d855673271d9c17e5213d3631ed572" category="paragraph">FlexPod 快速指南</block>
   <block id="51eba3131729aa4891b7befebe35372c" category="inline-link"><block ref="51eba3131729aa4891b7befebe35372c" category="inline-link-rx"></block></block>
-  <block id="bfc850a3c1e3653444a8f23f59fba92b" category="paragraph"><block ref="bfc850a3c1e3653444a8f23f59fba92b" category="inline-link-rx"></block></block>
   <block id="ce417292c0b3346f0eea4ce48132230e" category="section-title">下载 VMware vCenter Server 设备</block>
   <block id="f9e7dbe3a54f34009509dfc4d0b91c35" category="paragraph"><block ref="f9e7dbe3a54f34009509dfc4d0b91c35" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1ea14f27b1d30c019b335f41c2ae5724" category="list-text">导航到 vcsa-ui-installer&gt;win32 目录。双击 installer.exe 。</block>
@@ -5807,7 +5773,6 @@
   <block id="1cc2afca2cb79b269fe9b6dc08ff1da8" category="paragraph"><block ref="1cc2afca2cb79b269fe9b6dc08ff1da8" category="inline-link-macro-rx"></block></block>
   <block id="5d59f51f5972f09ccf8e2de94b20474d" category="list-text">NVA-1130-design ：采用 VMware vSphere 6.7U1 的 FlexPod Express 和采用基于 IP 的直连存储 NVA 设计的 NetApp AFF A220</block>
   <block id="0870407a4350fecf31645c9a14768d24" category="inline-link"><block ref="0870407a4350fecf31645c9a14768d24" category="inline-link-rx"></block></block>
-  <block id="c9c7acb3a7baf9ba36977cb202ed466f" category="paragraph"><block ref="c9c7acb3a7baf9ba36977cb202ed466f" category="inline-link-rx"></block></block>
   <block id="eb14c4f0a60421d14de0b528ec141310" category="summary">以下部分详细介绍了 FlexPod Express 环境中使用的 Cisco Nexus 3172P 交换机配置。</block>
   <block id="d8aa060908a4d5c222bce0caf5cd2c45" category="doc">Cisco Nexus 3172P 部署操作步骤</block>
   <block id="aa515fc2a69da640ebfad04158edd520" category="section-title">Cisco Nexus 3172P 交换机的初始设置</block>
@@ -6369,7 +6334,6 @@
   <block id="5846e1714fe6b3a59fbf92fb13144912" category="paragraph"><block ref="5846e1714fe6b3a59fbf92fb13144912" category="inline-link-rx"></block></block>
   <block id="db49f76a2f051143f3026604e3d59f00" category="list-text">医疗保健领域的人工智能</block>
   <block id="2275a2c3460c7a300ff1ccd02b364046" category="inline-link"><block ref="2275a2c3460c7a300ff1ccd02b364046" category="inline-link-rx"></block></block>
-  <block id="79826130f905876403727b62024eea3c" category="paragraph"><block ref="79826130f905876403727b62024eea3c" category="inline-link-rx"></block></block>
   <block id="61180aaf0b2d71322476b407dec66f81" category="list-text">FlexPod for HealthCare 可帮助您轻松实现转型</block>
   <block id="51715f6336f71f0c342d4f6d79941b19" category="inline-link"><block ref="51715f6336f71f0c342d4f6d79941b19" category="inline-link-rx"></block></block>
   <block id="2331140ce18354b448afad499fd44f5d" category="paragraph"><block ref="2331140ce18354b448afad499fd44f5d" category="inline-link-rx"></block></block>
@@ -6443,7 +6407,6 @@
   <block id="0e5a582d6f9c304c0a0fc9615b2a0860" category="list-text">* 存储效率。 * 基因组学要求底层存储具有行业领先的存储效率功能。您可以利用 NetApp 存储效率功能降低存储成本，例如重复数据删除（实时和按需），数据压缩和数据缩减（<block ref="2511e8b77417e5fdbc8e7e20b5b8e078" category="inline-link-rx"></block>）。NetApp 重复数据删除可在 FlexVol 卷中提供块级重复数据删除。从本质上说，重复数据删除会删除重复的块，从而仅在 FlexVol 卷中存储唯一的块。重复数据删除的粒度较高，并在 FlexVol 卷的活动文件系统上运行。下图简要显示了 NetApp 重复数据删除的工作原理。重复数据删除是应用程序透明的。因此，可以使用它对使用 NetApp 系统的任何应用程序生成的数据进行重复数据删除。您可以将卷重复数据删除作为实时进程和后台进程运行。您可以将其配置为自动运行，计划运行或通过命令行界面， NetApp ONTAP System Manager 或 NetApp Active IQ Unified Manager 手动运行。</block>
   <block id="10f94032ef2cb29d3e07c7bc067d4ca7" category="paragraph"><block ref="10f94032ef2cb29d3e07c7bc067d4ca7" category="inline-image-macro-rx" type="image"></block></block>
   <block id="16762cd538db70dc1f593eb0cf98827b" category="list-text">* 实现基因组互操作性。 * ONTAP FlexCache 是一种远程缓存功能，可简化文件分发，减少 WAN 延迟并降低 WAN 带宽成本<block ref="63d4389703454517b5feb2781d7680eb" category="inline-link-rx"></block>）。基因组变体识别和标注期间的一项关键活动是临床医生之间的协作。即使协作临床医生位于不同地理位置， ONTAP FlexCache 技术也能提高数据吞吐量。鉴于 * 。 bam 文件的典型大小（ 1 GB 到 100 GB ），底层平台必须能够向不同地理位置的临床医生提供文件。采用 ONTAP FlexCache 的 FlexPod 让基因组数据和应用程序真正实现了多站点就绪，让全球各地的研究人员可以无缝协作，实现低延迟和高吞吐量。在多站点环境下运行基因组学应用程序的医疗保健组织可以使用数据网络结构进行横向扩展，以平衡易管理性与成本和速度。</block>
-  <block id="789db2f78a47869b28997382a583555e" category="list-text">* 智能使用存储平台。 * 采用 ONTAP 自动分层和 NetApp Fabric Pool 技术的 FlexPod 可简化数据管理。FabricPool 有助于降低存储成本，而不会影响性能，效率，安全性或保护。FabricPool 对企业级应用程序是透明的，它可以降低存储 TCO ，而无需重新构建应用程序基础架构，从而充分利用云效率。FlexPod 可以从 FabricPool 的存储分层功能中受益，从而更高效地利用 ONTAP 闪存存储。有关详细信息，请参见<block ref="63b79d43061ec72f186174afdddca55f" category="inline-link-rx"></block>。下图简要概述了 FabricPool 及其优势。</block>
   <block id="3199d90c5f76a586e586227db0c2dfa1" category="paragraph"><block ref="3199d90c5f76a586e586227db0c2dfa1" category="inline-image-macro-rx" type="image"></block></block>
   <block id="23d03ad1893d1c6319f7c48873801373" category="list-text">* 更快的变体分析和标注速度。 * FlexPod 平台的部署和实施速度更快。FlexPod 平台可实现大规模数据可用，并提供低延迟和更高吞吐量，从而实现临床医生协作。增强的互操作性有助于创新。医疗保健组织可以并行运行基因组和非基因组工作负载，这意味着组织不需要专门的平台来开始其基因组学之旅。</block>
   <block id="87d7875636ae7bcdaad8a4a10966f54a" category="paragraph">FlexPod ONTAP 会定期为存储平台添加前沿功能。FlexPod 数据中心是部署 FC-NVMe 以允许需要高性能存储访问的应用程序的最佳共享基础架构基础。随着 FC-NVMe 不断发展，包括高可用性，多路径和额外的操作系统支持， FlexPod 非常适合作为首选平台，可提供支持这些功能所需的可扩展性和可靠性。ONTAP 通过端到端 NVMe 实现更快的 I/O ，从而加快完成基因组分析的速度（<block ref="052854cdaf79fe8fde9db576b2736034" category="inline-link-rx"></block>）。</block>
@@ -6548,7 +6511,6 @@
   <block id="3d6f191554274501ba88fe69ea6ba807" category="paragraph"><block ref="3d6f191554274501ba88fe69ea6ba807" category="inline-link-rx"></block></block>
   <block id="581a5130c89459868713aba87d5ddef8" category="list-text">现代 SAN 的最佳实践</block>
   <block id="28cf8118bed6bfff2d8c5e8b980c1d1d" category="inline-link"><block ref="28cf8118bed6bfff2d8c5e8b980c1d1d" category="inline-link-rx"></block></block>
-  <block id="8773dad2264bd751de05c2821b5b7106" category="paragraph"><block ref="8773dad2264bd751de05c2821b5b7106" category="inline-link-rx"></block></block>
   <block id="0d226f32134d70adc638b78bc53393a8" category="list-text">推出适用于 FlexPod 的端到端 NVMe</block>
   <block id="651d79725508fd0119e3f81dd49cf222" category="inline-link"><block ref="651d79725508fd0119e3f81dd49cf222" category="inline-link-rx"></block></block>
   <block id="7b00214f336cfd8e3b6c48d0df0025a3" category="paragraph"><block ref="7b00214f336cfd8e3b6c48d0df0025a3" category="inline-link-rx"></block></block>
@@ -6783,7 +6745,6 @@
   <block id="54d5f6efe9cca71128c5809fd3d0588f" category="paragraph">在 FlexPod 系统中部署时， Hit 可提供医疗保健行业特有的多项优势。下面列出了这些优势的高级问题描述 ：</block>
   <block id="3e746f7ec373b1eb6a130880b1a4daed" category="inline-link">TR-4802 ：《从解决方案 到勒索软件》</block>
   <block id="cfab4e853b276ccc6ed244f4a5de1c1f" category="inline-link">符合 FIPS 140-2</block>
-  <block id="55ee48f6fb8a46db0b4888aeac6559c4" category="list-text">* FlexPod 安全性 * 。安全性是 FlexPod 系统的基础。在过去几年中，勒索软件已成为一种威胁。勒索软件是一种基于密码学的恶意软件，它使用加密技术构建恶意软件。此恶意软件可以使用对称密钥加密和非对称密钥加密来锁定受影响的数据，并要求勒索以提供密钥来对数据进行解密。要了解 FlexPod 解决方案 如何帮助缓解勒索软件等威胁，请参见<block ref="001a983a4f66d0170741f13805c59471" category="inline-link-rx"></block>。FlexPod 基础架构组件也是<block ref="5515eeec71d17b77b91938413b579e31" category="inline-link-rx"></block>。</block>
   <block id="b52d625b8f7e9051d37999b56c0793ca" category="list-text">* Cisco Intersight 。 * Cisco Intersight 是一款基于云的创新型管理即服务平台，可为全堆栈 FlexPod 管理和编排提供单一管理平台。Intersight 平台使用符合 FIPS 140-2 安全标准的加密模块。该平台的带外管理架构使其超出了某些标准或审计范围，例如 HIPAA 。网络上任何可识别的个人运行状况信息都不会发送到 Intersight 门户。</block>
   <block id="7d21d518de2c665e81f83487a04e8ec5" category="list-text">* NetApp FPolicy 技术。 * NetApp FPolicy （名称文件策略的演变）是一个文件访问通知框架，用于通过 NFS 或 SMB/CIFS 协议监控和管理文件访问。这项技术已成为 ONTAP 数据管理软件的一部分已有十多年来的发展，它有助于检测勒索软件。此零信任引擎提供的安全措施超出了访问控制列表（ ACL ）中的权限范围。FPolicy 有两种操作模式：原生 和外部：</block>
   <block id="a01b60d8c030b70b6a2c754b17b0f468" category="list-text">原生 模式同时提供了文件扩展名的黑名单和白名单功能。</block>
@@ -6810,12 +6771,9 @@
   <block id="8a5275b722854cee8913aea0acdc2c33" category="list-text">FIPS 140-2</block>
   <block id="381d74f2d7dbcffad4ff739176b2ab91" category="paragraph"><block ref="381d74f2d7dbcffad4ff739176b2ab91" category="inline-link-rx"></block></block>
   <block id="b142182673eaef19aa257c978e64bdf6" category="list-text">《 NetApp ONTAP 9 加固指南》</block>
-  <block id="df6fe2c19a68ed7ab33ed42f7d8b48c6" category="paragraph"><block ref="df6fe2c19a68ed7ab33ed42f7d8b48c6" category="inline-link-rx"></block></block>
   <block id="32a205a6c059cf9285d47b38c93cfe7e" category="paragraph"><block ref="32a205a6c059cf9285d47b38c93cfe7e" category="inline-link-rx"></block></block>
   <block id="8976b0d9a3096c54654d952ae6a99888" category="list-text">NVE 和 NAE 产品规格</block>
-  <block id="8561522253f450b4ca81bec36eefa91f" category="paragraph"><block ref="8561522253f450b4ca81bec36eefa91f" category="inline-link-rx"></block></block>
   <block id="d945a8f23239206005994bedcd92d467" category="list-text">NSE 产品规格</block>
-  <block id="05c7788d0b0c80f9f13684d84fcb21a9" category="paragraph"><block ref="05c7788d0b0c80f9f13684d84fcb21a9" category="inline-link-rx"></block></block>
   <block id="245ccd4cdd5cb484215315baf93697ce" category="list-text">Cisco 和 FIPS 140-2 合规性</block>
   <block id="2d817d24735f352fea82322ab2c9e621" category="paragraph"><block ref="2d817d24735f352fea82322ab2c9e621" category="inline-link-rx"></block></block>
   <block id="6770ff13f95abd8619a19519877aedf9" category="list-text">NetApp 加密安全模块</block>
@@ -6942,7 +6900,6 @@
   <block id="02442454f2d9ab154b95684f50b37c6c" category="paragraph"><block ref="02442454f2d9ab154b95684f50b37c6c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f21bd82660e877d3be51dc4f4eb48973" category="admonition">NVE 使用经过 FIPS 140-2 1 级验证的软件加密模块。</block>
   <block id="628f390542ef6d7965bd7ade25ffeeb1" category="inline-link">NVE 产品规格</block>
-  <block id="fbd0c4c3bae5c05486d9bf4590569bff" category="paragraph">有关 NVE 的详细信息，请参见<block ref="c9df36a3703b98fc90fdb292babfc5d2" category="inline-link-rx"></block>。</block>
   <block id="76e0b11f845e063a7e3010161d6ac7f4" category="paragraph">NVE 可保护云中的数据。Cloud Volumes ONTAP 和 Azure NetApp Files 能够提供 FIPS 140-2 合规的空闲数据加密。</block>
   <block id="da3c09edf291202f25e141475a128482" category="paragraph">从 ONTAP 9.7 开始，如果您拥有 NVE 许可证以及板载或外部密钥管理，则新创建的聚合和卷会默认加密。从 ONTAP 9.6 开始，您可以使用聚合级别的加密为要加密的卷的所属聚合分配密钥。默认情况下，您在聚合中创建的卷会进行加密。对卷进行加密时，您可以覆盖默认值。</block>
   <block id="a917a7f3abd61ea328e2a70edb81afcd" category="section-title">ONTAP NAE 命令行界面命令</block>
@@ -6961,7 +6918,6 @@
   <block id="107190bd33569ecfbc4b368740fe6b57" category="paragraph"><block ref="107190bd33569ecfbc4b368740fe6b57" category="inline-image-macro-rx" type="image"></block></block>
   <block id="55b781fdb356bf8061c5765bf61ceea6" category="admonition">NSE 会在每个驱动器上使用硬件加密，此加密已通过 FIPS 140-2 2 级别 2 验证。</block>
   <block id="dcc4fc2ab92191866df8bda399f65fc4" category="inline-link">NSE 产品规格</block>
-  <block id="f86613808e9d02a924b60de33ac6a511" category="paragraph">有关 NSE 的详细信息，请参见<block ref="cc0f51e873265bda490e1cd95c9afdfa" category="inline-link-rx"></block>。</block>
   <block id="b7810bbf74a08525c44fb375752d91b3" category="section-title">密钥管理</block>
   <block id="04dc80fc160d63e650cf3e8121f9fb3a" category="paragraph">FIPS 140-2 标准适用场景 边界定义的加密模块，如下图所示。</block>
   <block id="1d889e71ef6c2c00091c61121c1285b6" category="paragraph"><block ref="1d889e71ef6c2c00091c61121c1285b6" category="inline-image-macro-rx" type="image"></block></block>
@@ -8936,7 +8892,6 @@
   <block id="abf2a187f8a2f19880402e4c694785a4" category="list-text">使用多个LUN时、可以通过使用任何受支持的文件系统来实现I/O并行。</block>
   <block id="7ab9ea8d60880f13606485669ddd6049" category="list-text">将数据库文件和事务日志放在不同的卷上、以提高恢复粒度。</block>
   <block id="8219ca1a94f009ddb8447bb619fb79ce" category="list-text">请考虑使用自动调整大小、Snapshot预留、QoS等卷属性。</block>
-  <block id="7048837fdc10598b502f6bed64d8ef66" category="list-text">使用名为的基于存储阵列的 NetApp 复制技术<block ref="133ca7709616c45e80024be2d7da217e" category="inline-link-rx"></block> 而不是基于vSphere的复制。</block>
   <block id="ce93121f4d7265c3a12c10d3efa2733d" category="inline-link-macro">previous：使用&lt;block ref="c04f464a529d08398ebf630bf9c932 ed" prefix="category="inline-code"/"脚本执行GATK的输出。</block>
   <block id="1b04071fa32de2cc62ba81ce722a80de" category="inline-link-macro">使用&lt;block ref="c04f464a529d08398ebf630bf9c932ed" prefix="category="inline-code"/"脚本执行GATK的输出。</block>
   <block id="919bcacd06d9ba9c758783027661478b" category="inline-link-macro">下一步：使用&lt;block ref="c04f464a529d08398ebf630bf9c932 ed" prefix="category="inline-code"/"脚本执行GATK的输出。</block>
@@ -9750,4 +9705,48 @@
   <block id="7cb27dbb321a2dda7b1a59417ac87d24" category="sidebar">适用于 VDI 的 FlexPod</block>
   <block id="e24bc29daa40702c050f7f3b61476c6f" category="sidebar">借助 FlexPod 实现医疗保健</block>
   <block id="da1ad8cf23727f17cd3ee56b1280c387" category="paragraph">安装 Cisco Intersight Assist 后，您可以申请 NetApp 存储和虚拟化设备。返回到 "Intersight Targets* " 页面，然后添加 vCenter 和 NetApp Active IQ Unified Manager 目标。</block>
+  <block id="2e5893c243d41c5a61c4efaa83f3a294" category="paragraph"><block ref="2e5893c243d41c5a61c4efaa83f3a294" category="inline-link-rx"></block></block>
+  <block id="19829de524ac9c6ea351e3ffc56ea16e" category="paragraph">这些只是 FlexPod Express 解决方案的几项主要功能。有关ONTAP 9 4的其他特性和功能的详细信息，请参见<block ref="c633298bec990e426b7e2b06b94ab53d" category="inline-link-rx"></block>。此外，请参见NetApp<block ref="acaccc868f6222e64c0f11237becafd9" category="inline-link-rx"></block>，它已更新为包括ONTAP 9。4.</block>
+  <block id="7aded478e040680a86b887b45835ff10" category="paragraph"><block ref="7aded478e040680a86b887b45835ff10" category="inline-link-rx"></block></block>
+  <block id="9ae079c2b84f43248569fa03c43167f1" category="paragraph"><block ref="9ae079c2b84f43248569fa03c43167f1" category="inline-link-rx"></block></block>
+  <block id="b9497e961f697589c97d8a8f98848fe6" category="paragraph"><block ref="b9497e961f697589c97d8a8f98848fe6" category="inline-link-rx"></block></block>
+  <block id="e8f274cf2265901d297ffd8b266203a2" category="list-text">* FlexPod Express.*此平台是一个紧凑型融合基础架构、适用于远程办公室和边缘用例。FlexPod Express有自己的规范、这些规范在中进行了说明<block ref="e054700ae8d5d968503b308670e7157d" category="inline-link-rx"></block></block>
+  <block id="d956bf5f6c667ff127e0c3ff6feecfb6" category="cell"><block ref="d956bf5f6c667ff127e0c3ff6feecfb6" category="inline-link-rx"></block></block>
+  <block id="add67b673b393b16b252a2a470fff3ed" category="paragraph">有关ONTAP实施的详细信息，请参见<block ref="368bf61ae02bd1c150d4e236c35ced8c" category="inline-link-rx"></block>。</block>
+  <block id="cfa5d92901acec81c21a74f2a2cfa04a" category="cell"><block ref="cfa5d92901acec81c21a74f2a2cfa04a" category="inline-link-rx"></block></block>
+  <block id="7a81fad05ef4ac2757196543d961289e" category="cell"><block ref="7a81fad05ef4ac2757196543d961289e" category="inline-link-rx"></block></block>
+  <block id="60b8d1929c1be86e68be5739ba1e2623" category="cell"><block ref="60b8d1929c1be86e68be5739ba1e2623" category="inline-link-rx"></block></block>
+  <block id="87999ea405e8cbf573787e42355d009b" category="cell"><block ref="87999ea405e8cbf573787e42355d009b" category="inline-link-rx"></block></block>
+  <block id="e24871162f3d5f5273548d063adf8b97" category="paragraph">支持在 FlexPod 中使用所有当前型号的 NetApp AFF A 系列存储控制器。有关详细信息，请参见<block ref="35d9a84b4b8d2a66a391ad866cc52c10" category="inline-link-rx"></block>数据表和<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block>。有关特定 AFF 型号的详细信息，请参见下表中列出的平台专用文档。</block>
+  <block id="25a34f04ff28fd3aac76cbb4e517c3a7" category="paragraph">有关此配置的详细信息，请参见<block ref="e842a2448c6eca51f05ad52132825ff6" category="inline-link-rx"></block>。</block>
+  <block id="3e66c29e51519b6732adfe0dcff9dff9" category="list-text"><block ref="3e66c29e51519b6732adfe0dcff9dff9" category="inline-link-macro-rx"></block></block>
+  <block id="e7378f3911ae752a7bd988dc18de1f1f" category="list-text"><block ref="e7378f3911ae752a7bd988dc18de1f1f" category="inline-link-macro-rx"></block></block>
+  <block id="1ccbfb3051717b7787cff685feef6ee0" category="list-text"><block ref="1ccbfb3051717b7787cff685feef6ee0" category="inline-link-macro-rx"></block></block>
+  <block id="d335eeb839a0ef85080a9e93786ed9c5" category="list-text"><block ref="d335eeb839a0ef85080a9e93786ed9c5" category="inline-link-macro-rx"></block></block>
+  <block id="d18608754f74434b85d4bf03483652bc" category="list-text"><block ref="d18608754f74434b85d4bf03483652bc" category="inline-link-macro-rx"></block></block>
+  <block id="7e911c9fa59d1977be061678831b5cf7" category="cell"><block ref="7e911c9fa59d1977be061678831b5cf7" category="inline-link-rx"></block></block>
+  <block id="53baf558f01ca85a26eb1f164869ecfc" category="list-text">*存储效率*使用降低存储成本<block ref="7c9c4fcbdd570f33351876037a96c5f3" category="inline-link-rx"></block>。</block>
+  <block id="921810271b05ea8d6d76b8608a84dd55" category="paragraph">有关MEDITECH工作负载说明的更多详细信息，请参见<block ref="360129404e57c8df579b7f1615d3390c" category="inline-link-rx"></block>。</block>
+  <block id="2665341002bdc1d24544ba94bba4a830" category="paragraph"><block ref="2665341002bdc1d24544ba94bba4a830" category="inline-link-rx"></block></block>
+  <block id="b2fb60c2a4a1b44c8c14a60e2883c6e0" category="list-text"><block ref="b2fb60c2a4a1b44c8c14a60e2883c6e0" category="inline-link-rx"></block></block>
+  <block id="d4ef78651f9cef1dbf14bc1ffe07737f" category="list-text"><block ref="d4ef78651f9cef1dbf14bc1ffe07737f" category="inline-link-rx"></block></block>
+  <block id="70cdaed33c7671907d6873604121f641" category="list-text">*智能使用存储平台*采用ONTAP自动层和NetApp Fabric Pool技术的FlexPod可简化数据管理。FabricPool 有助于降低存储成本，而不会影响性能，效率，安全性或保护。FabricPool 对企业级应用程序是透明的，它可以降低存储 TCO ，而无需重新构建应用程序基础架构，从而充分利用云效率。FlexPod 可以从 FabricPool 的存储分层功能中受益，从而更高效地利用 ONTAP 闪存存储。有关详细信息，请参见<block ref="5990a183ff0805566d6969a955233353" category="inline-link-rx"></block>。下图简要概述了 FabricPool 及其优势。</block>
+  <block id="0b921bb1595764dd70d91a0ac86cb9fe" category="paragraph"><block ref="0b921bb1595764dd70d91a0ac86cb9fe" category="inline-link-rx"></block></block>
+  <block id="2bd59f07acc84ae5bcea7882570e52e3" category="paragraph"><block ref="2bd59f07acc84ae5bcea7882570e52e3" category="inline-link-rx"></block></block>
+  <block id="8574ec5b04753a6354428058a5209e5d" category="paragraph"><block ref="8574ec5b04753a6354428058a5209e5d" category="inline-link-rx"></block></block>
+  <block id="c1ce49ba0731ebdda7a23def6af6524c" category="paragraph">有关详细信息，请参见<block ref="3a5fb54428c5bbfb56410ad7faac9135" category="inline-link-rx"></block>。</block>
+  <block id="a803988872277d7b7735c41bd2549a35" category="paragraph">放射科医生通常使用支持图形的高端诊断查看器，这些查看器运行在物理或虚拟桌面基础架构中的高端计算和图形工作站上。如果您即将开始您的虚拟桌面基础架构之旅，请访问了解更多信息<block ref="ce4545af06c636587be8a01fe6045e1b" category="inline-link-rx"></block>。</block>
+  <block id="bb9a94a4d903c351296fd45362188434" category="paragraph">医学成像系统开始<block ref="37957c9cec904fac611da11b53751bc9" category="inline-link-rx"></block>通过预处理图像来增强人类工作流程、从而提高效率。典型的企业级医疗成像系统可利用行业领先的 NetApp 存储效率功能。企业级医疗成像系统通常使用 RMAN 执行备份，恢复和还原活动。为了提高性能并缩短创建备份所需的时间，可以使用 Snapshot 技术进行备份操作，并使用 SnapMirror 技术进行复制。</block>
+  <block id="1d67bd1875e6da2263eb607498fabcd6" category="list-text">使用名为的基于NetApp存储阵列的复制技术、<block ref="39a14c05fc1bd143daa91287826ba7cf" category="inline-link-rx"></block>而不是基于vSphere的复制。</block>
+  <block id="e32a847a51de0f2bf0c5155055a77faf" category="list-text">较新的模式具有指数级存储需求；例如， CT 和 MRI 对于每个模式都需要几百 MB 的容量，但数字病理学图像（包括整个幻灯片成像）的大小可能只有几 GB 。FlexPod采用设计<block ref="9b0c7a9abb2c8ca94b7d93529ec55080" category="inline-link-rx"></block>。</block>
+  <block id="42dd63b5a902814b8e6ec3d844a7c9b3" category="list-text">* FabricPool。*NetApp ONTAP FabricPool有助于降低存储成本、而不会影响性能、效率、安全性或保护。FabricPool 对企业级应用程序是透明的，它可以降低存储 TCO ，而无需重新构建应用程序基础架构，从而充分利用云效率。FlexPod 可以从 FabricPool 的存储分层功能中受益，从而更高效地利用 ONTAP 闪存存储。有关完整信息，请参见<block ref="5990a183ff0805566d6969a955233353" category="inline-link-rx"></block>。</block>
+  <block id="040496fa58d305c00cd5ea9c8fdae691" category="list-text">* FlexPod安全性。*安全性是FlexPod的基础。在过去几年中，勒索软件已成为一种日益严重的威胁。勒索软件是一种基于密码病毒的恶意软件，它使用加密技术构建恶意软件。此恶意软件可以使用对称密钥加密和非对称密钥加密来锁定受影响的数据，并要求勒索以提供密钥来对数据进行解密。要了解FlexPod如何帮助缓解勒索软件等威胁，请参见<block ref="04eca242e92d03cecc069c853be69067" category="inline-link-rx"></block>。FlexPod基础架构组件也<block ref="d10efeffbc514a1046259d3207394d5d" category="inline-link-rx"></block>符合联邦信息处理标准。</block>
+  <block id="4611367f28a888dc0b35cd3d252d8abe" category="paragraph"><block ref="4611367f28a888dc0b35cd3d252d8abe" category="inline-link-rx"></block></block>
+  <block id="08d22650257c934e7c9478a523f45bbb" category="paragraph"><block ref="08d22650257c934e7c9478a523f45bbb" category="inline-link-rx"></block></block>
+  <block id="677fb357d39403a07e558202ee9cd079" category="paragraph"><block ref="677fb357d39403a07e558202ee9cd079" category="inline-link-rx"></block></block>
+  <block id="060cbc42f3fca1d66a4fea0871db17e6" category="list-text">* FlexPod 安全性 * 。安全性是 FlexPod 系统的基础。在过去几年中，勒索软件已成为一种威胁。勒索软件是一种基于密码学的恶意软件，它使用加密技术构建恶意软件。此恶意软件可以使用对称密钥加密和非对称密钥加密来锁定受影响的数据，并要求勒索以提供密钥来对数据进行解密。要了解FlexPod解决方案如何帮助缓解勒索软件等威胁，请参见<block ref="2b03b3f5a5f5c502e949b7e0db5dfab7" category="inline-link-rx"></block>。FlexPod基础架构组件也是<block ref="5515eeec71d17b77b91938413b579e31" category="inline-link-rx"></block>。</block>
+  <block id="33933b05ef1e810aff7a397d37197c20" category="paragraph">有关NVE的详细信息，请参见<block ref="558ea2232cc1dd1d53476ab01351e561" category="inline-link-rx"></block>。</block>
+  <block id="3d8b3b3da1de7cca1d0a53456dfe0613" category="paragraph">有关NSE的详细信息，请参见<block ref="29946e6204302744060b1ba7a13ef03f" category="inline-link-rx"></block>。</block>
+  <block id="63a419e94ce5e89636cfdf48da2b7298" category="paragraph"><block ref="63a419e94ce5e89636cfdf48da2b7298" category="inline-link-rx"></block></block>
+  <block id="bc90617add028be9c25b19d974d1e04b" category="paragraph"><block ref="bc90617add028be9c25b19d974d1e04b" category="inline-link-rx"></block></block>
 </blocks>
