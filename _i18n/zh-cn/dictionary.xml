@@ -7633,8 +7633,6 @@
   <block id="b596eced9c4bc9f16313b3284fb13e58" category="list-text">直观显示应用程序保护状态</block>
   <block id="6df472bda93f54acbbf206fa2d41e28f" category="list-text">提供图形用户界面和完整的REST API列表、用于利用现有内部工具实施所有保护工作流。</block>
   <block id="b59f8a067fecf2cfbbc4d3b401d296e0" category="paragraph">Astra Control为容器化应用程序提供了一个单一的管理平台可视化视图、其中包括对在Kubernetes集群上创建的相关资源的深入了解。您可以使用一个门户查看所有云或所有数据中心中的所有集群、所有应用程序。您可以在所有环境(内部或公有 云)中使用Astra Control API来实施数据管理工作流。</block>
-  <block id="ee47d1958f4c072c5167bf6b0f0a3f51" category="paragraph">下图显示了Astra Control功能。</block>
-  <block id="1a6732bb27af95bdf03fb9cb071efccb" category="paragraph"><block ref="1a6732bb27af95bdf03fb9cb071efccb" category="inline-image-macro-rx" type="image"></block></block>
   <block id="71bf9ca6a7b88a4ef85430ead5e3b166" category="section-title">Astra Control消费模式</block>
   <block id="f243566699578a9ff810689c2063fea0" category="paragraph">Astra Control有两种消费模式：</block>
   <block id="c21e5f421922cf6741556e0df776fc32" category="list-text">* Astra Control Service。* NetApp托管的一项完全托管服务、可在Google Kubernetes Engine (GKEE) Azure Kubernetes Service (AKS)中为Kubernetes集群提供应用程序感知型数据管理。</block>
@@ -7646,7 +7644,6 @@
   <block id="e7862e4a1b1c0e48518ef7f2dbbb569b" category="inline-link">容器存储接口(CSI)</block>
   <block id="e9e07505524402c434cb37baf0452959" category="paragraph">Astra Trident是一款完全受支持的开源存储编排程序、适用于容器和Kubernetes分发版。它从一开始就经过精心设计、可帮助您使用行业标准界面(如)满足容器化应用程序的持久性需求<block ref="11b176de1fd0554cff9c8a0e426a44c0" category="inline-link-rx"></block>。借助Astra Trident、微服务和容器化应用程序可以利用NetApp存储系统产品组合提供的企业级存储服务。</block>
   <block id="e9fe0fa2a72714d675e5bd084dea14bc" category="inline-link">Astra Trident文档。</block>
-  <block id="d0cc985f877a5098e0a069b8c9928ada" category="paragraph">Astra Trident作为Pod部署在Kubernetes集群上、并为您的Kubernetes工作负载提供动态存储编排服务。它可以帮助您的容器化应用程序快速轻松地使用NetApp广泛的产品组合中的永久性存储、其中包括NetApp ONTAP (NetApp AFF 、NetApp FAS 、NetApp ONTAP Select 、云、 和适用于NetApp ONTAP 的Amazon FSx)、NetApp Element 软件(NetApp SolidFire)以及Azure NetApp Files 服务、Google Cloud上的云卷服务和AWS上的云卷服务。在FlexPod 环境中、Astra Trident用于为容器动态配置和管理永久性卷、这些容器由NetApp FlexVol 卷和ONTAP 存储平台(例如NetApp AFF 和FAS 系统以及Cloud Volumes ONTAP)上托管的LUN提供支持。Trident在实施Astra Control提供的应用程序保护方案方面也发挥着关键作用。有关Astra Trident的详细信息、请参见<block ref="a4e84d4448e67c302cfd652fac18bef7" category="inline-link-rx"></block></block>
   <block id="6c5e678cf147ef415c2e584ba561bce7" category="section-title">存储后端</block>
   <block id="0758e335e69d93b347e2ccbb437ef2e3" category="paragraph">要使用Astra Trident、您需要受支持的存储后端。Trident后端定义了Trident与存储系统之间的关系。它会告诉Trident如何与该存储系统通信、以及Trident如何从该存储系统配置卷。Trident将自动从后端提供符合存储类定义的要求的存储池。</block>
   <block id="264d52a2ee63227a064803bbca685d76" category="list-text">ONTAP AFF 和 FAS 存储后端。作为存储软件和硬件平台、ONTAP 可提供核心存储服务、支持多个存储访问协议以及存储管理功能、例如NetApp Snapshot副本和镜像。</block>
@@ -9753,4 +9750,5 @@
   <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="43240d20188b8ece0dea0d19f25bca8e" category="paragraph">Astra Trident以 pod 的形式部署在 Kubernetes 集群上，为您的 Kubernetes 工作负载提供动态存储编排服务。它使您的容器化应用程序能够快速轻松地使用 NetApp 广泛的产品组合中的持久存储，其中包括NetApp ONTAP （NetApp AFF、 NetApp FAS、 NetApp ONTAP Select、Cloud 和Amazon FSx for NetApp ONTAP）、 NetApp Element软件（NetApp SolidFire）以及Azure NetApp Files服务。在FlexPod环境中， Astra Trident用于动态配置和管理由托管在ONTAP存储平台（例如NetApp AFF和FAS系统以及Cloud Volumes ONTAP）上的NetApp FlexVol卷和 LUN 支持的容器的持久卷。Trident在Astra Control 提供的应用保护方案的实施中也发挥着关键作用。有关Astra Trident的更多信息，请参阅<block ref="a4e84d4448e67c302cfd652fac18bef7" category="inline-link-rx"></block></block>
 </blocks>
