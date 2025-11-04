@@ -72,7 +72,7 @@ singlecvoaws::> snapmirror update -destination-path svm_singlecvoaws:hc_iscsi_vo
 Operation is queued: snapmirror update of destination “svm_singlecvoaws:hc_iscsi_vol_copy”.
 ....
 +
-也可以通过BlueXP图形用户界面的*复制*选项卡执行SnapMirror更新。
+也可以通过NetApp ConsoleGUI 的“复制”选项卡执行SnapMirror更新。
 
 . 根据先前创建的应用程序快照创建FlexClone实例。
 +
@@ -87,7 +87,7 @@ singlecvoaws::> volume clone create -flexclone kamini_clone -type RW -parent-vse
 . 激活FlexClone卷以在云中启动EHR实例。
 +
 ....
-singlecvoaws::> lun mapping create –vserver svm_singlecvoaws –path /vol/kamini_clone/iscsi_lun1 -igroup ehr-igroup –lun-id 0
+singlecvoaws::> lun mapping create -vserver svm_singlecvoaws -path /vol/kamini_clone/iscsi_lun1 -igroup ehr-igroup -lun-id 0
 
 singlecvoaws::> lun mapping show
 Vserver     Path                                  Igroup    LUN ID  Protocol
@@ -162,17 +162,11 @@ image:fhc-cvoe-image21.png["此屏幕截图显示了Storage VM下拉列表中的
 确保已在FlexPod 实例中的内部ONTAP 和AWS中的Cloud Volumes ONTAP 之间设置SnapMirror复制、以便您可以频繁创建应用程序快照。
 
 +
-停止SVM后、将显示 `hc_iscsi_vol` 卷在BlueXP中不可见。
-
-+
-image:fhc-cvoe-image22.png["此时、此卷将显示在卷摘要屏幕中。"]
+SVM停止运行后， `hc_iscsi_vol`控制台中不显示音量。
 
 . 在CVO中激活灾难恢复。
 +
 .. 中断本地ONTAP 和Cloud Volumes ONTAP 之间的SnapMirror复制关系、并提升CVO目标卷 (`hc_iscsi_vol_copy`)到生产环境。
-+
-image:fhc-cvoe-image23.png["此时将显示中断关系选项屏幕。"]
-
 +
 断开SnapMirror关系后、目标卷类型将从数据保护(DP)更改为读/写(RW)。
 
@@ -186,7 +180,7 @@ svm_singlecvoaws hc_iscsi_vol_copy RW
 .. 激活Cloud Volumes ONTAP 中的目标卷以在云中的EC2实例上启动EHR实例。
 +
 ....
-singlecvoaws::> lun mapping create –vserver svm_singlecvoaws –path /vol/hc_iscsi_vol_copy/iscsi_lun1 -igroup ehr-igroup –lun-id 0
+singlecvoaws::> lun mapping create -vserver svm_singlecvoaws -path /vol/hc_iscsi_vol_copy/iscsi_lun1 -igroup ehr-igroup -lun-id 0
 
 singlecvoaws::> lun mapping show
 Vserver     Path                                Igroup   LUN ID  Protocol
@@ -237,16 +231,10 @@ Filesystem                 1K-blocks  Used      Available  Use%  Mounted on
 
 .. 反转SnapMirror关系。此操作将反转源卷和目标卷的角色。
 +
-image:fhc-cvoe-image24.png["此屏幕截图显示了反向关系选项框。"]
-
-+
 执行此操作时、原始源卷中的内容将被目标卷的内容覆盖。当您要重新激活脱机的源卷时，这非常有用。
 
 +
 现在是CVO卷 (`hc_iscsi_vol_copy`)将成为源卷、内部卷也将成为源卷 (`hc_iscsi_vol`)将成为目标卷。
-
-+
-image:fhc-cvoe-image25.png["此屏幕截图显示了在BlueXP中创建的卷复制关系。"]
 
 +
 在上次数据复制和源卷禁用之间写入到原始源卷的任何数据都不会保留。
@@ -283,9 +271,6 @@ image:fhc-cvoe-image26.png["此屏幕截图显示了如何使用Storage VM页面
 
 . 中断Cloud Volumes ONTAP 和内部ONTAP 之间的SnapMirror复制关系、并提升内部卷 (`hc_iscsi_vol`)恢复生产。
 +
-image:fhc-cvoe-image27.png["此屏幕截图显示了如何中断关系。"]
-
-+
 断开SnapMirror关系后、内部卷类型将从数据保护(DP)更改为读/写(RW)。
 
 +
@@ -296,9 +281,6 @@ vserver        volume       type
 Healthcare_SVM hc_iscsi_vol RW
 ....
 . 反转SnapMirror关系。现在、是内部部署的ONTAP 卷 (`hc_iscsi_vol`)将成为源卷和之前的源卷、并成为Cloud Volumes ONTAP 卷 (`hc_iscsi_vol_copy`)将成为目标卷。
-+
-image:fhc-cvoe-image28.png["此屏幕截图显示了如何反转关系。"]
-
 +
 通过执行以下步骤、我们已成功还原原始配置。
 

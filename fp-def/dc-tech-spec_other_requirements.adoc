@@ -23,6 +23,12 @@ FlexPod 架构还具有以下与互操作性和支持相关的其他要求：
 ** 对 NetApp 设备的 SupportEdge Advisor 或 SupportEdge Premium 支持
 
 
+* 销售订单中需要包含的相关销售属性：
++
+** FlexPod权益
+** FlexPod解决方案支持权限
+
+
 
 
 有关详细信息，请参见 NetApp http://mysupport.netapp.com/matrix["IMT"^]。

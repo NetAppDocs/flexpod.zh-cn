@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: hybrid-cloud/fhc-cvoe-installation-and-configuration.html 
-keywords: cloud volumes ontap, flexpod, ontap bluexp, installation, configuration 
-summary: 本节介绍如何安装和配置Cloud Volumes ONTAP 、FlexPod 、ONTAP 存储和BlueXP。 
+keywords: cloud volumes ontap, flexpod, ontap netapp console, installation, configuration 
+summary: 本节介绍如何安装和配置Cloud Volumes ONTAP、 FlexPod、 ONTAP存储和NetApp Console。 
 ---
 = 安装和配置
 :hardbreaks:
@@ -29,13 +29,13 @@ link:fhc-cvoe-solution-components.html["先前版本：解决方案 组件。"]
 +
 要启用VPC与AWS S3服务之间的连接、需要使用VPC端点网关。此操作用于在CVO上启用备份、CVO是网关类型的端点。
 
-. 访问NetApp BlueXP。
+. 访问NetApp Console。
 +
-要访问NetApp BlueXP和其他云服务、您需要注册 https://cloudmanager.netapp.com/["NetApp BlueXP"^]。要在BlueXP帐户中设置工作空间和用户、请单击 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-setting-up-netapp-accounts.html["此处"^]。您需要一个有权直接从BlueXP在云提供商中部署Connector的帐户。您可以从下载BlueXP策略 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions.html["此处"^]。
+要访问控制台和其他云服务，您需要注册。 https://cloudmanager.netapp.com/["NetApp Console"^] 。有关在控制台帐户中设置工作区和用户的信息，请参阅 https://docs.netapp.com/us-en/console-setup-admin/index.html["NetApp Console设置和管理"^]。您需要一个具有权限的帐户，才能直接从控制台在您的云提供商处部署控制台代理。要获取所需的权限，请参阅 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions.html["NetApp Console的权限摘要"^]。
 
-. 部署Connector。
+. 部署控制台代理。
 +
-在添加Cloud Volume ONTAP 工作环境之前、您必须先部署Connector。如果您尝试在没有连接器的情况下创建首个Cloud Volumes ONTAP 工作环境、BlueXP将提示您。要从BlueXP在AWS中部署Connector、请参见此内容 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html["链接。"^]。
+在添加 Cloud Volume ONTAP系统之前，必须先部署控制台代理。如果您尝试在没有安装控制台代理的情况下创建第一个Cloud Volumes ONTAP系统，控制台会提示您。要从控制台在 AWS 中部署控制台代理，请参阅以下内容： https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html["AWS 中的控制台代理安装选项"^] 。
 
 . 在AWS中启动Cloud Volumes ONTAP。
 +
@@ -45,11 +45,9 @@ link:fhc-cvoe-solution-components.html["先前版本：解决方案 组件。"]
 有关这些步骤的详细信息、请参见 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-aws.html["AWS中的Cloud Volumes ONTAP 快速入门指南"^]。
 
 +
-在此解决方案 中、我们在AWS中部署了单节点Cloud Volumes ONTAP 系统。下图展示了具有单节点CVO实例的NetApp BlueXP信息板。
+在这个解决方案中，我们在 AWS 上部署了一个单节点Cloud Volumes ONTAP系统。
 
 
-
-image:fhc-cvoe-image4.jpeg["此屏幕截图显示了NetApp BlueXP的\"画布\"屏幕、其中显示了\"我的工作环境\"。"]
 
 
 
@@ -78,7 +76,7 @@ FlexPod 既可以部署在UCS托管模式下、也可以部署在Cisco Intersigh
 . 在运行iSCSI服务的情况下配置SVM。
 +
 ....
-1. vserver create –vserver Healthcare_SVM –rootvolume Healthcare_SVM_root –aggregate aggr1_A400_G0312_01 –rootvolume-security-style unix
+1. vserver create -vserver Healthcare_SVM -rootvolume Healthcare_SVM_root -aggregate aggr1_A400_G0312_01 -rootvolume-security-style unix
 2. vserver add-protocols -vserver Healthcare_SVM -protocols iscsi
 3. vserver iscsi create -vserver Healthcare_SVM
 
@@ -102,10 +100,10 @@ FlexPod 既可以部署在UCS托管模式下、也可以部署在Cisco Intersigh
 . 添加用于iSCSI访问的接口。
 +
 ....
-1. network interface create -vserver Healthcare_SVM -lif iscsi-lif-01a -service-policy default-data-iscsi -home-node <st-node01> -home-port a0a-<infra-iscsi-a-vlan-id> -address <st-node01-infra-iscsi-a–ip> -netmask <infra-iscsi-a-mask> -status-admin up
-2. network interface create -vserver Healthcare_SVM -lif iscsi-lif-01b -service-policy default-data-iscsi -home-node <st-node01> -home-port a0a-<infra-iscsi-b-vlan-id> -address <st-node01-infra-iscsi-b–ip> -netmask <infra-iscsi-b-mask> –status-admin up
-3. network interface create -vserver Healthcare_SVM -lif iscsi-lif-02a -service-policy default-data-iscsi -home-node <st-node02> -home-port a0a-<infra-iscsi-a-vlan-id> -address <st-node02-infra-iscsi-a–ip> -netmask <infra-iscsi-a-mask> –status-admin up
-4. network interface create -vserver Healthcare_SVM -lif iscsi-lif-02b -service-policy default-data-iscsi -home-node <st-node02> -home-port a0a-<infra-iscsi-b-vlan-id> -address <st-node02-infra-iscsi-b–ip> -netmask <infra-iscsi-b-mask> –status-admin up
+1. network interface create -vserver Healthcare_SVM -lif iscsi-lif-01a -service-policy default-data-iscsi -home-node <st-node01> -home-port a0a-<infra-iscsi-a-vlan-id> -address <st-node01-infra-iscsi-a-ip> -netmask <infra-iscsi-a-mask> -status-admin up
+2. network interface create -vserver Healthcare_SVM -lif iscsi-lif-01b -service-policy default-data-iscsi -home-node <st-node01> -home-port a0a-<infra-iscsi-b-vlan-id> -address <st-node01-infra-iscsi-b-ip> -netmask <infra-iscsi-b-mask> -status-admin up
+3. network interface create -vserver Healthcare_SVM -lif iscsi-lif-02a -service-policy default-data-iscsi -home-node <st-node02> -home-port a0a-<infra-iscsi-a-vlan-id> -address <st-node02-infra-iscsi-a-ip> -netmask <infra-iscsi-a-mask> -status-admin up
+4. network interface create -vserver Healthcare_SVM -lif iscsi-lif-02b -service-policy default-data-iscsi -home-node <st-node02> -home-port a0a-<infra-iscsi-b-vlan-id> -address <st-node02-infra-iscsi-b-ip> -netmask <infra-iscsi-b-mask> -status-admin up
 ....
 +
 在此解决方案 中、我们创建了四个iSCSI逻辑接口(LIF)、每个节点上两个。
@@ -124,7 +122,7 @@ FlexPod 既可以部署在UCS托管模式下、也可以部署在Cisco Intersigh
 . 创建igroup。
 +
 ....
-1. igroup create –vserver Healthcare_SVM –igroup ehr –protocol iscsi –ostype linux –initiator iqn.1994-05.com.redhat:8e91e9769336
+1. igroup create -vserver Healthcare_SVM -igroup ehr -protocol iscsi -ostype linux -initiator iqn.1994-05.com.redhat:8e91e9769336
 ....
 +
 igroup用于允许服务器访问LUN。对于Linux主机、可以在文件中找到服务器IQN `/etc/iscsi/initiatorname.iscsi`。
@@ -132,32 +130,23 @@ igroup用于允许服务器访问LUN。对于Linux主机、可以在文件中找
 . 将 LUN 映射到 igroup 。
 +
 ....
-1. lun mapping create –vserver Healthcare_SVM –path /vol/hc_iscsi_vol/iscsi_lun1 –igroup ehr –lun-id 0
+1. lun mapping create -vserver Healthcare_SVM -path /vol/hc_iscsi_vol/iscsi_lun1 -igroup ehr -lun-id 0
 ....
 
 
 
 
-== 将内部FlexPod 存储添加到BlueXP
+== 将本地FlexPod存储添加到NetApp Console
 
-要使用NetApp BlueXP将FlexPod 存储添加到工作环境、请完成以下步骤。
+使用控制台完成以下步骤，将FlexPod存储添加到系统中。
 
-. 从导航菜单中、选择*存储*>*画布*。
-. 在"画布"页面上、单击*添加工作环境*并选择*内部部署*。
+. 从导航菜单中，选择“存储”>“系统”。
+. 在“系统”页面上，单击“添加系统”，然后选择“本地部署”。
 . 选择*内部部署ONTAP *。单击 * 下一步 * 。
-+
-image:fhc-cvoe-image5.jpeg["此屏幕截图显示了选择了内部部署ONTAP 的BlueXP添加工作组页面。"]
-
 . 在 "ONTAP 集群详细信息 " 页面上，输入管理员用户帐户的集群管理 IP 地址和密码。然后单击*添加*。
-+
-image:fhc-cvoe-image6.png["此屏幕截图显示了\"BlueXP发现ONTAP 集群\"页面以及ONTAP 集群详细信息条目。"]
-
 . 在详细信息和凭据页面上、输入工作环境的名称和问题描述 、然后单击*执行*。
 +
-BlueXP会发现ONTAP 集群并将其添加为Canvas上的工作环境。
-
-+
-image:fhc-cvoe-image7.jpeg["此屏幕截图显示了BlueXP的\"画布\"页面、其中右侧显示了最近添加的工作环境。"]
+控制台发现ONTAP集群，并将其作为系统添加到“系统”页面。
 
 
 

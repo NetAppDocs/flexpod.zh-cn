@@ -48,8 +48,6 @@ entries:
     url: "/fp-def/dc-tech-spec_flexpod_platforms.html"
   - title: FlexPod 规则
     url: "/fp-def/dc-tech-spec_flexpod_rules.html"
-  - title: 支持的 FlexPod 配置与经验证的 配置
-    url: "/fp-def/dc-tech-spec_supported_versus_validated_flexpod_configurations.html"
   - title: NetApp ONTAP
     url: "/fp-def/dc-tech-spec_netapp_ontap.html"
   - title: Cisco Nexus 切换操作模式
