@@ -18,7 +18,7 @@ FlexPod 配置具有以下连接要求：
 
 * 所有组件都需要一个单独的 100 Mbps 以太网 /1 Gb 以太网带外管理网络。
 * NetApp 建议您在整个环境中启用巨型帧支持，但这并不是必需的。
-* 建议仅将 Cisco UCS 互联阵列设备端口用于 iSCSI 和 NAS 连接。
+* 仅建议将独立的 Cisco UCS Fabric Interconnect 设备端口用于 iSCSI 连接。当 NAS 连接与设备端口一起使用时，某些故障情况需要额外的 Nexus / 兼容交换机。
 * 不能在核心 FlexPod 组件之间直列放置任何其他设备。
 
 

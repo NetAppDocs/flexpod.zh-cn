@@ -5,7 +5,6 @@
   <block id="9fa25f8311910b1006f80d391d0a3536" category="paragraph">FlexPod 配置具有以下连接要求：</block>
   <block id="e795892d600814d6840b0ee7736d41f5" category="list-text">所有组件都需要一个单独的 100 Mbps 以太网 /1 Gb 以太网带外管理网络。</block>
   <block id="5b779adbc97d83ba730345c0da406e99" category="list-text">NetApp 建议您在整个环境中启用巨型帧支持，但这并不是必需的。</block>
-  <block id="9751fb7a1c932f1a507e6bc465e97861" category="list-text">建议仅将 Cisco UCS 互联阵列设备端口用于 iSCSI 和 NAS 连接。</block>
   <block id="402b72870e5c312873b1fff0d32a5515" category="list-text">不能在核心 FlexPod 组件之间直列放置任何其他设备。</block>
   <block id="36f60790070b535bbd9bc08abb34d9ac" category="paragraph">上行链路连接：</block>
   <block id="489d802b7e6f447e30c1735cd6577bac" category="list-text">NetApp 存储控制器上的端口必须连接到 Cisco Nexus 5000 ， 7000 或 9000 系列交换机，才能支持虚拟端口通道（ Virtual Port Channel ， vPC ）。</block>
@@ -658,7 +657,6 @@
   <block id="ab2679ebd7bb85b68b87dac6f34ef516" category="section-title">端到端 FC-NVMe</block>
   <block id="2ab8f358a48c3adedd1b97e6666780f8" category="paragraph">端到端 FC-NVMe 可无缝扩展客户的现有 SAN 基础架构以实现实时应用程序，同时提高 IOPS 和吞吐量并降低延迟。</block>
   <block id="8dd9321868b043ece197778143e64bbf" category="paragraph">可以使用现有的 32G FC SAN 传输同时传输 NVMe 和 SCSI 工作负载。</block>
-  <block id="fd0ff70a9cca8bfe56248a07829be7a8" category="paragraph">下图显示了采用 Cisco MDS 的适用于 FC 的 FlexPod 数据中心。</block>
   <block id="a152d851b543a6ecd1fe98d32802053d" category="inline-link">推出适用于 FlexPod 的端到端 NVMe 白皮书。</block>
   <block id="866ad53e2454a700c7d99a0f7dec80e8" category="paragraph">有关 FlexPod 配置和性能优势的更多详细信息，请参见<block ref="04abdacba4c78c835f0c4c4ee5dcd30c" category="inline-link-rx"></block></block>
   <block id="37baea605e04392e4eb7f7acb8348221" category="inline-link">TR-4684 ：《使用 NVMe 实施和配置现代 SAN 》</block>
@@ -9710,4 +9708,6 @@
   <block id="1ae823e8252cefe82659e80378adf180" category="paragraph">SVM停止运行后，<block ref="d0f08a44974997af7b6852c24d0e3397" prefix=" " category="inline-code"></block>控制台中不显示音量。</block>
   <block id="0d6e5faf80b288a1d3277954d0b55ae8" category="inline-link"><block ref="0d6e5faf80b288a1d3277954d0b55ae8" category="inline-link-rx"></block></block>
   <block id="17a7b956a1673e2b7eed84e47e417df1" category="paragraph"><block ref="17a7b956a1673e2b7eed84e47e417df1" category="inline-link-rx"></block></block>
+  <block id="f1c50a66fa0c1697f61a708311b1b73c" category="list-text">仅建议将独立的 Cisco UCS Fabric Interconnect 设备端口用于 iSCSI 连接。当 NAS 连接与设备端口一起使用时，某些故障情况需要额外的 Nexus / 兼容交换机。</block>
+  <block id="fefa97ce70467bf33d6e5e77d6b7e1ce" category="paragraph">下图说明了带 Cisco MDS 的 FC FlexPod Datacenter。</block>
 </blocks>
