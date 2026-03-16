@@ -32,9 +32,13 @@ FabricPool 需要 ONTAP 9.2 或更高版本。其他 FabricPool 要求取决于�
 
 
 
-NOTE: 请参阅 https://hwu.netapp.com/DetailViews/Home.aspx[] [NetApp Hardware Universe^]，以获取有关 FabricPool 支持平台的最新信息。
+NOTE: 有关支持 FabricPool 的平台的最新信息，请参见 https://hwu.netapp.com/DetailViews/Home.aspx["NetApp Hardware Universe"^]。
 
-* NetApp ONTAP Select [NOTE] NetApp 建议使用全 SSD FabricPool 本地层。
+* NetApp ONTAP Select
++
+
+NOTE: NetApp 建议使用全 SSD FabricPool 本地层。
+
 * 云层
 +
 ** 阿里云对象存储服务（标准，不常访问）
