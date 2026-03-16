@@ -14,7 +14,7 @@ summary: FabricPool 要求使用 ONTAP 9.2 或更高版本，并在本节列出�
 
 
 [role="lead"]
-FabricPool 要求使用 ONTAP 9.2 或更高版本，并在本节列出的任何平台上使用 SSD 聚合。其他 FabricPool 要求取决于所附加的云层。对于容量固定且相对较小的入门级 AFF 平台，例如 NetApp AFF C190 ， FabricPool 可以非常高效地将非活动数据移至云层。
+FabricPool 需要 ONTAP 9.2 或更高版本。其他 FabricPool 要求取决于所使用的 ONTAP 版本和要连接的云层。在早于 ONTAP 9.8 的版本中，FabricPool 仅在 SSD 本地层上受支持。在 ONTAP 9.8 中添加了对 HDD 聚合的支持。对于具有固定、相对较小容量的入门级 AFF 平台（如 NetApp AFF C190），FabricPool 对于将非活动数据移动到云层非常有效。
 
 
 
@@ -23,32 +23,40 @@ FabricPool 要求使用 ONTAP 9.2 或更高版本，并在本节列出的任何�
 以下平台支持 FabricPool ：
 
 * NetApp AFF
+* 所有能够运行 ONTAP 9.2 的平台都支持 NetApp FAS FabricPool，但以下平台除外：
 +
-** A800
-** A700S ， A700
-** A320 ， A300
-** A220 ， A200
-** C190
-** AFF8080 ， AFF8060 和 AFF8040
+** FAS8020
+** FAS2554、FAS2552、FAS2520
 
 
-* NetApp FAS
-+
-** FAS9000
-** FAS8200
-** FAS8080 ， FAS8060 和 FAS8040
-** FAS2750 ， FAS2720
-** FAS2650 ， FAS2620
 
 
+
+NOTE: 请参阅 https://hwu.netapp.com/DetailViews/Home.aspx[] [NetApp Hardware Universe^]，以获取有关 FabricPool 支持平台的最新信息。
+
+* NetApp ONTAP Select [NOTE] NetApp 建议使用全 SSD FabricPool 本地层。
 * 云层
 +
 ** 阿里云对象存储服务（标准，不常访问）
-** Amazon S3 （ Standard ， Standard-IA ， One Zone-IA ，智能分层）
+** Amazon S3 (Standard、Standard-IA、One Zone-IA、Intelligent-Tiering、Glacier Instant Retrieval)
 ** Amazon Commercial Cloud Services （ C2S ）
-** Google Cloud Storage （多区域，区域，近线，冷线）
+** Google Cloud Storage（多区域、区域、近线、冷线、存档）
 ** IBM Cloud Object Storage （标准，存储，冷存储， Flex ）
 ** Microsoft Azure Blob Storage （热存储和冷存储）
+** NetApp StorageGRID 10.3 及更高版本
++
+
+NOTE: 不支持 Glacier Flexible Retrieval 和 Glacier Deep Archive。
+
+
+
+* 数据分层
++
+** Amazon FSx for NetApp ONTAP
+** Azure NetApp Files
+** NetApp Cloud Volumes for Google Cloud
+** 适用于 AWS 的 NetApp Cloud Volumes ONTAP
+** 适用于 Azure 的 NetApp Cloud Volumes ONTAP
 
 
 
