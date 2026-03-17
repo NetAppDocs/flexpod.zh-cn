@@ -13,9 +13,9 @@ summary: NetApp为包括医疗保健在内的企业级应用程序提供了一�
 :imagesdir: ./../media/
 
 
-与以下合作伙伴：image:cisco logo.png["Cisco标识"]
-
 NetApp公司Kamini Singh
+
+与以下合作伙伴：image:cisco logo.png["Cisco标识"]
 
 [role="lead"]
 实现数字化转型的关键在于利用数据完成更多工作。医院需要生成大量数据、才能有效地运营组织并为患者提供服务。在治疗患者以及管理员工计划和医疗资源时、系统会收集和处理相关信息。
