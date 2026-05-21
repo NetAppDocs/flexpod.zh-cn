@@ -149,46 +149,15 @@
   <block id="db9522af2119f167ded30369ddb56248" category="doc">Cisco 组件</block>
   <block id="ae19f05a830d151c2615c3f564dbf6e4" category="paragraph">Cisco 为 FlexPod 快速设计和架构做出了重大贡献；它为解决方案的计算和网络层做出了贡献。本节介绍可用于 FlexPod Express 的 Cisco UCS 和 Cisco Nexus 组件。</block>
   <block id="6040e3d7bd65cad2d7a7ff96eb5d75a0" category="section-title">Cisco UCS B 系列刀片式服务器选项</block>
-  <block id="161416633732939174f0084bee4e12dd" category="paragraph">Cisco UCS Mini 平台目前支持的 Cisco UCS B 系列刀片式服务器为 B200 M5 和 B420 M4 。下表列出了 Cisco UCS Mini 平台支持的其他刀片式服务器。</block>
-  <block id="f38b8b587e9f14b9e73f43bca53aaca6" category="cell">Cisco UCS B 系列服务器</block>
-  <block id="3f39eebc8fd17c2feb641e92c34d12c0" category="cell">UCSB-B200-M5</block>
-  <block id="0c62844a851844dee772ec980d29820f" category="cell"><block ref="0c62844a851844dee772ec980d29820f" category="inline-link-rx"></block></block>
-  <block id="9c08b0397caf8f25e294bcbc2a0e51e0" category="cell">UCSB-B200-M4</block>
-  <block id="ac1175516123e986fbebc9c380c91cb2" category="cell"><block ref="ac1175516123e986fbebc9c380c91cb2" category="inline-link-rx"></block></block>
-  <block id="1bb38dda39bfc4b450ad1fa6b1f2f10f" category="cell">UCSB-B420-M4</block>
-  <block id="5d83ae1d88bf36bed0b1d2449b04f153" category="cell"><block ref="5d83ae1d88bf36bed0b1d2449b04f153" category="inline-link-rx"></block></block>
   <block id="0adca13cab777a69d4b054794aadc650" category="section-title">Cisco UCS C 系列机架式服务器选项</block>
-  <block id="5cc6fea3917960a74b91b7c9e2facb0e" category="paragraph">Cisco UCS C 系列刀片式服务器提供单机架和双机架单元（ RU ）两种型号，并提供各种 CPU ，内存和 I/O 选项。下表中列出的部件号适用于基础服务器，不包括 CPU ，内存，磁盘驱动器， PCIe 卡或 Cisco FEX 。FlexPod 提供并支持多个配置选项。</block>
   <block id="a06b1914f736d12f90cd77c9af669070" category="cell">Cisco UCS C 系列机架式服务器</block>
-  <block id="efb31487552780cc76e9a29d20184693" category="cell">UCSC-C220-M4S</block>
   <block id="015f3e0e1285a3b647bb9c22602c6d3d" category="cell"><block ref="015f3e0e1285a3b647bb9c22602c6d3d" category="inline-link-rx"></block></block>
-  <block id="5f3ecc5f801e8e8bb5df99c057b684fa" category="cell">UCSC-C240-M4S</block>
-  <block id="1ba4695c60f2d279f93eed3eb2152ba9" category="cell"><block ref="1ba4695c60f2d279f93eed3eb2152ba9" category="inline-link-rx"></block></block>
   <block id="d6ba403ce50c836b970a66ecbf0ecdc3" category="cell">Cisco UCS C460 M4</block>
-  <block id="1ca9137ed7dc87266aed4d3e04a87f0d" category="cell">UCSC-C460-M4</block>
-  <block id="4135b1f88de8126a1b6c689f2a5518c9" category="cell"><block ref="4135b1f88de8126a1b6c689f2a5518c9" category="inline-link-rx"></block></block>
-  <block id="f43aaff2468c45d0f90ab6e5ed1b9cf5" category="paragraph">所有 FlexPod 快速架构都需要冗余交换机。</block>
-  <block id="52915eb93f26eeee40e30d06f695984e" category="paragraph">采用 NetApp AFF 或 FAS 架构的 FlexPod Express 采用 Cisco Nexus 31108 交换机构建。采用 Cisco UCS Mini （ Cisco UCS 管理）架构的 FlexPod Express 可通过使用 Cisco Nexus 3524 交换机进行验证。也可以使用标准交换机部署此配置。</block>
-  <block id="fc9e9a0b578a9b8d829c2cb6bd084c68" category="paragraph">采用 E 系列的 FlexPod Express 可以使用标准交换机进行部署。</block>
-  <block id="4f96a991d5f91ae3be3cc9021d2c6e2b" category="paragraph">下表列出了 Cisco Nexus 系列机箱的部件号，不包括其他 SFP 或附加模块。</block>
-  <block id="2bbe88f083e6858cdfe374ccaf6be275" category="cell">Cisco Nexus 系列交换机</block>
-  <block id="5ad9a3010c89c80bb3aa7a0affd03857" category="cell">N3K-C3048TP-1GE</block>
-  <block id="bca15c4c99e7cd3f6ddc54c4b4612d5d" category="cell"><block ref="bca15c4c99e7cd3f6ddc54c4b4612d5d" category="inline-link-rx"></block></block>
-  <block id="f9be542096d7b1ab5d2d93607faeda17" category="cell">N3K-C31108PC-V</block>
   <block id="9046c11a635a56d5f33defad32cbf04b" category="cell"><block ref="9046c11a635a56d5f33defad32cbf04b" category="inline-link-rx"></block></block>
-  <block id="3707cb9d69f6ca356e13d71259590dd3" category="cell">N9K-C9396PX</block>
-  <block id="3b73c0ec0414b0e1e64751a894762753" category="cell"><block ref="3b73c0ec0414b0e1e64751a894762753" category="inline-link-rx"></block></block>
-  <block id="c7e9fa4b09131bf2dca41fb8fb160730" category="cell">Cisco Nexus 3172</block>
-  <block id="8c04dff9e93fca86fc136c09b31a6a42" category="cell">N3K-C3172</block>
-  <block id="603af49aa411100c77de6e505d0b6801" category="cell"><block ref="603af49aa411100c77de6e505d0b6801" category="inline-link-rx"></block></block>
   <block id="83842e9d3448fa9b32e931956ae716a9" category="section-title">Cisco 支持许可选项</block>
-  <block id="11651dc58d0730f5034b8d0eb347e9a6" category="paragraph">FlexPod 快速架构中的所有 Cisco 设备都需要有效的 SMARTnet 支持合同。</block>
-  <block id="41ff4d4c2bfb1ad6625676e61801ba88" category="admonition">所需的许可证以及这些许可证的部件号应由销售代表进行验证，因为它们可能因不同产品而异。</block>
   <block id="5ab41268bb536bea361ff025dad26212" category="paragraph">下表列出了 Cisco 支持许可选项。</block>
   <block id="950f825ced706454b39f75815a9410fa" category="cell">Cisco 支持许可</block>
   <block id="b33eb2786fac85b1eee28de1d30760e6" category="cell">许可证指南</block>
-  <block id="8f16724e5369868d6e34483257829468" category="cell">SMARTNET 24X7X4</block>
-  <block id="f312eeb62002bbf3617b218baf8ae4da" category="cell"><block ref="f312eeb62002bbf3617b218baf8ae4da" category="inline-link-rx"></block></block>
   <block id="160f9594439a5c252e567ca5fa56f9aa" category="summary">FlexPod 平台是一种预先设计的最佳实践数据中心架构，它基于 Cisco 统一计算系统（ Cisco UCS ）， Cisco Nexus 系列交换机和 NetApp 存储控制器（ NetApp AFF 或 FAS 系统）构建。</block>
   <block id="d0ed65e54397020ba99377dad07d0960" category="doc">TR-4036 ： FlexPod 数据中心技术规格</block>
   <block id="44449d841c637b73894538d1cb10ad73" category="paragraph">FlexPod 是一个适合运行各种虚拟化虚拟机管理程序以及裸机操作系统和企业工作负载的平台。FlexPod 不仅提供了基线配置，而且还可以灵活地调整规模并进行优化，以满足多种不同的使用情形和要求。</block>
@@ -200,18 +169,8 @@
   <block id="bc4050fb27f781ecbcefa1ccdeac344d" category="paragraph">有关 ONTAP 的详细信息，请参见<block ref="1eb8c52ba0319aa3751cd7ed82b4945b" category="inline-link-rx"></block> 产品页面。</block>
   <block id="d160bac159341d29786704d75c654a94" category="summary">本节介绍不同版本的 FlexPod Express 的最低软件要求。</block>
   <block id="5d3fc3ec55d4860715dad56a4cecaf8c" category="doc">最低软件要求</block>
-  <block id="986180b457f622bd099ee2687cd8378d" category="section-title">采用 NetApp AFF 或 FAS 的 FlexPod Express 的软件要求</block>
-  <block id="be062f8ed4a46c02546491540d98e022" category="paragraph">采用 NetApp FAS 的 FlexPod Express 的软件要求包括：</block>
-  <block id="d3426be49616eaf1b7e70f69c8de7848" category="list-text">ONTAP 9.1 或更高版本</block>
-  <block id="224933be9d4d10a0fbff60cbd71f2cb1" category="list-text">Cisco NX-OS 7.0 （ 3 ） I6 （ 1 ）或更高版本</block>
-  <block id="e076f9c04b344d5f8b351379153e417e" category="list-text">在 Cisco UCS 管理的配置中， Cisco UCS Manager UCS 4.0 （ 1b ）</block>
   <block id="471ff51c89daf6e35e8e2b5111039744" category="inline-link">NetApp IMT</block>
   <block id="b01f33018dd67adc34ac91d2b1bb8acf" category="paragraph">必须在中列出并支持所有软件<block ref="542750ff2ff69f0b5f9f0ab1166bb952" category="inline-link-rx"></block>。某些软件功能所需的代码版本可能比先前架构中列出的最低版本更新。</block>
-  <block id="86617f86b30dd24f1bd4725a98b449f5" category="section-title">采用 E 系列的 FlexPod Express 的软件要求</block>
-  <block id="aa9021c3475dd0f007a2c8fdeee731ce" category="paragraph">采用 E 系列的 FlexPod Express 的软件要求包括：</block>
-  <block id="5de9fd80c68cb9370e0ae8e8dd120d07" category="list-text">E 系列 SANtricity 软件 11.30 或更高版本</block>
-  <block id="2bb7ee63b402ba30890b4940ed00ca62" category="list-text">Cisco UCS Manager 4.0 （ 1b ）。</block>
-  <block id="0674dd6b190b5769ec2b28d3d5cf0da3" category="paragraph">必须在中列出并支持所有软件<block ref="542750ff2ff69f0b5f9f0ab1166bb952" category="inline-link-rx"></block>。</block>
   <block id="9498c273a77b43c31823b8399ab32e23" category="summary">FlexPod 数据中心配置具有最低硬件要求，包括但不限于交换机，互联阵列，服务器和 NetApp 存储控制器。</block>
   <block id="3081736b57e4a1c5208bea8ee10f6000" category="doc">最低硬件要求</block>
   <block id="69c265fd63403bd4b4f765be99701902" category="paragraph">您必须使用 Cisco UCS 服务器。C 系列和 B 系列服务器均已在经过验证的设计中使用。Cisco Nexus 阵列扩展器（ FEX ）是 C 系列服务器的可选配置。</block>
@@ -231,89 +190,29 @@
   <block id="e3313d2a580d4ea7c09b15c5c979da6a" category="list-text">对于具有两个节点的 ONTAP 集群，您可以配置双节点无交换机集群。</block>
   <block id="5482261cd927b97915d0cb11f2a92148" category="list-text">对于具有两个以上节点的 ONTAP 集群，需要一对集群互连交换机。</block>
   <block id="42419c0e478fd6f7bbffe6b8974833ca" category="summary">NetApp 存储控制器在 FlexPod 快速架构中为启动和应用程序数据存储提供了存储基础。本节列出了 FlexPod 快速架构中的不同 NetApp 选项。</block>
-  <block id="4ba8114dd624dc2130553b7742f70d88" category="section-title">NetApp FAS</block>
-  <block id="6f4427b59f55f6827f3d3145a95ee28d" category="paragraph">在 FlexPod 快速架构中，需要使用冗余 AFF C190 ， AFF A220 或 FAS2750 系列控制器。这些控制器运行 ONTAP 软件。订购存储控制器时，可以在这些控制器上预加载首选软件版本。对于 ONTAP ，可以使用一对集群互连交换机部署集群，也可以采用无交换机集群配置部署集群。</block>
-  <block id="791ddb7a7ddefe9ef8c91c03bbd4fd71" category="paragraph">下表列出的部件号适用于空控制器。根据选定的存储平台，可以使用不同的选项和配置。有关这些附加组件的详细信息，请咨询您的销售代表。</block>
   <block id="bb43878952414106e66a5d3e8902dd46" category="cell">存储控制器</block>
   <block id="eb0d80c3cead0194c9a676df97b1f973" category="cell">FAS 部件号</block>
-  <block id="3eab1bbd4a3f05ea0803f3bcf5fac9e5" category="cell">FAS2750</block>
   <block id="d78a85000ea20031a834c7c0dc812fa6" category="cell">根据所选的各个选项</block>
-  <block id="a95aa28d4b3530db8d3db453e8c20ab5" category="cell"><block ref="a95aa28d4b3530db8d3db453e8c20ab5" category="inline-link-rx"></block></block>
-  <block id="16327cd02ebd080bd4ab1439ff960ddc" category="cell">FAS2720</block>
-  <block id="b6000f9eed7f8ea9ee4632bd2f77961a" category="cell">AFF C190</block>
-  <block id="cbea754cca3463101f74bfb7d1bc03d6" category="cell"><block ref="cbea754cca3463101f74bfb7d1bc03d6" category="inline-link-rx"></block></block>
-  <block id="8fd3ca5f66dff5be16e79560dd28171e" category="cell">AFF A220</block>
   <block id="fa83b13617b7a425e389315666f6973f" category="cell"><block ref="fa83b13617b7a425e389315666f6973f" category="inline-link-rx"></block></block>
   <block id="489c8707e7f92883a9ec4c6edf2f6a9a" category="cell">FAS2620</block>
   <block id="47cb00554d2eb8ec09a2188765488fb1" category="cell"><block ref="47cb00554d2eb8ec09a2188765488fb1" category="inline-link-rx"></block></block>
   <block id="8541975335a64aeefea980107946fbbf" category="cell">FAS2650</block>
-  <block id="3781cddbae6140211cb434f6417882ce" category="section-title">E-Series 存储</block>
-  <block id="4902aa44336408dddd38c0479fe504ef" category="paragraph">在 FlexPod 快速架构中，需要一对 NetApp E2800 系列控制器。这些控制器运行 SANtricity 操作系统。</block>
-  <block id="53c263cd06df58fafb10fa135e0f2e44" category="cell"><block ref="53c263cd06df58fafb10fa135e0f2e44" category="inline-link-rx"></block></block>
-  <block id="de2be91fbb0de06f0b2732c5a99e11c3" category="section-title">NetApp 以太网扩展模块</block>
-  <block id="8dfa7ec1924d6836cd846ce203c23dc5" category="paragraph">下表列出了 NetApp FAS10GbE 适配器选项。</block>
   <block id="2cb05e4bb7830be982f0922fed86b4cd" category="cell">组件</block>
-  <block id="7f3028ae831db8dc789fcaf5083b67a1" category="cell">NetApp X1117A</block>
   <block id="3424b3142efd4fd91bcc7a0aae183edc" category="cell">X1117A-R6</block>
-  <block id="7ebf4cf225b0039554b11ba9739e96f6" category="cell"><block ref="7ebf4cf225b0039554b11ba9739e96f6" category="inline-link-rx"></block></block>
-  <block id="032ae7705e1b64f4c8f06ff0e9b7e2c3" category="paragraph">FAS2500 和 2600 系列存储系统具有板载 10GbE 端口。</block>
-  <block id="e23d7f86a0278da7e86ce88ca3098b9f" category="paragraph">NetApp X1117A 适配器适用于 FAS8020 存储系统。</block>
-  <block id="f54e4b7933ef38204949d3a83481962e" category="paragraph">下表列出了 E 系列 10GbE 适配器选项。</block>
-  <block id="989d8b1efd9728a1f4403d859cfafa07" category="cell">10GbE iSCSI/16 Gb FC 4 端口</block>
   <block id="933670a4d85c94c9cb9905a6cf8ba6fb" category="cell">X-56025-00-0E-C</block>
-  <block id="8deedaecaf3bd8a376053c8fe5b36120" category="cell">10GbE iSCSI/16 Gb FC 2 端口</block>
   <block id="a2ad525931e1561da0bf06fd2a0fc848" category="cell">X-56024-00-0E-C</block>
-  <block id="1bc638deca35e86ccf9d6865333e96a6" category="paragraph">E2824 系列存储系统具有板载 10GbE 端口。</block>
-  <block id="97b5213b54614d160f129b298de19346" category="paragraph">10GbE iSCSI/16 Gb FC 4 端口主机接口卡（ HIC ）可用于提高端口密度。</block>
-  <block id="aff526161ed70a6f9d6b85b6800e12d8" category="paragraph">板载端口和 HIC 可用作 iSCSI 适配器或 FC 适配器，具体取决于在 SANtricity 操作系统中激活的功能。</block>
-  <block id="8dc2a05b711e433f817d77bc37b8e318" category="paragraph">有关支持的适配器选项的详细信息，请参见的 " 适配器 " 一节<block ref="ad8f1191d953a17400c53bce24cbde3e" category="inline-link-rx"></block>。</block>
   <block id="1f1fc06df75fe331417471e6222090a6" category="section-title">NetApp 磁盘架和磁盘</block>
-  <block id="e587981e2cc19bde7c343adbd392b487" category="paragraph">存储控制器至少需要一个 NetApp 磁盘架。选定的 NetApp 磁盘架类型决定了该磁盘架中可用的驱动器类型。</block>
-  <block id="aa2619dafbcb6dd49712ffa15d6e70ca" category="paragraph">FAS2700 和 FAS2600 系列控制器作为一种配置提供，其中包括双存储控制器以及位于同一机箱中的磁盘。此配置随 SATA 或 SAS 驱动器提供；因此，除非性能或容量要求要求需要更多磁盘轴，否则不需要额外的外部磁盘架。</block>
-  <block id="01c732ddbe5cf9a405604940095bb567" category="paragraph">所有磁盘架部件号均适用于具有两个 AC PSU 的空磁盘架。有关其他部件号，请咨询您的销售代表。</block>
-  <block id="2ccff5b6fc2b318863489fe23166a10f" category="paragraph">磁盘驱动器部件号因要购买的磁盘的大小和外形规格而异。有关其他部件号，请咨询您的销售代表。</block>
   <block id="686e928fa0712da263b183fc5953b192" category="paragraph">下表列出了 NetApp 磁盘架选项以及每个磁盘架类型支持的驱动器，这些选项可在 NetApp Hardware Universe 上找到。单击 Hardware Universe 链接，选择要使用的 ONTAP 版本，然后选择磁盘架类型。在磁盘架映像下，单击支持的驱动器以查看特定版本的 ONTAP 和磁盘架支持的驱动器。</block>
-  <block id="44f1e702e4381b727b9b467e6deb1457" category="cell">DS212C-0-12</block>
-  <block id="e19c8e25dcabb60416fbaf4aa1df046b" category="inline-link-macro">磁盘架和存储介质技术规格 NetApp Hardware Universe 上支持的驱动器</block>
-  <block id="2bec892ce742e8c73332c7bc09f14b12" category="cell"><block ref="2bec892ce742e8c73332c7bc09f14b12" category="inline-link-macro-rx"></block></block>
-  <block id="633f96f7409deb7e8f37e73fd09d0b49" category="cell">DS224C-0-24</block>
-  <block id="8420e25ff187188cdf1350dea3e0da50" category="cell">DS460C-0-60</block>
-  <block id="947b2a122e29ff37898607afe1982ac4" category="inline-link-macro">磁盘架和存储介质技术规格 NetApp Hardware Universe 上支持的驱动器</block>
-  <block id="5ff0f5fdd5ee93de0b72179921b632c7" category="cell"><block ref="5ff0f5fdd5ee93de0b72179921b632c7" category="inline-link-macro-rx"></block></block>
-  <block id="5c8ec48c5b82542591c0713df834204e" category="cell">X559A-R6</block>
-  <block id="be38be39f95912dc5d7540b6eab3675b" category="cell">X24M-R6</block>
-  <block id="a35582cda1497b785cabaa95e67fda6e" category="cell">DS4486</block>
-  <block id="dd80b8e252131fa8d01cd79345fa248a" category="cell">DS4486-144TB-R5-C</block>
-  <block id="78377b1fee9a1d92a41f9a862331f66a" category="paragraph">对于不在机箱中容纳任何驱动器的存储控制器，至少需要一个 NetApp 磁盘架。选定的 NetApp 磁盘架类型决定了该磁盘架中可用的驱动器类型。</block>
-  <block id="6a70b0dc6f4898b15d42b97a834778d0" category="paragraph">E2800 系列控制器作为一种配置提供，其中包括双存储控制器以及位于受支持磁盘架中的磁盘。此配置随 SSD 或 SAS 驱动器一起提供。</block>
-  <block id="f69937b358d3964065cdd4699ed6cc71" category="paragraph">下表列出了 NetApp 磁盘架选项以及每个磁盘架类型支持的驱动器，这些选项可在 NetApp Hardware Universe 上找到。单击 Hardware Universe 链接，选择要使用的 ONTAP 版本，然后选择磁盘架类型。在磁盘架映像下，单击支持的驱动器以查看特定版本的 ONTAP 和磁盘架支持的驱动器。</block>
-  <block id="57bbc77af8a105b9a809e104576e41f3" category="cell">E-X5730A-DM-0E-C</block>
   <block id="584fd083c6ecc41e5c3ffc499f8ab0a9" category="inline-link-macro">磁盘架技术规格 NetApp Hardware Universe 上支持的驱动器</block>
   <block id="c3c70a025a43288d90bdce976b95b5fe" category="cell"><block ref="c3c70a025a43288d90bdce976b95b5fe" category="inline-link-macro-rx"></block></block>
-  <block id="b6392f00acb980e1e1e3a8d82c32aa0a" category="cell">E-X5721A-DM-0E-C</block>
-  <block id="1968845ff3f8eb770c5023b2b97452ca" category="cell">E-X5723A-DM-0E-C</block>
-  <block id="0af8a804b712d0825208533faf65cb71" category="cell"><block ref="0af8a804b712d0825208533faf65cb71" category="inline-link-macro-rx"></block></block>
-  <block id="e9cdd46337310a645aec0a674a365f9c" category="paragraph">下表列出了 NetApp FAS 软件许可选项。</block>
   <block id="96246effc3080bfc941225e2e5109fbf" category="cell">NetApp 软件许可</block>
   <block id="1fe3c9d0657c143dd35fa09974da425b" category="cell">部件号</block>
   <block id="3e6e5e67314fd12a909a8973cb5f14fc" category="cell">技术规格</block>
-  <block id="fa222d7270c823d42a7aa65b759f6af1" category="cell">基本集群许可证</block>
   <block id="c7e8b7d7c123ac400c6d68b7843b0b6b" category="cell">有关许可的详细信息，请咨询 NetApp 销售团队。</block>
-  <block id="b3a478327ab835bf2518a6dcd305aca6" category="paragraph">下表列出了 E 系列软件许可选项。</block>
-  <block id="5a020197814e93aa70dec9cef71cbea2" category="cell">标准功能</block>
-  <block id="ad28f33b7e604cc3e6f9e3bdbb376b87" category="cell">高级功能</block>
   <block id="1663bc309b0a1ddf5774db5075160041" category="section-title">NetApp 支持许可选项</block>
   <block id="f263fbecd68ad30f21b5919fbdf5376c" category="paragraph">SupportEdge Premium 许可证是必需的，这些许可证的部件号因 FlexPod 快速设计中选择的选项而异。</block>
-  <block id="1d6cb8d880e983c90f1b5fe9f10dec29" category="paragraph">下表列出了 NetApp FAS 的 NetApp 支持许可选项。</block>
   <block id="c453f553d73c506df5a01e3bd8ff03e0" category="cell">NetApp 支持许可</block>
   <block id="13163c7b776f46d35bcf8a753d9e4c1b" category="cell">SupportEdge 高级版 4 小时现场服务；月数： 36</block>
-  <block id="813e53e7bb54b15e72348ce9fe93dbdc" category="paragraph">下表列出了适用于 E 系列存储的 NetApp 支持许可选项。</block>
-  <block id="ef63debe35aa2ea907cf5d6ba93bbca3" category="cell">硬件支持高级版 4 小时现场支持；月数： 36</block>
-  <block id="3700267a6a1c84c57290ba35d60b6065" category="cell">SVC — O2-4M-E</block>
-  <block id="9f65492afee4fdfba75618fed6d0f9dd" category="cell">软件支持</block>
-  <block id="35650dfddfa3359e3aa85c6716443b52" category="cell">SW-SSP-O2-4W-E</block>
-  <block id="6fa548f2ea82ea7bbec17cd526290147" category="cell">初始安装</block>
-  <block id="bb0003710f860d01ecd5e29fd0d58e46" category="cell">SVC — INST-O2-4M-E</block>
   <block id="2a86267621fe34bc25574c8470106b4d" category="summary">FlexPod 设计对电源和布线具有最低要求。</block>
   <block id="4e3a8a01051fe088c7981d79c5a6a919" category="paragraph">FlexPod 数据中心的电源要求因 FlexPod 数据中心配置的安装位置而异。</block>
   <block id="8e1b6aff03f733f3b26f0e7b61593417" category="inline-link-macro">技术规格和参考：硬件组件</block>
@@ -356,7 +255,6 @@
   <block id="93e9704c9fe702dc293e36aa0c961785" category="cell">每个磁盘架两根 100 Gbps 铜缆</block>
   <block id="2fe9f1b02d69ad8ef2e636eb4f330189" category="summary">本文档提供了 FlexPod 快速平台的技术规格。</block>
   <block id="7501c5e58e67ce758d854a0f76243785" category="doc">FlexPod 平台</block>
-  <block id="929267c420e3d3c55cf94c77cb6278ff" category="paragraph">FlexPod 平台有三种：</block>
   <block id="ec80c81f43eaed2db319aaaddeb1b47c" category="list-text">* FlexPod Express* 。此平台是一个紧凑型融合基础架构，面向远程办公室和边缘使用情形。</block>
   <block id="fdcc3f708755fca6b29fa368ab162e64" category="summary">本节介绍 FlexPod 快速的可选功能。</block>
   <block id="3fbddd58f80c4f4429699e25eb1b4a26" category="doc">可选功能</block>
@@ -593,13 +491,7 @@
   <block id="a6a9297dbac63058ed30dee682bd1ed3" category="list-text">所有硬件和软件组件都必须在 NetApp 上列出并受支持<block ref="af8f174925a8fa1af2321b8d8c2fd047" category="inline-link-rx"></block>，<block ref="61c091fce51d2baac5905f12dd7d74cc" category="inline-link-rx"></block>和 Cisco UCS 硬件和软件互操作性表工具。</block>
   <block id="90f32bd276bc840822daf44cfae64c18" category="list-text">Cisco 设备的 SMART Net Total Care （ SMARTnet Total Care ， SMARTnet ）支持</block>
   <block id="e8334fc5affbcef2562719b53c247664" category="paragraph">有关详细信息，请参见 NetApp<block ref="af8f174925a8fa1af2321b8d8c2fd047" category="inline-link-rx"></block>。</block>
-  <block id="cbd798af29c6d6c7309a2099d7629d42" category="summary">FlexPod Express 是一种预先设计的最佳实践架构，它基于 Cisco 统一计算系统（ Cisco UCS ）和 Cisco Nexus 系列交换机构建，存储层使用 NetApp FAS 或 NetApp E 系列存储构建。</block>
-  <block id="835c125660e1b86697ee2951435a5d2d" category="doc">TR-4293 ： FlexPod 快速技术规格</block>
-  <block id="59dad7986b7e1d4c7d25feadecf54af7" category="paragraph">NetApp 公司 Karthick Radhakrishnan ， Arvind Ramakrishnan ， Lindsey Street ， Savita Kumari</block>
-  <block id="01b5eb7de901fc377f6709faad98f27e" category="paragraph">FlexPod Express 是一种预先设计的最佳实践架构，它基于 Cisco 统一计算系统（ Cisco UCS ）和 Cisco Nexus 系列交换机构建，存储层使用 NetApp FAS 或 NetApp E 系列存储构建。FlexPod Express 是一个适合运行各种虚拟化虚拟机管理程序，裸机操作系统（ OS ）和企业工作负载的平台。</block>
-  <block id="b57f077428dce4df34f2d8532f2648c5" category="paragraph">FlexPod Express 不仅提供了基线配置，还可以灵活地调整规模并进行优化，以满足多种不同的使用情形和要求。本文档将根据所使用的存储系统，采用 NetApp FAS 的 FlexPod Express 以及采用 E 系列的 FlexPod Express 对 FlexPod Express 配置进行分类。</block>
   <block id="a64c8d59be31b09362634dedf23d4e86" category="doc">存储软件</block>
-  <block id="02a5537e181da938c0f5cb453ba3d4a7" category="section-title">E 系列 SANtricity 软件</block>
   <block id="28b69efdba58f83101dca273e330e519" category="summary">FlexPod 设计可提供一个灵活的基础架构，其中包含许多不同的组件和软件版本。</block>
   <block id="5eac17db957622119d1b18a268d7c299" category="doc">FlexPod 规则</block>
   <block id="2415fc49fbe847187613f58fe7ec0149" category="paragraph">使用规则集作为构建或整合有效 FlexPod 配置的指南。本文档中列出的数字和规则是 FlexPod 配置的最低要求。可以根据不同环境和使用情形的需要在所含产品系列中扩展这些功能。</block>
@@ -928,20 +820,8 @@
   <block id="151b84dd746a82fd198c86d961b42f44" category="inline-link">Cisco Smart Net Total Care 服务</block>
   <block id="d1ecfe25c39e743125266078c3c7565e" category="cell"><block ref="d1ecfe25c39e743125266078c3c7565e" category="inline-link-rx"></block></block>
   <block id="64253ff18621f1451be7a39f52dd1ca0" category="summary">本节介绍不同版本的 FlexPod Express 的连接要求。</block>
-  <block id="28a658c09df622f2d6f953483678d3a2" category="section-title">FlexPod Express 与 NetApp FAS 的连接要求</block>
-  <block id="2467c21b33489260420ee026bba07a71" category="paragraph">采用 NetApp FAS 的 FlexPod Express 的连接要求包括：</block>
-  <block id="e8a8ee9f387175a38ab3cd7ab8c9c450" category="list-text">NetApp FAS 存储控制器必须直接连接到 Cisco Nexus 交换机，但 Cisco UCS 管理的配置除外，在该配置中，存储控制器连接到互联阵列。</block>
   <block id="c74efeb9e8a209000cc3750e2028fe8e" category="list-text">不能在核心 FlexPod 组件之间实时放置任何其他设备。</block>
-  <block id="20f5c05d802f86a9dc5a71123dcf7f90" category="list-text">要将 Cisco Nexus 3000/9000 系列交换机连接到 NetApp 存储控制器，需要使用虚拟端口通道（ Virtual Port Channel ， vPC ）。</block>
   <block id="dbf427db07f695dc99a56e396fa4671e" category="list-text">虽然不需要，但建议在整个环境中启用巨型帧支持。</block>
-  <block id="e504d8cf4401a55e1b0165ee1b3e65c1" category="section-title">采用 NetApp E 系列的 FlexPod Express 的连接要求</block>
-  <block id="828aa04bde11fb714ecad3836974965c" category="paragraph">使用 E 系列的 FlexPod Express 的连接要求包括：</block>
-  <block id="78f7b3e86fb75185493f675cd8008b43" category="list-text">E 系列存储控制器必须直接连接到互联阵列。</block>
-  <block id="5b364171b0c8793377902d6d0651c2ca" category="list-text">不应在核心 FlexPod 组件之间内联放置任何其他设备。</block>
-  <block id="e8f973aa66dd486a45698bd79073f3a3" category="list-text">互联阵列和以太网交换机之间需要使用 vPC 。</block>
-  <block id="a11b95a855c1b54b057581b64e849672" category="section-title">FlexPod Express 与 NetApp AFF 的连接要求</block>
-  <block id="16badd8a3ee31de86136a03964051924" category="paragraph">采用 NetApp AFF 的 FlexPod Express 的连接要求包括：</block>
-  <block id="20a982ddbb8534dcddbeb2403b3aa48b" category="list-text">NetApp AFF 存储控制器必须直接连接到 Cisco Nexus 交换机，但 Cisco UCS 管理的配置除外，在该配置中，存储控制器连接到网络结构。互连。</block>
   <block id="5e984544a43af85ba364cc4a2904b9f4" category="summary">以下信息介绍了 FlexPod 配置的最低软件要求。</block>
   <block id="9622697348706033bae0d471463ce58d" category="doc">最低软件要求</block>
   <block id="514525e87a20f97644f98d1b8fce7cc6" category="paragraph">FlexPod 配置具有以下最低软件要求：</block>
@@ -960,24 +840,6 @@
   <block id="a6f23c0ade23c5ca643ce8bc1a079ffb" category="list-text">对于 Cisco Nexus 9000 系列交换机， Cisco NX-OS 软件版本 6.1 （ 2 ）或更高版本</block>
   <block id="1e770a345ddd07125ec0d9d9a3af0940" category="admonition">FlexPod 配置中使用的软件必须在 NetApp 中列出并受支持<block ref="af8f174925a8fa1af2321b8d8c2fd047" category="inline-link-rx"></block>。某些功能可能需要比列出的软件版本更新的软件版本。</block>
   <block id="22d1bbaef8aaaea675c6f0e9e7ab65bb" category="summary">本节介绍不同版本的 FlexPod Express 的最低硬件要求。</block>
-  <block id="003f30db243c2dbde6df76f3c72b3ee0" category="section-title">采用 NetApp FAS 的 FlexPod Express</block>
-  <block id="84daec59b75a10e0cd013d1db7a434f5" category="paragraph">使用 NetApp FAS 控制器进行底层存储的 FlexPod 快速解决方案的硬件要求包括本节中所述的配置。</block>
-  <block id="d889bada95a4507597263f4085f7eb35" category="section-title">基于 CIMC 的配置（独立机架服务器）</block>
-  <block id="dbf88aea6907acd1a2ddf8af6778500b" category="paragraph">Cisco Integrated Management Controller （ CIMC ）配置包括以下硬件组件：</block>
-  <block id="98b00d8d43ad07f702f22f5c8b541ca2" category="list-text">Cisco UCS C 系列独立机架式服务器</block>
-  <block id="1bd4b426108264f2676dc78d9d2018da" category="section-title">Cisco UCS 管理的配置</block>
-  <block id="b2d15a256201c5ef01bc4171f55f63a5" category="paragraph">Cisco UCS 管理的确认包括以下硬件组件：</block>
-  <block id="ff7cdf168363b590d56a466baa3afde4" category="list-text">采用冗余配置的两个 10 Gbps 标准以太网交换机（建议使用 Cisco Nexus 3524 ）</block>
-  <block id="406d169fa8f2549e3ad818dfcdb19b11" category="list-text">一个 Cisco UCS 5108 交流（ AC ）刀片式服务器机箱</block>
-  <block id="086baf60c6e72c66b3d26f73749806e4" category="list-text">两个 Cisco UCS 6324 互联阵列</block>
-  <block id="441c43a56d0619fd5ae52f04a07feaf6" category="list-text">Cisco UCS B 系列服务器（至少四个 Cisco UCS B200 M5 刀片式服务器）</block>
-  <block id="0a83f68af275e8c4353563c551c8994b" category="section-title">采用 E 系列的 FlexPod Express</block>
-  <block id="b0a4ddda393f203e4b071531f5a7f619" category="paragraph">采用 E 系列入门级配置的 FlexPod Express 的硬件要求包括：</block>
-  <block id="5b0208ade6c01d9081b5843bdfb89e40" category="list-text">一个 Cisco UCS Mini 机箱 5108 AC2 或 DC2 （仅 AC2 和 DC2 机箱支持 Cisco UCS 6324 互联阵列）</block>
-  <block id="6b83128e0bebf22e449e2c64d1d04814" category="list-text">Cisco UCS B 系列服务器（至少两个 Cisco UCS B200 M4 刀片式服务器）</block>
-  <block id="78b8483558b26cd46fee2865b0cd79f8" category="list-text">E 系列 E2824 存储系统的一个 HA 对配置，其中至少加载 12 个磁盘驱动器</block>
-  <block id="a280fbd318da098dcb3ca49ce43a800a" category="list-text">采用冗余配置的两个 10 Gbps 标准以太网交换机（可以使用数据中心中的现有交换机）</block>
-  <block id="de4db249ee3e2be867ce1546536f4ab0" category="paragraph">构建解决方案的入门级配置需要这些硬件组件；可以根据需要添加更多刀片式服务器和磁盘驱动器。E 系列 E2824 存储系统可以替换为更高的平台，也可以作为全闪存系统运行。</block>
   <block id="e40160a33afbac1229efb757e5e03591" category="summary">本节介绍每个 FlexPod 快速组件的其他重要技术规格。</block>
   <block id="209fbfad3dfefea8146a1134b927e2ab" category="doc">技术规格和参考</block>
   <block id="87631f2fc1febbb619722cd84c1d729e" category="paragraph">下表列出了 Cisco UCS B 系列刀片式服务器选项。</block>
@@ -1848,268 +1710,24 @@
   <block id="b6096b41c3c48808d967200f752f5f25" category="cell">2 x 5108</block>
   <block id="35e6d0a83f214bfb7e13505c0dea39d0" category="cell">Cisco UCS 互联阵列</block>
   <block id="69145b1a02ee505baf6d6d8506924db1" category="cell">2 个 6332</block>
-  <block id="ed38874183f73e374cbbb3c0f4153523" category="doc">部署和配置</block>
-  <block id="cf88100598cbddbdaefcdf61df162f6c" category="inline-link">TR-3446 ：《 SnapMirror 异步概述和最佳实践指南》</block>
-  <block id="1967302950c727fc26511a7a801bcb41" category="summary">本节介绍在 MEDITECH 环境中可能会发现的计算和存储工作负载类型。</block>
-  <block id="841762089e5f9303f335b8a5550f3dfa" category="doc">Meditech 工作负载概述</block>
-  <block id="789ae08bd96234d6c462e26b2c7a6251" category="section-title">Meditech 和备份工作负载</block>
-  <block id="9ed2da2a4965f01e4d58199c06931b1c" category="paragraph">在为 MEDITECH 环境估算 NetApp 存储系统的规模时，您必须同时考虑 MEDITECH 生产工作负载和备份工作负载。</block>
-  <block id="f76799d5e43a4703ce23ddc15b176efe" category="cell">MEDITECH 主机</block>
-  <block id="e62948dc32b1dbe2a3a64aa66bc24571" category="cell">MEDITECH 主机是数据库服务器。此主机也称为 MEDITECH 文件服务器（对于 expanse ， 6.x 或 C/S 5.x 平台）或魔力机器（对于魔力平台）。本文档使用术语 MEDITECH 主机来指代 MEDITECH 文件服务器和魔力机器。</block>
-  <block id="925c9f80878b53ce18dd86edfe18d8a4" category="paragraph">以下各节将介绍这两个工作负载的 I/O 特征和性能要求。</block>
-  <block id="505f0aa51de4876aaeff6bb41832da8f" category="section-title">Meditech 工作负载</block>
-  <block id="654e7b57da72fe41ce18eb8f675b8138" category="paragraph">在 MEDITECH 环境中，运行 MEDITECH 软件的多个服务器作为一个称为 MEDITECH 系统的集成系统执行各种任务。有关 MEDITECH 系统的详细信息，请参见 MEDITECH 文档：</block>
-  <block id="f05eb749bfd5e1d52c6b218ac99175a0" category="list-text">对于生产型 MEDITECH 环境，请参阅相应的 MEDITECH 文档，以确定在调整 NetApp 存储系统规模时必须包含的 MEDITECH 主机数量和存储容量。</block>
-  <block id="be7f8667e0a975588d79a61bf5e7cf35" category="list-text">对于新的 MEDITECH 环境，请参见硬件配置提案文档。对于现有的 MEDITECH 环境，请参阅硬件评估任务文档。硬件评估任务与 MEDITECH 服务单关联。客户可以向 MEDITECH 申请上述任一文档。</block>
-  <block id="b52d981da601faaea468c9c4d6ef7cec" category="paragraph">您可以通过添加主机来扩展 MEDITECH 系统，以提高容量和性能。每个主机都需要存储容量来存储其数据库和应用程序文件。每个 MEDITECH 主机可用的存储还必须支持该主机生成的 I/O 。在 MEDITECH 环境中，每个主机都有一个 LUN ，以满足该主机的数据库和应用程序存储要求。您部署的 MEDITECH 类别类型和平台类型决定了每个 MEDITECH 主机的工作负载特征，因此也决定了整个系统的工作负载特征。</block>
-  <block id="8c0040fef2729979b97357b980b026fb" category="section-title">MEDITECH 类别</block>
-  <block id="fc9092fc51541d3261410e1e5f70777f" category="paragraph">Meditech 会将部署规模与 1 到 6 之间的类别编号关联起来。类别 1 表示最小的 MEDITECH 部署；类别 6 表示最大的部署。与每个类别关联的 MEDITECH 应用程序规范示例包括以下指标：</block>
-  <block id="316f822406a3bafe5c065fb374c8e79b" category="list-text">医院床位数</block>
-  <block id="5ff2c0bc7600cc5a88afa910aa6c2466" category="list-text">每年住院患者数</block>
-  <block id="ae48c1346ad6c8e94c0f8d4c4c46bc29" category="list-text">每年门诊患者</block>
-  <block id="54428673f9556630a576ef01670de9f5" category="list-text">每年的紧急房间访问量</block>
-  <block id="d649e892a6899e2453138305c8aeb443" category="list-text">每年的考试</block>
-  <block id="b4ccbe74222616ed3237ca8c62b861eb" category="list-text">每天为患者开处方</block>
-  <block id="cc7a1c9bfa9e46c0e8abe557de2328c0" category="list-text">每天提供门诊处方</block>
-  <block id="4395f5309fc81d34b03ec67001ed3d8f" category="paragraph">有关 MEDITECH 类别的详细信息，请参见 MEDITECH 类别参考表。您可以通过客户或通过 MEDITECH 系统安装程序从 MEDITECH 获取此表。</block>
-  <block id="7fa7698b25c0f55fc7be3702bde10d99" category="section-title">Meditech 平台</block>
-  <block id="1f1b94a73438871af776ddd24ded613a" category="paragraph">Meditech 有四个平台：</block>
-  <block id="69a85706fce2e98f95e217890b6fbc09" category="list-text">贵</block>
-  <block id="e6ef1773733c22dc74d98135e7870f91" category="list-text">Meditech 6.x</block>
-  <block id="7952368f79e74f6f7861cfeadf5c805a" category="list-text">客户端 / 服务器 5.x （ C/S 5.x ）</block>
-  <block id="cff42d769fc6a027224a1a20c4ab567a" category="list-text">魔力</block>
-  <block id="0a18d8a837db7b610f97c62f5501c8e2" category="paragraph">对于 MEDITECH expanse ， 6.x 和 C/S 5.x 平台，每个主机的 I/O 特征均定义为 100% 随机，请求大小为 4 ， 000 。对于 MEDITECH 魔力平台，每台主机的 I/O 特征均定义为 100% 随机，请求大小为 8 ， 000 或 16 ， 000 。据 MEDITECH 报告，典型的魔力生产部署的请求大小为 8 ， 000 或 16 ， 000 。</block>
-  <block id="8ad4cf9fe08f31ebad8d0777e923dcd2" category="paragraph">读取和写入比率因部署的平台而异。Meditech 会估算读写的平均混合比例，然后将其表示为百分比。Meditech 还会估算特定 MEDITECH 平台上的每个 MEDITECH 主机所需的平均持续 IOPS 值。下表总结了 MEDITECH 提供的平台专用 I/O 特征。</block>
-  <block id="0a8502e7c2521388d2e46b80b5ce4e14" category="cell">MEDITECH 类别</block>
-  <block id="3bdf494d142a3e40e38a8b2e9f538178" category="cell">Meditech 平台</block>
-  <block id="68f19b4aefe07e68a5d0d4cf2794032a" category="cell">平均随机读取 %</block>
-  <block id="549edfc93edb0ea2daca98e90a31b03c" category="cell">平均随机写入 %</block>
-  <block id="e59eb0c23465651ba5a88d31ff350349" category="cell">每个 MEDITECH 主机的平均持续 IOPS</block>
-  <block id="7a30de39b7e026330706c07a667cfa77" category="cell">expanse ， 6.x</block>
-  <block id="f033ab37c30201f73f142449d037028d" category="cell">80</block>
-  <block id="b137fdd1f79d56c7edf3365fea7520f2" category="cell">750</block>
-  <block id="d9639340c2f0051c1a7a09da5ef07ed4" category="cell">2-6</block>
-  <block id="4b482edf238f3e07a3e0c730e500a608" category="cell">6.x</block>
-  <block id="c38953bc9b7e91c91d381013e3a289f9" category="cell">C/S 5.x</block>
-  <block id="d645920e395fedad7bbbed0eca3fe2e0" category="cell">40</block>
-  <block id="d490d7b4576290fa60eb31b5fc917ad1" category="cell">600</block>
-  <block id="8613985ec49eb8f757ae6439e879bb2a" category="cell">90</block>
-  <block id="18d8042386b79e2c279fd162df0205c8" category="cell">400</block>
-  <block id="7c15d3e27fc2a287bd8c9931826bc71d" category="inline-link-macro">小型，中型和大型架构的技术规格</block>
-  <block id="c32ce4a3a4fcb44c1c79dd8f96ba2269" category="paragraph">在 MEDITECH 系统中，每个主机的平均 IOPS 级别必须等于上表中定义的 IOPS 值。要根据每个平台确定正确的存储规模估算，请在中所述的规模估算方法中使用上表中指定的 IOPS 值 <block ref="95650dcede9afd90d304328ce281ba34" category="inline-link-macro-rx"></block> 部分。</block>
-  <block id="1ad4275209df827f22af66388107dbce" category="paragraph">Meditech 要求每台主机的平均随机写入延迟保持在 1 毫秒以下。但是，在备份和重新分配作业期间，写入延迟临时增加到 2 毫秒是可以接受的。Meditech 还要求 1 类主机的平均随机读取延迟低于 7 毫秒， 2 类主机的平均随机读取延迟低于 5 毫秒。无论使用哪种 MEDITECH 平台，这些延迟要求都适用于每个主机。</block>
-  <block id="34b388b985c37de796a1745a6d57a9ac" category="paragraph">下表总结了在为 MEDITECH 工作负载估算 NetApp 存储规模时必须考虑的 I/O 特征。</block>
-  <block id="83f499a540b1323009c200d6f8cc9396" category="cell">参数</block>
-  <block id="d9a8dc11f7b80b8b570c0d9b1b5fd2cd" category="cell">请求大小</block>
-  <block id="449daf85c71a9f8eb7c666134b1d9b95" category="cell">1 至 6</block>
-  <block id="633c01074b6726183e20f42bb3ee01c0" category="cell">4k</block>
-  <block id="75d25ee87a0f3f253845236fca98c2a8" category="cell">8 K 或 16 K</block>
-  <block id="fbf1a4a6cf1e4f3ef4efcfd6ef9a2edc" category="cell">随机 / 顺序</block>
-  <block id="9057a0cea8cb1898b5f113f08e153716" category="cell">100% 随机</block>
-  <block id="6bb04d1cfdf58681679e1476bb6e29b8" category="cell">平均持续 IOPS</block>
-  <block id="cf646b9ba6ca2ed9daae6aef6b376daa" category="cell">读 / 写比率</block>
-  <block id="212d9f873ba66e772866f562e356bb47" category="cell">20% 读取， 80% 写入</block>
-  <block id="feb326647eaed773d914314b3d959f2f" category="cell">读取率为 40% ，写入率为 60%</block>
-  <block id="cff141e10cab983fe422672d715b68e5" category="cell">读取率为 90% ，写入率为 10%</block>
-  <block id="d80906a49158ecc08546e169f755d9b9" category="cell">写入延迟</block>
-  <block id="ce8f4bd254d7fa591c64caccc3aa3eeb" category="cell">小于 1 毫秒</block>
-  <block id="700aacaf691eb4c72e3e389f3f687dff" category="cell">临时峰值写入延迟</block>
-  <block id="101d21e523f12f01303be5acdf4141d9" category="cell">小于 2 毫秒</block>
-  <block id="cf9afbba5dc3d6546bf5f110bb1a8486" category="cell">读取延迟</block>
-  <block id="e7e89d19a58cf634d8b772ff7f744f97" category="cell">&lt; 7 毫秒</block>
-  <block id="3752601bfb13aa77e4507f62899659ed" category="cell">小于 5 毫秒</block>
-  <block id="a78ecbf906d3fcedf4be720c235c6afa" category="admonition">3 到 6 类的 Meditech 主机与 2 类具有相同的 I/O 特征。对于 MEDITECH 类别 2 到 6 ，在每个类别中部署的主机数量会有所不同。</block>
-  <block id="065d86a76184f0960dcf8a3d53b4cab9" category="paragraph">NetApp 存储系统的大小应满足前面几节所述的性能要求。除了 MEDITECH 生产工作负载之外， NetApp 存储系统还必须能够在备份操作期间保持这些 MEDITECH 性能目标，如下一节所述。</block>
-  <block id="b91c15efa4c1c9df437818341f71fd09" category="section-title">备份工作负载问题描述</block>
-  <block id="c5db716afff4ed0ff27db966a0b0dec7" category="paragraph">经过 Meditech 认证的备份软件可备份由 MEDITECH 系统中的每个 MEDITECH 主机使用的 LUN 。要使备份处于应用程序一致的状态，备份软件将暂停 MEDITECH 系统并暂停对磁盘的 I/O 请求。在系统处于静默状态时，备份软件会向 NetApp 存储系统发出一条命令，为包含 LUN 的卷创建 NetApp Snapshot 副本。备份软件稍后会使 MEDITECH 系统退出静默状态，从而可以继续向数据库发出生产 I/O 请求。该软件将基于 Snapshot 副本创建 NetApp FlexClone 卷。此卷由备份源使用，而生产 I/O 请求则继续在托管 LUN 的父卷上发出。</block>
-  <block id="e11d4b4ea22f4a57c4820d252683b430" category="paragraph">备份软件生成的工作负载来自对 FlexClone 卷中 LUN 的顺序读取。此工作负载是指请求大小为 64 ， 000 的 100% 顺序读取工作负载。对于 MEDITECH 生产工作负载，性能标准是保持所需的 IOPS 以及相关的读 / 写延迟级别。但是，对于备份工作负载，需要注意备份操作期间生成的整体数据吞吐量（ MBps ）。Meditech LUN 备份需要在八小时的备份时间内完成，但 NetApp 建议在六小时或更短的时间内完成所有 MEDITECH LUN 的备份。如果要在不到六小时的时间内完成备份，则可以减少 MEDITECH 工作负载计划外增加， NetApp ONTAP 后台操作或数据随时间增长等事件的影响。任何此类事件都可能会导致备份时间过长。无论存储的应用程序数据量如何，备份软件都会为每个 MEDITECH 主机对整个 LUN 执行完整的块级备份。</block>
-  <block id="06caa9e8cda7ef25bf3352e5e17b6670" category="paragraph">根据其他相关因素，计算完成此窗口中的备份所需的顺序读取吞吐量：</block>
-  <block id="e588cda6a292089be13b2d0be3a8b882" category="list-text">所需的备份持续时间</block>
-  <block id="c7e2e841f50fd3a9f5f532318d84d3c4" category="list-text">LUN 的数量</block>
-  <block id="63a494e52f561c8dab9bbd3fc83206d6" category="list-text">要备份的每个 LUN 的大小</block>
-  <block id="77ed047f0ea4fefdb8a343f5ab1c4b6f" category="paragraph">例如，在一个 50 主机的 MEDITECH 环境中，每个主机的 LUN 大小为 200 GB ，在此环境中，要备份的 LUN 总容量为 10 TB 。</block>
-  <block id="4f56492da15b9f2095dc6c85778eb19d" category="paragraph">要在八小时内备份 10 TB 的数据，需要以下吞吐量：</block>
-  <block id="2e4493162453615c5f3719215c8bce26" category="list-text">= （ 10 x 10^6 ） MB （ 8 x 3 ， 600 ） s</block>
-  <block id="236b083b3ae35d992982ec4c80bd75a3" category="list-text">= 347.2 MBps</block>
-  <block id="32a125235cff51a39987e2fa1fcdb71d" category="paragraph">但是，为了考虑计划外事件，我们会选择一个 5.5 小时的保守备份窗口，以提供超过建议的 6 小时的余量。</block>
-  <block id="50c99fb6b4af8be7f7340b03f352d4b3" category="list-text">= （ 10 x 10^6 ） MB （ 5.5 x 3 ， 600 ） s</block>
-  <block id="fee0c43fbea14706de03cf1676ebfa0f" category="list-text">= 500 Mbps</block>
-  <block id="c92e44b62e7db1883e7380d16ed0ac3d" category="paragraph">以 500 Mbps 的吞吐量速率，备份可以在 5.5 小时的时间范围内完成，并且可以在 8 小时的备份要求范围内轻松完成。</block>
-  <block id="f6c0087849a70f6c5f8221eef9bf365d" category="paragraph">下表总结了在估算存储系统规模时要使用的备份工作负载的 I/O 特征。</block>
-  <block id="d2e97987910ea402499a6095cb3869de" category="cell">所有平台</block>
-  <block id="1803ada11bf259f48c3e5128f5ea1ea8" category="cell">64K</block>
-  <block id="70a2bedc26ba3f9e8ff763bbe4528aa9" category="cell">100% 顺序</block>
-  <block id="876de0005c2968fe744a5d908c8dc368" category="cell">100% 读取</block>
-  <block id="3d4994519cf6e2970803e591a2eaaf72" category="cell">平均吞吐量</block>
-  <block id="032f249c693456338d855d10f27f6ef9" category="cell">取决于 MEDITECH 主机的数量和每个 LUN 的大小：备份必须在 8 小时内完成。</block>
-  <block id="73a41a9a17b2136783951970c8d47e9b" category="cell">所需的备份持续时间</block>
-  <block id="73f4d98a8056701a96bdbdc8bb713606" category="cell">8 小时</block>
-  <block id="0c8347302a4f65c81a6424bd0b206014" category="section-title">适用于 MEDITECH 的 Cisco UCS 参考架构</block>
-  <block id="2838ecf1460e3faed7600694751acbf5" category="paragraph">基于 FlexPod 的 MEDITECH 的架构基于 MEDITECH ， Cisco 和 NetApp 的指导以及合作伙伴在与各种规模的 MEDITECH 客户合作方面的经验。该架构具有适应性，并会根据客户的数据中心战略应用 MEDITECH 的最佳实践：无论是小型还是大型，集中式，分布式还是多租户。</block>
-  <block id="593dda1691c45a02b66628770ab6f155" category="paragraph">在部署 MEDITECH 时， Cisco 设计的 Cisco UCS 参考架构直接符合 MEDITECH 的最佳实践。Cisco UCS 提供紧密集成的解决方案，可提供高性能，高可用性，可靠性和可扩展性，支持医生诊疗以及配备数千张床位的医院系统。</block>
-  <block id="0010dc3eb1baff4c94a9f64578d9dbc1" category="summary">为 MEDITECH 软件环境部署的 NetApp 存储将采用高可用性对配置使用存储控制器。必须通过 FC 协议将存储从两个控制器提供给 MEDITECH 数据库服务器。此配置可提供两个控制器的存储，以便在正常操作期间均匀平衡应用程序负载。</block>
-  <block id="62d71fc81eed59d807724da84e4a2375" category="doc">NetApp 配置</block>
-  <block id="696b82a0acddb8263a9976becf665f1c" category="paragraph">为 MEDITECH 软件环境部署的 NetApp 存储使用高可用性对配置中的存储控制器。必须通过 FC 协议将存储从两个控制器提供给 MEDITECH 数据库服务器。此配置可提供两个控制器的存储，以便在正常操作期间均匀平衡应用程序负载。</block>
-  <block id="0353522b39b87d54d40d3f09ec668851" category="section-title">ONTAP 配置</block>
-  <block id="e236d2cfbdf52964eb5067ff65cce34c" category="paragraph">本节介绍使用相关 ONTAP 命令的部署和配置过程示例。重点是展示如何配置存储以实施 NetApp 建议的存储布局，该布局使用高可用性控制器对。ONTAP 的主要优势之一是能够在不影响现有高可用性对的情况下进行横向扩展。</block>
-  <block id="646e71de883359482601b2b06a9a799b" category="section-title">ONTAP 许可证</block>
-  <block id="5129a41de9fce18241945fd23463b0f4" category="paragraph">设置存储控制器后，应用许可证以启用 NetApp 建议的 ONTAP 功能。MEDITECH 工作负载的许可证包括 FC ， CIFS 和 NetApp Snapshot ， SnapRestore ， FlexClone ， 和 SnapMirror 技术。</block>
-  <block id="f47ef1dfc707aeb613b910fc91216736" category="paragraph">要配置许可证，请打开 NetApp ONTAP 系统管理器，转至配置许可证，然后添加相应的许可证。</block>
-  <block id="c0d92106535b0a6ca456c7d632165815" category="paragraph">或者，也可以使用命令行界面运行以下命令来添加许可证：</block>
-  <block id="0dab9f614d7de2d86a6e3ab5423bb50e" category="section-title">AutoSupport 配置</block>
-  <block id="7fbcd8694391af3e6275f1afc5c3a386" category="paragraph">NetApp AutoSupport 工具可通过 HTTPS 向 NetApp 发送摘要支持信息。要配置 AutoSupport ，请运行以下 ONTAP 命令：</block>
-  <block id="1b53f92f00990c6c471e6164fa602b70" category="section-title">硬件辅助接管配置</block>
-  <block id="ee1189ad9cda8abda09a274301cc75d8" category="paragraph">在每个节点上，启用硬件辅助接管，以便在发生控制器故障的情况下尽可能地缩短启动接管所需的时间。要配置硬件辅助接管，请完成以下步骤：</block>
-  <block id="ed847163a896690ce0b7a8d27da51982" category="list-text">将以下 ONTAP 命令运行到 xxx 。</block>
-  <block id="e179cb797a677ddd812a50ce32b85a0b" category="paragraph">将配对地址选项设置为 `prod1-01` 的管理端口的 IP 地址。</block>
-  <block id="732dae3708577d4da8a73c0183761a79" category="list-text">将以下 ONTAP 命令运行到 xxx ：</block>
-  <block id="f11eb574378b1d960cffeace71c7e97a" category="paragraph">将配对地址选项设置为 `cluster1-02` 的管理端口的 IP 地址。</block>
-  <block id="bdb9430e5ec2f41dad5a9d19446f727c" category="list-text">运行以下 ONTAP 命令，在 `prod1-01` 和 `prod1-02` HA 控制器对上启用硬件辅助接管。</block>
-  <block id="7d46bb2062c567f799aeddc49dc98021" category="inline-link-macro">下一步：聚合配置。</block>
-  <block id="134469bd0eac2dda457dfabc79e2f7b7" category="paragraph"><block ref="134469bd0eac2dda457dfabc79e2f7b7" category="inline-link-macro-rx"></block></block>
   <block id="908d1090a048f73a870cac28af4673b0" category="summary">通过在 FlexPod 上运行医疗影像环境，您的医疗保健组织可以看到员工工作效率的提高以及资本和运营支出的降低。</block>
   <block id="ab9ec8ece67b4869a1277a5cec11aa53" category="paragraph">通过在 FlexPod 上运行医疗影像环境，您的医疗保健组织可以看到员工工作效率的提高以及资本和运营支出的降低。FlexPod 提供经过 Cisco 和 NetApp 战略合作伙伴关系严格测试的预先验证的融合基础架构。它经过专门设计和设计，可提供可预测的低延迟系统性能和高可用性。这种方法可为医疗成像系统的用户提供卓越的用户体验和最佳的响应时间。</block>
   <block id="3252a3f380f51ae84a2e01625dc92f07" category="paragraph">医疗成像系统的不同组件需要在 SMB/CIFS ， NFS ， ext4 和 NTFS 文件系统中存储数据。因此，您的基础架构必须通过 NFS ， SMB/CIFS 和 SAN 协议提供数据访问。NetApp 存储系统可从一个存储阵列支持这些协议。</block>
   <block id="92b53167d1c37a85e9aaf0ed41b4d145" category="paragraph">高可用性，存储效率，基于 Snapshot 副本的计划快速备份，快速还原操作，用于灾难恢复的数据复制以及 FlexPod 存储基础架构功能均可提供行业领先的数据存储和管理系统。</block>
-  <block id="5d4aecd999fa9ec2cd22286498ff4840" category="summary">要了解有关本文档中所述信息的更多信息，请参见以下文档或网站。</block>
-  <block id="0649297978f7ade694d6ac7f446ece73" category="paragraph">要了解有关本文档所述信息的更多信息，请参见以下文档或网站：</block>
-  <block id="11086c8909bf95223290f2179c7ddf41" category="list-text">采用 FC Cisco 验证设计的 FlexPod 数据中心。</block>
-  <block id="f66aa80afbed7bbc8fb6c866b2e3534a" category="inline-link"><block ref="f66aa80afbed7bbc8fb6c866b2e3534a" category="inline-link-rx"></block></block>
-  <block id="65bace6a98f5cff021bb667893f47d63" category="paragraph"><block ref="65bace6a98f5cff021bb667893f47d63" category="inline-link-rx"></block></block>
-  <block id="ca63672b086680d605104ec424f37cfa" category="list-text">《适用于 MEDITECH 环境的 NetApp 部署准则》。</block>
-  <block id="c8db37c6e610266cd33b58a2cbe77e95" category="inline-link"><block ref="c8db37c6e610266cd33b58a2cbe77e95" category="inline-link-rx"></block></block>
-  <block id="346891831c7ff1b2f151ee3281e55d98" category="paragraph"><block ref="ab28a2321c28e033f7f0eb595e098e7f" category="inline-link-rx"></block> （需要 NetApp 登录）</block>
-  <block id="d0779087628a1ab7da9dc653a5757419" category="list-text">《适用于 MEDITECH 环境的 NetApp 规模估算准则》。</block>
-  <block id="3438bdbce7dd9729c4a20b406a2c612a" category="inline-link">www.netapp.com/us/media/tr-4190.pdf</block>
-  <block id="b0c4711c76f1217685ef782457a2ff75" category="list-text">适用于 Epic EHR 部署的 FlexPod 数据中心</block>
-  <block id="c5b901b54f4b42b734cf626040cdee3b" category="inline-link">www.netapp.com/us/media/tr-4693.pdf</block>
-  <block id="e1adeca60ccd1261ff5b0b70e3db3fb9" category="paragraph"><block ref="e1adeca60ccd1261ff5b0b70e3db3fb9" category="inline-link-rx"></block></block>
-  <block id="0c1bfc5dd7560cbc1d273a29213d53d8" category="list-text">FlexPod 设计区域</block>
   <block id="597a1481ea86433b952f8c05e7cb2146" category="inline-link"><block ref="597a1481ea86433b952f8c05e7cb2146" category="inline-link-rx"></block></block>
   <block id="7a8753dcfe49b0403e1d0730f75a7ba6" category="paragraph"><block ref="7a8753dcfe49b0403e1d0730f75a7ba6" category="inline-link-rx"></block></block>
-  <block id="8a56ce396a53ed9aa78e576a478e4e44" category="list-text">使用 NetApp AFF ， vSphere 6.5U1 和 Cisco UCS Manager 的具有 FC 存储（ MDS 交换机）的 FlexPod DC</block>
-  <block id="c08e9daeaca42643aa32d5a361952e76" category="list-text">Cisco 医疗保健</block>
-  <block id="dc0075bc137b69ea27c2df86b5279861" category="inline-link"><block ref="dc0075bc137b69ea27c2df86b5279861" category="inline-link-rx"></block></block>
-  <block id="3dee516c8b9e426846b799cd0db597f3" category="paragraph"><block ref="3dee516c8b9e426846b799cd0db597f3" category="inline-link-rx"></block></block>
-  <block id="5132e9a6a7e542f50292ca4f9ecb4876" category="summary">适用于 MEDITECH 的 FlexPod 架构基于 MEDITECH ， Cisco 和 NetApp 的指导以及合作伙伴与各种规模的 MEDITECH 客户合作的经验。该架构具有适应性，并会根据您的数据中心战略，组织规模以及您的系统是集中式系统，分布式系统还是多租户系统，应用 MEDITECH 的最佳实践。</block>
-  <block id="1afa74da05ca145d3418aad9af510109" category="doc">设计</block>
-  <block id="3a529c2562b54a90dc41ee296a44ae53" category="paragraph">正确的存储架构可通过总 IOPS 大小来确定。性能本身并不是唯一的因素，您可能会根据其他客户需求决定使用更大的节点数。使用 NetApp 存储的优势在于，您可以根据需求的变化轻松无中断地扩展集群。您也可以从集群中无中断删除节点，以重新利用设备或在设备更新期间使用。</block>
-  <block id="8f7444d0d0cc6e6d860393fe4967b023" category="paragraph">以下是 NetApp ONTAP 存储架构的一些优势：</block>
-  <block id="de07d765f6ebe92f6b44fbe149049411" category="list-text">* 轻松，无中断地纵向扩展和横向扩展。 * 您可以使用 ONTAP 无中断操作升级，添加或删除磁盘和节点。您可以从四个节点开始，然后移至六个节点或无中断升级到更大的控制器。</block>
-  <block id="1001b3f841a93eaca4404e1806f66cff" category="list-text">* 存储效率。 * 利用重复数据删除， NetApp FlexClone ，实时压缩，实时数据缩减，精简复制， 精简配置和聚合重复数据删除。通过 FlexClone 功能，您几乎可以即时创建克隆，以支持备份和测试环境更新。只有在进行更改后，这些克隆才会占用更多存储。</block>
-  <block id="527d8360422f7da2c119bd49b7c9fac4" category="list-text">* 灾难恢复卷影数据库服务器。 * 灾难恢复卷影数据库服务器是业务连续性策略的一部分（用于支持存储只读功能，并可能配置为存储读 / 写实例）。因此，第三个存储系统的放置和规模估算通常与生产数据库存储系统中的放置和规模估算相同。</block>
-  <block id="50f1265782a4fb67c3350282c7b35665" category="list-text">* 数据库一致性（需要考虑一些因素）。 * 如果您使用 NetApp SnapMirror 备份副本来保持业务连续性，请参见<block ref="6f3c1dad0e99b4c05e6145259cddeecb" category="inline-link-rx"></block>。</block>
   <block id="196cc0216fd769aaf46f47da965f30f0" category="section-title">存储布局</block>
-  <block id="929e597940660eabb86daf0cffc8eefa" category="section-title">用于 MEDITECH 主机的专用聚合</block>
-  <block id="87c5861fbc8a6d37ccc020852eb541d3" category="paragraph">要满足 MEDITECH 的高性能和高可用性要求，第一步是为 MEDITECH 环境正确设计存储布局，以便将 MEDITECH 主机生产工作负载隔离到专用的高性能存储上。</block>
-  <block id="ff2b5195b77b3df7287edba655cbb2fa" category="paragraph">应在每个存储控制器上配置一个专用聚合，用于存储 MEDITECH 主机的程序，词典和数据文件。为了消除其他工作负载使用相同磁盘并影响性能的可能性，不会从这些聚合配置任何其他存储。</block>
-  <block id="143214b07198b6a83947e985a0405b59" category="admonition">为其他 MEDITECH 服务器配置的存储不应放置在 MEDITECH 主机所使用的 LUN 的专用聚合上。您应将其他 MEDITECH 服务器的存储放置在一个单独的聚合上。有关其他 MEDITECH 服务器的存储要求，请参见《硬件配置建议》（针对新部署）和《硬件评估任务》（针对现有部署）文档。您可以通过 MEDITECH 系统集成商或您的 MEDITECH 技术客户经理（ Technical Account Manager ， TAM ）从 MEDITECH 获取这些文档。NetApp 解决方案工程师可以咨询 NetApp MEDITECH 独立软件供应商（ ISV ）团队，以便正确，完整地配置 NetApp 存储规模估算。</block>
-  <block id="5ec077763beb07ec7b3caee24df2753f" category="section-title">将 MEDITECH 主机工作负载均匀分布在所有存储控制器上</block>
-  <block id="5e23cdd842e00e0a9bb3c425637f1285" category="paragraph">NetApp FAS 和 AFF 系统部署为一个或多个高可用性对。NetApp 建议您在每个存储控制器之间均匀分布 MEDITECH expanse 和 6.x 工作负载，以便在每个存储控制器上应用计算，网络和缓存资源。</block>
-  <block id="0e50589c988bc0bcf4ada368dc5b12fa" category="paragraph">请按照以下准则在每个存储控制器之间均匀分布 MEDITECH 工作负载：</block>
-  <block id="2915d3de2090a5457b3440fa67fcac2b" category="list-text">如果您知道每个 MEDITECH 主机的 IOPS ，则可以通过确认每个控制器从 MEDITECH 主机提供的 IOPS 数量相似，在所有存储控制器之间均匀分布 MEDITECH expanse 和 6.x 工作负载。</block>
-  <block id="7557576beac97047c02cd9458cc13e2b" category="list-text">如果您不知道每个 MEDITECH 主机的 IOPS ，则仍然可以在所有存储控制器之间均匀分布 MEDITECH expanse 和 6.x 工作负载。要完成此任务，请确认 MEDITECH 主机的聚合容量均匀分布在所有存储控制器上。这样，专用于 MEDITECH 主机的所有数据聚合中的磁盘数量都是相同的。</block>
-  <block id="359a004d41cf45216d8fb8292aadfde4" category="list-text">使用相似的磁盘类型和相同的 RAID 组为两个控制器创建存储聚合，以便平均分布工作负载。在创建存储聚合之前，请联系 NetApp 认证集成商。</block>
-  <block id="085e0f80441a5818e62d9ba490f54ece" category="admonition">据 MEDITECH 报告， MEDITECH 系统中的两个主机生成的 IOPS 高于其余主机。这两个主机的 LUN 应放置在不同的存储控制器上。在部署系统之前，您应在 MEDITECH 团队的协助下确定这两台主机。</block>
-  <block id="9a1a3c56fc3de361b3ded2c30d3b2947" category="section-title">存储放置</block>
-  <block id="3c4c443f5121b24b1f98b86b8bc96adb" category="section-title">MEDITECH 主机的数据库存储</block>
-  <block id="eb58e7d95bc81fab0dd83008f2820fc3" category="paragraph">MEDITECH 主机的数据库存储将作为 NetApp FAS 或 AFF 系统中的块设备（即 LUN ）提供。LUN 通常作为 E 驱动器挂载到 Windows 操作系统。</block>
-  <block id="a585779a985d251f0cd2cba2ba0096b3" category="section-title">其他存储</block>
-  <block id="459b1799fdef4a59e9dce8acc6306a1f" category="paragraph">MEDITECH 主机操作系统和数据库应用程序通常会在存储上生成大量 IOPS 。如果需要， MEDITECH 主机 VM 及其 VMDK 文件的存储配置会被视为独立于满足 MEDITECH 性能阈值所需的存储。</block>
-  <block id="6df9208c930e75d10c7b27664ff07776" category="paragraph">为其他 MEDITECH 服务器配置的存储不应放置在 MEDITECH 主机使用的 LUN 的专用聚合上。将其他 MEDITECH 服务器的存储置于单独的聚合上。</block>
-  <block id="84686e489de7dd8ab2aadf2b5803b6b7" category="section-title">存储控制器配置</block>
   <block id="05807e454c19f244770adae059b3c330" category="section-title">高可用性</block>
-  <block id="7c9039889ab65ef43190d575bb4c7997" category="paragraph">要缓解控制器故障的影响并实现存储系统无中断升级，您应在高可用性模式下为存储系统配置高可用性对中的控制器。</block>
-  <block id="f3e7b0a2571c05c786ce469c46b4d36e" category="paragraph">在高可用性控制器对配置中，磁盘架应通过多条路径连接到控制器。此连接可防止单路径故障，从而提高存储故障恢复能力，并可在发生控制器故障转移时提高性能一致性。</block>
-  <block id="cd9f59a504c7fe36c7465e5ceb0ef87f" category="section-title">存储控制器故障转移期间的存储性能</block>
-  <block id="1ee99853d0e27ebf34378dff82d027b3" category="paragraph">对于在高可用性对中配置了控制器的存储系统，如果发生控制器故障的可能性不大，则配对控制器将接管发生故障的控制器的存储资源和工作负载。请务必咨询客户，以确定发生控制器故障时必须满足的性能要求，并相应地调整系统大小。</block>
-  <block id="c20a17d73866b11f371b2894a06d0662" category="section-title">硬件辅助接管</block>
-  <block id="f6c9afd46c042ac0a6d9598dd97c0c8c" category="paragraph">NetApp 建议您在两个存储控制器上启用硬件辅助接管功能。</block>
-  <block id="1cade868c840b804f2dcdb92562601db" category="paragraph">硬件辅助接管旨在最大程度地缩短存储控制器故障转移时间。它使一个控制器的远程 LAN 模块或服务处理器模块能够以比检测信号超时触发器更快的速度向其配对节点通知控制器故障，从而缩短故障转移所需的时间。默认情况下，高可用性配置中的存储控制器会启用硬件辅助接管功能。</block>
   <block id="774a065cb3548cc61fb0ec3bc1494fbe" category="inline-link">ONTAP 9 文档中心</block>
-  <block id="78b35308b723a3b1af571471a6c500ab" category="paragraph">有关硬件辅助接管的详细信息，请参见<block ref="acaccc868f6222e64c0f11237becafd9" category="inline-link-rx"></block>。</block>
-  <block id="3d0bf05155f3dfd0eeccf9e953d46156" category="section-title">Disk type</block>
-  <block id="8711af52b6f8ef102691adb159c5465a" category="paragraph">为了满足 MEDITECH 工作负载的低读取延迟要求， NetApp 建议您对专用于 MEDITECH 主机的 AFF 系统上的聚合使用高性能 SSD 。</block>
-  <block id="7bed8d5c872a4b04be96a51434f58667" category="paragraph">NetApp 提供高性能 AFF 阵列，以满足需要高吞吐量，具有随机数据访问模式和低延迟要求的 MEDITECH 工作负载的需求。对于 MEDITECH 工作负载，与基于 HDD 的系统相比， AFF 阵列具有性能优势。闪存技术与企业数据管理相结合，可在三个主要方面提供优势：性能，可用性和存储效率。</block>
-  <block id="9b4b208365ad07b36658adef98d477e8" category="section-title">NetApp 支持工具和服务</block>
-  <block id="7a1fabc75e2bb969a80ba5f7123be4e5" category="paragraph">NetApp 提供了一整套支持工具和服务。应在 NetApp AFF/FAS 系统上启用和配置 NetApp AutoSupport 工具，以便在发生硬件故障或系统配置不当时回电。致电主页可提醒 NetApp 支持团队及时修复任何问题。NetApp Active IQ 是一款基于 Web 的应用程序，它基于您的 NetApp 系统中的 AutoSupport 信息，可提供预测性和主动式洞察力，帮助提高可用性，效率和性能。</block>
-  <block id="51f4112cb2d63d46680fde0358a5c441" category="section-title">FlexPod 设计区域</block>
-  <block id="74cd4baf4935b804c7b41efa8252a5dc" category="section-title">NetApp 技术报告</block>
-  <block id="2702d8e9b5a6f4444fe8c4713a33e624" category="list-text">TR-3929 ：《重新分配最佳实践指南》</block>
-  <block id="c74501d85312f910195088df9c776a98" category="list-text">TR-3987 ：适用于 InterSystems Cach 的 Snap Creator Framework 插件</block>
-  <block id="85d4f8c7b3f03a6761d13807079142fe" category="list-text">TR-4017 ：《 FC SAN 最佳实践》</block>
-  <block id="eb75aeb3b4b2b9734ba3e52f5483f0b2" category="section-title">ONTAP 文档</block>
   <block id="c9617ae303d0bce89d13bebecca2ea1b" category="inline-link"><block ref="c9617ae303d0bce89d13bebecca2ea1b" category="inline-link-rx"></block></block>
   <block id="bf78332b32395471af72955679895502" category="paragraph"><block ref="bf78332b32395471af72955679895502" category="inline-link-rx"></block></block>
-  <block id="faa9b209c7df426f5e60bb9bdc8dfb09" category="list-text">适用于 vSphere 的 Virtual Storage Console （ VSC ）文档</block>
   <block id="6cd10930a4fa296fb47f14826dacbe19" category="inline-link"><block ref="6cd10930a4fa296fb47f14826dacbe19" category="inline-link-rx"></block></block>
   <block id="02ac65abd5347fb1bd8118ec873ab81b" category="paragraph"><block ref="02ac65abd5347fb1bd8118ec873ab81b" category="inline-link-rx"></block></block>
-  <block id="c11ae620bbb94d6dc060c801fab49d56" category="list-text">适用于 ESXi 的 FC 快速指南</block>
-  <block id="92a316e39c62e388cd3025d820669829" category="list-text">所有 ONTAP 9.3 文档</block>
-  <block id="5b54d138cff1c5c86e5799b875279b81" category="list-text">软件设置指南</block>
-  <block id="7e6d4063c199f76c46fecd71f3fd63f9" category="list-text">磁盘和聚合高级指南</block>
-  <block id="a76193f5d9397d9c49ca283a20ccf649" category="list-text">《 SAN 管理指南》</block>
-  <block id="8cb9ee34636093f5ba25008ebc7b7287" category="list-text">《 SAN 配置指南》</block>
-  <block id="c3d70d54f560e8e0f0c366ec0087e194" category="list-text">《适用于 Windows 的 FC 配置快速指南》</block>
-  <block id="2fc892a07617a9dc5ce581f242865c48" category="list-text">《 FC SAN 优化的 AFF 设置指南》</block>
-  <block id="d3045df3df90cab89f90d0d37c532251" category="list-text">《 High-Availability 配置指南》</block>
-  <block id="a08d0ca7bd8524176f9e086cd68875ee" category="list-text">《逻辑存储管理指南》</block>
-  <block id="ec49151b952b3d31a6798d4806d04b16" category="list-text">性能管理高级指南</block>
-  <block id="c2549eb1aedeb146d603f141e0cc0ffa" category="list-text">《 SMB/CIFS 配置高级指南》</block>
-  <block id="a0a59362e21ec3c80e71e3d02aa6a8b8" category="list-text">SMB/CIFS 参考</block>
-  <block id="9739187f50db857f27b204b12e6d365e" category="list-text">数据保护高级指南</block>
-  <block id="81082b4a9d156a771a100d0e4e8fc15d" category="list-text">《数据保护磁带备份和恢复指南》</block>
   <block id="58c291db828d7a4127186176941d0d5b" category="list-text">《 NetApp 加密高级指南》</block>
-  <block id="08a140811c847d2c6e0ea3628a3f4287" category="list-text">《网络管理指南》</block>
-  <block id="03a44c9aa18c11dcca89fdef4aafbe0f" category="list-text">命令：《 ONTAP 9.3 手册页参考》</block>
-  <block id="b814e78bcf0a01ed4aae9eff1d4c136c" category="section-title">《 Cisco Nexus ， MDS ， Cisco UCS 和 Cisco UCS Manager 指南》</block>
-  <block id="ec933c934bea1d3e878210c936167726" category="list-text">Cisco UCS 服务器概述</block>
   <block id="dccb0f527753e20a1f5236458d03c64d" category="inline-link"><block ref="dccb0f527753e20a1f5236458d03c64d" category="inline-link-rx"></block></block>
   <block id="9b259f004a6bc0470e95eacbff8a3232" category="paragraph"><block ref="9b259f004a6bc0470e95eacbff8a3232" category="inline-link-rx"></block></block>
-  <block id="d2686ba543c609968f6c7c9116a68e00" category="list-text">Cisco UCS 刀片式服务器概述</block>
-  <block id="3e8f78de9bcbcb50a70c1dd6b1aa67de" category="list-text">Cisco UCS B200 M5 产品规格</block>
-  <block id="8818f2fb023bbe1b5e3f07d2cfd9cffb" category="list-text">Cisco UCS Manager 概述</block>
-  <block id="0baa6249e3b620f94845e5f9d3ba2ea4" category="list-text">Cisco Nexus 9300 平台交换机</block>
-  <block id="df915ca44dfbf766140548415b4ed697" category="summary">MEDITECH 应用程序涵盖多个模块和组件。</block>
-  <block id="463ab6fdbf0e97d2b9ffd8444397e952" category="doc">Meditech 模块和组件</block>
-  <block id="29bb9635229fa03ce92a9f922a4cbdfa" category="paragraph">MEDITECH 应用程序涵盖多个模块和组件。下表列出了这些模块所涵盖的功能。有关追加信息设置和部署这些模块的信息，请参见 MEDITECH 文档。</block>
-  <block id="86408593c34af77fdd90df932f8b5261" category="cell">功能</block>
-  <block id="a1fa27779242b4902f7ae3bdd5c6d508" category="cell">Type</block>
   <block id="b9cd835f40ceb917fa46acc87cc5b65e" category="list-text">Web 服务器</block>
-  <block id="5f17178c8327716305b050da5b277062" category="list-text">实时应用程序服务器（ Wi — Web 集成）</block>
-  <block id="3d0feb5c5e52be43198fc639e5502fdb" category="list-text">测试应用程序服务器（ Wi ）</block>
-  <block id="ee591f0e5e3f88ec3fe6e93a12787d3d" category="list-text">SAML 身份验证服务器（ Wi ）</block>
-  <block id="e99b14547b17ed448a4956e1fb0713fa" category="list-text">SAML 代理服务器（ Wi ）</block>
-  <block id="bc790b8c207967f4f8b4bf4784316aa9" category="list-text">数据库服务器</block>
   <block id="cba4f4cee5c6a3e6d8be8da68fa1234e" category="cell">基础架构</block>
-  <block id="43dabf9f5e49ef397d642de52e2b0b35" category="list-text">文件服务器</block>
-  <block id="216ec47eea0edf984d15aa2bb5f1205d" category="list-text">后台作业客户端</block>
-  <block id="c6f59a524c95d4d479e502f2c154b7bf" category="list-text">连接服务器</block>
-  <block id="8a28d23356bcd8794874eee8119fc181" category="list-text">事务服务器</block>
-  <block id="21465d85254ebe7bd9b87847135fe241" category="cell">扫描和归档</block>
-  <block id="c296f1caee0c086715f4ef7fabc1ec4c" category="list-text">映像服务器</block>
-  <block id="be655723ebfc0d3100e80b3a6e0586ca" category="cell">数据存储库</block>
-  <block id="a71f76c3256e4c206a4841d8eb0fed35" category="list-text">SQL 服务器</block>
-  <block id="9f0ce84dbacb6cdeed565d02f59d8a6f" category="cell">业务和临床分析</block>
-  <block id="5dee2d427da8ce17a652d0c24462c535" category="list-text">实时智能服务器（ BCA ）</block>
-  <block id="363fd0788782fc1a58e993e92020702b" category="list-text">测试智能服务器（ BCA ）</block>
-  <block id="d6b5b58484ea48442b2a6f23e00aab4e" category="list-text">数据库服务器（ BCA ）</block>
-  <block id="e44a2f65dc5da0f283effe87d7a363ec" category="cell">家庭护理</block>
-  <block id="ecec24f4f43c65b4fd26453c85371aa2" category="list-text">远程站点解决方案</block>
-  <block id="b002a564ceda05dbdf012a48a145d0d3" category="list-text">打印</block>
-  <block id="52585edf5fd6d7f79c59b2aea5fe55fe" category="list-text">现场设备</block>
-  <block id="495c55c275d09a00aaeb7482365ab300" category="list-text">扫描</block>
-  <block id="dfe2e0a9b2f6d20030e1400eb60b6613" category="list-text">托管站点要求</block>
-  <block id="7b5ab8d4f5391ce5b1dfdc1f7332745e" category="list-text">防火墙配置</block>
-  <block id="db5eb84117d06047c97c9a0191b5fffe" category="cell">支持</block>
-  <block id="f1e8a2eed3b141eb0926997b828ab7e5" category="list-text">后台作业客户端（ CAL —客户端访问许可证）</block>
-  <block id="78881ff524da6199ae5d9d41f16fff10" category="cell">用户设备</block>
-  <block id="6732e04dc98598f20626af33431614c0" category="list-text">平板电脑</block>
-  <block id="2f3021b185b4a90d0ecd40cf21608593" category="list-text">固定设备</block>
-  <block id="78c68b98b36d67cd7dda0eb2e9650978" category="list-text">实时网络打印服务器（必需；可能已存在）</block>
-  <block id="4c68288191d28352c3888aa6907897fc" category="list-text">测试网络打印服务器（必需；可能已存在）</block>
-  <block id="0e0a6d957ba6bdd9f2713887c2be700e" category="cell">第三方要求</block>
-  <block id="e1e68f9115a50d4bd1ed618ac355dc80" category="list-text">首款 Databank （ FDB ）医疗知识框架 v4.3</block>
   <block id="5c0479daa34c15af73497280355d92d8" category="summary">借助 FlexPod ，您可以从一个平台获得一个支持 FC ， FCoE ， iSCSI ， NFS/pNFS ， SMB/CIFS 等的平台。人员，流程和技术是 FlexPod 设计和构建的基因的一部分。FlexPod 自适应 QoS 可在同一底层 FlexPod 平台上支持多个任务关键型临床系统，从而有助于细分部门孤岛。</block>
   <block id="f08fd0943ee6559de692a029806e0218" category="doc">TR-4865 ：适用于医疗成像的 FlexPod</block>
   <block id="a0d6631cb77e6264fd0c8966e84e7074" category="paragraph">NetApp 公司 Jaya Kishore Esanakula 和 Atul Bhalodia</block>
@@ -2306,225 +1924,27 @@
   <block id="59de9ec879d7417b33e0b24e78ec69e3" category="list-text">* 集中控制和可见性。 * 从一个位置管理整个 vSphere 基础架构。</block>
   <block id="693c62c365d057ed5baa97cb97c27aeb" category="list-text">* 主动式优化。 * 分配，优化和迁移资源以实现最高效率。</block>
   <block id="13dbced3a10c1ef2d5b0f86d275d41ca" category="list-text">* 管理。 * 使用功能强大的插件和工具简化管理并扩展控制。</block>
-  <block id="8706a608269525ea85715bebe17b516c" category="summary">要配置基础架构，必须具备以下网络连接，存储连接和软件。</block>
-  <block id="b5c33e8d4c72bd01df88b71ed795ad76" category="doc">基础架构配置</block>
-  <block id="66a0461d2d8cd670baf00d1c2bb16adb" category="section-title">网络连接</block>
-  <block id="a8ffc79000d3d7a3e7abcb70ac038eb5" category="paragraph">在配置基础架构之前，必须建立以下网络连接：</block>
-  <block id="83c8820e467cb2209322db57989749dd" category="list-text">使用端口通道和虚拟端口通道（ Virtual Port Channel ， vPC ）的链路聚合可在整个环境中使用，从而实现更高带宽和高可用性的设计：</block>
-  <block id="9c455359b0d1ae158781658d68869bcf" category="list-text">VPC 用于 Cisco FI 和 Cisco Nexus 交换机之间。</block>
-  <block id="5d8aa8d7b1f76dd13a801de249f97139" category="list-text">每个服务器都具有虚拟网络接口卡（ Virtual Network Interface Card ， vNIC ），并可通过冗余连接到统一网络结构。在 CLI 之间使用 NIC 故障转移来实现冗余。</block>
-  <block id="7c9486e10170333a0c6a2ecd0f344e1d" category="list-text">每个服务器都具有虚拟主机总线适配器（ vHBA ），并与统一网络结构建立冗余连接。</block>
-  <block id="52a678884d4a0e3d2cf38cc3533ab29a" category="list-text">Cisco UCS FI 会按照建议配置为终端主机模式，以便将 vNIC 动态固定到上行链路交换机。</block>
-  <block id="4fe4db76a183388226e19c22a2aca819" category="section-title">存储连接</block>
-  <block id="6c38311d0ab32c44977112d0ad5370ee" category="paragraph">在配置基础架构之前，必须建立以下存储连接：</block>
-  <block id="925d95a3a7509918a714b29e6d586eb2" category="list-text">存储端口接口组（ ifgroups ， vPC ）</block>
-  <block id="513ba55e63249d65fb9fd8a447f2eb94" category="list-text">连接到交换机 N9K-A 的 10 Gb 链路</block>
-  <block id="62fa310bcb5781d0aec09ba0786b4f12" category="list-text">连接到交换机 N9K-B 的 10 Gb 链路</block>
-  <block id="d1868642e130fc2ea993681c32847c4d" category="list-text">带内管理（主动 - 被动绑定）：</block>
-  <block id="5767ec12b7e6f56ea7d503a01d6c93e8" category="list-text">1 GB 到管理交换机 N9K-A 的链路</block>
-  <block id="329de6797eba587d97396a7f3d1cff11" category="list-text">1 GB 到管理交换机 N9K-B 的链路</block>
-  <block id="c650a9817d0eecbb68b3df5fb8d1bb60" category="list-text">通过 Cisco MDS 交换机实现 32 Gb FC 端到端连接；配置了单个启动程序分区</block>
-  <block id="872fb1864b11b850b34f8a532b22f550" category="list-text">FC SAN 启动可完全实现无状态计算；服务器从 AFF 存储集群上托管的启动卷中的 LUN 启动</block>
-  <block id="26954310ff7b20e5a0bd47bbe14c4967" category="list-text">所有 MEDITECH 工作负载都托管在 FC LUN 上，这些 LUN 分布在存储控制器节点上</block>
-  <block id="c9f89040064c44edc185a85c06698623" category="section-title">主机软件</block>
-  <block id="d959499416a0259a874f5ed8650fc54a" category="paragraph">必须安装以下软件：</block>
-  <block id="28c87877b8d2484c4626b8f09bb2b777" category="list-text">ESXi 安装在 Cisco UCS 刀片式服务器上</block>
-  <block id="d5779cae60f50330bed6968b43b0fb15" category="list-text">已安装并配置 VMware vCenter （已在 vCenter 中注册所有主机）</block>
-  <block id="81e1f7487a869ab974590942bdb9b0f5" category="list-text">已在 VMware vCenter 中安装并注册 VSC</block>
-  <block id="0357f41804a8af5e9e305d4d99f4ae5d" category="list-text">已配置 NetApp 集群</block>
-  <block id="64229abd3ca3ca9d3c415bd5d74986e8" category="inline-link-macro">接下来： Cisco UCS 刀片式服务器和交换机配置。</block>
-  <block id="b9292a43f7e0ce7642d7cc6b0663f721" category="paragraph"><block ref="b9292a43f7e0ce7642d7cc6b0663f721" category="inline-link-macro-rx"></block></block>
-  <block id="1a7168000dbdf43131deaba178369097" category="summary">本节将讨论不同大小的存储架构的示例材料清单。</block>
-  <block id="2bbbd38af7120fd115a6addb8620d27d" category="doc">小型，中型和大型架构的技术规格</block>
-  <block id="5555e0390dda8fd205733a3e7e4fb06c" category="section-title">小型，中型和大型架构的材料清单。</block>
-  <block id="5cf4a51feff902eb379de40ff8ed34f5" category="inline-link">TR-4036 ： FlexPod 技术规格</block>
-  <block id="0727f1ef06b07d817f26a0590fe252ec" category="paragraph">FlexPod 设计是一种灵活的基础架构，包含许多不同的组件和软件版本。使用 ...<block ref="047a979ac548254afa5d2af995fe2a74" category="inline-link-rx"></block> 作为汇编有效 FlexPod 配置的指南。下表中的配置是 FlexPod 的最低要求，只是一个示例。可以根据不同环境和使用情形的需要扩展每个产品系列的配置。</block>
-  <block id="659421e16a6bc3778ab220c742138ef4" category="paragraph">对于此规模估算练习， " 小型 " 对应于 3 类 MEDITECH 环境， " 中型 " 对应于 5 类， " 大型 " 对应于 6 类。</block>
-  <block id="419f3742e6de8e0ec4b22cce005e7630" category="cell">平台</block>
-  <block id="1f9c2b20838eb5764f87e215970be3d0" category="cell">一个 NetApp AFF A220 全闪存存储系统 HA 对</block>
-  <block id="f540798dd0f4f69d082f44fa9e3c5469" category="cell">一个 NetApp AFF A220 HA 对</block>
-  <block id="556c56054a5ee2c1f1685b10e067c5f8" category="cell">一个 NetApp AFF A300 全闪存存储系统 HA 对</block>
-  <block id="0629603d05db387d1253ef68ff3c1ead" category="cell">磁盘架</block>
-  <block id="4e9cb2d77eb70a12d90b9e7cd85625a0" category="cell">9 TB x 3.8 TB</block>
-  <block id="9ce9132d630db477c9ea65768aa741e7" category="cell">13 TB x 3.8 TB</block>
-  <block id="51e1d277b2759170945967697f7af60f" category="cell">19 TB x 3.8 TB</block>
-  <block id="4e6e9ac8d0e531cedab5592653aee813" category="cell">Meditech 数据库大小</block>
-  <block id="1509b3eca6beaf80eec6028fcec1b6b0" category="cell">3TB-12 TB</block>
-  <block id="5bd061e6f944667c705b71ff6e0ae66a" category="cell">17 TB</block>
-  <block id="04cade24ef48dabdd5cc45f8ea6ae0bb" category="cell">大于 30 TB</block>
-  <block id="8c4fe6ee8179d9bdad3bb9cb5342a95b" category="cell">Meditech IOPS</block>
-  <block id="56b5f3582e3df98310cab3b86f5a9e1a" category="cell">少于 22 ， 000 IOPS</block>
-  <block id="41a74c11582f08d8bf2b5203b475e20c" category="cell">超过 25 ， 000 IOPS</block>
-  <block id="f742e76935b186a9144ae49968e40587" category="cell">超过 32 ， 000 个 IOPS</block>
-  <block id="aebb627cd726b3cef553d204f38a30e1" category="cell">总 IOPS</block>
-  <block id="fb4ea06503aa04a60eb1988bd67ecbde" category="cell">2000 年</block>
-  <block id="050718f543c7b2b6159a2f150fa6e93e" category="cell">27000</block>
-  <block id="ce28c97dcd8381b7d5a093ffd1deae38" category="cell">35000</block>
-  <block id="65e65c8ab0d8609ce12fc68a03cb8e00" category="cell">原始</block>
-  <block id="a96bac4018e3f59e1b6ab5f1c3f03326" category="cell">34.2 TB</block>
-  <block id="618bf1d0a7b3556944e5580ba00e2cf3" category="cell">49.4TB</block>
-  <block id="3159ad88a6b1512b45331b595f4823c3" category="cell">68.4TB</block>
-  <block id="b3e1f4c67ee07a73dcdaff1cf34f2640" category="cell">可用容量</block>
-  <block id="d1d30d8e3ab837098c84c159f2386e4c" category="cell">18.53 TiB</block>
-  <block id="d50c8f765634f573da0ad30699eb08e8" category="cell">27.96 TiB</block>
-  <block id="2e27a1d801dd9c4e53bc58cd9765f81a" category="cell">33.82 TiB</block>
-  <block id="bfdc868e2584931fb95333f1d25ac043" category="cell">有效容量（ 2 ： 1 存储效率）</block>
-  <block id="6df824d222882a42605b7750a3093946" category="cell">55.6 TiB</block>
-  <block id="eb76ca74ba935f2f3321f3262f520f43" category="cell">83.89 TiB</block>
-  <block id="479095ff00797ae9cef6065b755d5377" category="cell">101.47 TiB</block>
-  <block id="953349d2b625915a896344e7ac10d1a4" category="admonition">某些客户环境可能会同时运行多个 MEDITECH 生产工作负载，或者 IOPS 要求可能更高。在这种情况下，请与 NetApp 客户团队合作，根据所需的 IOPS 和容量对存储系统进行规模估算。您应该能够确定适合工作负载的平台。例如，有些客户成功地在一个 NetApp AFF A700 全闪存存储系统 HA 对上运行了多个 MEDITECH 环境。</block>
-  <block id="532fcbc0fac474e47108beb3554358e1" category="paragraph">下表显示了 MEDITECH 配置所需的标准软件。</block>
   <block id="aa76f43f5e0552119cc8d5313c67296e" category="cell">产品系列</block>
   <block id="16cd0d1def5d317a8d3a4a8aa7238c93" category="cell">版本或版本</block>
   <block id="3ec365dd533ddb7ef3d1c111186ce872" category="cell">详细信息</block>
   <block id="253b40ae359ba25b56231803430c4873" category="cell">ONTAP</block>
-  <block id="9fa0d8a13358bbbba5ef3cb499eba1bb" category="cell">ONTAP 9.4 常规可用性（ GA ）</block>
-  <block id="2c13e3a7606a031270bb8954f594c5ca" category="cell">Cisco UCSM 4.x</block>
-  <block id="162d63502f58bc90b9af35b2cc71be3a" category="cell">当前建议版本</block>
-  <block id="adb9ea3a104b7b3adf2e9f5b4cbd9547" category="cell">Cisco Nexus 以太网交换机</block>
   <block id="8eed955ea7f222483dee5f7e9d0781e1" category="cell">7.0 （ 3 ） i7 （ 6 ）</block>
   <block id="7dcb451ba840bd946bd9a090e766db9f" category="cell">Cisco FC ： Cisco MDS 9132T</block>
-  <block id="20108c15b7a815d1b2682ed2998edefd" category="cell">8.3 （ 2 ）</block>
-  <block id="7b340abd22dc2ee7095bfbc0119449d9" category="cell">VMware vSphere ESXi 6.7</block>
-  <block id="4977b4bad969ab7245013c3ed9dcd356" category="cell">虚拟机（ VM ）</block>
-  <block id="4083fee85864d55c66d5e0b21a7928b3" category="cell">Windows 2016</block>
   <block id="87b1c702f168ed4c08d3accfce8b8684" category="cell">虚拟机管理程序管理系统</block>
-  <block id="b771edfecd5a5885e4a656ead98f996d" category="cell">VMware vCenter Server 6.7 U1 （ VCSA ）</block>
   <block id="edf4e14d0fe662d81b00f7a3dc330cec" category="cell">NetApp 虚拟存储控制台（ VSC ）</block>
-  <block id="c7aad5d749b5d2230a814640a9b99a95" category="cell">VSC 7.0P1</block>
   <block id="805c9517e95d3e9efc4b46738ab825fc" category="cell">NetApp SnapCenter</block>
-  <block id="e034769a54038e2b37e7ea8bd3cbad99" category="cell">SnapCenter 4.0</block>
-  <block id="aa8dfb3494ca31d7447cc935de18d98d" category="cell">4.x</block>
-  <block id="711b19f623a6ca20ba939117c8c5ac10" category="paragraph">下表显示了一个小型（第 3 类）配置示例—基础架构组件。</block>
   <block id="dd9574fbe58afbfead03be1225953780" category="cell">数量和型号</block>
-  <block id="f6639f365d9feec5a774eac2eec88a51" category="cell">Cisco UCS 5108 机箱</block>
-  <block id="b5fa3f59e9895535624785f4f1a25d44" category="cell">最多支持八个半宽刀片式服务器或四个全宽刀片式服务器。随着服务器需求的增长，请添加机箱。</block>
-  <block id="5fb69e1e3030007765bb105b6e456d00" category="cell">Cisco 机箱 I/O 模块</block>
-  <block id="d1c172c7f5dd026e032bc9342f998497" category="cell">2 x 2208</block>
-  <block id="5aac3552dfea1aeb5852aabe10869f3a" category="cell">8 GB x 10 GB 上行链路端口</block>
   <block id="fce629feab35fd0737cdc08e7cc517c7" category="cell">Cisco UCS 刀片式服务器</block>
-  <block id="ce731fd0b31d76d4d6b168af3d5fac4e" category="cell">4 个 B200 M5</block>
-  <block id="721956a2e4f0f5c29113ab6c28857d6c" category="cell">每个系统具有 2 个 14 核， 2.6 GHz 或更高时钟速度以及 384 GB BIOS 3.2 （ 3# ）</block>
-  <block id="76fc667e1d7c028eca67b72665769e7e" category="cell">Cisco UCS 虚拟接口卡</block>
-  <block id="b424654e78d87b0c7c2024ed458b629b" category="cell">4 个 UCS 1440</block>
-  <block id="3c36cd757307a6742384ceacf069acc4" category="cell">VMware ESXi fNIC FC 驱动程序： 1.6.0.47 VMware ESXi eNIC 以太网驱动程序： 1.0.27.0 （请参见互操作性表：<block ref="8baf564a49c5ee0603f4ea07b5ce4355" category="inline-link-rx"></block></block>
-  <block id="1112a5d329db5c0fe3083695775e310f" category="cell">2 个 Cisco UCS 互联阵列（ FI ）</block>
-  <block id="e084ae2b0154c1d7e04aed0b5ec0ce19" category="cell">2 个 UCS 6454 FI</block>
-  <block id="dc899122d86f2dcb47167e90cb095d4a" category="cell">第四代互联阵列，支持 10/25/100GB 以太网和 32 Gb FC</block>
   <block id="cb3b33954945611e0ba8b2628e06d629" category="cell">Cisco 以太网交换机</block>
-  <block id="e8952e556672a7bac099e6dd8277adc6" category="cell">2 个 Nexus 9336c-x2</block>
-  <block id="0b4cd361b1679e25bfbd3ac50d9345ca" category="cell">1 GB ， 10 GB ， 25 GB ， 40 GB ， 100 GB</block>
-  <block id="87cfe9b16eabd03a88919deb9691f260" category="cell">用于 BLOB 存储的 IP 网络 Nexus 9k</block>
-  <block id="901702a435c2bbc38753e9ce4151d4f1" category="cell">FI 和 UCS 机箱</block>
-  <block id="a7bc364215ebb35dfa84af3b185cc5a2" category="cell">FC ： Cisco MDS 9132T</block>
-  <block id="8f99a00b0629271102c495db3b92165e" category="cell">两台 Cisco 9132T 交换机</block>
-  <block id="1dd71ec979684d8a56b1b5af3e3bc5f7" category="cell">NetApp AFF A300 全闪存存储系统</block>
-  <block id="0911ffdbb76c891f964e39a07eb6b697" category="cell">1 个 HA 对</block>
-  <block id="e63e3fbc3e359b73fcef2cb11c5247d9" category="cell">适用于所有 MEDITECH 工作负载的双节点集群（文件服务器，映像服务器， SQL Server ， VMware 等）</block>
-  <block id="d045e94d9db292469611fa1f8d83349a" category="cell">DS224C 磁盘架</block>
-  <block id="cd435d40574734b0130c5e304d7a7f73" category="cell">1 个 DS224C 磁盘架</block>
-  <block id="2eefcd71feee51527314ef0b887eb12e" category="cell">固态驱动器（ SSD ）</block>
-  <block id="212083871f19775196741ee4db200535" category="cell">9 个 3.8 TB</block>
-  <block id="bdd95a1c93c8bff0bb95352967a65139" category="paragraph">下表显示了中型（ 5 类）配置示例—基础架构组件</block>
   <block id="2e70b67967a4b1c0813d150fcd33df90" category="cell">Cisco UCS 5108 机箱</block>
-  <block id="7d293c81b006f47e7db10deb7e1dc12a" category="cell">Cisco 机箱 I/O 模块</block>
-  <block id="adb3235eddf2aa5bd689bf34912ab42a" category="cell">6 个 B200 M5</block>
-  <block id="6f8ae2d6cfec240a08e590384ed36a7f" category="cell">每个系统具有 2 个 16 核， 2.5 GHz/ 或更高时钟速度以及 384 GB 或更多内存 BIOS 3.2 （ 3# ）</block>
-  <block id="2afe782ca4cd1485b77b44a7cd1bd8ac" category="cell">Cisco UCS 虚拟接口卡（ VIC ）</block>
-  <block id="b1de6370d4f1bb368f5a5616080e5ee2" category="cell">6 个 UCS 1440 VIC</block>
-  <block id="a0bc80769ac75f28f478d49189ff30e3" category="cell">VMware ESXi fNIC FC 驱动程序： 1.6.0.47 VMware ESXi eNIC 以太网驱动程序： 1.0.27.0 （请参见互操作性表：）</block>
-  <block id="d9019d1ef30cacd53c6578a814d93e0e" category="cell">第四代互联阵列，支持 10 GB/25 GB/100 GB 以太网和 32 Gb FC</block>
-  <block id="dddf4f558fbb41124652abfffbee66fd" category="cell">NetApp AFF A220 全闪存存储系统</block>
-  <block id="7145de475166467a1d36317d70f3d308" category="cell">2 个 HA 对</block>
-  <block id="00f7f85293e44cb291261e7f0507ffb1" category="cell">1 个 DS224C 磁盘架</block>
   <block id="34df20bab5e85dc75bfc94ef569cced9" category="cell">SSD</block>
-  <block id="94d5e043a6fb208174ae5d1d4eced0a3" category="cell">13 个 3.8 TB</block>
-  <block id="7fa0374ee62cfbc6b8ea5c31cfe4cf4b" category="paragraph">下表显示了一个大型（第 6 类）配置示例—基础架构组件。</block>
-  <block id="f5fc774f557fe8baacaafbb326585f41" category="cell">8 个 10 GB 上行链路端口</block>
-  <block id="c312bbe29d0ef87e481ae176a40f91fe" category="cell">8 个 B200 M5</block>
-  <block id="7a1a4af4985b17cf838b43ff629f8cec" category="cell">每个模块具有 2 个 24 核， 2.7 GHz 和 768 GB BIOS 3.2 （ 3# ）</block>
-  <block id="8d49fc53984ae43dfd9d888469f961f4" category="cell">8 个 UCS 1440 VIC</block>
-  <block id="10ffdfb8caf828b6bf5726af3171c4ef" category="cell">VMware ESXi fNIC FC 驱动程序： 1.6.0.47 VMware ESXi eNIC 以太网驱动程序： 1.0.27.0 （请查看互操作性表：<block ref="8baf564a49c5ee0603f4ea07b5ce4355" category="inline-link-rx"></block></block>
-  <block id="48c6e1b28747fc721bf2a3b213c60c87" category="cell">2 个 Cisco UCS 互联阵列（ FI ）</block>
-  <block id="8552480c255e05dab7fb35447af19229" category="cell">2 个 Cisco Nexus 9332PQ1 ， 10 GB ， 25 GB ， 40 GB ， 100 GB</block>
-  <block id="096cdb0037f15c0698616bb14ea73938" category="cell">用于 BLOB 存储的 IP 网络 N9k</block>
-  <block id="c78a423f3132ee2ac4f4f4c1fa5d4859" category="cell">AFF A300</block>
-  <block id="eecfabc7f0efee8d39bbf58ca9da0f13" category="cell">1 个 DS224C 磁盘架</block>
-  <block id="c06a3ad948ce876ff1edb0573bfc643c" category="cell">19 个 3.8 TB</block>
-  <block id="3350c3bf1228026294ce0e7f9235937f" category="admonition">这些配置为规模估算指导提供了一个起点。某些客户环境可能会同时运行多个 MEDITECH 生产工作负载和非 MEDITECH 工作负载，或者它们的 IOP 要求可能更高。您应与 NetApp 客户团队合作，根据所需的 IOPS ，工作负载和容量来估算存储系统的规模，以确定适合为工作负载提供服务的平台。</block>
   <block id="0407c27180c9b019e644e8ad4c6a9324" category="doc">致谢</block>
-  <block id="98beb79b2f2d86652394e80d1e65420d" category="list-text">NetApp 技术营销工程师 Atul Bhalodia</block>
-  <block id="49d7c87eb6e1417e303008c5907f9d07" category="list-text">NetApp 产品经理 Ketan Mota</block>
   <block id="028f1a38910f83032d7207681cbb26a8" category="section-title">存储架构</block>
-  <block id="305160d35c5eb375133b99844c5c9c60" category="section-title">卷配置</block>
-  <block id="db8880d80ab20f2f01a010e5c454f7fb" category="section-title">LUN 配置</block>
-  <block id="f0f4f4ee07bd69ccda90258104d093f0" category="summary">本节介绍在 ONTAP 8.3 及更高版本上部署的相关信息。</block>
-  <block id="4e777d3b2a8b458c7f1f8e99e8ee985b" category="doc">Storage Virtual Machine 配置</block>
-  <block id="5e8e41e494c729b71c38199837d82c03" category="admonition">Storage Virtual Machine （ SVM ）在 ONTAP API 和 ONTAP 命令行界面中也称为 Vserver 。</block>
-  <block id="66b2dba18cc93040125f652bbf569104" category="section-title">用于 MEDITECH 主机 LUN 的 SVM</block>
-  <block id="8be6b6177636d613f02107e8466a06a7" category="paragraph">您应为每个 ONTAP 存储集群创建一个专用 SVM ，以便拥有和管理包含 MEDITECH 主机的 LUN 的聚合。</block>
-  <block id="e16a3c5c02414b4861b307161c4ea448" category="section-title">SVM 语言编码设置</block>
-  <block id="6cf58cf8f2604c1e47a728e0403612ef" category="paragraph">NetApp 建议您为所有 SVM 设置语言编码。如果在创建 SVM 时未指定语言编码设置，则使用默认语言编码设置。对于 ONTAP ，默认语言编码设置为 C.UTF-8 。设置语言编码后，您将无法稍后修改带有无限卷的 SVM 的语言。</block>
-  <block id="454540e68882d2b0fb5a13bcc5ee2bcd" category="paragraph">与 SVM 关联的卷将继承 SVM 语言编码设置，除非您在创建卷时明确指定其他设置。要使某些操作正常运行，您应在站点的所有卷中一致地使用语言编码设置。例如， SnapMirror 要求源和目标 SVM 具有相同的语言编码设置。</block>
-  <block id="9a4f1f8b572427616124fcfd4b74c659" category="inline-link-macro">下一步：卷配置。</block>
-  <block id="9bec0a21d00629a01d827c786934f40e" category="paragraph"><block ref="9bec0a21d00629a01d827c786934f40e" category="inline-link-macro-rx"></block></block>
-  <block id="466eb26b523a1dbd7b0bed7a767c4148" category="summary">要了解有关本文档所述信息的更多信息，请查看以下文档或网站。</block>
-  <block id="36306c740ae253397cc640787018c532" category="paragraph">要了解有关本文档所述信息的更多信息，请查看以下文档或网站：</block>
-  <block id="a07e13a55cde7b6a8fbae36c29e6fef0" category="list-text"><block ref="a07e13a55cde7b6a8fbae36c29e6fef0" category="inline-link-rx"></block></block>
-  <block id="e1e25af7156be203f8a5b16a598b8462" category="inline-link">使用 NetApp AFF ， vSphere 6.5U1 和 Cisco UCS Manager 的具有 FC 存储（ MDS 交换机）的 FlexPod 数据中心</block>
-  <block id="62f39cf04b706cedf29b93eba6dae7e3" category="list-text"><block ref="62f39cf04b706cedf29b93eba6dae7e3" category="inline-link-rx"></block></block>
-  <block id="8178aaf8919310400273d5f863bd12f2" category="list-text"><block ref="8178aaf8919310400273d5f863bd12f2" category="inline-link-rx"></block></block>
-  <block id="66c8207a59ea1bba64ca9a2b8f0a71b4" category="list-text"><block ref="66c8207a59ea1bba64ca9a2b8f0a71b4" category="inline-link-rx"></block></block>
-  <block id="661045ac77506e3c3a5ba583b4ae7a6b" category="inline-link">TR-4300i ：《适用于 MEDITECH 环境的 NetApp FAS 和全闪存存储系统最佳实践指南》</block>
-  <block id="235d123ccb7c75ee0884ba6311e9ebab" category="list-text"><block ref="235d123ccb7c75ee0884ba6311e9ebab" category="inline-link-rx"></block></block>
-  <block id="5f8a419137862622b3d562a36731a9f7" category="list-text"><block ref="5f8a419137862622b3d562a36731a9f7" category="inline-link-rx"></block></block>
-  <block id="db8e8942f1d4330b19953e752ce7a013" category="list-text"><block ref="db8e8942f1d4330b19953e752ce7a013" category="inline-link-rx"></block></block>
-  <block id="6873197c14dfd5879b6551ee93d04ef6" category="list-text"><block ref="6873197c14dfd5879b6551ee93d04ef6" category="inline-link-rx"></block></block>
-  <block id="c88b4dea025dfe9457e38c44e07c3292" category="list-text"><block ref="c88b4dea025dfe9457e38c44e07c3292" category="inline-link-rx"></block></block>
-  <block id="9e68e26f554f7de9f3ad71d41877724b" category="list-text"><block ref="6a77151d3cd6d424c3e85c29790b9140" category="inline-link-rx"></block>：</block>
-  <block id="f8b9fe14dbc0290eb0dab775166d61c2" category="list-text"><block ref="f8b9fe14dbc0290eb0dab775166d61c2" category="inline-link-rx"></block></block>
-  <block id="5516d21da8534293d37b48af39c3d25c" category="list-text"><block ref="4b1dda8bf25c1cf9aaf2d9edb9d71d53" category="inline-link-rx"></block>：</block>
-  <block id="c40931e8f36b0f64185eb7faf6e0d040" category="list-text"><block ref="c40931e8f36b0f64185eb7faf6e0d040" category="inline-link-rx"></block></block>
-  <block id="3ec87fb00fc246b120d349f324b29c93" category="list-text"><block ref="3ec87fb00fc246b120d349f324b29c93" category="inline-link-rx"></block></block>
-  <block id="5f0f45a09f1547c56f84fa483eff3f89" category="list-text"><block ref="5f0f45a09f1547c56f84fa483eff3f89" category="inline-link-rx"></block></block>
-  <block id="08769523ffe39a38a57d4e3cc340b79b" category="list-text"><block ref="08769523ffe39a38a57d4e3cc340b79b" category="inline-link-rx"></block></block>
-  <block id="367dc3b6bca342ef1c1abc6def9b327d" category="list-text"><block ref="367dc3b6bca342ef1c1abc6def9b327d" category="inline-link-rx"></block></block>
-  <block id="28deb583d8d8942d07d10b99ba2d74c8" category="list-text"><block ref="28deb583d8d8942d07d10b99ba2d74c8" category="inline-link-rx"></block></block>
-  <block id="ee99c2763d5e7c868883396a2a35b2c4" category="list-text"><block ref="ee99c2763d5e7c868883396a2a35b2c4" category="inline-link-rx"></block></block>
-  <block id="953950975c1cda55f3b5fee7ecd83752" category="list-text"><block ref="953950975c1cda55f3b5fee7ecd83752" category="inline-link-rx"></block></block>
-  <block id="13adf8c5a17cb850e5b85a634b0d32c9" category="list-text"><block ref="13adf8c5a17cb850e5b85a634b0d32c9" category="inline-link-rx"></block></block>
-  <block id="0ff980b7b7d3aea16920fee9a101e73b" category="list-text"><block ref="0ff980b7b7d3aea16920fee9a101e73b" category="inline-link-rx"></block></block>
-  <block id="ba375be3d801f747cf06f6a583a18270" category="list-text"><block ref="ba375be3d801f747cf06f6a583a18270" category="inline-link-rx"></block></block>
-  <block id="6999b53a08f58321431a40cbf1cdfc90" category="list-text"><block ref="6999b53a08f58321431a40cbf1cdfc90" category="inline-link-rx"></block></block>
-  <block id="25236e4fbd4f157d732444243aa1ca38" category="list-text"><block ref="25236e4fbd4f157d732444243aa1ca38" category="inline-link-rx"></block></block>
-  <block id="92f81c9b746514ba2594851906b66dc1" category="list-text"><block ref="92f81c9b746514ba2594851906b66dc1" category="inline-link-rx"></block></block>
-  <block id="e06c683af0cff40280bdd82be2d6d782" category="list-text"><block ref="e06c683af0cff40280bdd82be2d6d782" category="inline-link-rx"></block></block>
-  <block id="d5cd533da912413c44636008195960ad" category="list-text"><block ref="d5cd533da912413c44636008195960ad" category="inline-link-rx"></block></block>
-  <block id="a84f525bf21d9842103c71093b390118" category="list-text"><block ref="a84f525bf21d9842103c71093b390118" category="inline-link-rx"></block></block>
-  <block id="c5049d68b158c7f612a460f0e3256eb9" category="list-text"><block ref="c5049d68b158c7f612a460f0e3256eb9" category="inline-link-rx"></block></block>
-  <block id="5e57a36256aaf1af8d0c8ef8e2ebb646" category="list-text"><block ref="5e57a36256aaf1af8d0c8ef8e2ebb646" category="inline-link-rx"></block></block>
-  <block id="7c5b5ea5a3ea01a52eeff6b0168f5133" category="list-text"><block ref="7c5b5ea5a3ea01a52eeff6b0168f5133" category="inline-link-rx"></block></block>
-  <block id="c7402c440efc83f825645bfb68be0ff4" category="inline-link">Cisco UCS Manager 3.2 （ 3a ）基础架构捆绑包</block>
-  <block id="46ac9d540a64646243324e8ab16bd0dc" category="list-text"><block ref="1b3e298db0e127d48e0b8c60c873bc99" category="inline-link-rx"></block> （需要 Cisco.com 授权）</block>
-  <block id="6b7b598323e29ffec89272c7a4dab997" category="list-text"><block ref="6b7b598323e29ffec89272c7a4dab997" category="inline-link-rx"></block></block>
-  <block id="8f87ca3825cf554e2054b8d53073840e" category="inline-link">Cisco MDS 9132T FC 交换机</block>
-  <block id="2cb00c21fb6289fb3fd2ceea04738a2a" category="list-text"><block ref="2cb00c21fb6289fb3fd2ceea04738a2a" category="inline-link-rx"></block></block>
-  <block id="c9dd6bad4c7d561872f2e2d498a990bf" category="inline-link">互操作性表工具（ IMT ）</block>
   <block id="d3d9fdef0e91fc4aba18e57475fd74ea" category="cell">虚拟机</block>
   <block id="16da49795bbc4995de01070dd3b75a98" category="cell">NetApp 虚拟存储控制台</block>
   <block id="5c014f8939a89da0166a347a0237cf4f" category="cell">SnapCenter</block>
   <block id="40b796b77b40775e1361ce398a9a783c" category="section-title">目标</block>
-  <block id="0be5b3d60fa1a62fc1c4b46695cbefff" category="list-text">* 操作连续性。 * 该设计集成了硬件， NX-OS 软件功能和管理功能，可支持零停机环境。</block>
-  <block id="7c43b4cfb6124eac10c88babdf3b2e38" category="list-text">* 传输灵活性。 * 利用经济高效的解决方案逐步采用新的网络技术。</block>
-  <block id="14344c7e1407102dba356f3a96926a7f" category="doc">ESXi 配置最佳实践</block>
-  <block id="df299b055549bc8ca66052728afa46a7" category="paragraph">您可以在阵列级别执行精简配置和硬件加速等任务，以减少 ESXi 主机上的工作负载。副本卸载功能和空间预留功能可提高 VSC 操作的性能。您可以从 NetApp 支持站点下载此插件安装包并获取此插件的安装说明。</block>
-  <block id="119532d922c9cb5a03ab543abab4b39b" category="list-text">右键单击某个主机，然后选择操作 &gt; NetApp VSC &gt; 设置建议值。</block>
-  <block id="4c53150a7d5b0d30a5be88983c1b112f" category="list-text">在 NetApp 建议设置对话框中，选择最适合您的系统的值。</block>
-  <block id="5bdf7813f1843ab7cbdb024ffe39d76d" category="paragraph">默认情况下会设置标准建议值。</block>
   <block id="18d0ad44a1e563aaf9f5871e32535a6c" category="list-text">单击确定。</block>
-  <block id="41b7c35b4ecadf2ab857e78756379638" category="inline-link-macro">下一步： NetApp 配置。</block>
-  <block id="261addf78c7b2c961032b3dd08ba0b1f" category="section-title">目的</block>
-  <block id="a8f0bd5f9473b195579882fa581c7357" category="paragraph">它不包括：</block>
   <block id="689202409e48743b914713f96d93947c" category="cell">价值</block>
   <block id="c74d97b01eae257e44aa9d5bade97baf" category="cell">16.</block>
   <block id="6f4922f45568161a8cdf4ad2299f6d23" category="cell">18</block>
@@ -2532,152 +1952,8 @@
   <block id="74a37ca3fc803ac7184526cec2956f18" category="list-text">成本效益</block>
   <block id="7cc87e587436554fb34e0b0439e40a1b" category="list-text">易管理性，稳定性和易支持性</block>
   <block id="4edb8c45f4cbd29586b5571a2de557eb" category="list-text">强大的数据保护，备份，恢复和业务连续性</block>
-  <block id="688e83d48398765ecdeafdc1b67aad0d" category="section-title">经过预先验证的融合基础架构的价值</block>
-  <block id="9218e5d248bc5f6bee747b524fa747c7" category="list-text">* 利用标准化，灵活的 IT 保护投资。 * FlexPod 参考架构可预测新产品版本和更新，并持续进行严格的互操作性测试，以适应未来技术的推出。</block>
-  <block id="a3453c43e6bbaeaca31aea0d1865e1b8" category="section-title">经验证的 FlexPod 架构和合作支持</block>
-  <block id="7f67a0b8dcd150e2511111003e2cf729" category="list-text">* 可扩展性可轻松适应临床数据增长。 * 可按需动态扩展虚拟机（ VM ），服务器和存储容量，而不受传统限制。</block>
   <block id="48def1be7a1b40b720ff1892a761e8c8" category="section-title">Cisco Nexus</block>
-  <block id="8ddb2bf3b62633b9268ac2f3c0af0b29" category="paragraph">下图显示了 NetApp 重复数据删除在最高级别的工作原理。</block>
   <block id="3b878279a04dc47d60932cb294d96259" category="section-title">概述</block>
-  <block id="33bfa28f826a0e5090569298da0ca5b0" category="section-title">全面的管理工具和自动化功能</block>
-  <block id="a12d886950a0804b79b6aafa30630b76" category="list-text">* 主动式优化。 * 分配和优化资源以实现最高效率。</block>
-  <block id="8bee8a4fc5b5bcf0c54218c00ea1ffae" category="section-title">适用于 VMware vSphere 的 Virtual Storage Console</block>
-  <block id="5555b713522d1619f6f4f6538b1733d1" category="paragraph">通过部署 VSC ， VASA Provider 和 SRA 虚拟设备，您可以执行以下任务：</block>
-  <block id="8d9ea1d14ceacbc9f14eae283c25248d" category="section-title">NetApp OnCommand Insight 和 ONTAP</block>
-  <block id="650a665cd26629cb9bf5396560f70149" category="summary">创建 LUN 时会为 MEDITECH 主机建立 LUN 映射。</block>
-  <block id="389e3e53ccb44e580ad6f383cc487612" category="doc">LUN 映射</block>
-  <block id="0afbeb6bb86d48b82dcde168a1951bb5" category="summary">以下人员为本指南的创建做出了贡献。</block>
-  <block id="4b7c82b30e98ad9f06ef3dc1e15418ea" category="list-text">NetApp 技术营销工程师布兰登 · 阿吉</block>
-  <block id="76b9b3bb37a85d7545736e7b002893e4" category="list-text">Cisco Systems ， Inc 技术解决方案架构师 Jon Ebmeier</block>
-  <block id="37b608112185e7e41b5def8663df7fe4" category="list-text">Cisco Systems ， Inc 产品经理 Mike Brennan</block>
-  <block id="7d6806c3b84802991762a6bdef7b61c9" category="summary">通过在 FlexPod 架构基础上运行 MEDITECH 环境，您的医疗保健组织有望提高员工工作效率，并减少资本和运营支出。</block>
-  <block id="90ed9e8ccf1bf7f41caa327876a1d635" category="doc">TR-4753 ：《适用于 MEDITECH 的 FlexPod 数据中心部署指南》</block>
-  <block id="c29a2e5cbb7b78e42657a54d7b9e0ba5" category="paragraph">NetApp 公司的 Brandon Agee ， John Duignan ， Mike Brennan 和 Cisco 公司的 Jon Ebmeier</block>
-  <block id="4b22ad205edc6523991141ddece6a979" category="paragraph">通过在 FlexPod 架构基础上运行 MEDITECH 环境，您的医疗保健组织有望提高员工工作效率，并减少资本和运营支出。适用于 MEDITECH 的 FlexPod 数据中心提供了医疗保健行业特有的多项优势，包括：</block>
-  <block id="e834e884e4492fb9d8786b466cf6f1ec" category="list-text">* 简化操作并降低成本。 * 通过使用更高效且可扩展的共享资源来取代原有平台，从而消除原有平台的成本和复杂性，从而为临床医生提供支持，无论这些平台位于何处。此解决方案可提高资源利用率，从而提高投资回报率（ ROI ）。</block>
-  <block id="1c8283ba1968950b7d02fd948ce39104" category="list-text">* 加快基础架构部署速度。 * 无论是现有数据中心还是远程位置，借助经过测试的集成 FlexPod 数据中心设计，您可以在更短的时间内完成新基础架构的启动和运行，而无需费力。</block>
-  <block id="c3e115e5f93bce718d8018f82e44be26" category="list-text">* 认证存储。 * 采用 MEDITECH 的 NetApp ONTAP 数据管理软件可为您提供经过测试和认证的存储供应商所具有的卓越可靠性。Meditech 不会对其他基础架构组件进行认证。</block>
-  <block id="c6850ae1e57a791b1ec620a0fdef8815" category="list-text">* 横向扩展架构。 * 无需重新配置正在运行的应用程序，即可将 SAN 和 NAS 从 TB 扩展到数十 PB 。</block>
-  <block id="b3c9d0b1a02f92641153ebfae48411fc" category="list-text">* 无中断运行。 * 在不中断业务的情况下执行存储维护，硬件生命周期操作和 FlexPod 升级。</block>
-  <block id="3fcebc25ae8100abe37ab5aeb450d605" category="list-text">* 安全多租户。 * 支持日益增长的虚拟化服务器和存储共享基础架构需求，支持对设施特定信息进行安全多租户，尤其是在您的系统托管多个数据库和软件实例时。</block>
-  <block id="818e6edcb51a4032c2568bd7669ae0b3" category="list-text">* 池化资源优化。 * 有助于减少物理服务器和存储控制器数量，负载平衡工作负载需求并提高利用率，同时提高性能。</block>
-  <block id="0ab23991ec3940d2735a9d2099952987" category="list-text">* 服务质量（ QoS ）。 * FlexPod 可在整个堆栈上提供 QoS 。行业领先的 QoS 网络，计算和存储策略可在共享环境中实现不同的服务级别。这些策略可以为工作负载提供最佳性能，并有助于隔离和控制失控的应用程序。</block>
-  <block id="924f03ea03dd642aa2434367dbcb2a9d" category="inline-link">NetApp 7 ： 1 存储效率担保</block>
-  <block id="b0ca4939c9475ec1b843b6766e4d22ec" category="list-text">* 灵活性。 * 借助 FlexPod 系统提供的行业领先的工作流自动化，流程编排和管理工具，您的 IT 团队可以更快速地响应业务请求。这些业务请求包括从 MEDITECH 备份和配置更多测试和培训环境到为人口健康管理计划复制分析数据库等。</block>
-  <block id="e0459c9b3e91b753c98c7cc22480c9c5" category="list-text">* 提高了工作效率。 * 快速部署和扩展此解决方案，以获得最佳临床医生最终用户体验。</block>
-  <block id="2731b8dc989b2c3472869f82df998f10" category="list-text">* NetApp Data Fabric 。 * NetApp Data Fabric 架构可以跨站点，跨物理边界和跨应用程序将数据集于一体。NetApp Data Fabric 专为以数据为中心的世界中的数据驱动型企业而构建。数据是在多个位置创建和使用的，通常您需要利用并与其他位置，应用程序和基础架构共享数据。您需要一种一致且集成的数据管理方式。Data Fabric 提供了一种数据管理方式，可以控制数据并简化日益增加的 IT 复杂性。</block>
-  <block id="46ec639ccda056c4d646176c990791d6" category="section-title">适用于 MEDITECH EHR 的新基础架构方法</block>
-  <block id="a01bbbd39f26d8a9669d66fa373b5b6d" category="paragraph">像您这样的医疗保健提供商组织仍然面临着最大程度地从行业领先的 MEDITECH 电子健康记录（ Electronic Health records ， EHR ）的大量投资中获益的压力。对于任务关键型应用程序，客户在为 MEDITECH 解决方案设计数据中心时，通常会为其数据中心架构确定以下目标：</block>
-  <block id="94e7bb3cbb3ecce3ea141e4be0020800" category="list-text">MEDITECH 应用程序的高可用性</block>
-  <block id="b3648a2dac0d7fa63cc75e113951424e" category="list-text">在数据中心轻松实施 MEDITECH</block>
-  <block id="42f8e98ad74b7700fdfae5475e240238" category="list-text">灵活性和可扩展性，支持通过新的 MEDITECH 版本或应用程序实现增长</block>
-  <block id="c557e1fb98f822ea9dacef18cf0a1f72" category="list-text">与 MEDITECH 指南和目标平台保持一致</block>
-  <block id="4d6d0d24418ab47c6855a2ab46b932a5" category="paragraph">随着 MEDITECH 用户不断发展，成为负责的医疗保健组织，并根据捆绑式强化报销模式进行调整，在以更高效，更灵活的 IT 交付模式交付所需的 MEDITECH 基础架构时，面临的挑战就会越来越大。</block>
-  <block id="7fcbbecb4f0dbe547eca2abe1b06bc98" category="paragraph">由于提供可预测的低延迟系统性能和高可用性的总体要求， MEDITECH 对其客户的硬件要求具有规范性。</block>
-  <block id="92f99771e19f92c274436428e4ce0e48" category="paragraph">FlexPod 是一款经过预先验证，经过严格测试的融合基础架构，由 Cisco 和 NetApp 的战略合作伙伴合作打造。它经过专门设计和设计，可提供可预测的低延迟系统性能和高可用性。这种方法可确保 MEDITECH 合规，并最终为 MEDITECH 系统的用户提供最佳响应时间。</block>
-  <block id="4a2b34b7550be8877a95e363b9966bb7" category="paragraph">Cisco 和 NetApp 推出的 FlexPod 解决方案采用高性能，模块化，预先验证，融合，虚拟化， 高效，可扩展且经济高效的平台。它提供：</block>
-  <block id="9bb6edf6b04085b7809d2cc5b8732694" category="list-text">* 模块化架构。 * FlexPod 可通过针对每个特定工作负载专门配置的 FlexPod 平台来满足 MEDITECH 模块化架构的各种需求。所有组件均通过集群服务器，存储管理网络结构和一个统一的管理工具集进行连接。</block>
-  <block id="ee21bd6f1adca246c12a9aece7f3a18e" category="list-text">* 融合堆栈各级均采用行业领先的技术。 * Cisco ， NetApp ， VMware 和 Microsoft Windows 在服务器，网络，存储和操作系统的各个类别中均被行业分析师评为第一或第二。</block>
-  <block id="70e237f6645388663e2bd4bd8e18e0f2" category="list-text">* 在广泛的环境中进行成熟的部署。 * FlexPod 已通过广泛的虚拟机管理程序，操作系统，应用程序和基础架构软件的预先测试和联合验证，安装在多个 MEDITECH 客户组织中。</block>
-  <block id="b705be73f656a06e5808ad34542d1c8a" category="paragraph">FlexPod 是一款经验证的数据中心解决方案，可提供灵活的共享基础架构，可轻松扩展以满足不断增长的工作负载需求，而不会对性能产生负面影响。通过利用 FlexPod 架构，此解决方案可提供 FlexPod 的全部优势，包括：</block>
-  <block id="8849a8de6e3d151f35aa3ebb7909df55" category="list-text">* 性能可满足 MEDITECH 工作负载要求。 * 根据您的 MEDITECH 硬件配置提案要求，可以部署不同的 ONTAP 平台来满足您所需的 I/O 和延迟要求。</block>
-  <block id="1e6da5ea773c0eb0fd22de4213c53515" category="list-text">* 提高了效率。 * 借助融合虚拟化基础架构缩短管理时间并降低 TCO ，这种基础架构更易于管理，更高效地存储数据，同时利用 MEDITECH 软件提高性能。</block>
-  <block id="1e0a6ac67253897d10b38a7f5b307790" category="list-text">* 降低风险。 * 利用基于定义的架构构建的预先验证的平台，最大程度地减少业务中断，消除部署猜测并适应持续的工作负载优化。</block>
-  <block id="ae493ecde68c55adb7af115f12d99876" category="list-text">* FlexPod 合作支持。 * NetApp 和 Cisco 建立了合作支持，这是一种强大，可扩展且灵活的支持模式，可满足 FlexPod 融合基础架构的独特支持要求。此模式结合了 NetApp 和 Cisco 的经验，资源和技术支持专业知识，可简化识别和解决 FlexPod 支持问题描述的流程，而无论问题位于何处。借助 FlexPod 合作支持模式，您的 FlexPod 系统可以高效运行并受益于最新技术，您还可以与经验丰富的团队合作，帮助您解决集成问题。</block>
-  <block id="6f407bc602ef7890efd5be7a02d754dc" category="paragraph">对于在 FlexPod 融合基础架构上运行业务关键型应用程序（例如 MEDITECH ）的医疗保健组织来说， FlexPod 合作支持尤其重要。下图显示了 FlexPod 合作支持模式。</block>
-  <block id="303a5b315946aa73372768231d539d2d" category="paragraph"><block ref="303a5b315946aa73372768231d539d2d" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="d72f102958c390c7b6ee845d2ee51885" category="paragraph">除了这些优势之外，采用 MEDITECH 解决方案的 FlexPod 数据中心堆栈的每个组件还为 MEDITECH EHR 工作流提供了特定优势。</block>
-  <block id="35bf7c6d04e0fe521b037a81133c79e8" category="paragraph">Cisco Unified Computing System （ Cisco UCS ）是一个自我集成的自我感知系统，由一个管理域组成，该管理域与统一 I/O 基础架构互连。为了使基础架构能够提供最可用的关键患者信息，适用于 MEDITECH 环境的 Cisco UCS 已与 MEDITECH 基础架构建议和最佳实践保持一致。</block>
-  <block id="aa73050116d52e73014a3d14b14cc93d" category="paragraph">基于 Cisco UCS 架构的 MEDITECH 的基础是 Cisco UCS 技术，它具有集成的系统管理， Intel Xeon 处理器和服务器虚拟化功能。这些集成技术可解决数据中心挑战，并帮助您实现 MEDITECH 数据中心设计的目标。Cisco UCS 将 LAN ， SAN 和系统管理统一为一个简化的链路，用于机架式服务器，刀片式服务器和 VM 。Cisco UCS 是一种端到端 I/O 架构，它整合了 Cisco Unified Fabric 和 Cisco Fabric Extender Technology （ FEX 技术），可将 Cisco UCS 中的每个组件连接到一个网络结构和一个网络层。</block>
-  <block id="4b0b48c588fb2cd595b94484d7b6f99b" category="paragraph">该系统可以部署为一个或多个逻辑单元，这些逻辑单元可整合并扩展到多个刀片式服务器机箱，机架服务器，机架和数据中心。该系统实施了一个彻底简化的架构，消除了在传统刀片式服务器机箱和机架服务器中填充多个冗余设备的情况。在传统系统中，以太网和 FC 适配器以及机箱管理模块等冗余设备会造成多层复杂性。Cisco UCS 由一对冗余的 Cisco UCS 互联阵列（ Fabric Interconnects ， CLI ）组成，可为所有 I/O 流量提供单点管理和单点控制。</block>
-  <block id="ae116e4ca91fcc4b6c66945c9ffa5703" category="paragraph">Cisco UCS 使用服务配置文件来帮助确保 Cisco UCS 基础架构中的虚拟服务器配置正确。服务配置文件由网络，存储和计算策略组成，这些策略由每个领域的主题专家创建一次。服务配置文件包括有关服务器标识的关键服务器信息，例如 LAN 和 SAN 寻址， I/O 配置，固件版本，启动顺序，网络虚拟 LAN （ VLAN ），物理端口和 QoS 策略。可以在几分钟内动态创建服务配置文件并将其与系统中的任何物理服务器相关联，而无需花费数小时或数天的时间。将服务配置文件与物理服务器关联起来只需执行一项简单的操作，即可在环境中的服务器之间迁移身份，而无需更改任何物理配置。它有助于为已停用的服务器快速配置更换件。</block>
-  <block id="eb2d6352cce655970466ab31cf015e3f" category="paragraph">使用服务配置文件有助于确保服务器在整个企业中的配置一致。如果使用多个 Cisco UCS 管理域，则 Cisco UCS Central 可以使用全局服务配置文件在各个域之间同步配置和策略信息。如果需要在一个域中执行维护，则可以将虚拟基础架构迁移到另一个域。这种方法有助于确保即使单个域脱机，应用程序也能继续以高可用性运行。</block>
-  <block id="3f8e3cfdcf44f76257c4f0bf90440793" category="paragraph">为了证明它符合服务器配置要求， Cisco UCS 已在多年的时间里与 MEDITECH 进行了广泛的测试。Cisco UCS 是一个受支持的服务器平台，如 MEDITECH 产品资源系统支持站点所示。</block>
-  <block id="1f926c1675a485ec908ed70e0cb16ec9" category="section-title">Cisco 网络</block>
-  <block id="8ad29be24436ec0169f19d7a6b639df5" category="paragraph">Cisco Nexus 交换机和 Cisco MDS 多层控制器可提供企业级连接和 SAN 整合。Cisco 多协议存储网络通过提供以下灵活性和选项降低业务风险： FC ，光纤连接（ Fibre Connection ， Ficon ），以太网 FC （ FCoE ）， IP 上 SCSI （ iSCSI ）和 IP 上 FC （ FCIP ）。</block>
-  <block id="4810b3b0a21a47b3e59cbc0ffef2ada9" category="paragraph">Cisco Nexus 交换机可在一个平台中提供最全面的数据中心网络功能集之一。它们可以为数据中心和园区核心提供高性能和高密度。此外，它们还为数据中心聚合，行尾和数据中心互连部署提供了一整套功能，可在一个具有高度弹性的模块化平台中实现。</block>
-  <block id="f275e4ea7f5890b5a590a15bae000a25" category="paragraph">Cisco UCS 可将计算资源与 Cisco Nexus 交换机和统一 I/O 网络结构相集成，从而识别和处理不同类型的网络流量。此流量包括存储 I/O ，流式桌面流量，管理以及对临床和业务应用程序的访问。您可以获得：</block>
-  <block id="487cdb02da785fef126a2f675dd04371" category="list-text">* 基础架构可扩展性。 * 虚拟化，高效的电耗和散热，自动化的云扩展，高密度和高性能都支持高效的数据中心增长。</block>
-  <block id="648572a91e15d4327c8fc47f6e26fe2a" category="list-text">* 网络和计算机 QoS 。 * Cisco 在网络，存储和计算网络结构中提供策略驱动型服务级别（ CoS ）和 QoS ，以实现任务关键型应用程序的最佳性能。</block>
-  <block id="aeaf729ff32f1fc3b5cc13784f848f8c" category="paragraph">Cisco UCS 与 Cisco Nexus 交换机和 Cisco MDS 多层控制器相结合，可为 MEDITECH 提供最佳的计算，网络和 SAN 连接解决方案。</block>
-  <block id="1fb571abf88a7797b91aa642eb891c02" category="paragraph">运行 ONTAP 软件的 NetApp 存储可降低整体存储成本，同时提供 MEDITECH 工作负载所需的低延迟读写响应时间和 IOPS 。ONTAP 支持全闪存和混合存储配置，可创建满足 MEDITECH 要求的最佳存储平台。NetApp 闪存加速系统已获得 MEDITECH 的验证和认证，可为作为 MEDITECH 客户的您提供性能和响应能力，这是对延迟敏感的 MEDITECH 运营的关键。通过在一个集群中创建多个故障域， NetApp 系统还可以将生产与非生产隔离开来。此外， NetApp 系统还可以为采用 ONTAP QoS 的工作负载提供最低性能保障，从而减少性能问题。</block>
-  <block id="4d75f06157d8f77da2f2203789faf226" category="paragraph">ONTAP 软件的横向扩展架构可以灵活地适应各种 I/O 工作负载。为了提供临床应用程序所需的必要吞吐量和低延迟，同时提供模块化横向扩展架构，全闪存配置通常用于 ONTAP 架构。NetApp AFF 节点可以在同一个横向扩展集群中与混合（ HDD 和闪存）存储节点组合使用，这些存储节点适用于存储高吞吐量的大型数据集。除了经过 MEDITECH 批准的备份解决方案之外，您还可以将 MEDITECH 环境从昂贵的固态驱动器（ SSD ）存储克隆，复制和备份到其他节点上更经济的 HDD 存储。此方法符合或超出了 MEDITECH 对基于 SAN 的克隆和生产池备份的指导原则。</block>
-  <block id="4e8a5fd22ef11c860c4ba3422b28934e" category="paragraph">许多 ONTAP 功能在 MEDITECH 环境中特别有用：简化管理，提高可用性和自动化以及减少所需的总存储量。借助这些功能，您可以：</block>
-  <block id="66d6ee84bfc8749dbd49528150ea1fa3" category="list-text">* 卓越的性能。 * NetApp AFF 解决方案共享统一存储架构， ONTAP 软件，管理界面，丰富的数据服务以及其他 NetApp FAS 产品系列所具有的高级功能集。全闪存介质与 ONTAP 的这种创新组合，通过行业领先的 ONTAP 软件质量，为全闪存存储提供稳定一致的低延迟和高 IOPS 。</block>
-  <block id="85fe89ca6c49176fe633b9db33e02af5" category="list-text">* 存储效率。 * 利用重复数据删除， NetApp FlexClone 数据复制技术，实时压缩，实时数据缩减，精简复制，精简配置， 和聚合重复数据删除。</block>
-  <block id="8bddb4adcef61a3ff02ac07689562dce" category="paragraph">NetApp 重复数据删除可在 NetApp FlexVol 卷或数据成分卷中提供块级重复数据删除。从本质上说，重复数据删除会删除重复的块，从而仅在 FlexVol 卷或数据成分卷中存储唯一的块。</block>
-  <block id="639f7feab51be98d2946fced7a9e94db" category="paragraph">重复数据删除的粒度较高，并且在 FlexVol 卷或数据成分卷的活动文件系统上运行。它是应用程序透明的；因此，您可以使用它对使用 NetApp 系统的任何应用程序生成的数据进行重复数据删除。您可以将卷重复数据删除作为实时进程运行（从 ONTAP 8.3.2 开始）。您也可以将其作为后台进程运行，您可以将其配置为自动运行，计划运行或通过命令行界面， NetApp ONTAP System Manager 或 NetApp Active IQ Unified Manager 手动运行。</block>
-  <block id="d618fba1b1823f5e313e27664885b316" category="paragraph"><block ref="d618fba1b1823f5e313e27664885b316" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="72ca8d1bf0fcba88b8c8bc00cd658b59" category="list-text">* 节省空间的克隆。 * 借助 FlexClone 功能，您几乎可以即时创建克隆，以支持备份和测试环境刷新。只有在进行更改后，这些克隆才会占用更多存储。</block>
-  <block id="f533fc71924315a38da9c67cffb7e41b" category="list-text">* NetApp Snapshot 和 SnapMirror 技术。 * ONTAP 可以为 MEDITECH 主机使用的逻辑单元号（ LUN ）创建节省空间的 Snapshot 副本。对于双站点部署，您可以实施 SnapMirror 软件，以实现更多数据复制和故障恢复能力。</block>
-  <block id="57531570fa2635f837ec394fd0ea9808" category="list-text">* 集成数据保护。 * 完整的数据保护和灾难恢复功能可帮助您保护关键数据资产并提供灾难恢复。</block>
-  <block id="370ee28d472a11c6a826123561c0a818" category="list-text">* QoS 和自适应 QoS （ AQoS ）。 * 存储 QoS 可用于限制潜在的抢占资源的工作负载。更重要的是， QoS 可以保证像 MEDITECH 生产这样的关键工作负载的最低性能。通过限制争用， NetApp QoS 可以减少与性能相关的问题。AQO 可与预定义的策略组结合使用，您可以将这些策略组直接应用于卷。这些策略组可以自动扩展吞吐量上限或下限到卷大小，从而在卷大小发生变化时保持 IOPS 与 TB 和 GB 的比率。</block>
-  <block id="6f405bfb87e8fe0334877839280b1622" category="list-text">* NetApp Data Fabric 。 * NetApp Data Fabric 简化并集成了云和内部环境中的数据管理，加快了数字化转型的步伐。它提供一致且集成的数据管理服务和应用程序，以提高数据可见性和洞察力，实现数据访问和控制以及数据保护和安全性。NetApp 与 Amazon Web Services （ AWS ）， Azure ， Google Cloud Platform 和 IBM Cloud Cloud Cloud Cloud Cloud Cloud 相集成，为您提供广泛的选择。</block>
-  <block id="8e98bfa92db81ecc8656bcb27151e872" category="paragraph">下图显示了适用于 MEDITECH 工作负载的 FlexPod 架构。</block>
-  <block id="a32a53f73ac2119c49e8068fb7374c57" category="paragraph"><block ref="a32a53f73ac2119c49e8068fb7374c57" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="067fdea3903a958877e6eda9264cc1ce" category="section-title">MEDITECH 概述</block>
-  <block id="f4680536d8336eded062c88cfe40ae4b" category="paragraph">Medical Information Technology ， Inc. （通常称为 MEDITECH ）是一家总部位于马萨诸塞州的软件公司，负责为医疗保健组织提供信息系统。Meditech 提供了一个 EHR 系统，用于存储和组织最新的患者数据，并为临床工作人员提供数据。患者数据包括但不限于人口统计信息，病历，药物，实验室测试结果； 放射学图像；以及年龄，高度和重量等个人信息。</block>
-  <block id="ef5830581bdd220a4bafaddefdd0326b" category="paragraph">本文档不会介绍 MEDITECH 软件支持的广泛功能。附录 A 提供了有关这些广泛的 MEDITECH 功能集的详细信息。Meditech 应用程序需要多个 VM 来支持这些功能。要部署这些应用程序，请参见 MEDITECH 的建议。</block>
-  <block id="10c0890303460a4ece460528f8ccd338" category="paragraph">从存储系统角度来看，对于每个部署，所有 MEDITECH 软件系统都需要一个分布式以患者为中心的数据库。Meditech 拥有自己的专有数据库，该数据库使用 Windows 操作系统。</block>
-  <block id="7b93b29e822628361246c032710d431e" category="paragraph">bridgehead 和 Commvault 是两个备份软件应用程序，均已通过 NetApp 和 MEDITECH 的认证。本文档不会介绍这些备份应用程序的部署。</block>
-  <block id="f519faf331dbeb51a647a59616772b1b" category="paragraph">本文档的主要重点是，使 FlexPod 堆栈（服务器和存储）能够满足 MEDITECH 数据库的性能驱动型要求以及 EHR 环境中的备份要求。</block>
-  <block id="362f0365fac9625b305aaea322e76295" category="section-title">专为特定的 MEDITECH 工作负载而设计</block>
-  <block id="ec2fce8c1c958f54e0768670fbce4660" category="paragraph">Meditech 不会转售服务器，网络或存储硬件，虚拟机管理程序或操作系统； 但是，它对基础架构堆栈的每个组件都有特定的要求。因此， Cisco 和 NetApp 携手测试并支持 FlexPod 数据中心的成功配置，部署和支持，以满足像您这样的客户对 MEDITECH 生产环境的要求。</block>
-  <block id="9f25c0bdfa5b2d1c47e313181d43e47c" category="section-title">Meditech 类别</block>
-  <block id="a8b53630ec044674525473d1544c5084" category="paragraph">Meditech 会将部署规模与 1 到 6 之间的类别编号关联起来。类别 1 表示最小的 MEDITECH 部署，类别 6 表示最大的 MEDITECH 部署。</block>
-  <block id="d6b719fb6f0400e59233d690d76675ad" category="inline-link">TR-4190 ：《适用于 MEDITECH 环境的 NetApp 规模估算准则》</block>
-  <block id="99e20b31d769d615944cdc679459fdcc" category="paragraph">有关每个类别中 MEDITECH 主机的 I/O 特征和性能要求的信息，请参见 NetApp<block ref="c087fe1f30576623a05d8a1e175f4c3c" category="inline-link-rx"></block>。</block>
-  <block id="d29911d156c7e4c1a0a0ad405a580a98" category="section-title">Meditech 平台</block>
-  <block id="b7fc329aaf6a924bf6a0a9cc54d150f8" category="paragraph">MEDITECH expanse 平台是该公司 EHR 软件的最新版本。早期的 MEDITECH 平台是客户端 / 服务器 5.x 和魔力平台。本节介绍与 MEDITECH 主机及其存储要求相关的 MEDITECH 平台（适用于 expanse ， 6.x ， C/S 5.x 和 Magic ）。</block>
-  <block id="9d4c5115e388e228e6e64ec12cd9f55c" category="paragraph">对于上述所有 MEDITECH 平台，多个服务器运行 MEDITECH 软件并执行各种任务。上图显示了一个典型的 MEDITECH 系统，其中包括用作应用程序数据库服务器的 MEDITECH 主机和其他 MEDITECH 服务器。其他 MEDITECH 服务器的示例包括数据存储库应用程序，扫描和归档应用程序以及后台作业客户端。有关其他 MEDITECH 服务器的完整列表，请参见《硬件配置建议》（对于新部署）和《硬件评估任务》（对于现有部署）文档。您可以通过 MEDITECH 系统集成商或您的 MEDITECH 技术客户经理（ Technical Account Manager ， TAM ）从 MEDITECH 获取这些文档。</block>
-  <block id="87e811df1b9eaacff8cf841a4d8822ed" category="section-title">MEDITECH 主机</block>
-  <block id="f007a84c477531a0038cc84ceb58a418" category="paragraph">MEDITECH 主机是数据库服务器。此主机也称为 MEDITECH 文件服务器（对于 expanse ， 6.x 或 C/S 5.x 平台）或魔力机器（对于魔力平台）。本文档使用术语 MEDITECH 主机来指代 MEDITECH 文件服务器或魔力机器。</block>
-  <block id="0c27e6cab305f25d9cfef7028306f3b7" category="paragraph">Meditech 主机可以是在 Microsoft Windows Server 操作系统上运行的物理服务器或 VM 。在现场最常见的情况是， MEDITECH 主机部署为在 VMware ESXi 服务器上运行的 Windows VM 。截至本文撰写时， VMware 是 MEDITECH 唯一支持的虚拟机管理程序。MEDITECH 主机将其程序，词典和数据文件存储在 Windows 系统上的 Microsoft Windows 驱动器（例如驱动器 E ）上。</block>
-  <block id="f13a143cc5307229223d492e1895995b" category="paragraph">在虚拟环境中， Windows E 驱动器驻留在通过物理兼容模式下的原始设备映射（ Raw Device Mapping ， RDM ）连接到 VM 的 LUN 上。在这种情况下， MEDITECH 不支持将虚拟机磁盘（ VMDK ）文件用作 Windows E 驱动器。</block>
-  <block id="d719230a769a7d5350011c9bf40dca2f" category="section-title">Meditech 主机工作负载 I/O 特征</block>
-  <block id="f7f61769c421a73d00a651f139378432" category="paragraph">每个 MEDITECH 主机和整个系统的 I/O 特征取决于您部署的 MEDITECH 平台。所有 MEDITECH 平台（ expanse ， 6.x ， C/S 5.x 和 Magic ）都会生成 100% 随机的工作负载。</block>
-  <block id="52c1e99f3fb9a61b9082ce5513830a2b" category="paragraph">MEDITECH expanse 平台产生的工作负载要求最高，因为它的每台主机写入操作和整体 IOPS 百分比最高，其次是 6.x ， C/S 5.x 和魔力平台。</block>
-  <block id="b6b7b57792b033309acb28595082d0f5" category="paragraph">Meditech 要求对 NetApp FAS 或 AFF 系统与所有类别的 MEDITECH 主机之间的数据流量使用 FC 协议。</block>
-  <block id="46d4798da2f69b6997f929503cbc938c" category="section-title">MEDITECH 主机的存储表示</block>
-  <block id="31af2b58da2172f536a6c46d14e45e26" category="paragraph">每个 MEDITECH 主机都使用两个 Windows 驱动器：</block>
-  <block id="c4ec7a290c4359cd3617f0e21d196c21" category="list-text">* 驱动器 C.* 此驱动器用于存储 Windows Server 操作系统和 MEDITECH 主机应用程序文件。</block>
-  <block id="ee4b922cddeee317b178395fdd53e2a0" category="list-text">* 驱动器 e* MEDITECH 主机将其程序，词典和数据文件存储在 Windows Server 操作系统的驱动器 E 上。驱动器 E 是使用 FC 协议从 NetApp FAS 或 AFF 系统映射的 LUN 。Meditech 要求使用 FC 协议，以满足 MEDITECH 主机的 IOPS 以及读写延迟要求。</block>
-  <block id="e1fae457d341935888ca35d90498e18f" category="section-title">卷和 LUN 命名约定</block>
-  <block id="3d94d49838079b79ad8aeef9d9fa67ac" category="paragraph">Meditech 要求对所有 LUN 使用特定的命名约定。</block>
-  <block id="e1dfb56f1f0aff2ad32bc43e595b91c4" category="paragraph">在进行任何存储部署之前，请验证 MEDITECH 硬件配置建议，以确认 LUN 的命名约定。MEDITECH 备份过程依靠卷和 LUN 命名约定来正确标识要备份的特定 LUN 。</block>
-  <block id="c48b2f0a68733f3e08928bcc01d84e37" category="section-title">采用 Cisco UCS Manager 的 Cisco UCS</block>
-  <block id="44df9c2a70deb7d1a63675aed6088792" category="paragraph">Cisco 侧重于提供卓越数据中心基础架构的三个关键要素：简化，安全性和可扩展性。Cisco UCS Manager 软件与平台模块化相结合，可提供一个简化，安全且可扩展的桌面虚拟化平台：</block>
-  <block id="260dd3180bea4c66c1518331064a4766" category="list-text">* 简化。 * Cisco UCS 提供了一种全新的行业标准计算方法，并为所有工作负载提供了数据中心基础架构的核心。Cisco UCS 具有许多功能和优势，包括减少所需服务器数量以及减少每台服务器使用的缆线数量。另一项重要功能是能够通过 Cisco UCS 服务配置文件快速部署或重新配置服务器。由于需要管理的服务器和缆线更少，并且服务器和应用程序工作负载配置更简化，因此操作也得到了简化。使用 Cisco UCS Manager 服务配置文件，可以在几分钟内配置多个刀片式服务器和机架式服务器。Cisco UCS 服务配置文件消除了服务器集成操作手册并消除了配置偏差。这种方法可以加快最终用户的工作效率，提高业务灵活性，并允许将 IT 资源分配给其他任务。</block>
-  <block id="d38c6be36d6f2681ee18d827e03245ed" category="paragraph">Cisco UCS Manager 可自动执行许多常见且容易出错的数据中心操作，例如配置和配置服务器，网络和存储访问基础架构。此外，具有较大内存占用空间的 Cisco UCS B 系列刀片式服务器和 C 系列机架式服务器还可以提高应用程序用户密度，从而有助于降低服务器基础架构要求。</block>
-  <block id="8227555f9f9303ed183bfb38f47b05b9" category="paragraph">通过简化，可以更快，更成功地部署 MEDITECH 基础架构。</block>
-  <block id="4557cc898f3786ae33055f5ee5b0861e" category="list-text">* 安全。 * 虽然虚拟机本身比物理前代产品更安全，但它们带来了新的安全挑战。使用虚拟桌面等通用基础架构的任务关键型 Web 和应用程序服务器现在面临的安全威胁风险更高。现在， VM 间流量已经成为 IT 经理必须考虑的一个重要安全问题，尤其是在 VM 使用 VMware vMotion 在服务器基础架构间移动的动态环境中。</block>
-  <block id="9d538babb0c1ce8c6c271991174bea2a" category="paragraph">因此，虚拟化显著增加了对 VM 级别策略和安全性的感知需求，尤其是考虑到 VM 在扩展计算基础架构中的移动性具有动态性和流动性。新虚拟桌面的快速普及进一步增强了虚拟化感知型网络和安全基础架构的重要性。适用于桌面虚拟化的 Cisco 数据中心基础架构（ Cisco UCS ， Cisco MDS 和 Cisco Nexus 系列解决方案）可提供强大的数据中心，网络和桌面安全性，并提供从桌面到虚拟机管理程序的全面安全性。通过对虚拟桌面进行分段，虚拟机感知型策略和管理以及 LAN 和 WAN 基础架构中的网络安全性，增强了安全性。</block>
-  <block id="87933f9f4976794fbaf89bad3e47dc3c" category="list-text">* 可扩展。 * 虚拟化解决方案的增长是不可避免的，因此解决方案必须能够随着这种增长进行扩展和可预测的扩展。Cisco 虚拟化解决方案支持高 VM 密度（每台服务器具有 VM ），更多服务器可通过近乎线性的性能进行扩展。Cisco 数据中心基础架构提供了一个灵活的平台来实现增长并提高业务灵活性。Cisco UCS Manager 服务配置文件允许按需配置主机，并使部署数百台主机与部署数十台主机一样简单。</block>
-  <block id="da207c35d31f24e9b9a132791897df6c" category="paragraph">Cisco UCS 服务器可提供近乎线性的性能和可扩展性。Cisco UCS 实施了获得专利的 Cisco 扩展内存技术，可通过更少的插槽提供较大的内存占用空间（通过双插槽和四插槽服务器可扩展到 1 TB 的内存）。通过使用统一网络结构技术作为组件， Cisco UCS 服务器聚合带宽可扩展到每台服务器高达 80 Gbps ，而北向 Cisco UCS 互联阵列可按线路速率输出 2Tbps 。此功能有助于防止桌面虚拟化 I/O 和内存瓶颈。Cisco UCS 采用基于统一网络结构的高性能，低延迟网络架构，可支持大量虚拟桌面流量，包括高分辨率视频和通信流量。此外，作为 FlexPod 虚拟化解决方案的一部分， ONTAP 还有助于在启动和登录风暴期间保持数据可用性和最佳性能。</block>
-  <block id="6dd1253895883648981707ef549f9641" category="paragraph">Cisco UCS ， Cisco MDS 和 Cisco Nexus 数据中心基础架构设计为增长提供了一个出色的平台。您可以透明地扩展服务器，网络和存储资源，以支持桌面虚拟化，数据中心应用程序和云计算。</block>
-  <block id="e616d75bc281423b2778965270364b74" category="paragraph">VMware vCenter Server 为管理 MEDITECH 环境提供了一个集中式平台，使您的医疗保健组织可以放心地自动化和交付虚拟基础架构：</block>
-  <block id="07bef128ce441d16f942821e9d92e05d" category="list-text">* 集中控制和可见性。 * 从一个位置管理整个 VMware vSphere 基础架构。</block>
-  <block id="97c94b252170e5ee4d8863f65bbc0501" category="paragraph">NetApp 的 Virtual Storage Console （ VSC ）， vSphere API for Storage Awareness （ VASA ） Provider 和 VMware Storage Replication Adapter （ SRA ） for VMware vSphere 构成了一个虚拟设备。此产品套件将 SRA 和 VASA Provider 作为 vCenter Server 的插件，可为使用 NetApp 存储系统的 VMware 环境中的 VM 提供端到端生命周期管理。</block>
-  <block id="d373124ab5037bc82b704c8018f4fdfe" category="paragraph">VSC ， VASA Provider 和 SRA 虚拟设备可与 VMware vSphere Web Client 平稳集成，并支持您使用 SSO 服务。在具有多个 VMware vCenter Server 实例的环境中，要管理的每个 vCenter Server 实例都必须有自己注册的 VSC 实例。通过 VSC 信息板页面，您可以快速检查数据存储库和 VM 的整体状态。</block>
-  <block id="3876bbfe14e1d2a51fe68383eee32511" category="list-text">* 使用 VSC 部署和管理存储以及配置 ESXi 主机。 * 您可以使用 VSC 为 VMware 环境中的存储控制器添加凭据，删除凭据，分配凭据以及设置权限。此外，您还可以管理连接到 NetApp 存储系统的 ESXi 服务器。只需单击几下鼠标，即可为所有主机设置主机超时， NAS 和多路径的建议最佳实践值。您还可以查看存储详细信息并收集诊断信息。</block>
-  <block id="32973d9687a90dbb7e7f60efa9a5ac21" category="list-text">* 使用 VASA Provider 创建存储功能配置文件并设置警报。 * 启用 VASA Provider 扩展后，适用于 ONTAP 的 VASA Provider 将注册到 VSC 中。您可以创建和使用存储功能配置文件和虚拟数据存储库。您还可以设置警报，以便在卷和聚合的阈值接近全满时向您发出警报。您可以监控 VMDK 以及在虚拟数据存储库上创建的 VM 的性能。</block>
-  <block id="a254f807a70b6ab5394233a7510408ff" category="list-text">* 使用 SRA 进行灾难恢复。 * 您可以使用 SRA 在环境中配置受保护站点和恢复站点，以便在发生故障时进行灾难恢复。</block>
-  <block id="39147f9e6faf488016d7f57d416652c7" category="paragraph">NetApp OnCommand Insight 将基础架构管理集成到了 MEDITECH 服务交付链中。这种方法可以使医疗保健组织更好地控制，自动化和分析存储，网络和计算基础架构。它可以优化您当前的基础架构，以获得最大收益，同时简化确定购买内容和购买时间的过程。它还可以降低与复杂技术迁移相关的风险。由于不需要代理，因此安装简单，无中断。系统会持续发现已安装的存储和 SAN 设备，并收集详细信息以全面了解整个存储环境。您可以快速识别滥用，错位，未充分利用或孤立的资产，并回收这些资产以推动未来的扩展。OnCommand Insight 可帮助您：</block>
-  <block id="fd63a5bc856e3af4599c0b25aef080d9" category="list-text">* 优化现有资源。 * 利用已建立的最佳实践来识别滥用，未充分利用或孤立的资产，以避免出现问题并满足服务级别要求。</block>
-  <block id="c8e69d82d5cd2122117174c8565d2350" category="list-text">* 做出更明智的决策。 * 实时数据有助于更快地解决容量问题，从而准确规划未来的购买，避免超支并推迟资本支出。</block>
-  <block id="1fa18e3cb4dc1215944e4785398261ea" category="list-text">* 加速 IT 计划。 * 更好地了解您的虚拟环境，帮助您管理风险，最大限度地减少停机时间并加快云部署速度。</block>
-  <block id="490495544d3b2d2d1eda150303b4dc57" category="inline-link">采用 FC Cisco 验证设计的 FlexPod 数据中心</block>
-  <block id="dca669a924575921f1c2e9e3cf8bb4da" category="section-title">Cisco UCS 配置指南</block>
-  <block id="d218986bb2247c38b40f20dd68e24c12" category="list-text">Cisco UCS 命令行界面</block>
-  <block id="05287109d3dc7b5d0023d8c242acf862" category="list-text">适用于多域环境的 Cisco UCS Central</block>
-  <block id="e6837a90c0b393f65be16b4d0ecb6782" category="paragraph">下图显示了 Cisco UCS Manager 中 SAN 节点的屏幕截图示例。</block>
-  <block id="e17b2865671fa00385a07a7538a2971e" category="list-text">将 Cisco UCS Manager 固件升级到 3.2 （ 2f ）或更高版本。</block>
-  <block id="8859045b1163a725636b1545ad945d05" category="list-text">编辑机箱发现策略。</block>
-  <block id="c7f10dd0c78eba5485a096c3f502cb13" category="list-text">创建以太网和 FC 上行链路端口通道和 VSAN 。</block>
-  <block id="0168a016a3ae1b275741733df46fea0b" category="list-text">为 SAN 连接，网络控制，服务器池资格认定，电源控制，服务器 BIOS 创建策略 和默认维护。</block>
-  <block id="9fe508bee4aac2b77dbd817f3aa9afe5" category="list-text">创建 vNIC 和 vHBA 模板。</block>
-  <block id="85c0d82db4b58086bb360c5ec755dd40" category="list-text">创建 vMedia 和 FC 启动策略。</block>
-  <block id="06ce9b3053e89576060a04a60214d1ed" category="list-text">将服务配置文件与相应的刀片式服务器相关联。</block>
   <block id="3efd43d603f98d46d6707c05552b037a" category="summary">FlexPod 架构旨在在整个计算，网络和存储堆栈中的组件或链路发生故障时提供高可用性。多个用于客户端访问和存储访问的网络路径可实现负载平衡并优化资源利用率。</block>
   <block id="220e76f33c6565f8361231d3fbea063c" category="paragraph">下图显示了用于医疗成像系统解决方案部署的 16 Gb FC/40 Gb 以太网（ 40GbE ）拓扑结构。</block>
   <block id="0313b0221759818538e9506f841bd57a" category="paragraph"><block ref="0313b0221759818538e9506f841bd57a" category="inline-image-macro-rx" type="image"></block></block>
@@ -2845,12 +2121,6 @@
   <block id="eab7e959c5707439b9e2c1fe3e86d60c" category="cell">9.5</block>
   <block id="d5350d8759b1ec84607e47908809058e" category="cell">聚合</block>
   <block id="84ffd62e595c9d0122e136c3b255f4df" category="doc">致谢</block>
-  <block id="11ce79f812406bc51fe9b7234783e48b" category="list-text">NetApp 高级产品经理 Ketan Mota</block>
-  <block id="1da328dab34341112c5ea191bbdc87ff" category="list-text">NetApp 医疗保健解决方案架构师 John Duignan</block>
-  <block id="1e8af766906c2f4c94348986be634518" category="list-text">Cisco 公司 Jon Ebmeier</block>
-  <block id="d3cd6fb5e055b6cf26840a09d580c8b1" category="list-text">Cisco 公司 Mike Brennan</block>
-  <block id="83e7705bd84427a330d9d7e0fa059be5" category="summary">以下人员为本指南的编写和创建做出了贡献。</block>
-  <block id="ff911ddf6eef032578e398f364581a85" category="list-text">NetApp 医疗保健部门解决方案架构师 John Duignan</block>
   <block id="f5ef3ee444a74806df8feb4d18f0d5f2" category="summary">本节介绍 NetApp FlexPod 快速存储集群设计的最佳实践。</block>
   <block id="c2ffe02d76c4f089648f1647b43e4ee5" category="doc">最佳实践</block>
   <block id="b429096255906489a518c5c505e642b9" category="section-title">存储最佳实践</block>
@@ -2964,26 +2234,6 @@
   <block id="470e33cee2a0a930ccdebb855f6d92d6" category="list-text">适用于虚拟桌面基础架构的 FlexPod (VDI) 解决方案</block>
   <block id="f6aaafd9f98422c31959e223903e9a71" category="inline-link"><block ref="f6aaafd9f98422c31959e223903e9a71" category="inline-link-rx"></block></block>
   <block id="de18980572f5c8c06c547cf7593dfef1" category="paragraph"><block ref="de18980572f5c8c06c547cf7593dfef1" category="inline-link-rx"></block></block>
-  <block id="53080620612023e3273e597cae9af087" category="summary">NetApp 建议将 NetApp RAID DP 技术作为 NetApp FAS 或 AFF 系统中所有聚合的 RAID 类型，包括常规 NetApp Flash Pool 聚合。Meditech 文档可能会指定使用 RAID 10 ，但 MEDITECH 已批准使用 RAID DP 。</block>
-  <block id="10ae1f9130fbbe975a644b0f325c6b31" category="doc">聚合配置</block>
-  <block id="84d52ace1041a3c55bd5d2309712c94e" category="section-title">NetApp RAID DP</block>
-  <block id="644c6aa18bc6a7b961bf00d1d1c51e83" category="section-title">RAID 组大小和 RAID 组数量</block>
-  <block id="0da20dc8b2a69f0dc9dd63195eb7e9a0" category="inline-link">NetApp TR-3838 ：《存储子系统配置指南》</block>
-  <block id="2ed76932d65be2ada668b51405b7481d" category="paragraph">默认 RAID 组大小为 16 。此大小对于特定站点的 MEDITECH 主机的聚合可能是最佳的，也可能不是最佳的。有关 NetApp 建议在 RAID 组中使用的磁盘数量，请参见<block ref="f28c60e6abd2f3458682e2de33d6577d" category="inline-link-rx"></block>。</block>
-  <block id="dbbf03579aea3635de25c98d37cae839" category="paragraph">RAID 组大小对于存储扩展非常重要，因为 NetApp 建议您将磁盘添加到一个聚合中，该聚合包含一个或多个与 RAID 组大小相等的磁盘组。RAID 组的数量取决于数据磁盘的数量和 RAID 组的大小。要确定所需的数据磁盘数量，请使用 NetApp System Performance Modeler （ SPM ）规模估算工具。确定数据磁盘数量后，请调整 RAID 组大小，以将奇偶校验磁盘数量降至每个磁盘类型的 RAID 组大小建议范围内。</block>
-  <block id="277e048588e54d46ae43d5e2b47709d4" category="inline-link">NetApp TR-4190 ：《适用于 MEDITECH 环境的 NetApp 规模估算准则》</block>
-  <block id="8fca9f5c6c94a5a72963d66753ed4ab1" category="paragraph">有关如何在 MEDITECH 环境中使用 SPM 规模估算工具的详细信息，请参见<block ref="efb0147a3f6d6b03fcb8de01b6530d57" category="inline-link-rx"></block>。</block>
-  <block id="bc05690c26c8213a37b6dbd310a13873" category="section-title">存储扩展注意事项</block>
-  <block id="9a2fe99c61eeffc6156f9216bb4ec3c5" category="paragraph">扩展包含更多磁盘的聚合时，请添加组中与聚合 RAID 组大小相等的磁盘。遵循此方法有助于在整个聚合中提供性能一致性。</block>
-  <block id="7b85f9cd439141627cfc47a0f416f314" category="paragraph">例如，要向 RAID 组大小为 20 的聚合添加存储， NetApp 建议添加的磁盘数为一个或多个 20 磁盘组。因此，您应添加 20 ， 40 ， 60 等磁盘。</block>
-  <block id="6ec0de3f4a5b27ac844b1f18cf0cc880" category="paragraph">扩展聚合后，您可以通过在受影响的卷或聚合上运行重新分配任务来将现有数据条带分布到新磁盘上来提高性能。此操作非常有用，尤其是在现有聚合接近全满时。</block>
-  <block id="b6e21d5ab565211ed510c867c99e6752" category="admonition">您应计划在非生产时间重新分配计划，因为这是一项 CPU 和磁盘密集型任务。</block>
-  <block id="7a07f4438061792a84a7edebee3df97c" category="inline-link">NetApp TR-3929 ：《重新分配最佳实践指南》</block>
-  <block id="b5994e2016588fcb46139451dbb95b55" category="paragraph">有关在聚合扩展后使用重新分配的详细信息，请参见<block ref="70de5c2a4b00f75ad58d149f3ef37476" category="inline-link-rx"></block>。</block>
-  <block id="a7b95ca6c3a3f58282295b88d70fa5e0" category="section-title">聚合级 Snapshot 副本</block>
-  <block id="6a3ee5969ef93c10fd7bc6f6f98a07bc" category="paragraph">将聚合级别的 NetApp Snapshot 副本预留设置为零并禁用默认聚合 Snapshot 计划。如果可能，请删除任何已存在的聚合级别 Snapshot 副本。</block>
-  <block id="ea5ede0b78563ca8b134bf0512ed7f7a" category="inline-link-macro">下一步： Storage Virtual Machine 配置。</block>
-  <block id="be7532b8ea5830568882915f9e1799e7" category="paragraph"><block ref="be7532b8ea5830568882915f9e1799e7" category="inline-link-macro-rx"></block></block>
   <block id="fbf31974a8599812a905b93d4128e8f6" category="summary">下表分别列出了医疗成像系统的 FlexPod 基础架构的硬件和软件组件。</block>
   <block id="03b7abe651ac1c9bad12955c7f641499" category="doc">解决方案基础架构硬件和软件组件</block>
   <block id="a1442d2a3f5dbe225d0aa0772e5600ca" category="cell">1 或 2</block>
@@ -3023,146 +2273,6 @@
   <block id="f50370d714ccc161b8d214689879fd3b" category="cell">VMware vCenter Server 6.7 U1 （ vCSA ）或更高版本</block>
   <block id="3713367f3552a5943d616033f98ff2da" category="cell">VSC 9.7 或更高版本</block>
   <block id="1c3110bd1348fdff8af75e812c375153" category="cell">SnapCenter 4.3 或更高版本</block>
-  <block id="2c77ef7d294876908dee98d9e8992ea7" category="summary">本报告为 MEDITECH EHR 应用程序软件环境的 FlexPod 规模估算提供了指导。</block>
-  <block id="355f227b5f3a021e716085da5dba3a50" category="doc">TR-4774 ：适用于 MEDITECH 定向规模估算的 FlexPod</block>
-  <block id="f04af09d02846b2173ecac31b6a1b2e4" category="paragraph">Branon Agee ， John Duignan ， NetApp Mike Brennan ， Jon Ebmeir ， Cisco</block>
-  <block id="6c6463830c2d83b0835053e09c7c644d" category="paragraph">可以部署 FlexPod 系统来托管 MEDITECH expanse ， 6.x ， 5.x 和 Magic 服务。托管 MEDITECH 应用程序层的 FlexPod 服务器为可靠的高性能基础架构提供了一个集成平台。FlexPod 集成平台由经验丰富的 FlexPod 渠道合作伙伴快速部署，并由 Cisco 和 NetApp 技术支持中心提供支持。</block>
-  <block id="80f6b3a19e686cdfc4feff6e85157bfc" category="paragraph">规模估算基于 MEDITECH 的硬件配置提案和 MEDITECH 任务文档中的信息。目标是确定计算，网络和存储基础架构组件的最佳大小。</block>
-  <block id="36dc78206ebc0ff381904eebdc98f3a3" category="paragraph">。 <block ref="8bdc5c53d8c75770e94941fd89a88395" category="inline-link-macro-rx"></block> 第节介绍了可在 MEDITECH 环境中找到的计算和存储工作负载类型。</block>
-  <block id="342a4f4077bf29cbb0d2e3cd29b29cef" category="inline-link-macro">小型，中型和大型架构的技术规格</block>
-  <block id="a9f7253238254638e3c2f09c1a3d3adf" category="paragraph">。 <block ref="05b562c851e2e6256c164895c028eff3" category="inline-link-macro-rx"></block> 第节详细介绍了本节所述不同存储架构的示例材料清单。提供的配置仅供一般参考。请始终根据工作负载使用规模估算器调整系统的大小，并相应地调整配置。</block>
-  <block id="cc25780ffd737631aa87638595a13362" category="paragraph">在 FlexPod 架构基础上运行 MEDITECH 环境可以帮助医疗保健组织提高工作效率并降低资本和运营支出。FlexPod 提供了一个经过严格测试的预先验证的融合基础架构，该基础架构由 Cisco 和 NetApp 的战略合作伙伴关系提供。它经过专门设计和设计，可提供可预测的低延迟系统性能和高可用性。这种方法可以加快 MEDITECH EHR 系统用户的响应速度。</block>
-  <block id="40dbf6d3ad8aa2fbd922d590ba31b53d" category="paragraph">Cisco 和 NetApp 的 FlexPod 解决方案通过高性能，模块化，预先验证，融合，虚拟化， 高效，可扩展且经济高效的平台。采用 MEDITECH 的 FlexPod 数据中心可为医疗保健行业带来以下优势：</block>
-  <block id="06ee67efb6354fb7c763ad50d1ab80f8" category="list-text">* 模块化架构 * 。FlexPod 可通过针对每个特定工作负载的自定义 FlexPod 系统来满足 MEDITECH 模块化架构的各种需求。所有组件均通过集群模式服务器和存储管理网络结构进行连接，并使用一个统一的管理工具集。</block>
-  <block id="cc47fb4f777bb595d97accaef4e31c7d" category="list-text">* 简化操作并降低成本 * 。您可以通过使用更高效，可扩展的共享资源来取代原有平台，从而消除原有平台的成本和复杂性，无论临床医生身在何处，均可为其提供支持。此解决方案可提高资源利用率，从而提高投资回报率（ ROI ）。</block>
-  <block id="e981eea49acacde072b347eba61efdcc" category="list-text">* 加快基础架构部署 * 。FlexPod 数据中心与 MEDITECH 的集成设计使客户可以快速轻松地为现场和远程数据中心启动和运行新的基础架构。</block>
-  <block id="7dee0456a33eeb2de830177b23c0da15" category="list-text">* 横向扩展架构 * 。您可以将 SAN 和 NAS 从 TB 扩展到数十 PB ，而无需重新配置正在运行的应用程序。</block>
-  <block id="f1d673ab027cc665b45b6223b8f2a5f2" category="list-text">* 无中断运行 * 。您可以在不中断业务的情况下执行存储维护，硬件生命周期操作和软件升级。</block>
-  <block id="46aae5d0217e4b74b8b9155011c8a6f9" category="list-text">* 安全多租户 * 。此优势可满足日益增长的虚拟化服务器和共享存储基础架构需求，从而可以安全地多租户处理特定于设施的信息。如果您要托管多个数据库和软件实例，则此优势非常重要。</block>
-  <block id="38dfe780c167870fb2bfe3b18d420e6c" category="list-text">* 池化资源优化 * 。这一优势有助于减少物理服务器和存储控制器数量，平衡工作负载需求，提高利用率并同时提高性能。</block>
-  <block id="3da9822f2c05eb9a04cb50867890afb3" category="list-text">* 服务质量（ QoS ）。 * FlexPod 可在整个堆栈上提供服务质量（ QoS ）。行业领先的 QoS 存储策略可在共享环境中提供不同的服务级别。这些策略可以为工作负载提供最佳性能，并有助于隔离和控制失控的应用程序。</block>
-  <block id="22316222fb1c37f670cdb578e64364a9" category="list-text">* 存储效率 * 。您可以利用 NetApp 7 ： 1 存储效率降低存储成本。</block>
-  <block id="d8946f205d9c0ff975084cde486d1899" category="list-text">* 灵活性 * 。FlexPod 系统提供行业领先的工作流自动化，编排和管理工具，可以使 IT 更快速地响应业务请求。这些业务请求包括从 MEDITECH 备份和配置更多测试和培训环境到为人口健康管理计划复制分析数据库等。</block>
-  <block id="5ab4bdcce02d4738c2fc19530c59727e" category="list-text">* 工作效率 * 。您可以快速部署和扩展此解决方案，以获得最佳临床医生最终用户体验。</block>
-  <block id="132656d69ead7ae2badc2f109b7a0d2c" category="list-text">* 数据网络结构 * 。NetApp Data Fabric 架构可以跨站点，跨物理边界和跨应用程序将数据集于一体。NetApp Data Fabric 专为以数据为中心的世界中的数据驱动型企业而构建。数据在多个位置创建和使用，通常与应用程序和基础架构共享。Data Fabric 提供了一种一致且集成的数据管理方式。它还可以让 IT 更好地控制数据，并简化日益增加的 IT 复杂性。</block>
-  <block id="b9063c599c2897408511b7bc4e31b5db" category="paragraph">本文档介绍了使用 Cisco UCS 和基于 NetApp ONTAP 的存储的环境。它提供了用于托管 MEDITECH 的示例参考架构。</block>
-  <block id="f277d18aec69d86b8e857251dc1067c7" category="list-text">使用 NetApp System Performance Modeler （ SPM ）或其他 NetApp 规模估算工具提供详细的规模估算指南。</block>
-  <block id="3c51b55ed7beabb84cac968b4d394cb1" category="list-text">针对非生产工作负载进行规模估算。</block>
-  <block id="a53a7701772829b4b015348d7208cd69" category="paragraph">本文档面向 NetApp 和合作伙伴系统工程师以及 NetApp 专业服务人员。NetApp 假定读者已很好地了解计算和存储规模估算概念，并在技术上熟悉 Cisco UCS 和 NetApp 存储系统。</block>
-  <block id="5d3a5ef3f60e821b7aef8ffebddc82df" category="section-title">相关文档</block>
-  <block id="420fd3463db356cbbdc59eab452a5e88" category="paragraph">以下技术报告和其他文档与本技术报告相关，并构成在 FlexPod 基础架构上对 MEDITECH 进行规模估算，设计和部署所需的一整套文档。</block>
-  <block id="fbd7ce1208641001952d7cb53d85d26f" category="inline-link">TR-4319 ：《适用于 MEDITECH 环境的 NetApp 部署准则》</block>
-  <block id="5a6a0a9aca49c0b558bc6577d3be8f12" category="list-text"><block ref="5a6a0a9aca49c0b558bc6577d3be8f12" category="inline-link-rx"></block></block>
-  <block id="9ec635d147bc4a5883a350cc4d3635f3" category="admonition">要访问其中某些报告，需要 NetApp Field Portal 的登录凭据。</block>
-  <block id="aac599baff2f6b04d03f4617a8cec24b" category="summary">本节详细介绍了在使用 ONTAP 或 Cisco UCS 刀片式服务器和机架式服务器的环境中部署 FlexPod 的存储指南。</block>
-  <block id="2f2a3052e21c4c14ae863c80b8fbb084" category="paragraph">本文档中提供的适用于 FlexPod 部署的 NetApp 存储指南包括：</block>
-  <block id="cf45ad077e2b70230d10f8f5f4d0ffe4" category="list-text">使用 ONTAP 的环境</block>
-  <block id="eff8a9aa74448287a39883968e9ffe0b" category="list-text">使用 Cisco UCS 刀片式服务器和机架式服务器的环境</block>
-  <block id="663d81cd9d7d7d0566d40bae01a91eb2" category="paragraph">本文档不涉及以下内容：</block>
-  <block id="bb73d483c1533b9326fef407e10ea52b" category="list-text">详细部署 FlexPod 数据中心环境</block>
-  <block id="fd317e78d4beab452c354a13ba10da24" category="paragraph">有关详细信息，请参见<block ref="8c408f7508059ba7cdfe1e4eb9ba9051" category="inline-link-rx"></block> （ CVD ）。</block>
-  <block id="956388b0a66143ba5fdb10096e5ff0d1" category="list-text">MEDITECH 软件环境，参考架构和集成最佳实践指南概述。</block>
-  <block id="133ff4875c3d64a418ffb033010d1938" category="paragraph">有关详细信息，请参见<block ref="58c8f90ca020e80f969d83403be9cb63" category="inline-link-rx"></block> （需要 NetApp 登录）。</block>
-  <block id="bb1367b31422f78d19e40fb14bbdbf13" category="list-text">量化性能要求和规模估算指南。</block>
-  <block id="443d37fa88abbc0080e036a27bf09d3e" category="paragraph">有关详细信息，请参见<block ref="c087fe1f30576623a05d8a1e175f4c3c" category="inline-link-rx"></block>。</block>
-  <block id="1420cb1055aa9462b12cfe49d376826e" category="list-text">使用 NetApp SnapMirror 技术满足备份和灾难恢复要求。</block>
-  <block id="573031485e5bdb05135130457f5f112d" category="list-text">通用 NetApp 存储部署指南。</block>
-  <block id="86f9f1b3ce76dc74c0c4737a2606c198" category="paragraph">本节提供了一个配置示例，其中包含基础架构部署最佳实践，并列出了各种基础架构硬件和软件组件以及您可以使用的版本。</block>
-  <block id="11971ffcfbbcd0e3ba8d186a8aec37fd" category="section-title">布线图</block>
-  <block id="fdcd6e7910cc59259bc6603be118fc92" category="paragraph">下图显示了 MEDITECH 部署的 32 Gb FC/40GbE 拓扑图。</block>
-  <block id="8442a9fabce93ee277cd24b12f17ebf9" category="paragraph"><block ref="8442a9fabce93ee277cd24b12f17ebf9" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="587a2e7b7bde90ffa88b19d7f62bbca4" category="paragraph">请始终使用<block ref="e24f898abe90ef46a13b3eea3ae2cf9c" category="inline-link-rx"></block> 验证是否支持所有版本的软件和固件。第节中的表 <block ref="2b2f01cc46ef9918ef530ffc5737755a" category="inline-link-macro-rx"></block> 列出了解决方案测试中使用的基础架构硬件和软件组件。</block>
-  <block id="e67b1a97e37071df880d20b6fc4a7615" category="inline-link-macro">接下来：基础架构配置。</block>
-  <block id="7978eaf583a156d01cc8ddf89b1da50c" category="paragraph"><block ref="7978eaf583a156d01cc8ddf89b1da50c" category="inline-link-macro-rx"></block></block>
-  <block id="b7e68d0352de1c804e28d4c0e7d260b7" category="summary">本文档提供了有关为 MEDITECH 软件配置 FlexPod 环境的高级指导。在本节中，我们将简要介绍一些步骤以及一些示例，以准备 FlexPod 配置中的 Cisco UCS 计算平台要素。</block>
-  <block id="5e8501c202ce099e8c6b9559c865d723" category="doc">Cisco UCS 刀片式服务器和交换机配置</block>
-  <block id="52c26526758e2879666f3330f706c9f9" category="paragraph">适用于 MEDITECH 的 FlexPod 软件在各个级别均具有容错功能。系统中没有单点故障。为了获得最佳性能， Cisco 建议使用热备用刀片式服务器。</block>
-  <block id="d7355505a58714f141f2e9cb09258464" category="inline-link">使用 VMware vSphere 6.5 Update 1 ， NetApp AFF A 系列和 Cisco UCS Manager 3.2 的采用光纤通道存储的 FlexPod 数据中心</block>
-  <block id="68b2b5ef5753a4117c01bd29869e229d" category="paragraph">本文档提供了有关为 MEDITECH 软件配置 FlexPod 环境的高级指导。在本节中，我们将简要介绍一些步骤以及一些示例，以准备 FlexPod 配置中的 Cisco UCS 计算平台要素。本指南的前提条件是，按照中的说明对 FlexPod 配置进行机架安装，供电和布线<block ref="8f1525ab792e1982d64749d7e834252e" category="inline-link-rx"></block>CVD 。</block>
-  <block id="dc120fb434cb4345b647a886184cd44a" category="section-title">Cisco Nexus 交换机配置</block>
-  <block id="20162616262ec1fce0cd307a8f51943a" category="inline-link-macro">布线图</block>
-  <block id="c5756129dea844fb708edc5a355e4f3e" category="paragraph">为解决方案部署了一对容错 Cisco Nexus 9300 系列以太网交换机。您应按照中所述为这些交换机布线 <block ref="1de45352219a192c037c72b3355c8940" category="inline-link-macro-rx"></block> 部分。Cisco Nexus 配置有助于确保为 MEDITECH 应用程序优化以太网流量。</block>
-  <block id="ff3e578bc61b34cb52ea3dd25c33fe2e" category="list-text">完成初始设置和许可后，运行以下命令在两台交换机上设置全局配置参数：</block>
-  <block id="60f704b6f8d11cdd0e7a8269d3b679f1" category="list-text">使用全局配置模式在每个交换机上为解决方案创建 VLAN ：</block>
-  <block id="e358f04df40edf07a6046389327a13ed" category="list-text">创建网络时间协议（ NTP ）分发接口，端口通道，端口通道参数和端口说明以进行故障排除<block ref="8f1525ab792e1982d64749d7e834252e" category="inline-link-rx"></block>CVD 。</block>
-  <block id="984c7efca069a9b435064bc26543a39b" category="section-title">Cisco MDS 9132T 配置</block>
-  <block id="ecbe2640d2535ebe770cbfea69ffe2d2" category="paragraph">Cisco MDS 9100 系列 FC 交换机可在 NetApp AFF A200 或 AFF A300 控制器与 Cisco UCS 计算网络结构之间提供 32 Gb 冗余 FC 连接。您应按照中所述连接这些缆线 <block ref="1de45352219a192c037c72b3355c8940" category="inline-link-macro-rx"></block> 部分。</block>
-  <block id="0d3d2cd12ece4e2138bd0c0979652640" category="list-text">从每个 MDS 交换机的控制台上，运行以下命令以启用解决方案所需的功能：</block>
-  <block id="de8b6288d4dd08c8b3133109c9c17af3" category="list-text">按照中的 FlexPod Cisco MDS 交换机配置部分配置各个端口，端口通道和说明<block ref="8c408f7508059ba7cdfe1e4eb9ba9051" category="inline-link-rx"></block>。</block>
-  <block id="27eb4e7cbf3de77aaf18c6019edb469c" category="list-text">要为解决方案创建所需的虚拟 SAN （ VSAN ），请在全局配置模式下完成以下步骤：</block>
-  <block id="1a0b50bc9ebc1811596a54a50a2d40a0" category="list-text">对于 Fabric-A MDS 交换机，运行以下命令：</block>
-  <block id="513995fd7f34cdf91cfa8d67887dcf41" category="paragraph">命令最后两行中的端口通道编号是在使用参考文档配置各个端口，端口通道和说明时创建的。</block>
-  <block id="dcb838a4411d93900e0bf4e809c76478" category="list-text">对于 Fabric-B MDS 交换机，运行以下命令：</block>
-  <block id="5583eed0dc1be9df3c7f3655b4620c80" category="list-text">对于每个 FC 交换机，请使用参考文档中的详细信息创建设备别名，以便在日常操作中直观地识别每个设备。</block>
-  <block id="2c7aa24bf889350e02f006870032e65e" category="list-text">最后，使用在步骤 4 中为每个 MDS 交换机创建的设备别名创建 FC 分区，如下所示：</block>
-  <block id="091270f515b28ad5de71298cd9a3f58d" category="paragraph">作为 MEDITECH 客户，您可以利用网络，存储和计算领域的主题专家来创建策略和模板，以便根据您的特定需求定制环境。创建这些策略和模板后，可以将这些策略和模板组合到服务配置文件中，以便为 Cisco 刀片式服务器和机架式服务器提供一致，可重复，可靠且快速的部署。</block>
-  <block id="07976ae67af42d527963b8ec8cb5ee02" category="paragraph">Cisco UCS 提供了三种管理 Cisco UCS 系统的方法，称为域：</block>
-  <block id="6ac85f794bb2cbd8f0befa5509c8966f" category="list-text">Cisco UCS Manager HTML5 图形用户界面</block>
-  <block id="348aa97b91ea1b2fcede130cf92bb64c" category="paragraph"><block ref="348aa97b91ea1b2fcede130cf92bb64c" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="4973fd8170d3191dcac7faa84afb4049" category="paragraph">在大型部署中，可以构建独立的 Cisco UCS 域，以便在主要的 MEDITECH 功能组件级别实现更强的容错能力。</block>
-  <block id="f974b947539d2745c44e7f448b7e74a4" category="paragraph">在具有两个或更多数据中心的高度容错设计中， Cisco UCS Central 在设置全局策略和全局服务配置文件以确保整个企业内主机之间的一致性方面发挥着关键作用。</block>
-  <block id="ae0d162df291efedeb6833bfb23b5e17" category="paragraph">要设置 Cisco UCS 计算平台，请完成以下过程。在 Cisco UCS 5108 AC 刀片式服务器机箱中安装 Cisco UCS B200 M5 刀片式服务器后，请执行以下步骤。此外，您还必须与中所述的布线要求进行竞争 <block ref="1de45352219a192c037c72b3355c8940" category="inline-link-macro-rx"></block> 部分。</block>
-  <block id="5349296f0fb04cb41ec67336ab73080b" category="list-text">配置域的报告， Cisco 自动通报功能和 NTP 设置。</block>
-  <block id="6c7a31fa69e04eaa1b95825e4cc379c0" category="list-text">在每个互联阵列上配置服务器和上行链路端口。</block>
-  <block id="29eff591eb412e96448079de19f028d4" category="list-text">创建用于带外管理的地址池，通用唯一标识符（ UUID ）， MAC 地址，服务器，全球通用节点名称（ WWNN ）和全球通用端口名称（ WWPN ）。</block>
-  <block id="fabc2686b492ea8d67cee3fb8b82286e" category="list-text">为每个 MEDITECH 平台元素创建服务配置文件模板和服务配置文件。</block>
-  <block id="94e6e1d1c0c67d591be44cd2237b2819" category="paragraph">有关为 FlexPod 配置 Cisco UCS 服务配置文件中每个关键要素的详细步骤，请参见<block ref="8f1525ab792e1982d64749d7e834252e" category="inline-link-rx"></block>CVD 文档。</block>
-  <block id="1c0111c256303c789d10465f32e35c9f" category="inline-link-macro">下一步： ESXi 配置最佳实践。</block>
-  <block id="a12882e5c41826585dd001aacca59d17" category="paragraph"><block ref="a12882e5c41826585dd001aacca59d17" category="inline-link-macro-rx"></block></block>
-  <block id="ace6bc814af688c812d44b9270c7e069" category="summary">专用于 MEDITECH 主机的 Meditech 卷可以采用厚配置或精简配置，并可使用 Snapshot 副本进行访问。您还可以使用卷级别重新分配来优化磁盘上的数据布局，以提高写入延迟和顺序读取访问。</block>
-  <block id="be1b9ef68f31ecee991e2282c1f24f0f" category="section-title">卷配置</block>
-  <block id="c8884acd62d57a748f8be9efe002d659" category="paragraph">专用于 MEDITECH 主机的 Meditech 卷可以采用厚配置或精简配置。</block>
-  <block id="1ec60fa2d9d7d880d4767192b35c3cac" category="section-title">默认卷级 Snapshot 副本</block>
-  <block id="b6dfebdb35cf7e1d19c39ba916af284d" category="paragraph">Snapshot 副本是在备份工作流中创建的。每个 Snapshot 副本可用于在不同时间访问存储在 MEDITECH LUN 中的数据。经 MEDITECH 批准的备份解决方案会基于这些 Snapshot 副本创建精简配置的 FlexClone 卷，以提供 MEDITECH LUN 的时间点副本。MEDITECH 环境与经过批准的备份软件解决方案集成在一起。因此， NetApp 建议您在构成 MEDITECH 生产数据库 LUN 的每个 NetApp FlexVol 卷上禁用默认 Snapshot 副本计划。</block>
-  <block id="222e258ef648fdc0434ae82d64ba21ca" category="paragraph">* 重要信息： * FlexClone 卷共享父数据卷空间，因此卷必须有足够的空间来容纳 MEDITECH 数据 LUN 和备份服务器创建的 FlexClone 卷。FlexClone 卷占用的空间不像数据卷那样多。但是，如果在短时间内对 MEDITECH LUN 进行了大量删除，则克隆卷可能会增加。</block>
-  <block id="ca12cddfab55f9d92888a0a4cc19f6db" category="section-title">每个聚合的卷数</block>
-  <block id="78671d74b506fcd55e96c81ff2b6ac96" category="paragraph">对于使用 Flash Pool 或 NetApp Flash Cache 缓存的 NetApp FAS 系统， NetApp 建议为每个聚合配置三个或更多卷，这些卷专用于存储 MEDITECH 程序，词典和数据文件。</block>
-  <block id="f2008b085b9f1999ec25d24355fe6622" category="paragraph">对于 AFF 系统， NetApp 建议为每个聚合指定四个或更多卷，用于存储 MEDITECH 程序，词典和数据文件。</block>
-  <block id="8ec1ad196f4fdb719fe342e858e47ead" category="section-title">卷级别重新分配计划</block>
-  <block id="3078b1ce42c963008f3a524d1bd459ac" category="paragraph">随着时间的推移，存储的数据布局变得不太理想，尤其是当它被诸如 MEDITECH expanse ， 6.x 和 C/S 5.x 平台等写入密集型工作负载使用时。随着时间的推移，这种情况可能会增加顺序读取延迟，从而导致完成备份的时间更长。数据布局或碎片化不良也会影响写入延迟。您可以使用卷级别重新分配来优化磁盘上的数据布局，以改善写入延迟和顺序读取访问。经过改进的存储布局有助于在分配的 8 小时时间内完成备份。</block>
-  <block id="50802d3e5a25b93d471686a10da03dd8" category="cell">最佳实践</block>
-  <block id="3d116bdaaf750260ee09840f5e9f47f7" category="paragraph">NetApp 建议您至少实施每周卷重新分配计划，以便在分配的维护停机时间或生产站点的非高峰时段运行重新分配操作。</block>
-  <block id="6cc89f88b31df0d78c3ecb08d8e83e8e" category="admonition">NetApp 强烈建议您在每个控制器上一次对一个卷运行重新分配任务。</block>
-  <block id="9d8be877e207c9d81536923f45975efb" category="paragraph">有关为生产数据库存储确定适当的卷重新分配计划的详细信息，请参见中的第 3.12 节<block ref="70de5c2a4b00f75ad58d149f3ef37476" category="inline-link-rx"></block>。该节还将指导您如何为繁忙站点创建每周重新分配计划。</block>
-  <block id="046000dc6863f618d4223f4cff2fdff5" category="inline-link-macro">下一步： LUN 配置。</block>
-  <block id="971da7c141a22f2fb0cc7c604e50f436" category="paragraph"><block ref="971da7c141a22f2fb0cc7c604e50f436" category="inline-link-macro-rx"></block></block>
-  <block id="883be5383eb8e601c6e739e7d239831d" category="summary">使用 FC 作为数据网络协议时，请在每个存储控制器上创建两个启动程序组（ igroup ）。第一个 igroup 包含托管 MEDITECH 主机 VM 的 VMware ESXi 服务器上 FC 主机接口卡的 WWPN （对于 MEDITECH 为 igroup ）。</block>
-  <block id="dce719a9aac895b223304c1967dcde5c" category="doc">启动程序组配置</block>
-  <block id="0d2dd5c6941ece8eb16ab9e78d25270a" category="paragraph">您必须根据环境设置设置 MEDITECH igroup 操作系统类型。例如：</block>
-  <block id="12ab7e7aa93cb5c01bdf898515dbb0cd" category="list-text">对于 Windows Server 环境中裸机服务器硬件上安装的应用程序，请使用 igroup 操作系统类型 `Windows` 。</block>
-  <block id="acfd67e8ffe418f3c1670dd60b72ce99" category="list-text">对于使用 VMware vSphere 虚拟机管理程序进行虚拟化的应用程序，请使用 igroup 操作系统类型 `VMware` 。</block>
-  <block id="ba1601797967d07e2d74bbc93105f0e4" category="admonition">igroup 的操作系统类型可能与 LUN 的操作系统类型不同。例如，对于虚拟化的 MEDITECH 主机，您应将 igroup 操作系统类型设置为 `vmware` 。对于虚拟化 MEDITECH 主机使用的 LUN ，应将操作系统类型设置为 `Windows 2008 或更高版本` 。请使用此设置，因为 MEDITECH 主机操作系统是 Windows Server 2008 R2 64 位企业版。</block>
-  <block id="3bc491861d30de8295f30e7c0530f914" category="inline-link">《集群模式 Data ONTAP 8.2 命令：手册页参考》</block>
-  <block id="935dc563230bcd8d2661ec8239ceb879" category="paragraph">要确定正确的操作系统类型值，请参见中的 "LUN igroup Create" 和 "LUN Create" 两节<block ref="8709f832d002232926f6c97762809137" category="inline-link-rx"></block>。</block>
-  <block id="023fd8c6454f5d6b3f83263b44231cd3" category="inline-link-macro">下一步： LUN 映射。</block>
-  <block id="2ac88f7ea588bfcc7d87db18c2e46da1" category="paragraph"><block ref="2ac88f7ea588bfcc7d87db18c2e46da1" category="inline-link-macro-rx"></block></block>
-  <block id="334187009dc6a27eb0034678179f34b2" category="summary">环境中的 MEDITECH 主机数量决定了在 NetApp FAS 或 AFF 系统中创建的 LUN 数量。硬件配置建议用于指定每个 LUN 的大小。</block>
-  <block id="783a06e1789912979ddde31660b15547" category="section-title">LUN 配置</block>
-  <block id="cb9bd7852440ed897a9107cc5090f231" category="paragraph">专用于 MEDITECH 主机的 Meditech LUN 可以采用厚配置或精简配置。</block>
-  <block id="2666379e941ce660d9139f8b1052dc8a" category="section-title">LUN 操作系统类型</block>
-  <block id="4b5f255ff443adcde772c7c014982a21" category="paragraph">要正确对齐创建的 LUN ，必须正确设置 LUN 的操作系统类型。未对齐的 LUN 会产生不必要的写入操作开销，并且更正错位的 LUN 会产生高昂的成本。</block>
-  <block id="90039b64275c0da13169903e607ee1c0" category="inline-link">《集群模式 Data ONTAP 8.3 命令：手册页参考》</block>
-  <block id="6b6e03eb6ad0ba80abd1d0c9d43aaa44" category="paragraph">MEDITECH 主机服务器通常使用 VMware vSphere 虚拟机管理程序在虚拟化的 Windows Server 环境中运行。主机服务器也可以在裸机服务器上的 Windows Server 环境中运行。要确定要设置的正确操作系统类型值，请参阅的 "LUN 创建 " 一节<block ref="0db2b8b602a875ab217af9147abf8f9b" category="inline-link-rx"></block>。</block>
-  <block id="396a637853d3500fa3904bdb5b2155a3" category="section-title">LUN 大小</block>
-  <block id="3e154e08cc3c2480f9fc471b07b04b8a" category="paragraph">要确定每个 MEDITECH 主机的 LUN 大小，请参见 MEDITECH 提供的硬件配置建议（新部署）或硬件评估任务（现有部署）文档。</block>
-  <block id="423326537f2125f42ecd6d0150b04195" category="section-title">LUN 显示</block>
-  <block id="c19ba2ac4734b211d0800cfa4af27b52" category="paragraph">Meditech 要求使用 FC 协议将程序，词典和数据文件的存储作为 LUN 提供给 MEDITECH 主机。在 VMware 虚拟环境中， LUN 会提供给托管 MEDITECH 主机的 VMware ESXi 服务器。然后，在物理兼容模式下使用 RDM 将呈现给 VMware ESXi 服务器的每个 LUN 映射到每个 MEDITECH 主机 VM 。</block>
-  <block id="3b6096997be3a806e8118a8c9ecbf276" category="paragraph">您应使用适当的 LUN 命名约定将 LUN 呈现给 MEDITCH 主机。例如，为了便于管理，您必须将 LUN `MTFS01E` 提供给 MEDITECH 主机 `mt-host-01` 。</block>
-  <block id="751311a9088729731bbcb8365340a457" category="paragraph">在向 MEDITECH 和备份系统安装程序咨询以为 MEDITECH 主机使用的 LUN 设计一致的命名约定时，请参见 MEDITECH 硬件配置提案。</block>
-  <block id="95795644aff3816d232dc5e3eb141b80" category="paragraph">例如， MEDITECH LUN 名称是 `MTFS05E` ，其中：</block>
-  <block id="379c9a8ab874fb7ea4eacfcba8be35a1" category="list-text">`mTFS` 表示 MEDITECH 文件服务器（对于 MEDITECH 主机）。</block>
-  <block id="21aabe104d3e70fb71e441f8a8890de4" category="list-text">`05` 表示主机编号 5 。</block>
-  <block id="7390b1eaf163ff5a6cf6c76336d30155" category="list-text">`E` 表示 Windows E 驱动器。</block>
-  <block id="600c12167daf486f20dd2bfd3905a628" category="inline-link-macro">下一步：启动程序组配置。</block>
-  <block id="11052af0ce66754ed48699cfaaa62908" category="paragraph"><block ref="11052af0ce66754ed48699cfaaa62908" category="inline-link-macro-rx"></block></block>
-  <block id="1af6e957540ff02139807dff6707b41e" category="summary">对于 ESXi 主机端配置，请像运行任何企业数据库工作负载一样配置 VMware 主机。</block>
-  <block id="3ed53054fbdd41cd0ef1e12af91aea41" category="paragraph">对于 ESXi 主机端配置，按照运行任何企业数据库工作负载的方式配置 VMware 主机：</block>
-  <block id="1c5a131e41ababa2a6e44a16b29c4920" category="list-text">适用于 VMware vSphere 的 VSC 会检查并设置最适合 NetApp 存储系统的 ESXi 主机多路径设置和 HBA 超时设置。VSC 设置的值基于 NetApp 的严格内部测试。</block>
-  <block id="98ee352eabcb814d48269d548c7348ce" category="list-text">要获得最佳存储性能，请考虑使用支持 VMware vStorage API - 阵列集成（ VAAI ）的存储硬件。适用于 VAAI 的 NetApp 插件是一个软件库，它集成了 ESXi 主机上安装的 VMware 虚拟磁盘库。通过 VMware VAAI 软件包，可以将某些任务从物理主机卸载到存储阵列。</block>
-  <block id="56d39eb333d1526ae7a5ee0cf801bf8b" category="paragraph">VSC 可设置 ESXi 主机超时，多路径设置和 HBA 超时设置以及其他值，以实现最佳性能并成功对 NetApp 存储控制器进行故障转移。请按照以下步骤操作：</block>
-  <block id="9b3c1eb96faca1b583058fdc3b7d9cab" category="list-text">从 VMware vSphere Web Client 主页页面中，选择 vCenter &gt; 主机。</block>
-  <block id="780ded5951eebcb156ac8263708a207b" category="paragraph"><block ref="780ded5951eebcb156ac8263708a207b" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="9a401e2f5711db0f9c36f73c9a95ce74" category="paragraph"><block ref="9a401e2f5711db0f9c36f73c9a95ce74" category="inline-link-macro-rx"></block></block>
   <block id="6db83abec45c2de6c1a299f3ac7b170f" category="summary">FlexPod 快速系统需要硬件和软件组件的组合。FlexPod Express 还介绍了以两个单位向系统添加虚拟机管理程序节点所需的硬件组件。</block>
   <block id="3c438be737391744e2fed6f73c418638" category="doc">技术要求</block>
   <block id="1ef48b4a026fcfbb688f890ad7c860e2" category="paragraph">无论选择何种虚拟机管理程序，所有 FlexPod 快速配置都使用相同的硬件。因此，即使业务需求发生变化，您也可以在同一个 FlexPod Express 硬件上使用不同的虚拟机管理程序。</block>
@@ -6002,7 +5112,6 @@
   <block id="4ee2a6c7bb7c40af94c5a15dbf7eb673" category="sidebar">医疗保健</block>
   <block id="f4bb968e88fa8aec8a3ffd847dc271cd" category="sidebar">《适用于 Epic EHR 的 FlexPod 数据中心部署指南》</block>
   <block id="a82a8aeb527fe34165f76582a421e44d" category="sidebar">《适用于 MEDITECH 的 FlexPod 方向性规模估算指南》</block>
-  <block id="e526ac3f58d71b824400abfda793a171" category="sidebar">《适用于 MEDITECH 的 FlexPod 数据中心部署指南》</block>
   <block id="d44c9646e3d10988230c569ec4cb40d8" category="sidebar">适用于医疗成像的 FlexPod</block>
   <block id="289167a7b3575c757d12a10d76e13dc8" category="sidebar">FlexPod Express</block>
   <block id="889caead7ae2f699990cf3e2ecc2bd0a" category="sidebar">采用 Cisco UCS C 系列和 NetApp AFF C190 系列的 FlexPod Express 设计指南</block>
@@ -6019,7 +5128,6 @@
   <block id="0466740965e7956f8fc2a734a83f5686" category="sidebar">FabricPool 软件版本</block>
   <block id="6cb34c048fceb40f7d64efc563d407f9" category="sidebar">什么是勒索软件？</block>
   <block id="fbebe2a055b4dcf362a0493004ef468f" category="paragraph">在 FlexPod 架构中需要使用冗余 NetApp FAS ， AFF 或 AFF ASA 控制器。这些控制器运行 ONTAP 软件。订购存储控制器后，可以在这些控制器上预加载首选软件版本。对于 ONTAP ，系统会订购一个完整的集群。整个集群包括一对存储控制器和一个集群互连（交换机或无交换机）。</block>
-  <block id="cc910127c1a0f3009d24973fab296857" category="paragraph">NetApp ONTAP 软件安装在所有 NetApp FAS ， AFF 和 AFF 全 SAN 阵列（ ASA ）系统上。FlexPod 已通过 ONTAP 软件的验证，可提供高度可扩展的存储架构，支持无中断运行，无中断升级和灵活的数据基础架构。</block>
   <block id="b84c25a0a6333d1b6ec82954312075f9" category="paragraph">此配置可以包含任何受支持的 NetApp FAS ， AFF 或 ASA 系列存储控制器。请参见<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block> 应用程序以获取受支持的 FAS ， AFF 和 ASA 控制器型号的最新列表。</block>
   <block id="1e43cedc7bbfa39913e13dd030f51171" category="list-text">如果解决方案使用 ONTAP ，则每个控制器至少需要两个额外的 10/25/100GbE 端口才能进行数据访问。</block>
   <block id="9ae783a3ab636618c5130cf4e28efd11" category="list-text">一个具有任何受支持磁盘类型的 NetApp 磁盘架。请参见的磁盘架选项卡 <block ref="910181e0dcbc3888beac11d697ebd30b" category="inline-link-macro-rx"></block> 有关支持的磁盘架型号的最新列表。</block>
@@ -6057,19 +5165,13 @@
   <block id="aa2f8bc486f5931602b4fd5aa1b0bde8" category="paragraph">FlexPod 平台是一种预先设计的最佳实践数据中心架构，它基于 Cisco 统一计算系统（ Cisco UCS ）， Cisco Nexus 系列交换机和 NetApp 存储控制器（ AFF ， ASA 或 FAS 系统）构建。</block>
   <block id="49f8002032516f551341370d8bbb87c4" category="list-text">HA 配置要求每个控制器具有两个冗余接口来进行数据访问；这些接口可以是 FCoE ， FC 或 10/25/100GB 以太网（ GbE ）。</block>
   <block id="69f069c4c370b3ec1c58983efd30432c" category="list-text">对 NetApp 设备的 SupportEdge Advisor 或 SupportEdge Premium 支持</block>
-  <block id="5906d6dbdea0ad13566afd9cead9fc2c" category="paragraph">FlexPod Express 支持运行 NetApp ONTAP 或 SANtricity 操作系统的存储系统。</block>
-  <block id="07bb9fea02eb345871ff44646d8ceb97" category="paragraph">NetApp ONTAP 软件是在 AFF 和 FAS 存储系统上运行的操作系统。ONTAP 提供了一个高度可扩展的存储架构，可实现无中断运行，无中断升级和灵活的数据基础架构。</block>
   <block id="1e3274a40d2751f8442f3b15fddb1f21" category="inline-link">ONTAP 产品页面</block>
   <block id="0f9b0a6f89a44a0888a692ccc45abc12" category="paragraph">有关 ONTAP 的详细信息，请参见<block ref="88cc62f55a4daad34ef58813e7e4f1c6" category="inline-link-rx"></block>。</block>
-  <block id="0ba0549652aeb08deee908e7e20e4817" category="paragraph">E 系列 SANtricity 软件是在 E 系列存储系统上运行的操作系统。SANtricity 提供了一个高度灵活的系统，可满足不同的应用程序需求，并提供内置的高可用性和各种数据保护功能。</block>
-  <block id="54ea526e0f7043f1dc938cd7369a4327" category="inline-link">SANtricity 产品页面</block>
-  <block id="6b5301ce1cf7e0e48684f0dfb047d000" category="paragraph">有关详细信息，请参见<block ref="886f8cec6f6fad388084013f5ad16d82" category="inline-link-rx"></block>。</block>
   <block id="107b85601e13443e848d96d910bee735" category="summary">本页介绍如何将 FlexPod 与 SAP HANA 和其他 SAP 应用程序结合使用。</block>
   <block id="7caa0b3fa0fd74ced773a86b62850a8b" category="doc">基于 FlexPod 的 SAP 简介</block>
   <block id="1d17aeb7ab368ca4f28128e50a5cf276" category="paragraph">FlexPod 平台是一种预先设计的最佳实践数据中心架构，它基于 Cisco 统一计算系统（ Cisco UCS ）， Cisco Nexus 系列交换机和 NetApp 存储控制器构建。</block>
   <block id="864daa7ed7265e3176099021d13f4763" category="paragraph">FlexPod 是运行 SAP 应用程序的合适平台，此处提供的解决方案可帮助您快速，可靠地部署 SAP HANA ，并采用量身定制的数据中心集成模式。FlexPod 不仅提供了基线配置，而且还可以灵活地调整规模并进行优化，以满足多种不同的使用情形和要求。</block>
   <block id="5b7e41bd189664acad4c873cf6e0c2df" category="sidebar">采用 FlexPod 的 SAP 简介</block>
-  <block id="b751a075630ee799e9ae603044754240" category="list-text">* FlexPod Datacenter 。 * 此平台是一个可大规模扩展的虚拟数据中心基础架构，适合工作负载企业级应用程序，虚拟化， VDI 以及公有和私有云。FlexPod 数据中心具有自己的规格，如中所述<block ref="c74831bb1a85ac0f8575eb8eeac86329" category="inline-link-rx"></block>。</block>
   <block id="245c499a8eb2230fa27979a452c776e5" category="summary">FlexPod 快速平台支持本节中列出的存储操作系统。</block>
   <block id="61cc46b957612003be945c20fa10a67c" category="admonition">只有在通过 NetApp Active IQ Unified Manager 9.9 或更高版本监控存储阵列时，才会显示以下性能指标摘要信息。</block>
   <block id="0b7287babbe3c16553a6f9cd3e22a10b" category="summary">Cisco Intersight 推出了新版本，可为您提供新功能，增强功能和错误修复。</block>
@@ -6616,8 +5718,6 @@
   <block id="25297dbc8df2aecff2fa2e9e47638d35" category="cell">NetApp AFF A250</block>
   <block id="3ac00041ac1bd123acdee59cdfc05a50" category="inline-link">AFF A250 平台文档</block>
   <block id="5936e0c2771ef74069a005d2fb9355a5" category="cell"><block ref="5936e0c2771ef74069a005d2fb9355a5" category="inline-link-rx"></block></block>
-  <block id="e5974ac049da72bf0d9c2228215d373b" category="list-text">采用高可用性（ HA ）对配置的两个 AFF C190 ， AFF A250 ， FAS2600 或 FAS 2700 系列控制器，部署为双节点集群</block>
-  <block id="6e1c422f8099cdf6eb51d54a7f387fc7" category="list-text">一个 HA 对配置中的两个 AFF C190 ， AFF A250 ， FAS2750 或 FAS2720 控制器（每个控制器需要两个可用的统一目标适配器 2 个端口）</block>
   <block id="ed4bde4fa0721113bfb61cca4c8d0b99" category="paragraph">Arvind Ramakrishnan 和 NetApp 公司 Jyh-shing Chen</block>
   <block id="73cbafda498a06bae0ca1f5a7714be30" category="inline-link-macro">接下来： FlexPod 平台。</block>
   <block id="ffe6ecde43ed5c7ff2182a101c0d2390" category="paragraph"><block ref="ffe6ecde43ed5c7ff2182a101c0d2390" category="inline-link-macro-rx"></block></block>
@@ -7564,7 +6664,6 @@
   <block id="182b99dd6e6e03bd87c6e4742f0efe61" category="inline-link-macro">先前版本：解决方案 验证 - 网络。</block>
   <block id="b039f508b07fa442d12ced167cdee4ab" category="paragraph"><block ref="b039f508b07fa442d12ced167cdee4ab" category="inline-link-macro-rx"></block></block>
   <block id="a400e1c221e8c3e8b80a81f5085a481d" category="paragraph"><block ref="a400e1c221e8c3e8b80a81f5085a481d" category="inline-link-macro-rx"></block></block>
-  <block id="77adde3767ae2cc82097445aa8b15e86" category="list-text">采用冗余配置的两个10 Gbps标准以太网交换机(建议使用Cisco Nexus 31108、并支持Cisco Nexus 3000和9000型号)</block>
   <block id="40ad3b682c80f313282c440b74ef7360" category="paragraph"><block ref="40ad3b682c80f313282c440b74ef7360" category="inline-link-rx"></block></block>
   <block id="d1cdbd3c8324f3afbc5b420ce471feff" category="section-title">2022年7月</block>
   <block id="f4b185ec676b1beb34726576b20e3951" category="list-text">容量小工具中现在提供了改进的集群数据精简率视觉效果</block>
@@ -9164,11 +8263,6 @@
   <block id="d335eeb839a0ef85080a9e93786ed9c5" category="list-text"><block ref="d335eeb839a0ef85080a9e93786ed9c5" category="inline-link-macro-rx"></block></block>
   <block id="d18608754f74434b85d4bf03483652bc" category="list-text"><block ref="d18608754f74434b85d4bf03483652bc" category="inline-link-macro-rx"></block></block>
   <block id="7e911c9fa59d1977be061678831b5cf7" category="cell"><block ref="7e911c9fa59d1977be061678831b5cf7" category="inline-link-rx"></block></block>
-  <block id="53baf558f01ca85a26eb1f164869ecfc" category="list-text">*存储效率*使用降低存储成本<block ref="7c9c4fcbdd570f33351876037a96c5f3" category="inline-link-rx"></block>。</block>
-  <block id="921810271b05ea8d6d76b8608a84dd55" category="paragraph">有关MEDITECH工作负载说明的更多详细信息，请参见<block ref="360129404e57c8df579b7f1615d3390c" category="inline-link-rx"></block>。</block>
-  <block id="2665341002bdc1d24544ba94bba4a830" category="paragraph"><block ref="2665341002bdc1d24544ba94bba4a830" category="inline-link-rx"></block></block>
-  <block id="b2fb60c2a4a1b44c8c14a60e2883c6e0" category="list-text"><block ref="b2fb60c2a4a1b44c8c14a60e2883c6e0" category="inline-link-rx"></block></block>
-  <block id="d4ef78651f9cef1dbf14bc1ffe07737f" category="list-text"><block ref="d4ef78651f9cef1dbf14bc1ffe07737f" category="inline-link-rx"></block></block>
   <block id="70cdaed33c7671907d6873604121f641" category="list-text">*智能使用存储平台*采用ONTAP自动层和NetApp Fabric Pool技术的FlexPod可简化数据管理。FabricPool 有助于降低存储成本，而不会影响性能，效率，安全性或保护。FabricPool 对企业级应用程序是透明的，它可以降低存储 TCO ，而无需重新构建应用程序基础架构，从而充分利用云效率。FlexPod 可以从 FabricPool 的存储分层功能中受益，从而更高效地利用 ONTAP 闪存存储。有关详细信息，请参见<block ref="5990a183ff0805566d6969a955233353" category="inline-link-rx"></block>。下图简要概述了 FabricPool 及其优势。</block>
   <block id="0b921bb1595764dd70d91a0ac86cb9fe" category="paragraph"><block ref="0b921bb1595764dd70d91a0ac86cb9fe" category="inline-link-rx"></block></block>
   <block id="2bd59f07acc84ae5bcea7882570e52e3" category="paragraph"><block ref="2bd59f07acc84ae5bcea7882570e52e3" category="inline-link-rx"></block></block>
@@ -9259,4 +8353,142 @@
   <block id="9c731b980c2b703bfdb439c7056b1bfd" category="admonition">有关支持 FabricPool 的平台的最新信息，请参见<block ref="c4dd6ba7b5ae102345b7377110dc849b" category="inline-link-rx"></block>。</block>
   <block id="00ae925249b1dcd734cdb679b48bf8f7" category="list-text">NetApp ONTAP Select</block>
   <block id="9044f591b913b8cf0cc25f90afe3223c" category="admonition">NetApp 建议使用全 SSD FabricPool 本地层。</block>
+  <block id="0e658e993dc6099a0da46bca02ad983c" category="paragraph">NetApp ONTAP 软件安装在所有 NetApp FAS、AFF 和 ASA 系统上。FlexPod 已通过 ONTAP 软件验证，提供高度可扩展的存储架构，实现无中断操作、无中断升级和敏捷数据基础设施。</block>
+  <block id="b08cac487db6961f4830fe1f50d9a631" category="section-title">Cisco UCS X-Series 直连</block>
+  <block id="ab2c83112d1106959a02c067da964635" category="paragraph">Cisco UCS X-Series Direct 是一种新的架构，它将一对 Cisco UCS Fabric Interconnect 9108 100G 与 Cisco UCS X9508 Chassis 和 Cisco UCS X-Series Compute 节点集成在一起，以提供 UCS X-Series Direct 解决方案。</block>
+  <block id="4e5bfcd6b58f1477e32ceb617ea2e6a2" category="paragraph">Cisco UCS X-Series Direct 包括以下组件：</block>
+  <block id="33d22df2af89abdeaab64f6e62aa4d2a" category="list-text">Cisco UCS 9108 100G 结构互连</block>
+  <block id="9a983605bcc1b03c274722ab5b4fceb7" category="list-text">Cisco UCS X9508 机箱</block>
+  <block id="7297a8a246f4107073155eb7adf8aad6" category="list-text">Cisco UCS X 系列计算节点</block>
+  <block id="171463d07e5f804b6e4a5d00f05a9948" category="list-text">可选组件：PCIe 节点和 X-Fabric 模块</block>
+  <block id="fa54d292263dba156a82cbe5d7634e25" category="inline-link">Cisco UCS X-Series Direct 数据表</block>
+  <block id="7bd2db3d7d274705cd97bce1a15ba083" category="admonition">有关 UCS X-Direct 的完整技术规范，请参阅此链接：<block ref="c6d158517f0137b0ee0fc81034309271" category="inline-link-rx"></block>。</block>
+  <block id="52812d5e9f7f85a41759657770889b4b" category="paragraph">有关 X-Series Direct 组件的技术规格，请参见下表。</block>
+  <block id="5108f9823153bf86d424465411769c7e" category="cell">UCS 9108 100G 结构互连</block>
+  <block id="6667cc003527f70428fbb3f46d896e10" category="cell">UCSX-S9108-100G</block>
+  <block id="c78a25b3d391b3eabe5a4f6e3a159d89" category="inline-link">Cisco UCS 9108 Fabric Interconnect</block>
+  <block id="55941e76508015eb43dd9b6db66a8de4" category="cell"><block ref="55941e76508015eb43dd9b6db66a8de4" category="inline-link-rx"></block></block>
+  <block id="3fbecaa187bec4c0133ee458cb18648e" category="cell">Cisco UCS X 系列机箱</block>
+  <block id="c42738d7d96a10ba2e13752c497fe352" category="cell"><block ref="d2f7a165d8728317906bc29daa2c85b4" category="inline-link-rx"></block></block>
+  <block id="85a845d3a2419a09e5bc3078a0e2c402" category="cell">Cisco UCS X210c M7</block>
+  <block id="542ae9366fc15c0eac09d9ca0b343ff2" category="cell">UCSX-210C-M7</block>
+  <block id="c80b1ea5b264dcbe01ea1ca703f6ff74" category="inline-link">Cisco UCS X210c M7 计算节点</block>
+  <block id="54705fac3253e295c3859b5ee543daf0" category="cell"><block ref="54705fac3253e295c3859b5ee543daf0" category="inline-link-rx"></block></block>
+  <block id="aa868f34642b235e56aa100dd29911a6" category="cell">Cisco UCS X210c M8</block>
+  <block id="a6d64f93d7c6293dd77985bd9b59413b" category="cell">UCSX-210C-M8</block>
+  <block id="e735a8b9647bb22edf3884aab9bab721" category="inline-link">Cisco UCS X210c M8 计算节点</block>
+  <block id="87a2bf74f615f8df54eaed3038c2180f" category="cell"><block ref="87a2bf74f615f8df54eaed3038c2180f" category="inline-link-rx"></block></block>
+  <block id="1fa094101a30dc8d5c01d55ec4e0b2c3" category="cell">Cisco UCS X215c M8</block>
+  <block id="79ee6ae5e350f7d2d17d88640b427dea" category="cell">UCSX-215C-M8</block>
+  <block id="ebcf4fed81a8ec58e9fa2bb56b56655e" category="inline-link">Cisco UCS X215c M8 计算节点</block>
+  <block id="213d905938651850e0700aec995d4f25" category="cell"><block ref="213d905938651850e0700aec995d4f25" category="inline-link-rx"></block></block>
+  <block id="7d6476a168f796512cd343dbf6647c45" category="cell">Cisco UCS X410c M7</block>
+  <block id="f15000df0fa439ce16f3435962ac49e5" category="cell">UCSX-410C-M7</block>
+  <block id="12951cf21eec347ba4258854c54626b0" category="inline-link">Cisco UCS X410c M7 计算节点</block>
+  <block id="eb3c277cb9640d4d78fda6eb48405ca2" category="cell"><block ref="eb3c277cb9640d4d78fda6eb48405ca2" category="inline-link-rx"></block></block>
+  <block id="db8fcd946f3ea3ecbb5f6df26d108975" category="cell">Cisco UCS X410c M8</block>
+  <block id="be22b28321184ab2c1fab5ff51ab7621" category="cell">UCSX-410C-M8</block>
+  <block id="fec8623d55f39e0df72c4d65c9a8a88c" category="inline-link">Cisco UCS X410c M8 计算节点</block>
+  <block id="d534d9e405380c188e8251558dc9a224" category="cell"><block ref="d534d9e405380c188e8251558dc9a224" category="inline-link-rx"></block></block>
+  <block id="03bd80ec3d64c289030b272008786311" category="cell">Cisco UCS X 系列模块</block>
+  <block id="e1aac65c2b6e24c8e8adc95e43ed62ee" category="cell">Cisco UCS 9108 智能结构模块</block>
+  <block id="fcfe8e82e41744adc21a0e98c9d0fb10" category="cell">UCSX-I-9108-100G</block>
+  <block id="ccd4443b7fa96e36677438df98acd96a" category="cell"><block ref="ccd4443b7fa96e36677438df98acd96a" category="inline-link-rx"></block></block>
+  <block id="033b7fd69c0efbd849f830986d5a238a" category="cell">Cisco UCS X9516 X-Fabric 模块</block>
+  <block id="93f609c9836071de030ad98eb9986168" category="cell">UCSX-FS-9516</block>
+  <block id="093c482cedd34b9160b239bf45baa595" category="cell"><block ref="093c482cedd34b9160b239bf45baa595" category="inline-link-rx"></block></block>
+  <block id="134a2787cf332fffd37a3606fe4f65f6" category="cell">Cisco UCS X9416 X-Fabric 模块</block>
+  <block id="6d746fe8059da3c9368ddffe8db53eff" category="cell">UCSX-FS-9416</block>
+  <block id="ef67dfcf39e97948851ebbffb6b5749d" category="cell"><block ref="dd8de1fc1eca8661d0b04dfdd09619f7" category="inline-link-rx"></block></block>
+  <block id="d4a1f2b08ae3c30faec4f877f6be7b6b" category="paragraph">Cisco UCS C 系列机架式服务器有 1 个和 2 个机架单元 (RU) 品种，具有各种 CPU、内存和 I/O 选项。下表中列出的部件号适用于基本服务器。它们不包括 CPU、内存、驱动器、外设组件互连 Express (PCIe) 卡。有多个配置选项可用，并且在 FlexPod 体系结构中受支持。</block>
+  <block id="08f285120864063a3664f0b981e85974" category="cell">Cisco UCS C220 M7</block>
+  <block id="185f87b891565a026a599afc6ccf6509" category="cell">UCSC-C220-M7</block>
+  <block id="59bb7a4168ca0727f0e8657c561faece" category="inline-link">Cisco UCS C220 M7 机架式服务器</block>
+  <block id="bcff2c86efe0c36653739dbee8dcf43d" category="cell"><block ref="bcff2c86efe0c36653739dbee8dcf43d" category="inline-link-rx"></block></block>
+  <block id="0d88de12c1b3aba2b9ffac63dc85d4af" category="cell">Cisco UCS C220 M8</block>
+  <block id="f5ccd1d71c2ed21d0f2d220921fb6e39" category="cell">UCSC-C220-M8</block>
+  <block id="79c949339648467243f2664b108888d1" category="inline-link">Cisco UCS C220 M8 机架式服务器</block>
+  <block id="0e0837a63f73d1416f17f871c1d92529" category="cell"><block ref="0e0837a63f73d1416f17f871c1d92529" category="inline-link-rx"></block></block>
+  <block id="08f90c3f9daaa88b26f047dc5d0cf3b2" category="cell"><block ref="08f90c3f9daaa88b26f047dc5d0cf3b2" category="inline-link-rx"></block></block>
+  <block id="c49cf51806c8304f47ef0af1cc3583b1" category="cell">Cisco UCS C225 M8</block>
+  <block id="5eb4b81081e3e747c520c2d5f4dc8ccf" category="cell">UCSC-C225-M8</block>
+  <block id="32de8c4c7d70c5cef467c42019e17abb" category="inline-link">Cisco UCS C225 M8 机架式服务器</block>
+  <block id="a15976f50db7ffc9d0598d204824066c" category="cell"><block ref="a15976f50db7ffc9d0598d204824066c" category="inline-link-rx"></block></block>
+  <block id="d08f7047cb41d3f3eb07a1d246224cc8" category="cell">Cisco UCS C240 M7</block>
+  <block id="0ba1dc11236b9c5fb6ffb144afc496e4" category="cell">UCSC-C240-M7</block>
+  <block id="d9a53386c52a3a8c8f311cc1dd2f9a89" category="inline-link">Cisco UCS C240 M7 机架式服务器</block>
+  <block id="c61bd2b7a38a51c0719fb6de44c82b54" category="cell"><block ref="c61bd2b7a38a51c0719fb6de44c82b54" category="inline-link-rx"></block></block>
+  <block id="98b8f38cb9a13ca8642e515e19c5bcae" category="cell">Cisco UCS C240 M8</block>
+  <block id="5d9fc3ec46a458610c3b12248cb0d9a9" category="cell">UCSC-C240-M8</block>
+  <block id="4480a773cf291aad9f12830614e6a55c" category="inline-link">Cisco UCS C240 M8 机架式服务器</block>
+  <block id="540548b7de484075cad2e648e62b24d4" category="cell"><block ref="540548b7de484075cad2e648e62b24d4" category="inline-link-rx"></block></block>
+  <block id="fbf3f8d4623d9c4266b5e270ab5a0ee9" category="cell"><block ref="fbf3f8d4623d9c4266b5e270ab5a0ee9" category="inline-link-rx"></block></block>
+  <block id="1088a815c23b6f882393e6097af48661" category="cell">Cisco UCS C245 M8</block>
+  <block id="2c29504598d658ae397498e3692de0bb" category="cell">UCSC-C245-M8</block>
+  <block id="2e53148601f2552843e772c481eceb95" category="inline-link">Cisco UCS C245 M8 机架式服务器</block>
+  <block id="efa98f10731ee80849f96960caa9f2dc" category="cell"><block ref="efa98f10731ee80849f96960caa9f2dc" category="inline-link-rx"></block></block>
+  <block id="39a715608f33f16328cd082d89f0295b" category="section-title">Cisco Nexus 交换机</block>
+  <block id="e07fa2542b3d02c0ddf222a6690071dc" category="paragraph">在 FlexPod 架构中需要冗余 Cisco Nexus 交换机。</block>
+  <block id="e887ad7f00d6c8bf280bc10e3fee2f52" category="cell">Cisco Nexus 交换机</block>
+  <block id="a0159b12a4e3470c15426cabb652f158" category="cell">Cisco Nexus 9200 系列交换机</block>
+  <block id="c805c717b2ff719e7f051f990444a02e" category="cell"><block ref="c805c717b2ff719e7f051f990444a02e" category="inline-link-rx"></block></block>
+  <block id="a388b76dc45ac18e52a3b75efb35834a" category="cell">Cisco Nexus 9300 系列交换机</block>
+  <block id="db7c6a8cf8fb1bedef955b74c1d48458" category="cell"><block ref="db7c6a8cf8fb1bedef955b74c1d48458" category="inline-link-rx"></block></block>
+  <block id="05529d9f87f535089b136d6e6c79152a" category="paragraph">在 FlexPod Express 架构中的所有 Cisco 设备都需要有效的 TSANet 支持合同。</block>
+  <block id="c03e321ec861308530b2664bf76c15c5" category="admonition">所需的许可证和相应的部件号可能因产品和配置而异。建议在订购之前与您的 Cisco 或 NetApp 销售代表确认许可要求。</block>
+  <block id="b7f43873760e77ea41c49202022ab227" category="cell">TSANet</block>
+  <block id="3ea0d3685f27390f9fe371eab129dce9" category="cell"><block ref="3ea0d3685f27390f9fe371eab129dce9" category="inline-link-rx"></block></block>
+  <block id="0d23eba7274fadde661e961150cfe90c" category="section-title">FlexPod Express 与 NetApp AFF/ASA/FAS 的连接要求</block>
+  <block id="9d2250f706e841221ec2094f92705927" category="paragraph">FlexPod Express 与 NetApp AFF/ASA/FAS 的连接要求包括：</block>
+  <block id="ed36393f337de9358b449ee681cedeee" category="list-text">NetApp 存储控制器必须直接连接到 Cisco Nexus 交换机。</block>
+  <block id="13aa4a26afcbbdb8ccf34184d272233a" category="list-text">对于 UCS X 系列直接部署，NetApp 存储控制器可以直接连接到嵌入式交换矩阵互联。</block>
+  <block id="708c875b65201b1171582654c9785698" category="list-text">将 Cisco Nexus 9000 系列交换机连接到 NetApp 存储控制器需要虚拟端口通道 (vPC)。</block>
+  <block id="3aff03b52067b9fd44f45fb876653a9c" category="list-text">*FlexPod Datacenter。*此平台是一个可大规模扩展的虚拟数据中心基础设施，适用于工作负载企业应用程序、虚拟化、VDI 以及公共云和私有云。FlexPod Datacenter 有自己的规范，详见<block ref="0bb629a24a99e06d4ec011831def694a" category="inline-link-rx"></block>。</block>
+  <block id="1fd1ccb51d4008bf4d6e7734454719d8" category="section-title">FlexPod Express 与 NetApp AFF/ASA/FAS</block>
+  <block id="07fabd6fde589c0dfb293502119057ad" category="paragraph">使用 NetApp AFF、ASA 或 FAS 控制器作为底层存储的 FlexPod Express 解决方案的硬件要求包括本节所述的配置。</block>
+  <block id="75b256e594cf5a8ba03273e8a68f2c27" category="paragraph">FlexPod Express 的最低硬件要求如下所示：</block>
+  <block id="7013f56669c02dbe795614370d0c956e" category="list-text">两个冗余配置的 10Gbps 标准以太网交换机（Cisco Nexus 9200 和 9300 型号）</block>
+  <block id="737ae7047a573165eadb480d2b9b3a7e" category="list-text">具有基于 CIMC 的独立机架式服务器配置或 Intersight-managed 配置 (IMM) 的 Cisco UCS C 系列独立机架式服务器或具有 Cisco IMM 配置的 Cisco UCS X 系列 Direct</block>
+  <block id="0c31792ebf62debf53351a3c946658a4" category="list-text">作为双节点群集部署的高可用性 (HA) 对配置中的两个入门级 NetApp AFF (A20、A30 或 C30)、NetApp ASA (A20、A30 或 C30) 或 NetApp FAS (2750 或 2820) 系列控制器</block>
+  <block id="518388d8bf47fef25a51b033351e90c6" category="section-title">NetApp AFF/ ASA/ FAS 的 FlexPod Express 软件要求</block>
+  <block id="c73c43926cb72083a2e88ddeea8dfb6e" category="paragraph">FlexPod Express 搭配 NetApp AFF/ ASA/ FAS 的软件要求包括：</block>
+  <block id="fa39e3184058dc78c3eadf7b10e6ffa9" category="list-text">ONTAP 9.16 或更高版本</block>
+  <block id="cfa57e5262733289daf4a15d534d7a2e" category="list-text">Cisco NX-OS 版本 10.4(6)M 或更高版本</block>
+  <block id="4e6a4646d756c190e8091d8c86e93232" category="admonition">本节中列出的所有软件版本都是本文档后续章节中列出的硬件组件（NetApp 和 Cisco 组件）的最低要求。</block>
+  <block id="a05525388d2fadefda4af92395d016ea" category="summary">NetApp 存储控制器为 FlexPod Express 架构中的启动和应用数据存储提供了存储基础。本节列出了 FlexPod Express 架构中不同的 NetApp 存储选项。</block>
+  <block id="8cf756e67e6fe3a58a1405610ba75ad9" category="paragraph">在 FlexPod Express 架构中需要冗余 AFF、ASA 或 FAS 系列控制器。控制器运行 ONTAP 软件。订购存储控制器时，可以在控制器上预加载首选软件版本。对于 ONTAP，集群可以部署一对集群互连交换机，也可以部署在无交换机集群配置中。</block>
+  <block id="d5c565b8a9c9c59fa0b692c9cbf65edd" category="admonition">只有双节点配置才支持无交换机集群配置。具有 4 个以上节点的配置需要集群互连交换机，而双节点配置则可选。</block>
+  <block id="230b6be042c6a9e09ceea70fd8e2f108" category="paragraph">根据所选的存储平台，可提供不同的选项和配置。有关这些附加组件的详细信息，请咨询您的销售代表。</block>
+  <block id="ee65a1f1b80c1d59eba7dc665cc831bc" category="paragraph">下表中列出的控制器系列适合在 FlexPod 解决方案中使用，因为它们与 Cisco Nexus 交换机的连接是无缝的。有关每个控制器型号的具体兼容性详细信息，请参阅<block ref="0012c2b4de81607ee8d0f71acdd6c9ab" category="inline-link-rx"></block>。</block>
+  <block id="b77cf317a6bb3b0806632ae61052e3ed" category="cell">NetApp 入门级存储系列，适用于 FlexPod Express</block>
+  <block id="ae80ae2c7480651e65f11ec1f29d6ede" category="cell">A20</block>
+  <block id="a0ab09bcd71cc8c8e831f022615b28a4" category="cell"><block ref="a0ab09bcd71cc8c8e831f022615b28a4" category="inline-link-rx"></block></block>
+  <block id="1d54842ba417c6ef95e35c602a80d5ac" category="cell">A30</block>
+  <block id="71642a8ed4161123d0530fb7e39a80f1" category="cell">AFF C 系列</block>
+  <block id="9c5fd388a2ee6ceb65d30336d2fec257" category="cell">C30</block>
+  <block id="6488de7d247a06b442a5018b0d91bfc6" category="inline-link">AFF C 系列文档</block>
+  <block id="369fac7daa2f8b7e7c135f15db1bd0ed" category="cell"><block ref="369fac7daa2f8b7e7c135f15db1bd0ed" category="inline-link-rx"></block></block>
+  <block id="e74e816dd7cc6f70a065fed35442bdba" category="cell">ASA A 系列</block>
+  <block id="f19fecfa4cd02d0595de1ba8660070b8" category="inline-link">ASA A 系列文档</block>
+  <block id="411495c9b6bc6c820abb1fe113fdc63d" category="cell"><block ref="411495c9b6bc6c820abb1fe113fdc63d" category="inline-link-rx"></block></block>
+  <block id="eab12603d471c1206ae118fe245f03eb" category="cell">ASA C 系列</block>
+  <block id="06ebd0c9afc2e42f48a4879187f7162c" category="inline-link">ASA C 系列文档</block>
+  <block id="6ccb8264c017c1314bf9d314e2d2275c" category="cell"><block ref="6ccb8264c017c1314bf9d314e2d2275c" category="inline-link-rx"></block></block>
+  <block id="149f0ea389848f479bd80af6375b383b" category="cell">FAS</block>
+  <block id="82d9aaf29409f2b1321f31e9bf87f742" category="cell">FAS 2750</block>
+  <block id="b547a5d94845d9471423356c66873bd5" category="inline-link">FAS 文档</block>
+  <block id="3948a9d911a4ab4fca76092210e66452" category="cell"><block ref="3948a9d911a4ab4fca76092210e66452" category="inline-link-rx"></block></block>
+  <block id="7ec34d91a495121e75b876eb6b33c2ae" category="cell">FAS 2820</block>
+  <block id="c7dd26489686f8b76f6a64795f0045f8" category="paragraph">存储控制器至少需要一个 NetApp 磁盘架。</block>
+  <block id="228f628b17255facbba7695d9af12a80" category="cell"><block ref="228f628b17255facbba7695d9af12a80" category="inline-link-rx"></block></block>
+  <block id="c740766e109ecd59d174dc2f65176922" category="cell">NS224 搭配 NSM100B</block>
+  <block id="2a5e4b862dd1bf5a3b1fa887c48e6ea0" category="paragraph">下表列出了 NetApp 软件许可选项。</block>
+  <block id="a2a63972aa167453b51ce7c5db322251" category="cell">用于 AFF 和 FAS 的 ONTAP One 或 ONTAP base</block>
+  <block id="bb6c553e84ebdbce5d573cf1afb7fecb" category="cell">ONTAP One for SAN for ASA</block>
+  <block id="9bbe0d8f02cd9da80ec2e9b5e267d5d9" category="paragraph">下表列出了 NetApp AFF、ASA 和 FAS 存储系统的 NetApp 支持许可选项。</block>
+  <block id="794dd8ccd88e23abed65ea05ccfbfe66" category="summary">FlexPod Express 是一种预先设计的最佳实践架构，基于 Cisco 统一计算系统（Cisco UCS）和 Cisco Nexus 系列交换机构建，存储层使用 NetApp AFF、ASA 或 FAS 存储系统构建。</block>
+  <block id="52303a3cfdeba922a67c70e8c2711113" category="paragraph">FlexPod Express 是一种预先设计的最佳实践架构，基于 Cisco 统一计算系统（Cisco UCS）和 Cisco Nexus 系列交换机构建，存储层使用 NetApp AFF、ASA 或 FAS 入门级存储系统构建。FlexPod Express 是运行各种虚拟化虚拟机管理程序和裸机操作系统（OS）以及企业工作负载的合适平台。</block>
+  <block id="068b348153ec2cbed13b621268bdd199" category="paragraph">FlexPod Express 不仅提供基线配置，还提供灵活性来调整和优化，以适应许多不同的用例和要求。</block>
+  <block id="2a409f1fa2a150f2253ac127248488e4" category="paragraph">FlexPod Express 支持运行 NetApp ONTAP 操作系统的存储系统。</block>
+  <block id="7cd01b7a129748a09b50303734dbf37d" category="paragraph">NetApp ONTAP 软件是在 AFF、ASA 和 FAS 存储系统上运行的操作系统。ONTAP 提供高度可扩展的存储架构，支持无中断操作、无中断升级和敏捷数据基础设施。</block>
 </blocks>
