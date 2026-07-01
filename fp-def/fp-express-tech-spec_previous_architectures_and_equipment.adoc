@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: fp-def/fp-express-tech-spec__previous_architectures_and_equipment.html 
+permalink: fp-def/fp-express-tech-spec_previous_architectures_and_equipment.html 
 keywords: architecture, equipment, previous, hardware, verified, small, medium, large, configuration 
 summary: 本节列出了以前的 FlexPod 快速架构及其使用的硬件。 
 ---

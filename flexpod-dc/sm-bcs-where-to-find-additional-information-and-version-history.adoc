@@ -124,7 +124,7 @@ https://core.vmware.com/resource/vmware-vsphere-metro-storage-cluster-vmsc["http
 
 * VMware vSphere Metro Storage Cluster 建议的实践
 +
-https://core.vmware.com/resource/vmware-vsphere-metro-storage-cluster-recommended-practices["https://core.vmware.com/resource/vmware-vsphere-metro-storage-cluster-recommended-practices"^]
+https://www.vmware.com/docs/vmw-vmware-vsphere-metro-storage-cluster-recommended-practices["https://www.vmware.com/docs/vmw-vmware-vsphere-metro-storage-cluster-recommended-practices"^]
 
 * 采用 NetApp SnapMirror 业务连续性（ SM-BC ）和 VMware vSphere Metro Storage Cluster （ VMSC ）的 NetApp ONTAP 。（ 83370 ）
 +

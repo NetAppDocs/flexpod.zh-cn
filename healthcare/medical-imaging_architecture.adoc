@@ -135,7 +135,7 @@ Snapshot 技术基于写入时重定向技术。它最初仅包含元数据指�
 
 image:medical-imaging_image4.png["错误：缺少图形映像"]
 
-全球数千家企业都在使用 NetApp MetroCluster 配置在数据中心内外实现高可用性（ HA ），零数据丢失和无中断运行。MetroCluster 是 ONTAP 软件的一项免费功能，用于在位于不同位置或故障域的两个 ONTAP 集群之间同步镜像数据和配置。MetroCluster 通过自动处理两个目标为应用程序提供持续可用的存储：零恢复点目标（ RPO ），通过同步镜像写入集群的数据。通过镜像配置和自动访问第二个站点的数据实现接近零恢复时间目标（ RTO ） MetroCluster 可在两个站点的两个独立集群之间自动镜像数据和配置，从而简化操作。由于存储是在一个集群中配置的，因此它会自动镜像到第二个站点的第二个集群。NetApp SyncMirror 技术可为所有数据提供一个完整副本，并且 RPO 为零。因此，一个站点的工作负载可以随时切换到另一个站点，并继续提供数据而不会丢失数据。有关详细信息，请参见 https://fieldportal.netapp.com/content/746482["此处"^]。
+NetApp MetroCluster 配置被全球数千家企业用于数据中心内外的高可用性 (HA)、零数据丢失和无中断操作。MetroCluster 是 ONTAP 软件的免费功能，可在不同位置或故障域中的两个 ONTAP 集群之间同步镜像数据和配置。MetroCluster 通过自动处理以下两个目标，为应用程序提供持续可用的存储：通过同步镜像写入集群的数据，实现零恢复点目标 (RPO)。通过镜像配置和自动访问第二个站点的数据，实现接近零的恢复时间目标 (RTO)，MetroCluster 通过位于两个站点的两个独立集群之间的数据和配置自动镜像提供简便性。在一个集群中调配存储时，该存储会自动镜像到第二个站点的第二个集群。NetApp SyncMirror 技术提供所有数据的完整副本，RPO 为零。因此，来自一个站点的工作负载可以随时切换到另一个站点，并在不丢失数据的情况下继续提供数据。有关详细信息，请参见 https://fieldportal.netapp.com/s/article/tr4705-netapp-metrocluster-solution-architecture-and-design-1693982882873["此处"^]。
 
 
 

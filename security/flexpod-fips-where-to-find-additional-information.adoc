@@ -32,7 +32,7 @@ https://www.netapp.com/company/trust-center/compliance/fips-140-2/[]
 
 * FIPS 140-2
 +
-https://fieldportal.netapp.com/content/902303[]
+https://fieldportal.netapp.com/s/article/tr4781-fips-1402-1694000809616[]
 
 * 《 NetApp ONTAP 9 加固指南》
 +
@@ -68,11 +68,11 @@ https://csrc.nist.gov/csrc/media/projects/cryptographic-module-validation-progra
 
 * 适用于大中型医疗保健组织的网络安全实践
 +
-https://www.phe.gov/Preparedness/planning/405d/Documents/tech-vol2-508.pdf[]
+https://hhscyber.hhs.gov/Documents/HICP/tech-vol2-508.pdf[]
 
-* Cisco 和加密模块验证计划（ CMVP ）
+* 加密模块验证计划（CMVP）。NIST CMVP 数据库，用于验证加密模块，包括 Cisco 产品。
 +
-https://csrc.nist.gov/projects/cryptographic-module-validation-program/validated-modules/search?SearchMode=Basic&Vendor=cisco&CertificateStatus=Active&ValidationYear=0[]
+https://csrc.nist.gov/projects/cryptographic-module-validation-program[]
 
 * NetApp 存储加密， NVMe 自加密驱动器， NetApp 卷加密和 NetApp 聚合加密
 +
@@ -101,18 +101,6 @@ https://www.netapp.com/pdf.html?item=/media/17061-ds-3683.pdf[]
 * 《适用于 Epic EHR 的 FlexPod 数据中心部署指南》
 +
 https://www.netapp.com/media/10658-tr-4693.pdf[]
-
-* 适用于 MEDITECH 软件的 FlexPod 数据中心基础架构
-+
-https://www.netapp.com/media/8552-flexpod-for-meditech-software.pdf[]
-
-* FlexPod 标准扩展到了 MEDITECH 软件
-+
-https://blog.netapp.com/the-flexpod-standard-extends-to-meditech-software/[]
-
-* 《适用于 MEDITECH 的 FlexPod 方向性规模估算指南》
-+
-https://www.netapp.com/pdf.html?item=/media/12429-tr4774.pdf[]
 
 * 用于医学影像的 FlexPod
 +

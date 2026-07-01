@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: fp-def/fp-express-tech-spec_minimum_hardware_requirements.html 
-keywords: minimum, hardware, requirements, aff, asa, fas, cimc, configuration, rack, servers, ucs 
+keywords: minimum, hardware, requirements, fas, cimc, configuration, rack, servers, ucs 
 summary: 本节介绍不同版本的 FlexPod Express 的最低硬件要求。 
 ---
 = 最低硬件要求
@@ -18,13 +18,45 @@ summary: 本节介绍不同版本的 FlexPod Express 的最低硬件要求。
 
 
 
-== FlexPod Express 与 NetApp AFF/ASA/FAS
+== FlexPod Express 搭配 NetApp FAS
 
-使用 NetApp AFF、ASA 或 FAS 控制器作为底层存储的 FlexPod Express 解决方案的硬件要求包括本节所述的配置。
+使用 NetApp FAS 控制器作为底层存储的 FlexPod Express 解决方案的硬件要求包括本节中描述的配置。
 
-FlexPod Express 的最低硬件要求如下所示：
 
-* 两个冗余配置的 10Gbps 标准以太网交换机（Cisco Nexus 9200 和 9300 型号）
-* 具有基于 CIMC 的独立机架式服务器配置或 Intersight-managed 配置 (IMM) 的 Cisco UCS C 系列独立机架式服务器或具有 Cisco IMM 配置的 Cisco UCS X 系列 Direct
-* 作为双节点群集部署的高可用性 (HA) 对配置中的两个入门级 NetApp AFF (A20、A30 或 C30)、NetApp ASA (A20、A30 或 C30) 或 NetApp FAS (2750 或 2820) 系列控制器
 
+=== 基于 CIMC 的配置（独立机架式服务器）
+
+Cisco 集成管理控制器 (CIMC) 配置包括以下硬件组件：
+
+* 两个冗余配置的 10Gbps 标准以太网交换机（建议使用 Cisco Nexus 31108，支持 Cisco Nexus 3000 和 9000 型号）
+* Cisco UCS C系列独立机架式服务器
+* 两个 AFF C190、AFF A250、FAS2600 或 FAS 2700 系列控制器，以高可用性 (HA) 对配置部署为双节点集群
+
+
+
+
+=== Cisco UCS 管理的配置
+
+Cisco UCS 管理的确认包括以下硬件组件：
+
+* 两个冗余配置的 10Gbps 标准以太网交换机（建议使用 Cisco Nexus 3524）
+* 一个 Cisco UCS 5108 交流 (AC) 刀片式服务器机箱
+* 两个 Cisco UCS 6324 交换矩阵互联
+* Cisco UCS B 系列服务器（至少四个 Cisco UCS B200 M5 刀片服务器）
+* HA 对配置中的两个 AFF C190、AFF A250、FAS2750 或 FAS2720 控制器（每个控制器需要两个可用的统一目标适配器 2 [UTA2] 端口）
+
+
+
+
+== 搭载 E-Series 的 FlexPod Express
+
+配备 E-Series 入门级配置的 FlexPod Express 的硬件要求包括：
+
+* 两个 Cisco UCS 6324 交换矩阵互联
+* 一个 Cisco UCS Mini 机箱 5108 AC2 或 DC2（Cisco UCS 6324 交换矩阵互连仅在 AC2 和 DC2 机箱中受支持）
+* Cisco UCS B 系列服务器（至少两台 Cisco UCS B200 M4 刀片服务器）
+* 加载了至少 12 个磁盘驱动器的 E-Series E2824 存储系统的一个 HA 对配置
+* 两个冗余配置的10Gbps标准以太网交换机（可以使用数据中心中的现有交换机）
+
+
+构建解决方案的初始配置需要这些硬件组件；可以根据需要添加更多刀片服务器和磁盘驱动器。E-Series E2824 存储系统可以替换为更高级别的平台，也可以作为全闪存系统运行。

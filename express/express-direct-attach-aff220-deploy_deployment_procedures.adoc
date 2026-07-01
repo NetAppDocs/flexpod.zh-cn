@@ -450,7 +450,7 @@ NOTE: 在此解决方案验证中，使用的最大传输单元（ MTU ）为 90
 
 ==== 存储控制器
 
-按照中控制器的物理安装过程进行操作 https://library-clnt.dmz.netapp.com/documentation/docweb/index.html?productID=62331&language=en-US["AFF A220 文档"^]。
+按照 https://docs.netapp.com/us-en/ontap-systems/a220/install-setup.html["AFF A220 文档"^]中的控制器物理安装步骤进行操作。
 
 
 
@@ -2392,7 +2392,7 @@ NOTE: 先前未将 DNS 服务器 IP 输入到 KVM IP 中，因此，需要输入
 
 . 输入 `vmware-vmvis-Installer-6.7.0.Update01-10302608.x86_64` 作为远程文件名称。
 +
-此 VMware ESXi 6.7U1 ISO 可从下载 https://my.vmware.com/group/vmware/details?downloadGroup=ESXI650A&productId=614["VMware 下载"^]。
+此 VMware ESXi 6.7U1 ISO 可以从 https://support.broadcom.com/group/ecx/downloads["Broadcom 支持门户"^]下载。
 
 . 在远程路径字段中输入 ISO 文件的 Web 服务器路径。
 . 单击确定创建 vMedia 挂载。
@@ -2726,9 +2726,9 @@ lun map –vserver Infra-SVM –volume esxi_boot –lun VM-Host-Infra- A –igro
 
 如果尚未下载 VMware ESXi 自定义映像，请完成以下步骤以完成下载：
 
-. 单击以下链接： https://my.vmware.com/group/vmware/details?downloadGroup=OEM-ESXI67U1-CISCO&productId=742[VMware vSphere Hypervisor （ ESXi ） 6.7U1 。^
-. 您需要上的用户 ID 和密码 https://www.vmware.com/["vmware.com"^] 下载此软件。
-. 下载 .`ISO` 文件。
+. 登录到 Broadcom 支持门户网站下载网站： https://support.broadcom.com/group/ecx/downloads["https://support.broadcom.com/group/ecx/downloads"^]。
+. 您需要 Broadcom 用户 ID 和密码。查找 VMware vSphere Hypervisor (ESXi) 自定义 ISO。
+. 下载 Cisco Custom Image for ESXi 6.7U1 Install CD。
 
 
 

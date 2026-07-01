@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: fp-def/fp-express-tech-spec_storage_software.html 
-keywords: storage, software, flexpod, express, ontap, aff, asa, fas 
+keywords: storage, software, flexpod, express, ontap, e, series, santricity 
 summary: FlexPod 快速平台支持本节中列出的存储操作系统。 
 ---
 = 存储软件
@@ -14,12 +14,20 @@ summary: FlexPod 快速平台支持本节中列出的存储操作系统。
 
 
 [role="lead"]
-FlexPod Express 支持运行 NetApp ONTAP 操作系统的存储系统。
+FlexPod Express 支持运行 NetApp ONTAP 或 SANtricity 操作系统的存储系统。
 
 
 
 == NetApp ONTAP
 
-NetApp ONTAP 软件是在 AFF、ASA 和 FAS 存储系统上运行的操作系统。ONTAP 提供高度可扩展的存储架构，支持无中断操作、无中断升级和敏捷数据基础设施。
+NetApp ONTAP 软件是在 AFF 和 FAS 存储系统上运行的操作系统。ONTAP 提供高度可扩展的存储架构，支持无中断操作、无中断升级和敏捷数据基础设施。
 
 有关 ONTAP 的详细信息，请参见 http://www.netapp.com/us/products/platform-os/ontap/index.aspx["ONTAP 产品页面"^]。
+
+
+
+== E-Series SANtricity 软件
+
+E-Series SANtricity 软件是在 E-Series 存储系统上运行的操作系统。SANtricity 提供了一个高度灵活的系统，可以满足不同的应用需求，并提供内置的高可用性和各种数据保护功能。
+
+有关详细信息，请参见 http://www.netapp.com/us/products/platform-os/santricity/index.aspx["SANtricity 产品页面"^]。

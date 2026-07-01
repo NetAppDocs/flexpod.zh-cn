@@ -60,7 +60,7 @@ NOTE: 您可能需要先单击激活虚拟设备。如果出现提示，请选�
 
 === 下载 ESXi 6.7 Cisco 自定义映像
 
-. 导航到 https://my.vmware.com/web/vmware/info/slug/datacenter_cloud_infrastructure/vmware_vsphere/6_7["VMware vSphere 下载页面"^] 用于自定义 ISO 。
+. 导航到 https://support.broadcom.com/group/ecx/downloads["Broadcom 支持门户下载网站"^]以获取自定义 ISO。
 . 单击适用于 ESXi 6.7 GA 的 Cisco 自定义映像安装 CD 旁边的转至下载。
 . 下载适用于 ESXi 6.7 GA 的 Cisco 自定义映像安装 CD （ ISO ）。
 

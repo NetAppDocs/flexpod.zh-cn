@@ -16,7 +16,7 @@ summary: 要配置 VMware vCenter Server 6.7 和 vSphere 集群，请完成此�
 [role="lead"]
 要配置 VMware vCenter Server 6.7 和 vSphere 集群，请完成以下步骤：
 
-. 导航到 ` https://\<<FQDN 或 vCenter 的 IP >/vsphere-client/` 。
+. 导航到 `https://<<FQDN or IP of vCenter>>/vsphere-client/`。
 . 单击 Launch vSphere Client 。
 . 使用用户名 mailto ： administrator@vspehre.local[ 管理员^ ]@vsphere.local 以及您在 VCSA 设置过程中输入的 SSO 密码登录。
 . 右键单击 vCenter 名称并选择新建数据中心。
@@ -77,7 +77,7 @@ NOTE: 对于添加到 FlexPod 快速配置中的任何其他主机，必须完�
 
 要在 ESXi 主机上配置核心转储，请完成以下步骤：
 
-. 登录到 https ： // https://172.21.181.105:5480/ui/services["vCenter"^] ip ： 5480/ ，输入 root 作为用户名，然后输入 root 密码。
+. 登录 `https://<vCenter IP>:5480`，输入 root 作为用户名，然后输入 root 密码。
 . 单击服务并选择 VMware vSphere ESXi 转储收集器。
 . 启动 VMware vSphere ESXi 转储收集器服务。
 +

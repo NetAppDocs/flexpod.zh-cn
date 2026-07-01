@@ -34,7 +34,7 @@ image:sm-bcs-image16.png["错误：缺少图形映像"]
 
 下表列出了用于解决方案 验证的硬件和软件。请务必注意， Cisco ， NetApp 和 VMware 都具有互操作性表，用于确定是否支持任何特定的 FlexPod 实施：
 
-* http://support.netapp.com/matrix/["http://support.netapp.com/matrix/"^]
+* http://mysupport.netapp.com/matrix["http://mysupport.netapp.com/matrix"^]
 * http://www.cisco.com/web/techdoc/ucs/interoperability/matrix/matrix.html["Cisco UCS 硬件和软件互操作性工具"^]
 * http://www.vmware.com/resources/compatibility/search.php["http://www.vmware.com/resources/compatibility/search.php"^]
 

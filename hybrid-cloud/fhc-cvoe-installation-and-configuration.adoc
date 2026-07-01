@@ -55,7 +55,7 @@ link:fhc-cvoe-solution-components.html["先前版本：解决方案 组件。"]
 
 要了解采用UCS X系列的FlexPod 、VMware和NetApp ONTAP 的设计详细信息、请参见 https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_xseries_esxi7u2_design.html["采用Cisco UCS X系列的FlexPod 数据中心"^] 设计指南。本文档提供了在FlexPod 数据中心基础架构中整合Cisco Intersight-managed UCS X系列平台的设计指导。
 
-有关部署内部FlexPod 实例的信息、请参见 https://netapp-https:/www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_xseries_vmware_7u2.htmlmy.sharepoint.com/personal/dorianh_netapp_com/Documents/Projects/Github%20Conversions/FlexPod/TR-4960/TR-4960%20FlexPod%20hybrid%20cloud%20with%20CVO%20for%20Epic%20latest-Feb14.docx["本部署指南"^]。
+有关部署本地 FlexPod 实例的信息，请参见 https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_xseries_vmware_7u2.html["本部署指南"^]。
 
 本文档提供了在FlexPod 数据中心基础架构中整合Cisco Intersight-managed UCS X系列平台的部署指导。本文档介绍了成功部署的配置和最佳实践。
 

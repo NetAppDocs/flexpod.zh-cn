@@ -14,9 +14,9 @@ summary: 本文档提供了 FlexPod 快速平台的技术规格。
 
 
 [role="lead"]
-FlexPod 平台有两种：
+有三个 FlexPod 平台：
 
-* *FlexPod Datacenter。*此平台是一个可大规模扩展的虚拟数据中心基础设施，适用于工作负载企业应用程序、虚拟化、VDI 以及公共云和私有云。FlexPod Datacenter 有自己的规范，详见 https://docs.netapp.com/us-en/flexpod/fp-def/dc-tech-spec_solution_overview.html["FlexPod 数据中心技术规格"^]。
+* *FlexPod Datacenter。*此平台是一个可大规模扩展的虚拟数据中心基础设施，适用于工作负载企业应用程序、虚拟化、VDI 以及公共云和私有云。FlexPod Datacenter 有自己的规范，详见 https://docs.netapp.com/us-en/flexpod/fp-def/dc-tech-spec_solution_overview.html["TR-4036 ： FlexPod 数据中心技术规格"^]。
 * * FlexPod Express* 。此平台是一个紧凑型融合基础架构，面向远程办公室和边缘使用情形。
 
 

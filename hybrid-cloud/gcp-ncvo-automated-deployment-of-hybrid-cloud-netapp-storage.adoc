@@ -75,7 +75,7 @@ image:gcp-ncvo-image6.png["此图显示了Goggle Cloud中的高可用性Cloud Vo
 
 您需要一个GitHub帐户来托管Terraform代码。Intersight Orchestrator在Terraform Cloud for Business帐户中创建新的工作空间。此工作空间配置了版本控制工作流。为此、您需要将Terraform配置保留在GitHub存储库中、并在创建工作空间时将其作为输入提供。
 
-https://github.com/NetApp-Automation/FlexPod-hybrid-cloud-for-GCP-with-Intersight-and-CVO["此GitHub链接"^] 使用各种资源提供Terraform配置。您可以通过派生此存储库并在GitHub帐户中创建副本。
+https://github.com/ucs-compute-solutions/cvo_snapmirror["此GitHub链接"^] 为 Terraform 配置提供各种资源。您可以分叉此存储库并在您的 GitHub 帐户中创建副本。
 
 在此存储库中、`provider.tf`定义了所需的Terraform提供程序。使用适用于NetApp Cloud Manager的Terraform提供程序。
 

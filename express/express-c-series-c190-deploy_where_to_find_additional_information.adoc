@@ -18,7 +18,7 @@ summary: 要了解有关本文档中所述信息的更多信息，请参见以�
 
 NetApp 产品文档
 
-http://docs[]。 http://docs.netapp.com/["NetApp"^].com
+https://docs.netapp.com["https://docs.netapp.com"^]
 
 FlexPod 快速指南
 

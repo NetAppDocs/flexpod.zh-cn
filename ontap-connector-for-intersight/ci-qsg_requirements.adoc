@@ -38,7 +38,7 @@ summary: 检查您是否满足 NetApp ONTAP 存储与 Cisco Intersight 集成的
 | 虚拟化虚拟机管理程序 | vSphere 7.0及更高版本 
 |===
 
-NOTE: 请参见 https://intersight.com/help/saas/supported_systems["Cisco Intersight支持的系统"^] 以满足 Cisco UCS 计算组件和 UCSM 版本的最低要求。
+NOTE: 有关 Cisco UCS 计算组件和 UCSM 版本的最低要求，请参阅 https://intersight.com/help/saas/supported_systems/overview["Cisco Intersight支持的系统"^]。
 
 
 
@@ -53,4 +53,4 @@ Cisco Intersight基础架构服务许可模式已得到简化，现在提供以�
 * *Cisco Intersight基础架构服务优势*-优势许可证层提供高级服务器管理，具有扩展的可见性、生态系统集成、Cisco和第三方硬件和软件的自动化以及多域解决方案。
 
 
-有关各个许可层所涵盖功能的详细信息，请访问 https://intersight.com/help/saas/getting_started/licensing_requirements/lic_infra#licensing_model["基础架构服务许可证"^]。
+有关各种许可等级所涵盖的功能的详细信息，请访问 https://intersight.com/help/saas/getting_started/licensing_requirements/lic_infra["基础架构服务许可证"^]。

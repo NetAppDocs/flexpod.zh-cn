@@ -44,9 +44,9 @@ https://flexpod.com/solutions/use-cases/microsoft-sql-server/["https://flexpod.c
 +
 https://flexpod.com/["https://flexpod.com/"^]
 
-* https://fieldportal.netapp.com/content/734702["适用于 MongoDB 的 NetApp 解决方案"^] 解决方案简介（需要登录到 NetApp ）
+* NetApp 针对 MongoDB 的解决方案简介（需要 NetApp 登录）
 +
-https://fieldportal.netapp.com/content/734702["https://fieldportal.netapp.com/content/734702"^]
+https://fieldportal.netapp.com/s/article/solution-brief-netapp-solutions-for-mongodb-1690217002398["https://fieldportal.netapp.com/s/article/solution-brief-netapp-solutions-for-mongodb-1690217002398"^]
 
 * TR-4700 ：适用于 Oracle 数据库的 SnapCenter 插件
 +

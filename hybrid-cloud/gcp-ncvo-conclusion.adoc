@@ -36,7 +36,7 @@ link:gcp-ncvo-solution-validation.html["先前版本：解决方案 验证。"]
 
 * 使用的所有Terraform配置
 +
-https://github.com/NetApp-Automation/FlexPod-hybrid-cloud-for-GCP-with-Intersight-and-CVO["https://github.com/NetApp-Automation/FlexPod-hybrid-cloud-for-GCP-with-Intersight-and-CVO"^]
+https://github.com/ucs-compute-solutions/cvo_snapmirror["https://github.com/ucs-compute-solutions/cvo_snapmirror"^]
 
 * 用于导入工作流的JSON文件
 +
@@ -54,11 +54,11 @@ https://intersight.com/help/saas/home["https://intersight.com/help/saas/home"^]
 
 * Cisco Intersight Cloud Orchestrator文档：
 +
-https://intersight.com/help/saas/features/orchestration/configure["https://intersight.com/help/saas/features/orchestration/configure#intersight_cloud_orchestrator"^]
+https://intersight.com/help/appliance/orchestration/configure["https://intersight.com/help/appliance/orchestration/configure"^]
 
 * Cisco Intersight Service for HashiCorp Terraform文档
 +
-https://intersight.com/help/saas/features/terraform_cloud/admin["https://intersight.com/help/saas/features/terraform_cloud/admin"^]
+https://community.cisco.com/t5/data-center-and-cloud-knowledge-base/intersight-service-for-terraform/ta-p/4301093["https://community.cisco.com/t5/data-center-and-cloud-knowledge-base/intersight-service-for-terraform/ta-p/4301093"^]
 
 * Cisco Intersight数据表
 +
@@ -98,7 +98,7 @@ https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_xse
 
 * NetApp 互操作性表工具
 +
-http://support.netapp.com/matrix/["http://support.netapp.com/matrix/"^]
+http://mysupport.netapp.com/matrix["http://mysupport.netapp.com/matrix"^]
 
 * Cisco UCS 硬件和软件互操作性工具
 +
@@ -114,29 +114,29 @@ http://www.vmware.com/resources/compatibility/search.php["http://www.vmware.com/
 
 === NetApp Cloud Volumes ONTAP 参考文档
 
-* NetApp Cloud Manager
+* NetApp Console 文档：
 +
-https://docs.netapp.com/us-en/occm/concept_overview.html["https://docs.netapp.com/us-en/occm/concept_overview.html"^]
+https://docs.netapp.com/us-en/console-family/index.html["https://docs.netapp.com/us-en/console-family/index.html"^]
 
 * Cloud Volumes ONTAP
 +
 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-gcp.html[]
 
-* Cloud Volumes ONTAP TCO计算器
+* Google Cloud TCO Calculator 与 NetApp Cloud Volumes ONTAP
 +
-https://cloud.netapp.com/google-cloud-calculator[]
+https://www.netapp.com/google-cloud/google-cloud-calculator/[]
 
-* Cloud Volumes ONTAP 规模估算工具
+* Cloud Volumes ONTAP 规模和成本估算：
 +
-https://cloud.netapp.com/cvo-sizer["https://cloud.netapp.com/cvo-sizer"^]
+https://www.netapp.com/ontap-cloud/pricing/["https://www.netapp.com/ontap-cloud/pricing/"^]
 
-* 云评估工具
+* 云评估和基础设施分析：
 +
-https://cloud.netapp.com/assessments[]
+https://docs.netapp.com/us-en/data-infrastructure-insights/[]
 
-* NetApp混合云
+* NetApp 混合云解决方案：
 +
-https://cloud.netapp.com/hybrid-cloud[]
+https://www.netapp.com/hybrid-cloud/[]
 
 * Cloud Manager API 文档
 +
@@ -148,7 +148,7 @@ https://docs.netapp.com/us-en/occm/reference_infrastructure_as_code.html["https:
 
 === 对问题进行故障排除
 
-https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Volumes_ONTAP_(CVO)["https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Volumes_ONTAP_(CVO)"^]
+https://kb.netapp.com/Cloud/ncds/nds/cvo/cvo_kbs["https://kb.netapp.com/Cloud/ncds/nds/cvo/cvo_kbs"^]
 
 
 
@@ -174,7 +174,7 @@ https://registry.terraform.io/providers/NetApp/netapp-cloudmanager/lates["https:
 
 * 适用于GCP的ONTAP 高可用性
 +
-https://cloud.netapp.com/blog/gcp-cvo-blg-what-makes-cloud-volumes-ontap-high-availability-for-gcp-tick["https://cloud.netapp.com/blog/gcp-cvo-blg-what-makes-cloud-volumes-ontap-high-availability-for-gcp-tick"^]
+https://bluexp.netapp.com/blog/gcp-cvo-blg-what-makes-cloud-volumes-ontap-high-availability-for-gcp-tick["https://bluexp.netapp.com/blog/gcp-cvo-blg-what-makes-cloud-volumes-ontap-high-availability-for-gcp-tick"^]
 
 * GCP的基础
 +

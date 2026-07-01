@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: fp-def/fp-express-tech-spec__technical_specifications_and_references.html 
+permalink: fp-def/fp-express-tech-spec_technical_specifications_and_references.html 
 keywords: technical, specifications, references, blade, servers, ucs, b, series, rack, disk, shelves, fas, adapters, controllers 
 summary: 本节介绍每个 FlexPod 快速组件的其他重要技术规格。 
 ---
@@ -273,7 +273,7 @@ NOTE: 有关 FAS 存储控制器选项的详细信息，请参见 https://hwu.ne
 |===
 FAS8000 系列控制器支持 X1117A-R6 SFP+ 适配器。
 
-FAS2600 和 FAS2500 系列存储系统具有板载 10GbE 端口。有关详细信息，请参见 https://hwu.netapp.com/Resources/generatedPDFs/AdapterCards-9.1_ONTAP-FAS.pdf?tag=8020["NetApp 10GbE 适配器产品规格"^]。
+FAS2600 和 FAS2500 系列存储系统具有板载 10GbE 端口。
 
 
 NOTE: 有关基于 AFF 或 FAS 型号的适配器详细信息，请参见 https://hwu.netapp.com/Adapter/Index["适配器部分"^] 在 Hardware Universe 中。
