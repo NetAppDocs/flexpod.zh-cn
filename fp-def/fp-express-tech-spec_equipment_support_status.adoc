@@ -1,0 +1,63 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec_equipment_support_status.html 
+keywords: equipment, support status, end of life, end of support, verification 
+summary: 本节介绍如何验证 Cisco 和 NetApp 组件的设备支持状态。 
+---
+= 设备支持状态
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+FlexPod 是一种灵活的解决方案，允许客户使用当前由 Cisco 和 NetApp 销售的现有设备和新设备。有时， Cisco 和 NetApp 的某些型号设备会被指定为寿命终结。
+
+即使不再提供这些型号的设备，在销售结束日期之前购买其中一种型号的客户也可以在 FlexPod 配置中使用该设备。
+
+此外，FlexPod Express 架构会定期更新，以将 Cisco 和 NetApp 的最新硬件和软件引入 FlexPod Express 解决方案。
+
+在部署或维护 FlexPod Express 设备之前，请验证供应商是否仍支持所有组件。本节介绍如何查看 Cisco 和 NetApp 组件的销售终止和支持终止信息。
+
+
+
+== 检查 NetApp 设备支持
+
+NetApp 通过 Hardware Universe (HWU) 提供技术支持信息。
+
+转到 link:https://hwu.netapp.com["NetApp Hardware Universe"^]。
+
+* 选择*产品 > 平台*，然后选择您的平台（例如：*AFF A-Series*）和型号（例如：*AFF A220*）。
+
+
+
+NOTE: 要查看所有平台，请将*平台生命周期*过滤器更改为*全部显示*。默认情况下，选择*隐藏 EOA*。
+
+* 选择 *ONTAP* 版本，然后单击*显示结果*。
+* 在 *系统可用性和支持* 部分查看您设备的支持终止日期结果。
+
+
+
+
+== 检查 Cisco 设备支持
+
+Cisco 在 Cisco 产品支持页面上提供销售终止和支持终止日期。
+
+
+
+==== Cisco UCS 服务器销售终止和支持终止信息
+
+* 导航到 link:https://www.cisco.com/c/en/us/support/eol/index.html["Cisco 产品支持页面"]。
+* 在 *产品类别* 下，选择 *服务器 - UCS and HCI*，然后单击您的服务器类型（例如：*UCS C-Series Rack Servers*）。找到您的特定型号（例如：*UCS C220 M5*）并查找销售终止和支持终止日期。
+
+
+
+
+==== Cisco Nexus 交换机销售终止和支持终止信息
+
+* 导航到 link:https://www.cisco.com/c/en/us/support/eol/index.html["Cisco 产品支持页面"]。
+* 在 *产品类别* 下选择 *交换机*，然后单击您的交换机类型（例如：*Nexus 9000*）。找到您的特定型号（例如：*9236C*），并查找终止销售和终止支持日期。
+

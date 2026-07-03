@@ -20,229 +20,103 @@ NetApp 存储控制器在 FlexPod 快速架构中为启动和应用程序数据�
 
 == NetApp 存储控制器选项
 
+在 FlexPod Express 架构中需要冗余 AFF、ASA 或 FAS 系列控制器。控制器运行 ONTAP 软件。订购存储控制器时，可以在控制器上预加载首选软件版本。对于 ONTAP，集群可以部署一对集群互连交换机，也可以采用无交换机集群配置进行部署。
 
 
-== NetApp FAS
+NOTE: 只有双节点配置才支持无交换机集群配置。具有 4 个以上节点的配置需要集群互连交换机，而双节点配置则可选。
 
-在 FlexPod Express 架构中，需要冗余的 AFF C190、AFF A220 或 FAS2750 系列控制器。控制器运行 ONTAP 软件。订购存储控制器时，可以在控制器上预加载首选软件版本。对于 ONTAP，集群可以部署一对集群互连交换机，也可以采用无交换机集群配置进行部署。
+根据所选的存储平台，提供不同的选项和配置。有关这些附加组件的详细信息，请咨询您的销售代表。
 
-下表中列出的零件号适用于空控制器。根据所选的存储平台，提供不同的选项和配置。有关这些附加组件的详细信息，请咨询您的销售代表。
-
-|===
-| 存储控制器 | FAS 部件号 | 技术规格 
-
-
-| FAS2750 | 根据所选的各个选项 | https://www.netapp.com/us/products/storage-systems/hybrid-flash-array/fas2700.aspx[] 
-
-
-| FAS2720 | 根据所选的各个选项 | https://www.netapp.com/us/products/storage-systems/hybrid-flash-array/fas2700.aspx[] 
-
-
-| AFF C190 | 根据所选的各个选项 | https://www.netapp.com/us/products/entry-level-aff.aspx[] 
-
-
-| AFF A220 | 根据所选的各个选项 | https://www.netapp.com/us/documentation/all-flash-fas.aspx[] 
-
-
-| FAS2620 | 根据所选的各个选项 | http://www.netapp.com/us/products/storage-systems/fas2600/fas2600-tech-specs.aspx[] 
-
-
-| FAS2650 | 根据所选的各个选项 | http://www.netapp.com/us/products/storage-systems/fas2600/fas2600-tech-specs.aspx[] 
-|===
-
-
-=== E-Series 存储
-
-FlexPod Express 架构中需要一个 NetApp E2800 系列控制器 HA 对。这些控制器运行 SANtricity 操作系统。
-
-下表中列出的零件号适用于空控制器。根据所选的存储平台，提供不同的选项和配置。有关这些附加组件的详细信息，请咨询您的销售代表。
+下表中列出的控制器系列适合在 FlexPod 解决方案中使用，因为它们与 Cisco Nexus 交换机的连接是无缝的。有关每个控制器型号的具体兼容性详细信息，请参阅 http://hwu.netapp.com/["NetApp Hardware Universe"^]。
 
 |===
-| 存储控制器 | 部件号 | 技术规格 
+| NetApp 入门级存储系列，适用于 FlexPod Express | 型号 | 技术规格 
 
 
-| E2800 | 根据所选的各个选项 | http://www.netapp.com/us/products/storage-systems/e2800/e2800-tech-specs.aspx[] 
+.2+| AFF A-Series | A20 .3+| https://www.netapp.com/pdf.html?item=/media/7828-ds-3582-aff-a-series-ai-era.pdf["AFF 文档"] 
+
+
+| A30 
+
+
+| AFF C 系列 | C30 
+
+
+.2+| ASA A 系列 | A20 .3+| https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf["ASA 文档"] 
+
+
+| A30 
+
+
+| ASA C 系列 | C30 
+
+
+.2+| FAS | FAS 2750 .2+| https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf["FAS 文档"] 
+
+
+| FAS 2820 
 |===
-
-
-== NetApp 以太网扩展模块
-
-
-
-=== NetApp FAS
-
-下表列出了 NetApp FAS10GbE 适配器选项。
-
-|===
-| 组件 | 部件号 | 技术规格 
-
-
-| NetApp X1117A | X1117A-R6 | https://library.netapp.com/ecm/ecm_download_file/ECMM1280307[] 
-|===
-[NOTE]
-====
-FAS2500 和 2600 系列存储系统具有板载 10GbE 端口。
-
-NetApp X1117A 适配器适用于 FAS8020 存储系统。
-
-====
-
-
-=== E-Series 存储
-
-下表列出了 E 系列 10GbE 适配器选项。
-
-|===
-| 组件 | 部件号 
-
-
-| 10GbE iSCSI/16Gb FC 4端口 | X-56025-00-0E-C 
-
-
-| 10GbE iSCSI/16Gb FC 2 端口 | X-56024-00-0E-C 
-|===
-[NOTE]
-====
-E2824 系列存储系统具有板载 10GbE 端口。
-
-10GbE iSCSI/16Gb FC 4端口主机接口卡（HIC）可用于提高端口密度。
-
-====
-板载端口和 HIC 可以用作 iSCSI 适配器或 FC 适配器，具体取决于在 SANtricity 操作系统中激活的功能。
-
-有关支持的适配器选项的详细信息，请参见 https://hwu.netapp.com/Adapter/Index["NetApp Hardware Universe"^]的"适配器"部分。
-
 
 
 == NetApp 磁盘架和磁盘
 
+存储控制器至少需要一个 NetApp 磁盘架。
+
+选定的 NetApp 磁盘架类型决定了该磁盘架中可用的驱动器类型。
 
 
-== NetApp FAS
+NOTE: 有关所有磁盘架和磁盘部件号，请咨询您的销售代表。
 
-存储控制器至少需要一个 NetApp 磁盘架。所选的 NetApp 磁盘架类型决定了该磁盘架内可用的驱动器类型。
+下表列出了 NetApp 磁盘架选项（适用于 FlexPod Express），以及指向其技术规格的链接。
 
-FAS2700 和 FAS2600 系列控制器作为配置提供，包括双存储控制器和位于同一机箱内的磁盘。此配置随 SATA 或 SAS 驱动器提供；因此，除非性能或容量要求需要更多主轴，否则不需要额外的外部磁盘架。
-
-[NOTE]
-====
-所有磁盘架零件号均适用于带有两个交流电源的空架。有关其他零件号，请咨询您的销售代表。
-
-磁盘驱动器部件号根据您要购买的磁盘的大小和外形而有所不同。有关其他部件号，请咨询您的销售代表。
-
-====
-下表列出了 NetApp 磁盘架选项以及每个磁盘架类型支持的驱动器，这些选项可在 NetApp Hardware Universe 上找到。单击 Hardware Universe 链接，选择要使用的 ONTAP 版本，然后选择磁盘架类型。在磁盘架映像下，单击支持的驱动器以查看特定版本的 ONTAP 和磁盘架支持的驱动器。
+要获取磁盘架支持的驱动器列表，请转到 link:https://hwu.netapp.com/DetailViews/Home.aspx["NetApp Hardware Universe"^]，在 *产品 > 存储 > 磁盘架* 下选择 *ONTAP（AFF、ASA、FAS）*，选择您正在使用的 ONTAP 版本，然后选择磁盘架类型（例如：*DS212C*），并单击 *Show Results*。单击 *支持的驱动器* 可查看特定 ONTAP 版本和磁盘架所支持的驱动器。
 
 |===
-| 磁盘架 | 部件号 | 技术规格 
+| 磁盘架 | 技术规格 
 
 
-| DS212C | DS212C-0-12 | link:http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["磁盘架和存储介质技术规格支持的驱动器（位于 NetApp Hardware Universe）"] 
+| DS212C .5+| https://www.netapp.com/data-storage/disk-shelves-storage-media/["磁盘架和存储介质"] 
 
 
-| DS224C | DS224C-0-24 | link:http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["磁盘架和存储介质技术规格支持的驱动器（位于 NetApp Hardware Universe）"] 
+| DS224C 
 
 
-| DS460C | DS460C-0-60 | link:http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["磁盘架和存储介质技术规格支持的驱动器（位于 NetApp Hardware Universe）"] 
+| DS460C 
 
 
-| DS2246 | X559A-R6 | link:http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["磁盘架和存储介质技术规格支持的驱动器（位于 NetApp Hardware Universe）"] 
+| NS224 
 
 
-| DS4246 | X24M-R6 | link:http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["磁盘架和存储介质技术规格支持的驱动器（位于 NetApp Hardware Universe）"] 
-
-
-| DS4486 | DS4486-144TB-R5-C | link:http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["磁盘架和存储介质技术规格支持的驱动器（位于 NetApp Hardware Universe）"] 
-|===
-
-
-=== E-Series 存储
-
-对于不在机箱中容纳任何驱动器的存储控制器，至少需要一个 NetApp 磁盘架。所选的 NetApp 磁盘架类型决定了该磁盘架内可用的驱动器类型。
-
-E2800 系列控制器作为配置提供，包括双存储控制器以及安装在受支持磁盘架内的磁盘。此配置提供 SSD 或 SAS 驱动器。
-
-
-NOTE: 磁盘驱动器部件号根据您要购买的磁盘的大小和外形而有所不同。有关其他部件号，请咨询您的销售代表。
-
-下表列出了 NetApp 磁盘搁板选项以及每种搁板类型支持的驱动器，您可以在 NetApp Hardware Universe 上找到这些信息。访问 Hardware Universe 链接，选择您正在使用的 ONTAP 版本，然后选择搁板类型。在搁板图像下方，单击 Supported Drives 以查看特定版本的 ONTAP 和磁盘搁板所支持的驱动器。
-
-|===
-| 磁盘架 | 部件号 | 技术规格 
-
-
-| DE460C | E-X5730A-DM-0E-C | link:http://www.netapp.com/us/products/storage-systems/e2800/e2800-tech-specs.aspx["磁盘架技术规格 NetApp Hardware Universe 上支持的驱动器"] 
-
-
-| DE224C | E-X5721A-DM-0E-C | link:http://www.netapp.com/us/products/storage-systems/e2800/e2800-tech-specs.aspx["磁盘架技术规格 NetApp Hardware Universe 上支持的驱动器"] 
-
-
-| DE212C | E-X5723A-DM-0E-C | link:https://hwu.netapp.com/Shelves/Index?osTypeId=2357027["磁盘架技术规格 NetApp Hardware Universe 上支持的驱动器"] 
+| NS224 搭配 NSM100B 
 |===
 
 
 == NetApp 软件许可选项
 
-
-
-=== NetApp FAS
-
-下表列出了 NetApp FAS 软件许可选项。
+下表列出了 NetApp 软件许可选项。
 
 |===
-| NetApp 软件许可 | 部件号 | 技术规格 
+| NetApp 软件许可 | 技术规格 
 
 
-| 基本集群许可证 2+| 有关许可的详细信息，请咨询 NetApp 销售团队。 
+| 适用于 AFF 和 FAS 的 ONTAP One .2+| 有关许可的详细信息，请咨询 NetApp 销售团队。 
+
+
+| ONTAP One for SAN for ASA 
 |===
+有关 NetApp 软件许可的详细信息，请参见此链接： https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html#licenses-included-with-ontap-one["NetApp 软件许可"^]。
 
-
-=== E-Series 存储
-
-下表列出了 E-Series 软件许可选项。
-
-|===
-| NetApp 软件许可 | 部件号 | 技术规格 
-
-
-| 标准功能 2.2+| 有关许可的详细信息，请咨询 NetApp 销售团队。 
-
-
-| 高级版功能 
-|===
 
 
 == NetApp 支持许可选项
 
 SupportEdge Premium 许可证是必需的，这些许可证的部件号因 FlexPod 快速设计中选择的选项而异。
 
-
-
-=== NetApp FAS
-
-下表列出了 NetApp FAS 的 NetApp 支持许可选项。
+下表列出了 NetApp AFF、ASA 和 FAS 存储系统的 NetApp 支持许可选项。
 
 |===
-| NetApp 支持许可 | 部件号 | 技术规格 
+| NetApp 支持许可 | 技术规格 
 
 
-| SupportEdge 高级版 4 小时现场服务；月数： 36 | CS-O2-4 小时 | link:https://www.netapp.com/pdf.html?item=/media/19784-ds-3873.pdf["https://www.netapp.com/pdf.html?item=/media/19784-ds-3873.pdf"] 
-|===
-
-
-=== E-Series 存储
-
-下表列出了 E-Series 存储的 NetApp 支持许可选项。
-
-|===
-| NetApp 支持许可 | 部件号 | 技术规格 
-
-
-| 硬件支持高级版 4 小时上门服务；月份：36 | SVC-O2-4HR-E .3+| link:https://www.netapp.com/pdf.html?item=/media/19784-ds-3873.pdf["https://www.netapp.com/pdf.html?item=/media/19784-ds-3873.pdf"] 
-
-
-| 软件支持 | SW-SSP-O2-4HR-E 
-
-
-| 初始安装 | SVC-INST-O2-4HR-E 
+| NetApp SupportEdge | https://www.netapp.com/netapp-services/[] 
 |===

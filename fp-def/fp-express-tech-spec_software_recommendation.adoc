@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec_software_recommendation.html 
+keywords: software, requirements, flexpod, express, aff, fas, asa, cisco, nx-os, ontap 
+summary: 本节介绍不同版本的 FlexPod Express 的推荐软件要求。 
+---
+= 软件版本建议
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+本节介绍 FlexPod Express 的软件版本建议。
+
+* ONTAP 版本：建议所有 FlexPod Express 配置使用最新 ONTAP 版本。有关最新 ONTAP 版本，请参阅 link:https://docs.netapp.com/us-en/ontap/release-notes/index.html["ONTAP 发行说明"^]。
+* Cisco NX-OS 版本：有关 Cisco 9000 系列交换机 Cisco NX-OS 版本的一般建议，请参阅 link:https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus9000/sw/recommended_release/b_Minimum_and_Recommended_Cisco_NX-OS_Releases_for_Cisco_Nexus_9000_Series_Switches.html["Cisco Nexus 9000 系列交换机的推荐 Cisco NX-OS 版本"^]
+* Cisco UCS 固件版本：
++
+** 有关 link:https://www.cisco.com/c/en/us/support/servers-unified-computing/intersight/products-release-notes-list.html["Cisco Intersight 托管模式基础设施和服务器固件、机箱固件和 PCIe 节点固件"^] 的最新版本，请参阅此链接
+** 有关 link:https://intersight.com/help/saas/supported_systems/Intersight_Standalone_Mode["Cisco Intersight 独立模式和 CIMC 固件"^] 的最新版本，请参见此链接
+
+
+
+
+
+NOTE: 所有软件组件都必须列出并支持在 http://support.netapp.com/matrix/["NetApp IMT"^]中，所有 NetApp 硬件组件和 ONTAP 版本都必须列出并支持在 https://hwu.netapp.com/Home/Index["NetApp Hardware Universe"^]上，所有 Cisco 硬件组件都必须列出并支持在 https://ucshcltool.cloudapps.cisco.com/public/["Cisco HCL"^]上。

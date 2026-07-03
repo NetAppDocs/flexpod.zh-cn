@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: fp-def/fp-express-tech-spec_optional_features.html 
-keywords: optional, features, iscsi, boot, option, flexpod, express configuration, cisco, mini, aff, fas 
+keywords: optional, features, iscsi, boot, option, flexpod, express configuration, cisco, mini, aff, fas, asa, x-series-direct, direct-attached, topology, ip-based, fc-based, san 
 summary: 本节介绍 FlexPod 快速的可选功能。 
 ---
 = 可选功能
@@ -17,10 +17,13 @@ summary: 本节介绍 FlexPod 快速的可选功能。
 本节介绍 FlexPod 快速的可选功能。
 
 
+NOTE: SAN 启动是可选的，但强烈建议使用，因为它允许在硬件升级或更换期间移动服务器配置文件。
+
+
 
 == iSCSI 启动选项
 
-FlexPod 快速架构使用 iSCSI 启动。iSCSI 启动选项的最低要求包括：
+iSCSI 引导选项的最低要求包括：
 
 * 在 NetApp 存储控制器上激活的 iSCSI 许可证 / 功能
 * NetApp 存储控制器 HA 对中每个节点上的一个双端口 10Gbps 以太网适配器
@@ -29,26 +32,38 @@ FlexPod 快速架构使用 iSCSI 启动。iSCSI 启动选项的最低要求包�
 
 
 
-== 配置选项
+== Cisco UCS X-Series Direct 和直连 AFF/ASA/FAS 选项
 
-本节提供了有关 FlexPod 快速架构所需并经过验证的配置的详细信息。
+NetApp 存储控制器可以直接连接到 Cisco UCS 交换矩阵互连，而无需任何上游 SAN 交换机。FlexPod Express 支持 UCS X-Series Direct 的 FC 和 iSCSI 引导。
 
+许可和硬件要求如下：
 
-
-=== 采用 Cisco UCS C 系列和 AFF C190 系列的 FlexPod Express
-
-下图显示了采用 Cisco UCS C 系列和 AFF C190 系列解决方案的 FlexPod Express 。此解决方案支持两个 10GbE 上行链路。
-
-image:fp-express-tech-spec_image2.png["错误：缺少图形映像"]
-
-有关此配置的详细信息，请参见《适用于 VMware vSphere 6.7 和 NetApp AFF C190 NVA 的 FlexPod 快速部署指南》（正在进行中）。
+* 需要在 NetApp 存储控制器上获得协议许可证。
+* 服务器上需要 Cisco UCS 适配器（启动程序）。有关支持的 Cisco UCS 适配器列表，请参见 NetApp http://mysupport.netapp.com/matrix["IMT"^]。
+* NetApp 存储控制器上需要一个目标适配器。
 
 
+下图显示了基于 IP 的 SAN 的 UCS X-Series Direct 和直接连接 ASA 拓扑。
 
-=== 采用 Cisco UCS Mini ， AFF A220 和 FAS 27502720 的 FlexPod Express
+image:fp-express-tech-spec_image10.png["UCS X-Series Direct 和直连 ASA 拓扑（适用于基于 IP 的 SAN）"]
 
-下图显示了采用 Cisco UCS 管理的配置的 FlexPod Express 。
+* 注： *
 
-image:fp-express-tech-spec_image3.png["错误：缺少图形映像"]
+* Cisco UCS 配置为以太网交换模式。
+* 从目标到互联阵列的 iSCSI 端口会配置为 iSCSI 数据的以太网存储端口。
 
-有关此配置的详细信息，请参见 https://docs.netapp.com/us-en/flexpod/express/express-direct-attach-aff220-deploy_program_summary.html["采用 VMware vSphere 6.7U1 的 FlexPod Express 以及采用基于 IP 的直连存储的 NetApp AFF A220"^]。
+
+下图显示了基于 IP 和基于 FC 的 SAN 的 UCS X-Series Direct 和直接连接 ASA 拓扑。
+
+image:fp-express-tech-spec_image11.png["UCS X-Series Direct 和直连 ASA 拓扑，适用于基于 IP 和基于 FC 的 SAN"]
+
+* 注： *
+
+* Cisco UCS 配置为 FC 交换模式。
+* 从目标到互联阵列的 FC 端口配置为 FC 存储端口。
+
+
+有关此配置的详细信息，请参见 https://www.netapp.com/pdf.html?item=/media/135828-flexpod-san-ucs-xdirect-asa-nva-deploy-guide.pdf["FlexPod SAN 解决方案，采用 Cisco UCS X-Series Direct 和 NetApp ASA"^]。
+
+
+NOTE: 上述示例使用 NetApp ASA 存储控制器，但 NetApp AFF 和 FAS 存储控制器也支持相同的配置。

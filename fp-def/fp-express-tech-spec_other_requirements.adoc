@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: fp-def/fp-express-tech-spec_other_requirements.html 
-keywords: requirements, flexpod, express, software, hardware, cisco, imt, hcl 
+keywords: requirements, flexpod, express, vmware, broadcom 
 summary: 下面列出了 FlexPod Express 的其他要求。 
 ---
 = 其他要求
@@ -16,13 +16,6 @@ summary: 下面列出了 FlexPod Express 的其他要求。
 [role="lead"]
 FlexPod Express 的其他要求包括：
 
-* 所有设备都需要有效的支持合同，包括：
-+
-** Cisco 设备的 SMARTnet 支持
-** 对 NetApp 设备的 SupportEdge Advisor 或 SupportEdge Premium 支持
-
-
-* 所有软件组件必须在 http://mysupport.netapp.com/matrix["NetApp IMT"^]中列出并受支持。
-* 必须列出所有 NetApp 硬件组件并在上受支持 https://hwu.netapp.com/Home/Index["NetApp Hardware Universe"^]。
-* 必须列出所有 Cisco 硬件组件并在上受支持 https://ucshcltool.cloudapps.cisco.com/public/["Cisco HCL"^]。
+* 如果您计划使用 VMware ESXi 作为虚拟机管理程序，请参阅link:https://compatibilityguide.broadcom.com/["Broadcom 兼容性指南"]以验证您的硬件和软件组件是否受支持。
+* 对于基于 OpenShift 的部署，请确保您拥有与 OpenShift 兼容的必要硬件和软件组件。有关详细信息，请参阅 link:https://catalog.redhat.com/en/search["OpenShift 目录"]。
 

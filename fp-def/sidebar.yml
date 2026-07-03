@@ -17,10 +17,12 @@ entries:
     url: "/fp-def/fp-express-tech-spec_storage_software.html"
   - title: 最低硬件要求
     url: "/fp-def/fp-express-tech-spec_minimum_hardware_requirements.html"
-  - title: 最低软件要求
-    url: "/fp-def/fp-express-tech-spec_minimum_software_requirements.html"
+  - title: 软件版本建议
+    url: "/fp-def/fp-express-tech-spec_software_recommendation.html"
   - title: 连接要求
     url: "/fp-def/fp-express-tech-spec_connectivity_requirements.html"
+  - title: FlexPod Express 拓扑
+    url: "/fp-def/fp-express-tech-spec_flexpod_express_topologies.html"
   - title: 其他要求
     url: "/fp-def/fp-express-tech-spec_other_requirements.html"
   - title: 可选功能
@@ -33,10 +35,10 @@ entries:
     url: "/fp-def/fp-express-tech-spec_power_and_cabling_requirements.html"
   - title: 技术规格和参考
     url: "/fp-def/fp-express-tech-spec_technical_specifications_and_references.html"
-  - title: 以前的架构和设备
-    url: "/fp-def/fp-express-tech-spec_previous_architectures_and_equipment.html"
-  - title: 旧设备
-    url: "/fp-def/fp-express-tech-spec_legacy_equipment.html"
+  - title: 设备支持状态
+    url: "/fp-def/fp-express-tech-spec_equipment_support_status.html"
+  - title: 自动部署
+    url: "/fp-def/fp-express-tech-spec_automation.html"
   - title: 追加信息
     url: "/fp-def/fp-express-tech-spec_additional_information.html"
 - title: FlexPod 数据中心技术规格
