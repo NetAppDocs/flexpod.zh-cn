@@ -13,18 +13,21 @@ summary: 此页面上列出的技术是在设计此设计的架构过程中选�
 
 
 
+[[netapp-aff-a220-series-with-ontap-9-4]]
 == 采用 ONTAP 9.4 的 NetApp AFF A220 系列
 
 此解决方案利用两种最新的 NetApp 产品： NetApp AFF A220 和 ONTAP 9.4 软件。
 
 
 
+[[aff-a220-system]]
 === AFF A220 系统
 
 有关 AFF A220 硬件系统的详细信息，请参见 https://www.netapp.com/us/products/storage-systems/all-flash-array/aff-a-series.aspx["AFF A 系列主页"^]。
 
 
 
+[[ontap-9-4-software]]
 === ONTAP 9.4 软件
 
 NetApp AFF A220 系统使用新的 ONTAP 9.4 软件。ONTAP 9.4 是行业领先的企业级数据管理软件。它将更高级别的精简性和灵活性与强大的数据管理功能，存储效率和领先的云集成相结合。
@@ -41,6 +44,7 @@ image:express-c-series-aff220-design_image6.png["错误：缺少图形映像"]
 
 
 
+[[cisco-nexus-3000-series]]
 == Cisco Nexus 3000 系列
 
 Cisco Nexus 3172P 是一款功能强大且经济高效的交换机，可提供 1/10/40/100Gbps 的交换。Cisco Nexus 3172PQ 交换机属于统一网络结构系列，是一款紧凑型单机架单元（ 1RU ）交换机，适用于机架顶部数据中心部署。（请参见下图。） 它可在 1RU 中提供多达 72 个 1/10GbE 端口，或在 1RU 中提供 48 个 1/10GbE 端口以及 6 个 40GbE 端口。为了最大程度地提高物理层灵活性，它还支持 1/10/40Gbps 。
@@ -59,6 +63,7 @@ image:express-c-series-aff220-design_image7.png["错误：缺少图形映像"]
 
 
 
+[[cisco-ucs-c-series]]
 == Cisco UCS C 系列
 
 之所以选择 Cisco UCS C 系列机架式服务器来支持 FlexPod Express ，是因为它具有多种配置选项，可以根据 FlexPod Express 部署中的特定要求进行定制。
@@ -81,6 +86,7 @@ Cisco UCS C220 M5 机架式服务器（如上图所示）是业内用途最广�
 
 
 
+[[connectivity-options-for-c220-m5-rack-servers]]
 === C220 M5 机架式服务器的连接选项
 
 C220 M5 机架式服务器的连接选项如下：
@@ -105,6 +111,7 @@ image:express-c-series-aff220-design_image10.png["错误：缺少图形映像"]
 
 
 
+[[vmware-vsphere-6-7]]
 == VMware vSphere 6.7
 
 VMware vSphere 6.7 是一个适用于 FlexPod Express 的虚拟机管理程序选项。通过 VMware vSphere ，企业可以减少电耗和散热占用空间，同时确认已购买的计算容量已充分利用。此外， VMware vSphere 还支持在 vSphere 主机集群（ VMware Distributed Resource Scheduler 或 VMware DRS ）之间进行硬件故障保护（ VMware High Availability 或 VMware HA ）和计算资源负载平衡。
@@ -126,6 +133,7 @@ VMware vSphere 6.7 是一个适用于 FlexPod Express 的虚拟机管理程序�
 
 
 
+[[boot-architecture]]
 == 启动架构
 
 以下是 FlexPod 快速启动架构支持的选项：

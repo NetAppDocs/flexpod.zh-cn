@@ -69,6 +69,7 @@ COVID-19 显然重塑了数字化转型；据最近的一项调查显示 https:/
 
 
 
+[[overall-solution-benefits]]
 == 解决方案的整体优势
 
 通过在 FlexPod 架构基础上运行映像应用程序环境，您的医疗保健组织可以看到员工工作效率的提高以及资本和运营支出的降低。FlexPod 提供经过严格测试，预先验证和融合的产品，经过精心设计和设计，可提供可预测的低延迟系统性能和高可用性。这种方法可为医疗成像系统的用户带来较高的舒适程度，并最终实现最佳的响应时间。
@@ -106,18 +107,21 @@ image:medical-imaging_image2.png["错误：缺少图形映像"]
 
 
 
+[[scope]]
 == 范围
 
 本文档从技术角度概述了用于托管此医疗成像解决方案的 Cisco 统一计算系统（ Cisco UCS ）和基于 NetApp ONTAP 的 FlexPod 基础架构。
 
 
 
+[[audience]]
 == audience
 
 本文档面向医疗保健行业的技术主管以及 Cisco 和 NetApp 合作伙伴解决方案工程师和专业服务人员。NetApp 假定读者已很好地了解计算和存储规模估算概念，并在技术上熟悉医疗成像系统， Cisco UCS 和 NetApp 存储系统。
 
 
 
+[[medical-imaging-application]]
 == 医学影像应用程序
 
 典型的医疗成像应用程序提供了一套应用程序，这些应用程序共同构成了适合中小型和大型医疗保健组织的企业级成像解决方案。
@@ -161,18 +165,21 @@ image:medical-imaging_image2.png["错误：缺少图形映像"]
 
 
 
+[[size-of-the-healthcare-organization-and-platform-sizing]]
 == 医疗保健组织的规模和平台规模估算
 
 医疗保健组织可以采用基于标准的方法进行广泛分类，从而为 ACO 等计划提供帮助。其中一种分类采用临床集成网络（ CIN ）的概念。如果一组医院相互协作并遵循成熟的标准临床协议和途径来提高护理价值并降低患者成本，则可以称为 CIN 。CIN 中的医院对遵循 CIN 核心值的机上医生实施控制和实践。传统上，集成交付网络（ IDN ）仅限于医院和医生组。一个 CIN 跨越传统的 IDN 边界，一个 CIN 仍可属于一个 ACO 。根据 CIN 的原则，医疗保健组织可以分为小型，中型和大型。
 
 
 
+[[small-healthcare-organizations]]
 === 小型医疗保健组织
 
 如果医疗保健机构仅包括一家医院，并设有门诊和住院部门，则该机构规模较小，但不属于 CIN 。医生作为护理人员，在整个护理过程中协调患者护理。这些小型组织通常包括由医生运营的设施。他们可能会或不会将紧急和精神创伤护理作为患者的综合护理。通常，一家小型医疗保健组织每年执行大约 25 万次临床成像研究。成像中心被视为小型医疗保健组织，它们提供成像服务。有些组织还向其他组织提供放射科口授服务。
 
 
 
+[[medium-healthcare-organizations]]
 === 中型医疗保健组织
 
 如果医疗保健组织包含多个医院系统，并以以下组织为重点，则视为中型组织：
@@ -192,6 +199,7 @@ image:medical-imaging_image2.png["错误：缺少图形映像"]
 
 
 
+[[large-healthcare-organizations]]
 === 大型医疗保健组织
 
 如果医疗保健组织具备中型医疗保健组织的特征，并向位于多个地理位置的社区提供中型临床功能，则该组织就会被视为大型组织。
@@ -213,10 +221,12 @@ image:medical-imaging_image2.png["错误：缺少图形映像"]
 
 
 
+[[flexpod]]
 == FlexPod
 
 
 
+[[cisco-unified-computing-system]]
 === Cisco Unified Computing System
 
 Cisco UCS 由一个与统一 I/O 基础架构互连的管理域组成。适用于医疗成像环境的 Cisco UCS 已与 NetApp 医疗成像系统基础架构建议和最佳实践保持一致，以便该基础架构能够提供关键的患者信息并最大限度地提高可用性。
@@ -247,6 +257,7 @@ Cisco Unified Computing System 将访问层网络和服务器结合使用。这�
 
 
 
+[[cisco-ucs-manager]]
 === Cisco UCS Manager
 
 Cisco UCS Manager 可为 Cisco UCS 中的所有软件和硬件组件提供统一的嵌入式管理。通过使用单连接技术， UCS Manager 可以管理，控制和管理数千个 VM 的多个机箱。通过直观的 GUI ， CLI 或 XML API ，管理员可以使用该软件将整个 Cisco UCS 作为一个逻辑实体进行管理。Cisco UCS Manager 位于一对 Cisco UCS 6300 系列互联阵列上，这些互联阵列使用集群模式主动 - 备用配置来实现高可用性。
@@ -259,6 +270,7 @@ Cisco UCS Manager 提供了一个统一的嵌入式管理界面，可将您的�
 
 
 
+[[cisco-ucs-differentiators]]
 === Cisco UCS 的差异化优势
 
 Cisco Unified Computing System 正在彻底改变数据中心服务器的管理方式。请参见以下 Cisco UCS 和 Cisco UCS Manager 的独特优势：
@@ -281,6 +293,7 @@ Cisco Unified Computing System 正在彻底改变数据中心服务器的管理�
 
 
 
+[[cisco-nexus-ip-and-mds-switches]]
 === Cisco Nexus IP 和 MDS 交换机
 
 Cisco Nexus 交换机和 Cisco MDS 多层控制器为您提供企业级连接和 SAN 整合。Cisco 多协议存储网络可提供以下灵活性和选项，帮助您降低业务风险： FC ，光纤连接（ Fibre Connection ， Ficon ），以太网 FC （ FCoE ）， iSCSI 和 IP FC （ FCIP ）。
@@ -298,6 +311,7 @@ Cisco UCS 与 Cisco Nexus 交换机和 MDS 多层控制器相结合，可为企�
 
 
 
+[[netapp-all-flash-storage]]
 === NetApp 全闪存存储
 
 运行 ONTAP 软件的 NetApp 存储可降低整体存储成本，同时提供医疗成像系统工作负载所需的低延迟读写响应时间和高 IOPS 。为了创建满足典型医疗成像系统要求的最佳存储系统， ONTAP 同时支持全闪存和混合存储配置。NetApp 闪存存储为像您这样的医疗成像系统客户提供了高性能和响应能力的关键组件，可支持延迟敏感型医疗成像系统操作。通过在一个集群中创建多个故障域， NetApp 技术还可以将生产环境与非生产环境隔离开来。此外， NetApp 还可以通过确保使用 ONTAP 最低 QoS 的工作负载的系统性能不低于某个级别来减少系统的性能问题。
@@ -317,6 +331,7 @@ ONTAP 软件的横向扩展架构可以灵活地适应各种 I/O 工作负载。
 
 
 
+[[host-virtualization-vmware-vsphere]]
 === 主机虚拟化— VMware vSphere
 
 FlexPod 架构已通过行业领先的虚拟化平台 VMware vSphere 6.x 的验证。VMware ESXi 6.x 用于部署和运行 VM 。vCenter Server 设备 6.x 用于管理 ESXi 主机和 VM 。使用在 Cisco UCS B200 M5 刀片式服务器上运行的多个 ESXi 主机构成 VMware ESXi 集群。VMware ESXi 集群可对所有集群节点中的计算，内存和网络资源进行池化，并为集群上运行的 VM 提供一个弹性平台。VMware ESXi 集群功能， vSphere 高可用性和分布式资源计划程序（ DRS ）都有助于使 vSphere 集群承受故障的能力，并有助于在 VMware ESXi 主机之间分布资源。

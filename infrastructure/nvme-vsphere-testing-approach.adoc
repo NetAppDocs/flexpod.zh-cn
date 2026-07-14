@@ -20,6 +20,7 @@ link:nvme-vsphere-introduction.html["上一页：简介。"]
 
 
 
+[[test-environment]]
 == 测试环境
 
 Cisco Nexus 9000 系列交换机支持两种操作模式：
@@ -44,6 +45,7 @@ Cisco Nexus 交换机与最新一代 NetApp AFF A800 存储集群之间的连接
 
 
 
+[[validated-hardware-and-software]]
 == 经验证的硬件和软件
 
 下表列出了解决方案验证过程中使用的硬件和软件版本。请注意， Cisco 和 NetApp 具有互操作性表，应参考这些表来确定是否支持任何特定的 FlexPod 实施。有关详细信息，请参见以下资源：
@@ -98,6 +100,7 @@ Cisco Nexus 交换机与最新一代 NetApp AFF A800 存储集群之间的连接
 |===
 
 
+[[test-plan]]
 == 测试计划
 
 我们制定了一个性能测试计划，用于使用综合工作负载在 FlexPod 上验证 NVMe 。通过此工作负载，我们可以执行 8 KB 随机读取和写入以及 64 KB 读取和写入。我们使用 VMware ESXi 主机对 AFF A800 存储运行测试用例。

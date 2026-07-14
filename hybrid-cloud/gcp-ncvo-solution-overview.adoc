@@ -17,6 +17,7 @@ NetApp公司Ruchika Lahoti
 
 
 
+[[introduction]]
 == 简介
 
 利用灾难恢复(DR)保护数据是实现业务连续性的一个关键目标。灾难恢复允许组织将业务运营故障转移到二级位置、然后高效可靠地恢复并故障恢复到主站点。自然灾害、网络故障、软件漏洞和人为错误等多种问题都使制定灾难恢复策略成为IT的首要任务。
@@ -42,12 +43,14 @@ image:gcp-ncvo-image1.png["解决方案 概述。"]
 
 
 
+[[audience]]
 == audience
 
 本文档的受众包括但不限于：销售工程师、现场顾问、专业服务人员、IT经理、 合作伙伴工程师、站点可靠性工程师、云架构师、云工程师以及希望利用专为提高IT效率和实现IT创新而构建的基础架构的客户。
 
 
 
+[[solution-topology]]
 == 解决方案 拓扑
 
 本节介绍解决方案 的逻辑拓扑。下图显示了内部FlexPod 环境、在Google Cloud上运行的NetApp Cloud Volumes ONTAP 、Cisco Intersight和NetApp Cloud Manager的解决方案 拓扑。

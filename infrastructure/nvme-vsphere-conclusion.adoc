@@ -24,6 +24,7 @@ link:nvme-vsphere-test-results.html["上一步：测试结果。"]
 
 
 
+[[additional-information]]
 == 追加信息
 
 要了解有关本文档中所述信息的更多信息，请查看以下文档和 / 或网站：
@@ -96,6 +97,7 @@ https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-
 
 
 
+[[interoperability-matrixes]]
 == 互操作性表
 
 * NetApp 互操作性表工具
@@ -114,6 +116,7 @@ https://compatibilityguide.broadcom.com/["https://compatibilityguide.broadcom.co
 
 
 
+[[acknowledgements]]
 == 致谢
 
 作者谨向 Cisco 的 John George ， NetApp 的 Scott Lane 和 Bobby Oommen 表示感谢，感谢他们在项目执行期间提供的帮助和指导。

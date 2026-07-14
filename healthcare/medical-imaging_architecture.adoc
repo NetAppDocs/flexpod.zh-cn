@@ -22,12 +22,14 @@ image:medical-imaging_image3.png["错误：缺少图形映像"]
 
 
 
+[[storage-architecture]]
 == 存储架构
 
 使用本节中的存储架构准则为企业级医疗映像系统配置存储基础架构。
 
 
 
+[[storage-tiers]]
 === 存储层
 
 典型的企业级医疗成像环境由多个不同的存储层组成。每个层都有特定的性能和存储协议要求。NetApp 存储支持各种 RAID 技术；有关详细信息，请参见 https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.dot-cm-psmg%2FGUID-488B0EC4-3B03-4566-8321-5B8E568F34E4.html["此处"^]。以下是 NetApp AFF 存储系统如何满足映像系统不同存储层的需求：
@@ -67,6 +69,7 @@ NetApp SnapMirror 可提供行业领先的数据复制功能，通过统一数�
 |===
 
 
+[[storage-network-connectivity]]
 === 存储网络连接
 
 
@@ -108,6 +111,7 @@ NetApp SnapMirror 可提供行业领先的数据复制功能，通过统一数�
 
 
 
+[[backup-and-recovery]]
 === 备份和恢复
 
 FlexPod 数据中心基于由 NetApp ONTAP 数据管理软件管理的存储阵列构建。ONTAP 软件经过 20 多年的发展，为 VM ， Oracle 数据库， SMB/CIFS 文件共享和 NFS 提供了许多数据管理功能。它还提供保护技术，例如 NetApp Snapshot 技术， SnapMirror 技术和 NetApp FlexClone 数据复制技术。NetApp SnapCenter 软件具有一个服务器和一个 GUI 客户端，可用于对 VM ， SMB/CIFS 文件共享， NFS 以及 Oracle 数据库备份和恢复使用 ONTAP Snapshot ， SnapRestore 和 FlexClone 功能。
@@ -139,6 +143,7 @@ NetApp MetroCluster 配置被全球数千家企业用于数据中心内外的高
 
 
 
+[[networking]]
 == 网络
 
 一对 Cisco Nexus 交换机可为从计算到存储的 IP 流量以及医学影像系统图像查看器的外部客户端提供冗余路径：
@@ -157,6 +162,7 @@ NetApp MetroCluster 配置被全球数千家企业用于数据中心内外的高
 
 
 
+[[computecisco-unified-computing-system]]
 == 计算— Cisco Unified Computing System
 
 通过不同互联阵列连接的两个 Cisco UCS 网络结构提供两个故障域。每个网络结构都连接到两个 IP 网络交换机和不同的 FC 网络交换机。
@@ -172,6 +178,7 @@ NetApp MetroCluster 配置被全球数千家企业用于数据中心内外的高
 
 
 
+[[virtualization]]
 == 虚拟化
 
 VMware ESXi 主机集群运行工作负载 VM 。集群包含在 Cisco UCS 刀片式服务器上运行的 ESXi 实例。
@@ -194,6 +201,7 @@ VMware ESXi 主机集群运行工作负载 VM 。集群包含在 Cisco UCS 刀�
 
 
 
+[[medical-imaging-system-architecture]]
 == 医疗成像系统架构
 
 在医疗保健组织中，医疗成像系统是关键应用程序，可与从患者注册到收入周期计费相关活动的临床工作流完美集成。

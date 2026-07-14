@@ -18,6 +18,7 @@ Cisco 为 FlexPod 快速设计和架构做出了重大贡献；它为解决方�
 
 
 
+[[cisco-ucs-x-series-direct]]
 == Cisco UCS X-Series 直连
 
 Cisco UCS X-Series Direct 是一种新的架构，它将一对 Cisco UCS Fabric Interconnect 9108 100G 与 Cisco UCS X9508 Chassis 和 Cisco UCS X-Series Compute 节点集成在一起，以提供 UCS X-Series Direct 解决方案。
@@ -43,19 +44,19 @@ NOTE: 有关 UCS X-Series Direct 的完整技术规范，请参阅此链接： h
 有关 X-Series Direct 组件的技术规格，请参见下表。
 
 |===
-| Cisco UCS 互联阵列 | 部件号 | 技术规格 
+| Cisco UCS X系列直接交换矩阵互连 | 部件号 | 技术规格 
 
 
 | UCS 9108 100G 结构互连 | UCSX-S9108-100G | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/ucs-fabric-interconnect-9108-100g.pdf["Cisco UCS 9108 Fabric Interconnect"] 
 |===
 |===
-| Cisco UCS X 系列机箱 | 部件号 | 技术规格 
+| Cisco UCS X-Series Direct 机箱 | 部件号 | 技术规格 
 
 
 | Cisco UCS X9508 机箱 | UCSX-9508 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/datasheet-c78-2472574.html?ccid=cc002456&oid=dstcsm026317["Cisco UCS X9508 机箱"] 
 |===
 |===
-| Cisco UCS X 系列计算节点 | 部件号 | 技术规格 
+| Cisco UCS X-Series Direct计算节点 | 部件号 | 技术规格 
 
 
 | Cisco UCS X210c M7 | UCSX-210C-M7 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/ucs-x210c-m7-compute-node-ds.html["Cisco UCS X210c M7 计算节点"] 
@@ -73,7 +74,7 @@ NOTE: 有关 UCS X-Series Direct 的完整技术规范，请参阅此链接： h
 | Cisco UCS X410c M8 | UCSX-410C-M8 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/ucs-x410c-m8-compute-node-ds.html["Cisco UCS X410c M8 计算节点"] 
 |===
 |===
-| Cisco UCS X 系列模块 | 部件号 | 技术规格 
+| Cisco UCS X-Series Direct 模块 | 部件号 | 技术规格 
 
 
 | Cisco UCS 9108 智能结构模块 | UCSX-I-9108-100G | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/cisco-ucs-9108-100g-intelligent-fabric-module-spec-sheet.pdf["Cisco UCS 9108 智能结构模块"] 
@@ -86,6 +87,45 @@ NOTE: 有关 UCS X-Series Direct 的完整技术规范，请参阅此链接： h
 |===
 
 
+[[cisco-unified-edge]]
+== Cisco Unified Edge
+
+Cisco Unified Edge 是一个 AI 就绪系统，通过融合计算、网络、存储和安全来重新定义边缘计算。模块化设计面向未来、节能且易于维护，可以定制以支持当今的工作负载和用例，同时保持对快速发展的 AI 环境的适应性。
+
+有关 Cisco Unified Edge 功能和特性的简要概述，请参见 link:https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/unified-edge/unified-edge-at-a-glance.html["Cisco Unified Edge 概览。"^]
+
+Cisco Unified Edge包括以下组件：
+
+* Cisco UCS XE9305 机箱
+* 两个带嵌入式 25G 交换机的 Cisco Unified Edge Management Controllers
+* 计算节点 - 选择
++
+** Cisco UCS XE130c M8 计算节点
+** Cisco UCS XE150c M8 计算节点
+
+
+
+
+下表列出了 Cisco Unified Edge 机箱和计算节点选项。
+
+|===
+| Cisco Unified Edge机箱 | 部件号 | 技术规格 
+
+
+| Cisco UCS XE9305 机箱 | UCSXE-9305-U | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-xe9305-m8-chassis-spec-sheet.pdf["Cisco UCS XE9305 机箱"] 
+|===
+|===
+| Cisco Unified Edge 计算节点 | 部件号 | 技术规格 
+
+
+| Cisco UCS XE130c M8 计算节点 | UCSXE-130C-M8 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-xe130c-m8-compute-node-spec-sheet.pdfl["Cisco UCS XE130c M8 计算节点"] 
+
+
+| Cisco UCS XE150c M8 计算节点 | UCSXE-150C-M8 | https://www.cisco.com/site/us/en/products/collateral/computing/unified-edge/ucs-xe150c-m8-compute-node-ds.html["Cisco UCS XE150c M8 计算节点"] 
+|===
+
+
+[[cisco-ucs-c-series-rack-server-options]]
 == Cisco UCS C 系列机架式服务器选项
 
 Cisco UCS C 系列机架式服务器有 1 个和 2 个机架单元 (RU) 品种，具有各种 CPU、内存和 I/O 选项。下表中列出的部件号适用于基本服务器。它们不包括 CPU、内存、驱动器、外设组件互连 Express (PCIe) 卡。有多个配置选项可用，并且在 FlexPod 体系结构中受支持。
@@ -121,6 +161,7 @@ Cisco UCS C 系列机架式服务器有 1 个和 2 个机架单元 (RU) 品种�
 |===
 
 
+[[cisco-nexus-switches]]
 == Cisco Nexus 交换机
 
 在 FlexPod 架构中需要冗余 Cisco Nexus 交换机。
@@ -136,6 +177,7 @@ Cisco UCS C 系列机架式服务器有 1 个和 2 个机架单元 (RU) 品种�
 |===
 
 
+[[cisco-support-licensing-options]]
 == Cisco 支持许可选项
 
 在 FlexPod Express 架构中的所有 Cisco 设备都需要有效的 TSANet 支持合同。

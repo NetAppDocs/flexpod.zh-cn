@@ -18,6 +18,7 @@ summary: 技术规格提供了有关 FlexPod 解决方案中硬件组件的详�
 
 
 
+[[cisco-ucs-b-series-blade-server-chassis]]
 == Cisco UCS B 系列刀片式服务器机箱
 
 下表所示的 Cisco UCS B 系列刀片式服务器机箱的技术规格包括以下组件：
@@ -54,6 +55,7 @@ summary: 技术规格提供了有关 FlexPod 解决方案中硬件组件的详�
 
 
 
+[[cisco-ucs-b-series-blade-servers]]
 == Cisco UCS B 系列刀片式服务器
 
 下表所示的 Cisco UCS B 系列刀片式服务器的技术规格包括以下组件：
@@ -77,6 +79,7 @@ summary: 技术规格提供了有关 FlexPod 解决方案中硬件组件的详�
 |===
 
 
+[[cisco-ucs-c-series-rack-servers]]
 == Cisco UCS C 系列机架式服务器
 
 Cisco UCS C 系列机架式服务器的技术规格包括处理器支持，最大内存容量， PCIe 插槽数量以及外形规格大小。有关兼容 UCS 服务器型号的更多详细信息，请参见 https://ucshcltool.cloudapps.cisco.com/public/["Cisco 硬件兼容性"^] 列表下表分别说明了 C 系列机架式服务器产品规格和 Cisco UCS C 系列机箱选项。
@@ -98,6 +101,7 @@ Cisco UCS C 系列机架式服务器的技术规格包括处理器支持，最�
 |===
 
 
+[[cisco-ucs-x-series-chassis]]
 == Cisco UCS X 系列机箱
 
 下表所示的 Cisco UCS X 系列机箱技术规格包括以下组件：
@@ -127,6 +131,7 @@ Cisco UCS C 系列机架式服务器的技术规格包括处理器支持，最�
 
 
 
+[[cisco-ucs-x-series-compute-node]]
 == Cisco UCS X 系列计算节点
 
 下表所示的 Cisco UCS X 系列计算节点的技术规格包括以下组件：
@@ -152,6 +157,7 @@ Cisco UCS C 系列机架式服务器的技术规格包括处理器支持，最�
 |===
 
 
+[[gpu-recommendation-for-flexpod-ai-ml-and-dl]]
 == FlexPod AI ， ML 和 DL 的 GPU 建议
 
 下表中列出的 Cisco UCS C 系列机架式服务器可在 FlexPod 架构中用于托管 AI ， ML 和 DL 工作负载。Cisco UCS C480 ML M5 服务器专为 AI ， ML 和 DL 工作负载而构建，并使用基于 NVIDIA 的 SXM2 的 GPU ，而其他服务器则使用基于 PCIe 的 GPU 。
@@ -175,6 +181,7 @@ Cisco UCS C 系列机架式服务器的技术规格包括处理器支持，最�
 |===
 
 
+[[cisco-ucs-vic-adapters-for-cisco-ucs-b-series-blade-servers]]
 == 适用于 Cisco UCS B 系列刀片式服务器的 Cisco UCS VIC 适配器
 
 适用于 Cisco UCS B 系列刀片式服务器的 Cisco UCS 虚拟接口卡（ Virtual Interface Card ， VIC ）适配器的技术规格包括以下组件：
@@ -197,6 +204,7 @@ Cisco UCS C 系列机架式服务器的技术规格包括处理器支持，最�
 |===
 
 
+[[cisco-ucs-fabric-interconnects]]
 == Cisco UCS 互联阵列
 
 Cisco UCS 互联阵列的技术规格包括外形规格大小，端口和扩展插槽总数以及吞吐量容量。下表显示了 Cisco UCS 互联阵列数据表。
@@ -221,6 +229,7 @@ Cisco UCS 互联阵列的技术规格包括外形规格大小，端口和扩展�
 |===
 
 
+[[cisco-nexus-5000-series-switches]]
 == Cisco Nexus 5000 系列交换机
 
 Cisco Nexus 5000 系列交换机的技术规格，包括外形规格大小，端口总数以及第 3 层模块和子卡支持，均包含在每个型号系列的数据表中。下表列出了这些数据表。
@@ -242,6 +251,7 @@ Cisco Nexus 5000 系列交换机的技术规格，包括外形规格大小，端
 |===
 
 
+[[cisco-nexus-7000-series-switches]]
 == Cisco Nexus 7000 系列交换机
 
 Cisco Nexus 7000 系列交换机的技术规格（包括外形规格和最大端口数）包含在每个型号系列的产品规格中。下表列出了这些数据表。
@@ -275,6 +285,7 @@ Cisco Nexus 7000 系列交换机的技术规格（包括外形规格和最大端
 |===
 
 
+[[cisco-nexus-9000-series-switches]]
 == Cisco Nexus 9000 系列交换机
 
 Cisco Nexus 9000 系列交换机的技术规格包含在每种型号的产品规格中。规格包括外形规格大小，监控器，光纤模块和线卡插槽的数量以及最大端口数量。下表列出了这些数据表。
@@ -299,6 +310,7 @@ Cisco Nexus 9000 系列交换机的技术规格包含在每种型号的产品规
 |===
 
 
+[[cisco-application-policy-infrastructure-controller]]
 == Cisco Application Policy Infrastructure 控制器
 
 部署 Cisco ACI 时，除了一节中的各项之外 link:dc-tech-spec_technical_specifications_and_references.html#cisco-nexus-9000-series-switches["Cisco Nexus 9000 系列交换机"]，您必须配置三个 Cisco APIC 。下表列出了 Cisco APIC 产品规格。
@@ -311,6 +323,7 @@ Cisco Nexus 9000 系列交换机的技术规格包含在每种型号的产品规
 |===
 
 
+[[cisco-nexus-fabric-extender-details]]
 == Cisco Nexus 阵列扩展器详细信息
 
 Cisco Nexus FEX 的技术规格包括速度，固定端口和链路的数量以及外形规格。
@@ -325,6 +338,7 @@ Cisco Nexus FEX 的技术规格包括速度，固定端口和链路的数量以�
 |===
 
 
+[[sfp-modules]]
 == SFP 模块
 
 有关 SFP 模块的信息，请查看以下资源：
@@ -339,6 +353,7 @@ Cisco Nexus FEX 的技术规格包括速度，固定端口和链路的数量以�
 
 
 
+[[netapp-storage-controllers]]
 == NetApp 存储控制器
 
 NetApp 存储控制器的技术规格包括以下组件：
@@ -358,6 +373,7 @@ NetApp 存储控制器的技术规格包括以下组件：
 
 
 
+[[fas-series]]
 === FAS 系列
 
 支持在 FlexPod 数据中心中使用所有可用型号的 FAS 存储控制器。有关所有 FAS 系列存储控制器的详细规格，请参见 https://hwu.netapp.com/["NetApp Hardware Universe"^]。有关特定 FAS 型号的详细信息，请参见下表中列出的平台专用文档。
@@ -382,6 +398,7 @@ NetApp 存储控制器的技术规格包括以下组件：
 |===
 
 
+[[aff-a-series]]
 === AFF A-Series
 
 支持在 FlexPod 中使用所有当前型号的 NetApp AFF A 系列存储控制器。有关详细信息，请参见 https://www.netapp.com/media/7828-DS-3582-AFF-A-Series.pdf["AFF 技术规格"^]数据表和 https://hwu.netapp.com/["NetApp Hardware Universe"^]。有关特定 AFF 型号的详细信息，请参见下表中列出的平台专用文档。
@@ -406,6 +423,7 @@ NetApp 存储控制器的技术规格包括以下组件：
 |===
 
 
+[[aff-asa-a-series]]
 === AFF ASA A 系列
 
 支持在 FlexPod 中使用所有当前型号的 NetApp AFF ASA A 系列存储控制器。追加信息可在所有 SAN 阵列文档资源， ONTAP AFF 全 SAN 阵列系统技术报告和 NetApp Hardware Universe 中找到。有关特定 AFF 型号的详细信息，请参见下表中列出的平台专用文档。
@@ -430,6 +448,7 @@ NetApp 存储控制器的技术规格包括以下组件：
 |===
 
 
+[[netapp-disk-shelves]]
 === NetApp 磁盘架
 
 NetApp 磁盘架的技术规格包括外形规格大小，每个机箱的驱动器数量以及磁盘架 I/O 模块；下表提供了此文档。有关详细信息，请参见 http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["NetApp 磁盘架和存储介质技术规格"^] 和 https://hwu.netapp.com/["NetApp Hardware Universe"^]。
@@ -451,6 +470,7 @@ NetApp 磁盘架的技术规格包括外形规格大小，每个机箱的驱动�
 |===
 
 
+[[netapp-drives]]
 === NetApp 驱动器
 
 NetApp 驱动器的技术规格包括外形规格大小，磁盘容量，磁盘 RPM ，支持控制器和 ONTAP 版本要求。这些规格可在的驱动器部分中找到 http://hwu.netapp.com/Drives/Index?queryId=1581392["NetApp Hardware Universe"^]。

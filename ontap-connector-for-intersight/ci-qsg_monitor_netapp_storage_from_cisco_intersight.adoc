@@ -18,6 +18,7 @@ summary: 声明目标后，如果您拥有优势层许可证，则 NetApp 存储
 
 
 
+[[storage-inventory-overview]]
 == 存储清单概述
 
 以下屏幕截图显示了 * 操作 > 存储 * 屏幕。
@@ -33,6 +34,7 @@ image:ci-qsg_image10.png["屏幕截图显示了存储集群概述"]
 
 
 
+[[storage-widgets]]
 == 存储小工具
 
 要查看存储小工具，请导航到 * 监控 > 信息板 > 查看 NetApp 存储小工具 * 。

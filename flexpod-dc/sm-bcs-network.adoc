@@ -20,6 +20,7 @@ FlexPod SM-BC 解决方案 的网络配置遵循每个站点的典型 FlexPod �
 
 
 
+[[connectivity]]
 == 连接
 
 每个站点上的 FlexPod Nexus 交换机均可通过高可用性配置在 UCS 计算和 ONTAP 存储之间提供本地连接。冗余组件和冗余连接可在发生单点故障时提供故障恢复能力。
@@ -117,6 +118,7 @@ NOTE: 上表从每个 FlexPod 交换机的角度列出了连接。因此，该�
 
 
 
+[[port-channel-and-virtual-port-channel]]
 == 端口通道和虚拟端口通道
 
 端口通道使用链路聚合控制协议（ LACP ）实现带宽聚合和链路故障恢复能力，从而实现链路聚合。虚拟端口通道（ Virtual Port Channel ， vPC ）允许在逻辑上将两个 Nexus 交换机之间的端口通道连接显示为一个。这样可以进一步提高单链路故障或单交换机故障等情况下的故障恢复能力。
@@ -153,6 +155,7 @@ NOTE: 上表从每个 FlexPod 交换机的角度列出了连接。因此，该�
 |===
 
 
+[[vlans]]
 == VLAN
 
 下表列出了为设置 FlexPod SM-BC 解决方案 验证环境而配置的 VLAN 及其使用情况。

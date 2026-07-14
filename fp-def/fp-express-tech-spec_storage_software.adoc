@@ -18,6 +18,7 @@ FlexPod Express 支持运行 NetApp ONTAP 操作系统的存储系统。
 
 
 
+[[netapp-ontap]]
 == NetApp ONTAP
 
 NetApp ONTAP 软件是在 AFF、ASA 和 FAS 存储系统上运行的操作系统。ONTAP 提供高度可扩展的存储架构，可实现无中断操作、无中断升级和敏捷数据基础设施。使用 ONTAP One 许可模式，所有企业数据服务都包含在一个软件包中，简化了部署和管理，同时提供对高级功能的完全访问。ONTAP 通过 SnapMirror 复制和灾难恢复以及 SnapCenter 应用程序一致性备份和还原等技术提供强大的数据保护。它还集成了内置安全功能，包括自主勒索软件防护和加密，以保护数据免受现代威胁。此外，ONTAP 通过 SnapMirror Cloud 和基于 S3 的复制等功能实现无缝混合云集成，支持跨本地和云环境的数据移动，同时保持一致性和控制性。

@@ -21,6 +21,7 @@ NOTE: SAN 启动是可选的，但强烈建议使用，因为它允许在硬件�
 
 
 
+[[iscsi-boot-option]]
 == iSCSI 启动选项
 
 iSCSI 引导选项的最低要求包括：
@@ -32,6 +33,7 @@ iSCSI 引导选项的最低要求包括：
 
 
 
+[[cisco-ucs-x-series-direct-and-direct-attached-aff-asa-fas-option]]
 == Cisco UCS X-Series Direct 和直连 AFF/ASA/FAS 选项
 
 NetApp 存储控制器可以直接连接到 Cisco UCS 交换矩阵互连，而无需任何上游 SAN 交换机。FlexPod Express 支持 UCS X-Series Direct 的 FC 和 iSCSI 引导。

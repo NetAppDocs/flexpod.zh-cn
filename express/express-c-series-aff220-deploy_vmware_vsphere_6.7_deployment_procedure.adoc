@@ -25,12 +25,14 @@ NOTE: 必须为 Cisco UCS 服务器 A 和 Cisco UCS 服务器 B 完成此操作�
 
 
 
+[[log-in-to-cimc-interface-for-cisco-ucs-c-series-standalone-servers]]
 == 登录到 Cisco UCS C 系列独立服务器的 CIMC 界面
 
 以下步骤详细介绍了登录到 Cisco UCS C 系列独立服务器的 CIMC 界面的方法。您必须登录到 CIMC 界面才能运行虚拟 KVM ，管理员可以通过远程介质开始安装操作系统。
 
 
 
+[[all-hosts]]
 === 所有主机
 
 . 导航到 Web 浏览器，然后输入 Cisco UCS C 系列的 CIMC 接口的 IP 地址。此步骤将启动 CIMC GUI 应用程序。
@@ -52,12 +54,14 @@ NOTE: 您可能需要先单击激活虚拟设备。如果出现提示，请选�
 
 
 
+[[install-vmware-esxi]]
 == 安装 VMware ESXi
 
 以下步骤介绍了如何在每台主机上安装 VMware ESXi 。
 
 
 
+[[download-esxi-6-7-cisco-custom-image]]
 === 下载 ESXi 6.7 Cisco 自定义映像
 
 . 导航到 https://support.broadcom.com/group/ecx/downloads["Broadcom 支持门户下载网站"^]以获取自定义 ISO。
@@ -67,6 +71,7 @@ NOTE: 您可能需要先单击激活虚拟设备。如果出现提示，请选�
 
 
 
+[[all-hosts]]
 === 所有主机
 
 . 系统启动时，计算机会检测是否存在 VMware ESXi 安装介质。
@@ -87,12 +92,14 @@ image:express-c-series-aff220-deploy_image22.png["错误：缺少图形映像"]
 
 
 
+[[set-up-vmware-esxi-host-management-networking]]
 == 设置 VMware ESXi 主机管理网络
 
 以下步骤介绍了如何为每个 VMware ESXi 主机添加管理网络。
 
 
 
+[[all-hosts]]
 === 所有主机
 
 . 服务器完成重新启动后，按 F2 输入选项以自定义系统。
@@ -130,6 +137,7 @@ image:express-c-series-aff220-deploy_image23.png["错误：缺少图形映像"]
 
 
 
+[[configure-esxi-host]]
 == 配置 ESXi 主机
 
 您需要下表中的信息来配置每个 ESXi 主机。
@@ -187,6 +195,7 @@ image:express-c-series-aff220-deploy_image23.png["错误：缺少图形映像"]
 |===
 
 
+[[log-in-to-esxi-host]]
 === 登录到 ESXi 主机
 
 . 在 Web 浏览器中打开主机的管理 IP 地址。
@@ -196,6 +205,7 @@ image:express-c-series-aff220-deploy_image23.png["错误：缺少图形映像"]
 
 
 
+[[configure-iscsi-boot]]
 === 配置 iSCSI 启动
 
 . 选择左侧的 Networking 。
@@ -244,6 +254,7 @@ NOTE: 在 `iScsiBootPg- A` 上将 MTU 设置为 9000
 
 
 
+[[configure-iscsi-multipathing]]
 === 配置 iSCSI 多路径
 
 要在 ESXi 主机上设置 iSCSI 多路径，请完成以下步骤：
@@ -273,6 +284,7 @@ NOTE: 您可以通过在 NetApp 集群上运行 `network interface show `命令�
 
 
 
+[[configure-esxi-host]]
 === 配置 ESXi 主机
 
 . 在左侧导航窗格中，选择网络。
@@ -287,6 +299,7 @@ image:express-c-series-aff220-deploy_image29.png["错误：缺少图形映像"]
 
 
 
+[[configure-port-groups-and-vmkernel-nics]]
 === 配置端口组和 VMkernel NIC
 
 . 在左侧导航窗格中，选择网络。
@@ -381,6 +394,7 @@ image:express-c-series-aff220-deploy_image35.png["错误：缺少图形映像"]
 
 
 
+[[configure-ntp]]
 === 配置 NTP
 
 要为 ESXi 主机配置 NTP ，请完成以下步骤：
@@ -400,6 +414,7 @@ image:express-c-series-aff220-deploy_image37.png["错误：缺少图形映像"]
 
 
 
+[[move-the-virtual-machine-swap-file-location]]
 === 移动虚拟机交换文件的位置
 
 以下步骤提供了有关移动虚拟机交换文件位置的详细信息。
@@ -417,6 +432,7 @@ image:express-c-series-aff220-deploy_image39.png["错误：缺少图形映像"]
 
 
 
+[[install-the-netapp-nfs-plug-in-1-0-20-for-vmware-vaai]]
 === 安装适用于 VMware VAAI 的 NetApp NFS 插件 1.0.20
 
 要安装适用于 VMware VAAI 的 NetApp NFS 插件 1.0.20 ，请完成以下步骤。

@@ -26,12 +26,14 @@ NOTE: 对于添加到集群中的任何其他节点，必须完成此操作步�
 
 
 
+[[log-in-to-cimc-interface-for-cisco-ucs-c-series-standalone-servers]]
 == 登录到 Cisco UCS C 系列独立服务器的 CIMC 界面
 
 以下步骤详细介绍了登录到 Cisco UCS C 系列独立服务器的 CIMC 界面的方法。您必须登录到 CIMC 界面才能运行虚拟 KVM ，管理员可以通过远程介质开始安装操作系统。
 
 
 
+[[all-hosts]]
 === 所有主机
 
 . 导航到 Web 浏览器，然后输入 Cisco UCS C 系列的 CIMC 接口的 IP 地址。此步骤将启动 CIMC GUI 应用程序。
@@ -53,12 +55,14 @@ NOTE: 您可能需要先单击激活虚拟设备。如果出现提示，请选�
 
 
 
+[[install-vmware-esxi]]
 == 安装 VMware ESXi
 
 以下步骤介绍了如何在每台主机上安装 VMware ESXi 。
 
 
 
+[[download-esxi-6-7u2-cisco-custom-image]]
 === 下载 ESXi 6.7U2 Cisco 自定义映像
 
 . 导航到 https://support.broadcom.com/group/ecx/downloads["Broadcom 支持门户下载网站"^]以获取自定义 ISO。
@@ -79,12 +83,14 @@ image:express-c-series-c190-deploy_image18.png["错误：缺少图形映像"]
 
 
 
+[[set-up-vmware-esxi-host-management-networking]]
 == 设置 VMware ESXi 主机管理网络
 
 以下步骤介绍了如何为每个 VMware ESXi 主机添加管理网络。
 
 
 
+[[all-hosts]]
 === 所有主机
 
 . 服务器完成重新启动后，按 F2 输入选项以自定义系统。
@@ -131,6 +137,7 @@ esxcli network vswitch standard policy failover set -v vSwitch0 -a vmnic2,vmnic4
 
 
 
+[[configure-esxi-host]]
 == 配置 ESXi 主机
 
 使用下表中的信息配置每个 ESXi 主机。
@@ -188,6 +195,7 @@ esxcli network vswitch standard policy failover set -v vSwitch0 -a vmnic2,vmnic4
 |===
 
 
+[[log-in-to-the-esxi-host]]
 === 登录到 ESXi 主机
 
 要登录到 ESXi 主机，请完成以下步骤：
@@ -199,6 +207,7 @@ esxcli network vswitch standard policy failover set -v vSwitch0 -a vmnic2,vmnic4
 
 
 
+[[configure-iscsi-boot]]
 === 配置 iSCSI 启动
 
 要配置 iSCSI 启动，请完成以下步骤：
@@ -247,6 +256,7 @@ image:express-c-series-c190-deploy_image21.png["错误：缺少图形映像"]
 
 
 
+[[configure-iscsi-multipathing]]
 === 配置 iSCSI 多路径
 
 要在 ESXi 主机上设置 iSCSI 多路径，请完成以下步骤：
@@ -277,6 +287,7 @@ NOTE: 您可以通过在 NetApp 集群上运行 network interface show 命令或
 
 
 
+[[configure-the-esxi-host]]
 === 配置 ESXi 主机
 
 要配置 ESXi 启动，请完成以下步骤：
@@ -297,6 +308,7 @@ NOTE: 负载平衡的 IP 哈希方法要求使用具有静态（模式开启）�
 
 
 
+[[configure-the-port-groups-and-vmkernel-nics]]
 === 配置端口组和 VMkernel NIC
 
 要配置端口组和 VMkernel NIC ，请完成以下步骤：
@@ -357,6 +369,7 @@ NOTE: 可以通过多种方法配置 ESXi 网络，包括在许可允许的情�
 
 
 
+[[mount-the-first-datastores]]
 === 挂载第一个数据存储库
 
 要挂载的第一个数据存储库是 VM 的 `infra_datastore` 数据存储库和 VM 交换文件的 `infra_swap` 数据存储库。
@@ -390,6 +403,7 @@ image:express-c-series-c190-deploy_image30.png["错误：缺少图形映像"]
 
 
 
+[[configure-ntp]]
 === 配置 NTP
 
 要为 ESXi 主机配置 NTP ，请完成以下步骤：
@@ -406,6 +420,7 @@ image:express-c-series-c190-deploy_image31.png["错误：缺少图形映像"]
 
 
 
+[[move-the-vm-swap-file-location]]
 === 移动 VM 交换文件位置
 
 以下步骤提供了有关移动 VM 交换文件位置的详细信息。

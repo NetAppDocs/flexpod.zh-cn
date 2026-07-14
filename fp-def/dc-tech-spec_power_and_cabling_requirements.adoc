@@ -18,6 +18,7 @@ FlexPod 设计对电源和布线具有最低要求。
 
 
 
+[[power-requirements]]
 == 电源要求
 
 FlexPod 数据中心的电源要求因 FlexPod 数据中心配置的安装位置而异。
@@ -30,6 +31,7 @@ FlexPod 数据中心的电源要求因 FlexPod 数据中心配置的安装位置
 
 
 
+[[minimum-cable-requirements]]
 == 最低缆线要求
 
 所需的缆线和适配器数量和类型因 FlexPod 数据中心部署而异。电缆类型，收发器类型和数量是在设计过程中根据您的要求确定的。下表列出了所需的最小缆线数量。

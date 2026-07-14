@@ -20,6 +20,7 @@ FlexPod 数据中心 SM-BC 解决方案 可为各种单点故障情形以及站�
 
 
 
+[[solution-functions-validation]]
 == 解决方案 功能验证
 
 我们会使用多种测试用例来验证解决方案 功能，并模拟部分和完整的站点故障情形。为了最大限度地减少与现有 FlexPod 数据中心解决方案在 Cisco 验证设计计划下执行的测试的重复，本报告重点介绍了解决方案 中与 SM-BC 相关的方面。我们提供了一些常规 FlexPod 验证，供实践人员进行实施验证。
@@ -30,6 +31,7 @@ FlexPod 数据中心 SM-BC 解决方案 可为各种单点故障情形以及站�
 
 
 
+[[esxi-host-iscsi-san-boot-test]]
 == ESXi 主机 iSCSI SAN 启动测试
 
 解决方案 中的 ESXi 主机已配置为从 iSCSI SAN 启动。使用 SAN 启动可以简化更换服务器时的服务器管理，因为服务器的服务配置文件可以与新服务器关联，以便在不更改任何其他配置的情况下启动它。
@@ -54,6 +56,7 @@ image:sm-bcs-image48.png["错误：缺少图形映像"]
 
 
 
+[[vmware-vmotion-and-vmhost-affinity-test]]
 == VMware vMotion 和 VM/ 主机关联性测试
 
 虽然通用 FlexPod VMware Datacenter 解决方案 支持多协议，例如 FC ， iSCSI ， NVMe 和 NFS ，但 FlexPod SM-BC 解决方案 功能支持通常用于业务关键型解决方案的 FC 和 iSCSI SAN 协议。此验证仅使用基于 iSCSI 协议的数据存储库和 iSCSI SAN 启动。
@@ -74,6 +77,7 @@ image:sm-bcs-image50.png["错误：缺少图形映像"]
 
 
 
+[[planned-storage-failover]]
 == 计划内存储故障转移
 
 应在初始配置后对解决方案 执行计划内存储故障转移操作，以确定解决方案 在存储故障转移后是否正常工作。此测试有助于确定可能导致 I/O 中断的任何连接或配置问题。定期测试和解决任何连接或配置问题有助于在发生实际站点灾难时提供无中断的数据服务。也可以在计划的存储维护活动之前使用计划的存储故障转移，以便可以从不受影响的站点提供数据服务。
@@ -105,6 +109,7 @@ image:sm-bcs-image55.png["错误：缺少图形映像"]
 
 
 
+[[unplanned-storage-failover]]
 == 计划外存储故障转移
 
 发生实际灾难或进行灾难模拟期间，可能会发生计划外存储故障转移。例如，请参见下图，其中站点 A 的存储系统发生断电，触发计划外存储故障转移，站点 A LUN 的数据服务受 SM-BC 关系保护，然后从站点 B 继续提供
@@ -137,6 +142,7 @@ image:sm-bcs-image61.png["错误：缺少图形映像"]
 
 
 
+[[complete-site-maintenance-or-site-failure]]
 == 完成站点维护或站点故障
 
 站点可能需要进行站点维护，断电或受到飓风或地震等自然灾害的影响。因此，您必须练习计划内和计划外站点故障情形，以确保 FlexPod SM-BC 解决方案 配置正确，使其在所有业务关键型应用程序和数据服务发生此类故障时不受影响。已验证以下与站点相关的场景。
@@ -167,6 +173,7 @@ image:sm-bcs-image65.png["错误：缺少图形映像"]
 
 
 
+[[microsoft-sql-server]]
 == Microsoft SQL Server
 
 Microsoft SQL Server 是一种广泛采用和部署的数据库平台，适用于企业 IT 。Microsoft SQL Server 2019 版为其关系和分析引擎提供了许多新功能和增强功能。它支持在内部，云中和混合环境中运行应用程序的工作负载，两者可以结合使用。此外，它还可以部署在多个平台上，包括 Windows ， Linux 和容器。

@@ -15,6 +15,7 @@ summary: FlexPod 参考架构以经过 Cisco 验证的设计或经过 NetApp 验
 
 
 
+[[flexpod-converged-infrastructure-portfolio]]
 == FlexPod 融合基础架构产品组合
 
 FlexPod 参考架构以 Cisco 验证设计（ CVD ）或 NetApp 验证架构（ NVA ）的形式提供。如果变化不会导致部署不受支持的配置，则允许根据客户要求从给定 CVD 或 NVA 进行差异。
@@ -30,6 +31,7 @@ image:express-c-series-aff220-design_image2.png["错误：缺少图形映像"]
 
 
 
+[[netapp-verified-architecture-program]]
 == 经验证的 NetApp 架构计划
 
 NVA 计划为客户提供经过验证的 NetApp 解决方案架构。NVA 表示 NetApp 解决方案具有以下特性：

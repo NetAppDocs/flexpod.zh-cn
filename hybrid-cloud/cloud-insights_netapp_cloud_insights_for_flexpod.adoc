@@ -22,6 +22,7 @@ NetApp 公司 Alan Cowles
 
 
 
+[[customer-value]]
 == 客户价值
 
 此处详细介绍的解决方案为有意在混合云环境中全面监控解决方案的客户提供了价值，其中 ONTAP 作为主存储系统进行部署。其中包括使用 NetApp AFF 和 FAS 存储系统的 FlexPod 环境。

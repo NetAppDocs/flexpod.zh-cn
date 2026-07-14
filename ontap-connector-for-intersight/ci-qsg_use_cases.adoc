@@ -18,6 +18,7 @@ summary: 以下是从 Cisco Intersight 监控和编排 NetApp 存储的几个用
 
 
 
+[[use-case-1-monitoring-netapp-storage-inventory-and-widgets]]
 == 用例 1 ：监控 NetApp 存储清单和小工具
 
 如果 NetApp 存储环境在 Cisco Intersight 中可用，您可以从存储清单中详细监控 NetApp 存储对象，并从存储小工具中获取概览。
@@ -30,6 +31,7 @@ summary: 以下是从 Cisco Intersight 监控和编排 NetApp 存储的几个用
 
 
 
+[[use-case-2-netapp-storage-orchestration-using-reference-workflows]]
 == 用例2：使用参考工作流的NetApp存储流程编排
 
 如果NetApp存储和vCenter环境可在Cisco Intersight中使用、则可以通过使用GitHub中提供的端到端参考工作流 https://github.com/ucs-compute-solutions/FlexPod-Intersight-Workflow["FlexPod Intersight工作流存储库"^]。
@@ -73,6 +75,7 @@ summary: 以下是从 Cisco Intersight 监控和编排 NetApp 存储的几个用
 
 
 
+[[use-case-3-custom-workflows-using-designer-free-form]]
 == 用例 3 ：使用无设计人员表单的自定义工作流
 
 如果 NetApp 存储和 vCenter 环境在 Cisco Intersight 中可用，则可以使用 NetApp 存储和虚拟化任务构建自定义工作流。

@@ -27,6 +27,7 @@ image:cloud-fabricpool_image10.png["错误：缺少图形映像"]
 
 
 
+[[create-an-s3-bucket]]
 == 创建 S3 存储区。
 
 . 在 AWS 管理控制台中的主页页面中，在搜索栏中输入 s3 。

@@ -57,6 +57,7 @@ NVE 可保护云中的数据。Cloud Volumes ONTAP 和 Azure NetApp Files 能够
 
 
 
+[[ontap-nae-cli-commands]]
 == ONTAP NAE 命令行界面命令
 
 在运行以下命令行界面命令之前，请确保集群具有所需的 NVE 许可证。
@@ -78,6 +79,7 @@ fp-health::> storage aggregate modify -aggregate aggregatename -node svmname -en
 ....
 
 
+[[ontap-nve-cli-commands]]
 == ONTAP NVE 命令行界面命令
 
 从 ONTAP 9.6 开始，您可以使用聚合级别的加密为要加密的卷的所属聚合分配密钥。默认情况下，您在聚合中创建的卷会进行加密。
@@ -99,6 +101,7 @@ fp-health::> volume show -is-encrypted true
 ....
 
 
+[[nse]]
 == NSE
 
 NSE 使用 SED 通过硬件加速机制执行数据加密。
@@ -114,6 +117,7 @@ NOTE: NSE 会在每个驱动器上使用硬件加密，此加密已通过 FIPS 1
 
 
 
+[[key-management]]
 == 密钥管理
 
 FIPS 140-2 标准适用场景 边界定义的加密模块，如下图所示。
@@ -124,6 +128,7 @@ image:flexpod-fips-image5.png["错误：缺少图形映像"]
 
 
 
+[[support-for-external-key-manager]]
 == 支持外部密钥管理器
 
 从 ONTAP 9.3 开始， NVE 和 NSE 解决方案均支持外部密钥管理器。FIPS 140-2 标准适用场景 —特定供应商实施中使用的加密模块。大多数情况下， FlexPod 和 ONTAP 客户会使用以下经过验证（根据 http://mysupport.netapp.com/matrix["NetApp 互操作性表"^]）密钥管理器：
@@ -150,12 +155,14 @@ fp-health::> security key-manager external show
 ....
 
 
+[[combine-encryption-for-double-encryption-layered-defense]]
 == 将加密结合使用实现双重加密（分层防护）
 
 如果您需要隔离对数据的访问并确保数据始终受到保护，则 NSE SED 可以与网络或网络结构级加密结合使用。如果管理员忘记配置或错误配置更高级别的加密，则 NSE SED 就像一个后备站。对于两个不同的加密层，您可以将 NSE SED 与 NVE 和 NAE 结合使用。
 
 
 
+[[netapp-ontap-cluster-wide-control-plane-fips-mode]]
 == NetApp ONTAP 集群范围控制面板 FIPS 模式
 
 NetApp ONTAP 数据管理软件具有 FIPS 模式配置，可为客户实例化更高的安全性级别。此 FIPS 模式仅对控制平面进行适用场景 。根据 FIPS 140-2 的关键要素启用 FIPS 模式后，传输层安全 v1 （ Transport Layer Security v1 ， TLSv1 ）和 SSLv3 将被禁用，只有 TLS v1.1 和 TLS v1.2 保持启用状态。

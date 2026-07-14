@@ -20,6 +20,7 @@ link:gcp-ncvo-dr-workflow.html["上一步：灾难恢复工作流。"]
 
 
 
+[[prerequisites]]
 == 前提条件
 
 解决方案 的设置首先从可访问Internet的管理工作站开始、然后再从可正常运行的Terraform安装开始。
@@ -28,6 +29,7 @@ link:gcp-ncvo-dr-workflow.html["上一步：灾难恢复工作流。"]
 
 
 
+[[clone-github-repo]]
 == 克隆GitHub repo
 
 此过程的第一步是将GitHub repoo克隆到管理工作站上的新空文件夹中。要克隆GitHub存储库、请完成以下步骤：

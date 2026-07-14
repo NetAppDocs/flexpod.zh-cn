@@ -13,12 +13,14 @@ summary: 本节中列出的技术是在架构设计阶段选择的。每个技�
 
 
 
+[[netapp-aff-c190-series-with-ontap-9-6]]
 == 采用 ONTAP 9.6 的 NetApp AFF C190 系列
 
 此解决方案利用了两种最新的 NetApp 产品： NetApp AFF C190 系统和 ONTAP 9.6 软件。
 
 
 
+[[aff-c190-system]]
 === AFF C190 系统
 
 目标群体是希望以经济实惠的价格利用全闪存技术打造现代化 IT 基础架构的客户。AFF C190 系统附带了新的 ONTAP 9.6 和闪存捆绑包许可，这意味着具有以下功能：
@@ -59,6 +61,7 @@ AFF C190 系统仅提供 960 GB SSD 。您可以从四个扩展阶段中进行�
 
 
 
+[[ontap-9-6-software]]
 === ONTAP 9.6 软件
 
 NetApp AFF C190 系统使用全新的 ONTAP 9.6 数据管理软件。ONTAP 9.6 是行业领先的企业级数据管理软件。它将更高级别的精简性和灵活性与强大的数据管理功能，存储效率和领先的云集成相结合。
@@ -79,6 +82,7 @@ ONTAP 9.6 中的其他增强功能包括：
 
 
 
+[[cisco-nexus-3000-series]]
 == Cisco Nexus 3000 系列
 
 Cisco Nexus 31108PC-V 是一款基于 10 Gbps SFP+ 的机架顶部（ ToR ）交换机，具有 48 个 SFP+ 端口和 6 个 QSFP28 端口。每个 SFP+ 端口可以以 100 Mbps ， 10 Gbps 的速率运行，每个 QSFP28 端口可以在原生 100 Gbps 或 40 Gbps 模式或 4 个 10 Gbps 模式下运行，从而提供灵活的迁移选项。此交换机是真正的无 PHY 交换机，针对低延迟和低功耗进行了优化。
@@ -97,6 +101,7 @@ image:express-c-series-c190-design_image7.png["错误：缺少图形映像"]
 
 
 
+[[cisco-ucs-c-series]]
 == Cisco UCS C 系列
 
 之所以选择 Cisco UCS C 系列机架式服务器来支持 FlexPod Express ，是因为它具有多种配置选项，可以根据 FlexPod Express 部署中的特定要求进行定制。
@@ -119,6 +124,7 @@ image:express-c-series-c190-design_image8.png["错误：缺少图形映像"]
 
 
 
+[[cisco-ucs-vic-1457-connectivity-for-c220-m5-rack-servers]]
 === 适用于 C220 M5 机架式服务器的 Cisco UCS VIC 1457 连接
 
 下图所示的 Cisco UCS VIC 1457 适配器是一个四端口小型可插拔（ SFP28 ）模块化主板 LAN （ mLOM ）卡，专为 M5 代 Cisco UCS C 系列服务器而设计。此卡支持 10/25Gbps 以太网或 FCoE 。该卡可以向主机提供符合 PCIe 标准的接口，这些接口可以动态配置为 NIC 或 HBA 。
@@ -129,6 +135,7 @@ image:express-c-series-c190-design_image9.png["错误：缺少图形映像"]
 
 
 
+[[vmware-vsphere-6-7u2]]
 == VMware vSphere 6.7U2
 
 VMware vSphere 6.7U2 是适用于 FlexPod Express 的虚拟机管理程序选项之一。通过 VMware vSphere ，企业可以减少电耗和散热占用空间，同时确认已购买的计算容量已充分利用。此外， VMware vSphere 还支持在 vSphere 主机集群（维护模式下为 VMware Distributed Resource Scheduler 或 VMware DRS-MM ）之间实现硬件故障保护（ VMware 高可用性或 VMware HA ）和计算资源负载平衡。
@@ -158,6 +165,7 @@ NOTE: 虽然此解决方案已通过 vSphere 6.7U2 的验证，但它支持通�
 
 
 
+[[boot-architecture]]
 == 启动架构
 
 FlexPod 快速启动架构支持的选项包括：
@@ -171,6 +179,7 @@ FlexPod 数据中心可从 iSCSI LUN 启动；因此，也可通过对 FlexPod E
 
 
 
+[[esxi-host-virtual-network-interface-card-layout]]
 === ESXi 主机虚拟网络接口卡布局
 
 Cisco UCS VIC 1457 具有四个物理端口。此解决方案验证包括使用 ESXi 主机的中的这四个物理端口。如果 NIC 数量较小或较大，则可能具有不同的 vmnic 编号。

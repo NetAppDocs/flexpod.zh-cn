@@ -25,6 +25,7 @@ summary: 您可以通过完成以下步骤来配置 VMware vCenter Server 6.7 �
 
 
 
+[[create-vsphere-cluster]]
 == 创建 vSphere 集群
 
 要创建 vSphere 集群，请完成以下步骤：
@@ -40,6 +41,7 @@ image:express-c-series-aff220-deploy_image49.png["错误：缺少图形映像"]
 
 
 
+[[add-esxi-hosts-to-cluster]]
 == 将 ESXi 主机添加到集群
 
 . 右键单击集群并选择添加主机。
@@ -67,6 +69,7 @@ NOTE: 如果需要，可以稍后完成此步骤。
 
 
 
+[[configure-coredump-on-esxi-hosts]]
 == 在 ESXi 主机上配置核心转储
 
 . 使用 SSH 连接到管理 IP ESXi 主机，输入 root 作为用户名，然后输入 root 密码。

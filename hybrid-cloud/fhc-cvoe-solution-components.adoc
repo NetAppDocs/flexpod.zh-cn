@@ -17,6 +17,7 @@ link:fhc-cvoe-solution-overview.html["先前版本：解决方案 概述。"]
 
 
 
+[[flexpod]]
 == FlexPod
 
 FlexPod 是一组定义的硬件和软件、可为虚拟化和非虚拟化解决方案奠定集成基础。FlexPod 包括NetApp ONTAP 存储、Cisco Nexus网络、Cisco MDS存储网络和Cisco统一计算系统(Cisco UCS)。
@@ -32,6 +33,7 @@ FlexPod 是满足医疗保健工作负载需求的理想平台、因为它具有
 
 
 
+[[ehr]]
 == EHR
 
 电子健康记录(Electronic Health Records、EHRs)为大中型医疗团队、医院和综合医疗保健组织提供软件。客户还包括社区医院、学术机构、儿童组织、安全网络提供商和多医院系统。EHR集成软件涵盖临床、访问和收入功能、并扩展到家庭。
@@ -51,12 +53,14 @@ FlexPod已获得 EHR 认证，并支持包含Cisco UCS、Intel Xeon 处理器、
 
 
 
+[[netapp-console]]
 == NetApp Console
 
 NetApp Console是一个企业级的、基于 SaaS 的管理平台，它使 IT 专家和云架构师能够使用NetApp云解决方案集中管理其混合多云基础架构。它提供了一个集中式系统，用于查看和管理您的本地和云存储，支持混合云、多云提供商和帐户。有关详细信息，请参阅 link:https://docs.netapp.com/us-en/console-family/index.html["NetApp Console文档"^]。
 
 
 
+[[console-agent]]
 == 控制台代理
 
 控制台代理实例使控制台能够管理公有云环境中的资源和进程。控制台提供的许多功能都需要控制台代理，它可以部署在云端或本地网络中。
@@ -73,6 +77,7 @@ link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["
 
 
 
+[[netapp-cloud-volumes-ontap]]
 == NetApp Cloud Volumes ONTAP
 
 NetApp Cloud Volumes ONTAP 是一款软件定义的存储产品、可在云中运行ONTAP 数据管理软件、为文件和块工作负载提供高级数据管理。借助Cloud Volumes ONTAP 、您可以优化云存储成本并提高应用程序性能、同时增强数据保护、安全性和合规性。
@@ -92,6 +97,7 @@ NetApp Cloud Volumes ONTAP 是一款软件定义的存储产品、可在云中�
 
 
 
+[[netapp-active-iq-unified-manager]]
 == NetApp Active IQ Unified Manager
 
 借助NetApp Active IQ Unified Manager 、您可以通过一个经过重新设计的直观界面监控ONTAP 存储集群、从而利用社区智慧和AI分析提供智能。它可以全面洞察存储环境及其运行的虚拟机的运行状况、性能和主动性。当存储基础架构发生问题描述 时、Unified Manager可以通知您问题描述 的详细信息、以帮助识别根发生原因。通过虚拟机信息板、您可以查看虚拟机的性能统计信息、以便调查从vSphere主机向下经过网络并最终到达存储的整个I/O路径。
@@ -102,6 +108,7 @@ NetApp Cloud Volumes ONTAP 是一款软件定义的存储产品、可在云中�
 
 
 
+[[cisco-intersight]]
 == Cisco Intersight
 
 Cisco Intersight是一个SaaS平台、可为传统和云原生应用程序和基础架构提供智能自动化、可观察性和优化功能。该平台有助于推动IT团队的变革、并提供专为混合云设计的运营模式。Cisco Intersight具有以下优势：
@@ -117,6 +124,7 @@ image:fhc-cvoe-image3.png["此屏幕截图显示了Cisco Intersight信息板的S
 
 
 
+[[vmware-vsphere-7-0]]
 == VMware vSphere 7.0
 
 VMware vSphere是一个虚拟化平台、可将大量基础架构(包括CPU、存储和网络)作为一个无缝、多功能且动态的操作环境进行全面管理。与管理单个计算机的传统操作系统不同、VMware vSphere可将整个数据中心的基础架构聚合在一起、从而创建一个具有资源的动力中心、这些资源可以快速动态地分配给任何需要的应用程序。
@@ -125,6 +133,7 @@ VMware vSphere是一个虚拟化平台、可将大量基础架构(包括CPU、�
 
 
 
+[[vmware-vcenter-server]]
 == VMware vCenter Server
 
 VMware vCenter Server可通过一个控制台统一管理所有主机和VM、并对集群、主机和VM进行聚合性能监控。通过VMware vCenter Server、管理员可以深入了解计算集群、主机、虚拟机、存储、子操作系统、 虚拟基础架构的其他关键组件。VMware vCenter可管理VMware vSphere环境中提供的丰富功能。
@@ -133,6 +142,7 @@ VMware vCenter Server可通过一个控制台统一管理所有主机和VM、并
 
 
 
+[[hardware-and-software-revisions]]
 == 硬件和软件版本
 
 此混合云解决方案可以扩展到运行 link:http://mysupport.netapp.com/matrix["NetApp 互操作性表工具"^]、link:https://ucshcltool.cloudapps.cisco.com/public/["UCS硬件和软件兼容性"^] 和 link:https://www.vmware.com/resources/compatibility/search.php["VMware 兼容性指南"^] 中定义的受支持版本的软件、固件和硬件的任何 FlexPod 环境。

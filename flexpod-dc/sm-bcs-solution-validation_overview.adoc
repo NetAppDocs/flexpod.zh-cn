@@ -22,6 +22,7 @@ FlexPod SM-BC 解决方案 的设计和实施详细信息取决于具体的 Flex
 
 
 
+[[validation-topology]]
 == 验证拓扑
 
 为了验证 FlexPod SM-BC 解决方案 ，我们会使用 NetApp ， Cisco 和 VMware 提供的受支持技术组件。解决方案 具有运行 ONTAP 9.10.1 的 NetApp AFF A250 HA 对，站点 A 的双 Cisco Nexus 9336C-f2 交换机和站点 B 的双 Cisco Nexus 3232C 交换机以及两个站点的 Cisco UCS 6454 FI ， 和三个 Cisco UCS B200 M5 服务器，这些服务器位于运行 VMware vSphere 7.0u2 并由 UCS Manager 和 VMware vCenter 服务器管理的每个站点上。下图显示了组件级解决方案 验证拓扑，其中两个 FlexPod 系统在站点 A 上运行，站点 B 通过扩展的第 2 层站点间链路连接， ONTAP 调解器在站点 C 上运行
@@ -30,6 +31,7 @@ image:sm-bcs-image16.png["错误：缺少图形映像"]
 
 
 
+[[hardware-and-software]]
 == 硬件和软件：
 
 下表列出了用于解决方案 验证的硬件和软件。请务必注意， Cisco ， NetApp 和 VMware 都具有互操作性表，用于确定是否支持任何特定的 FlexPod 实施：

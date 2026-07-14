@@ -30,6 +30,7 @@ image:sm-bcs-image39.png["错误：缺少图形映像"]
 
 
 
+[[end-to-end-network-connectivity]]
 == 端到端网络连接
 
 FlexPod SM-BC 解决方案 包括每个站点的 FlexPod 基础架构，站点之间的网络连接以及在第三个站点部署的 ONTAP 调解器，以满足所需的 RPO 和 RTO 目标。下图显示了每个站点的 Cisco UCS B200M5 服务器与站点内和站点间具有 SM-BC 功能的 NetApp 存储之间的端到端网络连接。
@@ -42,6 +43,7 @@ image:sm-bcs-image40.png["错误：缺少图形映像"]
 
 
 
+[[virtual-networking]]
 == 虚拟网络
 
 无论主机位于何处，集群中的每个主机都使用相同的虚拟网络进行部署。此设计使用 VMware 虚拟交换机（ vSwitch ）和 VMware 虚拟分布式交换机（ VDS ）来分隔不同的流量类型。VMware vSwitch 主要用于 FlexPod 基础架构网络，而 VDS 用于应用程序网络，但不是必需的。
@@ -58,6 +60,7 @@ vSwitch0 是在 VMware ESXi 主机配置期间定义的，它包含用于管理�
 
 
 
+[[vm-host-affinity-groups-and-rules]]
 == VM 主机关联性组和规则
 
 要使虚拟机能够在两个 SM-BC 站点的任何 ESXi 主机上运行，所有 ESXi 主机都必须从两个站点挂载 iSCSI 数据存储库。如果所有 ESXi 主机均已正确挂载两个站点中的数据存储库，则可以在使用 vMotion 的任何主机之间迁移虚拟机，并且虚拟机仍可访问从这些数据存储库创建的所有虚拟磁盘。
@@ -78,6 +81,7 @@ image:sm-bcs-image44.png["错误：缺少图形映像"]
 
 
 
+[[vsphere-ha-heartbeat]]
 == vSphere HA 检测信号
 
 VMware vSphere HA 具有用于主机状态验证的检测信号机制。主要检测信号机制是通过网络连接实现的，而二级检测信号机制是通过数据存储库实现的。如果未收到检测信号，则它会通过对默认网关或手动配置的隔离地址执行 Ping 操作来确定它是否与网络隔离。对于数据存储库检测信号， VMware 建议将延伸型集群的检测信号数据存储库从最少 2 个增加到 4 个。

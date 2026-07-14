@@ -17,6 +17,7 @@ link:gcp-ncvo-cisco-intersight-configuration.html["先前版本：Cisco Intersig
 
 
 
+[[procedure-1-connect-cisco-intersight-and-terraform-cloud]]
 == 操作步骤 1：连接Cisco Intersight和Terraform Cloud
 
 . 通过提供相关的Terraform Cloud帐户详细信息来声明或创建Terraform云目标。
@@ -28,6 +29,7 @@ link:gcp-ncvo-cisco-intersight-configuration.html["先前版本：Cisco Intersig
 
 
 
+[[procedure-2-generate-user-token]]
 == 操作步骤 2：生成用户令牌
 
 在为Terraform Cloud添加目标时、您必须从Terraform Cloud设置页面提供用户名和API令牌。
@@ -39,6 +41,7 @@ link:gcp-ncvo-cisco-intersight-configuration.html["先前版本：Cisco Intersig
 
 
 
+[[procedure-3-claim-terraform-cloud-target]]
 == 操作步骤 3：声明Terraform云目标
 
 . 使用帐户管理员、设备管理员或设备技术人员权限登录到Intersight。
@@ -64,6 +67,7 @@ image:gcp-ncvo-image4.png["默认受管主机字段的屏幕截图。"]
 
 
 
+[[procedure-4-add-terraform-cloud-agents]]
 == 操作步骤 4：添加Terraform云代理
 
 前提条件

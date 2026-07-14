@@ -25,12 +25,14 @@ summary: 通过设置并配置 Cloud Insights 来监控您的 FlexPod Datacenter
 
 
 
+[[active-iq-integration]]
 == Active IQ 集成
 
 Cloud Insights 已完全集成到 Active IQ 存储监控平台中。作为 FlexPod Datacenter 解决方案的一部分部署的 ONTAP 系统会自动配置为通过每个系统内置的 AutoSupport 功能将信息发送回 NetApp 。这些报告会按计划生成，或者在系统中检测到故障时动态生成。通过 AutoSupport 传输的数据会进行聚合，并显示在 Cloud Insights 的 Active IQ 菜单下易于访问的信息板中。
 
 
 
+[[access-active-iq-information-through-the-cloud-insights-dashboard]]
 === 通过 Cloud Insights 信息板访问 Active IQ 信息
 
 要通过 Cloud Insights 信息板访问 Active IQ 信息，请完成以下步骤：
@@ -77,6 +79,7 @@ image:cloud-insights_image27.png["错误：缺少图形映像"]
 
 
 
+[[explore-real-time-dashboards]]
 === 浏览实时信息板
 
 Cloud Insights 可以显示从 FlexPod Datacenter 解决方案中部署的 ONTAP 存储系统轮询的信息的实时信息板。Cloud Insights 采集单元定期收集数据，并使用收集的信息填充默认存储系统信息板。
@@ -99,6 +102,7 @@ image:cloud-insights_image30.png["错误：缺少图形映像"]
 
 
 
+[[create-custom-dashboards]]
 === 创建自定义信息板
 
 除了使用显示系统范围信息的默认信息板之外，您还可以使用 Cloud Insights 创建完全自定义的信息板，以便集中精力关注 FlexPod Datacenter 解决方案中特定存储卷的资源使用情况。 因此，在融合基础架构中部署的应用程序需要依靠这些卷才能有效运行。这样做可以帮助您更好地了解特定应用程序及其在数据中心环境中使用的资源。
@@ -150,12 +154,14 @@ image:cloud-insights_image35.png["错误：缺少图形映像"]
 
 
 
+[[advanced-troubleshooting]]
 === 高级故障排除
 
 Cloud Insights 支持将高级故障排除方法应用于 FlexPod 数据中心融合基础架构中的任何存储环境。使用上述每个功能的组件： Active IQ 集成，具有实时统计信息的默认信息板以及自定义信息板，可以尽早检测到可能出现的问题并快速解决。使用 Active IQ 中的风险列表，客户可以找到报告的可能导致问题描述的配置错误，或者发现已报告的错误以及可对其进行补救的代码修补版本。通过观察 Cloud Insights 主页上的实时信息板，可以帮助您发现系统性能模式，这种模式可能是问题呈上升趋势的早期指标，并有助于迅速解决问题。最后，客户可以创建自定义信息板，从而可以专注于其基础架构中最重要的资产，并直接监控这些资产，以确保满足其业务连续性目标。
 
 
 
+[[storage-optimization]]
 === 存储优化
 
 除了故障排除之外，还可以使用 Cloud Insights 收集的数据来优化部署在 FlexPod 数据中心融合基础架构解决方案中的 ONTAP 存储系统。如果某个卷的延迟较高，可能是因为多个具有高性能需求的 VM 共享同一个数据存储库，则此信息将显示在 Cloud Insights 信息板上。利用这些信息，存储管理员可以选择将一个或多个 VM 迁移到其他卷，在聚合层之间或 ONTAP 存储系统中的节点之间迁移存储卷，从而实现性能优化的环境。从 Active IQ 与 Cloud Insights 集成中收集的信息可以突出显示导致性能低于预期的配置问题，并提供建议的更正操作，如果实施，可以修复任何问题，并确保存储系统经过优化。

@@ -17,6 +17,7 @@ link:fhc-cvoe-solution-components.html["先前版本：解决方案 组件。"]
 
 
 
+[[netapp-cloud-volumes-ontap-deployment]]
 == NetApp Cloud Volumes ONTAP 部署
 
 完成以下步骤以配置Cloud Volumes ONTAP 实例：
@@ -51,6 +52,7 @@ link:fhc-cvoe-solution-components.html["先前版本：解决方案 组件。"]
 
 
 
+[[on-premises-flexpod-deployment]]
 == 内部FlexPod 部署
 
 要了解采用UCS X系列的FlexPod 、VMware和NetApp ONTAP 的设计详细信息、请参见 https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_xseries_esxi7u2_design.html["采用Cisco UCS X系列的FlexPod 数据中心"^] 设计指南。本文档提供了在FlexPod 数据中心基础架构中整合Cisco Intersight-managed UCS X系列平台的设计指导。
@@ -69,6 +71,7 @@ FlexPod 既可以部署在UCS托管模式下、也可以部署在Cisco Intersigh
 
 
 
+[[on-premises-ontap-storage-configuration]]
 == 内部ONTAP 存储配置
 
 本节介绍特定于此解决方案 的一些重要ONTAP 配置步骤。
@@ -136,6 +139,7 @@ igroup用于允许服务器访问LUN。对于Linux主机、可以在文件中找
 
 
 
+[[add-on-premises-flexpod-storage-to-the-netapp-console]]
 == 将本地FlexPod存储添加到NetApp Console
 
 使用控制台完成以下步骤，将FlexPod存储添加到系统中。

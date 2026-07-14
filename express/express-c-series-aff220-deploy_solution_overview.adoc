@@ -18,6 +18,7 @@ summary: 此 FlexPod Express 解决方案是 FlexPod 融合基础架构计划的
 
 
 
+[[flexpod-converged-infrastructure-program]]
 == FlexPod 融合基础架构计划
 
 FlexPod 参考架构以 Cisco 验证设计（ CVD ）或 NetApp 验证架构（ NVA ）的形式提供。如果给定 CVD 或 NVA 不会产生不受支持的配置，则允许根据客户要求进行差异。
@@ -33,6 +34,7 @@ image:express-c-series-aff220-deploy_image3.png["错误：缺少图形映像"]
 
 
 
+[[netapp-verified-architecture-program]]
 == 经验证的 NetApp 架构计划
 
 经验证的 NetApp 架构计划为客户提供经过验证的 NetApp 解决方案架构。经验证的 NetApp 架构可提供具有以下品质的 NetApp 解决方案架构：
@@ -47,6 +49,7 @@ image:express-c-series-aff220-deploy_image3.png["错误：缺少图形映像"]
 
 
 
+[[solution-technology]]
 == 解决方案技术
 
 此解决方案利用了 NetApp ， Cisco 和 VMware 的最新技术。此解决方案采用运行 ONTAP 9.4 的全新 NetApp AFF A220 ，双 Cisco Nexus 3172P 交换机以及运行 VMware vSphere 6.7 的 Cisco UCS C220 M5 机架式服务器。此经过验证的解决方案采用 10GbE 技术。此外，还提供了有关如何通过一次添加两个虚拟机管理程序节点来扩展计算容量的指导，以使 FlexPod 快速架构能够适应组织不断变化的业务需求。
@@ -60,6 +63,7 @@ NOTE: 此验证使用 10GbE 连接和一个 40GbE Cisco UCS VIC 1387 。要实�
 
 
 
+[[use-case-summary]]
 == 使用情形摘要
 
 FlexPod Express 解决方案可应用于多种使用情形，包括以下情形：

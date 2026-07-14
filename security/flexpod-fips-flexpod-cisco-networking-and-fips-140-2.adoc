@@ -17,6 +17,7 @@ link:flexpod-fips-flexpod-cisco-ucs-compute-and-fips-140-2.html["先前版本：
 
 
 
+[[cisco-mds]]
 == Cisco MDS
 
 使用软件 8.4.x 的 Cisco MDS 9000 系列平台为 https://www.cisco.com/c/en/us/solutions/industries/government/global-government-certifications/fips-140.html?flt0_general-table0=mds["符合 FIPS 140-2"^]。Cisco MDS 可为 SNMPv3 和 SSH 实施加密模块和以下服务。
@@ -114,6 +115,7 @@ Switch(config)# show fips status
 
 
 
+[[cisco-nexus]]
 == Cisco Nexus
 
 Cisco Nexus 9000 系列交换机（ 9.3 版） https://www.cisco.com/c/en/us/solutions/industries/government/global-government-certifications/fips-140.html?flt0_general-table0=nexus["符合 FIPS 140-2"^]。Cisco Nexus 为 SNMPv3 和 SSH 实施加密模块和以下服务。

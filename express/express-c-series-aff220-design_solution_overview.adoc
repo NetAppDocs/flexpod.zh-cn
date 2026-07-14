@@ -17,12 +17,14 @@ image:express-c-series-aff220-design_image3.png["错误：缺少图形映像"]
 
 
 
+[[target-audience]]
 == 目标受众
 
 本文档面向希望利用专为提高 IT 效率和实现 IT 创新而构建的基础架构的用户。本文档的受众包括但不限于销售工程师，现场顾问，专业服务人员， IT 经理， 合作伙伴工程师和客户。
 
 
 
+[[solution-technology]]
 == 解决方案技术
 
 此解决方案利用了 NetApp ， Cisco 和 VMware 的最新技术。此解决方案采用全新的 NetApp AFF A220 系统，该系统运行 ONTAP 9.4 软件，双 Cisco Nexus 3172P 交换机以及运行 VMware vSphere 6.7 的 Cisco UCS C220 M5 机架式服务器。此经过验证的解决方案采用万兆以太网（ 10GbE ）技术。下图概述了相关信息。此外，还提供了有关如何通过一次添加两个虚拟机管理程序节点进行扩展的指导，以便 FlexPod 快速架构能够适应组织不断变化的业务需求。

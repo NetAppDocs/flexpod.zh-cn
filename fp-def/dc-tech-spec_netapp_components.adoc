@@ -18,6 +18,7 @@ NetApp 存储控制器在 FlexPod 架构中为启动和应用程序数据存储�
 
 
 
+[[netapp-storage-controller-options]]
 == NetApp 存储控制器选项
 
 在 FlexPod 架构中需要使用冗余 NetApp FAS ， AFF 或 AFF ASA 控制器。这些控制器运行 ONTAP 软件。订购存储控制器后，可以在这些控制器上预加载首选软件版本。对于 ONTAP ，系统会订购一个完整的集群。整个集群包括一对存储控制器和一个集群互连（交换机或无交换机）。
@@ -40,6 +41,7 @@ NetApp 存储控制器在 FlexPod 架构中为启动和应用程序数据存储�
 |===
 
 
+[[cluster-interconnect-switch-options]]
 == 集群互连交换机选项
 
 下表列出了可用于 FlexPod 架构的 Nexus 集群互连交换机。此外， FlexPod 还支持所有 ONTAP 支持的集群交换机，包括非 Cisco 交换机，但前提是它们与要部署的 ONTAP 版本兼容。请参见 https://hwu.netapp.com/["NetApp Hardware Universe"^] 有关特定交换机型号的其他兼容性详细信息。
@@ -57,6 +59,7 @@ NetApp 存储控制器在 FlexPod 架构中为启动和应用程序数据存储�
 |===
 
 
+[[netapp-disk-shelf-and-drive-options]]
 == NetApp 磁盘架和驱动器选项
 
 所有存储控制器至少需要一个 NetApp 磁盘架。
@@ -85,6 +88,7 @@ NOTE: 有关所有磁盘架和磁盘部件号，请咨询您的销售代表。
 |===
 
 
+[[netapp-software-licensing-options]]
 == NetApp 软件许可选项
 
 下表列出了适用于 FlexPod 数据中心架构的 NetApp 软件许可选项。NetApp 软件在 FAS 和 AFF 控制器级别获得许可。
@@ -100,6 +104,7 @@ NOTE: 有关所有磁盘架和磁盘部件号，请咨询您的销售代表。
 |===
 
 
+[[netapp-support-licensing-options]]
 == NetApp 支持许可选项
 
 FlexPod 架构需要 NetApp SupportEdge Premium 许可证，但这些许可证的部件号因您在 FlexPod 设计中选择的选项而异。例如，根据您选择的 FAS 控制器，软件许可证部件号会有所不同。有关各个支持许可证的确切部件号的信息，请咨询您的销售代表。下表显示了 SupportEdge 许可证的示例。

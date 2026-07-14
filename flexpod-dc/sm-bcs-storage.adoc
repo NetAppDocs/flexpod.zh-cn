@@ -20,6 +20,7 @@ FlexPod SM-BC 解决方案 的存储配置遵循每个站点的典型 FlexPod �
 
 
 
+[[connectivity]]
 == 连接
 
 本地站点的 Nexus 交换机可提供与本地 UCS CLI 和刀片式服务器的存储连接。通过站点之间的 Nexus 交换机连接，远程 UCS 刀片式服务器也可以访问存储。下图和表显示了每个站点的存储控制器的存储连接图和连接列表。
@@ -67,6 +68,7 @@ image:sm-bcs-image22.png["错误：缺少图形映像"]
 |===
 
 
+[[connections-and-interfaces]]
 == 连接和接口
 
 每个存储控制器上的两个物理端口连接到每个 Nexus 交换机，用于进行带宽聚合和冗余以进行此验证。这四个连接参与存储上的接口组配置。Nexus 交换机上的相应端口参与 vPC ，以实现链路聚合和故障恢复能力。
@@ -77,6 +79,7 @@ image:sm-bcs-image23.png["错误：缺少图形映像"]
 
 
 
+[[san-boot]]
 == SAN 启动
 
 NetApp 建议在 FlexPod 解决方案 中为 Cisco UCS 服务器实施 SAN 启动。通过实施 SAN 启动，您可以在 NetApp 存储系统中安全地保护操作系统，从而提高性能和灵活性。对于此解决方案 ，已验证 iSCSI SAN 启动。
@@ -89,6 +92,7 @@ image:sm-bcs-image24.png["错误：缺少图形映像"]
 
 
 
+[[cluster-peering]]
 == 集群对等
 
 ONTAP 集群对等方通过集群间 LIF 进行通信。使用 ONTAP 系统管理器可在 " 保护 ">" 概述 " 窗格下创建所需的集群间 LIF 。
@@ -113,6 +117,7 @@ image:sm-bcs-image28.png["错误：缺少图形映像"]
 
 
 
+[[ontap-mediator-installation-and-configuration]]
 == ONTAP 调解器安装和配置
 
 ONTAP 调解器为 SM-BC 关系中的 ONTAP 集群建立仲裁。它可以在检测到故障时协调自动故障转移，并有助于避免在每个集群同时尝试建立主集群控制时出现脑裂情况。
@@ -129,6 +134,7 @@ image:sm-bcs-image30.png["错误：缺少图形映像"]
 
 
 
+[[sm-bc-consistency-group]]
 == SM-BC 一致性组
 
 一致性组为跨越一组指定卷的应用程序工作负载提供写入顺序一致性保证。对于 ONTAP 9.10.1 ，以下是一些重要限制。
@@ -177,6 +183,7 @@ image:sm-bcs-image34.png["错误：缺少图形映像"]
 
 
 
+[[volumes-luns-and-host-mappings]]
 == 卷， LUN 和主机映射
 
 创建一致性组后， SnapMirror 会同步源卷和目标卷，以便数据始终保持同步。远程站点上的目标卷包含卷名称，并且 _dest 结尾为。例如，对于站点 A 集群中的 ESXi_A 卷，站点 B 中有相应的 ESXi_A_Dest 数据保护（ DP ）卷

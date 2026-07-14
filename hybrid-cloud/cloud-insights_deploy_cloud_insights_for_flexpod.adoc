@@ -25,6 +25,7 @@ summary: 要部署 Cloud Insights for FlexPod ，必须完成以下任务。
 
 
 
+[[sign-up-for-the-netapp-cloud-insights-service]]
 == 注册 NetApp Cloud Insights 服务
 
 要注册 NetApp Cloud Insights 服务，请完成以下步骤：
@@ -35,6 +36,7 @@ summary: 要部署 Cloud Insights for FlexPod ，必须完成以下任务。
 
 
 
+[[create-a-vmware-virtual-machine-to-configure-as-an-acquisition-unit]]
 == 创建要配置为采集单元的 VMware 虚拟机
 
 要创建 VMware VM 以配置为采集单元，请完成以下步骤：
@@ -70,6 +72,7 @@ image:cloud-insights_image5.png["错误：缺少图形映像"]
 
 
 
+[[install-red-hat-enterprise-linux]]
 == 安装 Red Hat Enterprise Linux
 
 要安装 Red Hat Enterprise Linux ，请完成以下步骤：
@@ -126,6 +129,7 @@ image:cloud-insights_image12.png["错误：缺少图形映像"]
 
 
 
+[[create-an-acquisition-unit-instance-in-the-cloud-insights-portal-and-install-the-software]]
 == 在 Cloud Insights 门户中创建采集单元实例并安装软件
 
 要在 Cloud Insights 门户中创建采集单元实例并安装软件，请完成以下步骤：
@@ -163,6 +167,7 @@ image:cloud-insights_image18.png["错误：缺少图形映像"]
 
 
 
+[[add-the-monitored-storage-system-from-the-flexpod-datacenter-to-cloud-insights]]
 == 将受监控的存储系统从 FlexPod 数据中心添加到 Cloud Insights
 
 要从 FlexPod 部署添加 ONTAP 存储系统，请完成以下步骤：

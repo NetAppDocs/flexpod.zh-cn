@@ -18,6 +18,7 @@ summary: 本节描述 FlexPod Express 设计的电源要求和磁盘架布线指
 
 
 
+[[power-requirements]]
 == 电源要求
 
 FlexPod Express 的电源要求因安装 FlexPod Express 配置的位置而异。
@@ -30,6 +31,7 @@ FlexPod Express 的电源要求因安装 FlexPod Express 配置的位置而异�
 
 
 
+[[cabling-guidelines]]
 == 布线指南
 
 此部分提供了 FlexPod Express 设计的一般布线指南。

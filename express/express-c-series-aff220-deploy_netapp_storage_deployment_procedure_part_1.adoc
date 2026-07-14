@@ -18,10 +18,12 @@ summary: 您可以按照以下步骤完成 NetApp AFF 存储部署操作步骤�
 
 
 
+[[netapp-storage-controller-aff2xx-series-installation]]
 == NetApp 存储控制器 AFF2 xx 系列安装
 
 
 
+[[netapp-hardware-universe]]
 === NetApp Hardware Universe
 
 NetApp Hardware Universe （ HWU ）应用程序可为任何特定 ONTAP 版本提供受支持的硬件和软件组件。它提供了 ONTAP 软件当前支持的所有 NetApp 存储设备的配置信息。此外，还提供了一个组件兼容性表。
@@ -40,16 +42,19 @@ NetApp Hardware Universe （ HWU ）应用程序可为任何特定 ONTAP 版本�
 |===
 
 
+[[storage-controllers]]
 === 存储控制器
 
 按照中控制器的物理安装过程进行操作 https://mysupport.netapp.com/documentation/docweb/index.html?productID=62557&language=en-US["AFF A220 文档"^]。
 
 
 
+[[netapp-ontap-9-4]]
 == NetApp ONTAP 9.4
 
 
 
+[[configuration-worksheet]]
 === 配置工作表
 
 在运行设置脚本之前，请填写产品手册中的配置工作表。中提供了配置工作表 https://library.netapp.com/ecm/ecm_download_file/ECMLP2492611["《 ONTAP 9.4 软件设置指南》"^]。
@@ -112,6 +117,7 @@ NOTE: 此系统在双节点无交换机集群配置中设置。
 |===
 
 
+[[configure-node-a]]
 === 配置节点 A
 
 要配置节点 A ，请完成以下步骤：
@@ -166,6 +172,7 @@ NOTE: 此 Web 服务器必须可执行 Ping 操作。
 
 
 
+[[configure-node-b]]
 === 配置节点 B
 
 要配置节点 B ，请完成以下步骤：
@@ -219,6 +226,7 @@ NOTE: 此 Web 服务器必须可执行 Ping 操作。
 
 
 
+[[continuation-of-node-a-configuration-and-cluster-configuration]]
 == 继续执行节点 A 配置和集群配置
 
 从连接到存储控制器 A （节点 A ）控制台端口的控制台端口程序中，运行节点设置脚本。首次在节点上启动 ONTAP 9.4 时，将显示此脚本。
@@ -299,12 +307,14 @@ image:express-c-series-aff220-deploy_image7.png["错误：缺少图形映像"]
 
 
 
+[[continuation-of-storage-cluster-configuration]]
 == 继续存储集群配置
 
 配置存储节点和基础集群后，您可以继续配置存储集群。
 
 
 
+[[zero-all-spare-disks]]
 === 将所有备用磁盘置零
 
 要将集群中的所有备用磁盘置零，请运行以下命令：
@@ -314,6 +324,7 @@ disk zerospares
 ....
 
 
+[[set-on-board-uta2-ports-personality]]
 === 设置板载 UTA2 端口个性化设置
 
 . 运行 `ucadmin show` 命令，验证端口的当前模式和当前类型。
@@ -353,6 +364,7 @@ NOTE: 如果更改了端口属性，则必须重新启动每个节点，此更�
 
 
 
+[[rename-management-logical-interfaces-lifs]]
 === 重命名管理逻辑接口（ LIF ）
 
 要重命名管理 LIF ，请完成以下步骤：
@@ -376,6 +388,7 @@ network interface rename -vserver <<clustername>> -lif cluster_setup_node_mgmt_l
 
 
 
+[[set-auto-revert-on-cluster-management]]
 === 在集群管理上设置自动还原
 
 在集群管理界面上设置 `auto-revert` 参数。
@@ -385,6 +398,7 @@ network interface modify –vserver <<clustername>> -lif cluster_mgmt –auto-re
 ....
 
 
+[[set-up-service-processor-network-interface]]
 === 设置服务处理器网络接口
 
 要为每个节点上的服务处理器分配静态 IPv4 地址，请运行以下命令：
@@ -398,6 +412,7 @@ NOTE: 服务处理器 IP 地址应与节点管理 IP 地址位于同一子网中
 
 
 
+[[enable-storage-failover-in-ontap]]
 === 在 ONTAP 中启用存储故障转移
 
 要确认已启用存储故障转移，请在故障转移对中运行以下命令：
@@ -458,6 +473,7 @@ storage failover modify –hwassist-partner-ip <<var_nodeA_mgmt_ip>> -node <<var
 
 
 
+[[create-jumbo-frame-mtu-broadcast-domain-in-ontap]]
 === 在 ONTAP 中创建巨型帧 MTU 广播域
 
 要创建 MTU 为 9000 的数据广播域，请运行以下命令：
@@ -469,6 +485,7 @@ broadcast-domain create -broadcast-domain Infra_iSCSI-B -mtu 9000
 ....
 
 
+[[remove-data-ports-from-default-broadcast-domain]]
 === 从默认广播域中删除数据端口
 
 10GbE 数据端口用于 iSCSI/NFS 流量，这些端口应从默认域中删除。不使用端口 e0e 和 e0f ，也应从默认域中删除。
@@ -480,6 +497,7 @@ broadcast-domain remove-ports -broadcast-domain Default -ports <<var_nodeA>>:e0c
 ....
 
 
+[[disable-flow-control-on-uta2-ports]]
 === 禁用 UTA2 端口上的流量控制
 
 NetApp 最佳实践是，在连接到外部设备的所有 UTA2 端口上禁用流量控制。要禁用流量控制，请运行以下命令：
@@ -512,6 +530,7 @@ Do you want to continue? {y|n}: y
 ....
 
 
+[[configure-ifgrp-lacp-in-ontap]]
 === 在 ONTAP 中配置 IFGRP LACP
 
 此类型的接口组需要两个或更多以太网接口以及一个支持 LACP 的交换机。确保交换机配置正确。
@@ -528,6 +547,7 @@ network port ifgrp add-port -node <<var_nodeB>> -ifgrp a0a -port e0d
 ....
 
 
+[[configure-jumbo-frames-in-netapp-ontap]]
 === 在 NetApp ONTAP 中配置巨型帧
 
 要将 ONTAP 网络端口配置为使用巨型帧（ MTU 通常为 9 ， 000 字节），请从集群 Shell 运行以下命令：
@@ -544,6 +564,7 @@ Do you want to continue? {y|n}: y
 ....
 
 
+[[create-vlans-in-ontap]]
 === 在 ONTAP 中创建 VLAN
 
 要在 ONTAP 中创建 VLAN ，请完成以下步骤：
@@ -575,6 +596,7 @@ network port vlan create –node <<var_nodeB>> -vlan-name a0a-<<mgmt_vlan_id>>
 
 
 
+[[create-aggregates-in-ontap]]
 === 在 ONTAP 中创建聚合
 
 在 ONTAP 设置过程中，将创建一个包含根卷的聚合。要创建其他聚合，请确定聚合名称，要创建聚合的节点及其包含的磁盘数。
@@ -593,6 +615,7 @@ aggr create -aggregate aggr1_nodeB -node <<var_nodeB>> -diskcount <<var_num_disk
 
 
 
+[[configure-time-zone-in-ontap]]
 === 在 ONTAP 中配置时区
 
 要配置时间同步并设置集群上的时区，请运行以下命令：
@@ -605,6 +628,7 @@ NOTE: 例如，在美国东部，时区为 `America/New York` 。开始键入时
 
 
 
+[[configure-snmp-in-ontap]]
 === 在 ONTAP 中配置 SNMP
 
 要配置 SNMP ，请完成以下步骤：
@@ -626,6 +650,7 @@ snmp traphost add <<var_snmp_server_fqdn>>
 
 
 
+[[configure-snmpv1-in-ontap]]
 === 在 ONTAP 中配置 SNMPv1
 
 要配置 SNMPv1 ，请设置名为社区的共享机密纯文本密码。
@@ -638,6 +663,7 @@ NOTE: 请谨慎使用 `snmp community delete all` 命令。如果社区字符串
 
 
 
+[[configure-snmpv3-in-ontap]]
 === 在 ONTAP 中配置 SNMPv3
 
 SNMPv3 要求您定义并配置用户进行身份验证。要配置 SNMPv3 ，请完成以下步骤：
@@ -656,6 +682,7 @@ security login create -username snmpv3user -authmethod usm -application snmp
 
 
 
+[[configure-autosupport-https-in-ontap]]
 === 在 ONTAP 中配置 AutoSupport HTTPS
 
 NetApp AutoSupport 工具通过 HTTPS 向 NetApp 发送支持摘要信息。要配置 AutoSupport ，请运行以下命令：
@@ -665,6 +692,7 @@ system node autosupport modify -node * -state enable –mail-hosts <<var_mailhos
 ....
 
 
+[[create-a-storage-virtual-machine]]
 === 创建 Storage Virtual Machine
 
 要创建基础架构 Storage Virtual Machine （ SVM ），请完成以下步骤：
@@ -703,6 +731,7 @@ NOTE: 命令行中的命令前面带有 `vserver` ，因为 Storage Virtual Mach
 
 
 
+[[configure-nfsv3-in-ontap]]
 === 在 ONTAP 中配置 NFSv3
 
 下表列出了完成此配置所需的信息。
@@ -739,6 +768,7 @@ NOTE: 如果您选择在设置 vSphere 后安装导出策略，则 NetApp VSC �
 
 
 
+[[create-iscsi-service-in-ontap]]
 === 在 ONTAP 中创建 iSCSI 服务
 
 要创建 iSCSI 服务，请完成以下步骤：
@@ -753,6 +783,7 @@ iscsi show
 
 
 
+[[create-load-sharing-mirror-of-svm-root-volume-in-ontap]]
 === 在 ONTAP 中创建 SVM 根卷的负载共享镜像
 
 . 在每个节点上创建一个卷作为基础架构 SVM 根卷的负载共享镜像。
@@ -782,6 +813,7 @@ snapmirror show
 
 
 
+[[configure-https-access-in-ontap]]
 === 在 ONTAP 中配置 HTTPS 访问
 
 要配置对存储控制器的安全访问，请完成以下步骤：
@@ -842,6 +874,7 @@ vserver services web modify –name spi|ontapi|compat –vserver * -enabled true
 
 
 
+[[create-a-netapp-flexvol-volume-in-ontap]]
 === 在 ONTAP 中创建 NetApp FlexVol 卷
 
 要创建 NetApp FlexVol 卷，请输入卷名称，大小及其所在的聚合。创建两个 VMware 数据存储库卷和一个服务器启动卷。
@@ -853,6 +886,7 @@ volume create -vserver Infra-SVM -volume esxi_boot -aggregate aggr1_nodeA -size 
 ....
 
 
+[[enable-deduplication-in-ontap]]
 === 在 ONTAP 中启用重复数据删除
 
 要在相应的卷上启用重复数据删除，请运行以下命令：
@@ -863,6 +897,7 @@ volume efficiency on –vserver Infra-SVM -volume esxi_boot
 ....
 
 
+[[create-luns-in-ontap]]
 === 在 ONTAP 中创建 LUN
 
 要创建两个启动 LUN ，请运行以下命令：
@@ -876,6 +911,7 @@ NOTE: 添加额外的 Cisco UCS C 系列服务器时，必须创建额外的启�
 
 
 
+[[create-iscsi-lifs-in-ontap]]
 === 在 ONTAP 中创建 iSCSI LIF
 
 下表列出了完成此配置所需的信息。
@@ -920,6 +956,7 @@ network interface show
 
 
 
+[[create-nfs-lifs-in-ontap]]
 === 在 ONTAP 中创建 NFS LIF
 
 下表列出了完成此配置所需的信息。
@@ -950,6 +987,7 @@ network interface show
 
 
 
+[[add-infrastructure-svm-administrator]]
 === 添加基础架构 SVM 管理员
 
 下表列出了完成此配置所需的信息。

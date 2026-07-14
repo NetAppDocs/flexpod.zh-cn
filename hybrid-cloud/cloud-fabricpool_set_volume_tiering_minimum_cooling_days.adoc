@@ -18,6 +18,7 @@ summary: 分层最小冷却天数设置确定使用自动或仅 Snapshot 策略�
 
 
 
+[[auto]]
 == 自动
 
 自动分层策略的默认 `分层最小冷却天数` 设置为 31 天。
@@ -31,12 +32,14 @@ NOTE: 对象存储与文件或块存储不是事务存储。如果对卷中作�
 
 
 
+[[snapshot-only]]
 == 仅 Snapshot
 
 仅 Snapshot 分层策略的默认 `tiering-minimum-cooling-days` 设置为 2 天。至少 2 天可以为后台进程提供更多时间，以实现最高的存储效率，并防止日常数据保护进程不得不从云层读取数据。
 
 
 
+[[ontap-cli]]
 == ONTAP 命令行界面
 
 要使用 ONTAP 命令行界面更改卷的 `tiering-minimum-cooling-days` 设置，请运行以下命令：

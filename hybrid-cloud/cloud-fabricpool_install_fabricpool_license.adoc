@@ -28,6 +28,7 @@ image:cloud-fabricpool_image8.png["错误：缺少图形映像"]
 
 
 
+[[license-capacity]]
 == 许可证容量
 
 您可以使用 ONTAP 命令行界面或 OnCommand 系统管理器查看许可证容量。要查看许可的容量，请在 ONTAP 命令行界面中运行以下命令：

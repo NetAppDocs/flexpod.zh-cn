@@ -15,6 +15,7 @@ summary: FlexPod 是一组定义的硬件和软件，可为虚拟化和非虚拟
 
 
 
+[[flexpod-overview]]
 == FlexPod 概述
 
 FlexPod 是一组定义的硬件和软件，可为虚拟化和非虚拟化解决方案奠定集成基础。FlexPod 在一个软件包中包含 NetApp AFF 存储， Cisco Nexus 网络， Cisco MDS 存储网络， Cisco 统一计算系统（ Cisco UCS ）和 VMware vSphere 软件。该设计非常灵活，可以将网络，计算和存储安装到一个数据中心机架中，也可以根据客户的数据中心设计进行部署。端口密度允许网络组件容纳多种配置。
@@ -25,6 +26,7 @@ image:cloud-fabricpool_image2.png["错误：缺少图形映像"]
 
 
 
+[[flexpod-architecture]]
 == FlexPod 架构
 
 下图显示了 VMware vSphere 和 FlexPod 解决方案的组件以及 Cisco UCS 6454 互联阵列所需的网络连接。此设计包含以下组件：

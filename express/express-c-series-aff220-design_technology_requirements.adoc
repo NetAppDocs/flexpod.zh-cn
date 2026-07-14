@@ -18,6 +18,7 @@ FlexPod Express 需要硬件和软件组件的组合，具体取决于所选虚�
 
 
 
+[[hardware-requirements]]
 == 硬件要求
 
 无论选择何种虚拟机管理程序，所有 FlexPod 快速配置都使用相同的硬件。因此，即使业务需求发生变化，任何虚拟机管理程序都可以在同一个 FlexPod Express 硬件上运行。
@@ -45,6 +46,7 @@ FlexPod Express 需要硬件和软件组件的组合，具体取决于所选虚�
 |===
 
 
+[[software-requirements]]
 == 软件要求
 
 下表列出了实施 FlexPod Express 解决方案架构所需的软件组件。

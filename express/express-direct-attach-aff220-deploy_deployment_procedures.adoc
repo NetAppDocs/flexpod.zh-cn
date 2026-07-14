@@ -64,12 +64,14 @@ NOTE: 如果使用单独的带内和带外管理 VLAN ，则必须在它们之�
 |===
 
 
+[[cisco-nexus-31108pcv-deployment-procedure]]
 == Cisco Nexus 31108PCV 部署操作步骤
 
 本节详细介绍了在 FlexPod Express 环境中使用的 Cisco Nexus 31308PCV 交换机配置。
 
 
 
+[[initial-setup-of-cisco-nexus-31108pcv-switch]]
 === Cisco Nexus 31108PCV 交换机的初始设置
 
 此过程介绍如何配置 Cisco Nexus 交换机以在基础 FlexPod Express 环境中使用。
@@ -128,6 +130,7 @@ Use this configuration and save it? (yes/no) [y]: Enter
 
 
 
+[[enable-advanced-features]]
 === 启用高级功能
 
 要提供其他配置选项，必须在 Cisco NX-OS 中启用某些高级功能。
@@ -152,6 +155,7 @@ port-channel load-balance src-dst ip-l4port
 
 
 
+[[perform-global-spanning-tree-configuration]]
 === 执行全局生成树配置
 
 Cisco Nexus 平台使用一种新的保护功能，称为网桥保证。如果设备不再运行生成树算法，则网桥保证有助于防止单向链路或其他软件故障继续转发数据流量。根据平台的不同，可以将端口置于多种状态之一，包括网络或边缘状态。
@@ -170,6 +174,7 @@ spanning-tree port type edge bpduguard default
 ....
 
 
+[[define-vlans]]
 === 定义 VLAN
 
 在配置具有不同 VLAN 的各个端口之前，必须在交换机上定义第 2 层 VLAN 。此外，最好对 VLAN 进行命名，以便将来进行故障排除。
@@ -195,6 +200,7 @@ exit
 ....
 
 
+[[configure-access-and-management-port-descriptions]]
 === 配置访问和管理端口说明
 
 与为第 2 层 VLAN 分配名称一样，为所有接口设置说明有助于配置和故障排除。
@@ -239,6 +245,7 @@ int eth1/14
 ....
 
 
+[[configure-server-and-storage-management-interfaces]]
 === 配置服务器和存储管理接口
 
 服务器和存储的管理接口通常仅使用一个 VLAN 。因此，请将管理接口端口配置为访问端口。为每个交换机定义管理 VLAN ，并将生成树端口类型更改为边缘。
@@ -271,6 +278,7 @@ exit
 ....
 
 
+[[add-ntp-distribution-interface]]
 === 添加 NTP 分发接口
 
 
@@ -299,6 +307,7 @@ exitntp peer <switch-a-ntp-ip> use-vrf default
 ....
 
 
+[[perform-virtual-port-channel-global-configuration]]
 === 执行虚拟端口通道全局配置
 
 通过虚拟端口通道（ vPC ），物理连接到两个不同 Cisco Nexus 交换机的链路可以显示为连接到第三个设备的单端口通道。第三个设备可以是交换机，服务器或任何其他网络设备。vPC 可以提供第 2 层多路径功能，通过增加带宽，在节点之间启用多个并行路径以及存在备用路径的负载平衡流量，您可以创建冗余。
@@ -414,18 +423,21 @@ NOTE: 在此解决方案验证中，使用的最大传输单元（ MTU ）为 90
 
 
 
+[[uplink-into-existing-network-infrastructure]]
 === 通过上行链路连接到现有网络基础架构
 
 根据可用的网络基础架构，可以使用多种方法和功能来上行链路连接 FlexPod 环境。如果存在现有的 Cisco Nexus 环境， NetApp 建议使用 vPC 通过上行链路将 FlexPod 环境中的 Cisco Nexus 31108PVC 交换机连接到基础架构中。对于 10GbE 基础架构解决方案，上行链路可以是 10GbE 上行链路，如果需要，上行链路可以是 1GbE 基础架构解决方案。可以使用上述过程创建到现有环境的上行链路 vPC 。配置完成后，请务必运行 copy run start 在每个交换机上保存配置。
 
 
 
+[[netapp-storage-deployment-procedure-part-1]]
 == NetApp 存储部署操作步骤（第 1 部分）
 
 本节介绍 NetApp AFF 存储部署操作步骤。
 
 
 
+[[netapp-storage-controller-aff2xx-series-installation]]
 === NetApp 存储控制器 AFFxx 系列安装
 
 
@@ -454,6 +466,7 @@ NOTE: 在此解决方案验证中，使用的最大传输单元（ MTU ）为 90
 
 
 
+[[netapp-ontap-9-5]]
 === NetApp ONTAP 9.5
 
 
@@ -624,6 +637,7 @@ NOTE: 此 Web 服务器必须可执行 Ping 操作。
 
 
 
+[[continuation-node-a-configuration-and-cluster-configuration]]
 === 继续节点 A 配置和集群配置
 
 从连接到存储控制器 A （节点 A ）控制台端口的控制台端口程序中，运行节点设置脚本。首次在节点上启动 ONTAP 9.5 时，将显示此脚本。
@@ -694,6 +708,7 @@ NOTE: 也可以使用命令行界面执行集群设置。本文档介绍如何�
 
 
 
+[[continuation-of-storage-cluster-configuration]]
 === 继续存储集群配置
 
 配置存储节点和基础集群后，您可以继续配置存储集群。
@@ -1413,10 +1428,12 @@ security login unlock –username vsadmin –vserver
 
 
 
+[[cisco-ucs-server-configuration]]
 == Cisco UCS 服务器配置
 
 
 
+[[flexpod-cisco-ucs-base]]
 === FlexPod Cisco UCS 基础
 
 对 FlexPod 环境中的 Cisco UCS 6324 互联阵列执行初始设置。
@@ -1425,6 +1442,7 @@ security login unlock –username vsadmin –vserver
 
 
 
+[[cisco-ucs-fabric-interconnect-6324-a]]
 === Cisco UCS 互联阵列 6324 A
 
 Cisco UCS 使用访问层网络和服务器。这款高性能下一代服务器系统为数据中心提供了高度工作负载灵活性和可扩展性。
@@ -1435,6 +1453,7 @@ Cisco UCS Manager 4.0 （ 1b ）支持 6324 互联阵列，该互联阵列可将
 
 
 
+[[initial-system-setup]]
 === 初始系统设置
 
 首次访问 Cisco UCS 域中的互联阵列时，设置向导会提示您提供配置系统所需的以下信息：
@@ -1587,6 +1606,7 @@ Default domain name: <<var_domain_name>>
 
 
 
+[[log-into-cisco-ucs-manager]]
 === 登录到 Cisco UCS Manager 。
 
 要登录到 Cisco Unified Computing System （ UCS ）环境，请完成以下步骤：
@@ -1603,12 +1623,14 @@ Default domain name: <<var_domain_name>>
 
 
 
+[[cisco-ucs-manager-software-version-4-01b]]
 === Cisco UCS Manager 软件版本 4.0 （ 1b ）
 
 本文档假设使用的是 Cisco UCS Manager 软件 4.0 （ 1b ）版。要升级 Cisco UCS Manager 软件和 Cisco UCS 6324 互联阵列软件，请参见  https://www.cisco.com/c/en/us/support/servers-unified-computing/ucs-manager/products-installation-and-configuration-guides-list.html["《 Cisco UCS Manager 安装和升级指南》。"^]
 
 
 
+[[configure-cisco-ucs-call-home]]
 === 配置 Cisco UCS 自动通报
 
 Cisco 强烈建议您在 Cisco UCS Manager 中配置自动通报。配置自动通报可加快解决支持案例的速度。要配置自动通报，请完成以下步骤：
@@ -1621,6 +1643,7 @@ Cisco 强烈建议您在 Cisco UCS Manager 中配置自动通报。配置自动�
 
 
 
+[[add-block-of-ip-addresses-for-keyboard-video-mouse-access]]
 === 添加用于访问键盘，视频和鼠标的 IP 地址块
 
 要在 Cisco UCS 环境中为带内服务器键盘，视频，鼠标（ KVM ）访问创建一个 IP 地址块，请完成以下步骤：
@@ -1638,6 +1661,7 @@ image:express-direct-attach-aff220-deploy_image7.png["错误：缺少图形映�
 
 
 
+[[synchronize-cisco-ucs-to-ntp]]
 === 将 Cisco UCS 同步到 NTP
 
 要将 Cisco UCS 环境与 Nexus 交换机中的 NTP 服务器同步，请完成以下步骤：
@@ -1661,6 +1685,7 @@ image:express-direct-attach-aff220-deploy_image9.png["错误：缺少图形映�
 
 
 
+[[edit-chassis-discovery-policy]]
 === 编辑机箱发现策略
 
 设置发现策略可简化添加 Cisco UCS B 系列机箱和其他阵列扩展器的过程，以进一步实现 Cisco UCS C 系列连接。要修改机箱发现策略，请完成以下步骤：
@@ -1675,6 +1700,7 @@ image:express-direct-attach-aff220-deploy_image9.png["错误：缺少图形映�
 
 
 
+[[enable-server-uplink-and-storage-ports]]
 === 启用服务器，上行链路和存储端口
 
 要启用服务器和上行链路端口，请完成以下步骤：
@@ -1710,6 +1736,7 @@ image:express-direct-attach-aff220-deploy_image11.png["错误：缺少图形映�
 
 
 
+[[create-uplink-port-channels-to-cisco-nexus-31108-switches]]
 === 创建到 Cisco Nexus 31108 交换机的上行链路端口通道
 
 要在 Cisco UCS 环境中配置所需的端口通道，请完成以下步骤：
@@ -1759,6 +1786,7 @@ image:express-direct-attach-aff220-deploy_image12.png["错误：缺少图形映�
 
 
 
+[[create-an-organization-optional]]
 === 创建组织（可选）
 
 组织用于组织资源并限制对 IT 组织内各个组的访问，从而实现计算资源的多租户。
@@ -1776,6 +1804,7 @@ NOTE: 尽管本文档不假定使用组织，但本操作步骤提供了有关�
 
 
 
+[[configure-storage-appliance-ports-and-storage-vlans]]
 === 配置存储设备端口和存储 VLAN
 
 要配置存储设备端口和存储 VLAN ，请完成以下步骤：
@@ -1857,6 +1886,7 @@ image:express-direct-attach-aff220-deploy_image17.png["错误：缺少图形映�
 
 
 
+[[set-jumbo-frames-in-cisco-ucs-fabric]]
 === 在 Cisco UCS 网络结构中设置巨型帧
 
 要在 Cisco UCS 网络结构中配置巨型帧并启用服务质量，请完成以下步骤：
@@ -1874,6 +1904,7 @@ image:express-direct-attach-aff220-deploy_image18.png["错误：缺少图形映�
 
 
 
+[[acknowledge-cisco-ucs-chassis]]
 === 确认 Cisco UCS 机箱
 
 要确认所有 Cisco UCS 机箱，请完成以下步骤：
@@ -1887,12 +1918,14 @@ image:express-direct-attach-aff220-deploy_image18.png["错误：缺少图形映�
 
 
 
+[[load-cisco-ucs-4-01b-firmware-images]]
 === 加载 Cisco UCS 4.0 （ 1b ）固件映像
 
 要将 Cisco UCS Manager 软件和 Cisco UCS 互联阵列软件升级到 4.0 （ 1b ）版，请参见 https://www.cisco.com/en/US/products/ps10281/prod_installation_guides_list.html["《 Cisco UCS Manager 安装和升级指南》"^]。
 
 
 
+[[create-host-firmware-package]]
 === 创建主机固件包
 
 通过固件管理策略，管理员可以为给定服务器配置选择相应的软件包。这些策略通常包括适配器， BIOS ，板载控制器， FC 适配器，主机总线适配器（ HBA ）选项 ROM 以及存储控制器属性的软件包。
@@ -1913,6 +1946,7 @@ image:express-direct-attach-aff220-deploy_image19.png["错误：缺少图形映�
 
 
 
+[[create-mac-address-pools]]
 === 创建 MAC 地址池
 
 要为 Cisco UCS 环境配置所需的 MAC 地址池，请完成以下步骤：
@@ -1957,6 +1991,7 @@ NOTE: 对于 FlexPod 解决方案，建议将 0B 放置在起始 MAC 地址的�
 
 
 
+[[create-iscsi-iqn-pool]]
 === 创建 iSCSI IQN 池
 
 要为 Cisco UCS 环境配置所需的 IQN 池，请完成以下步骤：
@@ -1985,6 +2020,7 @@ image:express-direct-attach-aff220-deploy_image21.png["错误：缺少图形映�
 
 
 
+[[create-iscsi-initiator-ip-address-pools]]
 === 创建 iSCSI 启动程序 IP 地址池
 
 要为 Cisco UCS 环境配置所需的 IP 池 iSCSI 启动，请完成以下步骤：
@@ -2015,6 +2051,7 @@ image:express-direct-attach-aff220-deploy_image21.png["错误：缺少图形映�
 
 
 
+[[create-uuid-suffix-pool]]
 === 创建 UUID 后缀池
 
 要为 Cisco UCS 环境配置所需的通用唯一标识符（ UUID ）后缀池，请完成以下步骤：
@@ -2037,6 +2074,7 @@ image:express-direct-attach-aff220-deploy_image21.png["错误：缺少图形映�
 
 
 
+[[create-server-pool]]
 === 创建服务器池
 
 要为 Cisco UCS 环境配置所需的服务器池，请完成以下步骤：
@@ -2057,6 +2095,7 @@ NOTE: 请考虑创建唯一的服务器池，以实现环境所需的粒度。
 
 
 
+[[create-network-control-policy-for-cisco-discovery-protocol-and-link-layer-discovery-protocol]]
 === 为 Cisco 发现协议和链路层发现协议创建网络控制策略
 
 要为 Cisco 发现协议（ CDP ）和链路层发现协议（ LLDP ）创建网络控制策略，请完成以下步骤：
@@ -2076,6 +2115,7 @@ image:express-direct-attach-aff220-deploy_image22.png["错误：缺少图形映�
 
 
 
+[[create-power-control-policy]]
 === 创建电源控制策略
 
 要为 Cisco UCS 环境创建电源控制策略，请完成以下步骤：
@@ -2094,6 +2134,7 @@ image:express-direct-attach-aff220-deploy_image23.png["错误：缺少图形映�
 
 
 
+[[create-server-pool-qualification-policy-optional]]
 === 创建服务器池限定策略（可选）
 
 要为 Cisco UCS 环境创建可选的服务器池限定策略，请完成以下步骤：
@@ -2118,6 +2159,7 @@ image:express-direct-attach-aff220-deploy_image24.png["错误：缺少图形映�
 
 
 
+[[create-server-bios-policy]]
 === 创建服务器 BIOS 策略
 
 要为 Cisco UCS 环境创建服务器 BIOS 策略，请完成以下步骤：
@@ -2167,6 +2209,7 @@ image:express-direct-attach-aff220-deploy_image28.png["错误：缺少图形映�
 
 
 
+[[update-the-default-maintenance-policy]]
 === 更新默认维护策略
 
 要更新默认维护策略，请完成以下步骤：
@@ -2185,6 +2228,7 @@ image:express-direct-attach-aff220-deploy_image29.png["错误：缺少图形映�
 
 
 
+[[create-vnic-templates]]
 === 创建 vNIC 模板
 
 要为 Cisco UCS 环境创建多个虚拟网络接口卡（ Virtual Network Interface Card ， vNIC ）模板，请完成本节中所述的过程。
@@ -2306,6 +2350,7 @@ image:express-direct-attach-aff220-deploy_image33.png["错误：缺少图形映�
 
 
 
+[[create-lan-connectivity-policy-for-iscsi-boot]]
 === 为 iSCSI 启动创建 LAN 连接策略
 
 此操作步骤适用场景是一种 Cisco UCS 环境，其中两个 iSCSI LIF 位于集群节点 1 上（`iscsi_lif01a` 和 `iscsi_lif01b` ），两个 iSCSI LIF 位于集群节点 2 上（`iscsi_lif02a` 和 `iscsi_lif02b` ）。此外，假设 A LIF 连接到阵列 A （ Cisco UCS 6324 A ）， B LIF 连接到阵列 B （ Cisco UCS 6324 B ）。
@@ -2407,6 +2452,7 @@ image:express-direct-attach-aff220-deploy_image37.png["错误：缺少图形映�
 
 
 
+[[create-iscsi-boot-policy]]
 === 创建 iSCSI 启动策略
 
 本节中的操作步骤用于适用场景一种 Cisco UCS 环境，其中两个 iSCSI 逻辑接口（ LIF ）位于集群节点 1 上（`iscsi_lif01a` 和 `iscsi_lif01b` ），两个 iSCSI LIF 位于集群节点 2 上（`iscsi_lif02a` 和 `iscsi_lif02b` ）。此外，还假定 A LIF 连接到阵列 A （ Cisco UCS 互联阵列 A ）， B LIF 连接到阵列 B （ Cisco UCS 互联阵列 B ）。
@@ -2437,6 +2483,7 @@ image:express-direct-attach-aff220-deploy_image38.png["错误：缺少图形映�
 
 
 
+[[create-service-profile-template]]
 === 创建服务配置文件模板
 
 在此操作步骤中，为基础架构 ESXi 主机创建了一个用于阵列 A 启动的服务配置文件模板。
@@ -2630,6 +2677,7 @@ image:express-direct-attach-aff220-deploy_image51.png["错误：缺少图形映�
 
 
 
+[[create-vmedia-enabled-service-profile-template]]
 === 创建启用了 vMedia 的服务配置文件模板
 
 要在启用了 vMedia 的情况下创建服务配置文件模板，请完成以下步骤：
@@ -2646,6 +2694,7 @@ image:express-direct-attach-aff220-deploy_image51.png["错误：缺少图形映�
 
 
 
+[[create-service-profiles]]
 === 创建服务配置文件
 
 要使用服务配置文件模板创建服务配置文件，请完成以下步骤：
@@ -2673,10 +2722,12 @@ NOTE: 服务配置文件会自动与分配的服务器池中的服务器相关�
 
 
 
+[[storage-configuration-part-2-boot-luns-and-initiator-groups]]
 == 存储配置第 2 部分：启动 LUN 和启动程序组
 
 
 
+[[ontap-boot-storage-setup]]
 === ONTAP 启动存储设置
 
 
@@ -2714,6 +2765,7 @@ lun map –vserver Infra-SVM –volume esxi_boot –lun VM-Host-Infra- A –igro
 
 
 
+[[vmware-vsphere-6-7u1-deployment-procedure]]
 == VMware vSphere 6.7U1 部署操作步骤
 
 本节详细介绍了在 FlexPod 快速配置中安装 VMware ESXi 6.7U1 的过程。完成这些过程后，将配置两个已启动的 ESXi 主机。
@@ -2722,6 +2774,7 @@ lun map –vserver Infra-SVM –volume esxi_boot –lun VM-Host-Infra- A –igro
 
 
 
+[[download-cisco-custom-image-for-esxi-6-7u1]]
 === 下载适用于 ESXi 6.7U1 的 Cisco 自定义映像
 
 如果尚未下载 VMware ESXi 自定义映像，请完成以下步骤以完成下载：
@@ -3151,6 +3204,7 @@ image:express-direct-attach-aff220-deploy_image63.png["错误：缺少图形映�
 
 
 
+[[install-vmware-vcenter-server-6-7]]
 == 安装 VMware vCenter Server 6.7
 
 本节详细介绍了在 FlexPod 快速配置中安装 VMware vCenter Server 6.7 的过程。
@@ -3160,6 +3214,7 @@ NOTE: FlexPod Express 使用 VMware vCenter Server 设备（ VCSA ）。
 
 
 
+[[install-vmware-vcenter-server-appliance]]
 === 安装 VMware vCenter Server 设备
 
 要安装 VCSA ，请完成以下步骤：

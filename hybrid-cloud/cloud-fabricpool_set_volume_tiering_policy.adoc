@@ -42,6 +42,7 @@ summary:
 
 
 
+[[oncommand-system-manager]]
 == OnCommand 系统管理器
 
 要使用 OnCommand 系统管理器更改卷的分层策略，请完成以下步骤：
@@ -58,6 +59,7 @@ image:cloud-fabricpool_image16.png["错误：缺少图形映像"]
 
 
 
+[[ontap-cli]]
 == ONTAP 命令行界面
 
 要使用 ONTAP 命令行界面更改卷的分层策略，请运行以下命令：

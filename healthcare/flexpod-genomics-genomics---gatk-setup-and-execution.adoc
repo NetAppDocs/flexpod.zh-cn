@@ -24,6 +24,7 @@ link:flexpod-genomics-solution-infrastructure-hardware-and-software-components.h
 
 
 
+[[from-sample-to-variant-identification-annotation-and-prediction]]
 == 从样本到变体标识，标注和预测
 
 从较高的层面来看，基因组学可以分为以下几个步骤。以下列表并不详尽：
@@ -66,6 +67,7 @@ image:flexpod-genomics-image8.png["错误：缺少图形映像"]
 
 
 
+[[genome-analysis-toolkit-gatk]]
 == 基因组分析工具包（ GATK ）
 
 GATK 是作为中的数据科学平台而开发的 https://www.broadinstitute.org/about-us["Broad Institute"^]。GATK 是一组开源工具，可用于进行基因组分析，尤其是变体发现，标识，标注和基因分型。GATK 的一个优势是，可以将一组工具和 / 或命令链接在一起，形成一个完整的工作流。广义学院要应对的主要挑战如下：
@@ -84,6 +86,7 @@ GATK 和 Broad Institute 表示，基因组测序应视为病理学实验室的�
 
 
 
+[[flexpod-setup]]
 == FlexPod 设置
 
 基因组工作负载验证包括从头开始设置 FlexPod 基础架构平台。FlexPod 平台具有高可用性，可以独立扩展；例如，可以独立扩展网络，存储和计算。我们使用以下经过 Cisco 验证的设计指南作为参考架构文档来设置 FlexPod 环境： https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_vmware_vsphere_7_0_ontap_9_7.html["采用 VMware vSphere 7.0 和 NetApp ONTAP 9.7 的 FlexPod Datacenter"^]。请参见以下 FlexPod 平台设置亮点：
@@ -131,6 +134,7 @@ image:flexpod-genomics-image17.png["错误：缺少图形映像"]
 
 
 
+[[gatk-setup-and-execution]]
 == GATK 设置和执行
 
 在 RedHat Enterprise 8.3 Linux VM 上安装以下前提条件：
@@ -149,6 +153,7 @@ image:flexpod-genomics-image17.png["错误：缺少图形映像"]
 
 
 
+[[cromwell-engine]]
 === 克伦威尔引擎
 
 Cromwell 是一款开源引擎，适用于支持工作流管理的科学工作流。可以将 Cromwell 引擎分为两种运行方式 https://cromwell.readthedocs.io/en/stable/Modes/["模式"^]，服务器模式或单工作流运行模式。可以使用控制 Cromwell 引擎的行为 https://github.com/broadinstitute/cromwell/blob/develop/cromwell.example.backends/cromwell.examples.conf["Cromwell 引擎配置文件"^]。
@@ -187,6 +192,7 @@ Cromwell 是一款开源引擎，适用于支持工作流管理的科学工作�
 
 
 
+[[execution-of-gatk-using-the-jar-file]]
 === 使用 JAR 文件执行 GATK
 
 下面我们来了解一下使用哈普斯特型变量调用程序执行单一变体调用管道的情况。
@@ -214,6 +220,7 @@ HaplotypeCaller \
 
 
 
+[[execution-of-gatk-using-gatk-script]]
 === 使用 ./gatk 脚本执行 GATK
 
 GATK 工具套件可使用 ` 。 /gatk` 脚本执行。让我们来看看以下命令：
@@ -238,6 +245,7 @@ HaplotypeCaller \
 
 
 
+[[execution-of-gatk-using-cromwell-engine]]
 === 使用 Cromwell 引擎执行 GATK
 
 我们使用 Cromwell 引擎管理 GATK 执行。我们来检查命令行及其参数。

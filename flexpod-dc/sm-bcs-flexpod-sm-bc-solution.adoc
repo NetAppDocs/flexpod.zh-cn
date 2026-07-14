@@ -17,6 +17,7 @@ link:sm-bcs-introduction.html["上一页：简介。"]
 
 
 
+[[solution-overview]]
 == 解决方案概述
 
 从较高的层面来看， FlexPod SM-BC 解决方案 由两个 FlexPod 系统组成，它们位于两个站点上，彼此连接并配对，可提供高度可用，高度灵活且高度可靠的数据中心解决方案 ，即使站点发生故障也能提供业务连续性。
@@ -39,6 +40,7 @@ image:sm-bcs-image4.png["错误：缺少图形映像"]
 
 
 
+[[solution-requirements]]
 == 解决方案要求
 
 FlexPod SM-BC 解决方案 旨在满足以下关键要求：
@@ -51,10 +53,12 @@ FlexPod SM-BC 解决方案 旨在满足以下关键要求：
 
 
 
+[[solution-components]]
 == 解决方案组件
 
 
 
+[[cisco-compute-components]]
 === Cisco 计算组件
 
 Cisco UCS 是一种集成计算基础架构，可提供统一计算资源，统一网络结构和统一管理。它使企业能够自动执行并加快应用程序部署，包括虚拟化和裸机工作负载。Cisco UCS 支持多种部署用例，包括远程和分支机构，数据中心和混合云用例。根据特定的解决方案 要求， FlexPod Cisco 计算实施可以使用不同规模的各种组件。以下各小节提供了某些 UCS 组件上的追加信息 。
@@ -115,6 +119,7 @@ image:sm-bcs-image8.png["错误：缺少图形映像"]
 
 
 
+[[cisco-switching-components]]
 === Cisco 交换组件
 
 
@@ -149,6 +154,7 @@ Cisco MDS 9132T/9148T/9396T 高性能 32G 多层光纤交换机经济高效，�
 
 
 
+[[netapp-components]]
 === NetApp 组件
 
 要创建 FlexPod SM-BC 解决方案 ，需要运行 ONTAP 软件 9.8 或更高版本的冗余 NetApp AFF 或 ASA 控制器。建议在 SM-BC 部署中使用最新的 ONTAP 版本（当前为 9.10.1 ），以便利用 ONTAP 持续创新，性能和质量改进以及增加的最大对象数量来支持 SM-BC 。
@@ -174,6 +180,7 @@ image:sm-bcs-image11.png["错误：缺少图形映像"]
 
 
 
+[[solution-topologies]]
 == 解决方案 拓扑
 
 FlexPod 解决方案的拓扑结构十分灵活，可以纵向扩展或横向扩展以满足不同的解决方案 要求。如果解决方案 需要业务连续性保护，并且只需要最少的计算和存储资源，则可以使用简单的解决方案 拓扑，如下图所示。这种简单的拓扑结构使用 UCS C 系列机架服务器和 AFF/ASA 控制器，并在控制器中使用 SSD ，而无需额外的磁盘架。

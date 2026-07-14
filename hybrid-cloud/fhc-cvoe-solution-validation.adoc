@@ -28,6 +28,7 @@ link:fhc-cvoe-san-configuration.html["先前版本：SAN配置。"]
 
 
 
+[[application-development-and-testing-devtest]]
 == 应用程序开发和测试(开发/测试)
 
 为了加快应用程序开发速度、您可以在灾难恢复站点快速克隆复制的数据并将其用于开发/测试应用程序。灾难恢复和开发/测试环境的主机代管可以显著提高备份或灾难恢复设施的利用率、并且按需开发/测试克隆可以根据需要提供尽可能多的数据副本、以便更快地投入生产。
@@ -146,6 +147,7 @@ Filesystem                 1K-blocks  Used     Available  Use%  Mounted on
 
 
 
+[[disaster-recovery]]
 == 灾难恢复
 
 SnapMirror技术也用作灾难恢复计划的一部分。如果将关键数据复制到其他物理位置、则发生严重灾难时、不必对业务关键型应用程序的数据长时间不可用进行发生原因 处理。客户端可以通过网络访问复制的数据、直到生产站点从损坏、意外删除、自然灾难等中恢复为止。
@@ -257,6 +259,7 @@ sudo touch newfile
 
 
 
+[[verification-of-data-on-the-production-site]]
 == 验证生产站点上的数据
 
 恢复生产站点后、您必须确保还原原始配置、并且客户端能够从源站点访问数据。

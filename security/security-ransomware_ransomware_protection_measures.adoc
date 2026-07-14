@@ -18,6 +18,7 @@ summary: 本节介绍 NetApp ONTAP 数据管理软件以及适用于 Cisco UCS �
 
 
 
+[[storage-netapp-ontap]]
 == 存储： NetApp ONTAP
 
 ONTAP 软件提供了许多对数据保护有用的功能，其中大多数功能对于拥有 ONTAP 系统的客户是免费的。您可以随时使用以下功能来保护数据免受攻击：
@@ -31,6 +32,7 @@ ONTAP 软件提供了许多对数据保护有用的功能，其中大多数功�
 
 
 
+[[network-cisco-nexus]]
 == 网络： Cisco Nexus
 
 Cisco NX OS 软件支持可增强网络异常检测和安全性的网络流功能。网络流可捕获网络上每个对话的元数据，通信所涉及的各方，正在使用的协议以及事务持续时间。对信息进行汇总和分析后，可以深入了解正常行为。
@@ -41,6 +43,7 @@ Cisco NX OS 软件支持可增强网络异常检测和安全性的网络流功�
 
 
 
+[[compute-cisco-ucs]]
 == 计算： Cisco UCS
 
 Cisco UCS 是 FlexPod 架构中的计算端点。您可以使用多种 Cisco 产品来帮助在操作系统级别保护堆栈的这一层。

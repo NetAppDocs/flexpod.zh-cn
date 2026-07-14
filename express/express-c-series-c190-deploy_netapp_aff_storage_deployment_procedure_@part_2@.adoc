@@ -15,10 +15,12 @@ summary: 要创建 igroup ，请从集群管理节点 SSH 连接运行以下命�
 
 
 
+[[set-up-ontap-san-boot-storage]]
 == 设置 ONTAP SAN 启动存储
 
 
 
+[[create-iscsi-igroups]]
 === 创建 iSCSI igroup
 
 
@@ -35,6 +37,7 @@ NOTE: 添加其他 Cisco UCS C 系列服务器时，必须完成此步骤。
 
 
 
+[[map-boot-luns-to-igroups]]
 == 将启动 LUN 映射到 igroup
 
 ....

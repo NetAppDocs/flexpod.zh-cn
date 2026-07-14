@@ -15,10 +15,12 @@ summary: 本节介绍 NetApp FlexPod 快速存储集群设计的最佳实践。
 
 
 
+[[storage-best-practices]]
 == 存储最佳实践
 
 
 
+[[high-availability]]
 === 高可用性
 
 NetApp 存储集群设计可在每个级别提供高可用性：
@@ -33,12 +35,14 @@ NetApp 存储集群设计可在每个级别提供高可用性：
 
 
 
+[[secure-multitenancy]]
 === 安全多租户
 
 NetApp Storage Virtual Machine （ SVM ）提供了一个虚拟存储阵列构造，用于分隔安全域，策略和虚拟网络。NetApp 建议您为存储集群上托管数据的每个租户组织创建单独的 SVM 。
 
 
 
+[[netapp-storage-best-practices]]
 === NetApp 存储最佳实践
 
 请考虑以下 NetApp 存储最佳实践：
@@ -51,6 +55,7 @@ NetApp Storage Virtual Machine （ SVM ）提供了一个虚拟存储阵列构�
 
 
 
+[[san-boot]]
 === SAN 启动
 
 NetApp 建议您在 FlexPod Datacenter 解决方案中为 Cisco UCS 服务器实施 SAN 启动。通过此步骤，可以通过 NetApp AFF 存储系统安全地保护操作系统，从而提高性能。本解决方案概述的设计使用 iSCSI SAN 启动。
@@ -63,6 +68,7 @@ image:medical-imaging_image8.png["错误：缺少图形映像"]
 
 
 
+[[storage-efficiency-and-thin-provisioning]]
 === 存储效率和精简配置
 
 NetApp 在存储效率创新方面一直处于行业领先地位，例如首次针对主工作负载执行重复数据删除，以及通过实时数据缩减增强数据压缩并高效存储小文件和 I/O 。ONTAP 支持实时和后台重复数据删除，以及实时和后台数据压缩。
@@ -73,6 +79,7 @@ NetApp 在存储效率创新方面一直处于行业领先地位，例如首次�
 
 
 
+[[quality-of-service]]
 === Quality of service
 
 运行 ONTAP 软件的系统可以使用 ONTAP 存储服务质量功能来限制吞吐量（以每秒兆位数（ MBps ）为单位），并限制文件， LUN ，卷或整个 SVM 等不同存储对象的 IOPS 。自适应 QoS 用于设置 IOPS 下限（ QoS 最小值）和上限（ QoS 最大值），此上限可根据数据存储库容量和已用空间动态调整。
@@ -87,6 +94,7 @@ NetApp 在存储效率创新方面一直处于行业领先地位，例如首次�
 
 
 
+[[storage-layout]]
 === 存储布局
 
 本节介绍有关存储上 LUN ，卷和聚合布局的最佳实践。
@@ -143,6 +151,7 @@ AFF A300 系统（具有两个磁盘架和 24 个驱动器）的存储聚合布�
 
 
 
+[[backup-best-practices]]
 == 备份最佳实践
 
 NetApp SnapCenter 用于 VM 和数据库备份。NetApp 建议采用以下备份最佳实践：
@@ -158,10 +167,12 @@ NetApp SnapCenter 用于 VM 和数据库备份。NetApp 建议采用以下备份
 
 
 
+[[infrastructure-best-practices]]
 == 基础架构最佳实践
 
 
 
+[[networking-best-practices]]
 === 网络最佳实践
 
 NetApp 建议采用以下网络最佳实践：
@@ -175,6 +186,7 @@ NetApp 建议采用以下网络最佳实践：
 
 
 
+[[compute-best-practices]]
 == 计算最佳实践
 
 NetApp 建议采用以下计算最佳实践：
@@ -184,6 +196,7 @@ NetApp 建议采用以下计算最佳实践：
 
 
 
+[[virtualization-best-practices]]
 == 虚拟化最佳实践
 
 NetApp 建议采用以下虚拟化最佳实践：
@@ -195,6 +208,7 @@ NetApp 建议采用以下虚拟化最佳实践：
 
 
 
+[[medical-imaging-system-best-practices]]
 == 医学影像系统最佳实践
 
 请参见典型医疗成像系统的以下最佳实践和一些要求：

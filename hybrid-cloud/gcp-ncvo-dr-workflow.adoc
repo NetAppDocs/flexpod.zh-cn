@@ -61,6 +61,7 @@ link:gcp-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html["先前�
 
 
 
+[[procedure-1-create-the-workflow]]
 == 操作步骤 1：创建工作流
 
 . 单击左侧导航窗格中的*流程编排*、然后单击*创建工作流*。
@@ -78,6 +79,7 @@ image:gcp-ncvo-image7.png["显示可变输入屏幕的屏幕截图。"]
 
 
 
+[[procedure-2-create-a-new-volume-in-flexpod]]
 == 操作步骤 2.在FlexPod 中创建新卷
 
 . 转到*设计器*选项卡、然后单击*工具*部分中的*任务*。
@@ -182,6 +184,7 @@ NOTE: 现在忽略此错误。显示此错误的原因是、*在FlexPod 中创�
 
 
 
+[[procedure-3-add-storage-export-policy]]
 == 操作步骤 3：添加存储导出策略
 
 . 转到*设计器*选项卡、然后单击*工具*部分中的*任务*。
@@ -231,6 +234,7 @@ NOTE: 此时将向卷添加导出策略。接下来、创建一个新的数据�
 
 
 
+[[procedure-4-map-flexpod-volume-to-datastore]]
 == 操作步骤 4：将FlexPod 卷映射到数据存储库
 
 . 转到*设计器*选项卡、然后单击*工具*部分中的*任务*。
@@ -358,6 +362,7 @@ image:gcp-ncvo-image45.png["屏幕截图"]
 
 
 
+[[procedure-5-add-a-new-terraform-workspace]]
 == 操作步骤 5：添加新的Terraform工作空间
 
 . 转到*设计器*选项卡、然后单击*工具*部分中的*任务*。
@@ -459,6 +464,7 @@ image:gcp-ncvo-image57.png["屏幕截图"]
 
 
 
+[[procedure-6-add-non-sensitive-variables-to-workspace]]
 == 操作步骤 6：向工作空间添加非敏感变量
 
 . 转到*设计器*选项卡、然后单击*工具中的工作流*部分。
@@ -577,6 +583,7 @@ image:gcp-ncvo-image64.png["屏幕截图"]
 
 
 
+[[procedure-7-add-sensitive-variables-to-a-workspace]]
 == 操作步骤 7：向工作空间添加敏感变量
 
 . 转到*设计器*选项卡、然后从*工具*部分中单击*工作流*。
@@ -653,6 +660,7 @@ image:gcp-ncvo-image67.png["屏幕截图"]
 
 
 
+[[procedure-8-start-a-new-terraform-plan]]
 == 操作步骤 8：启动新的Terraform计划
 
 . 转到*设计器*选项卡、然后单击*工具*部分中的*任务*。
@@ -701,6 +709,7 @@ image:gcp-ncvo-image71.png["屏幕截图"]
 
 
 
+[[procedure-9-sleep-task-for-synchronization]]
 == 操作步骤 9：同步的休眠任务
 
 Terraform Apply需要运行ID、而RunID是在Terraform Plan任务中生成的。在Terraform Plan和Terraform Apply操作之间等待几秒钟可避免时间问题。
@@ -726,6 +735,7 @@ image:gcp-ncvo-image73.png["屏幕截图"]
 
 
 
+[[procedure-10-confirm-and-apply-terraform-run]]
 == 操作步骤 10：确认并应用Terraform Run
 
 . 转到*设计器*选项卡、然后单击*工具*部分中的*任务*。
@@ -758,6 +768,7 @@ image:gcp-ncvo-image76.png["屏幕截图"]
 
 
 
+[[procedure-11-import-a-cisco-built-workflow]]
 == 操作步骤 11：导入Cisco构建的工作流
 
 通过Cisco Intersight Cloud Orchestrator、您可以将工作流从Cisco Intersight帐户导出到您的系统、然后将其导入到其他帐户。通过导出可导入到您帐户中的已构建工作流、创建了一个JSON文件。

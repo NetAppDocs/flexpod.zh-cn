@@ -18,6 +18,7 @@ summary: 在本节中，我们将回顾 FlexPod 数据中心融合基础架构�
 
 
 
+[[solution-technology]]
 == 解决方案技术
 
 FlexPod Datacenter 解决方案由以下最低组件组成，可提供高度可用，易于扩展，经验证且受支持的融合基础架构环境。
@@ -62,6 +63,7 @@ FlexPod Datacenter 解决方案由以下最低组件组成，可提供高度可�
 |===
 
 
+[[architectural-diagram]]
 == 架构图
 
 下图显示了解决方案架构。
@@ -70,6 +72,7 @@ image:cloud-insights_image2.png["错误：缺少图形映像"]
 
 
 
+[[hardware-requirements]]
 == 硬件要求
 
 下表列出了实施解决方案所需的硬件组件。在任何特定解决方案实施中使用的硬件组件可能会因客户要求而异。
@@ -97,6 +100,7 @@ image:cloud-insights_image2.png["错误：缺少图形映像"]
 |===
 
 
+[[software-requirements]]
 == 软件要求
 
 下表列出了实施解决方案所需的软件组件。在任何特定解决方案实施中使用的软件组件可能会因客户要求而异。
@@ -124,6 +128,7 @@ image:cloud-insights_image2.png["错误：缺少图形映像"]
 |===
 
 
+[[use-case-details]]
 == 用例详细信息
 
 此解决方案适用场景的使用情形如下：

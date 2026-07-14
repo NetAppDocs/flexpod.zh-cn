@@ -17,6 +17,7 @@ link:gcp-ncvo-configure-public-cloud-service-provider.html["先前版本：配�
 
 
 
+[[google-cloud]]
 == Google Cloud
 
 您必须先启用API并创建一个服务帐户、以便为Cloud Manager提供部署和管理与Connector位于同一项目或不同项目中的Cloud Volumes ONTAP 系统的权限。
@@ -33,12 +34,14 @@ link:gcp-ncvo-configure-public-cloud-service-provider.html["先前版本：配�
 
 
 
+[[cloud-volumes-ontap-deployment-modes-and-architecture]]
 === Cloud Volumes ONTAP 部署模式和架构
 
 Cloud Volumes ONTAP 可作为单节点系统和高可用性(HA)节点对在Google Cloud中使用。根据要求、我们可以选择Cloud Volumes ONTAP 部署模式。不支持将单节点系统升级到 HA 对。如果要在单节点系统和HA对之间切换、则必须部署新系统并将现有系统中的数据复制到新系统。
 
 
 
+[[highly-available-cloud-volumes-ontap-in-google-cloud]]
 === Google Cloud中的高可用性Cloud Volumes ONTAP
 
 Google Cloud支持跨多个地理区域和一个区域内的多个区域部署资源。HA部署由两个ONTAP 节点组成、这两个节点使用Google Cloud中提供的功能强大的n1标准或n2标准计算机类型。数据会在两个Cloud Volumes ONTAP 节点之间同步复制、以便在发生故障时提供可用性。Cloud Volumes ONTAP 的高可用性部署要求每个VPC具有四个VPC和一个专用子网。四个vPC中的子网应配置非重叠的CIDR范围。
@@ -63,6 +66,7 @@ image:gcp-ncvo-image6.png["此图显示了Goggle Cloud中的高可用性Cloud Vo
 
 
 
+[[set-up-environment-prerequisites]]
 === 设置环境前提条件
 
 可以使用Terraform配置自动创建Cloud Volumes ONTAP 集群、在内部卷和云卷之间配置SnapMirror、创建云卷等。这些Terraform配置托管在Terraform Cloud for Business帐户上。使用Intersight Cloud Orchestrator、您可以编排任务、例如在Terraform Cloud for Business帐户中创建工作空间、将所有必需的变量添加到工作空间、执行Terraform计划等。
@@ -71,6 +75,7 @@ image:gcp-ncvo-image6.png["此图显示了Goggle Cloud中的高可用性Cloud Vo
 
 
 
+[[github-repository]]
 === GitHub 存储库
 
 您需要一个GitHub帐户来托管Terraform代码。Intersight Orchestrator在Terraform Cloud for Business帐户中创建新的工作空间。此工作空间配置了版本控制工作流。为此、您需要将Terraform配置保留在GitHub存储库中、并在创建工作空间时将其作为输入提供。
@@ -105,6 +110,7 @@ https://github.com/ucs-compute-solutions/cvo_snapmirror["此GitHub链接"^] 为 
 
 
 
+[[refresh-token-for-netapp-cloud-manager-api-operations]]
 === 刷新NetApp Cloud Manager API操作的令牌
 
 除了 Web 浏览器界面之外， Cloud Manager 还具有一个 REST API ，可使软件开发人员通过 SaaS 界面直接访问 Cloud Manager 功能。Cloud Manager 服务由多个不同的组件组成，这些组件共同构成一个可扩展的开发平台。通过刷新令牌、您可以生成要添加到每个API调用的授权标头中的访问令牌。
@@ -121,6 +127,7 @@ https://github.com/ucs-compute-solutions/cvo_snapmirror["此GitHub链接"^] 为 
 
 
 
+[[develop-cisco-intersight-cloud-orchestrator-workflow]]
 == 开发Cisco Intersight Cloud Orchestrator工作流
 
 在以下情况下、Cisco Intersight可提供Cisco Intersight Cloud Orchestrator：
@@ -131,6 +138,7 @@ https://github.com/ucs-compute-solutions/cvo_snapmirror["此GitHub链接"^] 为 
 
 
 
+[[workflow-designer]]
 === 工作流设计器
 
 工作流设计器可帮助您创建新工作流(以及任务和数据类型)并编辑现有工作流、以管理Cisco Intersight中的目标。
@@ -171,6 +179,7 @@ https://github.com/ucs-compute-solutions/cvo_snapmirror["此GitHub链接"^] 为 
 
 
 
+[[workflow]]
 === 工作流
 
 创建包含以下步骤的工作流：
@@ -183,6 +192,7 @@ https://github.com/ucs-compute-solutions/cvo_snapmirror["此GitHub链接"^] 为 
 
 
 
+[[create-workflows-for-on-premises-flexpod-storage]]
 === 为内部FlexPod 存储创建工作流
 
 要为内部FlexPod 存储配置工作流、请参见 https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_cvo_ico_ntap.html["此链接。"^]。

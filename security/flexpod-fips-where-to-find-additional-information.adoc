@@ -122,6 +122,7 @@ https://flexpod.com/[]
 
 
 
+[[acknowledgements]]
 == 致谢
 
 * NetApp 技术营销工程师 Abhinav Singh
@@ -133,6 +134,7 @@ https://flexpod.com/[]
 
 
 
+[[version-history]]
 == 版本历史记录
 
 |===

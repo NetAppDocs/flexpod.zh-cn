@@ -28,6 +28,7 @@ FabricPool 支持将 Amazon S3 ， IBM 对象云存储和 Microsoft Azure Blob �
 
 
 
+[[oncommand-system-manager]]
 == OnCommand 系统管理器
 
 要使用 OnCommand System Manager 添加云层，请完成以下步骤：
@@ -48,6 +49,7 @@ image:cloud-fabricpool_image13.png["错误：缺少图形映像"]
 
 
 
+[[ontap-cli]]
 == ONTAP 命令行界面
 
 要使用 ONTAP 命令行界面添加云层，请输入以下命令：

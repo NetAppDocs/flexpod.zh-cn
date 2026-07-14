@@ -20,6 +20,7 @@ FlexPod 架构可以使用符合 FIPS 140-2 的 Cisco UCS 服务器进行设计�
 
 
 
+[[cisco-ucs-and-fabric-interconnect]]
 == Cisco UCS 和互联阵列
 
 Cisco UCS Manager 可通过 Cisco 互联阵列（ Fabric Interconnects ， FI ）进行部署和运行。

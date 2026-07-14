@@ -18,12 +18,14 @@ summary: 开始之前，请安装或升级 AIQ UM ，创建 Cisco Intersight 帐
 
 
 
+[[install-or-upgrade-netapp-active-iq-unified-manager]]
 == 安装或升级 NetApp Active IQ Unified Manager
 
 安装或升级到Active IQ Unified Manager (需要最新版本、当前为9.14RC1)(如果尚未安装或升级)。有关说明，请转至 link:https://docs.netapp.com/us-en/active-iq-unified-manager/["NetApp Active IQ Unified Manager 文档"]。
 
 
 
+[[install-cisco-intersight-assist-virtual-appliance]]
 == 安装 Cisco Intersight Assist 虚拟设备
 
 确保满足 https://www.cisco.com/c/en/us/td/docs/unified_computing/Intersight/b_Cisco_Intersight_Appliance_Getting_Started_Guide/b_Cisco_Intersight_Appliance_Getting_Started_Guide_chapter_0111.html?referring_site=RE&pos=1&page=https://www.cisco.com/c/en/us/td/docs/unified_computing/Intersight/b_Cisco_Intersight_Appliance_Getting_Started_Guide.html["Cisco Intersight Virtual Appliance 许可，系统和网络要求"^]。

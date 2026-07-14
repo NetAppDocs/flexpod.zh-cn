@@ -24,6 +24,7 @@ FlexPod 是一种灵活的解决方案，允许客户使用当前由 Cisco 和 N
 
 
 
+[[checking-netapp-equipment-support]]
 == 检查 NetApp 设备支持
 
 NetApp 通过 Hardware Universe (HWU) 提供技术支持信息。
@@ -42,6 +43,7 @@ NOTE: 要查看所有平台，请将*平台生命周期*过滤器更改为*全�
 
 
 
+[[checking-cisco-equipment-support]]
 == 检查 Cisco 设备支持
 
 Cisco 在 Cisco 产品支持页面上提供销售终止和支持终止日期。

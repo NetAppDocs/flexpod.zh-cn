@@ -18,6 +18,7 @@ NetApp 支持多个可选组件，可进一步增强 FlexPod 数据中心架构�
 
 
 
+[[metrocluster]]
 == MetroCluster
 
 FlexPod 支持两种 NetApp MetroCluster 软件版本，可在双节点或四节点集群配置中实现持续可用性。MetroCluster 可为关键工作负载提供同步复制。它需要使用连接到 Cisco 交换机的双站点配置。对于 MetroCluster FC ，站点之间支持的最大距离约为 186 英里（ 300 公里），对于 MetroCluster IP ，支持的最大距离约为 435 英里（ 700 公里）。下图分别展示了采用 NetApp MetroCluster 架构的 FlexPod 数据中心和采用 NetApp MetroCluster IP 架构的 FlexPod 数据中心。
@@ -50,6 +51,7 @@ image:dc-tech-spec_image12.png["错误：缺少图形映像"]
 
 
 
+[[end-to-end-fc-nvme]]
 == 端到端 FC-NVMe
 
 端到端 FC-NVMe 可无缝扩展客户的现有 SAN 基础架构以实现实时应用程序，同时提高 IOPS 和吞吐量并降低延迟。
@@ -66,6 +68,7 @@ image:dc-tech-spec_image3.png["错误：缺少图形映像"]
 
 
 
+[[fc-san-boot-through-cisco-mds]]
 == 通过 Cisco MDS 启动 FC SAN
 
 为了通过使用专用 SAN 网络提高可扩展性， FlexPod 通过 Cisco MDS 交换机和 Nexus 交换机支持 FC ，并支持 Cisco Nexus 93108TC-FX 等 FC 。Cisco MDS 中的 FC SAN 启动选项具有以下许可和硬件要求：
@@ -85,6 +88,7 @@ image:dc-tech-spec_image5.png["错误：缺少图形映像"]
 
 
 
+[[fc-san-boot-with-cisco-nexus]]
 == 使用 Cisco Nexus 启动 FC SAN
 
 经典 FC SAN 启动选项具有以下许可和硬件要求：
@@ -107,6 +111,7 @@ image:dc-tech-spec_image6.png["错误：缺少图形映像"]
 
 
 
+[[fcoe-san-boot-option]]
 == FCoE SAN 启动选项
 
 FCoE SAN 启动选项具有以下许可和硬件要求：
@@ -128,6 +133,7 @@ image:dc-tech-spec_image7.png["错误：缺少图形映像"]
 
 
 
+[[iscsi-boot-option]]
 == iSCSI 启动选项
 
 iSCSI 启动选项具有以下许可和硬件要求：
@@ -143,6 +149,7 @@ image:dc-tech-spec_image8.png["错误：缺少图形映像"]
 
 
 
+[[cisco-ucs-direct-connect-with-netapp-storage]]
 == Cisco UCS 直接连接到 NetApp 存储
 
 NetApp AFF 和 FAS 控制器可以直接连接到 Cisco UCS 互联阵列，而无需任何上游 SAN 交换机。

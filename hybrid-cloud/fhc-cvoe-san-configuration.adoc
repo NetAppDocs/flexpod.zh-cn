@@ -23,6 +23,7 @@ NOTE: 以下配置步骤特定于此解决方案 中使用的CentOS 8主机。
 
 
 
+[[netapp-host-utility-kit]]
 == NetApp主机实用程序套件
 
 NetApp建议在连接到和访问NetApp存储系统的主机的操作系统上安装NetApp Host Utility Kit (Host Utilities)。支持本机Microsoft多路径I/O (MPIO)。操作系统必须支持多路径的非对称逻辑单元访问(ALUA)。安装Host Utilities可为NetApp存储配置主机总线适配器(HBA)设置。
@@ -34,6 +35,7 @@ NetApp建议在连接到和访问NetApp存储系统的主机的操作系统上�
 ....
 
 
+[[discover-ontap-storage]]
 == 发现ONTAP 存储
 
 确保iSCSI服务在应进行登录时正在运行。要为目标上的特定门户或目标上的所有门户设置登录模式、请使用 `iscsiadm` 命令：
@@ -59,6 +61,7 @@ Healthcare_SVM                       /dev/sdc host34  iSCSI    200g    cDOT
 ....
 
 
+[[configure-multipathing]]
 == 配置多路径
 
 设备映射程序多路径(DM-Multipath)是Linux中的本机多路径实用程序。它可用于实现冗余并提高性能。它可以聚合或组合服务器和存储之间的多个I/O路径、从而在操作系统级别创建一个设备。
@@ -116,6 +119,7 @@ NOTE: 有关这些步骤的详细信息、请参见 https://docs.netapp.com/us-e
 
 
 
+[[create-physical-volume]]
 == 创建物理卷
 
 使用 `pvcreate` 用于初始化块设备以用作物理卷的命令。初始化类似于格式化文件系统。
@@ -126,6 +130,7 @@ Physical volume "/dev/sdb" successfully created.
 ....
 
 
+[[create-volume-group]]
 == 创建卷组
 
 要从一个或多个物理卷创建卷组、请使用 `vgcreate` 命令：此命令将按名称创建一个新卷组、并至少向其中添加一个物理卷。
@@ -161,6 +166,7 @@ Volume group "datavg" successfully created.
 ....
 
 
+[[create-logical-volume]]
 == 创建逻辑卷
 
 创建逻辑卷时、系统会使用卷组中的物理卷上的可用块区从卷组中划分逻辑卷。
@@ -173,6 +179,7 @@ Logical volume "datalv" created.
 
 
 
+[[create-file-system]]
 == 创建文件系统
 
 ....
@@ -190,6 +197,7 @@ realtime =none                   extsz=4096   blocks=0, rtextents=0
 ....
 
 
+[[make-folder-to-mount]]
 == 创建要挂载的文件夹
 
 ....
@@ -197,6 +205,7 @@ realtime =none                   extsz=4096   blocks=0, rtextents=0
 ....
 
 
+[[mount-the-file-system]]
 == 挂载文件系统
 
 ....
@@ -219,6 +228,7 @@ tmpfs                       1620652       0   1620652   0% /run/user/0
 
 
 
+[[data-generation]]
 == 数据生成
 
  `Dgen.pl`是一个用于 EHR I/O 模拟器 (GenerateIO) 的 perl 脚本数据生成器。 LUN 内的数据由 EHR 生成。 `Dgen.pl`脚本。该脚本旨在创建与 EHR 数据库中的数据类似的数据。
@@ -240,6 +250,7 @@ Filesystem                 1K-blocks  Used       Available  Use%  Mounted on
 
 
 
+[[configure-snapmirror-replication-between-on-premises-ontap-and-cloud-volumes-ontap]]
 == 在内部ONTAP 和Cloud Volumes ONTAP 之间配置SnapMirror复制
 
 NetApp SnapMirror 可通过 LAN 或 WAN 高速复制数据，从而在虚拟和传统环境中实现高数据可用性和快速数据复制。在将数据复制到 NetApp 存储系统并持续更新二级数据时，您的数据将保持最新，并在需要时保持可用。不需要外部复制服务器。

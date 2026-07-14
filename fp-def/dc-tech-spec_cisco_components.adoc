@@ -18,6 +18,7 @@ Cisco 为 FlexPod 的设计和架构做出了重大贡献，涵盖了解决方�
 
 
 
+[[cisco-ucs-fabric-interconnect-options]]
 == Cisco UCS 互联阵列选项
 
 FlexPod 架构需要冗余互联阵列。将多个 Cisco UCS 机箱添加到一对互联阵列时，请记住，环境中的最大机箱数由架构和端口限制决定。
@@ -35,6 +36,7 @@ FlexPod 架构需要冗余互联阵列。将多个 Cisco UCS 机箱添加到一�
 |===
 
 
+[[cisco-ucs-6454]]
 === Cisco UCS 6454
 
 Cisco UCS 6454 系列提供线速，低延迟，无损 10/25/40/100GbE 以太网和 FCoE 连接，以及支持以太网或 FC 操作的统一端口。44 个 10/25Gbps 端口可作为 10Gbps 或 25Gbps 融合以太网运行，其中 8 个是统一端口， FC 可在 8/16/32Gbps 下运行。对于传统连接，四个端口以 1/25Gbps 的速率运行，六个 QSFP 端口用作 40/100Gbps 上行链路端口或分支端口。您可以与支持 100Gbps 适配器的 NetApp 存储控制器建立 100Gbps 端到端网络连接。有关适配器和平台支持的信息，请参见 https://hwu.netapp.com/Adapter/Index["NetApp Hardware Universe"^]。
@@ -45,6 +47,7 @@ Cisco UCS 6454 系列提供线速，低延迟，无损 10/25/40/100GbE 以太网
 
 
 
+[[cisco-ucs-b-series-chassis-option]]
 == Cisco UCS B 系列机箱选项
 
 要使用 Cisco UCS B 系列刀片式服务器，您必须具有 Cisco UCS B 系列机箱。下表介绍了 Cisco UCS B 系列机箱选项。
@@ -59,6 +62,7 @@ Cisco UCS 6454 系列提供线速，低延迟，无损 10/25/40/100GbE 以太网
 
 
 
+[[cisco-ucs-b-series-blade-server-options]]
 == Cisco UCS B 系列刀片式服务器选项
 
 Cisco UCS B 系列刀片式服务器提供半宽和全宽两种型号，并提供各种 CPU ，内存和 I/O 选项。下表列出的部件号适用于基础服务器。它们不包括 CPU ，内存，驱动器或夹层适配器卡。FlexPod 架构中提供并支持多个配置选项。
@@ -73,6 +77,7 @@ Cisco UCS B 系列刀片式服务器提供半宽和全宽两种型号，并提�
 
 
 
+[[cisco-ucs-x-series-chassis-option]]
 == Cisco UCS X 系列机箱选项
 
 要使用 Cisco UCS X 系列计算节点，您必须使用 Cisco UCS X 系列机箱。下表介绍了 Cisco UCS X 系列机箱选项。
@@ -87,6 +92,7 @@ Cisco UCS B 系列刀片式服务器提供半宽和全宽两种型号，并提�
 
 
 
+[[cisco-ucs-x-series-device-options]]
 == Cisco UCS X 系列设备选项
 
 Cisco UCS X 系列计算节点具有各种 CPU ，内存和 I/O 选项。下表列出的部件号适用于基础节点。它们不包括 CPU ，内存，驱动器或夹层适配器卡。FlexPod 架构中提供并支持多个配置选项。
@@ -99,6 +105,7 @@ Cisco UCS X 系列计算节点具有各种 CPU ，内存和 I/O 选项。下表�
 |===
 
 
+[[cisco-ucs-c-series-rack-server-options]]
 == Cisco UCS C 系列机架式服务器选项
 
 Cisco UCS C 系列机架式服务器提供一个和两个机架单元（ RU ）型号，并提供各种 CPU ，内存和 I/O 选项。下表中列出的部件号适用于基础服务器。它们不包括 CPU ，内存，驱动器，外设组件互连 Express （ PCIe ）卡或 Cisco Fabric Extender 。FlexPod 架构中提供并支持多个配置选项。
@@ -124,6 +131,7 @@ Cisco UCS C 系列机架式服务器提供一个和两个机架单元（ RU ）�
 
 
 
+[[cisco-nexus-5000-series-switch-options]]
 == Cisco Nexus 5000 系列交换机选项
 
 在 FlexPod 架构中需要使用冗余 Cisco Nexus 5000 ， 7000 或 9000 系列交换机。下表列出的部件号适用于 Cisco Nexus 5000 系列机箱，不包括 SFP 模块，附加 FC 或以太网模块。
@@ -145,6 +153,7 @@ Cisco UCS C 系列机架式服务器提供一个和两个机架单元（ RU ）�
 |===
 
 
+[[cisco-nexus-7000-series-switch-options]]
 == Cisco Nexus 7000 系列交换机选项
 
 在 FlexPod 架构中需要使用冗余 Cisco Nexus 5000 ， 7000 或 9000 系列交换机。下表列出的部件号适用于 Cisco Nexus 7000 系列机箱；不包括 SFP 模块，线卡或电源，但包括风扇托架。
@@ -166,6 +175,7 @@ Cisco UCS C 系列机架式服务器提供一个和两个机架单元（ RU ）�
 |===
 
 
+[[cisco-nexus-9000-series-switch-options]]
 == Cisco Nexus 9000 系列交换机选项
 
 在 FlexPod 架构中需要使用冗余 Cisco Nexus 5000 ， 7000 或 9000 系列交换机。下表列出的部件号适用于 Cisco Nexus 9000 系列机箱，不包括 SFP 模块或以太网模块。
@@ -199,6 +209,7 @@ NOTE: 某些 Cisco Nexus 9000 系列交换机还具有其他变体。FlexPod 解
 
 
 
+[[cisco-apic-options]]
 == Cisco APIC 选项
 
 部署 Cisco ACI 时，除了一节中的各项之外，还必须配置三个 Cisco APIC link:dc-tech-spec_technical_specifications_and_references.html#cisco-nexus-9000-series-switches["Cisco Nexus 9000 系列交换机"]。有关 Cisco APIC 大小的详细信息，请参见 http://www.cisco.com/c/en/us/products/collateral/cloud-systems-management/application-policy-infrastructure-controller-apic/datasheet-c78-732414.html["Cisco Application Centric Infrastructure 产品规格。"^]
@@ -207,6 +218,7 @@ NOTE: 某些 Cisco Nexus 9000 系列交换机还具有其他变体。FlexPod 解
 
 
 
+[[cisco-nexus-fabric-extender-options]]
 == Cisco Nexus 阵列扩展器选项
 
 对于使用 C 系列服务器的大型 FlexPod 架构，建议使用冗余 Cisco Nexus 2000 系列机架式 FEX 。下表介绍了一些 Cisco Nexus FEX 选项。此外，还支持其他 FEX 型号。有关详细信息，请参见 https://ucshcltool.cloudapps.cisco.com/public/["Cisco UCS 硬件和软件兼容性列表"^]。
@@ -228,6 +240,7 @@ NOTE: 某些 Cisco Nexus 9000 系列交换机还具有其他变体。FlexPod 解
 |===
 
 
+[[cisco-mds-options]]
 == Cisco MDS 选项
 
 Cisco MDS 交换机是 FlexPod 架构中的一个可选组件。在 FC SAN 中实施 Cisco MDS 交换机时，需要使用冗余 SAN 交换机网络结构。下表列出了部分受支持的 Cisco MDS 交换机的部件号和详细信息。请参见 https://mysupport.netapp.com/matrix/["NetApp IMT"^] 和 https://ucshcltool.cloudapps.cisco.com/public/["Cisco 硬件和软件兼容性列表"^] 有关支持的 SAN 交换机的完整列表。
@@ -246,6 +259,7 @@ Cisco MDS 交换机是 FlexPod 架构中的一个可选组件。在 FC SAN 中�
 |===
 
 
+[[cisco-software-licensing-options]]
 == Cisco 软件许可选项
 
 要在 Cisco Nexus 交换机上启用存储协议，需要许可证。Cisco Nexus 5000 和 7000 系列交换机都需要存储服务许可证才能为 SAN 启动实施启用 FC 或 FCoE 协议。Cisco Nexus 9000 系列交换机当前不支持 FC 或 FCoE 。
@@ -272,6 +286,7 @@ Cisco MDS 交换机是 FlexPod 架构中的一个可选组件。在 FC SAN 中�
 |===
 
 
+[[cisco-support-licensing-options]]
 == Cisco 支持许可选项
 
 FlexPod 架构中的所有 Cisco 设备都需要有效的 SMARTnet 支持合同。

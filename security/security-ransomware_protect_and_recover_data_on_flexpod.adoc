@@ -18,6 +18,7 @@ summary: 本节介绍在发生攻击时如何恢复最终用户的数据，以�
 
 
 
+[[testbed-overview]]
 == 测试台概述
 
 为了展示 FlexPod 的检测，修复和预防，我们根据编写本文档时提供的最新平台 CVD 中指定的准则构建了一个测试台： https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_vmware_netappaffa.html["采用 VMware vSphere 6.7 U1 ， Cisco UCS 第四代和 NetApp AFF A 系列 CVD 的 FlexPod 数据中心"^]。
@@ -26,6 +27,7 @@ summary: 本节介绍在发生攻击时如何恢复最终用户的数据，以�
 
 
 
+[[state-of-vm-and-its-files-prior-to-an-attack]]
 == 发生攻击前的虚拟机状态及其文件
 
 本节显示了在对虚拟机进行攻击之前文件的状态以及映射到该虚拟机的 CIFS 共享。
@@ -44,6 +46,7 @@ image:security-ransomware_image5.png["错误：缺少图形映像"]
 
 
 
+[[deduplication-and-snapshot-information-before-an-attack]]
 == 攻击前的重复数据删除和 Snapshot 信息
 
 在检测阶段，系统会指示并参考 Snapshot 副本在攻击之前的存储效率详细信息和大小。
@@ -66,6 +69,7 @@ image:security-ransomware_image9.png["错误：缺少图形映像"]
 
 
 
+[[wannacry-infection-on-vm-and-cifs-share]]
 == VM 和 CIFS 共享上的 WannaCry 感染
 
 在本节中，我们将介绍 WannaCry 恶意软件是如何引入 FlexPod 环境的，以及随后观察到的系统更改。
@@ -84,6 +88,7 @@ image:security-ransomware_image11.png["错误：缺少图形映像"]
 
 
 
+[[case-1-wannacry-encrypts-the-file-system-within-the-vm-and-mapped-cifs-share]]
 === 案例 1 ： WannaCry 对 VM 和映射的 CIFS 共享中的文件系统进行加密
 
 本地文件系统和映射的 CIFS 共享已被 WannaCry 恶意软件加密。
@@ -166,6 +171,7 @@ image:security-ransomware_image24.png["错误：缺少图形映像"]
 
 
 
+[[case-2-wannacry-encrypts-file-system-within-the-vm-and-tries-to-encrypt-the-mapped-cifs-share-that-is-protected-through-fpolicy]]
 === 案例 2 ： WannaCry 对虚拟机中的文件系统进行加密，并尝试对通过 FPolicy 保护的映射 CIFS 共享进行加密
 
 

@@ -18,6 +18,7 @@ NetApp 存储控制器在 FlexPod 快速架构中为启动和应用程序数据�
 
 
 
+[[netapp-storage-controller-options]]
 == NetApp 存储控制器选项
 
 在 FlexPod Express 架构中需要冗余 AFF、ASA 或 FAS 系列控制器。控制器运行 ONTAP 软件。订购存储控制器时，可以在控制器上预加载首选软件版本。对于 ONTAP，集群可以部署一对集群互连交换机，也可以采用无交换机集群配置进行部署。
@@ -33,13 +34,13 @@ NOTE: 只有双节点配置才支持无交换机集群配置。具有 4 个以�
 | NetApp 入门级存储系列，适用于 FlexPod Express | 型号 | 技术规格 
 
 
-.2+| AFF A-Series | A20 .3+| https://www.netapp.com/pdf.html?item=/media/7828-ds-3582-aff-a-series-ai-era.pdf["AFF 文档"] 
+.2+| AFF A-Series | A20 .2+| https://www.netapp.com/pdf.html?item=/media/7828-ds-3582-aff-a-series-ai-era.pdf["AFF A-Series 文档"] 
 
 
 | A30 
 
 
-| AFF C 系列 | C30 
+| AFF C 系列 | C30 | https://www.netapp.com/pdf.html?item=/media/81583-ds-4240-aff-c-series.pdf["AFF C 系列文档"] 
 
 
 .2+| ASA A 系列 | A20 .3+| https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf["ASA 文档"] 
@@ -51,18 +52,20 @@ NOTE: 只有双节点配置才支持无交换机集群配置。具有 4 个以�
 | ASA C 系列 | C30 
 
 
-.2+| FAS | FAS 2750 .2+| https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf["FAS 文档"] 
+.3+| FAS | FAS 2750 .3+| https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf["FAS 文档"] 
 
 
 | FAS 2820 
+
+
+| FAS 50 
 |===
 
 
+[[netapp-disk-shelves-and-disks]]
 == NetApp 磁盘架和磁盘
 
-存储控制器至少需要一个 NetApp 磁盘架。
-
-选定的 NetApp 磁盘架类型决定了该磁盘架中可用的驱动器类型。
+对于没有内置磁盘架的存储控制器，至少需要一个 NetApp 磁盘架。所选 NetApp 磁盘架类型决定了该磁盘架内可用的驱动器类型。
 
 
 NOTE: 有关所有磁盘架和磁盘部件号，请咨询您的销售代表。
@@ -91,6 +94,7 @@ NOTE: 有关所有磁盘架和磁盘部件号，请咨询您的销售代表。
 |===
 
 
+[[netapp-software-licensing-options]]
 == NetApp 软件许可选项
 
 下表列出了 NetApp 软件许可选项。
@@ -108,6 +112,7 @@ NOTE: 有关所有磁盘架和磁盘部件号，请咨询您的销售代表。
 
 
 
+[[netapp-support-licensing-options]]
 == NetApp 支持许可选项
 
 SupportEdge Premium 许可证是必需的，这些许可证的部件号因 FlexPod 快速设计中选择的选项而异。

@@ -24,6 +24,7 @@ NetApp 公司 Arvind Ramakrishnan
 
 
 
+[[how-does-ransomware-work]]
 == 勒索软件的工作原理是什么？
 
 以下步骤介绍勒索软件如何使用加密技术对受害者的数据进行加密，而不会为受害者提供任何解密或恢复范围：
@@ -39,6 +40,7 @@ NetApp 公司 Arvind Ramakrishnan
 
 
 
+[[challenges]]
 == 挑战
 
 个人和组织在遭受勒索软件攻击时面临以下挑战：
@@ -53,6 +55,7 @@ NetApp 公司 Arvind Ramakrishnan
 
 
 
+[[who-is-at-risk]]
 == 谁面临风险？
 
 任何人都可能受到勒索软件的攻击，包括个人和大型组织。如果组织未实施定义明确的安全措施和实践，则更容易受到此类攻击。攻击对大型组织的影响可能比个人承受的影响要大几倍。
@@ -71,6 +74,7 @@ NetApp 公司 Arvind Ramakrishnan
 
 
 
+[[how-does-ransomware-enter-a-system-or-spread]]
 == 勒索软件如何进入系统或传播？
 
 勒索软件可以通过多种方式进入系统或传播到其他系统。在当今世界，几乎所有系统都通过互联网， LAN ， WAN 等相互连接。在这些系统之间生成和交换的数据量只会增加。
@@ -88,6 +92,7 @@ NetApp 公司 Arvind Ramakrishnan
 
 
 
+[[consequences-of-data-loss]]
 == 数据丢失的后果
 
 数据丢失的后果或影响可能会比企业预期的范围更广。根据停机持续时间或组织无法访问其数据的时间段，这些影响可能会有所不同。攻击持续时间越长，对组织收入，品牌和声誉的影响就越大。企业还可能面临法律问题和生产率急剧下降。
@@ -96,6 +101,7 @@ NetApp 公司 Arvind Ramakrishnan
 
 
 
+[[financial-effects]]
 == 财务影响
 
 据最近的一份报告称 https://www.mcafee.com/enterprise/en-us/assets/executive-summaries/es-economic-impact-cybercrime.pdf["McAfee 报告"^]网络犯罪造成的全球成本约为 6000 亿美元，约占全球 GDP 的 0.8% 。与全球互联网经济增长 4.2 万亿美元相比，这一金额相当于对增长征收 14% 的税。
@@ -104,6 +110,7 @@ NetApp 公司 Arvind Ramakrishnan
 
 
 
+[[what-is-the-solution]]
 == 什么是解决方案？
 
 只有通过实施主动式灾难恢复计划，才能在最短停机时间内从勒索软件攻击中恢复。拥有从攻击中恢复的能力是不错的，但完全防止攻击是理想之选。

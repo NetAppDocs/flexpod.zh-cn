@@ -18,6 +18,7 @@ summary: 本节介绍每个 FlexPod 快速组件的其他重要技术规格。
 
 
 
+[[cisco-ucs-x-series-direct-chassis]]
 == Cisco UCS X-Series Direct 机箱
 
 Cisco UCS X-Series Direct 机箱的技术规格如下表所示，包括以下组件：
@@ -47,6 +48,7 @@ Cisco UCS X-Series Direct 机箱的技术规格如下表所示，包括以下组
 
 
 
+[[cisco-ucs-x-series-direct-compute-node]]
 == Cisco UCS X-Series Direct 计算节点
 
 Cisco UCS X-Series 计算节点的技术规格包括以下组件：
@@ -86,9 +88,10 @@ Cisco UCS X-Series 计算节点的技术规格包括以下组件：
 |===
 
 
-== Cisco UCS X-Series Direct 交换矩阵互联
+[[cisco-ucs-x-series-direct-fabric-interconnect]]
+== Cisco UCS X系列直接交换矩阵互连
 
-Cisco UCS X 系列交换矩阵互连的技术规格包括外形规格、端口和扩展插槽总数以及吞吐量。下表说明了 Cisco UCS X 系列交换矩阵互连数据表。
+Cisco UCS X-Series Direct 交换矩阵互连的技术规格包括外形规格、端口和扩展插槽总数以及吞吐量。有关 Cisco UCS X-Series Direct 交换矩阵互连数据表，请参见下表。
 
 |===
 | 组件 | Cisco UCS 产品规格 
@@ -98,9 +101,61 @@ Cisco UCS X 系列交换矩阵互连的技术规格包括外形规格、端口�
 |===
 
 
+[[cisco-ucs-xe9305-chassis-cisco-unified-edge]]
+== Cisco UCS XE9305 机箱（Cisco Unified Edge）
+
+Cisco UCS XE9305 机箱的技术规格如下表所示，包括以下组件：
+
+|===
+| 组件 | Cisco UCS XE9305 机箱 
+
+
+| 机架单元 | 3. 
+
+
+| 最大节点数 | 5 个 Cisco UCS XE130c M8 计算节点或 2 个 Cisco UCS XE150c M8 计算节点 
+|===
+有关详细信息，请参见 link:https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-xe9305-m8-chassis-spec-sheet.pdf["Cisco UCS XE9305 机箱数据表"^]。
+
+
+
+[[cisco-ucs-compute-nodes-for-cisco-unified-edge]]
+== 适用于 Cisco Unified Edge 的 Cisco UCS 计算节点
+
+Cisco Unified Edge 的 Cisco UCS 计算节点的技术规格包括以下组件：
+
+* 处理器插槽数量
+* 处理器支持
+* GPU 支持
+* 内存容量
+* 大小和速度
+* I/O 最大吞吐量
+* 外形规格
+
+
+计算节点还支持 GPU，XE130c M8 支持 NVIDIA L4 GPU，XE150c M8 支持 NVIDIA RTX PRO 4500 / 6000 Blackwell Server Edition GPU。有关 Cisco UCS Unified Edge 计算节点的技术规格，请参见下表。
+
+|===
+
+
+| 组件 | Cisco UCS 产品规格 
+
+
+| Cisco UCS XE130c M8 计算节点 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-xe130c-m8-compute-node-spec-sheet.pdf["Cisco UCS XE130c M8 计算节点"] 
+
+
+| Cisco UCS XE150c M8 计算节点 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/unified-edge/cisco-ucs-xe150c-m8-compute-node.pdf["Cisco UCS XE150c M8 计算节点"] 
+|===
+有关其他详细信息，请参见 link:https://www.cisco.com/c/en/us/products/servers-unified-computing/unified-edge/datasheet-listing.html["Cisco Unified Edge 数据表列表"^]。
+
+
+
+[[cisco-ucs-c-series-rack-servers]]
 == Cisco UCS C 系列机架式服务器
 
-Cisco UCS C 系列机架式服务器的技术规格包括处理器支持、最大内存容量、PCIe 插槽数量和外形规格。有关兼容 UCS 服务器型号的其他详细信息，请参见 https://ucshcltool.cloudapps.cisco.com/public/["Cisco 硬件兼容性"^]列表。下表显示了 C 系列机架式服务器数据表。
+Cisco UCS C 系列机架式服务器的技术规格包括处理器支持、最大内存容量、PCIe 插槽数量和外形规格。有关兼容 UCS 服务器型号的其他详细信息，请参见 https://ucshcltool.cloudapps.cisco.com/public/["Cisco 硬件兼容性"^]列表。
+
+有关 Cisco UCS C 系列机架式服务器的技术规格，请参见下表。
 
 |===
 | 组件 | Cisco UCS 产品规格 
@@ -128,6 +183,7 @@ Cisco UCS C 系列机架式服务器的技术规格包括处理器支持、最�
 |===
 
 
+[[cisco-nexus-switches]]
 == Cisco Nexus 交换机
 
 Cisco Nexus 交换机的技术规格包含在每种型号的数据表中。规格包括外形尺寸；主控引擎、交换矩阵模块和线路卡插槽的数量；以及最大端口数量。这些数据表可以在下表中找到。
@@ -143,12 +199,14 @@ Cisco Nexus 交换机的技术规格包含在每种型号的数据表中。规�
 |===
 
 
+[[netapp-storage-controllers]]
 == NetApp 存储控制器
 
 NetApp 存储控制器的技术规格包括平台配置、最大裸容量、内存、外形尺寸、ONTAP 版本要求、磁盘机架等。
 
 
 
+[[netapp-aff-a-series]]
 === NetApp AFF A 系列
 
 入门级 NetApp AFF A 系列存储控制器支持在 FlexPod Express 中使用。更多信息，请参见 https://www.netapp.com/pdf.html?item=/media/7828-ds-3582-aff-a-series-ai-era.pdf["AFF A 系列技术规格"^]数据表和 https://hwu.netapp.com/["NetApp Hardware Universe"^]。有关特定 AFF 型号的详细信息，请参阅下表中列出的特定于平台的文档。
@@ -164,6 +222,7 @@ NetApp 存储控制器的技术规格包括平台配置、最大裸容量、内�
 |===
 
 
+[[netapp-aff-c-series]]
 === NetApp AFF C-Series
 
 入门级 NetApp AFF C 系列存储控制器支持在 FlexPod Express 中使用。更多信息，请参见 https://www.netapp.com/pdf.html?item=/media/81583-ds-4240-aff-c-series.pdf["AFF C 系列技术规格"^]数据表和 https://hwu.netapp.com/["NetApp Hardware Universe"^]。有关特定 AFF 型号的详细信息，请参阅下表中列出的特定于平台的文档。
@@ -176,6 +235,7 @@ NetApp 存储控制器的技术规格包括平台配置、最大裸容量、内�
 |===
 
 
+[[netapp-asa-a-series]]
 === NetApp ASA A 系列
 
 NetApp ASA A 系列存储控制器的入门级型号支持在 FlexPod Express 中使用。更多信息可在 https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf["NetApp ASA A 系列技术规格"^]数据表和 https://hwu.netapp.com/["NetApp Hardware Universe"^]中找到。有关特定 ASA 型号的详细信息，请参阅下表中列出的特定于平台的文档。
@@ -191,6 +251,7 @@ NetApp ASA A 系列存储控制器的入门级型号支持在 FlexPod Express �
 |===
 
 
+[[netapp-asa-c-series]]
 === NetApp ASA C 系列
 
 NetApp ASA C 系列存储控制器的入门级机型支持在 FlexPod Express 中使用。更多信息请参见  https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf["NetApp ASA C 系列技术规格"^] 数据手册以及  https://hwu.netapp.com/["NetApp Hardware Universe"^]。有关特定 ASA 型号的详细信息，请参见下表中所列的特定于平台的文档。
@@ -203,6 +264,7 @@ NetApp ASA C 系列存储控制器的入门级机型支持在 FlexPod Express �
 |===
 
 
+[[netapp-fas-series]]
 === NetApp FAS 系列
 
 入门级 FAS 存储控制器支持在 FlexPod Express 中使用。有关所有 FAS 系列存储控制器的详细规格，请参阅 https://hwu.netapp.com/["NetApp Hardware Universe"^]。有关特定 FAS 型号的详细信息，请参阅下表中列出的特定于平台的文档。
@@ -215,9 +277,13 @@ NetApp ASA C 系列存储控制器的入门级机型支持在 FlexPod Express �
 
 
 | FAS2820 系列 | https://docs.netapp.com/us-en/ontap-systems/fas2800/overview.html["FAS2820 关键规格"^] 
+
+
+| FAS50 系列 | https://docs.netapp.com/us-en/ontap-systems/fas50/overview.html["FAS50 关键规格"^] 
 |===
 
 
+[[netapp-disk-shelves]]
 === NetApp 磁盘架
 
 NetApp 磁盘架的技术规格包括外形尺寸、每个盘柜的驱动器数量和磁盘架 I/O 模块；此文档可在下表中找到。有关详细信息，请参阅 https://hwu.netapp.com/["NetApp Hardware Universe"^]。
@@ -242,6 +308,7 @@ NetApp 磁盘架的技术规格包括外形尺寸、每个盘柜的驱动器数�
 |===
 
 
+[[netapp-drives]]
 === NetApp 驱动器
 
 NetApp 驱动器的技术规格包括外形规格大小，磁盘容量，磁盘 RPM ，支持控制器和 ONTAP 版本要求。这些规格可在的驱动器部分中找到 http://hwu.netapp.com/Drives/Index?queryId=1581392["NetApp Hardware Universe"^]。

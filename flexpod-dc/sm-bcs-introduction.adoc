@@ -21,6 +21,7 @@ NetApp 公司 Jyh-shing Chen
 
 
 
+[[flexpod-solution]]
 == FlexPod 解决方案
 
 FlexPod 是一种最佳实践的融合基础架构数据中心架构，其中包括 Cisco 和 NetApp 的以下组件：
@@ -42,6 +43,7 @@ FlexPod CVD 和 NVA 在其创建过程中融入了广泛的测试和验证，提
 
 
 
+[[disaster-recovery-and-business-continuity]]
 == 灾难恢复和业务连续性
 
 企业可以采用多种方法来确保应用程序和数据服务能够从灾难中快速恢复。制定灾难恢复（ DR ）和业务连续性（ Business Continuity ， BC ）计划，实施满足业务目标的解决方案 以及对灾难情形执行定期测试，可使企业在发生灾难后从灾难中恢复并继续提供关键业务服务。
@@ -54,6 +56,7 @@ FlexPod CVD 和 NVA 在其创建过程中融入了广泛的测试和验证，提
 
 
 
+[[recovery-point-objective-and-recovery-time-objective]]
 == 恢复点目标和恢复时间目标
 
 恢复点目标（ RPO ）用于衡量您可以承受的丢失数据量，以及可以将数据恢复到的时间点。如果采用每日备份计划，企业可能会丢失一天的数据，因为上次备份以来对数据所做的更改可能会在灾难中丢失。对于业务关键型和任务关键型数据服务，您可能需要零 RPO 以及相关的计划和基础架构来保护数据而不会丢失任何数据。
@@ -62,6 +65,7 @@ FlexPod CVD 和 NVA 在其创建过程中融入了广泛的测试和验证，提
 
 
 
+[[sm-bc]]
 == SM — BC
 
 从 ONTAP 9.8 开始，您可以使用 NetApp SM-BC 保护 SAN 工作负载，以实现透明的应用程序故障转移。您可以在两个 AFF 集群或两个 ASA 集群之间创建一致性组关系，以实现数据复制，从而实现零 RPO 和接近零 RTO 。

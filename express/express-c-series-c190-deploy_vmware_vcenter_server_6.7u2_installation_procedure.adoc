@@ -21,6 +21,7 @@ NOTE: FlexPod Express 使用 VMware vCenter Server 设备（ VCSA ）。
 
 
 
+[[download-the-vmware-vcenter-server-appliance]]
 == 下载 VMware vCenter Server 设备
 
 要下载 VMware vCenter Server Appliance （ VCSA ），请完成以下步骤：

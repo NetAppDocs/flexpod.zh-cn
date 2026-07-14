@@ -18,6 +18,7 @@ summary: Cisco Intersight 推出了新版本，可为您提供新功能，增强
 
 
 
+[[january-2024]]
 == 2024年1月
 
 * 使用参考工作流的NetApp存储编排现在可通过在GitHub中下载 https://github.com/ucs-compute-solutions/FlexPod-Intersight-Workflow["FlexPod Intersight工作流存储库"^]。有关GitHub中新参考工作流的详细信息、请参见 link:ci-qsg_use_cases.html["用例 2 ：使用参考工作流编排 NetApp 存储"^]。
@@ -25,6 +26,7 @@ summary: Cisco Intersight 推出了新版本，可为您提供新功能，增强
 
 
 
+[[november-2023]]
 == 2023年11月
 
 * 已在用户界面的"Inventory"部分下添加NVMe命名区页面。
@@ -32,6 +34,7 @@ summary: Cisco Intersight 推出了新版本，可为您提供新功能，增强
 
 
 
+[[august-2023]]
 == 2023年8月
 
 
@@ -44,6 +47,7 @@ NOTE: 需要升级到NetApp Active IQ Unified Manager 9.13GA、以确保与最�
 
 
 
+[[july-2023]]
 == 2023年7月
 
 
@@ -70,6 +74,7 @@ NOTE: 需要升级到NetApp Active IQ Unified Manager 9.13GA、以确保与最�
 
 
 
+[[june-2023]]
 == 2023年6月
 
 
@@ -80,6 +85,7 @@ NOTE: 需要升级到NetApp Active IQ Unified Manager 9.13RC1、以确保与最�
 
 
 
+[[april-2023]]
 == 2023年4月
 
 * 在用户界面的"Inventory"部分的"Policies"页面下添加了"Protection Policies"(SnapMirror)和"Snapshot Policies"选项卡。
@@ -92,6 +98,7 @@ NOTE: 需要升级到NetApp Active IQ Unified Manager 9.13RC1、以确保与最�
 
 
 
+[[january-2023]]
 == 2023年1月
 
 
@@ -103,6 +110,7 @@ NOTE: 要确保与最新版本的兼容性和完整功能、需要升级到NetAp
 
 
 
+[[august-2022]]
 == 2022年8月
 
 
@@ -120,6 +128,7 @@ NOTE: 要确保与最新版本的兼容性和完整功能、需要升级到NetAp
 
 
 
+[[july-2022]]
 == 2022年7月
 
 * 容量小工具中现在提供了改进的集群数据精简率视觉效果
@@ -139,6 +148,7 @@ NOTE: 要确保与最新版本的兼容性和完整功能、需要升级到NetAp
 
 
 
+[[april-2022]]
 == 2022 年 4 月
 
 
@@ -157,6 +167,7 @@ NOTE: 为了确保与未来版本兼容并提供完整的功能，建议您将 N
 
 
 
+[[january-2022]]
 == 2022 年 1 月
 
 * 为 NetApp Active IQ Unified Manager 9.10 或更高版本添加了基于事件的 Intersight 警报。
@@ -177,6 +188,7 @@ NOTE: 为了确保与未来版本兼容并提供完整的功能，建议您将 N
 
 
 
+[[october-2021]]
 == 2021年10月
 
 * 更新了 Cisco Intersight 中可用的 NetApp 存储任务列表。请参见 link:ci-qsg_use_cases.html["使用案例 3 使用无设计人员表单的自定义工作流"^] 有关 NetApp 存储任务的完整列表。
@@ -195,6 +207,7 @@ NOTE: 以上性能指标仅适用于通过 NetApp Active IQ Unified Manager 9.9 
 
 
 
+[[known-issues]]
 == 已知问题
 
 * 如果您使用的是AIQUM 9.11或更早版本、则存储列表页面上显示的值与存储常规页面上的容量条形图之间会出现差异。要解决此问题描述 、请升级到AIQUM 9.12或更高版本、以确保显示的容量值的准确性。

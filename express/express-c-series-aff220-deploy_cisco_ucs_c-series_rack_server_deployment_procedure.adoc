@@ -18,6 +18,7 @@ summary: 下一节详细介绍了用于配置 Cisco UCS C 系列独立机架服�
 
 
 
+[[perform-initial-cisco-ucs-c-series-standalone-server-setup-for-cisco-integrated-management-server]]
 == 对 Cisco 集成管理服务器执行初始 Cisco UCS C 系列独立服务器设置
 
 完成以下步骤以初始设置 Cisco UCS C 系列独立服务器的 CIMC 接口。
@@ -41,6 +42,7 @@ NOTE: 此验证中使用的 CIMC 版本为 CIMC 3.1.3 （ g ）。
 
 
 
+[[all-servers]]
 === 所有服务器
 
 . 将 Cisco 键盘，视频和鼠标（ KVM ）转换器（随服务器提供）连接到服务器正面的 KVM 端口。将 VGA 显示器和 USB 键盘插入相应的 KVM 转换器端口。
@@ -103,6 +105,7 @@ image:express-c-series-aff220-deploy_image10.png["错误：缺少图形映像"]
 
 
 
+[[configure-cisco-ucs-c-series-servers-iscsi-boot]]
 == 配置 Cisco UCS C 系列服务器 iSCSI 启动
 
 在此 FlexPod 快速配置中， VIC1387 用于 iSCSI 启动。
@@ -156,6 +159,7 @@ NOTE: 斜体表示每个 ESXi 主机唯一的变量。
 |===
 
 
+[[boot-order-configuration]]
 === 启动顺序配置
 
 要设置启动顺序配置，请完成以下步骤：
@@ -205,6 +209,7 @@ image:express-c-series-aff220-deploy_image12.png["错误：缺少图形映像"]
 
 
 
+[[disable-raid-controller-if-present]]
 === 禁用 RAID 控制器（如果存在）
 
 如果 C 系列服务器包含 RAID 控制器，请完成以下步骤。从 SAN 启动配置不需要 RAID 控制器。您也可以从服务器中物理删除 RAID 控制器。
@@ -220,12 +225,14 @@ image:express-c-series-aff220-deploy_image13.png["错误：缺少图形映像"]
 
 
 
+[[configure-cisco-vic1387-for-iscsi-boot]]
 == 为 iSCSI 启动配置 Cisco VIC1387
 
 以下配置步骤适用于用于 iSCSI 启动的 Cisco VIC 1387 。
 
 
 
+[[create-iscsi-vnics]]
 === 创建 iSCSI vNIC
 
 . 单击添加以创建 vNIC 。
@@ -326,6 +333,7 @@ NOTE: 请务必记录每个 vNIC 的 IQN 名称。您需要在后续步骤中使
 
 
 
+[[configure-vnics-for-esxi]]
 === 为 ESXi 配置 vNIC
 
 . 在 CIMC 界面浏览器窗口中，单击清单，然后单击右窗格上的 Cisco VIC 适配器。

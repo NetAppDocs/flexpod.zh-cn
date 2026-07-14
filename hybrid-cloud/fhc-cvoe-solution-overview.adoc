@@ -34,6 +34,7 @@ image:fhc-cvoe-image1.jpeg["Cloud Volumes ONTAP 提供了NetApp SnapMirror技术
 
 
 
+[[audience]]
 == audience
 
 本文档面向NetApp和合作伙伴解决方案工程师(SE)以及专业服务人员。NetApp假定读者具备以下背景知识：
@@ -45,6 +46,7 @@ image:fhc-cvoe-image1.jpeg["Cloud Volumes ONTAP 提供了NetApp SnapMirror技术
 
 
 
+[[solution-benefits]]
 == 解决方案的优势
 
 与NetApp Cloud Volumes ONTAP 集成的FlexPod 数据中心为医疗保健工作负载提供了以下优势：
@@ -57,6 +59,7 @@ image:fhc-cvoe-image1.jpeg["Cloud Volumes ONTAP 提供了NetApp SnapMirror技术
 
 
 
+[[solution-topology]]
 == 解决方案 拓扑
 
 本节描述解决方案的逻辑拓扑结构。下图表示由FlexPod本地环境、运行在 Amazon Web Services (AWS) 上的NetApp Cloud Volumes ONTAP (CVO) 和NetApp Console SaaS 平台组成的解决方案拓扑。
