@@ -40,7 +40,7 @@ NOTE: 必须为 Cisco UCS 服务器 A 和 Cisco UCS 服务器 B 完成此操作�
 . 在主菜单中，选择服务器选项卡。
 . 单击 Launch KVM Console 。
 +
-image:express-c-series-aff220-deploy_image21.png["错误：缺少图形映像"]
+image:express-c-series-aff220-deploy_image21.png[""]
 
 . 从虚拟 KVM 控制台中，选择 Virtual Media 选项卡。
 . 选择映射 CD/DVD 。
@@ -83,7 +83,7 @@ NOTE: 您可能需要先单击激活虚拟设备。如果出现提示，请选�
 . 阅读最终用户许可协议后，接受该协议并按 F11 继续安装。
 . 选择先前设置为 ESXi 安装磁盘的 NetApp LUN ，然后按 Enter 继续安装。
 +
-image:express-c-series-aff220-deploy_image22.png["错误：缺少图形映像"]
+image:express-c-series-aff220-deploy_image22.png[""]
 
 . 选择适当的键盘布局，然后按 Enter 键。
 . 输入并确认根密码，然后按 Enter 键。
@@ -112,7 +112,7 @@ image:express-c-series-aff220-deploy_image22.png["错误：缺少图形映像"]
 NOTE: 在 CIMC 中选择与 eth0 和 eth1 对应的端口。
 
 +
-image:express-c-series-aff220-deploy_image23.png["错误：缺少图形映像"]
+image:express-c-series-aff220-deploy_image23.png[""]
 
 . 选择 VLAN （可选）并按 Enter 键。
 . 输入 VLAN ID ` \<<mgmt_vlan_id>>` 。按 Enter 键。
@@ -211,7 +211,7 @@ image:express-c-series-aff220-deploy_image23.png["错误：缺少图形映像"]
 . 选择左侧的 Networking 。
 . 在右侧，选择 Virtual Switches 选项卡。
 +
-image:express-c-series-aff220-deploy_image24.png["错误：缺少图形映像"]
+image:express-c-series-aff220-deploy_image24.png[""]
 
 . 单击 iScsiBootvSwitch 。
 . 选择编辑设置。
@@ -242,7 +242,7 @@ NOTE: 在此配置中， vmnic2 和 vmnic3 用于 iSCSI 启动。如果 ESXi 主
 ** 为子网掩码输入 ` \<<var_hosta_iscsib_mask>>` 。
 ** 单击创建。
 +
-image:express-c-series-aff220-deploy_image25.png["错误：缺少图形映像"]
+image:express-c-series-aff220-deploy_image25.png[""]
 
 +
 
@@ -262,18 +262,18 @@ NOTE: 在 `iScsiBootPg- A` 上将 MTU 设置为 9000
 . 在左侧导航窗格中选择存储。单击适配器。
 . 选择 iSCSI 软件适配器，然后单击配置 iSCSI 。
 +
-image:express-c-series-aff220-deploy_image26.png["错误：缺少图形映像"]
+image:express-c-series-aff220-deploy_image26.png[""]
 
 . 在动态目标下，单击添加动态目标。
 +
-image:express-c-series-aff220-deploy_image27.png["错误：缺少图形映像"]
+image:express-c-series-aff220-deploy_image27.png[""]
 
 . 输入 IP 地址 `iscsi_lif01a` 。
 +
 ** 对 IP 地址 `iscsi_lif01b` ， `iscsi_lif02a` 和 `iscsi_lif02b` 重复上述步骤。
 ** 单击保存配置。
 +
-image:express-c-series-aff220-deploy_image28.png["错误：缺少图形映像"]
+image:express-c-series-aff220-deploy_image28.png[""]
 
 
 
@@ -290,7 +290,7 @@ NOTE: 您可以通过在 NetApp 集群上运行 `network interface show `命令�
 . 在左侧导航窗格中，选择网络。
 . 选择 vSwitch0 。
 +
-image:express-c-series-aff220-deploy_image29.png["错误：缺少图形映像"]
+image:express-c-series-aff220-deploy_image29.png[""]
 
 . 选择编辑设置。
 . 将 MTU 更改为 9000 。
@@ -305,7 +305,7 @@ image:express-c-series-aff220-deploy_image29.png["错误：缺少图形映像"]
 . 在左侧导航窗格中，选择网络。
 . 右键单击端口组选项卡。
 +
-image:express-c-series-aff220-deploy_image30.png["错误：缺少图形映像"]
+image:express-c-series-aff220-deploy_image30.png[""]
 
 . 右键单击 VM Network ，然后选择 Edit 。将 VLAN ID 更改为 ` \<<var_vm_traffic _vlan>>` 。
 . 单击添加端口组。
@@ -318,7 +318,7 @@ image:express-c-series-aff220-deploy_image30.png["错误：缺少图形映像"]
 
 . 单击 VMkernel NIC 选项卡。
 +
-image:express-c-series-aff220-deploy_image31.png["错误：缺少图形映像"]
+image:express-c-series-aff220-deploy_image31.png[""]
 
 . 选择添加 VMkernel NIC 。
 +
@@ -332,7 +332,7 @@ image:express-c-series-aff220-deploy_image31.png["错误：缺少图形映像"]
 ** 为子网掩码输入 ` \<<var_hosta_nfs_mask>>` 。
 ** 单击创建。
 +
-image:express-c-series-aff220-deploy_image32.png["错误：缺少图形映像"]
+image:express-c-series-aff220-deploy_image32.png[""]
 
 
 
@@ -349,7 +349,7 @@ image:express-c-series-aff220-deploy_image32.png["错误：缺少图形映像"]
 .. 输入 ` \<<var_hosta_vmotion_mask>>` 作为子网掩码。
 .. 确保在 IPv4 设置后选中 vMotion 复选框。
 +
-image:express-c-series-aff220-deploy_image33.png["错误：缺少图形映像"]
+image:express-c-series-aff220-deploy_image33.png[""]
 
 +
 
@@ -367,11 +367,11 @@ NOTE: 可以通过多种方法配置 ESXi 网络，包括在许可允许的情�
 
 . 单击左侧导航窗格中的存储，然后单击新建数据存储库。
 +
-image:express-c-series-aff220-deploy_image34.png["错误：缺少图形映像"]
+image:express-c-series-aff220-deploy_image34.png[""]
 
 . 选择挂载 NFS 数据存储库。
 +
-image:express-c-series-aff220-deploy_image35.png["错误：缺少图形映像"]
+image:express-c-series-aff220-deploy_image35.png[""]
 
 . 接下来，在提供 NFS 挂载详细信息页面中输入以下信息：
 +
@@ -401,14 +401,14 @@ image:express-c-series-aff220-deploy_image35.png["错误：缺少图形映像"]
 
 . 单击左侧导航窗格中的管理。在右窗格中选择 System ，然后单击 Time & Date 。
 +
-image:express-c-series-aff220-deploy_image36.png["错误：缺少图形映像"]
+image:express-c-series-aff220-deploy_image36.png[""]
 
 . 选择使用网络时间协议（启用 NTP 客户端）。
 . 选择 Start 和 Stop with Host 作为 NTP 服务启动策略。
 . 输入 ` \<<var_ntf>>` 作为 NTP 服务器。您可以设置多个 NTP 服务器。
 . 单击保存。
 +
-image:express-c-series-aff220-deploy_image37.png["错误：缺少图形映像"]
+image:express-c-series-aff220-deploy_image37.png[""]
 
 
 
@@ -421,11 +421,11 @@ image:express-c-series-aff220-deploy_image37.png["错误：缺少图形映像"]
 
 . 单击左侧导航窗格中的管理。在右窗格中选择 system ，然后单击 Swap 。
 +
-image:express-c-series-aff220-deploy_image38.png["错误：缺少图形映像"]
+image:express-c-series-aff220-deploy_image38.png[""]
 
 . 单击编辑设置。从数据存储库选项中选择 infra_swap 。
 +
-image:express-c-series-aff220-deploy_image39.png["错误：缺少图形映像"]
+image:express-c-series-aff220-deploy_image39.png[""]
 
 . 单击保存。
 
@@ -480,7 +480,7 @@ Value of HardwareAcceleratedMove is 1
 . 使用 ESX 命令行界面在 ESXi 主机上安装此插件。
 . 重新启动 ESXi 主机。
 +
-image:express-c-series-aff220-deploy_image40.png["错误：缺少图形映像"]
+image:express-c-series-aff220-deploy_image40.png[""]
 
 
 

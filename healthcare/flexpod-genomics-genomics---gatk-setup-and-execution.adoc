@@ -46,7 +46,7 @@ link:flexpod-genomics-solution-infrastructure-hardware-and-software-components.h
 
 下图显示了从采样到变体标识，标注和预测的过程。
 
-image:flexpod-genomics-image8.png["错误：缺少图形映像"]
+image:flexpod-genomics-image8.png[""]
 
 人类基因组项目于 2003 年 4 月完成，该项目对公有域中的人类基因组序列进行了高质量的模拟。这种参考基因组引发了基因组功能研究和开发的爆炸式增长。几乎每一种人类疾病都有其基因特征。直到最近，医生一直在利用基因预测和确定诸如镰状细胞性贫血之类的缺陷，这是由一个基因的变化所导致的某种继承模式引起的。人类基因组项目所提供的数据的宝贵财富导致了基因组功能的当前状态的出现。
 
@@ -95,40 +95,40 @@ GATK 和 Broad Institute 表示，基因组测序应视为病理学实验室的�
 
 . FlexPod 实验室设置和验证使用以下 IP4 预留和 VLAN 。
 +
-image:flexpod-genomics-image10.png["错误：缺少图形映像"]
+image:flexpod-genomics-image10.png[""]
 
 . 在 ONTAP SVM 上配置基于 iSCSI 的启动 LUN 。
 +
-image:flexpod-genomics-image9.png["错误：缺少图形映像"]
+image:flexpod-genomics-image9.png[""]
 
 . 将 LUN 映射到 iSCSI 启动程序组。
 +
-image:flexpod-genomics-image11.png["错误：缺少图形映像"]
+image:flexpod-genomics-image11.png[""]
 
 +
-image:flexpod-genomics-image12.png["错误：缺少图形映像"]
+image:flexpod-genomics-image12.png[""]
 
 . 使用 iSCSI 启动安装 vSphere 7.0 。
 . 向 vCenter 注册 ESXi 主机。
 +
-image:flexpod-genomics-image13.png["错误：缺少图形映像"]
+image:flexpod-genomics-image13.png[""]
 
 . 在 ONTAP 存储上配置 NFS 数据存储库 `infra_datastore_nfs` 。
 +
-image:flexpod-genomics-image14.png["错误：缺少图形映像"]
+image:flexpod-genomics-image14.png[""]
 
 . 将数据存储库添加到 vCenter 。
 +
-image:flexpod-genomics-image16.png["错误：缺少图形映像"]
+image:flexpod-genomics-image16.png[""]
 
 . 使用 vCenter 向 ESXi 主机添加 NFS 数据存储库。
 +
-image:flexpod-genomics-image15.png["错误：缺少图形映像"]
+image:flexpod-genomics-image15.png[""]
 
 . 使用 vCenter 创建 Red Hat Enterprise Linux （ RHEL ） 8.3 VM 以运行 GATK 。
 . NFS 数据存储库会提供给虚拟机并挂载在 ` /mnt/genomics` 中，用于存储 GATK 可执行文件，脚本，二进制对齐映射（ BAM ）文件，参考文件，索引文件，词典文件和输出文件，以用于变量调用。
 +
-image:flexpod-genomics-image17.png["错误：缺少图形映像"]
+image:flexpod-genomics-image17.png[""]
 
 
 

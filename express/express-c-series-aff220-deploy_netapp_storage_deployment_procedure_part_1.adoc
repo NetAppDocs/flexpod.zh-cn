@@ -271,7 +271,7 @@ interface:
 . 单击引导式设置以配置集群。
 . 输入 ` \<<var_clustername>>` 作为集群名称，并为要配置的每个节点输入 ` \<<var_nodeA>>` 和 ` \<<var_nodeB>>` 。输入要用于存储系统的密码。选择无交换机集群作为集群类型。输入集群基本许可证。
 +
-image:express-c-series-aff220-deploy_image6.png["错误：缺少图形映像"]
+image:express-c-series-aff220-deploy_image6.png[""]
 
 . 您还可以输入集群， NFS 和 iSCSI 的功能许可证。
 . 此时将显示一条状态消息，指出正在创建集群。此状态消息会循环显示多个状态。此过程需要几分钟时间。
@@ -298,7 +298,7 @@ image:express-c-series-aff220-deploy_image6.png["错误：缺少图形映像"]
 您必须至少设置事件通知方法，然后才能继续操作。您可以选择任何方法。
 
 +
-image:express-c-series-aff220-deploy_image7.png["错误：缺少图形映像"]
+image:express-c-series-aff220-deploy_image7.png[""]
 
 
 

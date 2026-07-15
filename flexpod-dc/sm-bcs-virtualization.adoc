@@ -26,7 +26,7 @@ SM-BC 解决方案 存储符合 VMware vSphere Metro Storage Cluster （ VMSC �
 
 下图显示了一个高级 FlexPod SM-BC 解决方案 虚拟化视图，其中包括 VMware HA 和 VMSC 功能，可为计算和存储服务提供高可用性。主动 - 主动数据中心解决方案 架构支持站点之间的工作负载移动，并提供灾难恢复 / 业务连续性保护。
 
-image:sm-bcs-image39.png["错误：缺少图形映像"]
+image:sm-bcs-image39.png[""]
 
 
 
@@ -35,7 +35,7 @@ image:sm-bcs-image39.png["错误：缺少图形映像"]
 
 FlexPod SM-BC 解决方案 包括每个站点的 FlexPod 基础架构，站点之间的网络连接以及在第三个站点部署的 ONTAP 调解器，以满足所需的 RPO 和 RTO 目标。下图显示了每个站点的 Cisco UCS B200M5 服务器与站点内和站点间具有 SM-BC 功能的 NetApp 存储之间的端到端网络连接。
 
-image:sm-bcs-image40.png["错误：缺少图形映像"]
+image:sm-bcs-image40.png[""]
 
 在此解决方案 验证中，每个站点的 FlexPod 部署架构都是相同的。但是，解决方案 支持非对称部署，如果满足要求，也可以将其添加到现有 FlexPod 解决方案中。
 
@@ -50,7 +50,7 @@ image:sm-bcs-image40.png["错误：缺少图形映像"]
 
 每个虚拟交换机（ vSwitch ， VDS ）部署有两个上行链路； ESXi 虚拟机管理程序级别的上行链路在 Cisco UCS 软件上称为 vmnic 和虚拟 NIC （ vNIC ）。vNIC 会使用 Cisco UCS 服务配置文件在每个服务器的 Cisco UCS VIC 适配器上创建。定义了六个 vNIC ，两个用于 vSwitch0 ，两个用于 vDS0 ，两个用于 vSwitch1 ，两个用于 iSCSI 上行链路，如下图所示。
 
-image:sm-bcs-image41.png["错误：缺少图形映像"]
+image:sm-bcs-image41.png[""]
 
 vSwitch0 是在 VMware ESXi 主机配置期间定义的，它包含用于管理的 FlexPod 基础架构管理 VLAN 和 ESXi 主机 VMkernel （ VMK ）端口。对于所需的任何关键基础架构管理虚拟机，还会在 vSwitch0 上放置一个基础架构管理虚拟机端口组。
 
@@ -71,13 +71,13 @@ vSwitch0 是在 VMware ESXi 主机配置期间定义的，它包含用于管理�
 
 以下屏幕截图显示了为站点 A 和站点 B 主机及 VM 创建的两个主机组和两个 VM 组
 
-image:sm-bcs-image42.png["错误：缺少图形映像"]
+image:sm-bcs-image42.png[""]
 
 此外，以下两个图显示了为站点 A 和站点 B VM 创建的 VM/ 主机规则，这些 VM 将使用 " 应在组中的主机上运行 " 策略在其各自站点的主机上运行。
 
-image:sm-bcs-image43.png["错误：缺少图形映像"]
+image:sm-bcs-image43.png[""]
 
-image:sm-bcs-image44.png["错误：缺少图形映像"]
+image:sm-bcs-image44.png[""]
 
 
 
@@ -88,11 +88,11 @@ VMware vSphere HA 具有用于主机状态验证的检测信号机制。主要�
 
 对于解决方案 验证，使用两个 ONTAP 集群管理 IP 地址作为隔离地址。此外，还添加了建议的 vSphere HA 高级选项 `D ss.s.batDsPerHost` ，其值为 4 ，如下图所示。
 
-image:sm-bcs-image45.png["错误：缺少图形映像"]
+image:sm-bcs-image45.png[""]
 
 对于检测信号数据存储库，指定集群中的四个共享数据存储库并自动进行补充，如下图所示。
 
-image:sm-bcs-image46.png["错误：缺少图形映像"]
+image:sm-bcs-image46.png[""]
 
 有关 VMware HA 集群和 VMware vSphere Metro 存储集群的其他最佳实践和配置，请参见 https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.avail.doc/GUID-5432CA24-14F1-44E3-87FB-61D937831CF6.html["创建和使用 vSphere HA 集群"^]， https://core.vmware.com/resource/vmware-vsphere-metro-storage-cluster-vmsc["VMware vSphere 城域存储集群（ VMSC ）"^] 和 VMware 知识库 https://kb.vmware.com/s/article/83370["采用 NetApp SnapMirror 业务连续性（ SM-BC ）和 VMware vSphere 城域存储集群（ VMSC ）的 NetApp ONTAP"^]。
 

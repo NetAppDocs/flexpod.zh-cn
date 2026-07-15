@@ -18,7 +18,7 @@ summary: 此参考验证已按照下图和表所示进行布线。
 
 此图显示了参考验证布线。
 
-image:express-c-series-c190-deploy_image3.png["错误：缺少图形映像"]
+image:express-c-series-c190-deploy_image3.png[""]
 
 下表列出了 Cisco Nexus 交换机 31108PC-V-A 的布线信息
 

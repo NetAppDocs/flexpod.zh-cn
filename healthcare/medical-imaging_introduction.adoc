@@ -103,7 +103,7 @@ FlexPod 提供了医疗成像行业特有的多项优势：
 
 
 
-image:medical-imaging_image2.png["错误：缺少图形映像"]
+image:medical-imaging_image2.png[""]
 
 
 

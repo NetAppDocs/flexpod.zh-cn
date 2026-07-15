@@ -90,7 +90,7 @@ FabricPool 读取延迟是与云层连接的函数。使用 10 Gbps 端口的集
 
 NOTE: 在低性能环境中使用 FabricPool 时，必须继续满足客户端应用程序的最低性能要求，并相应地调整恢复时间目标。
 
-image:cloud-fabricpool_image6.png["错误：缺少图形映像"]
+image:cloud-fabricpool_image6.png[""]
 
 
 
@@ -114,7 +114,7 @@ storage aggregate object-store profiler show
 ....
 云层提供的性能与性能层上的性能不同（通常为 GB/ 秒）。虽然 FabricPool 聚合可以轻松提供类似于 SATA 的性能，但对于不需要类似 SATA 的性能的分层解决方案，它们还可以承受高达 10 秒的延迟和低吞吐量。
 
-image:cloud-fabricpool_image7.png["错误：缺少图形映像"]
+image:cloud-fabricpool_image7.png[""]
 
 
 
@@ -142,7 +142,7 @@ FabricPool 许可证以永久或按期限（ 1 年或 3 年）形式提供。
 
 当存储在云层上的数据量（已用容量）达到许可容量时，分层到云层将停止。除非增加许可证容量，否则无法对其他数据进行分层，包括使用所有分层策略将 SnapMirror 副本分层到卷。虽然分层停止，但仍可从云层访问数据。在增加许可容量之前，其他冷数据仍会保留在 SSD 上。
 
-购买任何新的 ONTAP 9.5 或更高版本的集群时都会附带一个 10 TB 容量的基于期限的免费 FabricPool 许可证，但可能会产生额外的支持成本。可以以 1 TB 为增量购买 FabricPool 许可证（包括现有许可证的额外容量）。
+FabricPool 许可证（包括现有许可证的额外容量）可以以 1TB 为增量进行购买。
 
 只能从不包含 FabricPool 聚合的集群中删除 FabricPool 许可证。
 

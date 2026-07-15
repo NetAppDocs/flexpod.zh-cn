@@ -62,7 +62,7 @@ NetApp 建议您在 FlexPod Datacenter 解决方案中为 Cisco UCS 服务器实
 
 在 iSCSI SAN 启动中，为每个 Cisco UCS 服务器分配两个 iSCSI vNIC （每个 SAN 网络结构一个），以便在通往存储的整个过程中提供冗余连接。此示例中连接到 Cisco Nexus 交换机的存储端口 E2A 和 e2e 将分组在一起，形成一个名为接口组（ ifgrp ）的逻辑端口（在此示例中为 a0a ）。iSCSI VLAN 在 igroup 上创建， iSCSI LIF 在 iSCSI 端口组（在此示例中为 a0a-<iscsi-a-VLAN> ）上创建。iSCSI 启动 LUN 通过 iSCSI LIF 使用 igroup 公开给服务器。此方法仅允许授权服务器访问启动 LUN 。有关端口和 LIF 布局，请参见下图。
 
-image:medical-imaging_image8.png["错误：缺少图形映像"]
+image:medical-imaging_image8.png[""]
 
 与 NAS 网络接口不同， SAN 网络接口未配置为在发生故障期间进行故障转移。相反，如果网络接口不可用，则主机将选择一个新的优化路径来访问可用的网络接口。ALUA 是 NetApp 支持的一种标准，可提供有关 SCSI 目标的信息，从而使主机能够确定最佳存储路径。
 

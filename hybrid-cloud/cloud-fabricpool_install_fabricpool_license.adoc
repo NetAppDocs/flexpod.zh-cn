@@ -24,7 +24,7 @@ summary: 获取 NetApp 许可证文件后，您可以使用 OnCommand System Man
 . 单击添加。
 
 
-image:cloud-fabricpool_image8.png["错误：缺少图形映像"]
+image:cloud-fabricpool_image8.png[""]
 
 
 
@@ -43,7 +43,7 @@ system license show-status
 . 单击详细信息选项卡。
 
 
-image:cloud-fabricpool_image9.png["错误：缺少图形映像"]
+image:cloud-fabricpool_image9.png[""]
 
 最大容量和当前容量列在 FabricPool 许可证行中。
 

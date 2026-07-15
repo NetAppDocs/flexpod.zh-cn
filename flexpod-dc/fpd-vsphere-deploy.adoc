@@ -20,7 +20,7 @@ NetApp公司Cisco Sree Lakshmi Lan的John George
 * Cisco UCS C 系列
 
 
-此外、还包括Cisco Intersight和NetApp Active IQ SaaS管理平台。
+还包括 Cisco Intersight 和 NetApp Active IQ Digital Advisor（也称为 Digital Advisor）SaaS 管理平台。
 
 采用NetApp ONTAP 9.7、Cisco UCS统一软件版本4.1 (2)和VMware vSphere 7.0的FlexPod 数据中心包含一个基于Cisco统一计算系统(Cisco UCS)、Cisco Nexus 9000系列交换机、MDS 9000多层光纤交换机构建的预先设计的最佳实践数据中心架构、 以及运行ONTAP 9.7数据管理软件的NetApp AFF A系列存储阵列。
 

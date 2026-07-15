@@ -30,7 +30,7 @@ FlexPod SM-BC 解决方案 中的两个 FlexPod 系统无需在配置上完全�
 
 NetApp ONTAP SM-BC 解决方案 可在两个 NetApp 存储集群之间提供同步复制，以便在园区或城域区域实现高可用性和灾难恢复。部署在第三个站点的 ONTAP 调解器可监控解决方案 ，并在发生站点灾难时实现自动故障转移。下图简要展示了解决方案 组件。
 
-image:sm-bcs-image4.png["错误：缺少图形映像"]
+image:sm-bcs-image4.png[""]
 
 借助 FlexPod SM-BC 解决方案 ，您可以在分布式且集成的基础架构上部署基于 VMware vSphere 的私有云。通过集成的解决方案 ，可以将多个站点作为一个解决方案 基础架构进行协调，以保护数据服务免受各种单点故障情形和整个站点故障的影响。
 
@@ -69,7 +69,7 @@ Cisco UCS 是一种集成计算基础架构，可提供统一计算资源，统�
 
 下图显示了 UCS 服务器组件的一些示例，包括 UCS C 系列机架式服务器，采用 B 系列刀片式服务器的 UCS 5108 机箱以及采用 X 系列计算节点的新 UCS X9508 机箱。Cisco UCS C 系列机架式服务器采用一个和两个机架单元（ RU ）外形规格，采用 Intel 和 AMD CPU 型号，并具有各种 CPU 速度和核心，内存和 I/O 选项。Cisco UCS B 系列刀片式服务器和新的 X 系列计算节点还具有各种 CPU ，内存和 I/O 选项，它们在 FlexPod 架构中均受支持，可满足各种业务需求。
 
-image:sm-bcs-image5.png["错误：缺少图形映像"]
+image:sm-bcs-image5.png[""]
 
 除了此图所示的最新一代 C220/C225/C240/C245 M6 机架式服务器， B200 M6 刀片式服务器和 X210c 计算节点之外，如果仍然支持前几代机架式和刀片式服务器，也可以使用它们。
 
@@ -85,7 +85,7 @@ UCSX 9108 25G IFM 具有八个 25-G 统一以太网端口，用于通过互联�
 
 下图显示了 UCS 5108 机箱的 UCS 2408 及更早版本 IOM 以及 X9508 机箱的 9108 IFM 。
 
-image:sm-bcs-image6.png["错误：缺少图形映像"]
+image:sm-bcs-image6.png[""]
 
 
 
@@ -95,7 +95,7 @@ Cisco UCS 互联阵列（ Fabric Interconnects ， CLI ）可为整个 Cisco UCS
 
 第四代 Cisco UCS FI 有两种变体： UCS FI 6454 和 64108 。其中包括支持 10/25 Gbps 以太网端口， 1/25-Gbps 以太网端口， 40/100-Gbps 以太网上行链路端口以及可支持 10/25 千兆以太网或 8/16/32-Gbps 光纤通道的统一端口。下图显示了第四代 Cisco UCS CLI 以及也支持的第三代型号。
 
-image:sm-bcs-image7.png["错误：缺少图形映像"]
+image:sm-bcs-image7.png[""]
 
 
 NOTE: 要支持 Cisco UCS X 系列机箱，需要在 Intersight Managed Mode （ IMM ）下配置第四代互联阵列。但是，在 IMM 模式和 UCSM 托管模式下均可支持 Cisco UCS 5108 B 系列机箱。
@@ -109,7 +109,7 @@ NOTE: UCS FI 6324 采用 IOM 外形规格，并嵌入在 UCS Mini 机箱中，�
 
 Cisco UCS 虚拟接口卡（ Virtual Interface Card ， VIC ）可为机架式和刀片式服务器统一系统管理以及 LAN 和 SAN 连接。它最多支持 256 个虚拟设备，可以作为虚拟网络接口卡（ Virtual Network Interface Card ， vNIC ），也可以作为使用 Cisco SingleConnect 技术的虚拟主机总线适配器（ Virtual Host Bus Adapter ， vHBA ）。通过虚拟化， VIC 卡大大简化了网络连接，并减少了解决方案 部署所需的网络适配器，缆线和交换机端口的数量。下图显示了一些可用于 B 系列和 C 系列服务器以及 X 系列计算节点的 Cisco UCS VIC 。
 
-image:sm-bcs-image8.png["错误：缺少图形映像"]
+image:sm-bcs-image8.png[""]
 
 不同的适配器型号支持不同的刀片式服务器和机架服务器，它们具有不同的端口数，端口速度以及模块化主板 LAN （ mLOM ），夹层卡和 PCIe 接口的外形规格。这些适配器可以支持 10/25/40/100-G 以太网和以太网光纤通道（ FCoE ）的某些组合。它们整合了 Cisco 的融合网络适配器（ Converged Network Adapter ， CNA ）技术，支持全面的功能集，并简化了适配器管理和应用程序部署。例如， VIC 支持 Cisco 的 Data Center Virtual Machine Fabric Extender （ VM-FEX ）技术，该技术可将 Cisco UCS 互联阵列端口扩展到虚拟机，从而简化服务器虚拟化部署。
 
@@ -132,7 +132,7 @@ FlexPod 使用 Cisco Nexus 系列交换机为 Cisco UCS 和 NetApp 存储控制�
 
 许多最新的 FlexPod CVD 均使用 Cisco Nexus 9000 系列交换机进行验证，例如 Nexus 9336C-fx2 和 Nexus 93180YC-fx3 ，这些交换机可在紧凑的 1U 外形规格中提供高性能 40/100G 和 10/25G 端口，低延迟和卓越的能效。可通过上行链路端口和分支缆线支持其他速度。下图显示了几个 Cisco Nexus 9k 和 3k 交换机，包括用于此验证的 Nexus 9336C-x2 和 Nexus 3232C 。
 
-image:sm-bcs-image9.png["错误：缺少图形映像"]
+image:sm-bcs-image9.png[""]
 
 请参见 https://www.cisco.com/c/en/us/products/switches/data-center-switches/index.html["Cisco 数据中心交换机"^] 有关可用 Nexus 交换机及其规格和文档的详细信息。
 
@@ -142,7 +142,7 @@ image:sm-bcs-image9.png["错误：缺少图形映像"]
 
 Cisco MDS 9100/9200/9300 系列光纤交换机是 FlexPod 架构中的一个可选组件。这些交换机高度可靠，高度灵活，安全，可提供对网络结构中流量的可见性。下图显示了一些示例 MDS 交换机，这些交换机可用于为 FlexPod 解决方案 构建冗余 FC SAN 网络结构，以满足应用程序和业务需求。
 
-image:sm-bcs-image10.png["错误：缺少图形映像"]
+image:sm-bcs-image10.png[""]
 
 Cisco MDS 9132T/9148T/9396T 高性能 32G 多层光纤交换机经济高效，并且高度可靠，灵活且可扩展。高级存储网络特性和功能易于管理，并与整个 Cisco MDS 9000 系列产品组合兼容，可实现可靠的 SAN 实施。
 
@@ -165,7 +165,7 @@ NetApp AFF 和 ASA 存储控制器还为客户提供了一个混合云基础，�
 
 如下图所示， NetApp 提供了各种存储控制器和磁盘架，可满足您的性能和容量要求。有关 NetApp AFF 和 ASA 控制器功能和规格的信息，请参见下表以获取产品页面的链接。
 
-image:sm-bcs-image11.png["错误：缺少图形映像"]
+image:sm-bcs-image11.png[""]
 
 |===
 | 产品系列 | 技术规格 
@@ -185,23 +185,23 @@ image:sm-bcs-image11.png["错误：缺少图形映像"]
 
 FlexPod 解决方案的拓扑结构十分灵活，可以纵向扩展或横向扩展以满足不同的解决方案 要求。如果解决方案 需要业务连续性保护，并且只需要最少的计算和存储资源，则可以使用简单的解决方案 拓扑，如下图所示。这种简单的拓扑结构使用 UCS C 系列机架服务器和 AFF/ASA 控制器，并在控制器中使用 SSD ，而无需额外的磁盘架。
 
-image:sm-bcs-image12.png["错误：缺少图形映像"]
+image:sm-bcs-image12.png[""]
 
 冗余计算，网络和存储组件通过组件之间的冗余连接互连在一起。这种高可用性设计可提供解决方案 故障恢复能力，并使 IT 能够承受单点故障情形。多站点设计和 ONTAP SM-BC 同步数据复制关系可提供业务关键型数据服务，尽管可能会发生单站点存储故障。
 
 在城域中，数据中心和分支机构之间的公司可能使用的非对称部署拓扑可能如下图所示。对于这种非对称设计，数据中心需要具有更多计算和存储资源的更高性能 FlexPod 。但是，分支机构的需求较低，并且 FlexPod 可以小得多。
 
-image:sm-bcs-image13.png["错误：缺少图形映像"]
+image:sm-bcs-image13.png[""]
 
 对于计算和存储资源需求较高的公司以及多个站点，基于 VXLAN 的多站点网络结构可以使多个站点拥有无缝网络结构，从而提高应用程序的移动性，从而可以从任何站点为应用程序提供服务。
 
 可能存在使用 Cisco UCS 5108 机箱和 B 系列刀片式服务器的现有 FlexPod 解决方案 ，这些服务器必须受新 FlexPod 实例的保护。新的 FlexPod 实例可以使用最新的 UCS X9508 机箱，其中 X210c 计算节点由 Cisco Intersight 管理，如下图所示。在这种情况下，每个站点上的 FlexPod 系统都连接到一个更大的数据中心网络结构，而这些站点则通过互连网络进行连接，形成一个 VXLAN 多站点网络结构。
 
-image:sm-bcs-image14.png["错误：缺少图形映像"]
+image:sm-bcs-image14.png[""]
 
 对于在城域中设有数据中心和多个分支机构的公司，这些公司都需要受到保护才能提供业务连续性， 可以实施下图所示的 FlexPod SM-BC 部署拓扑，以保护关键应用程序和数据服务，使所有分支站点实现零 RPO 和接近零 RTO 目标。
 
-image:sm-bcs-image15.png["错误：缺少图形映像"]
+image:sm-bcs-image15.png[""]
 
 对于此部署模式，每个分支机构都与数据中心建立所需的 SM-BC 关系和一致性组。您必须考虑支持的 SM-BC 对象限制，以便整体一致性组关系和端点计数不会超过数据中心支持的最大值。
 

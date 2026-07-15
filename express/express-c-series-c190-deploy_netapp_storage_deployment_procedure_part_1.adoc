@@ -315,7 +315,7 @@ NOTE: 您也可以输入备用 NTP 服务器。IP 地址 `10.63.172.162` from ` 
 NOTE: 您必须至少设置事件通知方法，然后才能继续操作。您可以选择任何方法。
 
 +
-image:express-c-series-c190-deploy_image4.png["错误：缺少图形映像"]
+image:express-c-series-c190-deploy_image4.png[""]
 
 +
 当系统指示集群配置已完成时，单击管理集群以配置存储。

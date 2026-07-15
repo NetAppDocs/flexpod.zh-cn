@@ -40,11 +40,11 @@ summary: 本节中列出的技术是在架构设计阶段选择的。每个技�
 
 下图显示了可插入 SFP+ 模块的 UTA 2 端口。
 
-image:express-c-series-c190-design_image4.png["错误：缺少图形映像"]
+image:express-c-series-c190-design_image4.png[""]
 
 下图显示了通过传统 RJ-45 以太网缆线连接的 10GBASE-T 端口。
 
-image:express-c-series-c190-design_image5.png["错误：缺少图形映像"]
+image:express-c-series-c190-design_image5.png[""]
 
 
 NOTE: 对于 10GBASE-T 端口选项，您必须使用基于 10GBASE-T 的上行链路交换机。
@@ -68,7 +68,7 @@ NetApp AFF C190 系统使用全新的 ONTAP 9.6 数据管理软件。ONTAP 9.6 �
 
 ONTAP 9.6 具有多种非常适合 FlexPod Express 解决方案的功能。最重要的是 NetApp 对存储效率的承诺，存储效率是小型部署最重要的功能之一。ONTAP 9.6 提供了 NetApp 存储效率的标志功能，例如重复数据删除，数据压缩，数据缩减和精简配置。NetApp WAFL 系统始终会写入 4 KB 块；因此，如果这些块未使用分配的 4 KB 空间，则数据缩减会将多个块合并为一个 4 KB 块。下图说明了此过程。
 
-image:express-c-series-c190-design_image6.png["错误：缺少图形映像"]
+image:express-c-series-c190-design_image6.png[""]
 
 ONTAP 9.6 现在支持为 NVMe 卷提供可选的 512 字节块大小。此功能可与本机使用 512 字节块的 VMware 虚拟机文件系统（ VMFS ）配合使用。您可以保留默认的 4 k 大小，也可以选择设置 512 字节的块大小。
 
@@ -95,7 +95,7 @@ Cisco Nexus 31108PC-V 规范包括以下组件：
 
 下图显示了 Cisco Nexus 31108PC-V 交换机。
 
-image:express-c-series-c190-design_image7.png["错误：缺少图形映像"]
+image:express-c-series-c190-design_image7.png[""]
 
 有关 Cisco Nexus 31108PC-V 交换机的详细信息，请参见 https://www.cisco.com/c/en/us/products/collateral/switches/nexus-3000-series-switches/data_sheet_c78-729483.html["Cisco Nexus 3172PQ ， 3172TQ ， 3172TQ-32T ， 3172PQ-XL 和 3172TQ-XL 交换机产品规格"^]。
 
@@ -116,7 +116,7 @@ Cisco UCS C 系列机架式服务器具有以下优势：
 * 通过熟悉的机架包装提供独特优势，增加客户的选择
 
 
-image:express-c-series-c190-design_image8.png["错误：缺少图形映像"]
+image:express-c-series-c190-design_image8.png[""]
 
 如上图所示， Cisco UCS C220 M5 机架式服务器是业内用途最广泛的通用企业基础架构和应用程序服务器之一。它是一款高密度双插槽机架式服务器，可为包括虚拟化，协作和裸机应用程序在内的各种工作负载提供行业领先的性能和效率。Cisco UCS C 系列机架式服务器可以作为独立服务器部署，也可以作为 Cisco UCS 的一部分部署，以利用 Cisco 基于标准的统一计算创新技术，帮助客户降低 TCO 并提高业务灵活性。
 
@@ -129,7 +129,7 @@ image:express-c-series-c190-design_image8.png["错误：缺少图形映像"]
 
 下图所示的 Cisco UCS VIC 1457 适配器是一个四端口小型可插拔（ SFP28 ）模块化主板 LAN （ mLOM ）卡，专为 M5 代 Cisco UCS C 系列服务器而设计。此卡支持 10/25Gbps 以太网或 FCoE 。该卡可以向主机提供符合 PCIe 标准的接口，这些接口可以动态配置为 NIC 或 HBA 。
 
-image:express-c-series-c190-design_image9.png["错误：缺少图形映像"]
+image:express-c-series-c190-design_image9.png[""]
 
 有关 Cisco UCS VIC 1457 适配器的完整信息，请参见 https://www.cisco.com/c/en/us/products/collateral/interfaces-modules/unified-computing-system-adapters/datasheet-c78-741130.html["Cisco UCS 虚拟接口卡 1400 系列产品规格"^]。
 
@@ -186,6 +186,6 @@ Cisco UCS VIC 1457 具有四个物理端口。此解决方案验证包括使用 
 
 在 iSCSI 启动实施中， iSCSI 启动需要单独的虚拟网络接口卡（ Virtual Network Interface Card ， vNIC ）来进行 iSCSI 启动。这些 VNIC 使用相应网络结构的 iSCSI VLAN 作为原生 VLAN ，并连接到 iSCSI 启动 VSwitch ，如下图所示。
 
-image:express-c-series-c190-design_image10.png["错误：缺少图形映像"]
+image:express-c-series-c190-design_image10.png[""]
 
 link:express-c-series-c190-design_conclusion.html["接下来：总结。"]

@@ -1653,7 +1653,7 @@ Cisco 强烈建议您在 Cisco UCS Manager 中配置自动通报。配置自动�
 . 右键单击 IP Pool ext-mgmt 并选择 Create Block of IPv4 addresses 。
 . 输入块的起始 IP 地址，所需的 IP 地址数以及子网掩码和网关信息。
 +
-image:express-direct-attach-aff220-deploy_image7.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image7.png[""]
 
 . 单击确定以创建块。
 . 单击确认消息中的确定。
@@ -1674,12 +1674,12 @@ image:express-direct-attach-aff220-deploy_image7.png["错误：缺少图形映�
 . 单击添加 NTP 服务器。
 . 输入 ` <switch-A-NTP-IP> 或 <Nexus a-mgmt-IP>` ，然后单击 OK 。单击确定。
 +
-image:express-direct-attach-aff220-deploy_image8.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image8.png[""]
 
 . 单击添加 NTP 服务器。
 . 输入 ` <switch-b-ntp-ip>` `或 <Nexus B-mgmt-ip>` ，然后单击 OK 。单击确认后的确定。
 +
-image:express-direct-attach-aff220-deploy_image9.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image9.png[""]
 
 
 
@@ -1717,7 +1717,7 @@ image:express-direct-attach-aff220-deploy_image9.png["错误：缺少图形映�
 . 在左窗格中，选择互联阵列 A 下的固定模块 
 . 在以太网端口选项卡的 If role 列中，确认端口配置正确。如果在可扩展性端口上配置了任何端口 C 系列服务器，请单击该端口以验证该端口的端口连接。
 +
-image:express-direct-attach-aff220-deploy_image10.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image10.png[""]
 
 . 展开设备 > 互联阵列 > 互联阵列 B > 固定模块。
 . 展开以太网端口。
@@ -1730,7 +1730,7 @@ image:express-direct-attach-aff220-deploy_image10.png["错误：缺少图形映�
 . 在左窗格中，选择互联阵列 B 下的固定模块 
 . 在以太网端口选项卡的 If role 列中，确认端口配置正确。如果在可扩展性端口上配置了任何端口 C 系列服务器，请单击它以验证该端口的端口连接。
 +
-image:express-direct-attach-aff220-deploy_image11.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image11.png[""]
 
 
 
@@ -1753,7 +1753,7 @@ NOTE: 在此操作步骤中，将创建两个端口通道：一个从阵列 A �
 . 输入 vPC-13-Nexus 作为端口通道的名称。
 . 单击下一步。
 +
-image:express-direct-attach-aff220-deploy_image12.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image12.png[""]
 
 . 选择要添加到端口通道的以下端口：
 +
@@ -1818,7 +1818,7 @@ NOTE: 尽管本文档不假定使用组织，但本操作步骤提供了有关�
 . 输入 ` \<<var_nfs_vlan_id>>` 作为 VLAN ID 。
 . 将 "Sharing Type" 设置为 "None" 。
 +
-image:express-direct-attach-aff220-deploy_image13.jpeg["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image13.jpeg[""]
 
 . 单击确定，然后再次单击确定以创建 VLAN 。
 . 右键单击设备云下的 VLAN 。
@@ -1840,14 +1840,14 @@ image:express-direct-attach-aff220-deploy_image13.jpeg["错误：缺少图形映
 . 输入 ` \<<var_native_vlan_id>>` 作为 VLAN ID 。
 . 单击确定，然后再次单击确定以创建 VLAN 。
 +
-image:express-direct-attach-aff220-deploy_image14.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image14.png[""]
 
 . 在导航窗格中的 "LAN">"Policies" 下，展开 "Applies" ，然后右键单击 "Network Control Policies" 。
 . 选择创建网络控制策略。
 . 将此策略命名为 `Enable_CDP_LLDP` ，然后选择 CDP 旁边的 Enabled 。
 . 启用 LLDP 的传输和接收功能。
 +
-image:express-direct-attach-aff220-deploy_image15.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image15.png[""]
 
 . 单击确定，然后再次单击确定以创建策略。
 . 在导航窗格中的 "LAN">"Appliances Cloud" 下，展开结构 A 树。
@@ -1858,7 +1858,7 @@ image:express-direct-attach-aff220-deploy_image15.png["错误：缺少图形映�
 . 在 VLAN 下，选择 iSCSI-A-VLAN ， NFS VLAN 和原生 VLAN 。将本机 VLAN 设置为原生 VLAN 。清除默认 VLAN 选择。
 . 单击 Save Changes and OK 。
 +
-image:express-direct-attach-aff220-deploy_image16.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image16.png[""]
 
 . 在 Fabric A 下选择设备接口 1/4
 . 在用户标签字段中，输入指示存储控制器端口的信息，例如 ` <storage_controller_02_name> ： e0e` 。单击 Save Changes and OK 。
@@ -1874,7 +1874,7 @@ image:express-direct-attach-aff220-deploy_image16.png["错误：缺少图形映�
 . 选择 Enable_CDP Network Control Policy ，然后选择 Save Changes and OK 。
 . 在 VLAN 下，选择 iSCSI-B-VLAN ， NFS VLAN 和原生 VLAN 。将本机 VLAN 设置为原生 VLAN 。取消选择默认 VLAN 。
 +
-image:express-direct-attach-aff220-deploy_image17.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image17.png[""]
 
 . 单击 Save Changes and OK 。
 . 在 Fabric B 下选择设备接口 1/4
@@ -1896,7 +1896,7 @@ image:express-direct-attach-aff220-deploy_image17.png["错误：缺少图形映�
 . 在右侧窗格中，单击常规选项卡。
 . 在尽力服务行的 MTU 列下的框中输入 9216 。
 +
-image:express-direct-attach-aff220-deploy_image18.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image18.png[""]
 
 . 单击 Save Changes 。
 . 单击确定。
@@ -1939,7 +1939,7 @@ image:express-direct-attach-aff220-deploy_image18.png["错误：缺少图形映�
 . 在操作窗格中，选择修改软件包版本。
 . 为两个刀片式服务器软件包选择版本 4.0 （ 1b ）。
 +
-image:express-direct-attach-aff220-deploy_image19.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image19.png[""]
 
 . 再次单击确定，然后单击确定以修改主机固件包。
 
@@ -1969,7 +1969,7 @@ NOTE: 对于 FlexPod 解决方案，建议将 0A 放置在起始 MAC 地址的�
 
 . 为 MAC 地址池指定一个足以支持可用刀片或服务器资源的大小。单击确定。
 +
-image:express-direct-attach-aff220-deploy_image20.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image20.png[""]
 
 . 单击完成。
 . 在确认消息中，单击确定。
@@ -2013,7 +2013,7 @@ NOTE: 如果正在使用多个 Cisco UCS 域，则可能需要使用更具体的
 . 在发件人字段中输入 1 。
 . 指定足以支持可用服务器资源的 IQN 块大小。单击确定。
 +
-image:express-direct-attach-aff220-deploy_image21.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image21.png[""]
 
 . 单击完成。
 
@@ -2109,7 +2109,7 @@ NOTE: 请考虑创建唯一的服务器池，以实现环境所需的粒度。
 . 对于 LLDP ，向下滚动并为传输和接收选择已启用。
 . 单击确定以创建网络控制策略。单击确定。
 +
-image:express-direct-attach-aff220-deploy_image22.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image22.png[""]
 
 
 
@@ -2128,7 +2128,7 @@ image:express-direct-attach-aff220-deploy_image22.png["错误：缺少图形映�
 . 将电源上限设置更改为无上限。
 . 单击确定以创建电源控制策略。单击确定。
 +
-image:express-direct-attach-aff220-deploy_image23.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image23.png[""]
 
 
 
@@ -2153,7 +2153,7 @@ NOTE: 此示例将为采用 Intel E2660 v4 Xeon Broadwell 处理器的 Cisco UCS
 . 单击确定以创建 CPU/ 核心资格认定。
 . 单击确定创建策略，然后单击确定进行确认。
 +
-image:express-direct-attach-aff220-deploy_image24.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image24.png[""]
 
 
 
@@ -2172,7 +2172,7 @@ image:express-direct-attach-aff220-deploy_image24.png["错误：缺少图形映�
 . 将 Quiet Boot 设置更改为 disabled 。
 . 将一致设备命名更改为已启用。
 +
-image:express-direct-attach-aff220-deploy_image25.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image25.png[""]
 
 . 选择处理器选项卡并设置以下参数：
 +
@@ -2181,7 +2181,7 @@ image:express-direct-attach-aff220-deploy_image25.png["错误：缺少图形映�
 ** 处理器 C3 报告：已禁用
 ** 处理器 C7 报告：已禁用
 +
-image:express-direct-attach-aff220-deploy_image26.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image26.png[""]
 
 
 
@@ -2191,7 +2191,7 @@ image:express-direct-attach-aff220-deploy_image26.png["错误：缺少图形映�
 ** 频率下限覆盖：已启用
 ** DRAM 时钟限制：性能
 +
-image:express-direct-attach-aff220-deploy_image27.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image27.png[""]
 
 
 
@@ -2199,7 +2199,7 @@ image:express-direct-attach-aff220-deploy_image27.png["错误：缺少图形映�
 +
 ** LV DDR Mode ：性能模式
 +
-image:express-direct-attach-aff220-deploy_image28.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image28.png[""]
 
 
 
@@ -2220,7 +2220,7 @@ image:express-direct-attach-aff220-deploy_image28.png["错误：缺少图形映�
 . 将重新启动策略更改为 User Ack 。
 . 选择下次启动可将维护窗口委派给服务器管理员。
 +
-image:express-direct-attach-aff220-deploy_image29.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image29.png[""]
 
 . 单击 Save Changes 。
 . 单击确定接受更改。
@@ -2264,7 +2264,7 @@ NOTE: 总共创建了四个 vNIC 模板。
 . 单击确定以创建 vNIC 模板。
 . 单击确定。
 +
-image:express-direct-attach-aff220-deploy_image30.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image30.png[""]
 
 
 
@@ -2296,7 +2296,7 @@ NOTE: 选择故障转移是一个关键步骤，可通过在硬件级别处理�
 . 单击确定以创建 vNIC 模板。
 . 单击确定。
 +
-image:express-direct-attach-aff220-deploy_image31.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image31.png[""]
 
 
 
@@ -2324,7 +2324,7 @@ image:express-direct-attach-aff220-deploy_image31.png["错误：缺少图形映�
 . 单击确定完成 vNIC 模板的创建。
 . 单击确定。
 +
-image:express-direct-attach-aff220-deploy_image32.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image32.png[""]
 
 . 选择左侧的 LAN 。
 . 选择策略 > root 。
@@ -2344,7 +2344,7 @@ image:express-direct-attach-aff220-deploy_image32.png["错误：缺少图形映�
 . 单击确定完成 vNIC 模板的创建。
 . 单击确定。
 +
-image:express-direct-attach-aff220-deploy_image33.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image33.png[""]
 
 
 
@@ -2369,7 +2369,7 @@ image:express-direct-attach-aff220-deploy_image33.png["错误：缺少图形映�
 . 从适配器策略下拉列表中，选择 VMware 。
 . 单击确定将此 vNIC 添加到策略中。
 +
-image:express-direct-attach-aff220-deploy_image34.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image34.png[""]
 
 . 单击上部的添加选项以添加 vNIC 。
 . 在 Create vNIC 对话框中，输入 `Site-01-vNIC-B` 作为 vNIC 的名称。
@@ -2398,7 +2398,7 @@ image:express-direct-attach-aff220-deploy_image34.png["错误：缺少图形映�
 . 选择无（默认使用）作为 MAC 地址分配。
 . 单击确定将 iSCSI vNIC 添加到策略中。
 +
-image:express-direct-attach-aff220-deploy_image35.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image35.png[""]
 
 . 单击 Add iSCSI vNIC 空间中下部的 Add 选项以添加 iSCSI vNIC 。
 . 在 Create iSCSI vNIC 对话框中，输入 `Site-01-iscsi-B` 作为 vNIC 的名称。
@@ -2409,7 +2409,7 @@ image:express-direct-attach-aff220-deploy_image35.png["错误：缺少图形映�
 . 单击确定将 iSCSI vNIC 添加到策略中。
 . 单击 Save Changes 。
 +
-image:express-direct-attach-aff220-deploy_image36.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image36.png[""]
 
 
 
@@ -2446,7 +2446,7 @@ NOTE: 先前未将 DNS 服务器 IP 输入到 KVM IP 中，因此，需要输入
 对于添加到 Cisco UCS 环境中的任何新服务器，可以使用 vMedia 服务配置文件模板安装 ESXi 主机。首次启动时，主机将启动到 ESXi 安装程序中，因为 SAN 挂载的磁盘为空。安装 ESXi 后，只要启动磁盘可访问，就不会引用 vMedia 。
 
 +
-image:express-direct-attach-aff220-deploy_image37.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image37.png[""]
 
 
 
@@ -2477,7 +2477,7 @@ NOTE: 在此操作步骤中配置了一个启动策略。此策略会将主目�
 . 在添加 iSCSI 启动对话框中，输入 `Site-01-iscsi-B` 。单击确定。
 . 单击确定创建策略。
 +
-image:express-direct-attach-aff220-deploy_image38.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image38.png[""]
 
 
 
@@ -2498,7 +2498,7 @@ image:express-direct-attach-aff220-deploy_image38.png["错误：缺少图形映�
 . 选择更新模板选项。
 . 在 UUID 下，选择 `UID_Pool` 作为 UUID 池。单击下一步。
 +
-image:express-direct-attach-aff220-deploy_image39.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image39.png[""]
 
 
 
@@ -2523,7 +2523,7 @@ image:express-direct-attach-aff220-deploy_image39.png["错误：缺少图形映�
 . 从 LAN 连接策略下拉菜单中选择 iSCSI-Boot 。
 . 在启动程序名称分配中选择 `IQN_Pool` 。单击下一步。
 +
-image:express-direct-attach-aff220-deploy_image40.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image40.png[""]
 
 
 
@@ -2571,7 +2571,7 @@ image:express-direct-attach-aff220-deploy_image40.png["错误：缺少图形映�
 
 . 为 Boot Policy 选择 `Boot-Fabric-A` 。
 +
-image:express-direct-attach-aff220-deploy_image41.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image41.png[""]
 
 . 在 Boor 顺序中，选择 `Site-01- iscsi-a` 。
 . 单击设置 iSCSI 启动参数。
@@ -2582,22 +2582,22 @@ image:express-direct-attach-aff220-deploy_image41.png["错误：缺少图形映�
 . 单击添加。
 . 输入 iSCSI 目标名称。要获取 Infra-SVM 的 iSCSI 目标名称，请登录到存储集群管理界面并运行 `iscsi show` 命令。
 +
-image:express-direct-attach-aff220-deploy_image42.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image42.png[""]
 
 . 在 "IPv4 Address" 字段中输入 IP 地址 `iscsi_lif_02a` 。
 +
-image:express-direct-attach-aff220-deploy_image43.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image43.png[""]
 
 . 单击确定以添加 iSCSI 静态目标。
 . 单击添加。
 . 输入 iSCSI 目标名称。
 . 在 "IPv4 Address" 字段中输入 IP 地址 `iscsi_lif_01a` 。
 +
-image:express-direct-attach-aff220-deploy_image44.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image44.png[""]
 
 . 单击确定以添加 iSCSI 静态目标。
 +
-image:express-direct-attach-aff220-deploy_image45.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image45.png[""]
 
 +
 
@@ -2612,22 +2612,22 @@ NOTE: 目标 IP 首先放在存储节点 02 IP 上，其次放在存储节点 01
 . 单击添加。
 . 输入 iSCSI 目标名称。要获取 Infra-SVM 的 iSCSI 目标名称，请登录到存储集群管理界面并运行 `iscsi show` 命令。
 +
-image:express-direct-attach-aff220-deploy_image42.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image42.png[""]
 
 . 在 "IPv4 Address" 字段中输入 IP 地址 `iscsi_lif_02B` 。
 +
-image:express-direct-attach-aff220-deploy_image46.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image46.png[""]
 
 . 单击确定以添加 iSCSI 静态目标。
 . 单击添加。
 . 输入 iSCSI 目标名称。
 . 在 "IPv4 Address" 字段中输入 IP 地址 `iscsi_lif_01B` 。
 +
-image:express-direct-attach-aff220-deploy_image47.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image47.png[""]
 
 . 单击确定以添加 iSCSI 静态目标。
 +
-image:express-direct-attach-aff220-deploy_image48.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image48.png[""]
 
 . 单击下一步。
 
@@ -2640,7 +2640,7 @@ image:express-direct-attach-aff220-deploy_image48.png["错误：缺少图形映�
 
 . 将维护策略更改为默认值。
 +
-image:express-direct-attach-aff220-deploy_image49.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image49.png[""]
 
 . 单击下一步。
 
@@ -2655,7 +2655,7 @@ image:express-direct-attach-aff220-deploy_image49.png["错误：缺少图形映�
 . 选择 down 作为配置文件与服务器关联时要应用的电源状态。
 . 展开页面底部的 Firmware Management ，然后选择默认策略。
 +
-image:express-direct-attach-aff220-deploy_image50.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image50.png[""]
 
 . 单击下一步。
 
@@ -2669,7 +2669,7 @@ image:express-direct-attach-aff220-deploy_image50.png["错误：缺少图形映�
 . 从 BIOS 策略下拉列表中，选择 VM-Host 。
 . 展开电源控制策略配置，然后从电源控制策略下拉列表中选择 No-Power-Cap 。
 +
-image:express-direct-attach-aff220-deploy_image51.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image51.png[""]
 
 . 单击完成以创建服务配置文件模板。
 . 单击确认消息中的确定。
@@ -2708,7 +2708,7 @@ image:express-direct-attach-aff220-deploy_image51.png["错误：缺少图形映�
 .. 选择 root 作为组织。
 .. 单击确定以创建服务配置文件。
 +
-image:express-direct-attach-aff220-deploy_image52.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image52.png[""]
 
 
 
@@ -2867,7 +2867,7 @@ ESXi 主机 VM-Host-Infra-01 和 VM-Host-Infra-02
 . 验证硬件标签字段中的数字是否与设备名称字段中的数字匹配。
 . 按 Enter 键。
 +
-image:express-direct-attach-aff220-deploy_image53.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image53.png[""]
 
 . 选择 VLAN （可选）选项，然后按 Enter 键。
 . 输入 ` <IB-mgmt-vlan-id>` 并按 Enter 键。
@@ -3054,11 +3054,11 @@ NOTE: 为了避免 IP 地址冲突，如果应重新分配 Cisco UCS iSCSI IP �
 . 单击创建。
 . 选择 Virtual Switches 选项卡，然后选择 vSwitch0 。vSwitch0 VMkernel NIC 的属性应类似于以下示例：
 +
-image:express-direct-attach-aff220-deploy_image54.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image54.png[""]
 
 . 选择 VMkernel NIC 选项卡以确认已配置的虚拟适配器。列出的适配器应类似于以下示例：
 +
-image:express-direct-attach-aff220-deploy_image55.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image55.png[""]
 
 
 
@@ -3074,14 +3074,14 @@ ESXi 主机 VM-Host-Infra-01 和 VM-Host-Infra-02
 . 在中间窗格中，单击适配器。
 . 选择 iSCSI 软件适配器，然后单击配置 iSCSI 。
 +
-image:express-direct-attach-aff220-deploy_image56.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image56.png[""]
 
 . 在动态目标下，单击添加动态目标。
 . 输入 IP 地址 `iscsi_lif01a` 。
 . 重复输入以下 IP 地址： `iscsi_lif01b` ， `iscsi_lif02a` 和 `iscsi_lif02b` 。
 . 单击保存配置。
 +
-image:express-direct-attach-aff220-deploy_image57.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image57.png[""]
 
 +
 要获取所有 `iscsi_lif` IP 地址，请登录到 NetApp 存储集群管理界面并运行 `network interface show` 命令。
@@ -3105,7 +3105,7 @@ ESXi 主机 VM-Host-Infra-01 和 VM-Host-Infra-02
 . 在中间窗格中，选择新建数据存储库以添加新数据存储库。
 . 在新建数据存储库对话框中，选择挂载 NFS 数据存储库，然后单击下一步。
 +
-image:express-direct-attach-aff220-deploy_image58.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image58.png[""]
 
 . 在提供 NFS 挂载详细信息页面上，完成以下步骤：
 +
@@ -3115,7 +3115,7 @@ image:express-direct-attach-aff220-deploy_image58.png["错误：缺少图形映�
 .. 将 NFS 版本设置为 NFS 3 。
 .. 单击下一步。
 +
-image:express-direct-attach-aff220-deploy_image59.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image59.png[""]
 
 
 
@@ -3133,7 +3133,7 @@ image:express-direct-attach-aff220-deploy_image59.png["错误：缺少图形映�
 
 . 单击完成。此时，数据存储库应显示在数据存储库列表中。
 +
-image:express-direct-attach-aff220-deploy_image60.jpeg["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image60.jpeg[""]
 
 . 在两台 ESXi 主机上挂载两个数据存储库。
 
@@ -3153,7 +3153,7 @@ ESXi 主机 VM-Host-Infra-01 和 VM-Host-Infra-02
 . 使用下拉菜单选择 Start 和 Stop with Host 。
 . 在 NTP 服务器框中输入两个 Nexus 交换机 NTP 地址，并用逗号分隔。
 +
-image:express-direct-attach-aff220-deploy_image61.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image61.png[""]
 
 . 单击保存以保存配置更改。
 . 选择操作 > NTP 服务 > 启动。
@@ -3174,11 +3174,11 @@ ESXi 主机 VM-Host-Infra-01 和 VM-Host-Infra-02
 
 . 单击左侧导航窗格中的管理。在右窗格中选择 System ，然后单击 Swap 。
 +
-image:express-direct-attach-aff220-deploy_image62.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image62.png[""]
 
 . 单击编辑设置。从数据存储库选项中选择 `infra_swap` 。
 +
-image:express-direct-attach-aff220-deploy_image63.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image63.png[""]
 
 . 单击保存。
 
@@ -3221,7 +3221,7 @@ NOTE: FlexPod Express 使用 VMware vCenter Server 设备（ VCSA ）。
 
 . 下载 VCSA 。在管理 ESXi 主机时，单击获取 vCenter Server 图标以访问下载链接。
 +
-image:express-direct-attach-aff220-deploy_image64.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image64.png[""]
 
 . 从 VMware 站点下载 VCSA 。
 +
@@ -3235,26 +3235,26 @@ NOTE: 虽然支持安装 Microsoft Windows vCenter Server ，但 VMware 建议�
 . 接受 EULA 。
 . 选择 Embedded Platform Services Controller 作为部署类型。
 +
-image:express-direct-attach-aff220-deploy_image65.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image65.png[""]
 
 +
 如果需要，还支持在 FlexPod Express 解决方案中部署外部平台服务控制器。
 
 . 在设备部署目标页面上，输入已部署的 ESXi 主机的 IP 地址， root 用户名和 root 密码。单击下一步。
 +
-image:express-direct-attach-aff220-deploy_image66.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image66.png[""]
 
 . 输入 vCSA 作为 VM 名称以及要用于 VCSA 的根密码，以设置设备 VM 。单击下一步。
 +
-image:express-direct-attach-aff220-deploy_image67.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image67.png[""]
 
 . 选择最适合您环境的部署规模。单击下一步。
 +
-image:express-direct-attach-aff220-deploy_image68.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image68.png[""]
 
 . 选择 `infra_datastore_1` 数据存储库。单击下一步。
 +
-image:express-direct-attach-aff220-deploy_image69.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image69.png[""]
 
 . 在配置网络设置页面上输入以下信息，然后单击下一步。
 +
@@ -3265,7 +3265,7 @@ image:express-direct-attach-aff220-deploy_image69.png["错误：缺少图形映�
 .. 输入默认网关。
 .. 输入 DNS 服务器。
 +
-image:express-direct-attach-aff220-deploy_image70.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image70.png[""]
 
 
 
@@ -3275,7 +3275,7 @@ image:express-direct-attach-aff220-deploy_image70.png["错误：缺少图形映�
 
 . 阶段 1 完成后，将显示一条消息，指出已完成。单击 Continue 以开始第 2 阶段配置。
 +
-image:express-direct-attach-aff220-deploy_image71.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image71.png[""]
 
 . 在第 2 阶段简介页面上，单击下一步。
 . 输入 ` \<<var_ntp_id>>` 作为 NTP 服务器地址。您可以输入多个 NTP IP 地址。
@@ -3323,7 +3323,7 @@ NOTE: 安装程序提供的用于访问 vCenter Server 的链接可单击。
 . 选择并启用 DRS 和 vSphere HA 选项。
 . 单击确定。
 +
-image:express-direct-attach-aff220-deploy_image72.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image72.png[""]
 
 
 
@@ -3333,7 +3333,7 @@ image:express-direct-attach-aff220-deploy_image72.png["错误：缺少图形映�
 
 . 在集群的操作菜单中选择添加主机。
 +
-image:express-direct-attach-aff220-deploy_image73.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image73.png[""]
 
 . 要将 ESXi 主机添加到集群，请完成以下步骤：
 +

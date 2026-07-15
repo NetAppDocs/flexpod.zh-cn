@@ -23,7 +23,7 @@ FabricPool 支持为每个聚合连接一个存储分段，如下图所示。一
 
 在规划存储架构时，请考虑分段到聚合关系可能会对性能产生何种影响。许多对象存储提供程序都会在存储分段或容器级别设置支持的最大 IOPS 数。需要最高性能的环境应使用多个分段，以减少对象存储 IOPS 限制可能影响多个 FabricPool 聚合的性能的可能性。将单个存储分段或容器附加到集群中的所有 FabricPool 聚合对于重视易管理性而不是云层性能的环境来说，可能会更加有利。
 
-image:cloud-fabricpool_image10.png["错误：缺少图形映像"]
+image:cloud-fabricpool_image10.png[""]
 
 
 
@@ -33,12 +33,12 @@ image:cloud-fabricpool_image10.png["错误：缺少图形映像"]
 . 在 AWS 管理控制台中的主页页面中，在搜索栏中输入 s3 。
 . 在云中选择 S3 可扩展存储。
 +
-image:cloud-fabricpool_image11.png["错误：缺少图形映像"]
+image:cloud-fabricpool_image11.png[""]
 
 . 在 S3 主页上，选择创建存储分段。
 . 输入符合 DNS 要求的名称，然后选择要创建存储分段的区域。
 +
-image:cloud-fabricpool_image12.png["错误：缺少图形映像"]
+image:cloud-fabricpool_image12.png[""]
 
 . 单击创建以创建对象存储分段。
 

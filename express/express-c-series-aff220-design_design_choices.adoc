@@ -34,11 +34,11 @@ NetApp AFF A220 系统使用新的 ONTAP 9.4 软件。ONTAP 9.4 是行业领先�
 
 ONTAP 9.4 具有多种非常适合 FlexPod Express 解决方案的功能。最重要的是 NetApp 对存储效率的承诺，存储效率是小型部署最重要的功能之一。ONTAP 9.4 新增了重复数据删除，数据压缩和精简配置等 NetApp 存储效率功能，并增加了数据缩减功能。由于 NetApp WAFL 系统始终写入 4 KB 块，因此，如果这些块未使用分配的 4 KB 空间，则数据缩减功能会将多个块合并到一个 4 KB 块中。下图说明了此过程。
 
-image:express-c-series-aff220-design_image5.png["错误：缺少图形映像"]
+image:express-c-series-aff220-design_image5.png[""]
 
 此外，还可以在 AFF A220 系统上利用根数据分区功能。通过此分区，可以在系统中的磁盘之间对根聚合和两个数据聚合进行条带化。因此，双节点 AFF A220 集群中的两个控制器均可利用聚合中所有磁盘的性能。请参见下图。
 
-image:express-c-series-aff220-design_image6.png["错误：缺少图形映像"]
+image:express-c-series-aff220-design_image6.png[""]
 
 这些只是 FlexPod Express 解决方案的几项主要功能。有关ONTAP 9 4的其他特性和功能的详细信息，请参见 https://www.netapp.com/pdf.html?item=/media/7413-ds-3231.pdf["ONTAP 9 数据管理软件产品规格"^]。此外，请参见NetApp http://docs.netapp.com/ontap-9/index.jsp["ONTAP 9 文档中心"^]，它已更新为包括ONTAP 9。4.
 
@@ -57,7 +57,7 @@ Cisco Nexus 3172P 是一款功能强大且经济高效的交换机，可提供 1
 * 可配置的最大传输单元（ MTU ），最多 9216 字节（巨型帧）
 
 
-image:express-c-series-aff220-design_image7.png["错误：缺少图形映像"]
+image:express-c-series-aff220-design_image7.png[""]
 
 有关 Cisco Nexus 3172 交换机的详细信息，请参见 https://www.cisco.com/c/en/us/products/collateral/switches/nexus-3000-series-switches/data_sheet_c78-729483.html["Cisco Nexus 3172PQ ， 3172TQ ， 3172TQ-32T ， 3172PQ-XL 和 3172TQ-XL 交换机数据表"^]。
 
@@ -78,7 +78,7 @@ Cisco UCS C 系列机架式服务器具有以下优势：
 * 通过熟悉的机架包装提供独特优势，增加客户的选择
 
 
-image:express-c-series-aff220-design_image8.png["错误：缺少图形映像"]
+image:express-c-series-aff220-design_image8.png[""]
 
 Cisco UCS C220 M5 机架式服务器（如上图所示）是业内用途最广泛的通用企业基础架构和应用程序服务器之一。它是一款高密度双插槽机架式服务器，可为包括虚拟化，协作和裸机应用程序在内的各种工作负载提供行业领先的性能和效率。Cisco UCS C 系列机架式服务器可以作为独立服务器部署，也可以作为 Cisco UCS 的一部分部署，以利用 Cisco 基于标准的统一计算创新技术，帮助客户降低 TCO 并提高业务灵活性。
 
@@ -97,7 +97,7 @@ Cisco UCS VIC 1387 （如下图所示）采用模块化主板上 LAN （ mLOM �
 
 
 
-image:express-c-series-aff220-design_image9.png["错误：缺少图形映像"]
+image:express-c-series-aff220-design_image9.png[""]
 
 有关 Cisco UCS VIC 1387 适配器的详细信息，请参见 https://www.cisco.com/c/en/us/products/interfaces-modules/ucs-virtual-interface-card-1387/index.html["Cisco UCS 虚拟接口卡 1387"^] 数据表。
 
@@ -107,7 +107,7 @@ Cisco QSA 模块可将 QSFP 端口转换为 SFP 或 SFP+ 端口。借助此适�
 
 
 
-image:express-c-series-aff220-design_image10.png["错误：缺少图形映像"]
+image:express-c-series-aff220-design_image10.png[""]
 
 
 

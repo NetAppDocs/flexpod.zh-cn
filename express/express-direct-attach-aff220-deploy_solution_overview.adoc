@@ -32,7 +32,7 @@ FlexPod 参考架构以 Cisco 验证设计（ CVD ）或 NetApp 验证架构（ 
 
 下图显示了解决方案的技术组件。
 
-image:express-direct-attach-aff220-deploy_image2.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image2.png[""]
 
 
 
@@ -81,7 +81,7 @@ NVA 计划为客户提供经过验证的 NetApp 解决方案架构。NVA 可提�
 
 下图展示了采用 VMware vSphere 6.7U1 基于 IP 的 Direct Connect 架构的 FlexPod Express 。
 
-image:express-direct-attach-aff220-deploy_image3.png["错误：缺少图形映像"]
+image:express-direct-attach-aff220-deploy_image3.png[""]
 
 
 

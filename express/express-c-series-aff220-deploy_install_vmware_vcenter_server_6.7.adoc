@@ -26,7 +26,7 @@ NOTE: FlexPod Express 使用 VMware vCenter Server 设备（ VCSA ）。
 
 . 下载 VCSA 。在管理 ESXi 主机时，单击获取 vCenter Server 图标以访问下载链接。
 +
-image:express-c-series-aff220-deploy_image41.png["错误：缺少图形映像"]
+image:express-c-series-aff220-deploy_image41.png[""]
 
 . 从 VMware 站点下载 VCSA 。
 +
@@ -40,7 +40,7 @@ NOTE: 虽然支持安装 Microsoft Windows vCenter Server ，但 VMware 建议�
 . 接受最终用户许可协议。
 . 选择 Embedded Platform Services Controller 作为部署类型。
 +
-image:express-c-series-aff220-deploy_image42.png["错误：缺少图形映像"]
+image:express-c-series-aff220-deploy_image42.png[""]
 
 +
 
@@ -48,19 +48,19 @@ NOTE: 如果需要，还支持在 FlexPod Express 解决方案中部署外部平
 
 . 在设备部署目标中，输入已部署的 ESXi 主机的 IP 地址以及 root 用户名和 root 密码。
 +
-image:express-c-series-aff220-deploy_image43.png["错误：缺少图形映像"]
+image:express-c-series-aff220-deploy_image43.png[""]
 
 . 输入 `vCSA` 作为要用于 VCSA 的 VM 名称和根密码，以设置设备 VM 。
 +
-image:express-c-series-aff220-deploy_image44.png["错误：缺少图形映像"]
+image:express-c-series-aff220-deploy_image44.png[""]
 
 . 选择最适合您环境的部署规模。单击下一步。
 +
-image:express-c-series-aff220-deploy_image45.png["错误：缺少图形映像"]
+image:express-c-series-aff220-deploy_image45.png[""]
 
 . 选择 infra_datastore_1 数据存储库。单击下一步。
 +
-image:express-c-series-aff220-deploy_image46.png["错误：缺少图形映像"]
+image:express-c-series-aff220-deploy_image46.png[""]
 
 . 在 Configure network settings 页面中输入以下信息，然后单击 Next 。
 +
@@ -74,7 +74,7 @@ image:express-c-series-aff220-deploy_image46.png["错误：缺少图形映像"]
 
 . 在准备完成阶段 1 页面上，验证您输入的设置是否正确。单击完成。
 +
-image:express-c-series-aff220-deploy_image47.png["错误：缺少图形映像"]
+image:express-c-series-aff220-deploy_image47.png[""]
 
 +
 此时将安装 VCSA 。此过程需要几分钟时间。
@@ -82,7 +82,7 @@ image:express-c-series-aff220-deploy_image47.png["错误：缺少图形映像"]
 . 阶段 1 完成后，将显示一条消息，指出已完成。单击 Continue 以开始第 2 阶段配置。
 . 在第 2 阶段简介页面上，单击下一步。
 +
-image:express-c-series-aff220-deploy_image48.png["错误：缺少图形映像"]
+image:express-c-series-aff220-deploy_image48.png[""]
 
 . 输入 ` \<<var_ntp_id>>` 作为 NTP 服务器地址。您可以输入多个 NTP IP 地址。
 +

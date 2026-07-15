@@ -35,7 +35,7 @@ summary: 要配置 VMware vCenter Server 6.7 和 vSphere 集群，请完成此�
 . 选中复选框以启用灾难恢复和 vSphere HA 。
 . 单击确定。
 +
-image:express-c-series-c190-deploy_image45.png["错误：缺少图形映像"]
+image:express-c-series-c190-deploy_image45.png[""]
 
 
 
@@ -48,7 +48,7 @@ image:express-c-series-c190-deploy_image45.png["错误：缺少图形映像"]
 
 . 右键单击集群并选择添加主机。
 +
-image:express-c-series-c190-deploy_image46.png["错误：缺少图形映像"]
+image:express-c-series-c190-deploy_image46.png[""]
 
 . 要将 ESXi 主机添加到集群，请完成以下步骤：
 +
@@ -84,7 +84,7 @@ NOTE: 对于添加到 FlexPod 快速配置中的任何其他主机，必须完�
 . 单击服务并选择 VMware vSphere ESXi 转储收集器。
 . 启动 VMware vSphere ESXi 转储收集器服务。
 +
-image:express-c-series-c190-deploy_image47.png["错误：缺少图形映像"]
+image:express-c-series-c190-deploy_image47.png[""]
 
 . 使用 SSH 连接到管理 IP ESXi 主机，输入 root 作为用户名，然后输入 root 密码。
 . 运行以下命令：
@@ -96,7 +96,7 @@ esxcli system coredump network check
 ....
 . 输入最后一个命令后，将显示消息 `Verified the configured netdump server is running` 。
 +
-image:express-c-series-c190-deploy_image48.png["错误：缺少图形映像"]
+image:express-c-series-c190-deploy_image48.png[""]
 
 +
 

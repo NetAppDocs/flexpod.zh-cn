@@ -10,7 +10,7 @@ summary: FlexPod Express 是一种预先设计的最佳实践数据中心架构�
 
 NetApp 公司 Savita Kumari
 
-与以下合作伙伴：image:cisco logo.png["错误：缺少图形映像"]
+与以下公司合作： image:cisco logo.png[""]
 
 [role="lead"]
 行业趋势表明，数据中心正在向共享基础架构和云计算转型。此外，企业还希望为远程办公室和分支机构提供一个简单有效的解决方案，以使用他们在数据中心熟悉的技术。

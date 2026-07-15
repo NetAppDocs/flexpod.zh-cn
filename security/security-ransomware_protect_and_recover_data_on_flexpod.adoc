@@ -34,15 +34,15 @@ summary: 本节介绍在发生攻击时如何恢复最终用户的数据，以�
 
 VM 的 Documents 文件夹包含一组 PDF 文件，这些文件尚未被 WannaCry 恶意软件加密。
 
-image:security-ransomware_image3.png["错误：缺少图形映像"]
+image:security-ransomware_image3.png[""]
 
 以下屏幕截图显示了映射到虚拟机的 CIFS 共享。
 
-image:security-ransomware_image4.png["错误：缺少图形映像"]
+image:security-ransomware_image4.png[""]
 
 以下屏幕截图显示了 CIFS 共享 `fpolicy_share` 上尚未被 WannaCry 恶意软件加密的文件。
 
-image:security-ransomware_image5.png["错误：缺少图形映像"]
+image:security-ransomware_image5.png[""]
 
 
 
@@ -53,19 +53,19 @@ image:security-ransomware_image5.png["错误：缺少图形映像"]
 
 通过对托管 VM 的卷执行重复数据删除，存储节省了 19% 。
 
-image:security-ransomware_image6.png["错误：缺少图形映像"]
+image:security-ransomware_image6.png[""]
 
 通过对 CIFS 共享 `fpolicy_share` 执行重复数据删除，存储节省了 45% 。
 
-image:security-ransomware_image7.png["错误：缺少图形映像"]
+image:security-ransomware_image7.png[""]
 
 对于托管 VM 的卷，观察到 Snapshot 副本大小为 456 KB 。
 
-image:security-ransomware_image8.png["错误：缺少图形映像"]
+image:security-ransomware_image8.png[""]
 
 对于 CIFS 共享 `fpolicy_share` ，观察到的 Snapshot 副本大小为 160 KB 。
 
-image:security-ransomware_image9.png["错误：缺少图形映像"]
+image:security-ransomware_image9.png[""]
 
 
 
@@ -78,11 +78,11 @@ image:security-ransomware_image9.png["错误：缺少图形映像"]
 
 . 已提取受保护的恶意软件。
 +
-image:security-ransomware_image10.png["错误：缺少图形映像"]
+image:security-ransomware_image10.png[""]
 
 . 已执行二进制文件。
 +
-image:security-ransomware_image11.png["错误：缺少图形映像"]
+image:security-ransomware_image11.png[""]
 
 
 
@@ -95,11 +95,11 @@ image:security-ransomware_image11.png["错误：缺少图形映像"]
 
 恶意软件开始对具有 WNCRY 扩展名的文件进行加密。
 
-image:security-ransomware_image12.png["错误：缺少图形映像"]
+image:security-ransomware_image12.png[""]
 
 恶意软件会对本地 VM 和映射共享中的所有文件进行加密。
 
-image:security-ransomware_image13.png["错误：缺少图形映像"]
+image:security-ransomware_image13.png[""]
 
 
 
@@ -109,15 +109,15 @@ image:security-ransomware_image13.png["错误：缺少图形映像"]
 
 我们检测到，在攻击期间，托管 CIFS 共享的卷的 Snapshot 大小大幅增加到 820.98MB 。
 
-image:security-ransomware_image14.png["错误：缺少图形映像"]
+image:security-ransomware_image14.png[""]
 
 我们检测到托管 VM 的卷的 Snapshot 副本大小增加到了 404.3MB 。
 
-image:security-ransomware_image15.png["错误：缺少图形映像"]
+image:security-ransomware_image15.png[""]
 
 托管 CIFS 共享的卷的存储效率降低到 34% 。
 
-image:security-ransomware_image16.png["错误：缺少图形映像"]
+image:security-ransomware_image16.png[""]
 
 
 
@@ -131,23 +131,23 @@ image:security-ransomware_image16.png["错误：缺少图形映像"]
 
 . 使用您使用 SnapCenter 创建的 Snapshot 副本还原虚拟机。
 +
-image:security-ransomware_image17.png["错误：缺少图形映像"]
+image:security-ransomware_image17.png[""]
 
 . 选择所需的 VMware 一致 Snapshot 副本进行还原。
 +
-image:security-ransomware_image18.png["错误：缺少图形映像"]
+image:security-ransomware_image18.png[""]
 
 . 此时将还原并重新启动整个 VM 。
 +
-image:security-ransomware_image19.png["错误：缺少图形映像"]
+image:security-ransomware_image19.png[""]
 
 . 单击完成以启动还原过程。
 +
-image:security-ransomware_image20.png["错误：缺少图形映像"]
+image:security-ransomware_image20.png[""]
 
 . 虚拟机及其文件将会还原。
 +
-image:security-ransomware_image21.png["错误：缺少图形映像"]
+image:security-ransomware_image21.png[""]
 
 
 
@@ -157,15 +157,15 @@ image:security-ransomware_image21.png["错误：缺少图形映像"]
 
 . 使用攻击前创建的卷的 Snapshot 副本还原共享。
 +
-image:security-ransomware_image22.png["错误：缺少图形映像"]
+image:security-ransomware_image22.png[""]
 
 . 单击确定以启动还原操作。
 +
-image:security-ransomware_image23.png["错误：缺少图形映像"]
+image:security-ransomware_image23.png[""]
 
 . 还原后查看 CIFS 共享。
 +
-image:security-ransomware_image24.png["错误：缺少图形映像"]
+image:security-ransomware_image24.png[""]
 
 
 
@@ -192,8 +192,8 @@ vserver fpolicy enable -vserver infra_svm -policy-name Ransomware_policy -sequen
 
 查看文件在攻击前的状态—它们未加密且位于一个干净的系统中。
 
-image:security-ransomware_image25.png["错误：缺少图形映像"]
+image:security-ransomware_image25.png[""]
 
 虚拟机上的文件已加密。WannaCry 恶意软件会尝试对 CIFS 共享中的文件进行加密，但 FPolicy 会防止其影响这些文件。
 
-image:security-ransomware_image26.png["错误：缺少图形映像"]
+image:security-ransomware_image26.png[""]

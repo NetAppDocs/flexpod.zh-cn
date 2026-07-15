@@ -3,7 +3,6 @@ section: healthcare
 title: 医疗保健
 entries:
 - title: 适用于基因组学的 FlexPod
-  type: solutions
   entries:
   - title: 简介
     url: "/healthcare/flexpod-genomics-introduction.html"
@@ -24,7 +23,6 @@ entries:
   - title: 结论
     url: "/healthcare/flexpod-genomics-conclusion.html"
 - title: 适用于医疗成像的 FlexPod
-  type: solutions
   entries:
   - title: 概述
     url: "/healthcare/medical-imaging_introduction.html"

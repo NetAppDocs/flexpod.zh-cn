@@ -53,7 +53,7 @@ summary:
 . 选择要应用于卷的分层策略。
 . 单击保存。
 +
-image:cloud-fabricpool_image16.png["错误：缺少图形映像"]
+image:cloud-fabricpool_image16.png[""]
 
 
 

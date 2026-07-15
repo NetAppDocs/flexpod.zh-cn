@@ -27,10 +27,10 @@ link:flexpod-genomics-appendix-c.html["previous ：使用 Cromwell 引擎执行 
 
 . 我们在 UCS B200 M5 服务器的夹层插槽中使用了 PCIe NVIDIA Tesla P6 GPU 。
 +
-image:flexpod-genomics-image18.png["错误：缺少图形映像"]
+image:flexpod-genomics-image18.png[""]
 
 +
-image:flexpod-genomics-image19.png["错误：缺少图形映像"]
+image:flexpod-genomics-image19.png[""]
 
 . 对于此设置，我们已在 NVIDIA 合作伙伴门户上注册，并获得了一个评估许可证（也称为授权），以便能够在计算模式下使用 GPU 。
 . 我们从 NVIDIA 合作伙伴网站下载了所需的 NVIDIA vGPU 软件。
@@ -75,32 +75,32 @@ Wed Aug 18 21:37:19 2021
 ....
 . 使用 vCenter ， https://blogs.vmware.com/apps/2018/09/using-gpus-with-virtual-machines-on-vsphere-part-2-vmdirectpath-i-o.html["配置"^] 图形设备设置为 "shared direction" 。
 +
-image:flexpod-genomics-image20.png["错误：缺少图形映像"]
+image:flexpod-genomics-image20.png[""]
 
 +
-image:flexpod-genomics-image21.png["错误：缺少图形映像"]
+image:flexpod-genomics-image21.png[""]
 
 . 确保已为 RedHat VM 禁用安全启动。
 . 确保 VM 启动选项固件设置为 EFI （ https://docs.vmware.com/en/VMware-vSphere-Bitfusion/3.0/Install-Guide/GUID-2005A8C6-4FDC-46DF-BB6B-989F6E91F3E2.html["ref"^]）。
 +
-image:flexpod-genomics-image22.png["错误：缺少图形映像"]
+image:flexpod-genomics-image22.png[""]
 
 . 确保已将以下参数添加到 VM 选项高级编辑配置中。`pciPassthru .64bitMMIOSizeGB` 参数的值取决于 GPU 内存和分配给虚拟机的 GPU 数量。例如：
 +
 .. 如果为虚拟机分配了 4 个 32 GB V100 GPU ，则此值应为 128 。
 .. 如果为虚拟机分配了 4 个 16 GB P6 GPU ，则此值应为 64 。
 +
-image:flexpod-genomics-image23.png["错误：缺少图形映像"]
+image:flexpod-genomics-image23.png[""]
 
 +
-image:flexpod-genomics-image24.png["错误：缺少图形映像"]
+image:flexpod-genomics-image24.png[""]
 
 
 
 . 在 vCenter 中将 vGPU 作为新的 PCI 设备添加到虚拟机时，请确保选择 NVIDIA GRID vGPU 作为 PCI 设备类型。
 . 选择适合所用 GPU ， GPU 内存和使用目的的正确 GPU 配置文件：例如，图形与计算。
 +
-image:flexpod-genomics-image25.png["错误：缺少图形映像"]
+image:flexpod-genomics-image25.png[""]
 
 . 在 RedHat Linux VM 上，可以运行以下命令来安装 NVIDIA 驱动程序：
 +
@@ -159,7 +159,7 @@ Wed Aug 18 20:30:56 2021
 
 . 重新启动虚拟机后，您应在许可证服务器中的 " 已许可客户端 " 下看到一个条目，如下所示。
 +
-image:flexpod-genomics-image26.png["错误：缺少图形映像"]
+image:flexpod-genomics-image26.png[""]
 
 . 有关下载 GATK 和 Cromwell 软件的详细信息，请参见 " 解决方案设置 " 一节。
 . 在 GATK 可以在内部使用 GPU 之后，工作流问题描述语言为 ` * 。WDL` 具有运行时属性，如下所示。

@@ -44,11 +44,11 @@ FlexPod 数据中心 SM-BC 解决方案 可为各种单点故障情形以及站�
 
 下图说明了 ESXi 主机访问 LUN 时可以使用的路径，例如 LUN 0 。由于 LUN 连接到站点 A 控制器 01 ，因此只有通过该控制器直接访问 LUN 的两个路径处于活动 / 优化状态，其余六个路径均处于活动 / 非优化状态。
 
-image:sm-bcs-image47.png["错误：缺少图形映像"]
+image:sm-bcs-image47.png[""]
 
 以下 storage-device-path 信息的屏幕截图显示了 ESXi 主机如何查看这两种类型的设备路径。两个主动 / 优化路径显示为具有 `主动（ I/O ）` 路径状态，而六个主动 / 非优化路径仅显示为 `主动` 。另请注意，目标列显示了两个 iSCSI 目标以及用于访问这些目标的相应 iSCSI LIF IP 地址。
 
-image:sm-bcs-image48.png["错误：缺少图形映像"]
+image:sm-bcs-image48.png[""]
 
 当其中一个存储控制器因维护或升级而关闭时，到达已关闭控制器的两条路径将不再可用，而是显示路径状态 `dead` 。
 
@@ -67,11 +67,11 @@ image:sm-bcs-image48.png["错误：缺少图形映像"]
 
 以下屏幕截图显示主机已配置为从两个站点挂载 iSCSI 数据存储库。
 
-image:sm-bcs-image49.png["错误：缺少图形映像"]
+image:sm-bcs-image49.png[""]
 
 您可以选择在两个站点的可用 iSCSI 数据存储库之间迁移虚拟机磁盘，如下图所示。出于性能考虑，最好让虚拟机使用其本地存储集群中的存储来减少磁盘 I/O 延迟。由于物理往返距离延迟约为每 100 公里 1 毫秒，因此当两个站点相隔一定距离时尤其如此。
 
-image:sm-bcs-image50.png["错误：缺少图形映像"]
+image:sm-bcs-image50.png[""]
 
 对虚拟机在同一站点以及不同站点的不同主机上的 vMotion 进行了测试，并取得了成功。在站点间手动迁移虚拟机后， VM/ 主机关联性规则会激活虚拟机并将其迁移回正常情况下所属的组。
 
@@ -87,25 +87,25 @@ image:sm-bcs-image50.png["错误：缺少图形映像"]
 . 导航到保护 > 关系屏幕，确认一致性组关系状态为 `in Sync` 。如果它仍处于 `Synchronizing` 状态，请等待状态变为 `in Sync` ，然后再执行故障转移。
 . 展开源名称旁边的点，然后单击故障转移。
 +
-image:sm-bcs-image51.png["错误：缺少图形映像"]
+image:sm-bcs-image51.png[""]
 
 . 确认故障转移以启动操作。
 +
-image:sm-bcs-image52.png["错误：缺少图形映像"]
+image:sm-bcs-image52.png[""]
 
 
 
 在站点 B System Manager 图形用户界面上对两个一致性组 `CG_ESXi_A` 和 `CG_infra_datastore_A` 启动故障转移后不久，为这两个一致性组提供服务的站点 A I/O 便移至站点 B因此，站点 A 的 I/O 会显著减少，如站点 A System Manager 性能窗格中所示。
 
-image:sm-bcs-image53.png["错误：缺少图形映像"]
+image:sm-bcs-image53.png[""]
 
 另一方面，站点 B System Manager 信息板的 " 性能 " 窗格显示 IOPS 显著增加，这是因为提供了从站点 A 转移到大约 130 ， 000 IOPS 的额外 I/O 。 并达到大约 1GB/ 秒的吞吐量，同时 I/O 延迟保持在 1 毫秒以下。
 
-image:sm-bcs-image54.png["错误：缺少图形映像"]
+image:sm-bcs-image54.png[""]
 
 随着 I/O 从站点 A 透明地迁移到站点 B ，现在可以关闭站点 A 存储控制器以进行计划内维护。完成维护工作或测试并恢复站点 A 存储集群并使其正常运行后，请先检查并等待一致性组保护状态重新更改为同步 `` ，然后再执行故障转移，将故障转移 I/O 从站点 B 返回到站点 A请注意，站点因维护或测试而关闭的时间越长，同步数据以及将一致性组返回到处于同步` 状态的 `所需的时间就越长。
 
-image:sm-bcs-image55.png["错误：缺少图形映像"]
+image:sm-bcs-image55.png[""]
 
 
 
@@ -114,7 +114,7 @@ image:sm-bcs-image55.png["错误：缺少图形映像"]
 
 发生实际灾难或进行灾难模拟期间，可能会发生计划外存储故障转移。例如，请参见下图，其中站点 A 的存储系统发生断电，触发计划外存储故障转移，站点 A LUN 的数据服务受 SM-BC 关系保护，然后从站点 B 继续提供
 
-image:sm-bcs-image56.png["错误：缺少图形映像"]
+image:sm-bcs-image56.png[""]
 
 要模拟站点 A 的存储灾难，可以通过物理关闭电源开关来关闭站点 A 的两个存储控制器，从而停止为控制器供电。 或者使用存储控制器服务处理器的 system power management 命令关闭控制器。
 
@@ -124,21 +124,21 @@ image:sm-bcs-image56.png["错误：缺少图形映像"]
 
 在验证测试期间，两个站点的 VM 上的 IOMeter 工具会为其本地数据存储库生成 I/O 。关闭站点 A 集群后， I/O 会短暂暂停，然后恢复。请参见以下两个数据，分别查看发生灾难前站点 A 和站点 B 存储集群的信息板，这些信息板显示每个站点的 IOPS 约为 80 ， 000 次，吞吐量约为 600 MB/ 秒。
 
-image:sm-bcs-image57.png["错误：缺少图形映像"]
+image:sm-bcs-image57.png[""]
 
-image:sm-bcs-image58.png["错误：缺少图形映像"]
+image:sm-bcs-image58.png[""]
 
 关闭站点 A 的存储控制器后，我们可以直观地验证站点 B 存储控制器 I/O 是否急剧增加，以便代表站点 A 提供额外的数据服务（请参见下图）。此外， IOMeter VM 的 GUI 还显示，尽管站点 A 存储集群发生中断， I/O 仍会继续。请注意，如果有其他数据存储库由不受 SM-BC 关系保护的 LUN 提供支持，则在发生存储灾难时，这些数据存储库将无法再访问。因此，必须评估各种应用程序数据的业务需求，并将其正确放置在受 SM-BC 关系保护的数据存储库中，以确保业务连续性。
 
-image:sm-bcs-image59.png["错误：缺少图形映像"]
+image:sm-bcs-image59.png[""]
 
 当站点 A 集群关闭时，一致组的关系会显示 `不同步` 状态，如下图所示。重新打开站点 A 存储控制器的电源后，存储集群将启动，站点 A 和站点 B 之间的数据同步将自动进行。
 
-image:sm-bcs-image60.png["错误：缺少图形映像"]
+image:sm-bcs-image60.png[""]
 
 在将数据服务从站点 B 返回到站点 A 之前，您必须检查站点 A System Manager 并确保 SM-BC 关系正常运行且状态恢复同步。确认一致性组处于同步状态后，可以启动手动故障转移操作，将一致性组关系中的数据服务返回到站点 A
 
-image:sm-bcs-image61.png["错误：缺少图形映像"]
+image:sm-bcs-image61.png[""]
 
 
 
@@ -155,7 +155,7 @@ image:sm-bcs-image61.png["错误：缺少图形映像"]
 
 在执行计划内迁移之前，请更新 VM/ 主机关联性规则，以便站点上当前运行的 VM 自动迁移出正在维护的站点。以下屏幕截图显示了修改站点 A VM/ 主机关联性规则以使 VM 自动从站点 A 迁移到站点 B 的示例。您还可以选择临时禁用关联性规则，以便可以手动迁移 VM ，而不是指定现在需要在站点 B 上运行 VM 。
 
-image:sm-bcs-image62.png["错误：缺少图形映像"]
+image:sm-bcs-image62.png[""]
 
 迁移虚拟机和存储服务后，您可以关闭服务器，存储控制器，磁盘架和交换机的电源，并执行所需的站点维护活动。完成站点维护并恢复 FlexPod 实例后，您可以更改 VM 的主机组关联性以返回到其原始站点。之后，您应将 " 必须在组中的主机上运行 " VM/ 主机站点关联性规则改回 " 应在组中的主机上运行 " ，以便在发生灾难时，虚拟机可以在另一站点的主机上运行。在验证测试中，所有虚拟机均已成功迁移到另一站点，在对 SM-BC 关系执行故障转移后，数据服务继续正常运行。
 
@@ -163,13 +163,13 @@ image:sm-bcs-image62.png["错误：缺少图形映像"]
 
 以下屏幕截图显示了存储控制器的服务处理器 CLI 用于突然关闭站点 A 集群以模拟站点 A 存储灾难。
 
-image:sm-bcs-image63.png["错误：缺少图形映像"]
+image:sm-bcs-image63.png[""]
 
 以下两个屏幕截图显示了由 NetApp 收集数据工具捕获并显示在 NASbox 监控工具的 Grafana 信息板中的存储集群的 Storage Virtual Machine 信息板。如 IOPS 和吞吐量图的右侧所示，站点 B 集群会在站点 A 集群关闭后立即接管集群 A 的存储工作负载。
 
-image:sm-bcs-image64.png["错误：缺少图形映像"]
+image:sm-bcs-image64.png[""]
 
-image:sm-bcs-image65.png["错误：缺少图形映像"]
+image:sm-bcs-image65.png[""]
 
 
 
@@ -182,25 +182,25 @@ Microsoft SQL Server 是一种广泛采用和部署的数据库平台，适用�
 
 HammerDB 数据库测试工具配置为使用 Microsoft SQL Server TPROC-C 工作负载进行测试。对于架构构建配置，这些选项已更新为使用包含 10 个虚拟用户的 100 个仓库，如以下屏幕截图所示。
 
-image:sm-bcs-image66.png["错误：缺少图形映像"]
+image:sm-bcs-image66.png[""]
 
 更新架构构建选项后，架构构建过程便已启动。几分钟后，由于使用 system processor 命令行界面命令大约同时关闭了双节点 AFF A250 存储集群的两个节点，因此出现了计划外模拟站点 B 存储集群故障。
 
 在短暂暂停数据库事务后，启动了用于灾难修复的自动故障转移，并恢复了事务。以下屏幕截图显示了该时间的 HammerDB 事务计数器屏幕截图。由于 Microsoft SQL Server 的数据库通常驻留在站点 B 存储集群上，因此，当站点 B 的存储发生故障时，事务会短暂暂停，然后在发生自动故障转移后恢复。
 
-image:sm-bcs-image67.png["错误：缺少图形映像"]
+image:sm-bcs-image67.png[""]
 
 存储集群指标是通过在安装了 NetApp 收集监控工具的情况下使用 NAbox 工具捕获的。结果将显示在 Storage Virtual Machine 和其他存储对象的预定义 Grafana 信息板中。此信息板可提供延迟，吞吐量， IOPS 和其他详细信息的度量值，站点 B 和站点 A 的读取和写入统计信息将分开
 
 此屏幕截图显示了站点 B 存储集群的 NAbox Grafana 性能信息板。
 
-image:sm-bcs-image68.png["错误：缺少图形映像"]
+image:sm-bcs-image68.png[""]
 
 在引入灾难之前，站点 B 存储集群的 IOPS 约为 100 ， 000 IOPS 。然后，由于发生灾难，性能指标在图形的右侧急剧下降到零。由于站点 B 存储集群已关闭，因此在发生灾难后，无法从站点 B 集群收集任何数据。
 
 另一方面，在自动故障转移之后，站点 A 存储集群的 IOPS 从站点 B 中接管了其他工作负载。在以下屏幕截图中，您可以轻松地在 IOPS 和吞吐量图的右侧看到额外的工作负载，其中显示了站点 A 存储集群的 Nanbox Grafana 性能信息板。
 
-image:sm-bcs-image69.png["错误：缺少图形映像"]
+image:sm-bcs-image69.png[""]
 
 上述存储灾难测试场景确认，在数据库所在的站点 B 上， Microsoft SQL Server 工作负载可以在存储集群完全中断的情况下继续运行。检测到灾难并发生故障转移后，应用程序会透明地使用站点 A 存储集群提供的数据服务。
 

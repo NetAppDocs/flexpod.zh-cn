@@ -34,11 +34,11 @@ NOTE: FlexPod Express 使用 VMware vCenter Server 设备（ VCSA ）。
 . 单击安装。
 . 单击简介页面上的下一步。
 +
-image:express-c-series-c190-deploy_image34.png["错误：缺少图形映像"]
+image:express-c-series-c190-deploy_image34.png[""]
 
 . 选择 Embedded Platform Services Controller 作为部署类型。
 +
-image:express-c-series-c190-deploy_image35.png["错误：缺少图形映像"]
+image:express-c-series-c190-deploy_image35.png[""]
 
 +
 
@@ -46,15 +46,15 @@ NOTE: 如果需要，还支持在 FlexPod Express 解决方案中部署外部平
 
 . 在设备部署目标中，输入已部署的 ESXi 主机的 IP 地址， root 用户名和 root 密码。
 +
-image:express-c-series-c190-deploy_image36.png["错误：缺少图形映像"]
+image:express-c-series-c190-deploy_image36.png[""]
 
 . 输入 vCSA 作为要用于 VCSA 的虚拟机名称和根密码，以设置设备虚拟机。
 +
-image:express-c-series-c190-deploy_image37.png["错误：缺少图形映像"]
+image:express-c-series-c190-deploy_image37.png[""]
 
 . 选择最适合您环境的部署规模。单击下一步。
 +
-image:express-c-series-c190-deploy_image38.png["错误：缺少图形映像"]
+image:express-c-series-c190-deploy_image38.png[""]
 
 . 选择 `infra_datastore` 数据存储库。单击下一步。
 . 在 Configure network settings 页面中输入以下信息，然后单击 Next 。
@@ -69,11 +69,11 @@ image:express-c-series-c190-deploy_image38.png["错误：缺少图形映像"]
 
 . 在准备完成阶段 1 页面上，验证您输入的设置是否正确。单击完成。
 +
-image:express-c-series-c190-deploy_image39.png["错误：缺少图形映像"]
+image:express-c-series-c190-deploy_image39.png[""]
 
 . 开始部署设备之前，请查看第 1 阶段的设置。
 +
-image:express-c-series-c190-deploy_image40.png["错误：缺少图形映像"]
+image:express-c-series-c190-deploy_image40.png[""]
 
 +
 此时将安装 VCSA 。此过程需要几分钟时间。
@@ -81,13 +81,13 @@ image:express-c-series-c190-deploy_image40.png["错误：缺少图形映像"]
 . 阶段 1 完成后，将显示一条消息，指出已完成。单击 Continue 以开始第 2 阶段配置。
 . 在第 2 阶段简介页面上，单击下一步。
 +
-image:express-c-series-c190-deploy_image41.png["错误：缺少图形映像"]
+image:express-c-series-c190-deploy_image41.png[""]
 
 . 输入 ` \<<var_ntp_id>>` 作为 NTP 服务器地址。您可以输入多个 NTP IP 地址。
 . 如果您计划使用 vCenter Server 高可用性（ HA ），请确保已启用 SSH 访问。
 . 配置 SSO 域名，密码和站点名称。单击下一步。
 +
-image:express-c-series-c190-deploy_image42.png["错误：缺少图形映像"]
+image:express-c-series-c190-deploy_image42.png[""]
 
 +
 
@@ -95,12 +95,12 @@ NOTE: 请记下这些值以供参考，特别是当您与 `vsphere.local` 域名
 
 . 如果需要，请加入 VMware 客户体验计划。单击下一步。
 +
-image:express-c-series-c190-deploy_image43.png["错误：缺少图形映像"]
+image:express-c-series-c190-deploy_image43.png[""]
 
 . 查看设置摘要。单击完成或使用返回按钮编辑设置。
 . 此时将显示一条消息，指出在安装开始后，您将无法暂停或停止安装完成。单击确定继续。
 +
-image:express-c-series-c190-deploy_image44.png["错误：缺少图形映像"]
+image:express-c-series-c190-deploy_image44.png[""]
 
 +
 设备设置将继续。这需要几分钟时间。

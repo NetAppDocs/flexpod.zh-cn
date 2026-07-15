@@ -31,13 +31,13 @@ NOTE: 将云层附加到聚合是一项永久性操作。无法从已附加到�
 . 启动 OnCommand 系统管理器。
 . 单击应用程序和层。
 +
-image:cloud-fabricpool_image14.png["错误：缺少图形映像"]
+image:cloud-fabricpool_image14.png[""]
 
 . 单击存储层。
 . 单击某个聚合。
 . 单击操作并选择附加云层。
 +
-image:cloud-fabricpool_image15.png["错误：缺少图形映像"]
+image:cloud-fabricpool_image15.png[""]
 
 . 选择云层。
 . 查看并更新聚合上卷的分层策略（可选）。默认情况下，卷分层策略设置为仅 Snapshot 。

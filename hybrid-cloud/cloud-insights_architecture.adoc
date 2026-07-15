@@ -68,7 +68,7 @@ FlexPod Datacenter 解决方案由以下最低组件组成，可提供高度可�
 
 下图显示了解决方案架构。
 
-image:cloud-insights_image2.png["错误：缺少图形映像"]
+image:cloud-insights_image2.png[""]
 
 
 
@@ -133,7 +133,7 @@ image:cloud-insights_image2.png["错误：缺少图形映像"]
 
 此解决方案适用场景的使用情形如下：
 
-* 使用提供给 NetApp Active IQ 数字顾问的数据分析环境，以评估存储系统风险并提供存储优化建议。
+* 使用提供给 NetApp Digital Advisor 的数据分析环境，以评估存储系统风险并提出存储优化建议。
 * 通过实时检查系统统计信息对部署在 FlexPod Datacenter 解决方案中的 ONTAP 存储系统中的问题进行故障排除。
 * 生成自定义信息板，以便轻松监控在 FlexPod 数据中心融合基础架构中部署的 ONTAP 存储系统的特定关注点。
 

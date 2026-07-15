@@ -33,7 +33,7 @@ Cisco Nexus 9000 系列交换机支持两种操作模式：
 
 采用 NX-OS 的 FlexPod 在计算层，网络层和存储层中设计为完全冗余。从设备或流量路径的角度来看，不存在单点故障。下图显示了此 FC-NVMe 验证中使用的最新 FlexPod 设计的各个要素的连接。
 
-image:nvme-vsphere-image2.png["错误：缺少图形映像"]
+image:nvme-vsphere-image2.png[""]
 
 从 FC SAN 角度来看，此设计使用最新的第四代 Cisco UCS 6454 互联阵列以及在服务器中具有端口扩展器的 Cisco UCS VIC 1400 平台。Cisco UCS 机箱中的 Cisco UCS B200 M6 刀片式服务器使用 Cisco UCS VIC 1440 ，并将端口扩展器连接到 Cisco UCS 2408 阵列扩展器 IOM ，并且每个以太网光纤通道（ FCoE ）虚拟主机总线适配器（ vHBA ）的速度均为 40 Gbps 。由 Cisco UCS 管理的 Cisco UCS C220 M5 机架式服务器使用 Cisco UCS VIC 1457 ，每个互联阵列具有两个 25 Gbps 接口。每个 C220 M5 FCoE vHBA 的速度均为 50 Gbps 。
 

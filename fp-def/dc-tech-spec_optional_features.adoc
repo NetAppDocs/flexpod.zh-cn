@@ -25,29 +25,29 @@ FlexPod 支持两种 NetApp MetroCluster 软件版本，可在双节点或四节
 
 下图展示了采用 NetApp MetroCluster 架构的 FlexPod Datacenter 。
 
-image:dc-tech-spec_image1.png["错误：缺少图形映像"]
+image:dc-tech-spec_image1.png[""]
 
 下图展示了采用 NetApp MetroCluster IP 架构的 FlexPod 数据中心。
 
-image:dc-tech-spec_image2.png["错误：缺少图形映像"]
+image:dc-tech-spec_image2.png[""]
 
 从 ONTAP 9.8 开始，可以在第三个站点部署 ONTAP 调解器，以监控 MetroCluster IP 解决方案，并在发生站点灾难时实现自动计划外切换。
 
 对于具有扩展的第 2 层站点到站点连接的 FlexPod MetroCluster IP 解决方案部署，如果网络带宽和交换机满足下图所示的要求，则可以通过共享 ISL 并将 FlexPod 交换机用作合规的 MetroCluster IP 交换机来节省成本。 其中展示了具有 ISL 共享和合规交换机的 FlexPod MetroCluster IP 解决方案。
 
-image:dc-tech-spec_image10.png["错误：缺少图形映像"]
+image:dc-tech-spec_image10.png[""]
 
 下图显示了采用 VXLAN 多站点网络结构部署的 FlexPod MetroCluster IP 解决方案的 VXLAN 多站点网络结构和 MetroCluster IP 存储网络结构。
 
 * 适用于 FlexPod MetroCluster IP 解决方案的 VXLAN 多站点网络结构
 
 
-image:dc-tech-spec_image11.png["错误：缺少图形映像"]
+image:dc-tech-spec_image11.png[""]
 
 * 适用于 FlexPod MetroCluster IP 解决方案的 MetroCluster IP 存储网络结构
 
 
-image:dc-tech-spec_image12.png["错误：缺少图形映像"]
+image:dc-tech-spec_image12.png[""]
 
 
 
@@ -64,7 +64,7 @@ image:dc-tech-spec_image12.png["错误：缺少图形映像"]
 
 有关ONTAP实施的详细信息，请参见 https://www.netapp.com/pdf.html?item=/media/10681-tr4684pdf.pdf["TR-4684 ：《使用 NVMe 实施和配置现代 SAN 》"^]。
 
-image:dc-tech-spec_image3.png["错误：缺少图形映像"]
+image:dc-tech-spec_image3.png[""]
 
 
 
@@ -82,9 +82,9 @@ image:dc-tech-spec_image3.png["错误：缺少图形映像"]
 
 下图分别显示了采用 MDS 连接的 FlexPod Datacenter for FC 和采用 Cisco Nexus 93180YC-FX 的 FlexPod Datacenter for FC 的示例。
 
-image:dc-tech-spec_image4.jpg["错误：缺少图形映像"]
+image:dc-tech-spec_image4.jpg[""]
 
-image:dc-tech-spec_image5.png["错误：缺少图形映像"]
+image:dc-tech-spec_image5.png[""]
 
 
 
@@ -107,7 +107,7 @@ NOTE: 使用 Cisco Nexus 7000 或 9000 系列交换机时，除非在互联阵�
 
 下图显示了 FC 连接配置。
 
-image:dc-tech-spec_image6.png["错误：缺少图形映像"]
+image:dc-tech-spec_image6.png[""]
 
 
 
@@ -129,7 +129,7 @@ NOTE: 除非在互联阵列中执行 FC 分区，并且存储通过设备端口�
 
 下图显示了 FCoE 启动场景。
 
-image:dc-tech-spec_image7.png["错误：缺少图形映像"]
+image:dc-tech-spec_image7.png[""]
 
 
 
@@ -145,7 +145,7 @@ iSCSI 启动选项具有以下许可和硬件要求：
 
 下图显示了使用 iSCSI 启动的纯以太网配置。
 
-image:dc-tech-spec_image8.png["错误：缺少图形映像"]
+image:dc-tech-spec_image8.png[""]
 
 
 
@@ -171,7 +171,7 @@ NetApp AFF 和 FAS 控制器可以直接连接到 Cisco UCS 互联阵列，而�
 
 下图显示了 FC 直连配置。
 
-image:dc-tech-spec_image9.png["错误：缺少图形映像"]
+image:dc-tech-spec_image9.png[""]
 
 * 注： *
 
@@ -182,7 +182,7 @@ image:dc-tech-spec_image9.png["错误：缺少图形映像"]
 
 下图显示了 iSCSI/Unified IP 直连配置。
 
-image:dc-tech-spec_image10.png["错误：缺少图形映像"]
+image:dc-tech-spec_image10.png[""]
 
 * 注： *
 

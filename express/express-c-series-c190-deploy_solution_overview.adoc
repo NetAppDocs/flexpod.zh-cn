@@ -29,7 +29,7 @@ FlexPod 计划包括两个解决方案： FlexPod Express 和 FlexPod Datacenter
 * * FlexPod Datacenter 。 * 为各种工作负载和应用程序提供最佳的多用途基础。
 
 
-image:express-c-series-c190-deploy_image1.png["错误：缺少图形映像"]
+image:express-c-series-c190-deploy_image1.png[""]
 
 
 
@@ -53,7 +53,7 @@ image:express-c-series-c190-deploy_image1.png["错误：缺少图形映像"]
 
 此解决方案利用了 NetApp ， Cisco 和 VMware 的最新技术。此解决方案采用运行 ONTAP 9.6 的全新 NetApp AFF C190 ，双 Cisco Nexus 31108 交换机和运行 VMware vSphere 6.7U2 的 Cisco UCS C220 M5 机架式服务器。此经过验证的解决方案采用 10GbE 技术。此外，还提供了有关如何通过一次添加两个虚拟机管理程序节点来扩展计算容量的指导，以使 FlexPod 快速架构能够适应组织不断变化的业务需求。
 
-image:express-c-series-c190-deploy_image2.png["错误：缺少图形映像"]
+image:express-c-series-c190-deploy_image2.png[""]
 
 
 NOTE: 要高效使用 VIC 1457 上的四个物理 10GbE 端口，请在每个服务器与顶部机架交换机之间另外创建两条链路。

@@ -16,7 +16,7 @@ summary: 本节详细介绍了 Cisco Nexus 交换机 3172P A 和 B 以及 NetApp
 [role="lead"]
 下图显示了参考验证布线。
 
-image:express-c-series-aff220-deploy_image5.png["错误：缺少图形映像"]
+image:express-c-series-aff220-deploy_image5.png[""]
 
 下表显示了 Cisco Nexus 交换机 3172P A 的布线信息
 

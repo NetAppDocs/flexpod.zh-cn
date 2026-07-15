@@ -50,7 +50,7 @@ NOTE: 此验证中使用的 CIMC 版本为 CIMC 4.0.4 （ 4 ）。
 打开服务器电源，在系统提示您输入 CIMC 配置时按 F8 。
 
 +
-image:express-c-series-c190-deploy_image5.png["错误：缺少图形映像"]
+image:express-c-series-c190-deploy_image5.png[""]
 
 . 在 CIMC 配置实用程序中，设置以下选项：
 +
@@ -82,7 +82,7 @@ NIC 冗余
 无： ` X`
 
 +
-image:express-c-series-c190-deploy_image6.png["错误：缺少图形映像"]
+image:express-c-series-c190-deploy_image6.png[""]
 
 
 
@@ -181,7 +181,7 @@ NOTE: 斜体表示每个 ESXi 主机唯一的变量。
 . 在 CIMC 界面浏览器窗口中，单击 Compute 选项卡并选择 BIOS 。
 . 单击 Configure Boot Order ，然后单击 OK 。
 +
-image:express-c-series-c190-deploy_image7.png["错误：缺少图形映像"]
+image:express-c-series-c190-deploy_image7.png[""]
 
 . 单击 "Add Boot Device" 下的设备并转到 "Advanced （高级） " 选项卡，配置以下设备：
 +
@@ -235,7 +235,7 @@ image:express-c-series-c190-deploy_image7.png["错误：缺少图形映像"]
 . 单击添加设备。
 . 单击保存更改，然后单击关闭。
 +
-image:express-c-series-c190-deploy_image8.png["错误：缺少图形映像"]
+image:express-c-series-c190-deploy_image8.png[""]
 
 . 重新启动服务器以使用新的启动顺序启动。
 
@@ -252,7 +252,7 @@ image:express-c-series-c190-deploy_image8.png["错误：缺少图形映像"]
 . 向下滚动到 PCIe 插槽： HBA 选项 ROM 。
 . 如果尚未禁用此值，请将其设置为 disabled 。
 +
-image:express-c-series-c190-deploy_image9.png["错误：缺少图形映像"]
+image:express-c-series-c190-deploy_image9.png[""]
 
 
 
@@ -270,7 +270,7 @@ NOTE: 必须先关闭端口 0 ， 1 ， 2 和 3 之间的默认端口通道，�
 . 在常规选项卡下，取消选中端口通道。
 . 保存更改并重新启动 CIMC 。
 +
-image:express-c-series-c190-deploy_image10.png["错误：缺少图形映像"]
+image:express-c-series-c190-deploy_image10.png[""]
 
 
 
@@ -301,13 +301,13 @@ image:express-c-series-c190-deploy_image10.png["错误：缺少图形映像"]
 ** 输入 ` \<<var_iscsi_vlan_b>>` 作为 VLAN 。
 ** 将上行链路端口设置为 3 。
 +
-image:express-c-series-c190-deploy_image11.png["错误：缺少图形映像"]
+image:express-c-series-c190-deploy_image11.png[""]
 
 
 
 . 选择左侧的 vNIC eth1 。
 +
-image:express-c-series-c190-deploy_image12.png["错误：缺少图形映像"]
+image:express-c-series-c190-deploy_image12.png[""]
 
 . 在 "iSCSI 启动属性 " 下，输入启动程序详细信息：
 +
@@ -316,7 +316,7 @@ image:express-c-series-c190-deploy_image12.png["错误：缺少图形映像"]
 ** 子网掩码： ` <<var_esxi_HostA_iscsiA_mask>>`
 ** 网关： ` <<var_esxi_HostA_iscsiA_gateway>>`
 +
-image:express-c-series-c190-deploy_image13.png["错误：缺少图形映像"]
+image:express-c-series-c190-deploy_image13.png[""]
 
 
 
@@ -352,7 +352,7 @@ NOTE: 请务必记录每个 vNIC 的 IQN 名称。您需要在后续步骤中使
 ** 子网掩码： ` <<var_esxi_HostB_iscsib_mask>>`
 ** 网关： ` <<var_esxi_HostB_iscsib_gateway>>`
 +
-image:express-c-series-c190-deploy_image14.png["错误：缺少图形映像"]
+image:express-c-series-c190-deploy_image14.png[""]
 
 
 
@@ -395,11 +395,11 @@ NOTE: 请务必记录每个 vNIC 的 IQN 名称。您需要在后续步骤中使
 . 将 MTU 设置为 9000 。单击 Save Changes 。
 . 将 VLAN 设置为原生 VLAN 2 。
 +
-image:express-c-series-c190-deploy_image15.png["错误：缺少图形映像"]
+image:express-c-series-c190-deploy_image15.png[""]
 
 . 对 eth1 重复步骤 3 和 4 ，验证 eth1 的上行链路端口是否设置为 1 。
 +
-image:express-c-series-c190-deploy_image16.png["错误：缺少图形映像"]
+image:express-c-series-c190-deploy_image16.png[""]
 
 +
 

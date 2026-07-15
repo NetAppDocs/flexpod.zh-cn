@@ -3,7 +3,6 @@ section: fp-def
 title: FlexPod 定义
 entries:
 - title: FlexPod 快速技术规格
-  type: solutions
   entries:
   - title: 概述
     url: "/fp-def/fp-express-tech-spec_overview.html"
@@ -42,7 +41,6 @@ entries:
   - title: 追加信息
     url: "/fp-def/fp-express-tech-spec_additional_information.html"
 - title: FlexPod 数据中心技术规格
-  type: solutions
   entries:
   - title: 概述
     url: "/fp-def/dc-tech-spec_solution_overview.html"

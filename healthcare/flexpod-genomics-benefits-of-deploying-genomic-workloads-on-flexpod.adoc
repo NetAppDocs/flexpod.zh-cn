@@ -37,13 +37,13 @@ link:flexpod-genomics-introduction.html["上一页：简介。"]
 * * 存储效率。 * 基因组学要求底层存储具有行业领先的存储效率功能。您可以利用 NetApp 存储效率功能降低存储成本，例如重复数据删除（实时和按需），数据压缩和数据缩减（ https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.dot-cm-vsmg%2FGUID-9C88C1A6-990A-4826-83F8-0C8EAD6C3613.html["ref"^]）。NetApp 重复数据删除可在 FlexVol 卷中提供块级重复数据删除。从本质上说，重复数据删除会删除重复的块，从而仅在 FlexVol 卷中存储唯一的块。重复数据删除的粒度较高，并在 FlexVol 卷的活动文件系统上运行。下图简要显示了 NetApp 重复数据删除的工作原理。重复数据删除是应用程序透明的。因此，可以使用它对使用 NetApp 系统的任何应用程序生成的数据进行重复数据删除。您可以将卷重复数据删除作为实时进程和后台进程运行。您可以将其配置为自动运行，计划运行或通过命令行界面， NetApp ONTAP System Manager 或 NetApp Active IQ Unified Manager 手动运行。
 
 
-image:flexpod-genomics-image3.png["错误：缺少图形映像"]
+image:flexpod-genomics-image3.png[""]
 
 * * 实现基因组互操作性。 * ONTAP FlexCache 是一种远程缓存功能，可简化文件分发，减少 WAN 延迟并降低 WAN 带宽成本 https://www.netapp.com/knowledge-center/what-is-flex-cache/["ref"^]）。基因组变体识别和标注期间的一项关键活动是临床医生之间的协作。即使协作临床医生位于不同地理位置， ONTAP FlexCache 技术也能提高数据吞吐量。鉴于 * 。 bam 文件的典型大小（ 1 GB 到 100 GB ），底层平台必须能够向不同地理位置的临床医生提供文件。采用 ONTAP FlexCache 的 FlexPod 让基因组数据和应用程序真正实现了多站点就绪，让全球各地的研究人员可以无缝协作，实现低延迟和高吞吐量。在多站点环境下运行基因组学应用程序的医疗保健组织可以使用数据网络结构进行横向扩展，以平衡易管理性与成本和速度。
 * *智能使用存储平台*采用ONTAP自动层和NetApp Fabric Pool技术的FlexPod可简化数据管理。FabricPool 有助于降低存储成本，而不会影响性能，效率，安全性或保护。FabricPool 对企业级应用程序是透明的，它可以降低存储 TCO ，而无需重新构建应用程序基础架构，从而充分利用云效率。FlexPod 可以从 FabricPool 的存储分层功能中受益，从而更高效地利用 ONTAP 闪存存储。有关详细信息，请参见 https://docs.netapp.com/us-en/flexpod/hybrid-cloud/cloud-fabricpool_introduction.html["采用 FabricPool 的 FlexPod"^]。下图简要概述了 FabricPool 及其优势。
 
 
-image:flexpod-genomics-image4.png["错误：缺少图形映像"]
+image:flexpod-genomics-image4.png[""]
 
 * * 更快的变体分析和标注速度。 * FlexPod 平台的部署和实施速度更快。FlexPod 平台可实现大规模数据可用，并提供低延迟和更高吞吐量，从而实现临床医生协作。增强的互操作性有助于创新。医疗保健组织可以并行运行基因组和非基因组工作负载，这意味着组织不需要专门的平台来开始其基因组学之旅。
 +
@@ -57,6 +57,6 @@ FlexPod ONTAP 会定期为存储平台添加前沿功能。FlexPod 数据中心�
 * * FlexPod 合作支持。 * NetApp 和 Cisco 建立了 FlexPod 合作支持，这是一种强大，可扩展且灵活的支持模式，可满足 FlexPod 融合基础架构的独特支持要求。此模式结合了 NetApp 和 Cisco 的经验，资源和技术支持专业知识，可以简化识别和解决 FlexPod 支持问题的流程，而不管问题位于何处。下图概述了 FlexPod 合作支持模式。客户联系可能拥有问题描述的供应商， Cisco 和 NetApp 将合作解决此问题。Cisco 和 NetApp 拥有跨公司工程和开发团队，他们携手解决问题。此支持模式可减少翻译期间的信息丢失，建立信任并减少停机时间。
 
 
-image:flexpod-genomics-image5.png["错误：缺少图形映像"]
+image:flexpod-genomics-image5.png[""]
 
 link:flexpod-genomics-solution-infrastructure-hardware-and-software-components.html["接下来：解决方案基础架构硬件和软件组件。"]

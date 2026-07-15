@@ -27,7 +27,7 @@ FlexPod 参考架构以 Cisco 验证设计（ CVD ）或 NetApp 验证架构（ 
 * * FlexPod Select* 整合了 FlexPod 数据中心的最佳功能，并根据给定应用程序量身定制基础架构。
 
 
-image:express-c-series-aff220-design_image2.png["错误：缺少图形映像"]
+image:express-c-series-aff220-design_image2.png[""]
 
 
 

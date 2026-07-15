@@ -62,6 +62,6 @@ NetApp 公司 JayaKishore Esanakula
 
 一家典型的医院拥有多种多样的 IT 系统。大多数此类系统都是从供应商购买的，而很少有系统是由医院内部系统构建的。因此，医院系统必须管理其数据中心的多样化基础架构环境。当医院将其系统统一为 FlexPod 等融合基础架构平台时，企业可以将其数据中心运营标准化。借助 FlexPod ，医疗保健组织可以在同一平台上实施临床和非临床系统，从而统一数据中心运营。
 
-image:flexpod-genomics-image2.png["错误：缺少图形映像"]
+image:flexpod-genomics-image2.png[""]
 
 link:flexpod-genomics-benefits-of-deploying-genomic-workloads-on-flexpod.html["接下来：在 FlexPod 上部署基因组工作负载的优势。"]

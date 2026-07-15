@@ -3,7 +3,6 @@ section: hybrid-cloud
 title: 混合云
 entries:
 - title: 采用Cloud Volumes ONTAP for Epic的FlexPod 混合云
-  type: solutions
   entries:
   - title: 解决方案概述
     url: "/hybrid-cloud/fhc-cvoe-solution-overview.html"
@@ -20,7 +19,6 @@ entries:
   - title: 从何处查找追加信息
     url: "/hybrid-cloud/fhc-cvoe-where-to-find-additional-information.html"
 - title: 适用于Google云平台的FlexPod 混合云与NetApp Cloud Volumes ONTAP 和Cisco Intersight
-  type: solutions
   entries:
   - title: 解决方案概述
     url: "/hybrid-cloud/gcp-ncvo-solution-overview.html"
@@ -47,7 +45,6 @@ entries:
   - title: 结论
     url: "/hybrid-cloud/gcp-ncvo-conclusion.html"
 - title: 适用于 FlexPod 的 NetApp Cloud Insights
-  type: solutions
   entries:
   - title: 概述
     url: "/hybrid-cloud/cloud-insights_netapp_cloud_insights_for_flexpod.html"
@@ -66,7 +63,6 @@ entries:
   - title: 追加信息
     url: "/hybrid-cloud/cloud-insights_additional_information.html"
 - title: 采用 FabricPool 的 FlexPod —将非活动数据分层到 Amazon AWS S3
-  type: solutions
   entries:
   - title: 概述
     url: "/hybrid-cloud/cloud-fabricpool_introduction.html"
