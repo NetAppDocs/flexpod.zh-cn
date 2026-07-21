@@ -128,7 +128,7 @@ Cisco Unified Edge包括以下组件：
 [[cisco-ucs-c-series-rack-server-options]]
 == Cisco UCS C 系列机架式服务器选项
 
-Cisco UCS C 系列机架式服务器有 1 个和 2 个机架单元 (RU) 品种，具有各种 CPU、内存和 I/O 选项。下表中列出的部件号适用于基本服务器。它们不包括 CPU、内存、驱动器、外设组件互连 Express (PCIe) 卡。有多个配置选项可用，并且在 FlexPod 体系结构中受支持。
+Cisco UCS C 系列机架式服务器有 1 个、2 个和 4 个机架单元 (RU) 规格，具有各种 CPU、内存和 I/O 选项。下表中列出的部件号适用于基本服务器。它们不包括 CPU、内存、驱动器、外设组件互连 Express (PCIe) 卡。有多种配置选项可用，并且在 FlexPod 架构中受支持。
 
 下表列出了 Cisco UCS C 系列机架式服务器选项。
 
