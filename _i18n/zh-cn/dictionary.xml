@@ -7586,8 +7586,6 @@
   <block id="611f2f2f4feb7733fb592961b7ca409c" category="paragraph"><block ref="611f2f2f4feb7733fb592961b7ca409c" category="inline-link-rx"></block></block>
   <block id="eccbfb8e55244ced2c05dead60816337" category="inline-link"><block ref="eccbfb8e55244ced2c05dead60816337" category="inline-link-rx"></block></block>
   <block id="2485bc6384a0018bf9378518acc91743" category="paragraph"><block ref="2485bc6384a0018bf9378518acc91743" category="inline-link-rx"></block></block>
-  <block id="39c90ea315f24fb17b3b30ec1987e361" category="inline-link"><block ref="39c90ea315f24fb17b3b30ec1987e361" category="inline-link-rx"></block></block>
-  <block id="1adcadc2d283b69776aea48ef9ef3f4b" category="paragraph"><block ref="1adcadc2d283b69776aea48ef9ef3f4b" category="inline-link-rx"></block></block>
   <block id="6ae13600af8af9b0e91f83cbd7d1e186" category="summary">FlexPod Express 的自动部署可通过 GitHub 存储库获得，该存储库包含 Ansible playbook 和相关的基础架构即代码资产。</block>
   <block id="503b44fa5032230b9ac6ce1b24df86ba" category="doc">FlexPod Express 自动部署</block>
   <block id="6fb06132bd7acd3aa4dd1b6ded239401" category="paragraph">FlexPod Express 的自动部署可通过 FlexPod Express GitHub 存储库获得。这些存储库包含 Ansible playbook 和相关文件，以促进 FlexPod Express 基础架构即代码 (IaC) 的部署。</block>
@@ -7823,7 +7821,6 @@
   <block id="2a409f1fa2a150f2253ac127248488e4" category="paragraph">FlexPod Express 支持运行 NetApp ONTAP 操作系统的存储系统。</block>
   <block id="ef7609bdef2cdaafd40275f9e5433c35" category="paragraph">NetApp ONTAP 软件是在 AFF、ASA 和 FAS 存储系统上运行的操作系统。ONTAP 提供高度可扩展的存储架构，可实现无中断操作、无中断升级和敏捷数据基础设施。使用 ONTAP One 许可模式，所有企业数据服务都包含在一个软件包中，简化了部署和管理，同时提供对高级功能的完全访问。ONTAP 通过 SnapMirror 复制和灾难恢复以及 SnapCenter 应用程序一致性备份和还原等技术提供强大的数据保护。它还集成了内置安全功能，包括自主勒索软件防护和加密，以保护数据免受现代威胁。此外，ONTAP 通过 SnapMirror Cloud 和基于 S3 的复制等功能实现无缝混合云集成，支持跨本地和云环境的数据移动，同时保持一致性和控制性。</block>
   <block id="bf0ebcdca54fe8f97b947c021c0fc6ba" category="paragraph">有关 ONTAP 的详细信息，请参见<block ref="1438085fbc66bc2984b1f8fc6f5a6806" category="inline-link-rx"></block>。</block>
-  <block id="e52bcb3065e40f2076e69b19a9e4ce5e" category="paragraph">FlexPod 架构由本文档中描述的一组规则定义。硬件组件和软件配置必须受<block ref="725fce943efeaeb2cbdfd24ce0e99c5b" category="inline-link-rx"></block>和<block ref="538106ddbedb569903f8e17bb643549d" category="inline-link-rx"></block>支持。</block>
   <block id="db63719d1199768760c155c55421c914" category="paragraph">每个 Cisco 验证设计 (CVD) 或 NetApp 验证架构 (NVA) 都代表经过验证的 FlexPod 配置。Cisco 和 NetApp 记录这些配置组合，并通过广泛的端到端测试对其进行验证。偏离这些配置的 FlexPod 部署，如果遵循本文档中的指导方针，且所有组件均在 Cisco HCL 和 NetApp IMT 中列为兼容，则完全受支持。</block>
   <block id="45588e4cce1d335ead36f0585e8b630c" category="section-title">Cisco UCS X-Series Direct 机箱</block>
   <block id="fcb60e469fe66f96f526ecaec4c2ae36" category="paragraph">Cisco UCS X-Series Direct 机箱的技术规格如下表所示，包括以下组件：</block>
@@ -8349,4 +8346,7 @@
   <block id="503753b7cfdba11f6ff233c6f8d878b2" category="paragraph"><block ref="503753b7cfdba11f6ff233c6f8d878b2" category="inline-link-rx"></block></block>
   <block id="f4bf1ab74cf7b6fb7a56eaa53745e1ae" category="paragraph">Cisco UCS C 系列机架式服务器有 1 个、2 个和 4 个机架单元 (RU) 规格，具有各种 CPU、内存和 I/O 选项。下表中列出的部件号适用于基本服务器。它们不包括 CPU、内存、驱动器、外设组件互连 Express (PCIe) 卡。有多种配置选项可用，并且在 FlexPod 架构中受支持。</block>
   <block id="a60ddb965dcf6f25c87e72a37c8252c4" category="admonition">所有软件组件都必须列出并支持在<block ref="8058bb2e300c0b28cc61110596fbc6e0" category="inline-link-rx"></block>中，所有 NetApp 硬件组件和 ONTAP 版本都必须列出并支持在<block ref="6a8cef5b71adde6301ea0984592ea5c1" category="inline-link-rx"></block>上，所有 Cisco 硬件组件都必须列出并支持在<block ref="243ee419838ead03039b3c014c885e78" category="inline-link-rx"></block>上。</block>
+  <block id="d4be789c0896e734a89e386a8d00f187" category="inline-link"><block ref="d4be789c0896e734a89e386a8d00f187" category="inline-link-rx"></block></block>
+  <block id="c1ba01aa51a8fc173d6a9dd15d8b5d42" category="paragraph"><block ref="c1ba01aa51a8fc173d6a9dd15d8b5d42" category="inline-link-rx"></block></block>
+  <block id="9b1dcc158dd4f463eff8e0ecc95e1c0f" category="paragraph">FlexPod 架构由本文档中描述的一组规则定义。硬件组件和软件配置必须受<block ref="55be3385fd2442b96520f981204722ea" category="inline-link-rx"></block>和<block ref="538106ddbedb569903f8e17bb643549d" category="inline-link-rx"></block>支持。</block>
 </blocks>
