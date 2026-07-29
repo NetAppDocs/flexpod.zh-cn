@@ -26,6 +26,6 @@ summary: 本节介绍不同版本的 FlexPod Express 的最低硬件要求。
 FlexPod Express 的最低硬件要求如下所示：
 
 * 两个冗余配置的 10Gbps 标准以太网交换机（Cisco Nexus 9200 和 9300 型号）
-* 具有基于 CIMC 的独立机架式服务器配置或 Intersight 独立配置的 Cisco UCS C 系列独立机架式服务器，或具有 Cisco Intersight 托管配置 (IMM) 的 Cisco UCS X 系列 Direct。
+* 两个具有基于 CIMC 的独立机架式服务器配置或 Intersight 独立配置的 Cisco UCS C 系列独立机架式服务器，或具有 Cisco Intersight 托管配置 (IMM) 的 Cisco UCS X 系列 Direct。
 * 两个入门级 NetApp AFF（A20、A30 或 C30）、NetApp ASA（A20、A30 或 C30）或 NetApp FAS（2750、2820 或 FAS 50）系列控制器，以高可用性（HA）对配置部署为双节点集群
 
