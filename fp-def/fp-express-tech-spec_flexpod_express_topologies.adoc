@@ -69,6 +69,6 @@ image:fp-express-tech-spec_image12.png["Cisco UCS C 系列独立服务器和 Net
 Cisco UCS C 系列可以通过 CIMC 或 Cisco Intersight 独立管理进行管理。
 
 
-NOTE: 上述示例拓扑是指使用 NetApp AFF 的直连存储解决方案。但是，同样的拓扑也适用于 NetApp ASA 和 FAS。
+NOTE: 上述示例拓扑是指使用 NetApp AFF 的存储解决方案。但是，同样的拓扑也适用于 NetApp ASA 和 FAS。
 
 有关此配置的详细信息，请参见 https://www.netapp.com/pdf.html?item=/media/88340-NVA-FlexpodExpress_C220_A250_NexusFinal.pdf["FlexPod Express for VMware vSphere 8.0，采用 Cisco UCS C-Series Standalone 和 NetApp AFF"^]。

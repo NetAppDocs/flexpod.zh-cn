@@ -16,7 +16,7 @@ summary: 要配置 VMware vCenter Server 6.7 和 vSphere 集群，请完成此�
 [role="lead"]
 要配置 VMware vCenter Server 6.7 和 vSphere 集群，请完成以下步骤：
 
-. 导航到 `https://<<FQDN or IP of vCenter>>/vsphere-client/`。
+. 导航到 `+https://<<FQDN or IP of vCenter>>/vsphere-client/+`。
 . 单击 Launch vSphere Client 。
 . 使用用户名 mailto ： administrator@vspehre.local[ 管理员^ ]@vsphere.local 以及您在 VCSA 设置过程中输入的 SSO 密码登录。
 . 右键单击 vCenter 名称并选择新建数据中心。

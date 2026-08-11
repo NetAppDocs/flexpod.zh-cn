@@ -55,7 +55,7 @@ NetApp 存储控制器在 FlexPod 架构中为启动和应用程序数据存储�
 | Cisco Nexus 3132Q-V | https://mysupport.netapp.com/documentation/docweb/index.html?productID=62377&language=en-US["NetApp 文档： Cisco Nexus 3132Q-V 交换机"] 
 
 
-| Cisco Nexus 9336C-x2 | https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2/["NetApp 文档： Cisco Nexus 9336C-x2 交换机"] 
+| Cisco Nexus 9336C-x2 | https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2/configure-switch-overview-9336c-cluster.html["NetApp 文档： Cisco Nexus 9336C-x2 交换机"^] 
 |===
 
 

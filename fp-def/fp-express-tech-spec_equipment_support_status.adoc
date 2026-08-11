@@ -50,7 +50,7 @@ Cisco 在 Cisco 产品支持页面上提供销售终止和支持终止日期。
 
 
 
-==== Cisco UCS 服务器销售终止和支持终止信息
+==== Cisco UCS 服务器的销售终止和支持终止信息
 
 * 导航到 link:https://www.cisco.com/c/en/us/support/eol/index.html["Cisco 产品支持页面"]。
 * 在 *产品类别* 下，选择 *服务器 - UCS and HCI*，然后单击您的服务器类型（例如：*UCS C-Series Rack Servers*）。找到您的特定型号（例如：*UCS C220 M5*）并查找销售终止和支持终止日期。
@@ -58,7 +58,7 @@ Cisco 在 Cisco 产品支持页面上提供销售终止和支持终止日期。
 
 
 
-==== Cisco Nexus 交换机销售终止和支持终止信息
+==== Cisco Nexus 交换机的销售终止和支持终止信息
 
 * 导航到 link:https://www.cisco.com/c/en/us/support/eol/index.html["Cisco 产品支持页面"]。
 * 在 *产品类别* 下选择 *交换机*，然后单击您的交换机类型（例如：*Nexus 9000*）。找到您的特定型号（例如：*9236C*），并查找终止销售和终止支持日期。

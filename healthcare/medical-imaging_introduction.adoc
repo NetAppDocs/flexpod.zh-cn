@@ -62,7 +62,7 @@ COVID-19 显然重塑了数字化转型；据最近的一项调查显示 https:/
 * 在整个 ACO 运行状况组织中，无论映像的记录系统如何，都可以使用一个平台来管理图像和介质，方法是使用医学数字成像和通信等协议（ https://www.dicomstandard.org/about/["Dicom"^]）和对持续使用 DICOM- 的对象的 Web 访问（ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3447090/["WADO"^]）
 * 运行状况信息交换（ https://www.healthit.gov/topic/health-it-and-health-information-exchange-basics/what-hie["HIE"^]）包括消息中嵌入的图像。
 * 移动设备，例如手持式，无线扫描设备（例如，连接到手机的便携手持式超声波扫描仪），需要一个强大的网络基础架构，在边缘，核心和云端都具有 DoD 级别的安全性，可靠性和延迟。 https://www.netapp.com/us/data-fabric.aspx["NetApp 支持的数据网络结构"^] 为企业大规模提供此功能。
-* 较新的模式具有指数级存储需求；例如， CT 和 MRI 对于每个模式都需要几百 MB 的容量，但数字病理学图像（包括整个幻灯片成像）的大小可能只有几 GB 。FlexPod采用设计 https://www.netapp.com/pdf.html?item=/media/16926-sb-flexpod-advantage-performance-agility-economicspdf.pdf["性能，可靠性和扩展是基本特征"^]。
+* 较新的模式具有指数级存储需求；例如，CT 和 MRI 每种模式需要几百 MB，但数字病理图像（包括全切片成像）的大小可能达到几 GB。FlexPod 的设计具有 https://www.netapp.com/pdf.html?item=/media/16926-sb-flexpod-advantage-performance-agility-economics.pdf["性能，可靠性和扩展是基本特征"^]。
 
 
 精心设计的医疗成像系统平台是创新的核心。FlexPod 架构提供灵活的计算和存储功能以及行业领先的存储效率。

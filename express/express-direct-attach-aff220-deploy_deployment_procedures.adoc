@@ -527,10 +527,10 @@ NOTE: 此系统在双节点无交换机集群配置中设置。
 | DNS 服务器 IP （您可以输入多个） | \<<var_dns_server_ip>> 
 
 
-| NTP 服务器 A IP | << switch-A-NTP-IP >> 
+| NTP 服务器 A IP | +<< switch-a-ntp-ip >>+ 
 
 
-| NTP 服务器 B IP | << switch-b-ntp-ip >> 
+| NTP 服务器 B IP | +<< switch-b-ntp-ip >>+ 
 |===
 
 

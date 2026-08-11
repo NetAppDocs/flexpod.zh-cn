@@ -451,7 +451,7 @@ NetApp 存储控制器的技术规格包括以下组件：
 [[netapp-disk-shelves]]
 === NetApp 磁盘架
 
-NetApp 磁盘架的技术规格包括外形规格大小，每个机箱的驱动器数量以及磁盘架 I/O 模块；下表提供了此文档。有关详细信息，请参见 http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["NetApp 磁盘架和存储介质技术规格"^] 和 https://hwu.netapp.com/["NetApp Hardware Universe"^]。
+NetApp 磁盘架的技术规格包括外形尺寸、每个盘柜的驱动器数量和盘架 I/O 模块；此文档可在下表中找到。有关详细信息，请参见 https://www.netapp.com/data-storage/disk-shelves-storage-media/["NetApp 磁盘架和存储介质技术规格"^]和 https://hwu.netapp.com/["NetApp Hardware Universe"^]。
 
 |===
 | 组件 | NetApp FAS/AFF 磁盘架文档 
