@@ -15,9 +15,9 @@ summary: 要了解有关本文档中所述信息的更多信息，请参见此�
 +
 https://docs.netapp.com/platstor/index.jsp["https://docs.netapp.com/platstor/index.jsp"^]
 
-* AFF 文档资源页面
+* AFF C-Series 系统文档
 +
-https://www.netapp.com/us/documentation/all-flash-fas.aspx["https://www.netapp.com/us/documentation/all-flash-fas.aspx"^]
+https://docs.netapp.com/us-en/ontap-systems/aff-cseries/["https://docs.netapp.com/us-en/ontap-systems/aff-cseries/"^]
 
 * 《使用 VMware vSphere 6.7 和 NetApp AFF C190 的 FlexPod 快速部署指南》（正在进行中）
 * NetApp 文档

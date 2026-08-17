@@ -129,9 +129,9 @@ https://core.vmware.com/resource/vmware-vsphere-metro-storage-cluster-vmsc["http
 +
 https://www.vmware.com/docs/vmw-vmware-vsphere-metro-storage-cluster-recommended-practices["https://www.vmware.com/docs/vmw-vmware-vsphere-metro-storage-cluster-recommended-practices"^]
 
-* 采用 NetApp SnapMirror 业务连续性（ SM-BC ）和 VMware vSphere Metro Storage Cluster （ VMSC ）的 NetApp ONTAP 。（ 83370 ）
+* NetApp ONTAP 与 SnapMirror 活动同步（以前称为 SM-BC）以及 VMware vSphere Metro Storage Cluster（vMSC）
 +
-https://kb.vmware.com/s/article/83370["https://kb.vmware.com/s/article/83370"^]
+https://docs.netapp.com/us-en/netapp-solutions-virtualization/vmware/vmw-vmsc-with-smas.html["https://docs.netapp.com/us-en/netapp-solutions-virtualization/vmware/vmw-vmsc-with-smas.html"^]
 
 * 使用 VMware vSphere Metro Storage Cluster 和 ONTAP 保护第 1 层应用程序和数据库
 +

@@ -57,7 +57,7 @@ AFF C190 系统仅提供 960 GB SSD 。您可以从四个扩展阶段中进行�
 * 24 个 960 GB
 
 
-有关 AFF C190 硬件系统的完整信息，请参见 https://www.netapp.com/us/products/entry-level-aff.aspx["NetApp AFF C190 全闪存阵列页面"^]。
+有关 AFF C190 硬件系统的完整信息，请参见 https://docs.netapp.com/us-en/ontap-systems/c190/install-setup.html["NetApp AFF C190 文档"^]。
 
 
 

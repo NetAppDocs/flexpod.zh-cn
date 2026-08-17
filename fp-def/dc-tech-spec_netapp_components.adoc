@@ -69,13 +69,13 @@ NetApp 存储控制器在 FlexPod 架构中为启动和应用程序数据存储�
 
 NOTE: 有关所有磁盘架和磁盘部件号，请咨询您的销售代表。
 
-有关支持的驱动器的详细信息，请单击下表中的 NetApp Hardware Universe 链接，然后选择支持的驱动器。
+有关磁盘架和存储介质的详细信息，请参见下表中的"磁盘架和存储介质技术规格"链接。
 
 |===
 | 磁盘架 | 技术规格 
 
 
-| DS224C .4+| http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["NetApp Hardware Universe 上支持的磁盘架和存储介质驱动器"] 
+| DS224C .4+| https://www.netapp.com/data-storage/disk-shelves-storage-media/["磁盘架和存储介质技术规格"] 
 
 
 | DS212C 

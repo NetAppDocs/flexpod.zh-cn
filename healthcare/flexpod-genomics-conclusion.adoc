@@ -53,9 +53,9 @@ https://flexpod.com/solutions/verticals/healthcare/["https://flexpod.com/solutio
 +
 https://flexpod.com/["https://flexpod.com/"^]
 
-* 适用于医疗保健的 AI 和分析（ NetApp ）
+* 医疗保健和医学领域的人工智能（NetApp）
 +
-https://www.netapp.com/us/artificial-intelligence/healthcare-ai-analytics/index.aspx["https://www.netapp.com/us/artificial-intelligence/healthcare-ai-analytics/index.aspx"^]
+https://www.netapp.com/artificial-intelligence/ai-in-medicine/["https://www.netapp.com/artificial-intelligence/ai-in-medicine/"^]
 
 * 医疗保健智能基础架构选择中的人工智能有助于取得更大成功
 +
