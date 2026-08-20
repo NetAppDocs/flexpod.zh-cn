@@ -153,7 +153,7 @@ Cisco Unified Edge 的 Cisco UCS 计算节点的技术规格包括以下组件�
 [[cisco-ucs-c-series-rack-servers]]
 == Cisco UCS C 系列机架式服务器
 
-Cisco UCS C 系列机架式服务器的技术规格包括处理器支持、最大内存容量、PCIe 插槽数量和外形规格。有关兼容 UCS 服务器型号的其他详细信息，请参见 https://ucshcltool.cloudapps.cisco.com/public/["Cisco 硬件兼容性"^]列表。
+Cisco UCS C 系列机架式服务器的技术规格包括处理器支持、最大内存容量、PCIe 插槽数量和外形规格。有关兼容 UCS 服务器型号的其他详细信息，请参见 https://ucshcltool.cloudapps.cisco.com/public["Cisco 硬件兼容性"^]列表。
 
 有关 Cisco UCS C 系列机架式服务器的技术规格，请参见下表。
 
@@ -298,4 +298,4 @@ NetApp 磁盘架的技术规格包括外形尺寸、每个盘柜的驱动器数�
 [[netapp-drives]]
 === NetApp 驱动器
 
-NetApp 驱动器的技术规格包括外形规格大小，磁盘容量，磁盘 RPM ，支持控制器和 ONTAP 版本要求。这些规格可在的驱动器部分中找到 http://hwu.netapp.com/Drives/Index?queryId=1581392["NetApp Hardware Universe"^]。
+NetApp 驱动器的技术规格包括外形尺寸、磁盘容量、磁盘转速、支持的控制器以及 ONTAP 版本要求。这些规格可以在 http://hwu.netapp.com["NetApp Hardware Universe"^]的 Drives 部分中找到。

@@ -72,7 +72,7 @@ NOTE: 有关所有磁盘架和磁盘部件号，请咨询您的销售代表。
 
 下表列出了 NetApp 磁盘架选项（适用于 FlexPod Express），以及指向其技术规格的链接。
 
-要获取磁盘架支持的驱动器列表，请转到 link:https://hwu.netapp.com/DetailViews/Home.aspx["NetApp Hardware Universe"^]，在 *产品 > 存储 > 磁盘架* 下选择 *ONTAP（AFF、ASA、FAS）*，选择您正在使用的 ONTAP 版本，然后选择磁盘架类型（例如：*DS212C*），并单击 *Show Results*。单击 *支持的驱动器* 可查看特定 ONTAP 版本和磁盘架所支持的驱动器。
+要获取磁盘架支持的驱动器列表，请转到 link:https://hwu.netapp.com["NetApp Hardware Universe"^]，在 *产品 > 存储 > 磁盘架* 下选择 *ONTAP（AFF、ASA、FAS）*，选择您正在使用的 ONTAP 版本，然后选择磁盘架类型（例如：*DS212C*），并单击 *Show Results*。单击 *支持的驱动器* 可查看特定 ONTAP 版本和磁盘架所支持的驱动器。
 
 |===
 | 磁盘架 | 技术规格 

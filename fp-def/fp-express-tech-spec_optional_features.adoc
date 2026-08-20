@@ -41,7 +41,7 @@ NetApp 存储控制器可以直接连接到 Cisco UCS 交换矩阵互连，而�
 许可和硬件要求如下：
 
 * 需要在 NetApp 存储控制器上获得协议许可证。
-* 服务器上需要 Cisco UCS 适配器（启动程序）。有关支持的 Cisco UCS 适配器列表，请参见 NetApp http://mysupport.netapp.com/matrix["IMT"^]。
+* 服务器上需要 Cisco UCS 适配器（启动器）。有关支持的 Cisco UCS 适配器的列表，请参见 NetApp https://imt.netapp.com["IMT"^]。
 * NetApp 存储控制器上需要一个目标适配器。
 
 
