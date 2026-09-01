@@ -10,7 +10,7 @@ summary: 要创建 igroup ，请从集群管理节点 SSH 连接运行以下命�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 

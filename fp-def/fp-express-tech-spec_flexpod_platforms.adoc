@@ -10,7 +10,7 @@ summary: 本文档提供了 FlexPod 快速平台的技术规格。
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

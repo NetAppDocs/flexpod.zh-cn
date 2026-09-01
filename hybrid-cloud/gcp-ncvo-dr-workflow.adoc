@@ -10,7 +10,7 @@ summary: 此页面列出了实施灾难恢复工作流所需的11个过程。
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html["先前版本：自动部署混合云NetApp存储。"]

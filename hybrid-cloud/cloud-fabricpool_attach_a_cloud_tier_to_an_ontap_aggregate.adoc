@@ -10,7 +10,7 @@ summary: 在将对象存储添加到 ONTAP 并由其标识后，必须将其附�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

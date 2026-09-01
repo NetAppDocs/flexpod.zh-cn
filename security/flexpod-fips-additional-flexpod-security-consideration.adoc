@@ -10,7 +10,7 @@ summary: FlexPod 基础架构是一个模块化，融合，可选择虚拟化，
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-fips-solution-benefits-of-flexpod-converged-infrastructure.html["上一篇： FlexPod 融合基础架构的解决方案 优势。"]

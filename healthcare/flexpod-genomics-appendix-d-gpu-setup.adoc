@@ -10,7 +10,7 @@ summary: 截至发布时， GATK 工具不支持在内部执行基于 GPU 的原
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-genomics-appendix-c.html["previous ：使用 Cromwell 引擎执行 GATK 的输出。"]

@@ -10,7 +10,7 @@ summary: 在考虑规模估算时，应评估以下内容。
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 

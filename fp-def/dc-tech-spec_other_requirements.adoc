@@ -10,7 +10,7 @@ summary: FlexPod 架构还具有以下与互操作性和支持相关的其他要
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: 在此解决方案 中、我们使用了NetApp云数据服务、Cloud V
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-solution-validation.html["先前版本：解决方案 验证。"]

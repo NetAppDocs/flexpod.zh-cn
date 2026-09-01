@@ -10,7 +10,7 @@ summary: 要创建 igroup ，您需要 iSCSI 启动程序 IQN ，并且必须完
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 

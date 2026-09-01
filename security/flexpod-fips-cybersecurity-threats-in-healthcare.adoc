@@ -10,7 +10,7 @@ summary: 医疗保健面临的威胁具有多层面性质，而且具有多种�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-fips-introduction.html["上一页：简介。"]

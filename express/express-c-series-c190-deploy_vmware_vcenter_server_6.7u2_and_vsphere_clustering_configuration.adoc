@@ -10,7 +10,7 @@ summary: 要配置 VMware vCenter Server 6.7 和 vSphere 集群，请完成此�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

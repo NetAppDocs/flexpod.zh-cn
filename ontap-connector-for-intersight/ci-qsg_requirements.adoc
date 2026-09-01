@@ -10,7 +10,7 @@ summary: 检查您是否满足 NetApp ONTAP 存储与 Cisco Intersight 集成的
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

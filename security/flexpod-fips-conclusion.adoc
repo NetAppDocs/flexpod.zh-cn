@@ -10,7 +10,7 @@ summary: 通过在 FlexPod 平台上运行医疗保健应用程序，支持 FIPS
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-fips-additional-flexpod-security-consideration.html["先前版本：其他 FlexPod 安全注意事项。"]

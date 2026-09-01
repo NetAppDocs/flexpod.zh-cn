@@ -10,7 +10,7 @@ summary: FlexPod 快速系统需要硬件和软件组件的组合。FlexPod Expr
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

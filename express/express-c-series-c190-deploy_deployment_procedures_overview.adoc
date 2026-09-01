@@ -10,7 +10,7 @@ summary: 本文档详细介绍了如何配置完全冗余，高可用性的 Flex
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

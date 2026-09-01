@@ -10,7 +10,7 @@ summary: 本节描述 FlexPod Express 的示例拓扑。
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

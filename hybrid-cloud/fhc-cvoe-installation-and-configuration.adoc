@@ -10,7 +10,7 @@ summary: 本节介绍如何安装和配置Cloud Volumes ONTAP、 FlexPod、 ONTA
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:fhc-cvoe-solution-components.html["先前版本：解决方案 组件。"]

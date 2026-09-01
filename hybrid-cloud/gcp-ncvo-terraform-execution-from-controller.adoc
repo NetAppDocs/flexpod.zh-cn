@@ -10,7 +10,7 @@ summary: 我们可以使用控制器执行Terraform计划。如果您已经使�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-dr-workflow.html["上一步：灾难恢复工作流。"]

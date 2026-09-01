@@ -10,7 +10,7 @@ summary: 本节介绍如何设置 FlexPod 和 GATK 以及如何使用 Cromwell �
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-genomics-solution-infrastructure-hardware-and-software-components.html["先前版本：解决方案基础架构硬件和软件组件。"]

@@ -10,7 +10,7 @@ summary: 借助 FlexPod ， Cisco 和 NetApp 创建了一个灵活且可扩展�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./..media/
+:imagesdir: ../media/
 
 
 link:nvme-vsphere-test-results.html["上一步：测试结果。"]

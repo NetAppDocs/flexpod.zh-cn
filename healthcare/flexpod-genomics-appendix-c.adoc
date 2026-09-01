@@ -10,7 +10,7 @@ summary: 本节显示了使用 Cromwell 引擎执行 GATK 后的输出。
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-genomics-appendix-b.html["11fffe01d469840980d9b9a5f45bf9ed"]

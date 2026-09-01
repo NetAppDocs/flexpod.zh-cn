@@ -10,7 +10,7 @@ summary: 技术规格提供了有关 FlexPod 解决方案中硬件组件的详�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

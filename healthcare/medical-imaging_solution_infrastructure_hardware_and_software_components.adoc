@@ -10,7 +10,7 @@ summary: 下表分别列出了医疗成像系统的 FlexPod 基础架构的硬�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

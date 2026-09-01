@@ -10,7 +10,7 @@ summary: 本技术报告将在 NetApp 和 Cisco 的 FlexPod 融合基础架构�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 NetApp 公司 Scott kovacs

@@ -10,7 +10,7 @@ summary: 安装 Cisco Intersight Assist 后，您可以申请 NetApp 存储和�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

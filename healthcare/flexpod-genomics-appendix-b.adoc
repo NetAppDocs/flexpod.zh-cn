@@ -10,7 +10,7 @@ summary: 本节介绍 ./gatk 输出的执行情况。
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-genomics-appendix-a.html["previous ：使用 JAR 文件执行 GATK 的输出。"]

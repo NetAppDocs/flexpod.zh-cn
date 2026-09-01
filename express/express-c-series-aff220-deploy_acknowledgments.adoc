@@ -10,7 +10,7 @@ summary: 作者希望感谢某些个人对这一设计的支持和贡献。
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: 本节介绍 FlexPod 快速的可选功能。
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

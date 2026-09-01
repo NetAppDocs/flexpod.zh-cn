@@ -10,7 +10,7 @@ summary: 本文档中介绍的 NetApp 功能可帮助您在攻击发生后几分
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

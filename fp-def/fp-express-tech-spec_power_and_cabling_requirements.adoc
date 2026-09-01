@@ -10,7 +10,7 @@ summary: 本节描述 FlexPod Express 设计的电源要求和磁盘架布线指
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

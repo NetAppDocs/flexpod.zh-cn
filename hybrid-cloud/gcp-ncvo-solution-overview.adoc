@@ -10,7 +10,7 @@ summary: 本技术报告将FlexPod 融合基础架构解决方案 、基于Googl
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 NetApp公司Ruchika Lahoti

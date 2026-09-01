@@ -10,7 +10,7 @@ summary: 作者建议在发生攻击时不要支付勒索，因为这样做会�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: 获取 NetApp 许可证文件后，您可以使用 OnCommand System Man
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

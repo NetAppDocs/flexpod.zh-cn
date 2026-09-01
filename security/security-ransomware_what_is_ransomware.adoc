@@ -10,7 +10,7 @@ summary: 勒索软件是一种基于密码学的恶意软件，即使用加密�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 NetApp 公司 Arvind Ramakrishnan

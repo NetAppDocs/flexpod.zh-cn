@@ -10,7 +10,7 @@ summary: 本节介绍混合云NetApp存储的自动化部署。
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-configure-public-cloud-service-provider.html["先前版本：配置公有 云服务提供商。"]

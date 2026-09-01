@@ -10,7 +10,7 @@ summary: 下表显示了经过验证的硬件和软件版本，此页面详细�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: FlexPod 数据中心 SM-BC 解决方案 可为各种单点故障情形�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:sm-bcs-virtualization.html["先前版本：解决方案 验证—虚拟化。"]

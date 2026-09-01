@@ -10,7 +10,7 @@ summary: 全球许多医疗保健组织都将 FlexPod 作为一个通用平台�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-genomics-appendix-d-gpu-setup.html["上一步： GPU 设置。"]

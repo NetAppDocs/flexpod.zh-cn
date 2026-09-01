@@ -10,7 +10,7 @@ summary: 此解决方案简要概述了基于 FlexPod 的 VMware vSphere 7 的 F
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 NetApp 公司 Chris Schmitt 和 Kamini Singh

@@ -10,7 +10,7 @@ summary: 本节详细介绍了在 FlexPod 快速配置中安装 VMware ESXi 6.7U
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

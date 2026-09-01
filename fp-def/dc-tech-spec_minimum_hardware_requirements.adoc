@@ -10,7 +10,7 @@ summary: FlexPod 数据中心配置具有最低硬件要求，包括但不限于
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

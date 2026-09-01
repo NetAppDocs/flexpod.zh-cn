@@ -10,7 +10,7 @@ summary: 在此页面上、我们将回顾解决方案 的示例数据复制工�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-terraform-execution-from-controller.html["先前：从控制器执行Terraform。"]

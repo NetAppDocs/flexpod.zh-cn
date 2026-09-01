@@ -10,7 +10,7 @@ summary: 具有代理服务器配置的AIQ UM需要通过命令行界面进行�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

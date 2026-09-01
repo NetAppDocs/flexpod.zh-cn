@@ -10,7 +10,7 @@ summary: FIPS 140-2 指定了在安全系统中使用的加密模块的安全要
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-fips-cybersecurity-threats-in-healthcare.html["上一篇：医疗保健领域的网络安全威胁。"]

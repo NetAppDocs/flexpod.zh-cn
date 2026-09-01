@@ -10,7 +10,7 @@ summary: 本节简要列出了在 FlexPod 融合基础架构平台上运行基�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-genomics-introduction.html["上一页：简介。"]

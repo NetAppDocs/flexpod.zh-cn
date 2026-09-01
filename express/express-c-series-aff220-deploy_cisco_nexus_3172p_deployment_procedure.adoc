@@ -10,7 +10,7 @@ summary: 以下部分详细介绍了 FlexPod Express 环境中使用的 Cisco Ne
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

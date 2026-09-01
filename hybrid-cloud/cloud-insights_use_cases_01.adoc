@@ -10,7 +10,7 @@ summary: 通过设置并配置 Cloud Insights 来监控您的 FlexPod Datacenter
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

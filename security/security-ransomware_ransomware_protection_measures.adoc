@@ -10,7 +10,7 @@ summary: 本节介绍 NetApp ONTAP 数据管理软件以及适用于 Cisco UCS �
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: FlexPod 是一组定义的硬件和软件，可为虚拟化和非虚拟
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 

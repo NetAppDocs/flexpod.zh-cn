@@ -10,7 +10,7 @@ summary: Cisco 为 FlexPod 快速设计和架构做出了重大贡献；它为�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: 存储分段是用于保存数据的对象存储容器。您必须先�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

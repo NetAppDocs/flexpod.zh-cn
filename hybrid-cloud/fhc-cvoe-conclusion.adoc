@@ -10,7 +10,7 @@ summary: 构建混合云是大多数医疗保健组织随时提供数据可用�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:fhc-cvoe-solution-validation.html["先前版本：解决方案 验证。"]

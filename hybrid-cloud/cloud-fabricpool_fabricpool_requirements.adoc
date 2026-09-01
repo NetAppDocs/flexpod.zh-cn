@@ -10,7 +10,7 @@ summary: FabricPool 要求使用 ONTAP 9.2 或更高版本，并在本节列出�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

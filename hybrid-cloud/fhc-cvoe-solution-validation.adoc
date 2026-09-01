@@ -10,7 +10,7 @@ summary: 本节介绍如何使用多种使用情形验证解决方案。
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:fhc-cvoe-san-configuration.html["先前版本：SAN配置。"]

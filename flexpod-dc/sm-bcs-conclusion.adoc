@@ -10,7 +10,7 @@ summary: 采用 SM-BC 的 FlexPod 数据中心采用主动 - 主动数据中心�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:sm-bcs-validated-scenarios.html["先前版本：解决方案 验证—经验证的场景。"]

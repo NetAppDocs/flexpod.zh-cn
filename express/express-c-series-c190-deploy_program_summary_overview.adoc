@@ -10,7 +10,7 @@ summary: FlexPod 数据中心和 FlexPod Express 提供基线配置，并可灵�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 NetApp 公司 Savita Kumari

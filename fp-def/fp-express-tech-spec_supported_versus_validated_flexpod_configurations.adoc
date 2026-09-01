@@ -10,7 +10,7 @@ summary: FlexPod 架构由本文档中所述的一组规则定义。Cisco 硬件
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

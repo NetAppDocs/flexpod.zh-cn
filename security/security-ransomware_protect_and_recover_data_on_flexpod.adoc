@@ -10,7 +10,7 @@ summary: 本节介绍在发生攻击时如何恢复最终用户的数据，以�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

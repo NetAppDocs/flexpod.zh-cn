@@ -10,7 +10,7 @@ summary: NetApp 提供各种硬件，软件和服务，其中可以包括根据�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-fips-flexpod-cisco-networking-and-fips-140-2.html["先前版本： FlexPod Cisco 网络和 FIPS 140-2 。"]

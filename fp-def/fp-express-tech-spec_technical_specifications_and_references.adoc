@@ -10,7 +10,7 @@ summary: 本节介绍每个 FlexPod 快速组件的其他重要技术规格。
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

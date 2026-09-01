@@ -10,7 +10,7 @@ summary: 借助 FlexPod ，您可以从一个平台获得一个支持 FC ， FCo
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 NetApp 公司 Jaya Kishore Esanakula 和 Atul Bhalodia

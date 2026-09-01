@@ -10,7 +10,7 @@ summary: 此页面列出了部署FlexPod 实例所需的资源。
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-solution-components.html["先前版本：解决方案 组件。"]

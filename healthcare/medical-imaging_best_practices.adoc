@@ -10,7 +10,7 @@ summary: 本节介绍 NetApp FlexPod 快速存储集群设计的最佳实践。
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 

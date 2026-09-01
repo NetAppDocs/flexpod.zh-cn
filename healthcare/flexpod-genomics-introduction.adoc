@@ -10,7 +10,7 @@ summary: 借助 FlexPod 融合基础架构平台，医疗保健组织可以托�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 NetApp 公司 JayaKishore Esanakula

@@ -10,7 +10,7 @@ summary: 以下是从 Cisco Intersight 监控和编排 NetApp 存储的几个用
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

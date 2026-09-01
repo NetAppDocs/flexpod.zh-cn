@@ -10,7 +10,7 @@ summary: 在实施 FIPS 140-2 策略时，了解要保护的内容非常重要�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-fips-overview-of-fips-140-2.html["先前版本： FIPS 140-2 概述。"]

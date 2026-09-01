@@ -10,7 +10,7 @@ summary: FlexPod 是一款灵活的解决方案，可让您使用当前由 Cisco
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

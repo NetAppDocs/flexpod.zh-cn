@@ -10,7 +10,7 @@ summary: 下一节详细介绍了用于配置 Cisco UCS C 系列独立机架服�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

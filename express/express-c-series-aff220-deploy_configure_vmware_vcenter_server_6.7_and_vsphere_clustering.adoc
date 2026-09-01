@@ -10,7 +10,7 @@ summary: 您可以通过完成以下步骤来配置 VMware vCenter Server 6.7 �
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

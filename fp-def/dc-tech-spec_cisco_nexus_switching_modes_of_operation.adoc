@@ -10,7 +10,7 @@ summary: 在给定 FlexPod 部署中，可以使用多种 Cisco Nexus 产品作�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

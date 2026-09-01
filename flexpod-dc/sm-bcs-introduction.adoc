@@ -10,7 +10,7 @@ summary: 本页介绍使用 NetApp SnapMirror 业务连续性和 ONTAP 9.10 的 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 NetApp 公司 Jyh-shing Chen

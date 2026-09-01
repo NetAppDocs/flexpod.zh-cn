@@ -10,7 +10,7 @@ summary: FlexPod Datacenter 解决方案是由 Cisco 和 NetApp 设计的一种�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

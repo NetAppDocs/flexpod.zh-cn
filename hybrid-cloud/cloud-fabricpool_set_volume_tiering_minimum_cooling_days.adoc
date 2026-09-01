@@ -10,7 +10,7 @@ summary: 分层最小冷却天数设置确定使用自动或仅 Snapshot 策略�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: 在将对象存储附加到聚合之前，必须将其添加到 ONTAP �
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

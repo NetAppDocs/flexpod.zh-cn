@@ -10,7 +10,7 @@ summary: 本节介绍EHR为使软件与NetApp存储实现最佳集成而需要�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:fhc-cvoe-installation-and-configuration.html["先前版本：安装和配置。"]

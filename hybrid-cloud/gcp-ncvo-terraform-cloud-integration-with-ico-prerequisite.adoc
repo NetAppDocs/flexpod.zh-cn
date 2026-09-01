@@ -10,7 +10,7 @@ summary: 此页面介绍如何连接Cisco Intersight和Terraform Cloud、如何�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-cisco-intersight-configuration.html["先前版本：Cisco Intersight配置。"]

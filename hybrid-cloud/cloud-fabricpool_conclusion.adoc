@@ -10,7 +10,7 @@ summary: 云之旅因组织，业务单位甚至组织内的业务单位而异�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

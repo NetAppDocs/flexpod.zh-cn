@@ -10,7 +10,7 @@ summary: FlexPod SM-BC 解决方案 的存储配置遵循每个站点的典型 F
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:sm-bcs-network.html["先前版本：解决方案 验证 - 网络。"]

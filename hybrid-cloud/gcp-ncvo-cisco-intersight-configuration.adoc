@@ -10,7 +10,7 @@ summary: 此页面列出了使用FlexPod 配置Cisco Intersight所需的资源�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-deploy-flexpod.html["先前版本：部署FlexPod。"]

@@ -10,7 +10,7 @@ summary: 此参考验证已按照下图和表所示进行布线。
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

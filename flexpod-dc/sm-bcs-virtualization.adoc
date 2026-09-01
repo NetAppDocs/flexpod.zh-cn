@@ -10,7 +10,7 @@ summary: 在多站点 FlexPod SM-BC 解决方案 中，一个 VMware vCenter 可
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:sm-bcs-storage.html["先前版本：解决方案 验证—存储。"]

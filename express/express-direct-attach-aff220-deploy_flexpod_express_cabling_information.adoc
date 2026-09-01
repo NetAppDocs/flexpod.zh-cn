@@ -10,7 +10,7 @@ summary: 下表介绍了参考验证布线。
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

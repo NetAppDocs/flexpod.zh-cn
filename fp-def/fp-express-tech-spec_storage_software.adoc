@@ -10,7 +10,7 @@ summary: FlexPod 快速平台支持本节中列出的存储操作系统。
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

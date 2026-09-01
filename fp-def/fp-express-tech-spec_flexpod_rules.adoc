@@ -10,7 +10,7 @@ summary: FlexPod 设计支持灵活的基础架构，其中包含许多不同的
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

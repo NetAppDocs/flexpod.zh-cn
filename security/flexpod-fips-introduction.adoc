@@ -10,7 +10,7 @@ summary: 本文档对基于 Cisco Unified Computing System （ Cisco UCS ）， 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 NetApp Cisco 公司 John McAbel 的 JayaKishore Esanakula

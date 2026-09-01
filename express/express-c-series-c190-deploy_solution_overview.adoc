@@ -10,7 +10,7 @@ summary: 此 FlexPod Express 解决方案是 FlexPod 融合基础架构计划的
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

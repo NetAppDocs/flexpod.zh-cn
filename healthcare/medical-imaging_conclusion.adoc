@@ -10,7 +10,7 @@ summary: 通过在 FlexPod 上运行医疗影像环境，您的医疗保健组�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

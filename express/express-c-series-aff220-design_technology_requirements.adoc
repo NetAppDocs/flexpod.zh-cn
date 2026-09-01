@@ -10,7 +10,7 @@ summary: FlexPod Express 需要硬件和软件组件的组合，具体取决于�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

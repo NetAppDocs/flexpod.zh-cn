@@ -10,7 +10,7 @@ summary: 您可以按照以下步骤完成 NetApp AFF 存储部署操作步骤�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

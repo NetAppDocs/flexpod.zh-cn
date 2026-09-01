@@ -10,7 +10,7 @@ summary: 从较高的层面来看， FlexPod SM-BC 解决方案 由两个 FlexPo
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:sm-bcs-introduction.html["上一页：简介。"]

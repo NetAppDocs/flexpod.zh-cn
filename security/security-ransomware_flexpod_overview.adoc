@@ -10,7 +10,7 @@ summary: FlexPod 是一种经过预先设计，集成和验证的架构，可将
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]
