@@ -16,40 +16,21 @@ summary: FlexPod 数据中心配置具有最低硬件要求，包括但不限于
 [role="lead"]
 FlexPod 数据中心配置具有最低硬件要求，包括但不限于交换机，互联阵列，服务器和 NetApp 存储控制器。
 
-您必须使用 Cisco UCS 服务器。C 系列和 B 系列服务器均已在经过验证的设计中使用。Cisco Nexus 阵列扩展器（ FEX ）是 C 系列服务器的可选配置。
-
 FlexPod 配置具有以下最低硬件要求：
 
-* 采用冗余配置的两个 Cisco Nexus 交换机。此配置可以包含两个来自 Cisco Nexus 5000 ， 7000 或 9000 系列的冗余交换机。这两个交换机的型号应相同，并且应配置为相同的操作模式。
-+
-如果要部署 ACI 架构，则必须遵守以下附加要求：
-
-+
-** 在主干叶拓扑中部署 Cisco Nexus 9000 系列交换机。
-** 使用三个 Cisco 应用程序策略基础架构控制器（ APIC ）。
-
-
-* 采用冗余配置的两个 Cisco UCS 6200 ， 6300 或 6400 系列互联阵列。
-* Cisco UCS 服务器：
-+
-** 如果解决方案使用 B 系列服务器，则需要一个 Cisco UCS 5108 B 系列刀片式服务器机箱加上两个 Cisco UCS B 系列刀片式服务器以及两个 2104 ， 2204/8 ， 2408 或 2304 I/O 模块（ IOM ）。
-** 如果解决方案使用 C 系列服务器，则需要两个 Cisco UCS C 系列机架式服务器。
-+
-对于 Cisco UCS C 系列机架式服务器的大型部署，您可以选择一对 2232PP FEX 模块。但是， 2232PP 不是硬件要求。
+* 两个采用冗余配置的 Cisco Nexus 交换机。此配置可以由前面提到的 Cisco Nexus 9000 系列的两台冗余交换机组成。这两台交换机应为同一型号，并应配置为相同的运行模式。
 
 
 
-* 采用高可用性（ HA ）对配置的两个 NetApp 存储控制器：
-+
-此配置可以包含任何受支持的 NetApp FAS ， AFF 或 ASA 系列存储控制器。请参见 https://hwu.netapp.com/["NetApp Hardware Universe"^] 应用程序以获取受支持的 FAS ， AFF 和 ASA 控制器型号的最新列表。
+NOTE: 如果要部署 ACI 架构，则必须遵守以下附加要求： * 在叶脊拓扑中部署 Cisco Nexus 9000 系列交换机。* 使用三个 Cisco Application Policy Infrastructure Controller (APIC)。
 
-+
-** HA 配置要求每个控制器具有两个冗余接口来进行数据访问；这些接口可以是 FCoE ， FC 或 10/25/100GB 以太网（ GbE ）。
-** 如果解决方案使用 NetApp ONTAP ，则需要经过 NetApp 批准的集群互连拓扑。有关详细信息，请参见 https://hwu.netapp.com/Switch/Index["交换机"^] 选项卡 Hardware Universe 。
-** 如果解决方案使用 ONTAP ，则每个控制器至少需要两个额外的 10/25/100GbE 端口才能进行数据访问。
-** 对于具有两个节点的 ONTAP 集群，您可以配置双节点无交换机集群。
-** 对于具有两个以上节点的 ONTAP 集群，需要一对集群互连交换机。
+* 两个冗余配置的 Cisco UCS 6400、6500 或 6600 系列 Fabric Interconnect（如果使用 UCS C-Series 机架式服务器或 X-Series 模块化系统）。
+* 两个具有 FI 连接的 Cisco UCS C-Series 机架式服务器（采用 Intersight 管理的配置 (IMM)），或 Cisco UCS X-Series Direct（采用 Cisco IMM），或 Cisco UCS X-Series Modular（采用 Cisco Intersight 管理的配置 (IMM)）。
 
 
-* 一个具有任何受支持磁盘类型的 NetApp 磁盘架。请参见的磁盘架选项卡 link:https://hwu.netapp.com/Shelves/Index?osTypeId=2032["NetApp Hardware Universe"^] 有关支持的磁盘架型号的最新列表。
+
+NOTE: 如果使用的是没有 FI 连接的 UCS 机架服务器，则可以使用 CIMC 或 Intersight 独立模式进行管理。
+
+* 两个 NetApp AFF、NetApp ASA 或 NetApp FAS 控制器以高可用性 (HA) 对配置部署为双节点集群。如果使用 NetApp AFX，则至少需要四个 NetApp AFX 控制器，并将与一对集群互连交换机一起部署为四节点 HA 集群。
+* 对于没有内置磁盘架的存储控制器，至少需要一个 NetApp 磁盘架。
 

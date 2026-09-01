@@ -1,0 +1,87 @@
+---
+sidebar: sidebar 
+permalink: fp-def/dc-tech-spec_topologies.html 
+keywords: topologies, iSCSI boot, x-series-direct,x-series-modular, ucs-c-series,ip-based san, fc-based san 
+summary: 本节描述 FlexPod Datacenter 的示例拓扑。 
+---
+= FlexPod Datacenter 拓扑
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+本节描述 FlexPod Datacenter 的示例拓扑。
+
+
+
+[[cisco-ucs-x-series-modular-system-and-c-series-rack-servers-with-fc-and-ip-based-san]]
+== 带有基于 FC 和 IP 的 SAN 的 Cisco UCS X 系列模块化系统和 C 系列机架式服务器
+
+下图显示了采用基于 IP 的 iSCSI 配置的 X 系列模块化系统和 C 系列机架式服务器的 FlexPod Datacenter 示例。该拓扑还支持 NFS 和 NVMe-TCP。
+
+image:dc-tech-spec_image15.png["FlexPod Datacenter，适用于基于 IP 的 iSCSI 连接"]
+
+下图显示了带有 X 系列模块化系统和 C 系列机架式服务器的 FlexPod Datacenter 示例，用于带有 MDS 交换机的基于 FC 的 SAN 配置。上述拓扑还支持 NFS 和 FC-NVMe。
+
+image:dc-tech-spec_image16.png["FlexPod Datacenter，适用于基于 FC 的 SAN 连接"]
+
+上述拓扑的连接要求包括：
+
+* AFF 集群连接：对于 2 节点 AFF 集群，控制器可以通过电缆直接连接在一起，而无需使用集群交换机。
+* 存储以太网连接：NetApp 存储控制器必须直接连接到 Cisco Nexus 交换机。
+* Cisco UCS X9508 机箱使用 Cisco UCSX-I-9108-100G IFM 连接到交换矩阵互连。Cisco UCSX-I-9108-25G IFM 还可与用于将机箱连接到交换矩阵互连的 4x25G 分支电缆一起使用。
+* Cisco UCS X 系列模块化计算节点包含 Cisco VIC，可以与任一 IFM 配合使用。
+* Cisco UCS C 系列机架式服务器包含 Cisco VIC 并连接到交换矩阵互联。
+* 需要虚拟端口通道 (vPC) 才能将 Cisco Nexus 交换机连接到 NetApp 存储控制器，以及将 Cisco UCS 交换矩阵互联连接到 Cisco Nexus 交换机。
+* FC 连接要求：
++
+** NetApp 存储控制器使用 32 Gbps FC 连接连接到 Cisco MDS 交换机，以实现 SAN 连接。
+** Cisco UCS 交换矩阵互连使用配置为单端口通道的 32 Gbps FC 连接连接到 Cisco MDS 交换机，以实现 SAN 连接。
+
+
+
+
+您可以选择仅实施基于 IP 的 SAN、仅实施基于 FC 的 SAN，或者同时实施两者以采用不同的协议来满足工作负载延迟和吞吐量要求。由于设备连接、命令集更高效以及 CPU 利用率降低，NVMe over fabric 协议可提供更低的延迟和更高的每秒输入/输出操作数 (IOPs)。
+
+
+NOTE: 上述示例拓扑是指使用 NetApp AFF 的 X-Series 模块化和 C-Series 机架服务器解决方案配置。但是，同一拓扑也可用于 NetApp ASA 和 FAS。
+
+有关此配置的详细信息，请参见 link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_m7_imm_vmware_design.html#PhysicalTopology["FlexPod Datacenter with Cisco UCS M7 IMM、VMware vSphere 8.0 和 NetApp ONTAP 9.12 设计指南"^]。
+
+
+
+[[cisco-ucs-x-series-direct-with-direct-attached-fc-and-ip-based-san]]
+== Cisco UCS X-Series Direct，带有直接连接的 FC 和基于 IP 的 SAN
+
+下图显示了适用于 FlexPod Datacenter 基于 IP 和基于 FC 的 SAN 的 UCS X-Series Direct 和直接连接 ASA 示例拓扑。
+
+image:dc-tech-spec_image14.png["UCS X-Series Direct 和直连 ASA 拓扑，适用于基于 IP 和基于 FC 的 SAN"]
+
+此拓扑的连接要求包括：
+
+* ASA 集群连接：对于 2 节点 ASA 集群，控制器可以通过电缆直接连接在一起，而无需使用集群交换机。
+* 存储以太网连接：NetApp 存储控制器可以直接连接到嵌入式 Fabric Interconnect。ASA 中的两个存储控制器可连接到由 FI A 和 FI B 提供的两个独立 IP SAN 交换矩阵。
+* FI 网络上行链路连接：对于基于 IP 的 SAN 连接，上行链路 Nexus 交换机不参与 SAN 数据路径。SAN IO 使用与 FI A 或 FI B 的连接直接从 UCS 计算节点传输至 ASA 存储。因此，支持 VLAN 和 vPC 的现有架顶式交换机可用于为 FlexPod SAN 解决方案环境提供外部网络访问。
+* 对于基于 FC 的 SAN 连接，需要将 UCS FI (FC) 端口配置为分支端口。
+* 当用于基于 FC 的 SAN 解决方案时，应将 Cisco UCS 配置为 FC 交换模式。
+
+
+Cisco UCS X-Series Direct 还可以使用与常规 X-Series 类似的交换机连接存储，但使用嵌入式交换矩阵互连而非外部交换矩阵互连。
+
+有关此配置的详细信息，请参见 https://www.netapp.com/pdf.html?item=/media/135828-flexpod-san-ucs-xdirect-asa-nva-deploy-guide.pdf["FlexPod SAN 解决方案，采用 Cisco UCS X-Series Direct 和 NetApp ASA"^]。
+
+[NOTE]
+====
+上述示例拓扑是指使用 NetApp ASA 的直连存储解决方案。但是，同样的拓扑也可用于 NetApp AFF 和 FAS。
+
+对于使用 NetApp AFF 或 FAS 存储的基于 IP 的直连 NAS 存储配置，上行链路 Nexus 交换机需要正确配置以支持某些故障场景。有关其他配置信息，请参阅以下链接。
+
+https://www.netapp.com/pdf.html?item=/media/22621-nva-1154-DESIGN.pdf[]
+
+https://www.netapp.com/pdf.html?item=/media/21938-nva-1154-DEPLOY.pdf[]
+
+====

@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: fp-def/dc-tech-spec_cisco_components.html 
-keywords: cisco, components, ucs, fabric, interconnect, blade, server, rack, apic, nexus, software, support 
-summary: Cisco 为 FlexPod 的设计和架构做出了重大贡献，涵盖了解决方案的计算层和网络层。本节介绍可用于 FlexPod 的 Cisco UCS 和 Cisco Nexus 选项。FlexPod 既支持 Cisco UCS B 系列服务器，也支持 C 系列服务器。 
+keywords: cisco, components, ucs, fabric, interconnect, server, rack, apic, nexus, software, support, mds, x-series-modular, x-series-direct 
+summary: Cisco 在 FlexPod 设计和架构方面做出了重大贡献，涵盖了解决方案的计算和网络层。本节介绍可用于 FlexPod 的 Cisco UCS 和 Cisco Nexus 选项。 
 ---
 = Cisco 组件
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Cisco 为 FlexPod 的设计和架构做出了重大贡献，涵盖了�
 
 
 [role="lead"]
-Cisco 为 FlexPod 的设计和架构做出了重大贡献，涵盖了解决方案的计算层和网络层。本节介绍可用于 FlexPod 的 Cisco UCS 和 Cisco Nexus 选项。FlexPod 既支持 Cisco UCS B 系列服务器，也支持 C 系列服务器。
+Cisco 在 FlexPod 设计和架构方面做出了重大贡献，涵盖了解决方案的计算和网络层。本节介绍可用于 FlexPod 的 Cisco UCS、Nexus 和 MDS 选项。
 
 
 
@@ -23,58 +23,29 @@ Cisco 为 FlexPod 的设计和架构做出了重大贡献，涵盖了解决方�
 
 FlexPod 架构需要冗余互联阵列。将多个 Cisco UCS 机箱添加到一对互联阵列时，请记住，环境中的最大机箱数由架构和端口限制决定。
 
-下表中显示的部件号适用于基础互联阵列。它们不包括电源设备（ PSU ）或 SFP+ ， QSF++ 或扩展模块。支持其他互联阵列；请参见 https://mysupport.netapp.com/matrix/["NetApp IMT"^] 查看完整列表。
+下表中显示的零件号用于基本交换矩阵互连。它们不包括电源单元 (PSU) 或 SFP+、QSFP+ 或扩展模块。
 
 |===
 | Cisco UCS 互联阵列 | 部件号 | 技术规格 
 
 
-| Cisco UCS 6332UP | UCS-FI-6332-UP | http://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/6332-specsheet.pdf["Cisco UCS 6332 互联阵列"] 
+| Cisco UCS 6664 | UCS-FI-6664-U .2+| https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/ucs-6600-series-fabric-interconnect-specsheet.pdf["Cisco UCS 6600 系列交换矩阵互联"] 
 
 
-| Cisco UCS 6454 | UCS-FI-6454-U | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/ucs-6454-fab-int-specsheet.pdf["Cisco UCS 6454 互联阵列"] 
+| Cisco UCS 6652 | UCS-FI-6652-U 
+
+
+| Cisco UCS 6536 | UCSX-FI-6536-U | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/cisco-ucs-6536-fabric-interconnect-spec-sheet.pdf["Cisco UCS 6536 Fabric Interconnect"] 
+
+
+| Cisco UCS 6454 | UCS-FI-6454-U .2+| https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/6400-specsheet.pdf["Cisco UCS 6400 系列交换矩阵互联"] 
+
+
+| Cisco UCS 64108 | UCS-FI-64108-U 
+
+
+| UCS 9108 100G Fabric Interconnect（Cisco UCS X-Series Direct） | UCSX-S9108-100G | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/ucs-fabric-interconnect-9108-100g.pdf["Cisco UCS 9108 Fabric Interconnect"] 
 |===
-
-
-[[cisco-ucs-6454]]
-=== Cisco UCS 6454
-
-Cisco UCS 6454 系列提供线速，低延迟，无损 10/25/40/100GbE 以太网和 FCoE 连接，以及支持以太网或 FC 操作的统一端口。44 个 10/25Gbps 端口可作为 10Gbps 或 25Gbps 融合以太网运行，其中 8 个是统一端口， FC 可在 8/16/32Gbps 下运行。对于传统连接，四个端口以 1/25Gbps 的速率运行，六个 QSFP 端口用作 40/100Gbps 上行链路端口或分支端口。您可以与支持 100Gbps 适配器的 NetApp 存储控制器建立 100Gbps 端到端网络连接。有关适配器和平台支持的信息，请参见 https://hwu.netapp.com/Adapter/Index["NetApp Hardware Universe"^]。
-
-有关端口的详细信息，请参见 https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/datasheet-c78-741116.html["Cisco UCS 6454 互联阵列"^] 产品规格。
-
-有关 100GB QSFP 数据模块的技术规格，请参见 https://www.cisco.com/c/en/us/products/collateral/interfaces-modules/transceiver-modules/datasheet-c78-736282.html["Cisco 100GBASE QSFP 模块产品规格"^]。
-
-
-
-[[cisco-ucs-b-series-chassis-option]]
-== Cisco UCS B 系列机箱选项
-
-要使用 Cisco UCS B 系列刀片式服务器，您必须具有 Cisco UCS B 系列机箱。下表介绍了 Cisco UCS B 系列机箱选项。
-
-|===
-| Cisco UCS B 系列机箱 | 部件号 | 技术规格 
-
-
-| Cisco UCS 5108 | N20-C508 | http://www.cisco.com/c/en/us/products/servers-unified-computing/ucs-5100-series-blade-server-chassis/index.html["Cisco UCS 5100 系列刀片式服务器机箱"] 
-|===
-每个 Cisco UCS 5108 刀片式服务器机箱都必须具有两个 Cisco UCS 2200/23400/2400 系列 IOM ，以便为互联阵列提供冗余连接。
-
-
-
-[[cisco-ucs-b-series-blade-server-options]]
-== Cisco UCS B 系列刀片式服务器选项
-
-Cisco UCS B 系列刀片式服务器提供半宽和全宽两种型号，并提供各种 CPU ，内存和 I/O 选项。下表列出的部件号适用于基础服务器。它们不包括 CPU ，内存，驱动器或夹层适配器卡。FlexPod 架构中提供并支持多个配置选项。
-
-|===
-| Cisco UCS B 系列刀片式服务器 | 部件号 | 技术规格 
-
-
-| Cisco UCS B200 M6 | UCSB-B200-M6 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/datasheet-c78-2368888.html["Cisco UCS B200 M6 刀片式服务器"] 
-|===
-前几代 Cisco UCS B 系列刀片式服务器可在 FlexPod 架构中使用，前提是它们在上受支持 https://ucshcltool.cloudapps.cisco.com/public/["Cisco UCS 硬件和软件兼容性列表"^]。Cisco UCS B 系列刀片式服务器还必须具有有效的 SMARTnet 支持合同。
-
 
 
 [[cisco-ucs-x-series-chassis-option]]
@@ -86,7 +57,7 @@ Cisco UCS B 系列刀片式服务器提供半宽和全宽两种型号，并提�
 | Cisco UCS X 系列刀片式服务器 | 部件号 | 技术规格 
 
 
-| Cisco UCS 9508 M6 | UCSX-9508 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/datasheet-c78-2472574.html["Cisco UCX9508 X 系列机箱"] 
+| Cisco UCS X9508 机箱 | UCSX-9508 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/datasheet-c78-2472574.html?ccid=cc002456&oid=dstcsm026317["Cisco UCS X9508 机箱"] 
 |===
 每个 Cisco UCS 9508 机箱都必须具有两个 Cisco UCS 9108 智能阵列模块（ Intelligent Fabric Module ， IFM ），以便为互联阵列提供冗余连接。
 
@@ -101,201 +72,202 @@ Cisco UCS X 系列计算节点具有各种 CPU ，内存和 I/O 选项。下表�
 | Cisco UCS X 系列计算节点 | 部件号 | 技术规格 
 
 
-| Cisco UCS X210c M6 | UCSX-210C-M6 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/datasheet-c78-2465523.html?ccid=cc002456&oid=dstcsm026318["Cisco UCS X210c M6 计算节点"] 
+| Cisco UCS X210c M7 | UCSX-210C-M7 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/ucs-x210c-m7-compute-node-ds.html["Cisco UCS X210c M7 计算节点"] 
+
+
+| Cisco UCS X210c M8 | UCSX-210C-M8 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/ucs-x210c-m8-compute-node-ds.html["Cisco UCS X210c M8 计算节点"] 
+
+
+| Cisco UCS X215c M8 | UCSX-215C-M8 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/ucs-x215c-m8-compute-node-ds.html["Cisco UCS X215c M8 计算节点"] 
+
+
+| Cisco UCS X410c M7 | UCSX-410C-M7 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/ucs-x410c-m7-compute-node-ds.html["Cisco UCS X410c M7 计算节点"] 
+
+
+| Cisco UCS X410c M8 | UCSX-410C-M8 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/ucs-x410c-m8-compute-node-ds.html["Cisco UCS X410c M8 计算节点"] 
+|===
+下表列出了可用于 Cisco UCS X 系列机箱的 PCI Express 节点。
+
+|===
+| Cisco UCS X系列PCIe节点 | 部件号 | 技术规格 
+
+
+| Cisco UCS X580p PCIe 节点 | UCSX-580P-U | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/ucs-x580p-pcie-node-ds.html["Cisco UCS X580p PCIe 节点"] 
+
+
+| Cisco UCS X440p PCIe 节点 | UCSX-440P | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/ucs-x440p-pcle-node-ds.html["Cisco UCS X440p PCIe 节点"] 
+|===
+下表列出了可用于 Cisco UCS X 系列机箱的 X-Fabric 模块。
+
+|===
+| Cisco UCS X-Series X-Fabric 模块 | 部件号 | 技术规格 
+
+
+| Cisco UCS 9108 智能结构模块 | UCSX-I-9108-100G | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/cisco-ucs-9108-100g-intelligent-fabric-module-spec-sheet.pdf["Cisco UCS 9108 智能结构模块"] 
+
+
+| Cisco UCS X9516 X-Fabric 模块 | UCSX-FS-9516 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/ucs-9516-x-fabric-module-ds.html["Cisco UCS X9516 X-Fabric 模块"] 
+
+
+| Cisco UCS X9416 X-Fabric 模块 | UCSX-F-9416 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/solution-overview-c22-2432175.html?ccid=cc002456&oid=sowcsm025665["Cisco UCS X9416 X-Fabric 模块"] 
 |===
 
 
-[[cisco-ucs-c-series-rack-server-options]]
-== Cisco UCS C 系列机架式服务器选项
+[[cisco-ucs-x-series-modular-system]]
+== Cisco UCS X-Series Modular System
 
-Cisco UCS C 系列机架式服务器提供一个和两个机架单元（ RU ）型号，并提供各种 CPU ，内存和 I/O 选项。下表中列出的部件号适用于基础服务器。它们不包括 CPU ，内存，驱动器，外设组件互连 Express （ PCIe ）卡或 Cisco Fabric Extender 。FlexPod 架构中提供并支持多个配置选项。
+Cisco UCS X 系列模块化系统从 Cisco UCS X9508 服务器机箱开始，该机箱设计为适应性强且面向未来。机箱具有统一的以太网交换矩阵，其中包含用于其他技术的 Cisco UCS 智能交换矩阵模块和 Cisco UCS X-Fabric 技术。机箱顶部背面有两个智能交换矩阵模块，它们将机箱连接到上游 Cisco UCS 6400、6500 和 UCS 6600 系列交换矩阵互联。
+
+有关 Cisco UCS X 系列功能特性的快速概述，请参见 link:https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/ucs-x-series-modular-system-aag.html["Cisco UCS X系列模块化系统概览"^]。
+
+Cisco UCS X215c M8、Cisco UCS X210c 和 Cisco UCS X410c 计算节点通过在单个外形中提供计算密度、存储容量和可扩展性，同时提供刀片服务器和机架式服务器的功能。
+
+Cisco UCS X440p PCIe 节点支持使用 PCIe Gen 4.0 和 Cisco UCS X9416 X-Fabric 模块添加 GPU。Cisco UCS X580p PCIe 节点支持使用 PCIe Gen 5.0 和 Cisco UCS X9516 X-Fabric 模块添加 GPU
+
+有关 Cisco UCS X 系列模块化系统解决方案组件的详细信息，请参见上述部分中每个组件的技术规格。
+
+
+NOTE: 有关 Cisco UCS X 系列模块化系统的完整技术规格，请参阅以下链接：link:https://www.cisco.com/c/en/us/products/servers-unified-computing/ucs-x-series-modular-system/datasheet-listing.html["Cisco UCS X-Series Modular System"^]
+
+
+
+[[cisco-ucs-x-series-direct-options]]
+== Cisco UCS X-Series Direct 选项
+
+Cisco UCS X-Series Direct 是一种新的架构，它将一对 Cisco UCS Fabric Interconnect 9108 100G 与 Cisco UCS X9508 Chassis 和 Cisco UCS X-Series Compute 节点集成在一起，以提供 UCS X-Series Direct 解决方案。
+
+有关 Cisco UCS X 系列功能特性的快速概述，请参见 link:https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/ucs-x-series-direct-aag.html["Cisco UCS X-Series Direct概览"^]。
+
+Cisco UCS X-Series Direct 包括以下组件：
+
+* Cisco UCS 9108 100G 结构互连
+* Cisco UCS X9508 机箱
+* Cisco UCS X 系列计算节点
+* 可选组件：
++
+** PCIe节点和X-Fabric模块
+** 第二个 Cisco UCS X9508 机箱，带 X-Series 计算节点、Cisco UCS 9108-100G 智能交换矩阵模块和多达四个 C-Series 机架式服务器
+
+
+
+
+有关 Cisco UCS X-Series Direct 解决方案组件的详细信息，请参见上述部分中每个组件的技术规格。
+
+
+NOTE: 有关 Cisco UCS X-Series Direct 的完整技术规格，请参阅以下链接： https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/ucs-x-series-direct-ds.html["Cisco UCS X-Series Direct 数据表"]。
+
+
+
+[[cisco-ucs-c-series-rack-server-options]]
+== Cisco UCS C系列机架式服务器选项
+
+Cisco UCS C 系列机架式服务器提供 1 个、2 个和 4 个机架单元 (RU) 规格，具有各种 CPU、内存和 I/O 选项。下表中列出的部件号适用于基本服务器。它们不包括 CPU、内存、驱动器、外设组件互连 Express (PCIe) 卡。有多种配置选项可用，并且在 FlexPod 架构中受支持。
 
 下表列出了 Cisco UCS C 系列机架式服务器选项。
+
+|===
+| Cisco UCS C系列机架式服务器 | 部件号 | 技术规格 
+
+
+| Cisco UCS C220 M7 | UCSC-C220-M7 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-c220-m7-rack-server-ds.html["Cisco UCS C220 M7 机架式服务器"] 
+
+
+| Cisco UCS C220 M8 | UCSC-C220-M8 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-c220-m8-rack-server-ds.html["Cisco UCS C220 M8 机架式服务器"] 
+
+
+| Cisco UCS C225 M8 | UCSC-C225-M8 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-c225-m8-rack-server-ds.html["Cisco UCS C225 M8 机架式服务器"] 
+
+
+| Cisco UCS C240 M7 | UCSC-C240-M7 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-c240-m7-rack-server-ds.html["Cisco UCS C240 M7 机架式服务器"] 
+
+
+| Cisco UCS C240 M8 | UCSC-C240-M8 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-c240-m8-rack-server-ds.html["Cisco UCS C240 M8 机架式服务器"] 
+
+
+| Cisco UCS C245 M8 | UCSC-C245-M8 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-c245-m8-rack-server-ds.html["Cisco UCS C245 M8 机架式服务器"] 
+|===
+下表列出了针对 AI 用例优化的 Cisco UCS C 系列机架式服务器：
 
 |===
 | Cisco UCS C 系列机架式服务器 | 部件号 | 技术规格 
 
 
-| Cisco UCS C220 M6 | UCSC-C220-M6 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c220m6-sff-specsheet.pdf["Cisco UCS C220 M6 机架式服务器"] 
+| Cisco UCS C845A M8 | UCSC-C845A-M8 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-c845a-m8-rack-server-ds.html["Cisco UCS C845A M8 机架式服务器"] 
 
 
-| Cisco UCS C225 M6 | UCSC-C225-M6 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c225-m6-sff-specsheet.pdf["Cisco UCS C225 M6 机架式服务器"] 
-
-
-| Cisco UCS C240 M6 | UCSC-C240-M6 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c240m6-sff-specsheet.pdf["Cisco UCS C240 M6 机架式服务器"] 
-
-
-| Cisco UCS C245 M6 | UCSC-C245M6 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c245m6-sff-specsheet.pdf["Cisco UCS C245 M6 机架式服务器"] 
+| Cisco UCS C880A M8 | UCSC-C880A-M8 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-c880a-m8-rack-server-ds.html["Cisco UCS C880A M8 机架式服务器"] 
 |===
-前几代 Cisco UCS C 系列服务器可在 FlexPod 架构中使用，前提是它们在上受支持 https://ucshcltool.cloudapps.cisco.com/public/["Cisco UCS 硬件和软件兼容性列表"^]。Cisco UCS C 系列服务器还必须具有有效的 SMARTnet 支持合同。
+如果在 https://ucshcltool.cloudapps.cisco.com/public/["Cisco UCS 硬件和软件兼容性列表"^]上受支持，Cisco UCS C 系列服务器的前几代产品可以在 FlexPod 架构中使用。
 
-
-
-[[cisco-nexus-5000-series-switch-options]]
-== Cisco Nexus 5000 系列交换机选项
-
-在 FlexPod 架构中需要使用冗余 Cisco Nexus 5000 ， 7000 或 9000 系列交换机。下表列出的部件号适用于 Cisco Nexus 5000 系列机箱，不包括 SFP 模块，附加 FC 或以太网模块。
-
-|===
-| Cisco Nexus 5000 系列交换机 | 部件号 | 技术规格 
-
-
-| Cisco Nexus 56128P | N5K-C56128P .2+| http://www.cisco.com/c/en/us/products/collateral/switches/nexus-5000-series-switches/datasheet-c78-730760.html["Cisco Nexus 5600 平台交换机"] 
-
-
-| Cisco Nexus 5672UP-16G | N5K-C5672UP-16G 
-
-
-| Cisco Nexus 5596UP | N5K-C5596UP-FA .2+| http://www.cisco.com/c/en/us/products/collateral/switches/nexus-5000-series-switches/data_sheet_c78-618603.html["Cisco Nexus 5548 和 5596 交换机"] 
-
-
-| Cisco Nexus 5548UP | N5K-C5548UP-FA 
-|===
-
-
-[[cisco-nexus-7000-series-switch-options]]
-== Cisco Nexus 7000 系列交换机选项
-
-在 FlexPod 架构中需要使用冗余 Cisco Nexus 5000 ， 7000 或 9000 系列交换机。下表列出的部件号适用于 Cisco Nexus 7000 系列机箱；不包括 SFP 模块，线卡或电源，但包括风扇托架。
-
-|===
-| Cisco Nexus 7000 系列交换机 | 部件号 | 技术规格 
-
-
-| Cisco Nexus 7004 | N7K-C7004 | http://www.cisco.com/en/US/products/ps12735/index.html["Cisco Nexus 7000 4 插槽交换机"] 
-
-
-| Cisco Nexus 7009 | N7K-C7009 | http://www.cisco.com/en/US/products/ps11565/index.html["Cisco Nexus 7000 9 插槽交换机"] 
-
-
-| Cisco Nexus 7702 | N7K-C7702 | http://www.cisco.com/c/en/us/products/switches/nexus-7700-2-slot-switch/index.html["Cisco Nexus 7700 双插槽交换机"] 
-
-
-| Cisco Nexus 7706 | N77-C7706 | http://www.cisco.com/en/US/products/ps13482/index.html["Cisco Nexus 7700 6 插槽交换机"] 
-|===
 
 
 [[cisco-nexus-9000-series-switch-options]]
 == Cisco Nexus 9000 系列交换机选项
 
-在 FlexPod 架构中需要使用冗余 Cisco Nexus 5000 ， 7000 或 9000 系列交换机。下表列出的部件号适用于 Cisco Nexus 9000 系列机箱，不包括 SFP 模块或以太网模块。
+在 FlexPod 架构中需要冗余 Cisco Nexus 9000 系列交换机。下表列出的部件号适用于 Cisco Nexus 9000 系列机箱；它们不包括 SFP 模块或以太网模块。
 
 |===
-| Cisco Nexus 9000 系列交换机 | 部件号 | 技术规格 
+| Cisco Nexus 交换机 - 已修复 | 技术规格 
 
 
-| Cisco Nexus 93180YC-FX | N9K-C93180YC-FX .5+| http://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/datasheet-c78-729405.html["Cisco Nexus 9300 系列交换机"] 
+| Cisco Nexus 9200 系列交换机 | https://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/datasheet-c78-735989.html["Cisco Nexus 9200 系列交换机"] 
 
 
-| Cisco Nexus 93180YC-EX | N9K-93180YC-EX 
-
-
-| Cisco Nexus 9336PQ ACI Spine | N9K-C9336PQ 
-
-
-| Cisco Nexus 9332PQ | N9K-C9332PQ 
-
-
-| Cisco Nexus 9336C-x2 | N9K-C9336C-x2 
-
-
-| Cisco Nexus 92304QC | N9K-C92304QC. .2+| http://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/datasheet-c78-735989.html["Cisco Nexus 9200 系列交换机"] 
-
-
-| Cisco Nexus 9236C | N9K-9236C 
+| Cisco Nexus 9300 系列交换机 | https://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/datasheet-c78-736967.html["Cisco Nexus 9300 系列交换机"] 
 |===
+|===
+| Cisco Nexus 交换机 - 模块化 | 技术规格 
 
-NOTE: 某些 Cisco Nexus 9000 系列交换机还具有其他变体。FlexPod 解决方案支持这些变体。有关 Cisco Nexus 9000 系列交换机的完整列表，请参见 http://www.cisco.com/c/en/us/support/switches/nexus-9000-series-switches/tsd-products-support-series-home.html["Cisco Nexus 9000 系列交换机"^] 在 Cisco 网站上。
 
+| Cisco Nexus 9400 系列交换机 | https://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/nexus9400-series-switches-ds.html?ccid=cc002962&oid=dstdnc029385["Cisco Nexus 9400系列交换机"] 
+
+
+| Cisco Nexus 9500 系列交换机 | https://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/datasheet-c78-729404.html["Cisco Nexus 9500 系列交换机"] 
+
+
+| Cisco Nexus 9800 系列交换机 | https://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/nexus9800-series-switches-ds.html?ccid=cc002962&oid=dstdnc029386["Cisco Nexus 9800系列交换机"] 
+|===
 
 
 [[cisco-apic-options]]
 == Cisco APIC 选项
 
-部署 Cisco ACI 时，除了一节中的各项之外，还必须配置三个 Cisco APIC link:dc-tech-spec_technical_specifications_and_references.html#cisco-nexus-9000-series-switches["Cisco Nexus 9000 系列交换机"]。有关 Cisco APIC 大小的详细信息，请参见 http://www.cisco.com/c/en/us/products/collateral/cloud-systems-management/application-policy-infrastructure-controller-apic/datasheet-c78-732414.html["Cisco Application Centric Infrastructure 产品规格。"^]
+Cisco APIC是Cisco ACI的主要架构组件。它是Cisco ACI交换矩阵自动化和管理的统一点。
 
-有关 APIC 产品规格的详细信息，请参阅上的表 1 至表 3 https://www.cisco.com/c/en/us/products/collateral/cloud-systems-management/application-policy-infrastructure-controller-apic/datasheet-c78-739715.html["Cisco Application Policy Infrastructure Controller 产品规格"^]。
+有关 APIC 产品规格的详细信息，请参阅 https://www.cisco.com/c/en/us/products/collateral/cloud-systems-management/application-policy-infrastructure-controller-apic/datasheet-c78-739715.html["Cisco Application Policy Infrastructure Controller 产品规格"^]上的表 1 至表 3。
 
-
-
-[[cisco-nexus-fabric-extender-options]]
-== Cisco Nexus 阵列扩展器选项
-
-对于使用 C 系列服务器的大型 FlexPod 架构，建议使用冗余 Cisco Nexus 2000 系列机架式 FEX 。下表介绍了一些 Cisco Nexus FEX 选项。此外，还支持其他 FEX 型号。有关详细信息，请参见 https://ucshcltool.cloudapps.cisco.com/public/["Cisco UCS 硬件和软件兼容性列表"^]。
-
-|===
-| Cisco Nexus 机架式 FEX | 部件号 | 技术规格 
-
-
-| Cisco Nexus 2232PP | N2K-C2232PP .2+| http://www.cisco.com/en/US/prod/collateral/switches/ps9441/ps10110/data_sheet_c78-507093.html["Cisco Nexus 2000 系列阵列扩展器"] 
-
-
-| Cisco Nexus 2232TM-E | N2K-C2232TM-E 
-
-
-| Cisco Nexus 2348UPQ | N2K-C2348UPQ .2+| http://www.cisco.com/c/en/us/products/collateral/switches/nexus-2000-series-fabric-extenders/datasheet-c78-731663.html["Cisco Nexus 2300 平台阵列扩展器"] 
-
-
-| Cisco Nexus 2348TQCisco Nexus 2348TQE | N2K-C2348TQN2K-C2348TQ-E 
-|===
 
 
 [[cisco-mds-options]]
 == Cisco MDS 选项
 
-Cisco MDS 交换机是 FlexPod 架构中的一个可选组件。在 FC SAN 中实施 Cisco MDS 交换机时，需要使用冗余 SAN 交换机网络结构。下表列出了部分受支持的 Cisco MDS 交换机的部件号和详细信息。请参见 https://mysupport.netapp.com/matrix/["NetApp IMT"^] 和 https://ucshcltool.cloudapps.cisco.com/public/["Cisco 硬件和软件兼容性列表"^] 有关支持的 SAN 交换机的完整列表。
+虽然 Cisco MDS 交换机是 FlexPod 架构的一个可选元素，但利用光纤通道 SAN 连接进行更高性能存储访问的部署必须实施冗余的 Cisco MDS 交换机交换矩阵，以提供高可用性的 SAN 基础设施。下表列出了支持的 Cisco MDS 交换机。请参阅 https://imt.netapp.com["NetApp IMT"^]和 https://ucshcltool.cloudapps.cisco.com/public/["Cisco 硬件和软件兼容性列表"^]，以获取受支持 SAN 交换机的完整列表。
 
 |===
-| Cisco MDS 9000 系列交换机 | 部件号 | Description 
+| Cisco MDS 交换机 | Description 
 
 
-| Cisco MDS 9148T | DS-C9148T-24IK .2+| http://www.cisco.com/c/en/us/products/storage-networking/mds-9100-series-multilayer-fabric-switches/models-listing.html["Cisco MDS 9100 系列交换机"] 
+| Cisco MDS 9100 多层交换矩阵交换机 | http://www.cisco.com/c/en/us/products/storage-networking/mds-9100-series-multilayer-fabric-switches/datasheet-listing.html["Cisco MDS 9100 系列交换机"] 
 
 
-| Cisco MDS 9132T | DS-C9132T-MEK9 
+| Cisco MDS 9200 多业务交换机 | https://www.cisco.com/c/en/us/products/storage-networking/mds-9200-series-multiservice-switches/datasheet-listing.html["Cisco MDS 9200 系列交换机"] 
 
 
-| Cisco MDS 9396S | DS-C9396S-K9 | http://www.cisco.com/c/en/us/products/storage-networking/mds-9396s-16g-multilayer-fabric-switch/index.html["Cisco MDS 9300 系列交换机"] 
-|===
+| Cisco MDS 9300 多层交换矩阵交换机 | https://www.cisco.com/c/en/us/products/storage-networking/mds-9300-series-multilayer-fabric-switches/datasheet-listing.html["Cisco MDS 9300 系列交换机"] 
 
 
-[[cisco-software-licensing-options]]
-== Cisco 软件许可选项
-
-要在 Cisco Nexus 交换机上启用存储协议，需要许可证。Cisco Nexus 5000 和 7000 系列交换机都需要存储服务许可证才能为 SAN 启动实施启用 FC 或 FCoE 协议。Cisco Nexus 9000 系列交换机当前不支持 FC 或 FCoE 。
-
-根据您为 FlexPod 解决方案的每个组件选择的选项，这些许可证所需的许可证和部件号会有所不同。例如，软件许可证部件号会根据端口数量以及您选择的 Cisco Nexus 5000 或 7000 系列交换机而有所不同。有关确切的部件号，请咨询您的销售代表。下表列出了 Cisco 软件许可选项。
-
-|===
-| Cisco 软件许可 | 部件号 | 许可证信息 
-
-
-| Cisco Nexus 5500 存储许可证， 8 端口， 48 端口和 96 端口 | N55-8P-SSK9/N55-48P-SSK9/N55-96P-SSK9 .5+| http://www.cisco.com/c/en/us/td/docs/switches/datacenter/sw/nx-os/licensing/guide/b_Cisco_NX-OS_Licensing_Guide/b_Cisco_NX-OS_Licensing_Guide_chapter_01.html["许可 Cisco NX-OS 软件功能"] 
-
-
-| Cisco Nexus 5010/5020 存储协议许可证 | N5010-SSK9/N5020-SSK9 
-
-
-| Cisco Nexus 5600 存储协议许可证 | N56-16p-SSK9/N56722-72p-SSK9/N56128-128P-SSK9 
-
-
-| Cisco Nexus 7000 存储企业许可证 | N7K-SAN1K9 
-
-
-| Cisco Nexus 9000 企业服务许可证 | N95 — LAN1K9/N93 — LAN1K9 
+| Cisco MDS 9700 Multilayer Directors | http://www.cisco.com/c/en/us/products/storage-networking/mds-9700-series-multilayer-directors/datasheet-listing.html["Cisco MDS 9700 系列交换机"] 
 |===
 
 
 [[cisco-support-licensing-options]]
 == Cisco 支持许可选项
 
-FlexPod 架构中的所有 Cisco 设备都需要有效的 SMARTnet 支持合同。
 
-所需的许可证以及这些许可证的部件号必须由销售代表进行验证，因为它们可能因不同产品而异。下表列出了 Cisco 支持许可选项。
+NOTE: 建议在订购之前与您的 Cisco 或 NetApp 销售代表确认许可要求。
 
-|===
-| Cisco 支持许可 | 许可证指南 
+link:https://www.cisco.com/c/dam/en_us/about/doing_business/legal/service_descriptions/docs/solution-support-smart-total-care.pdf["Cisco 解决方案支持"^] 是适用于 Cisco 解决方案的技术支持服务，该解决方案仅包含来自 Cisco 或来自 Cisco 及解决方案支持联盟合作伙伴的硬件和软件，且完全由 Cisco 产品及第三方供应商（解决方案支持联盟合作伙伴）提供的产品组成。
 
+Cisco 通过其 link:https://www.cisco.com/c/en/us/support/web/tac/technical-services-resource-guide.html["技术支持中心"] 支持复杂的客户环境。Cisco Solution Support 授权客户访问 TAC 工程师团队，为解决方案中发现的问题提供主要联系人，并为构成解决方案的硬件和软件提供产品支持。
 
-| Smart Net Total Care 现场高级版 | http://www.cisco.com/c/en/us/products/collateral/cloud-systems-management/smart-net-total-care/datasheet-c78-735459.pdf["Cisco Smart Net Total Care 服务"] 
-|===
+Cisco 利用 link:https://www.tsanet.org/cisco-tsanet-case-study/["TSANet合作伙伴计划"^] 框架将解决方案支持合作伙伴引入 TSANet Connect 系统上的专用组。TSANet Connect 为支持工程师与合作伙伴的技术团队协作提供了一致的方法，确保有效沟通和加速问题解决，同时避免因与合作伙伴进行非正式合作而产生的摩擦

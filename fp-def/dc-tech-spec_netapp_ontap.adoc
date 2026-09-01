@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: fp-def/dc-tech-spec_netapp_ontap.html 
-keywords: ontap, fas, aff, system, datacenter, techincal, specifications, flexpod, software 
-summary: NetApp ONTAP 软件安装在每个 NetApp FAS 或 AFF 系统上。FlexPod 已通过 ONTAP 软件的验证，可提供高度可扩展的存储架构，支持无中断运行，无中断升级和灵活的数据基础架构。 
+keywords: ontap, aff, asa, fas, afx, system, datacenter, technical, specifications, flexpod, software 
+summary: NetApp ONTAP 软件安装在每个 NetApp AFF、ASA、FAS 和 AFX 系统上。FlexPod 通过 ONTAP 软件验证，提供高度可扩展的存储架构，实现无中断操作、无中断升级和敏捷数据基础设施。 
 ---
 = NetApp ONTAP
 :hardbreaks:
@@ -14,6 +14,6 @@ summary: NetApp ONTAP 软件安装在每个 NetApp FAS 或 AFF 系统上。FlexP
 
 
 [role="lead"]
-NetApp ONTAP 软件安装在所有 NetApp FAS、AFF 和 AFF All SAN Array (ASA) 系统上。FlexPod 已通过 ONTAP 软件验证，提供高度可扩展的存储架构，实现无中断操作、无中断升级和敏捷数据基础设施。
+NetApp ONTAP 软件是在 AFF、ASA、FAS 和 AFX 存储系统上运行的操作系统。ONTAP 提供高度可扩展的存储架构，可实现无中断操作、无中断升级和敏捷数据基础设施。使用 ONTAP One 许可模式，所有企业数据服务都包含在一个软件包中，从而简化了部署和管理，同时提供对高级功能的完全访问。ONTAP 通过 SnapMirror 复制和灾难恢复以及 SnapCenter 应用程序一致性备份和还原等技术提供强大的数据保护。它还集成了内置安全功能，包括自主勒索软件防护和加密，以保护数据免受现代威胁。此外，ONTAP 通过 SnapMirror Cloud 和基于 S3 的复制等功能实现无缝混合云集成，支持跨本地和云环境的数据移动，同时保持一致性和可控性。
 
 有关 ONTAP 的详细信息，请参见 https://www.netapp.com/ontap-data-management-software/["ONTAP 数据管理软件"^]产品页面。

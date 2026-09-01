@@ -48,16 +48,20 @@ entries:
     url: "/fp-def/dc-tech-spec_flexpod_platforms.html"
   - title: FlexPod 规则
     url: "/fp-def/dc-tech-spec_flexpod_rules.html"
+  - title: 支持的配置与已验证的 FlexPod 配置
+    url: "/fp-def/dc-tech-spec_supported_versus_validated_flexpod_configurations.html"
   - title: NetApp ONTAP
     url: "/fp-def/dc-tech-spec_netapp_ontap.html"
   - title: Cisco Nexus 切换操作模式
     url: "/fp-def/dc-tech-spec_cisco_nexus_switching_modes_of_operation.html"
   - title: 最低硬件要求
     url: "/fp-def/dc-tech-spec_minimum_hardware_requirements.html"
-  - title: 最低软件要求
-    url: "/fp-def/dc-tech-spec_minimum_software_requirements.html"
+  - title: 软件版本建议
+    url: "/fp-def/dc-tech-spec_software_version_recommendations.html"
   - title: 连接要求
     url: "/fp-def/dc-tech-spec_connectivity_requirements.html"
+  - title: FlexPod Datacenter 拓扑
+    url: "/fp-def/dc-tech-spec_topologies.html"
   - title: 其他要求
     url: "/fp-def/dc-tech-spec_other_requirements.html"
   - title: 可选功能
@@ -70,7 +74,9 @@ entries:
     url: "/fp-def/dc-tech-spec_power_and_cabling_requirements.html"
   - title: 技术规格和参考资料
     url: "/fp-def/dc-tech-spec_technical_specifications_and_references.html"
-  - title: 旧设备
-    url: "/fp-def/dc-tech-spec_legacy_equipment.html"
+  - title: 设备支持状态
+    url: "/fp-def/dc-tech-spec_equipment_support_status.html"
+  - title: 自动部署
+    url: "/fp-def/dc-tech-spec_automation.html"
   - title: 从何处查找追加信息
     url: "/fp-def/dc-tech-spec_where_to_find_additional_information.html"

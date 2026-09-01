@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: fp-def/dc-tech-spec_netapp_components.html 
-keywords: storage, controllers, cluster, interconnect, switches, drives, disk, shelves, licensing, options 
+keywords: storage, controllers, cluster, aff, asa, fas, afx, ontap, interconnect switches, drives, disk, shelves, licensing, options 
 summary: NetApp 存储控制器在 FlexPod 架构中为启动和应用程序数据存储提供了存储基础。NetApp 组件包括存储控制器，集群互连交换机，驱动器和磁盘架以及许可选项。 
 ---
 = NetApp 组件
@@ -21,38 +21,100 @@ NetApp 存储控制器在 FlexPod 架构中为启动和应用程序数据存储�
 [[netapp-storage-controller-options]]
 == NetApp 存储控制器选项
 
-在 FlexPod 架构中需要使用冗余 NetApp FAS ， AFF 或 AFF ASA 控制器。这些控制器运行 ONTAP 软件。订购存储控制器后，可以在这些控制器上预加载首选软件版本。对于 ONTAP ，系统会订购一个完整的集群。整个集群包括一对存储控制器和一个集群互连（交换机或无交换机）。
+冗余 NetApp FAS、AFF、ASA 或 AFX 控制器在 FlexPod 架构中是必需的。这些控制器运行 ONTAP 软件。订购存储控制器时，可以在控制器上预加载首选软件版本。对于 ONTAP，需订购一个完整的集群。一个完整的集群包括一对存储控制器和一个集群互连（交换机或无交换机）。
+
+
+NOTE: 无交换机集群配置仅支持双节点配置。具有四个或更多节点的配置需要集群互连交换机，对于双节点配置则为可选。
 
 根据选定的存储平台，可以使用不同的选项和配置。有关这些附加组件的详细信息，请咨询您的销售代表。
 
 下表中列出的控制器系列适合在 FlexPod Datacenter 解决方案中使用，因为它们与 Cisco Nexus 交换机的连接是无缝的。请参见 https://hwu.netapp.com/["NetApp Hardware Universe"^] 有关每个控制器型号的特定兼容性详细信息。
 
 |===
-| 存储控制器系列 | 技术规格 
+| NetApp 存储系列，适用于 FlexPod Datacenter | 型号 | 技术规格 
 
 
-| AFF A-Series | https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62247["AFF A-Series 文档"] 
+.6+| AFF A-Series | AFF A20 .6+| https://www.netapp.com/pdf.html?item=/media/7828-ds-3582-aff-a-series-ai-era.pdf["AFF A 系列数据表"] 
 
 
-| AFF ASA A 系列 | https://www.netapp.com/data-storage/san-storage-area-network/documentation/["AFF ASA A 系列文档"] 
+| AFF A30 
 
 
-| FAS 系列 | https://mysupport.netapp.com/documentation/productsatoz/index.html#F["FAS 系列文档"] 
+| AFF A50 
+
+
+| AFF A70 
+
+
+| AFF A90 
+
+
+| AFF A1K 
+
+
+.3+| AFF C 系列 | AFF C30 .3+| https://www.netapp.com/pdf.html?item=/media/81583-ds-4240-aff-c-series.pdf["AFF C-Series 数据手册"] 
+
+
+| AFF C60 
+
+
+| AFF C80 
+
+
+.7+| ASA | ASA A20 .7+| https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf["ASA 数据手册"] 
+
+
+| ASA A30 
+
+
+| ASA C30 
+
+
+| ASA A50 
+
+
+| ASA A70 
+
+
+| ASA A90 
+
+
+| ASA A1K 
+
+
+.5+| FAS | FAS2750 .5+| https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf["FAS 数据手册"] 
+
+
+| FAS2820 
+
+
+| FAS50 
+
+
+| FAS70 
+
+
+| FAS90 
+
+
+.2+| AFX | AFX 1K .2+| https://www.netapp.com/pdf.html?item=/media/142853-ds-3466-netapp-afx-datasheet.pdf["AFX 数据手册"] 
+
+
+| AFX 2K 
 |===
 
 
 [[cluster-interconnect-switch-options]]
 == 集群互连交换机选项
 
-下表列出了可用于 FlexPod 架构的 Nexus 集群互连交换机。此外， FlexPod 还支持所有 ONTAP 支持的集群交换机，包括非 Cisco 交换机，但前提是它们与要部署的 ONTAP 版本兼容。请参见 https://hwu.netapp.com/["NetApp Hardware Universe"^] 有关特定交换机型号的其他兼容性详细信息。
+下表列出了可用于 FlexPod 架构的 Nexus 集群互连交换机。FlexPod 支持所有 ONTAP 支持的集群交换机，包括非 Cisco 交换机，前提是它们与所部署的 ONTAP 版本兼容。
+
+有关支持的集群互连交换机的列表，请转到 https://hwu.netapp.com/["NetApp Hardware Universe"^]，单击 *产品 > 网络 > 交换机*，然后选择 *集群 InterConnect 交换机*。您可以按供应商类型进行筛选，选择一个交换机，然后单击 *显示结果* 以查看有关该交换机的详细信息。
+
+下表列出了可用作集群互连交换机的 Cisco 交换机。
 
 |===
-
-
 | 集群互连交换机 | 技术规格 
-
-
-| Cisco Nexus 3132Q-V | https://mysupport.netapp.com/documentation/docweb/index.html?productID=62377&language=en-US["NetApp 文档： Cisco Nexus 3132Q-V 交换机"] 
 
 
 | Cisco Nexus 9336C-x2 | https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2/configure-switch-overview-9336c-cluster.html["NetApp 文档： Cisco Nexus 9336C-x2 交换机"^] 
@@ -62,56 +124,66 @@ NetApp 存储控制器在 FlexPod 架构中为启动和应用程序数据存储�
 [[netapp-disk-shelf-and-drive-options]]
 == NetApp 磁盘架和驱动器选项
 
-所有存储控制器至少需要一个 NetApp 磁盘架。
-
-选定的 NetApp 磁盘架类型决定了该磁盘架中可用的驱动器类型。
+对于没有内置磁盘架的存储控制器，至少需要一个 NetApp 磁盘架。所选 NetApp 磁盘架类型决定了该磁盘架内可用的驱动器类型。
 
 
 NOTE: 有关所有磁盘架和磁盘部件号，请咨询您的销售代表。
 
-有关磁盘架和存储介质的详细信息，请参见下表中的"磁盘架和存储介质技术规格"链接。
+下表列出了 NetApp 磁盘架选项（适用于 FlexPod Datacenter），以及指向其技术规格的链接。
+
+要获取磁盘架支持的驱动器列表，请转到 link:https://hwu.netapp.com/["NetApp Hardware Universe"^]，在 *产品 > 存储 > 磁盘架* 下选择 *ONTAP (AFF, ASA, FAS) 或 ONTAP (AFX)*，选择您正在使用的 ONTAP 版本，然后选择磁盘架类型（例如：*DS212C*），并单击 *显示结果*。单击 *支持的驱动器* 以查看特定 ONTAP 版本和磁盘架所支持的驱动器。
 
 |===
 | 磁盘架 | 技术规格 
 
 
-| DS224C .4+| https://www.netapp.com/data-storage/disk-shelves-storage-media/["磁盘架和存储介质技术规格"] 
+| DS212C .6+| https://www.netapp.com/data-storage/disk-shelves-storage-media/["磁盘架和存储介质"] 
 
 
-| DS212C 
+| DS224C 
 
 
 | DS460C 
 
 
 | NS224 
+
+
+| NS224 搭配 NSM100B 
+
+
+| NX224 
 |===
 
 
 [[netapp-software-licensing-options]]
 == NetApp 软件许可选项
 
-下表列出了适用于 FlexPod 数据中心架构的 NetApp 软件许可选项。NetApp 软件在 FAS 和 AFF 控制器级别获得许可。
+下表列出了 NetApp 软件许可选项。
 
 |===
-| NetApp 软件许可 | 部件号 | 技术规格 
+| NetApp 软件许可 | 技术规格 
 
 
-| 软件，完整套件（控制器）， -C | SW-8XXX-COMP-BNDC-C .2+| http://mysupport.netapp.com/documentation/productsatoz/index.html["产品库 A-Z"] 
+| 适用于 AFF、FAS 和 AFX 的 ONTAP One .2+| 有关许可的详细信息，请咨询 NetApp 销售团队。 
 
 
-| 软件， ONTAP Essentials （控制器）， -C | SW-8XXX-ONTAP9-C 
+| ONTAP One for SAN for ASA 
 |===
+有关 NetApp 软件许可的详细信息，请参阅以下链接： https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html#licenses-included-with-ontap-one["NetApp 软件许可"^]。
+
 
 
 [[netapp-support-licensing-options]]
 == NetApp 支持许可选项
 
-FlexPod 架构需要 NetApp SupportEdge Premium 许可证，但这些许可证的部件号因您在 FlexPod 设计中选择的选项而异。例如，根据您选择的 FAS 控制器，软件许可证部件号会有所不同。有关各个支持许可证的确切部件号的信息，请咨询您的销售代表。下表显示了 SupportEdge 许可证的示例。
+SupportEdge Premium 许可证是必需的，这些许可证的部件号会根据 FlexPod Datacenter 设计中选择的选项而有所不同。
+
+下表列出了适用于 NetApp AFF、ASA、FAS 和 AFX 存储系统的 NetApp 支持许可选项。
 
 |===
-| NetApp 支持许可 | 部件号 | 技术规格 
+| NetApp 支持许可 | 技术规格 
 
 
-| SupportEdge Premium 现场 4 小时—月： 36 | CS-O2-4 小时 | https://www.netapp.com/pdf.html?item=/media/8745-supportedge-premium-product-description.pdf["NetApp SupportEdge Premium"^] 
+| NetApp SupportEdge | https://www.netapp.com/netapp-services/[] 
 |===
