@@ -44,7 +44,7 @@ summary: 要部署 Cloud Insights for FlexPod ，必须完成以下任务。
 . 启动 Web 浏览器并登录到 VMware vSphere ，然后选择要托管 VM 的集群。
 . 右键单击该集群，然后从菜单中选择创建虚拟机。
 +
-image:cloud-insights_image3.png[""]
+image:cloud-insights_image3.png["突出显示了\"新建虚拟机\"的 vSphere 上下文菜单（位于集群操作中）"]
 
 . 在新建虚拟机向导中，单击下一步。
 . 指定虚拟机的名称并选择要将其安装到的数据中心，然后单击下一步。
@@ -53,7 +53,7 @@ image:cloud-insights_image3.png[""]
 . 确认虚拟机的兼容模式已设置为 `ESXi 6.7 或更高版本` ，然后单击下一步。
 . 选择子操作系统系列 Linux ，子操作系统版本： Red Hat Enterprise Linux 7 （ 64 位）。
 +
-image:cloud-insights_image4.png[""]
+image:cloud-insights_image4.png["选择了 Linux 和 Red Hat Enterprise Linux 7（64 位）的\"选择来宾操作系统\"向导的屏幕截图"]
 
 . 下一页用于自定义虚拟机上的硬件资源。Cloud Insights 采集单元需要以下资源。选择资源后，单击下一步：
 +
@@ -63,7 +63,7 @@ image:cloud-insights_image4.png[""]
 .. 一种可通过端口 443 上的 SSL 连接访问 FlexPod 数据中心和 Cloud Insights 服务器中资源的网络。
 .. 要从中启动的选定 Linux 分发版（ Red Hat Enterprise Linux ）的 ISO 映像。
 +
-image:cloud-insights_image5.png[""]
+image:cloud-insights_image5.png["VMware 自定义硬件设置的屏幕截图，其中配置了 CPU、内存、磁盘、网络和 CD/DVD 驱动器"]
 
 
 
@@ -79,7 +79,7 @@ image:cloud-insights_image5.png[""]
 
 . 启动虚拟机，单击窗口以启动虚拟控制台，然后选择安装 Red Hat Enterprise Linux 7.6 选项。
 +
-image:cloud-insights_image6.png[""]
+image:cloud-insights_image6.png["已选择安装的 Red Hat Enterprise Linux 7.6 启动菜单的屏幕截图"]
 
 . 选择首选语言，然后单击 Continue 。
 +
@@ -90,14 +90,14 @@ image:cloud-insights_image6.png[""]
 .. 要自定义服务器的分区，请单击安装目标。
 .. 确认已选择具有黑色复选标记的 100 GiB VMware 虚拟磁盘，然后选择 I will Configure Partitioning 单选按钮。
 +
-image:cloud-insights_image7.png[""]
+image:cloud-insights_image7.png["显示选定 100 GiB VMware 虚拟磁盘和手动分区选项的屏幕截图"]
 
 .. 单击 Done 。
 +
 此时将显示一个新菜单，用于自定义分区表。每个为 ` /opt/NetApp` 和 ` /var/log/NetApp` 专用 25 GB 。您可以自动将其余存储分配给系统。
 
 +
-image:cloud-insights_image8.png[""]
+image:cloud-insights_image8.png["使用 25 GiB /opt/netapp 和 /var/log/netapp 卷进行 Red Hat Enterprise Linux 手动分区的屏幕截图"]
 
 .. 要返回到安装摘要，请单击完成。
 
@@ -107,7 +107,7 @@ image:cloud-insights_image8.png[""]
 .. 输入服务器的主机名。
 .. 单击滑块按钮打开网络适配器。如果在网络上配置了动态主机配置协议（ DHCP ），您将收到一个 IP 地址。如果不是，请单击配置，然后手动分配地址。
 +
-image:cloud-insights_image9.png[""]
+image:cloud-insights_image9.png["启用以太网并输入主机名的 Red Hat Enterprise Linux 网络和主机名屏幕的屏幕截图"]
 
 .. 。单击 Done 以返回到 Installation Summary 。
 
@@ -115,15 +115,15 @@ image:cloud-insights_image9.png[""]
 . 在安装摘要页面上，单击开始安装。
 . 在安装进度页面上，您可以设置 root 密码或创建本地用户帐户。安装完成后，单击重新启动以重新启动服务器。
 +
-image:cloud-insights_image10.png[""]
+image:cloud-insights_image10.png["带有\"重新启动\"按钮的 Red Hat Enterprise Linux 安装完成屏幕的屏幕截图"]
 
 . 系统重新启动后，登录到服务器并将其注册到 Red Hat 订阅管理器。
 +
-image:cloud-insights_image11.png[""]
+image:cloud-insights_image11.png["显示 Netapp-AU 系统成功注册 Red Hat Subscription Manager 的终端"]
 
 . 附加 Red Hat Enterprise Linux 的可用订阅。
 +
-image:cloud-insights_image12.png[""]
+image:cloud-insights_image12.png["显示 Red Hat Enterprise Linux 订阅成功附加的终端"]
 
 
 
@@ -136,32 +136,32 @@ image:cloud-insights_image12.png[""]
 
 . 从 Cloud Insights 的主页中，将鼠标悬停在主菜单左侧的 "Admin" 条目上，然后从菜单中选择 "Data Collectors" 。
 +
-image:cloud-insights_image13.png[""]
+image:cloud-insights_image13.png["显示\"管理\"菜单的屏幕截图，其中在 Cloud Insights 中选择了\"数据收集器\""]
 
 . 在数据收集器页面的顶部中间，单击采集单元的链接。
 +
-image:cloud-insights_image14.png[""]
+image:cloud-insights_image14.png["显示数据收集器和采集单元选项卡的屏幕截图，已选择采集单元"]
 
 . 要创建新的采集单元，请单击右侧的按钮。
 +
-image:cloud-insights_image15.png[""]
+image:cloud-insights_image15.png["显示\"添加采集单元\"按钮和\"筛选器\"字段的屏幕截图"]
 
 . 选择要用于托管采集单元的操作系统，然后按照以下步骤从网页复制安装脚本。
 +
 在此示例中，它是一个 Linux 服务器，提供一个代码片段和一个令牌，用于粘贴到主机的命令行界面中。此网页将等待采集单元连接。
 
 +
-image:cloud-insights_image16.png[""]
+image:cloud-insights_image16.png["显示 Cloud Insights Linux Acquisition Unit 安装说明和安装程序代码段的屏幕截图"]
 
 . 将此代码片段粘贴到已配置的 Red Hat Enterprise Linux 计算机的 CLI 中，然后单击 Enter 。
 +
-image:cloud-insights_image17.png[""]
+image:cloud-insights_image17.png["显示在 Linux 上安装 Cloud Insights 采集单元的令牌命令的终端窗口"]
 
 +
 安装程序会下载一个压缩的软件包并开始安装。安装完成后，您会收到一条消息，指出采集单元已注册到 NetApp Cloud Insights 中。
 
 +
-image:cloud-insights_image18.png[""]
+image:cloud-insights_image18.png["显示成功的 NetApp Cloud Insights 采集单元安装和注册的终端"]
 
 
 
@@ -174,24 +174,24 @@ image:cloud-insights_image18.png[""]
 
 . 返回到 Cloud Insights 门户上的 Acquisition Units 页面，找到列出的新注册的单元。要显示单元的摘要，请单击该单元。
 +
-image:cloud-insights_image19.png[""]
+image:cloud-insights_image19.png["显示 IP、OK 状态和上次报告时间的 NetApp-AU 采集单元摘要的屏幕截图"]
 
 . 要启动向导以添加存储系统，请在摘要页面上单击用于创建数据收集器的按钮。第一页显示可从中收集数据的所有系统。使用搜索栏搜索 ONTAP 。
 +
-image:cloud-insights_image20.png[""]
+image:cloud-insights_image20.png["在\"添加数据收集器\"页面上显示筛选的 ONTAP 数据收集器选项的屏幕截图"]
 
 . 选择 ONTAP 数据管理软件。
 +
 此时将显示一个页面，用于为部署命名并选择要使用的采集单元。您可以提供 ONTAP 系统的连接信息和凭据，并对连接进行测试以确认。
 
 +
-image:cloud-insights_image21.png[""]
+image:cloud-insights_image21.png["配置收集器页面的屏幕截图，其中包含经过验证的 ONTAP 凭据和采集单元设置"]
 
 . 单击 Complete Setup 。
 +
 此门户将返回到 " 数据收集器 " 页面，而数据收集器将开始首次轮询，以便从 FlexPod 数据中心的 ONTAP 存储系统收集数据。
 
 +
-image:cloud-insights_image22.png[""]
+image:cloud-insights_image22.png["显示 FlexPod Datacenter 轮询状态的 Cloud Insights 数据收集器行的屏幕截图"]
 
 

@@ -26,7 +26,7 @@ FlexPod 是一种最佳实践数据中心架构，其中包括 Cisco 统一计�
 
 下图显示了 FlexPod 组件系列。
 
-image:nvme-vsphere-image1.png[""]
+image:nvme-vsphere-image1.png["图表显示受支持产品系列的 FlexPod 存储、交换机和 Cisco UCS 组件系列"]
 
 FlexPod 是推出 FC-NVMe 的理想平台。支持此功能的方法包括：在现有 Cisco UCS B200 M5 或 M6 服务器或 Cisco UCS C 系列 M5 或 M6 机架式服务器中添加 Cisco UCS VIC 1400 系列和端口扩展器；以及简单，无中断地升级到 Cisco UCS 系统 Cisco MDS 32Gbps 交换机； 和 NetApp AFF 存储阵列。安装支持的硬件和软件后， FC-NVMe 的配置与 FCP 配置类似。
 

@@ -16,7 +16,7 @@ summary: 本节详细介绍了 Cisco Nexus 交换机 3172P A 和 B 以及 NetApp
 [role="lead"]
 下图显示了参考验证布线。
 
-image:express-c-series-aff220-deploy_image5.png[""]
+image:express-c-series-aff220-deploy_image5.png["显示 Cisco Nexus 交换机、Cisco UCS 服务器和 NetApp AFF A220 控制器（突出显示 10GbE 端口）的示意图"]
 
 下表显示了 Cisco Nexus 交换机 3172P A 的布线信息
 

@@ -39,15 +39,15 @@ Cloud Insights 已完全集成到 Digital Advisor 存储监控平台中。作为
 
 . 单击左侧管理菜单下的 Data Collector 选项。
 +
-image:cloud-insights_image13.png[""]
+image:cloud-insights_image13.png["显示\"管理\"菜单的屏幕截图，其中在 Cloud Insights 中选择了\"数据收集器\""]
 
 . 筛选环境中的特定 Data Collector 。在此示例中，我们按术语 FlexPod 进行筛选。
 +
-image:cloud-insights_image23.png[""]
+image:cloud-insights_image23.png["显示针对 FlexPod Datacenter 筛选的数据收集器页面的屏幕截图"]
 
 . 单击 Data Collector 以获取该收集器所监控的环境和设备的摘要。
 +
-image:cloud-insights_image24.png[""]
+image:cloud-insights_image24.png["FlexPod Datacenter 数据收集器摘要的屏幕截图，其中包含事件时间线和报告的存储设备"]
 
 +
 在底部附近的设备列表下，单击要监控的 ONTAP 存储系统的名称。此时将显示一个信息板，其中包含有关系统的信息，包括以下详细信息：
@@ -61,19 +61,19 @@ image:cloud-insights_image24.png[""]
 ** 平均延迟
 ** 平均吞吐量
 +
-image:cloud-insights_image25.png[""]
+image:cloud-insights_image25.png["aa14-a800 存储仪表板的屏幕截图，其中包含摘要、风险、用户数据和延迟图表"]
 
 +
 此外，在此页面的"性能策略"部分，您可以找到指向 NetApp Digital Advisor 的链接。
 
 +
-image:cloud-insights_image26.png[""]
+image:cloud-insights_image26.png["显示性能策略的屏幕截图，其中包含 Active IQ 检测到的 35 个风险和一个外部链接图标"]
 
 
 
 . 要打开新的浏览器选项卡并转到风险缓解页面（其中显示哪些节点受到影响、风险的严重程度以及需要采取哪些适当措施来纠正已识别的问题），请单击 Digital Advisor 的链接。
 +
-image:cloud-insights_image27.png[""]
+image:cloud-insights_image27.png["Active IQ Digital Advisor 列出存储系统的运行状况风险和纠正措施的屏幕截图"]
 
 
 
@@ -90,15 +90,15 @@ Cloud Insights 可以显示从 FlexPod Datacenter 解决方案中部署的 ONTAP
 
 在存储系统信息板中，您可以看到 Data Collector 上次更新信息的时间。下图显示了这方面的一个示例。
 
-image:cloud-insights_image28.png[""]
+image:cloud-insights_image28.png["Cloud Insights Data Collector 详细信息的屏幕截图，显示 3 分钟前下午 1:21 的成功采集"]
 
 默认情况下，存储系统信息板会在 "Expert View" 部分中显示多个交互式图形，这些图形显示所轮询的存储系统或每个节点的系统范围指标，包括：延迟， IOPS 和吞吐量。下图显示了这些默认图形的示例。
 
-image:cloud-insights_image29.png[""]
+image:cloud-insights_image29.png["具有延迟、IOPS 和吞吐量图形和资源详细信息的 Cloud Insights 专家视图的屏幕截图"]
 
 默认情况下，图形显示过去三小时的信息，但您可以将其设置为多个不同的值或存储系统信息板右上角下拉列表中的自定义值。如下图所示。
 
-image:cloud-insights_image30.png[""]
+image:cloud-insights_image30.png["存储控制面板的屏幕截图，时间范围下拉列表显示从\"过去 15 分钟\"到\"自定义\""]
 
 
 
@@ -115,21 +115,21 @@ image:cloud-insights_image30.png[""]
 
 . 要创建自定义信息板，请将鼠标悬停在 Cloud Insights 主菜单上的 Dashboards 上，然后单击下拉列表中的 + New Dashboard 。
 +
-image:cloud-insights_image31.png[""]
+image:cloud-insights_image31.png["突出显示 + New Dashboard 的 Cloud Insights 仪表板菜单的屏幕截图"]
 
 +
 此时将打开 "New Dashboard" 窗口。
 
 . 为信息板命名，然后选择用于显示数据的小工具类型。您可以从多种图形类型中选择，甚至可以从注释或表类型中选择以显示收集的数据。
 +
-image:cloud-insights_image32.png[""]
+image:cloud-insights_image32.png["新建仪表板小组件类型选择图块的屏幕截图，包括图表、仪表、备注和表格"]
 
 . 从添加变量菜单中选择自定义变量。
 +
 这样，所提供的数据就可以集中显示更具体或更专业的因素。
 
 +
-image:cloud-insights_image33.png[""]
+image:cloud-insights_image33.png["屏幕截图，在新仪表板上显示\"添加变量\"菜单，其中包含搜索字段和变量列表"]
 
 . 要创建自定义信息板，请选择要使用的小工具类型，例如饼图以按卷显示存储利用率：
 +
@@ -140,13 +140,13 @@ image:cloud-insights_image33.png[""]
 .. 自定义要显示的信息。默认情况下，此选项将显示 ONTAP 数据卷并列出排名前 10 位的卷。
 .. 要保存自定义信息板，请单击 Save 。
 +
-image:cloud-insights_image34.png[""]
+image:cloud-insights_image34.png["屏幕截图，显示为已用存储卷容量配置的已用容量饼图小部件"]
 
 +
 保存自定义小工具后，浏览器将返回到 " 新建信息板 " 页面，在此页面中显示新创建的小工具，并允许执行交互操作，例如修改数据轮询期。
 
 +
-image:cloud-insights_image35.png[""]
+image:cloud-insights_image35.png["显示带有已用容量饼图小部件的 Cloud Insights 仪表板的屏幕截图"]
 
 
 

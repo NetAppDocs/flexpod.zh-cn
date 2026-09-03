@@ -76,7 +76,7 @@ NOTE: 如果 ONTAP 检测到顺序读取的机会，则会在读取数据块之�
 
 下图所示的仅 Snapshot 分层策略将占用空间但未与活动文件系统共享块的 VM 的冷卷快照数据和 SnapCenter for vSphere 备份移动到云对象存储中。仅 Snapshot 分层策略会将冷数据块移至云层。如果需要还原，则云中的冷块会变热并移回内部的性能闪存层。
 
-image:cloud-fabricpool_image4.png[""]
+image:cloud-fabricpool_image4.png["显示仅快照分层将快照副本从主群集移动到云存储的示意图"]
 
 
 
@@ -90,7 +90,7 @@ image:cloud-fabricpool_image4.png[""]
 
 NOTE: 在将对象存储附加到 FabricPool 聚合之前，应使用对象存储配置器测试该对象存储的延迟和吞吐量。
 
-image:cloud-fabricpool_image5.png[""]
+image:cloud-fabricpool_image5.png["显示自动分层将非活动数据从主集群存储移动到云存储的图表"]
 
 
 

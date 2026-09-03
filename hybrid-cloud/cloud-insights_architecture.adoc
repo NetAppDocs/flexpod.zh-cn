@@ -68,7 +68,7 @@ FlexPod Datacenter 解决方案由以下最低组件组成，可提供高度可�
 
 下图显示了解决方案架构。
 
-image:cloud-insights_image2.png[""]
+image:cloud-insights_image2.png["显示通过网络链路互连的 Cisco UCS、Nexus 交换机、NetApp AFF A800 控制器和 MDS 交换机的示意图"]
 
 
 

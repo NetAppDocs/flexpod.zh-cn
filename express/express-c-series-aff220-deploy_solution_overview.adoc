@@ -30,7 +30,7 @@ FlexPod 参考架构以 Cisco 验证设计（ CVD ）或 NetApp 验证架构（ 
 * * FlexPod Select* 整合了 FlexPod 数据中心的最佳功能，并根据给定应用程序量身定制基础架构。
 
 
-image:express-c-series-aff220-deploy_image3.png[""]
+image:express-c-series-aff220-deploy_image3.png["比较 FlexPod Express、Datacenter 和 Select 解决方案、目标和基础架构组件的图表"]
 
 
 
@@ -56,7 +56,7 @@ image:express-c-series-aff220-deploy_image3.png[""]
 
 下图显示了采用 VMware vSphere 10GbE 架构的 FlexPod Express 。
 
-image:express-c-series-aff220-deploy_image4.png[""]
+image:express-c-series-aff220-deploy_image4.png["显示 Cisco Nexus 3172P 交换机、UCS C220 M5 服务器和 AFF A220 存储连接的图表"]
 
 
 NOTE: 此验证使用 10GbE 连接和一个 40GbE Cisco UCS VIC 1387 。要实现 10GbE 连接，请使用 CVR-QSFP-SFP10G 适配器。

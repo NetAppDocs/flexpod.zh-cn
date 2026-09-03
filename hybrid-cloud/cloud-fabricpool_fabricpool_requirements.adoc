@@ -90,7 +90,7 @@ FabricPool 读取延迟是与云层连接的函数。使用 10 Gbps 端口的集
 
 NOTE: 在低性能环境中使用 FabricPool 时，必须继续满足客户端应用程序的最低性能要求，并相应地调整恢复时间目标。
 
-image:cloud-fabricpool_image6.png[""]
+image:cloud-fabricpool_image6.png["显示两个 NetApp AFF A300 控制器将集群间 LIF 连接到 AWS S3 的示意图"]
 
 
 
@@ -114,7 +114,7 @@ storage aggregate object-store profiler show
 ....
 云层提供的性能与性能层上的性能不同（通常为 GB/ 秒）。虽然 FabricPool 聚合可以轻松提供类似于 SATA 的性能，但对于不需要类似 SATA 的性能的分层解决方案，它们还可以承受高达 10 秒的延迟和低吞吐量。
 
-image:cloud-fabricpool_image7.png[""]
+image:cloud-fabricpool_image7.png["ONTAP CLI 对象存储分析器结果的屏幕截图，显示 PUT 和 GET 延迟以及吞吐量"]
 
 
 

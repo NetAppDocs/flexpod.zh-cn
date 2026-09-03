@@ -45,7 +45,7 @@ FabricPool 支持将 Amazon S3 ， IBM 对象云存储和 Microsoft Azure Blob �
 . 单击保存并附加聚合。
 
 
-image:cloud-fabricpool_image13.png[""]
+image:cloud-fabricpool_image13.png["为 Amazon S3 云层提供程序配置的\"添加云层\"表单的屏幕截图"]
 
 
 

@@ -103,7 +103,7 @@ FlexPod 提供了医疗成像行业特有的多项优势：
 
 
 
-image:medical-imaging_image2.png[""]
+image:medical-imaging_image2.png["显示客户、Cisco 和 NetApp 之间 FlexPod 协同支持模型的图表"]
 
 
 

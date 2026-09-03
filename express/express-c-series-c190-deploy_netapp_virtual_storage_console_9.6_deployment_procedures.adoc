@@ -26,40 +26,40 @@ summary: 本节介绍 NetApp 虚拟存储控制台（ VSC ）的部署过程。
 . 转至 vSphere Web Client > 主机集群 > 部署 OVF 模板。
 . 浏览到从 NetApp 支持站点下载的 VSC OVF 文件。
 +
-image:express-c-series-c190-deploy_image49.png[""]
+image:express-c-series-c190-deploy_image49.png["vSphere Client 部署 OVF 模板的屏幕截图，其中在打开对话框中选择了 VSC OVF 文件"]
 
 . 输入 VM 名称并选择要部署的数据中心或文件夹。单击下一步。
 +
-image:express-c-series-c190-deploy_image50.png[""]
+image:express-c-series-c190-deploy_image50.png["选择了 VM 名称 FlexPod-VSC 和 FlexPod-Datacenter 的部署 OVF 模板向导的屏幕截图"]
 
 . 选择 FlexPod-Cluster ESXi 集群，然后单击下一步。
 . 查看详细信息，然后单击下一步。
 +
-image:express-c-series-c190-deploy_image51.png[""]
+image:express-c-series-c190-deploy_image51.png["显示部署 NetApp VSC 虚拟设备 OVF 模板的审核详细信息步骤的屏幕截图"]
 
 . 单击 Accept 以接受许可证，然后单击 Next 。
 . 选择精简配置虚拟磁盘格式和一个 NFS 数据存储库。单击下一步。
 +
-image:express-c-series-c190-deploy_image52.png[""]
+image:express-c-series-c190-deploy_image52.png["带有精简配置和 NFS 数据存储区的部署 OVF 模板选择存储页面的屏幕截图"]
 
 . 在 Select Networks 中，选择一个目标网络，然后单击 Next 。
 +
-image:express-c-series-c190-deploy_image53.png[""]
+image:express-c-series-c190-deploy_image53.png["Deploy OVF Template Select networks 步骤将 nat 映射到 MGMT-Network 的屏幕截图"]
 
 . 在自定义模板中，输入 VSC 管理员密码， vCenter 名称或 IP 地址以及其他配置详细信息，然后单击下一步。
 +
-image:express-c-series-c190-deploy_image54.png[""]
+image:express-c-series-c190-deploy_image54.png["包含 vCenter 注册字段和网络属性的部署 OVF 模板自定义模板页面的屏幕截图"]
 
 . 查看输入的配置详细信息，然后单击完成以完成 NetApp-VSC VM 的部署。
 . 启动 NetApp-VSC VM 并打开 VM 控制台。
 . 在 NetApp-VSC VM 启动过程中，您会看到安装 VMware Tools 的提示。在 vCenter 中，选择 NetApp-VSC VM > 子操作系统 > 安装 VMware Tools 。
 +
-image:express-c-series-c190-deploy_image55.png[""]
+image:express-c-series-c190-deploy_image55.png["显示在继续 VSC、VASA Provider 和 SRA 安装之前安装 VMware Tools 的说明的虚拟机控制台"]
 
 . 在 OVF 模板自定义期间提供了网络配置和 vCenter 注册信息。因此，在运行 NetApp-VSC 虚拟机后， VSC ， vSphere API for Storage Awareness （ VASA ）和 VMware Storage Replication Adapter （ SRA ）将注册到 vCenter 中。
 . 从 vCenter Client 中注销并重新登录。从主页菜单中，确认已安装 NetApp VSC 。
 +
-image:express-c-series-c190-deploy_image56.png[""]
+image:express-c-series-c190-deploy_image56.png["突出显示带有 Virtual Storage Console 的 vSphere 客户端菜单的屏幕截图"]
 
 
 
@@ -78,14 +78,14 @@ image:express-c-series-c190-deploy_image56.png[""]
 .. 从 vSphere Web Client 的主页屏幕中，选择 Virtual Storage Console 。
 .. 在 Virtual Storage Console > 设置 > NFS VAAI 工具下，选择选择选择文件并浏览到下载插件的存储位置，以上传 NFS 插件。
 +
-image:express-c-series-c190-deploy_image57.png[""]
+image:express-c-series-c190-deploy_image57.png["已选择 NetAppNasPlugin.vib 文件进行上传的 VSC NFS VAAI Tools 屏幕截图"]
 
 
 
 . 单击上传将此插件传输到 vCenter 。
 . 选择主机，然后选择 NetApp VSC > 安装适用于 VMware VAAI 的 NFS 插件。
 +
-image:express-c-series-c190-deploy_image58.png[""]
+image:express-c-series-c190-deploy_image58.png["显示选定安装适用于 VMware VAAI 的 NFS 插件的 NetApp VSC 菜单的屏幕截图"]
 
 
 
@@ -98,14 +98,14 @@ VSC 可为连接到 NetApp 存储控制器的所有 ESXi 主机自动配置与�
 
 . 在主页屏幕中，选择 vCenter > 主机和集群。对于每个 ESXi 主机，右键单击并选择 NetApp VSC > 设置建议值。
 +
-image:express-c-series-c190-deploy_image59.png[""]
+image:express-c-series-c190-deploy_image59.png["vSphere Client 主机 Actions 菜单的屏幕截图，其中已选择 NetApp VSC Set Recommended Values"]
 
 . 检查要应用于选定 vSphere 主机的设置。单击确定以应用设置。
 +
-image:express-c-series-c190-deploy_image60.png[""]
+image:express-c-series-c190-deploy_image60.png["带有选定 HBA/CNA 适配器、MPIO 和 NFS 设置的\"设置推荐值\"对话框"]
 
 +
-image:express-c-series-c190-deploy_image61.png[""]
+image:express-c-series-c190-deploy_image61.png["成功发现存储系统后，会显示\"成功\"对话框，说明已修改的 ESXi 主机设置"]
 
 . 应用这些设置后，重新启动 ESXi 主机。
 

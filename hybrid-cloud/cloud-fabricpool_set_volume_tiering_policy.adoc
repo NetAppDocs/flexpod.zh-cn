@@ -53,7 +53,7 @@ summary:
 . 选择要应用于卷的分层策略。
 . 单击保存。
 +
-image:cloud-fabricpool_image16.png[""]
+image:cloud-fabricpool_image16.png["显示\"更改卷分层策略\"对话框的屏幕截图，其中展开了分层策略选项"]
 
 
 
