@@ -18,9 +18,12 @@ summary: 各种 Cisco Nexus 产品可以用作给定 FlexPod 部署的交换组�
 
 Cisco 在软件定义网络领域的产品被称为以应用为中心的基础设施 (ACI)。支持 ACI 模式（交换矩阵模式）的 Cisco Nexus 产品线也可以部署在 NX-OS 模式下。
 
+
+NOTE: 并非所有 Cisco Nexus 交换机都支持 ACI 模式。确保您要部署的特定型号符合您的运营要求。
+
 Cisco ACI 的目标部署对象是侧重于特定应用程序要求的数据中心部署。应用程序通过一系列配置文件和合同进行实例化，这些配置文件和合同允许从主机或虚拟机（ VM ）一直通过网络连接到存储。
 
-FlexPod Datacenter 已通过 Cisco Nexus 交换机的两种运行模式验证。有关 ACI 和 NX-OS 模式的详细信息，请参见以下 Cisco 页面：
+FlexPod Datacenter 已通过在 NX-OS 模式和 ACI 模式下运行的 Cisco Nexus 交换机的验证。客户可以选择最适合其网络架构、运营模式和自动化要求的运营模式。有关 ACI 和 NX-OS 模式的详细信息，请参见以下 Cisco 页面：
 
 * http://www.cisco.com/c/en/us/solutions/data-center-virtualization/application-centric-infrastructure/index.html["Cisco 以应用程序为中心的基础架构"^]
 * https://www.cisco.com/site/us/en/products/networking/cloud-networking/nx-os/index.html["Cisco NX-OS 软件"^]

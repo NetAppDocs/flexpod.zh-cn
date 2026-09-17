@@ -25,12 +25,12 @@ FlexPod 配置具有以下最低硬件要求：
 NOTE: 如果要部署 ACI 架构，则必须遵守以下附加要求： * 在叶脊拓扑中部署 Cisco Nexus 9000 系列交换机。* 使用三个 Cisco Application Policy Infrastructure Controller (APIC)。
 
 * 两个冗余配置的 Cisco UCS 6400、6500 或 6600 系列 Fabric Interconnect（如果使用 UCS C-Series 机架式服务器或 X-Series 模块化系统）。
-* 两个具有 FI 连接的 Cisco UCS C-Series 机架式服务器（采用 Intersight 管理的配置 (IMM)），或 Cisco UCS X-Series Direct（采用 Cisco IMM），或 Cisco UCS X-Series Modular（采用 Cisco Intersight 管理的配置 (IMM)）。
+* 两个具有 FI 连接的 Cisco UCS C-Series 机架式服务器（采用 Intersight Managed Mode 配置 (IMM)）、Cisco UCS X-Series Direct（采用 Cisco IMM）或 Cisco UCS X-Series Modular（采用 Cisco IMM）。
 
 
 
-NOTE: 如果使用的是没有 FI 连接的 UCS 机架服务器，则可以使用 CIMC 或 Intersight 独立模式进行管理。
+NOTE: 如果使用的是没有 FI 连接的 UCS 机架服务器，则可以使用 CIMC 或 Intersight 独立模式进行管理 (ISM)。
 
-* 两个 NetApp AFF、NetApp ASA 或 NetApp FAS 控制器以高可用性 (HA) 对配置部署为双节点集群。如果使用 NetApp AFX，则至少需要四个 NetApp AFX 控制器，并将与一对集群互连交换机一起部署为四节点 HA 集群。
+* 在高可用性 (HA) 对配置中，两个 NetApp AFF、NetApp ASA 或 NetApp FAS 控制器部署为双节点集群。如果使用 NetApp AFX，则至少需要四个 NetApp AFX 控制器，并且必须部署为具有 2 个 HA 对以及一对集群互连交换机的四节点集群。
 * 对于没有内置磁盘架的存储控制器，至少需要一个 NetApp 磁盘架。
 

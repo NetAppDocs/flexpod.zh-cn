@@ -232,7 +232,7 @@ Cisco UCS C 系列机架式服务器提供 1 个、2 个和 4 个机架单元 (R
 [[cisco-apic-options]]
 == Cisco APIC 选项
 
-Cisco APIC是Cisco ACI的主要架构组件。它是Cisco ACI交换矩阵自动化和管理的统一点。
+Cisco APIC 是 Cisco ACI 的主要架构组件。它为 Cisco ACI 交换矩阵提供集中管理、策略控制和自动化。
 
 有关 APIC 产品规格的详细信息，请参阅 https://www.cisco.com/c/en/us/products/collateral/cloud-systems-management/application-policy-infrastructure-controller-apic/datasheet-c78-739715.html["Cisco Application Policy Infrastructure Controller 产品规格"^]上的表 1 至表 3。
 

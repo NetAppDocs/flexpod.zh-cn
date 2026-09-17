@@ -174,16 +174,11 @@ Cisco UCS C 系列机架式服务器有 1 个、2 个和 4 个机架单元 (RU) 
 [[cisco-support-licensing-options]]
 == Cisco 支持许可选项
 
-在 FlexPod Express 架构中的所有 Cisco 设备都需要有效的 TSANet 支持合同。
 
+NOTE: 建议在订购之前与您的 Cisco 或 NetApp 销售代表确认许可要求。
 
-NOTE: 所需的许可证和相应的部件号可能因产品和配置而异。建议在订购之前与您的 Cisco 或 NetApp 销售代表确认许可要求。
+link:https://www.cisco.com/c/dam/en_us/about/doing_business/legal/service_descriptions/docs/solution-support-smart-total-care.pdf["Cisco 解决方案支持"^] 是适用于 Cisco 解决方案的技术支持服务，该解决方案仅包含来自 Cisco 或来自 Cisco 及解决方案支持联盟合作伙伴的硬件和软件，且完全由 Cisco 产品及第三方供应商（解决方案支持联盟合作伙伴）提供的产品组成。
 
-下表列出了 Cisco 支持许可选项。
+Cisco 通过其 link:https://www.cisco.com/c/en/us/support/web/tac/technical-services-resource-guide.html["技术支持中心"] 支持复杂的客户环境。Cisco Solution Support 授权客户访问 TAC 工程师团队，为解决方案中发现的问题提供主要联系人，并为构成解决方案的硬件和软件提供产品支持。
 
-|===
-| Cisco 支持许可 | 许可证指南 
-
-
-| TSANet | https://www.tsanet.org/cisco-tsanet-case-study/[] 
-|===
+Cisco 利用 link:https://www.tsanet.org/cisco-tsanet-case-study/["TSANet合作伙伴计划"^] 框架将解决方案支持合作伙伴引入 TSANet Connect 系统上的专用组。TSANet Connect 为支持工程师提供了与合作伙伴技术团队协作的统一方法，确保高效沟通并加快问题解决，同时避免因与合作伙伴进行非正式协作而产生的阻力。
