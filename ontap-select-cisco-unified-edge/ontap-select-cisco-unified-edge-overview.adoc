@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: ontap-select-cisco-unified-edge/ontap-select-cisco-unified-edge-overview.html 
+keywords: ontap select, cisco unified edge, overview, flexpod 
+summary: ONTAP Select 在 Cisco Unified Edge 计算节点上作为虚拟机运行，为边缘站点提供整合的单控制器存储架构，客户必须围绕此架构进行运营规划。 
+---
+= 在 Cisco Unified Edge 上部署 ONTAP Select
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+作为专用 NetApp 设备的软件定义存储替代方案，ONTAP Select 在受支持的虚拟机管理程序（KVM 或 VMware vSphere）上作为虚拟机运行，并使用本地连接的存储来提供 NAS 和 SAN 服务。ONTAP Select 非常适合远程办公室、后台办公地点、专门构建的边缘部署、移动环境以及客户需要完整的 ONTAP 数据服务功能的其他场景。
+
+
+NOTE: Cisco Unified Edge 上的 ONTAP Select (OTS) 部署为无高可用性 (HA) 的单节点实例。
+
+当 ONTAP Select 和 Cisco Unified Edge 一起部署时，会创建一个整合的边缘架构。经过存储优化的计算节点提供本地 NVMe 介质。虚拟机监控程序向 ONTAP Select 虚拟机提供适当的资源。然后，ONTAP Select 将本地介质整理为 ONTAP 聚合和卷，并将存储公开给在同一机箱或边缘站点其他位置本地运行的应用程序工作负载。这种设计使数据靠近应用程序，减少了日常运营对 WAN 连接的依赖，并与集中管理和数据保护实践保持一致。
+
+image::ots-on-cue.png[基于 Cisco Unified Edge 架构的 ONTAP Select]
+
+XE130c 和 XE150c 计算节点中的四驱动器限制以及对软件 RAID 的依赖，将 ONTAP Select 部署限制为单控制器架构。与具有控制器故障转移的多节点存储架构不同，单个存储控制器无法在不影响其托管的本地存储服务的情况下脱机进行控制器级维护。
+
+这种限制并不能消除架构的价值，但必须反映在运营模型中。合适的工作负载是那些可以容忍计划内存储中断、依赖于应用程序级别弹性或使用复制到中央 ONTAP 环境来进行恢复的工作负载。客户应定义维护日历，与应用程序所有者沟通服务窗口，在中断工作之前验证当前备份或副本，并记录回滚过程。如果工作负载在控制器维护期间需要持续的存储可用性，客户应评估外部 ONTAP 存储阵列，而不是单控制器 ONTAP Select 配置。

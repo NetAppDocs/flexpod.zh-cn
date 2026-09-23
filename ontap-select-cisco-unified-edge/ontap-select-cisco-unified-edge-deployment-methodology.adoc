@@ -1,0 +1,56 @@
+---
+sidebar: sidebar 
+permalink: ontap-select-cisco-unified-edge/ontap-select-cisco-unified-edge-deployment-methodology.html 
+keywords: ontap select, cisco unified edge, deployment, methodology, flexpod 
+summary: 介绍在 Cisco Unified Edge 上授权、调整大小、配置本地存储和部署 ONTAP Select 的高级步骤。 
+---
+= 高级别部署方法
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+本节介绍在 Cisco Unified Edge 上授权、调整大小、配置本地存储和部署 ONTAP Select 的高级步骤。
+
+
+
+[[1-ontap-select-licensing]]
+== 1.ONTAP Select 许可
+
+使用 NVMe 驱动器时需要高级 XL 许可证。客户可以在多个站点之间共享容量的灵活容量池许可证和与特定节点关联的永久许可证之间进行选择。有关其他详细信息，请参阅 link:https://docs.netapp.com/us-en/ontap-select/concept_lic_workflow.html["ONTAP Select 的许可证购买工作流"]。
+
+
+
+[[2-obtain-ontap-select-deploy-software]]
+== 2.获取 ONTAP Select Deploy 软件
+
+ONTAP Select Deploy是用于部署和管理ONTAP Select集群的管理实用程序。Deploy打包为Linux虚拟机，在创建ONTAP Select集群之前必须安装该虚拟机。它可以从link:https://stackautomation.cisco.com/["Cisco Stack Automation"]安装，也可以作为.ova文件从link:https://mysupport.netapp.com/site/["NetApp 支持站点"]下载。
+
+
+
+[[3-choose-ontap-select-virtual-machine-size]]
+== 3.选择 ONTAP Select 虚拟机大小
+
+具有 Premium XL 许可证的 ONTAP Select 可部署为小型、中型或大型虚拟机实例规格，以满足存储性能要求。具有 12 核的 XE130c 或 XE150c 计算节点可支持小型或中型实例规格，而大型实例则需要 20 核或 32 核节点。有关实例规格要求的更多详细信息，请参阅 link:https://docs.netapp.com/us-en/ontap-select/reference_plan_ots_hardware.html#basic-hardware-requirements["ONTAP Select VMware 虚拟机管理程序和硬件注意事项"]。
+
+
+
+[[4-prepare-local-storage]]
+== 4.准备本地存储
+
+VMDirectPath I/O Pass-through 用于 NVMe 驱动器，以最大限度地提高效率。此设置将驱动器公开给虚拟机，允许 ONTAP 直接通过 PCI 访问设备。有关启用 NVMe 直通的详细信息，请参阅 link:https://docs.netapp.com/us-en/ontap-select/task_chk_nvme_configure.html["配置 ONTAP Select 主机以使用 NVMe 驱动器"]。
+
+四个 NVMe 驱动器中的一个用作系统磁盘，其中包含虚拟机的引导驱动器、核心和 NVRAM。其余三个驱动器配置为带有软件 RAID 4 的数据磁盘，以提供针对单个驱动器故障的基于奇偶校验的保护。每个数据磁盘分为三个分区：一个小的根分区和两个大小相等的分区，以在 ONTAP Select VM 中创建两个数据磁盘。有关更多详细信息，请参见 link:https://docs.netapp.com/us-en/ontap-select/concept_stor_swraid_local.html#ontap-select-virtual-and-physical-disks["ONTAP Select 软件 RAID 配置服务，适用于本地连接存储"]。
+
+系统磁盘可以具有比三个数据磁盘更低的存储容量，以降低解决方案的整体存储成本。1.6TB 高性能、高耐用驱动器（UCSXE-NVE11T6K1P）就足够了。
+
+
+
+[[5-deploy-the-ontap-select-instance]]
+== 5.部署 ONTAP Select 实例
+
+ONTAP Select 使用 ONTAP Select Deploy 工具和支持的虚拟机监控程序环境部署为虚拟机。在部署期间，管理员定义节点、管理接口、数据接口、容量和本地磁盘分配。ONTAP Select 运行后，管理员应为本地应用程序创建卷或 LUN，并应用适当的策略、共享、启动器组或访问控制。

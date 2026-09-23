@@ -8533,4 +8533,36 @@
   <block id="9c993b5399e0b299f8d4fda9189abc07" category="paragraph">FlexPod 是运行各种虚拟化虚拟机管理程序、裸机操作系统、容器化环境和企业工作负载的合适平台。FlexPod 不仅提供基线配置，还提供调整大小和优化的灵活性，以适应许多不同的用例和要求。</block>
   <block id="d5e1cab3b696c4ba2161ebea35fa9845" category="admonition">在订购完整的 FlexPod 配置之前，请参阅<block ref="01a8b28afe6f20d4d467302d134f4834" category="inline-link-rx"></block>以了解这些技术规范的最新版本。</block>
   <block id="1ad199a581d2eb361813f1776cba7be5" category="paragraph">Cisco 利用 <block ref="a5c1c71f566a8ac6352d6e7587da6b34" category="inline-link-macro-rx"></block> 框架将解决方案支持合作伙伴引入 TSANet Connect 系统上的专用组。TSANet Connect 为支持工程师提供了与合作伙伴技术团队协作的统一方法，确保高效沟通并加快问题解决，同时避免因与合作伙伴进行非正式协作而产生的阻力。</block>
+  <block id="ac160005b4146a9e011651ec3a709cec" category="summary">FlexPod Edge 结合了 Cisco Unified Edge 和 ONTAP Select，可在边缘的单个紧凑机箱内提供软件定义的存储和企业数据服务。</block>
+  <block id="520a09c08e9f227a98ce2906aba8604d" category="paragraph">将 FlexPod Edge 与软件定义的存储一起部署，为客户提供了在边缘获得企业数据服务的实用途径。该架构将 Cisco 的紧凑型集中管理统一边缘平台与 ONTAP 的成熟数据服务相结合，在单个机箱内实现软件定义的存储，可支持创建和操作数据的本地工作负载。</block>
+  <block id="6ea21c0b9b9c3ef3513ab31de7e8d2ab" category="summary">介绍在 Cisco Unified Edge 上授权、调整大小、配置本地存储和部署 ONTAP Select 的高级步骤。</block>
+  <block id="ca590d60df44b33ab2aa27dfe5ad3db3" category="doc">高级别部署方法</block>
+  <block id="41678c39511d2675d70ad5b48ac4b0e1" category="paragraph">本节介绍在 Cisco Unified Edge 上授权、调整大小、配置本地存储和部署 ONTAP Select 的高级步骤。</block>
+  <block id="f103221e4d3926cf9e46c324c3c92310" category="section-title">1.ONTAP Select 许可</block>
+  <block id="0e487a9412079574703cbaef01b17f23" category="inline-link-macro">ONTAP Select 的许可证购买工作流</block>
+  <block id="600ca4b218e0a4042cb3590ad01f78aa" category="paragraph">使用 NVMe 驱动器时需要高级 XL 许可证。客户可以在多个站点之间共享容量的灵活容量池许可证和与特定节点关联的永久许可证之间进行选择。有关其他详细信息，请参阅 <block ref="1c48994c780a93246650a6b64924120d" category="inline-link-macro-rx"></block>。</block>
+  <block id="8287dbfe630d42026dd532c42dd095f6" category="section-title">2.获取 ONTAP Select Deploy 软件</block>
+  <block id="7965a12384fe9210645dc0ac67ea2881" category="inline-link-macro">Cisco Stack Automation</block>
+  <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link-macro">NetApp 支持站点</block>
+  <block id="58e9599640efc3646878364b92c5aff3" category="paragraph">ONTAP Select Deploy是用于部署和管理ONTAP Select集群的管理实用程序。Deploy打包为Linux虚拟机，在创建ONTAP Select集群之前必须安装该虚拟机。它可以从<block ref="12941e09a3869c5d515e09c11799ad88" category="inline-link-macro-rx"></block>安装，也可以作为.ova文件从<block ref="4c9a7e2bcab70fb704d0c3d735152a7d" category="inline-link-macro-rx"></block>下载。</block>
+  <block id="6c373f3d21051029360086e1d6018248" category="section-title">3.选择 ONTAP Select 虚拟机大小</block>
+  <block id="48a12050df5598419d91adabdefe2dfc" category="inline-link-macro">ONTAP Select VMware 虚拟机管理程序和硬件注意事项</block>
+  <block id="a267bc8486514f2cb3a9b58549ef518b" category="paragraph">具有 Premium XL 许可证的 ONTAP Select 可部署为小型、中型或大型虚拟机实例规格，以满足存储性能要求。具有 12 核的 XE130c 或 XE150c 计算节点可支持小型或中型实例规格，而大型实例则需要 20 核或 32 核节点。有关实例规格要求的更多详细信息，请参阅 <block ref="791bc58cc21dc5119656e3ae5588768e" category="inline-link-macro-rx"></block>。</block>
+  <block id="fbee015467fa3f90dba2961f0ab2bfc0" category="section-title">4.准备本地存储</block>
+  <block id="59ac0a318fbbcf7e80be836166e1fb06" category="inline-link-macro">配置 ONTAP Select 主机以使用 NVMe 驱动器</block>
+  <block id="7dcde9f3dc53c015118101eae08e0332" category="paragraph">VMDirectPath I/O Pass-through 用于 NVMe 驱动器，以最大限度地提高效率。此设置将驱动器公开给虚拟机，允许 ONTAP 直接通过 PCI 访问设备。有关启用 NVMe 直通的详细信息，请参阅 <block ref="1f05118fc6a48bbd5400409f7d309111" category="inline-link-macro-rx"></block>。</block>
+  <block id="07c6a664d186f44a90042e2245e46aad" category="inline-link-macro">ONTAP Select 软件 RAID 配置服务，适用于本地连接存储</block>
+  <block id="1ebb10405f89ac51639a6de1322d3418" category="paragraph">四个 NVMe 驱动器中的一个用作系统磁盘，其中包含虚拟机的引导驱动器、核心和 NVRAM。其余三个驱动器配置为带有软件 RAID 4 的数据磁盘，以提供针对单个驱动器故障的基于奇偶校验的保护。每个数据磁盘分为三个分区：一个小的根分区和两个大小相等的分区，以在 ONTAP Select VM 中创建两个数据磁盘。有关更多详细信息，请参见 <block ref="067c49b1795adc5e4fa05f3318ed6a3d" category="inline-link-macro-rx"></block>。</block>
+  <block id="8f3c8b6aba8922e81dc7fecb8e76c2ee" category="paragraph">系统磁盘可以具有比三个数据磁盘更低的存储容量，以降低解决方案的整体存储成本。1.6TB 高性能、高耐用驱动器（UCSXE-NVE11T6K1P）就足够了。</block>
+  <block id="42d06eaa8c7282a504530491a535f26d" category="section-title">5.部署 ONTAP Select 实例</block>
+  <block id="74b58bb937ec23039dc809d021b5555b" category="paragraph">ONTAP Select 使用 ONTAP Select Deploy 工具和支持的虚拟机监控程序环境部署为虚拟机。在部署期间，管理员定义节点、管理接口、数据接口、容量和本地磁盘分配。ONTAP Select 运行后，管理员应为本地应用程序创建卷或 LUN，并应用适当的策略、共享、启动器组或访问控制。</block>
+  <block id="90791123e23d99cfcb5eeb2f48ce6186" category="summary">ONTAP Select 在 Cisco Unified Edge 计算节点上作为虚拟机运行，为边缘站点提供整合的单控制器存储架构，客户必须围绕此架构进行运营规划。</block>
+  <block id="c020b792015246a23fe39487bbacc650" category="doc">在 Cisco Unified Edge 上部署 ONTAP Select</block>
+  <block id="f3a9e7c9fae63b5626718b14e431733d" category="paragraph">作为专用 NetApp 设备的软件定义存储替代方案，ONTAP Select 在受支持的虚拟机管理程序（KVM 或 VMware vSphere）上作为虚拟机运行，并使用本地连接的存储来提供 NAS 和 SAN 服务。ONTAP Select 非常适合远程办公室、后台办公地点、专门构建的边缘部署、移动环境以及客户需要完整的 ONTAP 数据服务功能的其他场景。</block>
+  <block id="e1590923c235ea62df312ed92237cac4" category="admonition">Cisco Unified Edge 上的 ONTAP Select (OTS) 部署为无高可用性 (HA) 的单节点实例。</block>
+  <block id="a7c242367893364170cf24fb7563111f" category="paragraph">当 ONTAP Select 和 Cisco Unified Edge 一起部署时，会创建一个整合的边缘架构。经过存储优化的计算节点提供本地 NVMe 介质。虚拟机监控程序向 ONTAP Select 虚拟机提供适当的资源。然后，ONTAP Select 将本地介质整理为 ONTAP 聚合和卷，并将存储公开给在同一机箱或边缘站点其他位置本地运行的应用程序工作负载。这种设计使数据靠近应用程序，减少了日常运营对 WAN 连接的依赖，并与集中管理和数据保护实践保持一致。</block>
+  <block id="73c3b15e547a25bfd9e113a3cd125dd7" category="image-alt">基于 Cisco Unified Edge 架构的 ONTAP Select</block>
+  <block id="f3f262e890d15106f03ef390bf2977d6" category="paragraph">XE130c 和 XE150c 计算节点中的四驱动器限制以及对软件 RAID 的依赖，将 ONTAP Select 部署限制为单控制器架构。与具有控制器故障转移的多节点存储架构不同，单个存储控制器无法在不影响其托管的本地存储服务的情况下脱机进行控制器级维护。</block>
+  <block id="090f6553626b1e67379b39fa8c32a7e1" category="paragraph">这种限制并不能消除架构的价值，但必须反映在运营模型中。合适的工作负载是那些可以容忍计划内存储中断、依赖于应用程序级别弹性或使用复制到中央 ONTAP 环境来进行恢复的工作负载。客户应定义维护日历，与应用程序所有者沟通服务窗口，在中断工作之前验证当前备份或副本，并记录回滚过程。如果工作负载在控制器维护期间需要持续的存储可用性，客户应评估外部 ONTAP 存储阵列，而不是单控制器 ONTAP Select 配置。</block>
+  <block id="952538e1301be0b79740f458942b061f" category="sidebar">Cisco Unified Edge 上的 ONTAP Select</block>
 </blocks>
