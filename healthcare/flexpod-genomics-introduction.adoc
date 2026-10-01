@@ -37,7 +37,7 @@ NetApp 公司 JayaKishore Esanakula
 
 对于医生来说，基因组学的真正价值包括精准医学和基于患者基因组数据的个性化治疗计划。过去临床医生和数据科学家之间从未有过这样的协同作用，基因组学也从最近的技术创新以及医疗保健组织与行业技术领导者之间的真正合作中受益。
 
-学术医疗中心和其他医疗保健和生命科学组织正在努力建立基因组科学卓越中心（ Center of excellence ， COE ）。据Charlie Gersbach 博士Greg Crawford 和Duke 大学的 Tim E Reddy 说： " 我们知道，基因不是通过简单的二进制开关打开或关闭的，而是由多个协同工作的基因监管开关造成的。" 他们还确定 " 基因组的这些部分都不是孤立地工作的。基因组是一个非常复杂的网络，它是进化所交织的 " （ https://genome.duke.edu/news/thu-09242020-1054/multimillion-dollar-nih-grant-creates-first-duke-center-excellence-genome["ref"^]）。
+学术医疗中心和其他医疗保健和生命科学组织正在建立基因组科学卓越中心（COE）。根据杜克大学的 Charlie Gersbach 博士、Greg Crawford 博士和 Tim E Reddy 博士的说法，"我们知道基因不是通过简单的二进制开关打开或关闭的，而是多个基因调控开关共同作用的结果。"他们还确定"基因组的这些部分中没有一个是孤立工作的。基因组是进化编织而成的一张极为复杂的网络"（ https://biostat.duke.edu/blog/multimillion-dollar-nih-grant-creates-first-duke-cegs["ref"^]）。
 
 10 多年来， NetApp 和 Cisco 一直在努力逐步改进 FlexPod 平台。所有客户反馈都会得到倾听，评估，并与 FlexPod 中的价值流和功能集相关联。正是这一持续的反馈，协作，改进和庆祝活动循环让 FlexPod 在全球范围内成为值得信赖的融合基础架构平台。它经过全面简化和设计，成为医疗保健组织最可靠，最强大，最灵活的平台。
 

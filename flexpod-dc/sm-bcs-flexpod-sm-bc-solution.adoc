@@ -174,7 +174,7 @@ image:sm-bcs-image11.png["显示 NetApp AFF 和 ASA 控制器以及 DS 224C/2246
 | AFF 系列 | link:https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62247["AFF 系列文档"^] 
 
 
-| ASA 系列 | link:https://docs.netapp.com/allsan/index.jsp["ASA 系列文档"^] 
+| ASA r2 系统 | link:https://docs.netapp.com/us-en/ontap-systems/asa-r2/index.html["ASA r2 系统文档"^] 
 |===
 请参见 https://www.netapp.com/data-storage/disk-shelves-storage-media/["NetApp 磁盘架和存储介质文档"^] 和 https://hwu.netapp.com/["NetApp Hardware Universe"^] 有关每个存储控制器型号的磁盘架和支持的磁盘架的详细信息。
 
