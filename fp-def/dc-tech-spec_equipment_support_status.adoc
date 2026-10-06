@@ -10,7 +10,7 @@ summary: 本节介绍如何验证 Cisco 和 NetApp 组件的设备支持状态�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

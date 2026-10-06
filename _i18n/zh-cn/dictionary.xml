@@ -53,7 +53,6 @@
   <block id="0a10ffb3d8f2b29b2aed44120c4b52ee" category="cell">NS224</block>
   <block id="391fe0d4864f4c09c2d64335983c2f05" category="section-title">NetApp 软件许可选项</block>
   <block id="b8d29742df41ef40fca1e44a7b490835" category="cell">部件号</block>
-  <block id="767945ca8f676ff25ce389fce1df6c41" category="summary">Cisco 为 FlexPod 快速设计和架构做出了重大贡献；它为解决方案的计算和网络层做出了贡献。</block>
   <block id="db9522af2119f167ded30369ddb56248" category="doc">Cisco 组件</block>
   <block id="ae19f05a830d151c2615c3f564dbf6e4" category="paragraph">Cisco 为 FlexPod 快速设计和架构做出了重大贡献；它为解决方案的计算和网络层做出了贡献。本节介绍可用于 FlexPod Express 的 Cisco UCS 和 Cisco Nexus 组件。</block>
   <block id="0adca13cab777a69d4b054794aadc650" category="section-title">Cisco UCS C 系列机架式服务器选项</block>
@@ -8564,4 +8563,6 @@
   <block id="22d05c38a6e8032e35e9ff8d6b826ee0" category="inline-link-macro">ASA r2 系统文档</block>
   <block id="5a043bdfd29a9c2a632078901fc0d525" category="cell"><block ref="5a043bdfd29a9c2a632078901fc0d525" category="inline-link-macro-rx"></block></block>
   <block id="a04fde0f303f9cefcbd34e8be1810d1e" category="paragraph">学术医疗中心和其他医疗保健和生命科学组织正在建立基因组科学卓越中心（COE）。根据杜克大学的 Charlie Gersbach 博士、Greg Crawford 博士和 Tim E Reddy 博士的说法，"我们知道基因不是通过简单的二进制开关打开或关闭的，而是多个基因调控开关共同作用的结果。"他们还确定"基因组的这些部分中没有一个是孤立工作的。基因组是进化编织而成的一张极为复杂的网络"（<block ref="7e5e4c153f3bad20a8e4230a913e554e" category="inline-link-rx"></block>）。</block>
+  <block id="a9100704d09dc0243e72fa3e969a3376" category="doc">部署过程概述</block>
+  <block id="c94f9bfe6b4fcd272eb296a929c3be2f" category="summary">Cisco 提供 FlexPod Express 设计和架构的计算和网络层，包括 UCS 服务器和 Nexus 交换机。</block>
 </blocks>

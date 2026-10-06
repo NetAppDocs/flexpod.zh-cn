@@ -10,7 +10,7 @@ summary: FlexPod Datacenter 的自动部署可通过 GitHub 存储库获得，�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

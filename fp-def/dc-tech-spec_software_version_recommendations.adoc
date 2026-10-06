@@ -10,7 +10,7 @@ summary: 以下信息描述了 FlexPod 配置的软件版本建议。
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]
