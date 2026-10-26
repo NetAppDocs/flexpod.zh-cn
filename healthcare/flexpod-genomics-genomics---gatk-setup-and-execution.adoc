@@ -158,7 +158,7 @@ image:flexpod-genomics-image17.png["Linux 终端的屏幕截图，显示 /dev/sd
 
 Cromwell 是一款开源引擎，适用于支持工作流管理的科学工作流。可以将 Cromwell 引擎分为两种运行方式 https://cromwell.readthedocs.io/en/stable/Modes/["模式"^]，服务器模式或单工作流运行模式。可以使用控制 Cromwell 引擎的行为 https://github.com/broadinstitute/cromwell/blob/develop/cromwell.example.backends/cromwell.examples.conf["Cromwell 引擎配置文件"^]。
 
-* * 服务器模式。 * 启用 https://cromwell.readthedocs.io/en/stable/api/RESTAPI/["RESTful"^] 在 Cromwell 引擎中执行工作流。
+* *服务器模式。*启用 https://cromwell.readthedocs.io/en/stable/Modes/["RESTful"^]在 Cromwell 引擎中执行工作流。
 * * 运行模式。 * 运行模式最适合在克伦威尔执行单个工作流， https://cromwell.readthedocs.io/en/stable/CommandLine/["ref"^] 查看运行模式下的一整套可用选项。
 
 

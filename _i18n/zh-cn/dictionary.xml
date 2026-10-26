@@ -4102,7 +4102,6 @@
   <block id="3455b050e251b7f98e02276cf4e610a6" category="inline-link">Cromwell 引擎配置文件</block>
   <block id="8a4170eb5a6a7d35029828115b79e670" category="paragraph">Cromwell 是一款开源引擎，适用于支持工作流管理的科学工作流。可以将 Cromwell 引擎分为两种运行方式<block ref="83a23f9446eddc4053d457126818d444" category="inline-link-rx"></block>，服务器模式或单工作流运行模式。可以使用控制 Cromwell 引擎的行为<block ref="fd25519784a12a9c420aa9ee89025851" category="inline-link-rx"></block>。</block>
   <block id="10901892610e8878b38acfa47b965517" category="inline-link">RESTful</block>
-  <block id="5c21c1c0292363dbb8e48a016e417842" category="list-text">* 服务器模式。 * 启用<block ref="3d88e61f0ef99b49adc5b48c9547ff37" category="inline-link-rx"></block> 在 Cromwell 引擎中执行工作流。</block>
   <block id="18389a4a9ad5795744699cff0ba66c15" category="inline-link">ref</block>
   <block id="78fd1f9f6e4339d078a801e271c443e8" category="list-text">* 运行模式。 * 运行模式最适合在克伦威尔执行单个工作流，<block ref="bec7f6b49d367b38ddeb9c15495dd799" category="inline-link-rx"></block> 查看运行模式下的一整套可用选项。</block>
   <block id="303789c78fc99914ca9d353a7cfd1892" category="inline-link">Workflow 问题描述语言</block>
@@ -8565,4 +8564,5 @@
   <block id="a04fde0f303f9cefcbd34e8be1810d1e" category="paragraph">学术医疗中心和其他医疗保健和生命科学组织正在建立基因组科学卓越中心（COE）。根据杜克大学的 Charlie Gersbach 博士、Greg Crawford 博士和 Tim E Reddy 博士的说法，"我们知道基因不是通过简单的二进制开关打开或关闭的，而是多个基因调控开关共同作用的结果。"他们还确定"基因组的这些部分中没有一个是孤立工作的。基因组是进化编织而成的一张极为复杂的网络"（<block ref="7e5e4c153f3bad20a8e4230a913e554e" category="inline-link-rx"></block>）。</block>
   <block id="a9100704d09dc0243e72fa3e969a3376" category="doc">部署过程概述</block>
   <block id="c94f9bfe6b4fcd272eb296a929c3be2f" category="summary">Cisco 提供 FlexPod Express 设计和架构的计算和网络层，包括 UCS 服务器和 Nexus 交换机。</block>
+  <block id="ee30ff13e36cbab9bf29c33fd526cd18" category="list-text">*服务器模式。*启用<block ref="623098b3a5eec7dedbf57209eff0066d" category="inline-link-rx"></block>在 Cromwell 引擎中执行工作流。</block>
 </blocks>
