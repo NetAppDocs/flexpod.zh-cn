@@ -59,7 +59,6 @@
   <block id="a06b1914f736d12f90cd77c9af669070" category="cell">Cisco UCS C 系列机架式服务器</block>
   <block id="83842e9d3448fa9b32e931956ae716a9" category="section-title">Cisco 支持许可选项</block>
   <block id="7b02ea300aef2e0bff0d7f6111053284" category="doc">NetApp ONTAP</block>
-  <block id="9c58e11f96200548fd2f5932b391509a" category="inline-link">ONTAP 数据管理软件</block>
   <block id="471ff51c89daf6e35e8e2b5111039744" category="inline-link">NetApp IMT</block>
   <block id="9498c273a77b43c31823b8399ab32e23" category="summary">FlexPod 数据中心配置具有最低硬件要求，包括但不限于交换机，互联阵列，服务器和 NetApp 存储控制器。</block>
   <block id="3081736b57e4a1c5208bea8ee10f6000" category="doc">最低硬件要求</block>
@@ -3999,7 +3998,6 @@
   <block id="dcef946275e6f1b48b1149dd3ce50394" category="paragraph">下图显示了采用 VXLAN 多站点网络结构部署的 FlexPod MetroCluster IP 解决方案的 VXLAN 多站点网络结构和 MetroCluster IP 存储网络结构。</block>
   <block id="19fbeb4208b5ee6112e7e9897e7b98c6" category="list-text">适用于 FlexPod MetroCluster IP 解决方案的 VXLAN 多站点网络结构</block>
   <block id="8b8fc1f77a77033a4f875b9d3c41cba0" category="list-text">适用于 FlexPod MetroCluster IP 解决方案的 MetroCluster IP 存储网络结构</block>
-  <block id="1e3274a40d2751f8442f3b15fddb1f21" category="inline-link">ONTAP 产品页面</block>
   <block id="107b85601e13443e848d96d910bee735" category="summary">本页介绍如何将 FlexPod 与 SAP HANA 和其他 SAP 应用程序结合使用。</block>
   <block id="7caa0b3fa0fd74ced773a86b62850a8b" category="doc">基于 FlexPod 的 SAP 简介</block>
   <block id="1d17aeb7ab368ca4f28128e50a5cf276" category="paragraph">FlexPod 平台是一种预先设计的最佳实践数据中心架构，它基于 Cisco 统一计算系统（ Cisco UCS ）， Cisco Nexus 系列交换机和 NetApp 存储控制器构建。</block>
@@ -7202,7 +7200,6 @@
   <block id="45daa6ca74d4e8647074c8bec564a3cb" category="list-text">有关 <block ref="159389d00e7441b1c53d85747f17d0eb" category="inline-link-macro-rx"></block> 的最新版本，请参见此链接</block>
   <block id="2a409f1fa2a150f2253ac127248488e4" category="paragraph">FlexPod Express 支持运行 NetApp ONTAP 操作系统的存储系统。</block>
   <block id="ef7609bdef2cdaafd40275f9e5433c35" category="paragraph">NetApp ONTAP 软件是在 AFF、ASA 和 FAS 存储系统上运行的操作系统。ONTAP 提供高度可扩展的存储架构，可实现无中断操作、无中断升级和敏捷数据基础设施。使用 ONTAP One 许可模式，所有企业数据服务都包含在一个软件包中，简化了部署和管理，同时提供对高级功能的完全访问。ONTAP 通过 SnapMirror 复制和灾难恢复以及 SnapCenter 应用程序一致性备份和还原等技术提供强大的数据保护。它还集成了内置安全功能，包括自主勒索软件防护和加密，以保护数据免受现代威胁。此外，ONTAP 通过 SnapMirror Cloud 和基于 S3 的复制等功能实现无缝混合云集成，支持跨本地和云环境的数据移动，同时保持一致性和控制性。</block>
-  <block id="bf0ebcdca54fe8f97b947c021c0fc6ba" category="paragraph">有关 ONTAP 的详细信息，请参见<block ref="1438085fbc66bc2984b1f8fc6f5a6806" category="inline-link-rx"></block>。</block>
   <block id="db63719d1199768760c155c55421c914" category="paragraph">每个 Cisco 验证设计 (CVD) 或 NetApp 验证架构 (NVA) 都代表经过验证的 FlexPod 配置。Cisco 和 NetApp 记录这些配置组合，并通过广泛的端到端测试对其进行验证。偏离这些配置的 FlexPod 部署，如果遵循本文档中的指导方针，且所有组件均在 Cisco HCL 和 NetApp IMT 中列为兼容，则完全受支持。</block>
   <block id="45588e4cce1d335ead36f0585e8b630c" category="section-title">Cisco UCS X-Series Direct 机箱</block>
   <block id="fcb60e469fe66f96f526ecaec4c2ae36" category="paragraph">Cisco UCS X-Series Direct 机箱的技术规格如下表所示，包括以下组件：</block>
@@ -7332,7 +7329,6 @@
   <block id="4173ba8445cafde255576d64c1ba2aff" category="cell">+&lt;&lt; switch-a-ntp-ip &gt;&gt;+</block>
   <block id="c93de18088f202964b302c299371f447" category="cell">+&lt;&lt; switch-b-ntp-ip &gt;&gt;+</block>
   <block id="950b29028f5077cacae319f7ad6294ec" category="cell"><block ref="950b29028f5077cacae319f7ad6294ec" category="inline-link-rx"></block></block>
-  <block id="df7608fec077c8036a60e059d13ccb5c" category="paragraph">有关 ONTAP 的详细信息，请参见<block ref="d4d46a1efab17e9b442654f23d03b317" category="inline-link-rx"></block>产品页面。</block>
   <block id="4aeeffd6249244b72becdd8abb4b91b8" category="section-title">Cisco UCS 服务器的销售终止和支持终止信息</block>
   <block id="077dcb6cb8c7743fcd866caad2504246" category="section-title">Cisco Nexus 交换机的销售终止和支持终止信息</block>
   <block id="276b19f07e935494e35cb8ce4ab0b89e" category="admonition">上述示例拓扑是指使用 NetApp AFF 的存储解决方案。但是，同样的拓扑也适用于 NetApp ASA 和 FAS。</block>
@@ -8565,4 +8561,29 @@
   <block id="10480bf08cf3d3a87559226148a63bb2" category="paragraph"><block ref="10480bf08cf3d3a87559226148a63bb2" category="inline-link-rx"></block></block>
   <block id="9cb27d9a3417da2b8084e0287767f907" category="inline-link"><block ref="9cb27d9a3417da2b8084e0287767f907" category="inline-link-rx"></block></block>
   <block id="4f3f8befc34a04da143d39ae3da96026" category="paragraph"><block ref="4f3f8befc34a04da143d39ae3da96026" category="inline-link-rx"></block></block>
+  <block id="1b488ece31152ad90547d1c8054e4d39" category="paragraph">有关 ONTAP 的详细信息，请参见<block ref="14d78d05bf3f1052f297f579c7b5a9f7" category="inline-link-rx"></block>。</block>
+  <block id="f6d7dad872e7855ddff4a639eba6c084" category="section-title">推荐的 ONTAP 功能/配置</block>
+  <block id="35e666d02ddbb3775b69b25a512de580" category="paragraph">通过利用以下功能/配置，FlexPod 实现了我们经过验证的架构中概述的峰值性能、企业级冗余和高可用性：</block>
+  <block id="54e12ca53e7e64cfbaa6cf10cfaf6950" category="section-title">多路径和逻辑接口</block>
+  <block id="8eaa03bcff8d34a557424ce4d04fd160" category="paragraph">ONTAP 中的多路径 I/O 是使用逻辑接口实现的。LIF（逻辑接口）是具有相关特征的 IP 地址或 WWPN，例如角色、主端口、主节点、要故障转移到的端口列表和防火墙策略。</block>
+  <block id="fd30a788ad7a1ff123d02ffaf4ac59f5" category="paragraph">下表列出了 HA 对中每个节点为每个协议创建的最小逻辑接口数量。</block>
+  <block id="eb0ed0ff1f9dfef689849f295b3e99db" category="cell">存储协议</block>
+  <block id="be225138bfbd3a03ef852dfd961b11f9" category="cell">HA 对中每个节点的逻辑接口数</block>
+  <block id="47422d7cebc0ae77b7db7193e28454b4" category="cell">每个 HA 对的逻辑接口数量</block>
+  <block id="fd1b59cf98cc96b4373113606394bfdb" category="cell">NFS / CIFS / S3</block>
+  <block id="254366c4c57d61d41b18fefc84c6b770" category="cell">基于 TCP 的 iSCSI / NVMe</block>
+  <block id="6b6eb16a34725f213ce49527918a4622" category="cell">FC / NVMe over FC</block>
+  <block id="6f5ada5bb36cfda0ae73355b4062ae84" category="section-title">ONTAP Snapshot，SnapMirror 和 SnapCenter</block>
+  <block id="ae11a4a0e3027b0d0c24dfbbf964f5c2" category="paragraph">快照是卷的只读时间点映像。创建快照后，活动文件系统和快照指向相同的磁盘块；因此，快照不使用额外的磁盘空间。随着时间的推移，映像占用的存储空间极小，性能开销可以忽略不计，因为它仅记录自上次创建快照以来对文件的更改。您可以使用快照来恢复单个文件或 LUN，或恢复卷的全部内容。ONTAP 将快照中的指针信息与磁盘上的数据进行比较，以重建丢失或损坏的对象，而无需停机或产生显著的性能成本。</block>
+  <block id="66f750852471d915fd6d798383cc6946" category="paragraph">SnapMirror 是一种灾难恢复技术，专为从主存储故障转移到地理位置偏远的辅助存储而设计。顾名思义，SnapMirror 会在辅助存储中创建工作数据的副本或镜像，如果主站点发生灾难，您可以从中继续提供数据。</block>
+  <block id="0344fda8fff2d8c5a125ffa5ba5f19a7" category="paragraph">SnapCenter 软件是一个简单、集中、可扩展的平台，可为在混合云中任何位置的 ONTAP 系统上运行的应用程序、数据库、主机文件系统和虚拟机提供应用程序一致的数据保护。</block>
+  <block id="a689e45bd1ad0e1753a9aed2e0ce6b76" category="paragraph">我们建议客户在其 FlexPod 架构中纳入数据保护，利用诸如用于复制和灾难恢复的 SnapMirror 以及用于应用程序一致性备份和还原的 SnapCenter 等技术。</block>
+  <block id="8a936bd7d2e92511e2a1ad28613add8d" category="section-title">安全多租户</block>
+  <block id="34123ddca689cf104eada3c3539932b0" category="paragraph">安全多租户是指在共享物理存储环境中使用安全虚拟分区，以便在多个不同的租户之间共享物理环境。例如，存储服务提供商可以配置存储阵列，为三个不同客户中的每一个配置该阵列的特定部分磁盘容量和网络资源。在安全的多租户环境中，每个客户只能访问明确配置给该客户的资源。该客户将无法访问其他客户的数据，甚至不知道其他客户的存在，也不知道他们共享同一个物理阵列。安全的多租户环境还应提供一种方法，以确保没有任何单一租户消耗过多的共享性能而影响其他租户。</block>
+  <block id="bb3cb15d27e197d093dd8fc46a54b1d3" category="paragraph">ONTAP 中的多租户是通过 storage virtual machines（SVMs）和 IP Spaces 实现的。</block>
+  <block id="d2fef5ad720d53952f9c68f3146adf13" category="paragraph">就像在虚拟机监控程序上运行的虚拟机一样，SVM 是抽象物理资源的逻辑实体。SVM 通过一个或多个网络逻辑接口（LIF）从一个或多个卷向客户端和主机提供数据。</block>
+  <block id="250b84af23e8c31f102d2f91015f87b6" category="paragraph">IPspaces 使您能够配置单个 ONTAP 集群，以便来自多个管理上独立的网络域的客户端可以访问该集群，即使这些客户端使用相同的 IP 地址子网范围也是如此。这样可以隔离客户端流量，从而确保隐私和安全。</block>
+  <block id="8ffee59c66ae91354332b26c81d3fd04" category="inline-link">FlexPod CVD：NetApp ONTAP 存储配置</block>
+  <block id="3e6e011fe808e181e74a6c4df9d5906d" category="admonition">有关 ONTAP 配置的 FlexPod 最佳实践，请参见<block ref="e65c49069e72bd027a57d6376fc074e8" category="inline-link-rx"></block>。</block>
+  <block id="64f2b3152ebfd989b2d5c419da9cbf90" category="paragraph">或有关 ONTAP 的更多信息，请参见<block ref="14d78d05bf3f1052f297f579c7b5a9f7" category="inline-link-rx"></block>。</block>
 </blocks>

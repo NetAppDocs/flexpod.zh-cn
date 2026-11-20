@@ -16,4 +16,63 @@ summary: NetApp ONTAP 软件安装在每个 NetApp AFF、ASA、FAS 和 AFX 系�
 [role="lead"]
 NetApp ONTAP 软件是在 AFF、ASA、FAS 和 AFX 存储系统上运行的操作系统。ONTAP 提供高度可扩展的存储架构，可实现无中断操作、无中断升级和敏捷数据基础设施。使用 ONTAP One 许可模式，所有企业数据服务都包含在一个软件包中，从而简化了部署和管理，同时提供对高级功能的完全访问。ONTAP 通过 SnapMirror 复制和灾难恢复以及 SnapCenter 应用程序一致性备份和还原等技术提供强大的数据保护。它还集成了内置安全功能，包括自主勒索软件防护和加密，以保护数据免受现代威胁。此外，ONTAP 通过 SnapMirror Cloud 和基于 S3 的复制等功能实现无缝混合云集成，支持跨本地和云环境的数据移动，同时保持一致性和可控性。
 
-有关 ONTAP 的详细信息，请参见 https://www.netapp.com/ontap-data-management-software/["ONTAP 数据管理软件"^]产品页面。
+有关 ONTAP 的详细信息，请参见 https://docs.netapp.com/us-en/ontap-family/["ONTAP 产品文档"^]。
+
+
+
+[[recommended-ontap-featuresconfigurations]]
+== 推荐的 ONTAP 功能/配置
+
+通过利用以下功能/配置，FlexPod 实现了我们经过验证的架构中概述的峰值性能、企业级冗余和高可用性：
+
+
+
+[[multipathing-and-logical-interfaces]]
+=== 多路径和逻辑接口
+
+FlexPod 架构旨在在整个计算，网络和存储堆栈中的组件或链路发生故障时提供高可用性。多个用于客户端访问和存储访问的网络路径可实现负载平衡并优化资源利用率。
+
+ONTAP 中的多路径 I/O 是使用逻辑接口实现的。LIF（逻辑接口）是具有相关特征的 IP 地址或 WWPN，例如角色、主端口、主节点、要故障转移到的端口列表和防火墙策略。
+
+下表列出了 HA 对中每个节点为每个协议创建的最小逻辑接口数量。
+
+|===
+| 存储协议 | HA 对中每个节点的逻辑接口数 | 每个 HA 对的逻辑接口数量 
+
+
+| NFS / CIFS / S3 | 1. | 2. 
+
+
+| 基于 TCP 的 iSCSI / NVMe | 2. | 4. 
+
+
+| FC / NVMe over FC | 2. | 4. 
+|===
+
+
+[[ontap-snapshot-snapmirror-and-snapcenter]]
+=== ONTAP Snapshot，SnapMirror 和 SnapCenter
+
+快照是卷的只读时间点映像。创建快照后，活动文件系统和快照指向相同的磁盘块；因此，快照不使用额外的磁盘空间。随着时间的推移，映像占用的存储空间极小，性能开销可以忽略不计，因为它仅记录自上次创建快照以来对文件的更改。您可以使用快照来恢复单个文件或 LUN，或恢复卷的全部内容。ONTAP 将快照中的指针信息与磁盘上的数据进行比较，以重建丢失或损坏的对象，而无需停机或产生显著的性能成本。
+
+SnapMirror 是一种灾难恢复技术，专为从主存储故障转移到地理位置偏远的辅助存储而设计。顾名思义，SnapMirror 会在辅助存储中创建工作数据的副本或镜像，如果主站点发生灾难，您可以从中继续提供数据。
+
+SnapCenter 软件是一个简单、集中、可扩展的平台，可为在混合云中任何位置的 ONTAP 系统上运行的应用程序、数据库、主机文件系统和虚拟机提供应用程序一致的数据保护。
+
+我们建议客户在其 FlexPod 架构中纳入数据保护，利用诸如用于复制和灾难恢复的 SnapMirror 以及用于应用程序一致性备份和还原的 SnapCenter 等技术。
+
+
+
+[[secure-multi-tenancy]]
+=== 安全多租户
+
+安全多租户是指在共享物理存储环境中使用安全虚拟分区，以便在多个不同的租户之间共享物理环境。例如，存储服务提供商可以配置存储阵列，为三个不同客户中的每一个配置该阵列的特定部分磁盘容量和网络资源。在安全的多租户环境中，每个客户只能访问明确配置给该客户的资源。该客户将无法访问其他客户的数据，甚至不知道其他客户的存在，也不知道他们共享同一个物理阵列。安全的多租户环境还应提供一种方法，以确保没有任何单一租户消耗过多的共享性能而影响其他租户。
+
+ONTAP 中的多租户是通过 storage virtual machines（SVMs）和 IP Spaces 实现的。
+
+就像在虚拟机监控程序上运行的虚拟机一样，SVM 是抽象物理资源的逻辑实体。SVM 通过一个或多个网络逻辑接口（LIF）从一个或多个卷向客户端和主机提供数据。
+
+IPspaces 使您能够配置单个 ONTAP 集群，以便来自多个管理上独立的网络域的客户端可以访问该集群，即使这些客户端使用相同的 IP 地址子网范围也是如此。这样可以隔离客户端流量，从而确保隐私和安全。
+
+
+NOTE: 有关 ONTAP 配置的 FlexPod 最佳实践，请参见 https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_vvf_9_fc_boot_manual_deploy.html#NetAppONTAPStorageConfiguration["FlexPod CVD：NetApp ONTAP 存储配置"^]。
